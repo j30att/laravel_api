@@ -15,13 +15,7 @@
                 @yield('content')
             </main>
 
-            <menu class="main">
-                <a class="back"></a>
-                <a class="go"></a>
-                <a class="exit"></a>
-                <a class="read"></a>
-                <a class="copy"></a>
-            </menu>
+
         </div>
     </body>
 </html>
