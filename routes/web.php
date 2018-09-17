@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
 Route::get('/profile', function () {
-    return view('profile');
+    return view('profile.view');
+});
+Route::get('/profile/edit', function () {
+    return view('profile.edit');
 });
