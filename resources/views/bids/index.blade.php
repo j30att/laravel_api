@@ -1,28 +1,116 @@
 @extends('layouts.main')
 
 @section('content')
+
+
     <div class="row">
-        <div class="col-md-12 profile-title">
-            <a class="profile-close"></a>
-            Your profile
+        <div class="col-md-12 binds">
+        <div class="logo_img">
+            LOGO
+            <img src="/" alt="">
         </div>
-        <div class="profile-photo"></div>
-        <div class="col-md-12 text-center text-muted">Tap to replace photo</div>
-        <div class="col-md-12 text-center font-weight-bold profile-name">Milton Jimenez</div>
+        <div class="tabs-wr">
+        <div class="tabs-wr__title">
+                    <div class="tabs-wr__title-name">Matched bids</div>
+                    <div class="see_all">See All</div>
+                </div>
+                <div class="slider_container">
+                <div class="swipe-wr">
+                
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                
+                
+                
+            </div>
+        </div>
+        </div>
+        <div class="tabs-wr">
+        <div class="tabs-wr__title">
+                    <div class="tabs-wr__title-name">Unmatched Bids</div>
+                    <div class="see_all">See All</div>
+                </div>
+                <div class="slider_container">
+                <div class="swipe-wr">
+                
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                
+                
+                
+            </div>
+        </div>
+        </div>
+        <div class="tabs-wr">
+        <div class="tabs-wr__title">
+                    <div class="tabs-wr__title-name">Settled Bids</div>
+                    <div class="see_all">See All</div>
+                </div>
+                <div class="slider_container">
+                <div class="swipe-wr">
+                
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                
+                
+                
+            </div>
+        </div>
+        </div>
+        <div class="tabs-wr">
+        <div class="tabs-wr__title">
+                    <div class="tabs-wr__title-name">Cancel Bids</div>
+                    <div class="see_all">See All</div>
+                </div>
+                <div class="slider_container">
+                <div class="swipe-wr">
+                
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                @include('bids.parts.tabs')
+                
+                
+                
+            </div>
+        </div>
+        </div>
         
-        <button class="btn btn-danger">Link Party Pocker account</button>
-
-        <div class="col-md-12 profile-settings-title">Settings</div>
-
-        <menu class="profile-settings-block">
-            <a class="profile-settings-acc-notification">Notifications and sounds</a>
-            <a class="profile-settings-acc-privacy">Privacy and security</a>
-            <a class="profile-settings-acc-account">Account info</a>
-            <a class="profile-settings-acc-support">Support</a>
-            <a class="profile-settings-acc-tell">Tell a friend</a>
-            <a class="profile-settings-acc-setting">Settings</a>
-        </menu>
-
+        
+       <div class="footer_binds">
+            <div class="footer_binds__item item_invest"><div class="footer_binds__img"><img src="/images/g@3x_INVEST.png" alt=""></div>invest</div>
+            <div class="footer_binds__item item_invest_bids"><div class="footer_binds__img"><img src="/images/b@3x_BIDS.png" alt=""></div>bids</div>
+            <div class="footer_binds__item item_invest_sale"><div class="footer_binds__img"><img src="/images/g_2@3x_SALE.png" alt=""></div>sale</div>
+            <div class="footer_binds__item item_invest_wallet"><div class="footer_binds__img"><img src="/images/g_3@3x_WALLET.png" alt=""></div>wallet</div>
+        </div>
+    </div>
+    
     </div>
 @endsection
 

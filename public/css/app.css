@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10683,5 +10685,216 @@ main button {
   -moz-border-radius: 10pt;
   -ms-border-radius: 10pt;
   -o-border-radius: 10pt;
+}
+
+/*profile photo*/
+
+.profile-photo {
+  background: url("/images/user_logo.png") no-repeat center;
+  background-size: auto;
+}
+
+/*binds url*/
+
+/*binds.index*/
+
+.binds {
+  font-family: 'OpenSans', sans-serif;
+  height: 100vh;
+}
+
+.logo_img {
+  width: 100%;
+  height: 64pt;
+  line-height: 64pt;
+  text-align: center;
+  background: url("/images/b@3x_forlogo.png") no-repeat left;
+  background-size: 25px;
+  margin-bottom: 10pt;
+}
+
+.tabs-wr {
+  width: 100%;
+}
+
+.binds-item {
+  background-color: #e7f7e4;
+  border: 1px solid #e7f7e4;
+  border-radius: 8pt;
+  -webkit-border-radius: 8pt;
+  -moz-border-radius: 8pt;
+  -ms-border-radius: 8pt;
+  -o-border-radius: 8pt;
+  width: 250px;
+  margin-bottom: 20pt;
+  margin-right: 12pt;
+}
+
+.binds .tabs-wr:nth-child(3) .slider_container .swipe-wr .binds-item {
+  background-color: #fff4ec;
+}
+
+.binds .tabs-wr:nth-child(4) .slider_container .swipe-wr .binds-item {
+  background-color: #edf8fd;
+}
+
+.binds .tabs-wr:nth-child(5) .slider_container .swipe-wr .binds-item {
+  background-color: #edebf6;
+}
+
+.binds .tabs-wr:nth-child(5) {
+  margin-bottom: 75px;
+}
+
+.tabs-wr__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10pt;
+}
+
+.see_all {
+  cursor: pointer;
+  color: #007fed;
+}
+
+.binds-item__profile_info {
+  width: 100%;
+  margin-left: 16px;
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__photo {
+  width: 36px;
+  height: 36px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background-color: grey;
+  margin-right: 10px;
+}
+
+.profile__photo img {
+  width: 100%;
+  height: auto;
+}
+
+.profile__name {
+  font-size: 13pt;
+  font-weight: 700;
+}
+
+.loop_counter {
+  position: relative;
+  margin-left: 72.5px;
+  padding-left: 10px;
+}
+
+.loop_counter::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  opacity: .3;
+  position: absolute;
+  top: calc(50% - 6px);
+  left: -10px;
+}
+
+.binds-item__game_info {
+  padding-left: 16px;
+}
+
+.geme__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #949494;
+  font-size: 13px;
+  margin-bottom: 8pt;
+}
+
+.by_in {
+  margin-right: 5px;
+}
+
+.by_in::after {
+  content: '\2022';
+}
+
+.game_atrs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 16pt;
+}
+
+.game_atrs div span {
+  color: #949494;
+}
+
+.game_atrs__date_start {
+  width: 45%;
+}
+
+.swipe-wr {
+  outline: 1px solid black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.slider_container {
+  overflow-y: hidden;
+}
+
+.footer_binds {
+  width: 100%;
+  height: 50pt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  overflow: hidden;
+  left: 0;
+  top: calc(100% - 50pt);
+  background-color: #fff;
+}
+
+.footer_binds__item {
+  width: 25%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer_binds__img {
+  width: 24pt;
+  height: 24pt;
+  margin: 6pt auto;
+}
+
+.footer_binds__img img {
+  width: 100%;
+  height: 100%;
 }
 
