@@ -12,7 +12,19 @@ class Bid extends Model
     const STATUS_CANCELED   = 4;
 
     protected $fillable=[
-
+        'event_id',
+        'buy_in',
+        'gte',
+        'markup',
+        'value',
+        'sale',
+        'bid',
+        'start_date',
+        'close_date',
+        'status',
+        'type',
+        'refund',
+        'outcome',
     ];
 
 }
