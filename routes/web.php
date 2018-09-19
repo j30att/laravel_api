@@ -24,3 +24,21 @@ Route::get('/bids', function(){
 Route::get('/bids/matched', function(){
     return view('bids.parts.matched');
 });
+Route::get('/login', function(){
+    return view('login.index');
+});
+Route::get('/login/personal-information', function(){
+    return view('login.personal-inf');
+});
+Route::get('/login/account-information', function(){
+    return view('login.account-inf');
+});
+Route::get('/login/check-email', function(){
+    return view('login.check-email');
+});
+Route::get('/login/data-privacy', function(){
+    return view('login.data-privacy');
+});
+Route::get('/login/new-email', function(){
+    return view('login.new-email');
+});

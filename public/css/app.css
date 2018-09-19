@@ -10945,3 +10945,256 @@ main button {
   border-bottom: 1px solid black;
 }
 
+/*login page*/
+
+.login_page-wr {
+  min-height: 100vh;
+  font-family: 'OpenSans', sans-serif;
+  color: #fff !important;
+  background: url("/images/login_bg.png") no-repeat center;
+  background-size: 100%;
+  background-position-y: 26%;
+  background-color: black;
+}
+
+.login_block {
+  margin-top: 100%;
+}
+
+.buy_stakes {
+  width: 100%;
+  text-align: center;
+  font-size: 14pt;
+  line-height: 20pt;
+  margin-bottom: 24pt;
+}
+
+.btn_block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 24pt;
+}
+
+.login_btn {
+  width: 166px;
+  height: 48pt;
+  line-height: 48pt;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 700;
+  border: 1px solid #fff;
+  border-radius: 10pt;
+  cursor: pointer;
+}
+
+.login_in {
+  background-color: #007fed;
+  border-color: #007fed;
+}
+
+.contine_without {
+  width: 100%;
+  text-align: center;
+  font-size: 16pt;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .login_btn {
+    width: 140px !important;
+  }
+}
+
+/*personal - information*/
+
+.personal_inform {
+  font-family: 'OpenSans', sans-serif;
+  background-color: #fff;
+  main-height: 100vh;
+}
+
+.personal_inform__title {
+  width: 100%;
+  font-weight: 500;
+  height: 64pt;
+  line-height: 64pt;
+  text-align: center;
+}
+
+.personal_inform__title::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  background: url(/images/b@3x_left-arrow.png) no-repeat center;
+  background-size: 22px;
+  left: 15px;
+  top: 32px;
+}
+
+.form_personal_inf {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form_personal_inf input {
+  width: 100%;
+  height: 70pt;
+  line-height: 70pt;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 25px;
+  text-align: center;
+  outline: none;
+}
+
+.form_personal_inf input[type="submit"] {
+  height: 48pt;
+  line-height: 48pt;
+  background-color: #007fed;
+  border: 1px solid #007fed !important;
+  border-radus: 10pt !important;
+  color: #fff;
+  margin-bottom: 20pt;
+}
+
+.private_policy {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20pt;
+}
+
+/*account*/
+
+.form_personal_inf input[name="confirm_pass"] {
+  margin-bottom: 100pt;
+}
+
+/*check email*/
+
+.form_personal_inf input[name="check_email"] {
+  width: 80%;
+  height: 46pt;
+  line-height: 46pt;
+  margin: 0 auto;
+  margin-bottom: 20pt;
+  border-radius: 10pt;
+}
+
+.check_imfo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 32pt;
+}
+
+.check_imfo span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 15pt;
+}
+
+.change_mail {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: #007fed;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+/*data-privacy*/
+
+.data-privacy {
+  width: 100%;
+  font-size: 15pt;
+  text-align: center;
+  margin-bottom: 32pt;
+}
+
+.data-privacy span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 15pt;
+}
+
+.check-box-wr input[type="checkbox"] {
+  width: 24pt;
+  height: 24pt;
+  margin-right: 14pt;
+}
+
+.check-box-wr input[type="checkbox"]:active {
+  background-color: #1d68a7;
+}
+
+.check-box__email {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.check-box-wr {
+  margin-bottom: 32pt;
+}
+
+.see_policy {
+  width: 100%;
+  text-align: center;
+}
+
+.check-box__email label {
+  position: relative;
+}
+
+.check-box__email label::after {
+  content: "";
+  width: 24pt;
+  height: 24pt;
+  border: 1px solid #949494;
+  border-radius: 6pt !important;
+  position: absolute;
+  top: 0;
+  left: -46px;
+  background-color: #949494;
+}
+
+input:checked + label::after {
+  content: "\2714";
+  text-align: center;
+  color: #fff;
+  line-height: 24pt;
+  border: 1px solid #007fed;
+  background-color: #007fed;
+}
+
+/*new email*/
+
+.new-email_imfo {
+  width: 80%;
+  margin: auto;
+  color: #949494;
+  text-align: center;
+  margin-bottom: 24pt;
+}
+
+input[name="new_email"] {
+  background-color: #fff !important;
+  border: none !important;
+  border-bottom: 1px solid #949494;
+  margin-bottom: 125pt;
+}
+

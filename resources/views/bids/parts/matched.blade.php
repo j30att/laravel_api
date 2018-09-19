@@ -18,7 +18,7 @@
                 </div>
                 <div class="slider_container slider_container__full">
                 <div class="swipe-wr full_sc">
-                
+
                 @include('bids.parts.tabs')
                 @include('bids.parts.tabs')
                 @include('bids.parts.tabs')
@@ -28,8 +28,6 @@
                 @include('bids.parts.tabs')
                 @include('bids.parts.tabs')
                 @include('bids.parts.tabs')
-                
-                
                 
             </div>
         </div>
