@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="selected_event">
-            <a href="{{'events'}}">
+            <a href="{{route('events')}}">
             <div class="goback gb_white"></div>
             </a>
             <div class="open_event"></div>
