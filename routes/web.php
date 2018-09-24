@@ -75,6 +75,9 @@ Route::post('/login/userproftest', 'ProfileController@editProfile');
 
 //Route::post('login', 'AuthController@loginUser')->name('login');
 
+Route::get('/place-a-bit', function(){
+    return view('bids.place_a_bit.index');
+})->name('place-a-bit');
 
 
 
