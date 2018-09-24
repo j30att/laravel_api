@@ -26,7 +26,6 @@ class EventsController
 
     public function event(Event $event)
     {
-        dd($event);
         return view('events.single');
 
     }
