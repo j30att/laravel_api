@@ -22,6 +22,12 @@ Route::group(['middleware' => 'auth','prefix' => 'profile'], function(){
     });
 });
 
+Route::group(['prefix' => 'events'], function() {
+    Route::get('/', 'EventsController@index')->name('events');
+    Route::get('/all', 'EventsController@eventsList')->name('all-events');
+    Route::get('/{id}', 'EventsController@event')->name('event');
+});
+
 
 
 
@@ -62,13 +68,6 @@ Route::get('/signin', function(){
 })->name('signin');
 
 //events rout
-Route::get('/events', 'HomeController@events')->name('events');
-
-Route::get('/events/all', 'HomeController@eventsList')->name('all-events');
-
-Route::get('/single-events', function(){
-    return view('events.single');
-})->name('single-events');
 
 Route::get('/login/userproftest', 'ProfileController@showProfile');
 Route::post('/login/userproftest', 'ProfileController@editProfile');
@@ -106,6 +105,5 @@ $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 

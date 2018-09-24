@@ -26,7 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //return view('home');
         $user = Auth::user();
         return view('profile.view', compact('user'));
     }
@@ -34,25 +33,6 @@ class HomeController extends Controller
     public function profile(){
         $user = Auth::user();
         return view('profile.view', compact('user'));
-    }
-
-
-
-    public function events(){
-        $events = Event::query()->get();
-
-        return view('events.index', compact('events'));
-    }
-
-    public function eventsList(){
-        $eventList = Event::query()->get();
-
-        return view('events.all-events', compact('eventList'));
-    }
-
-    public function event()
-    {
-
     }
 
 }
