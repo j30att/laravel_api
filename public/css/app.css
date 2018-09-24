@@ -10484,7 +10484,7 @@ body {
 }
 
 a:hover {
-  border: none;
+  text-decoration: none;
   color: black;
 }
 

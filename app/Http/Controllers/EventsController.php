@@ -26,6 +26,7 @@ class EventsController
 
     public function event(Event $event)
     {
-    dd('ТУТ ДОЛЖЕН Быть сабевент');
+        return view('events.single');
+
     }
 }
