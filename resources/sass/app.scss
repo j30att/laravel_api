@@ -17,9 +17,19 @@ body{
     background-color: #fff;
 }
 
+a:hover{
+    border: none;
+    color: black;
+
+}
 a {
     color: black;
 }
+
+a:visited{
+    color: black;
+}
+
 menu.main {
     position: fixed;
     bottom: 0;
