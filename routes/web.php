@@ -79,7 +79,12 @@ Route::get('/place-a-bit', function(){
     return view('bids.place_a_bit.index');
 })->name('place-a-bit');
 
-
+Route::get('/new-sale', function(){
+    return view('sale.new-sale');
+})->name('new-sale');
+Route::get('/sale', function(){
+    return view('sale.sale');
+})->name('sale');
 
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
