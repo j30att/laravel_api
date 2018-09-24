@@ -31,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -79,26 +79,5 @@ class RegisterController extends Controller
         return view('login.register');
     }
 
-   /* public function register(Request $request)
-    {
-        $userData = $request->all();
 
-        $validate = $this->validator($userData);
-
-        $errors =$validate->errors()->all();
-
-
-        if (count($errors) > 0) {
-
-            return response(json_encode(['status'=>0, 'errors'=>$errors]));
-        } else{
-            $user = $this->create($userData);
-            Auth::login($user, true);
-
-            return response(json_encode(['status'=>1, 'url'=>'/login/userproftest']));
-        }
-
-
-
-    }*/
 }

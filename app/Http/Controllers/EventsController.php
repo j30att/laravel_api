@@ -26,7 +26,7 @@ class EventsController
 
     public function event(Event $event)
     {
-        return view('events.single');
-
+        $subevents = $event->subevents()->get();
+        return view('events.single', compact('subevents'));
     }
 }

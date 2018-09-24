@@ -32,8 +32,6 @@ class ProfileController
         $user->save();
 
 
-        dd($user);
-
 
     }
 

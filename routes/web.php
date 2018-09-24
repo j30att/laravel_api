@@ -25,16 +25,17 @@ Route::group(['middleware' => 'auth','prefix' => 'profile'], function(){
 Route::group(['prefix' => 'events'], function() {
     Route::get('/', 'EventsController@index')->name('events');
     Route::get('/all', 'EventsController@eventsList')->name('all-events');
-    Route::get('/{id}', 'EventsController@event')->name('event');
+    Route::get('/{event}', 'EventsController@event')->name('event');
+});
+
+
+Route::group(['prefix'=>'bids'], function (){
+    Route::get('/', 'BidsController@index')->name('bids');
+
 });
 
 
 
-
-
-Route::get('/bids', function(){
-    return view('bids.index');
-});
 Route::get('/bids/matched', function(){
     return view('bids.parts.matched');
 });
@@ -78,16 +79,20 @@ Route::get('/place-a-bit', function(){
     return view('bids.place_a_bit.index');
 })->name('place-a-bit');
 
-Route::get('/new-sale', function(){
+
+
+Route::get('/sale/new', function(){
     return view('sale.new-sale');
 })->name('new-sale');
+
 Route::get('/sale', function(){
     return view('sale.sale');
 })->name('sale');
 
+
+
+
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
-
-
 $this->post('login', 'Auth\LoginController@login');
 $this->post('logout', 'Auth\LoginController@logout')->name('logout');
 // Registration Routes...

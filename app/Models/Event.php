@@ -16,6 +16,10 @@ class Event extends Model
         'date_end'
     ];
 
+    public function subevents(){
+        return $this->hasMany(SubEvent::class,'event_id');
+    }
+
 
 
     public function getFormattedDataAttribute(){
@@ -26,4 +30,6 @@ class Event extends Model
         $end_date = $end_date->day;
         return $start_date . ' - ' . $end_date . ' ' . $end_month;
     }
+
+
 }
