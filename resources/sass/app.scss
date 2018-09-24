@@ -828,3 +828,76 @@ input[name="new_email"]{
 .single_page_players_item .binds-item__game_info{
     margin-top: 16px;
 }
+
+/*place_a_bit*/
+.place_a_bit{
+    width: 100%;
+
+}
+.place_a_bit__title{
+    width: 100%;
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 700;
+    position: relative;
+    padding-top: 12pt;
+    padding-bottom: 12pt;
+    margin-bottom: 20pt;
+
+}
+.pab__close{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    top: 12pt;
+    font-weight: 400;
+}
+.place_a_bit .binds-item__game_info{
+    margin-top: 12pt;
+}
+.highest_bids{
+    width: 100%;
+}
+.block_1,
+.block_2{
+    width: 100%;
+    display: flex;
+    margin-bottom: 8pt;
+
+}
+.block_1 input:first-child,
+.block_1 input:nth-child(2)
+{
+    width: 75px;
+}
+
+.block_2 input:first-child,
+.block_2 input:nth-child(2){
+    width: 75px;
+}
+.highest_bids input{
+    background-color: #edf8fd;
+    border: none;
+    padding: 11pt 0 11pt 12pt;
+    margin-right: 2px;
+}
+.matched_bid input{
+    background-color: #e7f7e4;
+    border: none;
+    padding: 11pt 0 11pt 12pt;
+    margin-right: 2px;
+}
+.highest_bids__title,
+.matched_bid__title{
+    margin-bottom: 8pt;
+}
+.add_bid{
+    width: 100%;
+    height: 48pt;
+    line-height: 48pt;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
