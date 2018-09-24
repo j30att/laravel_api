@@ -9,9 +9,11 @@
                 LOGO
                 <img src="/" alt="">
             </div>
+            <a href="{{'new-sale'}}">
             <div class="creact_sale">
                 Create a Sale
             </div>
+            </a>
             <div class="tabs-wr__title sale_tabs__title">
                 <div class="tabs-wr__title-name">Active Sales</div>
                 <div class="see_all"><a href="#">See All</a></div>
