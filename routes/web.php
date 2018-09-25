@@ -10,10 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function(){
-    return view('bids.index');
-})->middleware('auth');
 
+Route::get('/', 'HomeController@index');
+Route::get('/signin', 'Auth\LoginController@showSignin')->name('signin');
 
 Route::group(['middleware' => 'auth','prefix' => 'profile'], function(){
     Route::get('/', 'HomeController@profile')->name('profile');
@@ -72,9 +71,7 @@ Route::get('/login/privacy-politic', function(){
 Route::get('/login/new-email', function(){
     return view('login.new-email');
 });
-Route::get('/signin', function(){
-    return view('login.signin');
-})->name('signin');
+
 
 //events rout
 

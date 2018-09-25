@@ -14,10 +14,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    /*public function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
-    }*/
+    }
 
     /**
      * Show the application dashboard.
@@ -25,10 +25,8 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        $user = Auth::user();
-        $typeDevice = $request->get('typeDevice');
-        return view($typeDevice.'.profile.view', compact('user'));
+    {   $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.bids.index', compact('user'));
     }
 
     public function profile(Request $request){
