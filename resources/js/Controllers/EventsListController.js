@@ -1,23 +1,28 @@
 class EventsListController {
-    constructor($window, $http) {
+    constructor($window, $http){
         this.$window = $window;
         this.$http = $http;
-        this.opened = [];
+        this.opened = [] ;
         this.opened.push(window.events[0].id);
 
     }
 
-    openDetail(event_id) {
+    openDetail (event_id){
+        console.log('openDetail');
         let rInd = this.opened.indexOf(event_id);
-        if (rInd === -1) {
+        if (rInd === -1){
             this.opened.push(event_id);
-        } else {
-            this.opened.splice(rInd, 1);
+        } else{
+            this.opened.splice(rInd,1);
         }
+
+        console.log(this.opened);
+
     }
 
-    showDetail(event_id) {
-        if (this.opened.indexOf(event_id) != -1) {
+    showDetail(event_id){
+        if (this.opened.indexOf(event_id) != -1){
+
             return true;
         } else {
             return false;

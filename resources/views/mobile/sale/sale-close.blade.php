@@ -11,10 +11,10 @@
             </div>
             <div class="sales_tabs">
                 <a href="{{route('sale-active')}}">
-                    <div class="sales_tabs__active sales_selected">Active</div>
+                    <div class="sales_tabs__active">Active</div>
                 </a>
                 <a href="{{route('sale-close')}}">
-                    <div class="sales_tabs__closed">Closed</div>
+                    <div class="sales_tabs__closed sales_selected">Closed</div>
                 </a>
             </div>
         <div class="as__item-wr as__item-wr-active as__item-wr-closed">
