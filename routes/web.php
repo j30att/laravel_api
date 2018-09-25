@@ -34,6 +34,14 @@ Route::group(['prefix'=>'bids'], function (){
 
 });
 
+Route::group(['prefix'=>'sale'], function (){
+    Route::get('/', 'SaleController@index')->name('sale');
+    Route::get('/new', 'SaleController@newSale')->name('new-sale');
+    Route::get('/active', 'SaleController@activeSale')->name('sale-active');
+    Route::get('/close', 'SaleController@closeSale')->name('sale-close');
+});
+
+
 
 
 Route::get('/bids/matched', function(){
@@ -78,24 +86,6 @@ Route::post('/login/userproftest', 'ProfileController@editProfile');
 Route::get('/place-a-bit', function(){
     return view('bids.place_a_bit.index');
 })->name('place-a-bit');
-
-
-
-Route::get('/sale/new', function(){
-    return view('sale.new-sale');
-})->name('new-sale');
-
-Route::get('/sale', function(){
-    return view('sale.sale');
-})->name('sale');
-
-Route::get('/sale-active', function(){
-    return view('sale.sale-active');
-})->name('sale-active');
-
-Route::get('/sale-close', function(){
-    return view('sale.sale-close');
-})->name('sale-close');
 
 Route::get('/filters', function(){
     return view('filters.filter');

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends($_typeDevice.'.layouts.main')
 
 @section('content')
 
@@ -10,8 +10,12 @@
                 <a href="{{'sale'}}"><div class="goback goback_sale"></div></a>
             </div>
             <div class="sales_tabs">
-                <div class="sales_tabs__active">Active</div>
-                <div class="sales_tabs__closed sales_selected">Closed</div>
+                <a href="{{route('sale-active')}}">
+                    <div class="sales_tabs__active sales_selected">Active</div>
+                </a>
+                <a href="{{route('sale-close')}}">
+                    <div class="sales_tabs__closed">Closed</div>
+                </a>
             </div>
         <div class="as__item-wr as__item-wr-active as__item-wr-closed">
             <div class="as__item__text">
@@ -137,7 +141,7 @@
 
 
 
-            @include('partial.footer-binds')
+            @include($_typeDevice.'.partial.footer-binds')
 
     </div>
 @endsection

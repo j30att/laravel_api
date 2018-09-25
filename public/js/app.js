@@ -36580,7 +36580,6 @@ var EventsListController = function () {
 
         this.$window = $window;
         this.$http = $http;
-        window.events;
         this.opened = [];
         this.opened.push(window.events[0].id);
     }
@@ -36588,22 +36587,17 @@ var EventsListController = function () {
     _createClass(EventsListController, [{
         key: 'openDetail',
         value: function openDetail(event_id) {
-            console.log('openDetail');
             var rInd = this.opened.indexOf(event_id);
             if (rInd === -1) {
                 this.opened.push(event_id);
             } else {
                 this.opened.splice(rInd, 1);
             }
-
-            console.log(this.opened);
         }
     }, {
         key: 'showDetail',
         value: function showDetail(event_id) {
-            console.log(this.opened.indexOf(event_id));
             if (this.opened.indexOf(event_id) != -1) {
-
                 return true;
             } else {
                 return false;

@@ -18,7 +18,6 @@ class EventsController
         $events = Event::query()->get();
 
         $typeDevice = $request->get('typeDevice');
-
         return view($typeDevice.'.events.index', compact('events'));
     }
 

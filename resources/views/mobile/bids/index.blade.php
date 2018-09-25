@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends($_typeDevice.'.layouts.main')
 
 @section('content')
 
@@ -18,16 +18,14 @@
 
                 <div class="swipe-wr">
                 
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+
                 
                 
             </div>
@@ -41,18 +39,16 @@
                 <div class="slider_container">
                 <div class="swipe-wr">
                 
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                
-                
-                
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+
             </div>
         </div>
         </div>
@@ -64,17 +60,18 @@
                 <div class="slider_container">
                 <div class="swipe-wr">
                 
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                
-                
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+
                 
             </div>
         </div>
@@ -87,24 +84,19 @@
                 <div class="slider_container">
                 <div class="swipe-wr">
                 
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                @include('bids.parts.tabs')
-                
-                
-                
-            </div>
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                @include($_typeDevice.'.bids.parts.tabs')
+                </div>
         </div>
         </div>
         
 
-        @include('partial.footer-binds')
+        @include($_typeDevice.'.partial.footer-binds')
 
     </div>
     

@@ -9,9 +9,13 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Http\Request;
+
 class BidsController
 {
-    public function index(){
-        return view('bids.index');
+    public function index(Request $request){
+
+        $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.bids.index');
     }
 }

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends($_typeDevice.'.layouts.main')
 
 @section('content')
     <div class="row">

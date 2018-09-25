@@ -24,15 +24,17 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::user();
-        return view('profile.view', compact('user'));
+        $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.profile.view', compact('user'));
     }
 
-    public function profile(){
+    public function profile(Request $request){
         $user = Auth::user();
-        return view('profile.view', compact('user'));
+        $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.profile.view', compact('user'));
     }
 
 }

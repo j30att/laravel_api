@@ -17,7 +17,7 @@
 <div ng-if="EvntsLstCtrl.showDetail({{$event->id}})">
     <span><a href="{{route('event', ['id'=>$event->id])}}">See info</a></span>
 
-    ХУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУУЙ
+
     {{--
 
     <div class="event-item__summa">£1,000,000 GTD</div>

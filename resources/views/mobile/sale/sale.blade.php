@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends($_typeDevice.'.layouts.main')
 
 @section('content')
 
@@ -180,7 +180,7 @@
             </div>
 
 
-            @include('partial.footer-binds')
+            @include($_typeDevice.'.partial.footer-binds')
         </div>
     </div>
 @endsection
