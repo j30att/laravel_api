@@ -18,9 +18,9 @@
         </div>
     </a>
     <a href="{{route('profile')}}">
-        <div class="footer_binds__item item_invest_wallet">
-            <div class="footer_binds__img"><img src="/images/g_3@3x_WALLET.png" alt=""></div>
-            wallet
-        </div>
+    <div class="footer_binds__item item_invest_wallet">
+        <div class="footer_binds__img"><img src="/images/g_3@3x_WALLET.png" alt=""></div>
+        wallet
+    </div>
     </a>
 </div>

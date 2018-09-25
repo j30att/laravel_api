@@ -24,6 +24,7 @@ a:hover{
 }
 a {
     color: black;
+
 }
 
 a:visited{
@@ -359,6 +360,13 @@ main {
     top: calc(100% - 50pt);
     background-color: #fff;
 }
+.footer_binds a{
+    display: block;
+    width: 25%;
+}
+.footer_binds a div{
+    width: 100%;
+}
 .footer_binds__item{
     width: 25%;
     text-align: center;
@@ -370,7 +378,7 @@ main {
     margin: 6pt auto;
 }
 .footer_binds__img img{
-    width: 100%;
+
     height: 100%;
 }
 /*parts manched*/
@@ -842,6 +850,7 @@ input[name="new_email"]{
 
 .single_page_players{
     width: 100%;
+    overflow: hidden;
 }
 .single_page_players_item .binds-item__game_info{
     margin-top: 16px;
