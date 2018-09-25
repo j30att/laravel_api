@@ -10,23 +10,32 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Event;
+use Illuminate\Http\Request;
 
 class EventsController
 {
-    public function index(){
+    public function index(Request $request){
         $events = Event::query()->get();
 
-        return view('events.index', compact('events'));
+        $typeDevice = $request->get('typeDevice');
+
+        return view($typeDevice.'.events.index', compact('events'));
     }
 
-    public function eventsList(){
-        $eventList = Event::query()->get();
-        return view('events.all-events', compact('eventList'));
+    public function eventsList(Request $request){
+        $events = Event::query()->get();
+
+        $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.events.all-events', compact('events'));
     }
 
-    public function event(Event $event)
+    public function event(Request $request, Event $event)
     {
         $subevents = $event->subevents()->get();
-        return view('events.single', compact('subevents'));
+
+        $typeDevice = $request->get('typeDevice');
+        return view($typeDevice.'.events.single', compact('subevents'));
     }
+
+
 }

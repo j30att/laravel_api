@@ -36351,7 +36351,9 @@ $provide.value("$locale", {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_EventsListController__ = __webpack_require__(14);
 var angular = __webpack_require__(1);
+
 
 
 
@@ -36362,6 +36364,7 @@ var module = angular.module('Controllers', []);
 module.controller('LoginController', __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__["a" /* LoginController */]);
 module.controller('RegisterController', __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__["a" /* RegisterController */]);
 module.controller('ProfileController', __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__["a" /* ProfileController */]);
+module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_3__Controllers_EventsListController__["a" /* EventsListController */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
@@ -36556,6 +36559,66 @@ ProfileController.$inject = ['$window', '$http'];
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsListController; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var EventsListController = function () {
+    function EventsListController($window, $http) {
+        _classCallCheck(this, EventsListController);
+
+        this.$window = $window;
+        this.$http = $http;
+        window.events;
+        this.opened = [];
+        this.opened.push(window.events[0].id);
+    }
+
+    _createClass(EventsListController, [{
+        key: 'openDetail',
+        value: function openDetail(event_id) {
+            console.log('openDetail');
+            var rInd = this.opened.indexOf(event_id);
+            if (rInd === -1) {
+                this.opened.push(event_id);
+            } else {
+                this.opened.splice(rInd, 1);
+            }
+
+            console.log(this.opened);
+        }
+    }, {
+        key: 'showDetail',
+        value: function showDetail(event_id) {
+            console.log(this.opened.indexOf(event_id));
+            if (this.opened.indexOf(event_id) != -1) {
+
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }]);
+
+    return EventsListController;
+}();
+
+;
+
+EventsListController.$inject = ['$window', '$http'];
+
+
 
 /***/ })
 /******/ ]);

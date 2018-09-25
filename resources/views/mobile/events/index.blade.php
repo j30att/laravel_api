@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends($_typeDevice.'.layouts.main')
 
 @section('content')
 
@@ -19,7 +19,7 @@
                     <div class="swipe-wr">
 
                         @foreach($events as $event)
-                        @include('events.parts.event')
+                        @include($_typeDevice.'.events.parts.event')
                         @endforeach
 
 
@@ -39,21 +39,21 @@
                 </div>
                 <div class="swipe-wr full_sc events_player">
 
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
-                    @include('bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.tabs')
 
                 </div>
 
 
 
-                @include('partial.footer-binds')
+                @include($_typeDevice.'.partial.footer-binds')
 
             </div>
 
