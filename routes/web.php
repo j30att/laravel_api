@@ -89,6 +89,27 @@ Route::get('/sale', function(){
     return view('sale.sale');
 })->name('sale');
 
+Route::get('/sale-active', function(){
+    return view('sale.sale-active');
+})->name('sale-active');
+
+Route::get('/sale-close', function(){
+    return view('sale.sale-close');
+})->name('sale-close');
+
+Route::get('/filters', function(){
+    return view('filters.filter');
+})->name('filters');
+
+Route::get('/region-filter', function(){
+    return view('filters.region');
+})->name('region-filter');
+
+Route::get('/event-filter', function(){
+    return view('filters.event');
+})->name('event-filter');
+
+
 
 
 
