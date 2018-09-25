@@ -425,6 +425,9 @@ main {
 }
 /*login page*/
 .login_page-wr{
+    position: fixed;
+    top: 0;
+    left: 0;
     min-height: 100vh;
     font-family: 'OpenSans', sans-serif;
     color: #fff !important;
@@ -432,8 +435,6 @@ main {
     background-size: 100%;
     background-position-y: 26%;
     background-color: black;
-
-
 }
 .login_block{
     margin-top: 100%;

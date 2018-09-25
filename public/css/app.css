@@ -10973,6 +10973,9 @@ main button {
 /*login page*/
 
 .login_page-wr {
+  position: fixed;
+  top: 0;
+  left: 0;
   min-height: 100vh;
   font-family: 'OpenSans', sans-serif;
   color: #fff !important;
