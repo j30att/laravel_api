@@ -9,9 +9,8 @@ services:
             - ./:/var/www/vhosts/site/
         links:
             - mysql:mysql
-        command: "/usr/sbin/php-fpm7.2 -F -O"
-        environment:
-            XDEBUG_CONFIG: remote_host=192.168.99.1
+        command: "/usr/sbin/php-fpm7.1 -F -O"
+        user: "www-data"
 
     nginx:
         container_name: partypocker_nginx
@@ -27,6 +26,7 @@ services:
             - web
         links:
             - web:web
+
 
     mysql:
         container_name: partypocker_mysql
