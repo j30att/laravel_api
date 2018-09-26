@@ -10985,8 +10985,12 @@ main button {
   background-color: black;
 }
 
-.login_block {
+event_item .login_block {
   margin-top: 100%;
+}
+
+.selected_event_info:last-child {
+  margin-bottom: 100px;
 }
 
 .buy_stakes {
