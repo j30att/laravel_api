@@ -1,5 +1,4 @@
-@extends($_typeDevice.'.layouts.main')
-
+@extends('layouts.main')
 @section('content')
 
 
