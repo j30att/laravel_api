@@ -21,12 +21,22 @@ class BidResponseController extends Controller
 
         $filter = $request->get('filter');
         $user = Auth::user();
-        if (empty($filter)) return abort(403);
+
         if ($filter){
             $bids = BidResponse::query()->where(['status'=> $filter, 'investor_id'=>$user->id])->get();
             return BidResponseResource::collection($bids);
         } else{
-            return abort(403);
+            $bidsMutched = BidResponse::query()->where(['status'=> BidResponse::BIDS_RESPONSE_MATCHED, 'investor_id'=>$user->id])->get();
+            $bidsUnmutched = BidResponse::query()->where(['status'=> BidResponse::BIDS_RESPONSE_UNMATCHED, 'investor_id'=>$user->id])->get();
+            $bidsSetted = BidResponse::query()->where(['status'=> BidResponse::BIDS_RESPONSE_SETTLED, 'investor_id'=>$user->id])->get();
+            $bidsCanceled = BidResponse::query()->where(['status'=> BidResponse::BIDS_RESPONSE_CANCELED, 'investor_id'=>$user->id])->get();
+            //return BidResponseResource::collection($bids);'
+            return response()->json([
+                'matched'   => BidResponseResource::collection($bidsMutched),
+                'unmatched' => BidResponseResource::collection($bidsUnmutched),
+                'settled' => BidResponseResource::collection($bidsSetted),
+                'canceled' => BidResponseResource::collection($bidsCanceled)
+            ]);
         }
     }
 

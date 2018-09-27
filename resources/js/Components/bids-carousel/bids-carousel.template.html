@@ -1,0 +1,13 @@
+<div class="tabs-wr" ng-repeat="(key, value) in $ctrl.bids">
+    <div class="tabs-wr__title">
+        <div class="tabs-wr__title-name">{%key%}</div>
+        <div class="see_all">See All</div>
+    </div>
+    <div class="slider_container">
+        <div class="swipe-wr">
+            <bids-row class="bids_row"
+                    bids="value">
+            </bids-row>
+        </div>
+    </div>
+</div>

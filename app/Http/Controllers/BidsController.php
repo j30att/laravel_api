@@ -26,6 +26,6 @@ class BidsController
     public function filter(Request $request){
         $typeDevice = $request->get('typeDevice');
 
-        return view($typeDevice.'.bids.parts.filter');
+        return view($typeDevice.'.bids.filter');
     }
 }

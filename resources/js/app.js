@@ -1,22 +1,15 @@
 let angular = require('angular');
 
 import Controllers from './Controllers';
+//import Components from  './Components'
 
-
-//let uibootstrap = require('ui-bootstrap4');
-/*
-let datetimepicker = require('angularjs-datetime-picker');
-let ngDialog = require('ng-dialog');
-let ngSanitize = require('angular-sanitize');
-*/
+import {BidsRowComponent} from "./Components/bids/bids-row.controller";
+import {BidsCarouselComponent} from "./Components/bids-carousel/bids-carousel.controller";
 
 
 let app = angular.module('poker', [
-   /* //uibootstrap,
-    'angularjs-datetime-picker',
-    ngDialog,
-    ngSanitize,*/
-    Controllers
+    Controllers,
+//    Components
 ]);
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {
@@ -24,5 +17,5 @@ app.config(['$interpolateProvider', ($interpolateProvider) => {
     $interpolateProvider.endSymbol('%}');
 }]);
 
-
-
+app.component('bidsCarousel', BidsCarouselComponent);
+app.component('bidsRow', BidsRowComponent);

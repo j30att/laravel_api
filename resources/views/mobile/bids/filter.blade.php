@@ -4,7 +4,7 @@
 
 
     <div class="row" ng-controller="FilterBidResponsesController as FltrBdsRspnsCtrl">
-        <div class="binds binds_full-sc">
+        <div class="binds binds_full_sc">
 
             <div class="tabs-wr">
                 <div class="active_status col-md-12">
@@ -22,7 +22,9 @@
                 <div class="slider_container slider_container__full">
                     <div class="swipe-wr full_sc">
 
-                        @include($_typeDevice.'.bids.parts.tabs')
+
+                        <bids-row class="bids_row__fullscreen" bids="FltrBdsRspnsCtrl.bids"></bids-row>
+
 
                     </div>
                 </div>
