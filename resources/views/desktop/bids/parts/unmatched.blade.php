@@ -1,0 +1,116 @@
+<div class="bids_content_wr bids_content_unmatched">
+    <div class="bids_nav">
+        <ul class="bids_nav_list">
+            <li class="bids_nav_item"><a href="#">Matched</a></li>
+            <li class="bids_nav_item bids_nav_item_active"><a href="#">Unmatched</a></li>
+            <li class="bids_nav_item"><a href="#">Settled</a></li>
+            <li class="bids_nav_item"><a href="#">Canceled</a></li>
+        </ul>
+    </div>
+    <table class="bids_table">
+        <thead class="bids_table_head">
+        <td class="t_h_from">FROM</td>
+        <td>EVENT</td>
+        <td>buy in</td>
+        <td>GTE</td>
+        <td>Sale</td>
+        <td>BID</td>
+        <td>VALUE</td>
+        <td>T. until close</td>
+        </thead>
+        <tbody class="bids_table_body">
+
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png" alt="profile photo"></div><span>Austin Vargas</span></td>
+            <td class="t_event">MILLIONS Russia, 1A</td>
+            <td class="t_buy_in">£1,000</td>
+            <td class="t_gte">£500,000</td>
+            <td class="t_sale">1.22</td>
+            <td class="t_bid">1.10</td>
+            <td class="t_value">$100</td>
+            <td class="t_close">2 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_1.png" alt="profile photo"></div><span>Theodore Guerrero</span></td>
+            <td class="t_event">Barrière Poker Tour</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.2</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$200</td>
+            <td class="t_close">10 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_3.png" alt="profile photo"></div><span>Mark Patterson</span></td>
+            <td class="t_event">WSOP International Circuit...</td>
+            <td class="t_buy_in">£1,000</td>
+            <td class="t_gte">£500,000</td>
+            <td class="t_sale">1.18</td>
+            <td class="t_bid">1.10</td>
+            <td class="t_value">$203</td>
+            <td class="t_close">10 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_4.png" alt="profile photo"></div><span>Theodore Curtis</span></td>
+            <td class="t_event">International Poker Cup</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.15</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$827</td>
+            <td class="t_close">11 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_5.png" alt="profile photo"></div><span>Mike Walters</span></td>
+            <td class="t_event">International Poker Cup</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.15</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$827</td>
+            <td class="t_close">14 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_6.png" alt="profile photo"></div><span>Joseph Padilla</span></td>
+            <td class="t_event">Barrière Poker Tour</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.15</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$827</td>
+            <td class="t_close">20 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_7.png" alt="profile photo"></div><span>Joe Ramos</span></td>
+            <td class="t_event">Barrière Poker Tour</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.15</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$827</td>
+            <td class="t_close">20 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_8.png" alt="profile photo"></div><span>Oscar Mendez</span></td>
+            <td class="t_event">Barrière Poker Tour</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.15</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$827</td>
+            <td class="t_close">20 days</td>
+        </tr>
+        <tr>
+            <td class="t_from"><div class="t_from_img"><img src="/images/desk/players_img/profile_img_9.png" alt="profile photo"></div><span>Noah Alexander</span></td>
+            <td class="t_event">MILLIONS Russia, 1A</td>
+            <td class="t_buy_in">£5,000</td>
+            <td class="t_gte">£1,000,000</td>
+            <td class="t_sale">1.15</td>
+            <td class="t_bid">1.11</td>
+            <td class="t_value">$827</td>
+            <td class="t_close">22 days</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>

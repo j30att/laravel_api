@@ -20,6 +20,7 @@ class BidsController
     public function index(Request $request){
 
         $typeDevice = $request->get('typeDevice');
+
         return view($typeDevice.'.bids.index');
     }
 

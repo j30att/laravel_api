@@ -114,8 +114,8 @@ module.exports = angular;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-__webpack_require__(14);
-module.exports = __webpack_require__(15);
+__webpack_require__(17);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
@@ -125,8 +125,8 @@ module.exports = __webpack_require__(15);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_bids_row_controller__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_bids_row_controller__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(15);
 var angular = __webpack_require__(1);
 
 
@@ -36809,25 +36809,45 @@ FilterBidResponsesController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 13 */,
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsRowComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BidsRow = function () {
+    function BidsRow() {
+        _classCallCheck(this, BidsRow);
+    }
+
+    _createClass(BidsRow, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }]);
+
+    return BidsRow;
+}();
+
+var BidsRowComponent = {
+    bindings: {
+        bids: '<'
+    },
+    template: __webpack_require__(14),
+    controller: BidsRow,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
 /* 14 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+module.exports = "<div class=\"binds-item\"\r\n         ng-class=\"{\r\n                    'binds-item__matched':      item.status === 1,\r\n                    'binds-item__unmatched':    item.status === 2,\r\n                    'binds-item__settled':      item.status === 3,\r\n                    'binds-item__canceled':     item.status === 4,\r\n                     }\"\r\n         ng-repeat=\"item in $ctrl.bids\">\r\n        <div class=\"binds-item-wr\">\r\n            <div class=\"binds-item__profile_info\">\r\n                <div class=\"profile__photo\">\r\n                    <img src=\"/images/players.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_text\">\r\n                    <div class=\"profile__name\" ng-bind=\"item.investor.name\">\r\n\r\n                    </div>\r\n                    <div class=\"profile__country\">\r\n                        MILLIONS Russia, 1A\r\n                    </div>\r\n\r\n                </div>\r\n\r\n            </div>\r\n            <div class=\"loop_counter\">\r\n                Second loop\r\n            </div>\r\n            <div class=\"binds-item__game_info\">\r\n                <div class=\"geme__text\">\r\n                    <div class=\"by_in\">\r\n                        Buy in £ <span>1,000,000</span>\r\n                    </div>\r\n                    <div class=\"gte\">\r\n                        £ <span>1,000,000</span> GTE\r\n                    </div>\r\n                </div>\r\n                <div class=\"game_atrs\">\r\n                    <div class=\"game_atrs__markup\">\r\n                        <span>Markup</span>\r\n                        1.20\r\n                    </div>\r\n                    <div class=\"game_atrs__value\">\r\n                        <span>Value</span>\r\n                        £2,404.08\r\n                    </div>\r\n                    <div class=\"game_atrs__date_start\">\r\n                        <span>Date of Start</span><br>\r\n                        1 Sep\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n";
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36856,56 +36876,28 @@ var BidsCarouselComponent = {
         bids: '<',
         menu: '<'
     },
-    template: __webpack_require__(22),
+    template: __webpack_require__(16),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 22 */
+/* 16 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <div class=\"see_all\">See All</div>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids-row class=\"bids_row\"\n                    bids=\"value\">\n            </bids-row>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\r\n    <div class=\"tabs-wr__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <div class=\"see_all\">See All</div>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <bids-row class=\"bids_row\"\r\n                    bids=\"value\">\r\n            </bids-row>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 23 */,
-/* 24 */,
-/* 25 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsRowComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var BidsRow = function () {
-    function BidsRow() {
-        _classCallCheck(this, BidsRow);
-    }
-
-    _createClass(BidsRow, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
-
-    return BidsRow;
-}();
-
-var BidsRowComponent = {
-    bindings: {
-        bids: '<'
-    },
-    template: __webpack_require__(26),
-    controller: BidsRow,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 26 */
+/* 17 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"binds-item\"\n         ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n         ng-repeat=\"item in $ctrl.bids\">\n        <div class=\"binds-item-wr\">\n            <div class=\"binds-item__profile_info\">\n                <div class=\"profile__photo\">\n                    <img src=\"/images/players.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n                    </div>\n                    <div class=\"profile__country\">\n                        MILLIONS Russia, 1A\n                    </div>\n\n                </div>\n\n            </div>\n            <div class=\"loop_counter\">\n                Second loop\n            </div>\n            <div class=\"binds-item__game_info\">\n                <div class=\"geme__text\">\n                    <div class=\"by_in\">\n                        Buy in £ <span>1,000,000</span>\n                    </div>\n                    <div class=\"gte\">\n                        £ <span>1,000,000</span> GTE\n                    </div>\n                </div>\n                <div class=\"game_atrs\">\n                    <div class=\"game_atrs__markup\">\n                        <span>Markup</span>\n                        1.20\n                    </div>\n                    <div class=\"game_atrs__value\">\n                        <span>Value</span>\n                        £2,404.08\n                    </div>\n                    <div class=\"game_atrs__date_start\">\n                        <span>Date of Start</span><br>\n                        1 Sep\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n";
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
