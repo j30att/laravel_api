@@ -12,7 +12,6 @@
 
             <bids-carousel ng-if="BdsRspnsCtrl._opts.dataLoad"
                            bids="BdsRspnsCtrl.bids"
-                           menu="BdsRspnsCtrl.menu"
             >
 
             </bids-carousel>

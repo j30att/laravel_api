@@ -10958,6 +10958,7 @@ main button {
   margin-bottom: 2pt;
   margin-right: 0;
   border-radius: 0;
+  padding: 1px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;

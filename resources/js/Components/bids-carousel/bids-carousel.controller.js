@@ -13,7 +13,6 @@ class BidsCarousel {
 export const BidsCarouselComponent = {
     bindings: {
         bids: '<',
-        menu: '<',
     },
     template: require('./bids-carousel.template.html'),
     controller: BidsCarousel,
