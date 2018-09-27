@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Bid extends Model
@@ -12,10 +13,24 @@ class Bid extends Model
     const STATUS_CANCELED   = 4;
 
     protected $fillable=[
-        'subevent',
-        'creator',
+        'subevent_id',
+        'creator_id',
         'price_part',
         'percent',
     ];
+
+    public function creator(){
+        return $this->belongsTo(User::class,'creator_id');
+    }
+
+    public function subevent(){
+        return $this->belongsTo(SubEvent::class, 'subevent_id');
+    }
+
+    public function bidResponse(){
+        return $this->hasMany(BidResponse::class, 'bid_id');
+    }
+
+
 
 }

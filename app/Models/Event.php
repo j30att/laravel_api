@@ -21,7 +21,6 @@ class Event extends Model
     }
 
 
-
     public function getFormattedDataAttribute(){
         $start_date = Carbon::parse($this->date_start);
         $start_date =$start_date->day;

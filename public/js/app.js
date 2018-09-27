@@ -68,12 +68,38 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LOGIN_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return REGISTER_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PROFILE_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BIDS_MATCHED; });
+/* unused harmony export BIDS_UNMATCHED */
+/* unused harmony export BIDS_SETTLED */
+/* unused harmony export BIDS_CANCELED */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BID_RESPONSE_MATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BID_RESPONSE_UNMATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BID_RESPONSE_SETTLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BID_RESPONSE_CANCELED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return LOGIN_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return REGISTER_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return PROFILE_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BID_RESPONSE_INDEX; });
+var BIDS_MATCHED = 1;
+var BIDS_UNMATCHED = 2;
+var BIDS_SETTLED = 3;
+var BIDS_CANCELED = 4;
+
+var BID_RESPONSE_MATCHED = 1;
+var BID_RESPONSE_UNMATCHED = 2;
+var BID_RESPONSE_SETTLED = 3;
+var BID_RESPONSE_CANCELED = 4;
+
 var LOGIN_URL = '/login';
 var REGISTER_URL = '/login/register';
 var PROFILE_URL = '/login/userproftest';
+
+//**BIDS**//
+var BIDS_INDEX = '/api/bids';
+
+//**BIDSRESPONSE**//
+var BID_RESPONSE_INDEX = '/api/bidResponse';
 
 /***/ }),
 /* 1 */
@@ -88,8 +114,8 @@ module.exports = angular;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-__webpack_require__(10);
-module.exports = __webpack_require__(11);
+__webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
@@ -36353,7 +36379,11 @@ $provide.value("$locale", {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_EventsListController__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_FilterBidsController__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidResponsesController__ = __webpack_require__(11);
 var angular = __webpack_require__(1);
+
+
 
 
 
@@ -36366,6 +36396,8 @@ module.controller('LoginController', __WEBPACK_IMPORTED_MODULE_0__Controllers_Lo
 module.controller('RegisterController', __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__["a" /* RegisterController */]);
 module.controller('ProfileController', __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__["a" /* ProfileController */]);
 module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_3__Controllers_EventsListController__["a" /* EventsListController */]);
+module.controller('FilterBidsController', __WEBPACK_IMPORTED_MODULE_4__Controllers_FilterBidsController__["a" /* FilterBidsController */]);
+module.controller('FilterBidResponsesController', __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidResponsesController__["a" /* FilterBidResponsesController */]);
 
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
@@ -36411,7 +36443,7 @@ var LoginController = function () {
                 password: this.userPassword
             };
 
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* LOGIN_URL */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* LOGIN_URL */], data).then(function (response) {
                 if (response.status == 200) {
                     window.location.href = '/';
                 }
@@ -36472,7 +36504,7 @@ var RegisterController = function () {
                 password_confirmation: this.passwordConfirmation,
                 age: this.userAge
             };
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* REGISTER_URL */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* REGISTER_URL */], data).then(function (response) {
 
                 console.log(response.data.status);
 
@@ -36534,7 +36566,7 @@ var ProfileController = function () {
                 age: this.user.age,
                 id: this.user.id
             };
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* PROFILE_URL */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* PROFILE_URL */], data).then(function (response) {
 
                 // console.log(response.data.status);
                 console.log(response.data);
@@ -36611,12 +36643,123 @@ EventsListController.$inject = ['$window', '$http'];
 
 /***/ }),
 /* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterBidsController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(0);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+
+
+
+var FilterBidsController = function () {
+    function FilterBidsController($window, $http) {
+        _classCallCheck(this, FilterBidsController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* BIDS_MATCHED */];
+        this.bids = [];
+        this.showListFiltred();
+    }
+
+    _createClass(FilterBidsController, [{
+        key: "showListFiltred",
+        value: function showListFiltred() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* BIDS_INDEX */], {
+                params: { filter: this.filter }
+            }).then(function (response) {
+                console.log(response.data.data);
+                _this.bids = response.data.data;
+            });
+        }
+    }]);
+
+    return FilterBidsController;
+}();
+
+;
+
+FilterBidsController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterBidResponsesController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(0);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+
+
+
+var FilterBidResponsesController = function () {
+    function FilterBidResponsesController($window, $http) {
+        _classCallCheck(this, FilterBidResponsesController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BID_RESPONSE_MATCHED */];
+        this.bids = [];
+        this.showListFiltred();
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BID_RESPONSE_MATCHED */], name: 'Matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_RESPONSE_UNMATCHED */], name: 'Unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BID_RESPONSE_SETTLED */], name: 'Settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BID_RESPONSE_CANCELED */], name: 'Canceled' }];
+    }
+
+    _createClass(FilterBidResponsesController, [{
+        key: "setFilter",
+        value: function setFilter(status) {
+            this.filter = status;
+            this.showListFiltred();
+        }
+    }, {
+        key: "showListFiltred",
+        value: function showListFiltred() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BID_RESPONSE_INDEX */], {
+                params: { filter: this.filter }
+            }).then(function (response) {
+
+                _this.bids = response.data.data;
+            });
+        }
+    }]);
+
+    return FilterBidResponsesController;
+}();
+
+;
+
+FilterBidResponsesController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

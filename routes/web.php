@@ -11,6 +11,17 @@
 |
 */
 
+
+
+Route::group(['prefix'=>'bids'], function (){
+    Route::get('/', 'BidsController@index')->name('bids');
+    Route::get('/filter', 'BidsController@filter')->name('bids-filter');
+});
+
+
+
+
+
 Route::get('/', 'HomeController@index');
 Route::get('/signin', 'Auth\LoginController@showSignin')->name('signin');
 Route::get('/login/register', function(){
@@ -31,10 +42,6 @@ Route::group(['prefix' => 'events'], function() {
 });
 
 
-Route::group(['prefix'=>'bids'], function (){
-    Route::get('/', 'BidsController@index')->name('bids');
-
-});
 
 Route::group(['prefix'=>'sale'], function (){
     Route::get('/', 'SaleController@index')->name('sale');
@@ -44,11 +51,20 @@ Route::group(['prefix'=>'sale'], function (){
 });
 
 
-
+/*
 
 Route::get('/bids/matched', function(){
-    return view('bids.parts.matched');
+    return view('mobile.bids.parts.matched');
 });
+*/
+
+Route::get('/place-a-bit', function(){
+    return view('mobile.bids.place_a_bit.index');
+})->name('place-a-bit');
+
+
+
+
 /*Route::get('/login', function(){
     return view('login.index');
 })->name('login');*/
@@ -80,10 +96,6 @@ Route::get('/login/userproftest', 'ProfileController@showProfile');
 Route::post('/login/userproftest', 'ProfileController@editProfile');
 
 //Route::post('login', 'AuthController@loginUser')->name('login');
-
-Route::get('/place-a-bit', function(){
-    return view('bids.place_a_bit.index');
-})->name('place-a-bit');
 
 Route::get('/filters', function(){
     return view('filters.filter');

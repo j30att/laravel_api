@@ -14,7 +14,7 @@ class AddForeignForSubeventsForBidsTable extends Migration
     public function up()
     {
         Schema::table('bids', function (Blueprint $table) {
-           $table->foreign('subevent')->references('id')->on('sub_events')->onDelete('set null');
+           $table->foreign('subevent_id')->references('id')->on('sub_events')->onDelete('set null');
         });
     }
 

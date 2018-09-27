@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -33,4 +34,12 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function bids(){
+        return $this->hasMany(Bid::class,'creator_id');
+    }
+
+    public function bidResponse(){
+        return $this->hasMany(BidResponse::class,'investor_id');
+    }
 }

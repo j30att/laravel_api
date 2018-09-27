@@ -9,7 +9,11 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Bid;
+use App\Models\BidResponse;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BidsController
 {
@@ -17,5 +21,11 @@ class BidsController
 
         $typeDevice = $request->get('typeDevice');
         return view($typeDevice.'.bids.index');
+    }
+
+    public function filter(Request $request){
+        $typeDevice = $request->get('typeDevice');
+
+        return view($typeDevice.'.bids.parts.filter');
     }
 }

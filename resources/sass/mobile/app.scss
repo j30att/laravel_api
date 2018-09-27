@@ -237,8 +237,7 @@ main {
 }
 .binds-item
 {
-    background-color: rgb(231, 247, 228);
-    border: 1px solid rgb(231, 247, 228);
+
     border-radius: 8pt;
     -webkit-border-radius: 8pt;
     -moz-border-radius: 8pt;
@@ -248,16 +247,23 @@ main {
     margin-bottom: 20pt;
     margin-right: 12pt;
 }
-.binds .tabs-wr:nth-child(3) .slider_container .swipe-wr .binds-item{
-    background-color: rgb(255, 244, 236);
+binds-item__matched{
+    background-color: green;
+    //background-color: #e7f7e4;
 }
-.binds .tabs-wr:nth-child(4) .slider_container .swipe-wr .binds-item{
-    background-color: rgb(237, 248, 253);
+binds-item__unmatched{
+    background-color: red;
+    //background-color: #fff4ec;
 }
-.binds .tabs-wr:nth-child(5) .slider_container .swipe-wr .binds-item{
-    background-color: rgb(237, 235, 246);
+binds-item__settled{
+    background-color: #edf8fd;
 }
-.binds .tabs-wr:nth-child(5){
+binds-item__canceled{
+    background-color: #edebf6;
+}
+
+
+.binds .tabs-wr:last-child{
     margin-bottom: 75px;
 }
 .tabs-wr__title{
@@ -270,6 +276,8 @@ main {
     cursor: pointer;
     color: rgb(0, 127, 237);
 }
+
+
 .binds-item__profile_info{
     width: 100%;
     margin-left: 16px;

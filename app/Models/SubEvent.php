@@ -14,4 +14,8 @@ class SubEvent extends Model
         'date_start',
         'date_end'
     ];
+
+    public function event(){
+        return $this->belongsTo(Event::class,'event_id');
+    }
 }

@@ -20,8 +20,8 @@ class CreateBidResponsesTable extends Migration
             $table->integer('bid_id')->unsigned()->nullable();
             $table->foreign('bid_id')->references('id')->on('bids')->onDelete('set null');
 
-            $table->integer('investor')->unsigned()->nullable();
-            $table->foreign('investor')->references('id')->on('users')->onDelete('set null');
+            $table->integer('investor_id')->unsigned()->nullable();
+            $table->foreign('investor_id')->references('id')->on('users')->onDelete('set null');
 
             $table->double('value');
             $table->double('income');
