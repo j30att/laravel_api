@@ -13,6 +13,8 @@
 
 Route::group(['middleware' => 'guest'], function(){
     Route::post('login', 'Auth\LoginController@login');
+    Route::post('register', 'Auth\RegisterController@register');
+
 });
 
 Route::group(['middleware' => 'auth'], function(){
@@ -21,8 +23,7 @@ Route::group(['middleware' => 'auth'], function(){
 
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 // Registration Routes...
-Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-Route::post('login/register', 'Auth\RegisterController@register');
+//Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 // Password Reset Routes...
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');

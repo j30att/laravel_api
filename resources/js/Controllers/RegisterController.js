@@ -9,14 +9,14 @@ class RegisterController {
         this.userPassword ='';
         this.passwordConfirmation ='';
         this.userAge ='';
-
-
-        console.log('hui2');
     }
 
 
 
-    sendRegisterForm(){
+    sendRegisterForm(e){
+        e.stopPropagation();
+        e.preventDefault();
+
         let data ={
             name:this.userName,
             email: this.userEmail,
@@ -26,13 +26,10 @@ class RegisterController {
         };
         this.$http.post(REGISTER_URL, data).then(function (response) {
 
-            console.log(response.data.status);
-
-            if (response.data.status == 0){
+            if (response.data.status === 0){
                 console.log('валидация не прошла')
             } else {
-                // window.location.href = response.data.url;
-                window.location.href = '/profile'
+                window.location.href = '/'
             }
 
         })

@@ -17,7 +17,7 @@ class LoginController {
         };
 
         this.$http.post(LOGIN_URL, data).then(function (response) {
-            if (response.status == 200){
+            if (response.status === 200){
                 window.location.href = '/'
             }
         })

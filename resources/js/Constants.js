@@ -9,7 +9,7 @@ export const BID_RESPONSE_SETTLED    = 3;
 export const BID_RESPONSE_CANCELED   = 4;
 
 export const LOGIN_URL = '/login';
-export const REGISTER_URL = '/login/register';
+export const REGISTER_URL = '/register';
 export const PROFILE_URL = '/login/userproftest';
 
 //**BIDS**//

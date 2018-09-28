@@ -1106,7 +1106,7 @@ var BID_RESPONSE_SETTLED = 3;
 var BID_RESPONSE_CANCELED = 4;
 
 var LOGIN_URL = '/login';
-var REGISTER_URL = '/login/register';
+var REGISTER_URL = '/register';
 var PROFILE_URL = '/login/userproftest';
 
 //**BIDS**//
@@ -46159,7 +46159,7 @@ var LoginController = function () {
             };
 
             this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* LOGIN_URL */], data).then(function (response) {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     window.location.href = '/';
                 }
             });
@@ -46199,13 +46199,14 @@ var RegisterController = function () {
         this.userPassword = '';
         this.passwordConfirmation = '';
         this.userAge = '';
-
-        console.log('hui2');
     }
 
     _createClass(RegisterController, [{
         key: 'sendRegisterForm',
-        value: function sendRegisterForm() {
+        value: function sendRegisterForm(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
             var data = {
                 name: this.userName,
                 email: this.userEmail,
@@ -46215,13 +46216,10 @@ var RegisterController = function () {
             };
             this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* REGISTER_URL */], data).then(function (response) {
 
-                console.log(response.data.status);
-
-                if (response.data.status == 0) {
+                if (response.data.status === 0) {
                     console.log('валидация не прошла');
                 } else {
-                    // window.location.href = response.data.url;
-                    window.location.href = '/profile';
+                    window.location.href = '/';
                 }
             });
         }
@@ -46611,6 +46609,12 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         template: __webpack_require__(129),
         controller: 'LoginController',
         controllerAs: 'LgCtrl'
+    }).state('auth.registration', {
+        url: '/register',
+        template: __webpack_require__(130),
+        //ng-controller="RegisterController as RgCtrl"
+        controller: 'RegisterController',
+        controllerAs: 'RgCtrl'
     }).state('events', {
         url: '/events',
         template: __webpack_require__(127),
@@ -46629,7 +46633,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"events\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"events\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 77 */,
@@ -51827,6 +51831,12 @@ module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>";
+
+/***/ }),
+/* 130 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a href=\"{{route('terms')}}\">Terms & Conditions</a> and  <a href=\"{{route('privacy')}}\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
 
 /***/ })
 /******/ ]);
