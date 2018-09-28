@@ -24,7 +24,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                     except: 'Auth',
                     redirectTo: () => {
                         return {
-                            state: 'events'
+                            state: 'invest'
                         }
                     }
                 }
@@ -46,7 +46,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                     except: 'Auth',
                     redirectTo: () => {
                         return {
-                            state: 'events'
+                            state: 'invest'
                         }
                     }
                 }

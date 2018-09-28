@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(93)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(102)))
 
 /***/ }),
 /* 1 */
@@ -1249,7 +1249,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(104);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(36);
@@ -1267,7 +1267,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(114);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1281,7 +1281,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(115);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1291,13 +1291,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(116);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(48);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(44);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(117);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1315,7 +1315,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(120);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -3654,10 +3654,10 @@ var BaseLocationServices = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(123);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(62);
 /**
  * # Angular 1 types
@@ -3935,7 +3935,7 @@ var Queue = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(12);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(103);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(35);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
@@ -4353,21 +4353,21 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(113);
 /** @publicapi @module transition */ /** */
 
 
@@ -9831,8 +9831,8 @@ var UrlRouterProvider = /** @class */ (function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(64);
-__webpack_require__(120);
-module.exports = __webpack_require__(121);
+__webpack_require__(129);
+module.exports = __webpack_require__(130);
 
 
 /***/ }),
@@ -9843,11 +9843,11 @@ module.exports = __webpack_require__(121);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(99);
 var angular = __webpack_require__(15);
 
 
@@ -9857,7 +9857,7 @@ var angular = __webpack_require__(15);
 
 
 
-var ngRouter = __webpack_require__(92).default;
+var ngRouter = __webpack_require__(101).default;
 
 var app = angular.module('poker', [ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
 
@@ -46590,25 +46590,25 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
                 except: 'Auth',
                 redirectTo: function redirectTo() {
                     return {
-                        state: 'events'
+                        state: 'invest'
                     };
                 }
             }
         }
     }).state('terms-and-conditions', {
         url: '/terms-and-conditions',
-        template: __webpack_require__(130)
+        template: __webpack_require__(77)
     }).state('privacy-policy', {
         url: '/privacy-policy',
-        template: __webpack_require__(131)
+        template: __webpack_require__(78)
     }).state('auth', {
-        template: __webpack_require__(132),
+        template: __webpack_require__(79),
         data: {
             permissions: {
                 except: 'Auth',
                 redirectTo: function redirectTo() {
                     return {
-                        state: 'events'
+                        state: 'invest'
                     };
                 }
             }
@@ -46616,28 +46616,28 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
     }).state('auth.login', {
         //ng-controller="LoginController as LgCtrl"
         url: '/login',
-        template: __webpack_require__(133),
+        template: __webpack_require__(80),
         controller: 'LoginController',
         controllerAs: 'LgCtrl'
     }).state('auth.registration', {
         url: '/register',
-        template: __webpack_require__(134),
+        template: __webpack_require__(81),
         //ng-controller="RegisterController as RgCtrl"
         controller: 'RegisterController',
         controllerAs: 'RgCtrl'
     }).state('invest', {
         url: '/invest',
-        template: __webpack_require__(77),
+        template: __webpack_require__(82),
         controller: 'EventsController',
         controllerAs: 'EvntsCtrl'
     }).state('bids', {
         url: '/bids',
-        template: __webpack_require__(129),
+        template: __webpack_require__(83),
         controller: 'BidResponsesController',
         controllerAs: 'BdsRspnsCtrl'
     }).state('bids-filter', {
         url: '/bids/{filter}',
-        template: __webpack_require__(135),
+        template: __webpack_require__(84),
         controller: 'FilterBidResponsesController',
         controllerAs: 'FltrBdsRspnsCtrl'
     });
@@ -46659,10 +46659,52 @@ module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\
 /* 77 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a href=\"\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"EvntsCtrl._opts.dataLoad\"\n                              events=\"EvntsCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing tabs_item__active\">Closing</div>\n                    <div class=\"tabs_players__lower\">Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n\n\n\n            </div>\n\n\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n\n        </div>\n\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
 
 /***/ }),
 /* 78 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>";
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a href=\"\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"EvntsCtrl._opts.dataLoad\"\n                              events=\"EvntsCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing tabs_item__active\">Closing</div>\n                    <div class=\"tabs_players__lower\">Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n\n\n\n            </div>\n\n\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n\n        </div>\n\n    </div>\n</div>";
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n\n        <bids-carousel ng-if=\"BdsRspnsCtrl._opts.dataLoad\"\n                       bids=\"BdsRspnsCtrl.bids\"\n        >\n        </bids-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"binds binds_full_sc\">\n\n        <div class=\"tabs-wr\">\n            <div class=\"active_status col-md-12\">\n                Bids\n            </div>\n            <div class=\"tabs-wr__title col-md-12\">\n\n                <a ui-sref=\"bids-filter({filter: menuItem.name})\" ng-repeat=\"menuItem in FltrBdsRspnsCtrl.menu\" ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids class=\"bids_row__fullscreen\" bids=\"FltrBdsRspnsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
+
+/***/ }),
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46680,14 +46722,14 @@ function middlewares(PermRoleStore) {
 }
 
 /***/ }),
-/* 79 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(93);
 var angular = __webpack_require__(15);
 
 
@@ -46704,7 +46746,7 @@ module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_event
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 80 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46730,19 +46772,19 @@ var BidsComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(81),
+    template: __webpack_require__(88),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 81 */
+/* 88 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"binds-item\"\n         ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n         ng-repeat=\"item in $ctrl.bids\">\n        <!--<div class=\"binds-item-wr\">-->\n        <!--</div>-->\n    <div class=\"binds-item__profile_info\">\n        <div class=\"profile__photo\">\n            <img src=\"/images/players.png\" alt=\"\">\n        </div>\n        <div class=\"profile_text\">\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n            </div>\n            <div class=\"profile__country\">\n                MILLIONS Russia, 1A\n            </div>\n\n        </div>\n\n    </div>\n    <div class=\"loop_counter\">\n        Second loop\n    </div>\n    <div class=\"binds-item__game_info\">\n        <div class=\"geme__text\">\n            <div class=\"by_in\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n        <div class=\"game_atrs\">\n            <div class=\"game_atrs__markup\">\n                <span>Markup</span><br>\n                1.20\n            </div>\n            <div class=\"game_atrs__value\">\n                <span>Value</span><br>\n                £2,404.08\n            </div>\n            <div class=\"game_atrs__date_start\">\n                <span>Date of Start</span><br>\n                1 Sep\n            </div>\n        </div>\n    </div>\n    </div>\n";
 
 /***/ }),
-/* 82 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46770,19 +46812,19 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(83),
+    template: __webpack_require__(90),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 83 */
+/* 90 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 84 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46832,19 +46874,19 @@ var EventsComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(85),
+    template: __webpack_require__(92),
     controller: Events,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 85 */
+/* 92 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n\n\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"$ctrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
 
 /***/ }),
-/* 86 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46871,19 +46913,19 @@ var EventsCarouselComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(87),
+    template: __webpack_require__(94),
     controller: EventsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 87 */
+/* 94 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
 
 /***/ }),
-/* 88 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46898,9 +46940,9 @@ module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">
 (function () {
   'use strict';
 
-  var permission = __webpack_require__(89),
-    ngPermission = __webpack_require__(90),
-    uiPermission = __webpack_require__(91);
+  var permission = __webpack_require__(96),
+    ngPermission = __webpack_require__(97),
+    uiPermission = __webpack_require__(98);
 
   module.exports = {
     permission: permission,
@@ -46911,7 +46953,7 @@ module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">
 
 
 /***/ }),
-/* 89 */
+/* 96 */
 /***/ (function(module, exports) {
 
 /**
@@ -48155,7 +48197,7 @@ module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">
 
 
 /***/ }),
-/* 90 */
+/* 97 */
 /***/ (function(module, exports) {
 
 /**
@@ -48379,7 +48421,7 @@ module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">
 
 
 /***/ }),
-/* 91 */
+/* 98 */
 /***/ (function(module, exports) {
 
 /**
@@ -48963,7 +49005,25 @@ module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">
 
 
 /***/ }),
-/* 92 */
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
+hack.$inject = ['$templateCache'];
+var menu_footer = __webpack_require__(100);
+function hack($templateCache) {
+    $templateCache.put('tpl/view/footer.template.html', menu_footer);
+}
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"footer_binds\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_binds__item item_invest\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g@3x_INVEST.png\" alt=\"\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_binds__item item_invest_bids\">\n            <div class=\"footer_binds__img\"><img src=\"/images/b@3x_BIDS.png\" alt=\"\"></div>\n            bids\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_sale\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_2@3x_SALE.png\" alt=\"\"></div>\n            sale\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_wallet\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_3@3x_WALLET.png\" alt=\"\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
+
+/***/ }),
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48979,12 +49039,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(62);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
@@ -49164,7 +49224,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 93 */
+/* 102 */
 /***/ (function(module, exports) {
 
 var g;
@@ -49191,7 +49251,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 94 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49363,7 +49423,7 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 95 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49377,7 +49437,7 @@ initDefaultTypes();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 96 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49425,7 +49485,7 @@ var treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 97 */
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49470,7 +49530,7 @@ var registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 98 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49534,7 +49594,7 @@ var registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 99 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49602,7 +49662,7 @@ var registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 100 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49657,7 +49717,7 @@ var registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 101 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49698,7 +49758,7 @@ var registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 102 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49728,7 +49788,7 @@ var registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 103 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49766,7 +49826,7 @@ var registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 104 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49790,7 +49850,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 105 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49838,7 +49898,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 106 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49868,7 +49928,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 107 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49878,11 +49938,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 108 */
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(118);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
@@ -49905,7 +49965,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 109 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49931,7 +49991,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(119);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
@@ -49949,7 +50009,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 110 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49990,7 +50050,7 @@ var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* lo
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 111 */
+/* 120 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50014,7 +50074,7 @@ var UIRouterPluginBase = /** @class */ (function () {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 112 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50225,7 +50285,7 @@ var scopeBindings = function (bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 113 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50260,7 +50320,7 @@ var getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 114 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50346,7 +50406,7 @@ var Ng1LocationServices = /** @class */ (function () {
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 115 */
+/* 124 */
 /***/ (function(module, exports) {
 
 /**
@@ -50665,7 +50725,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 116 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51302,7 +51362,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 117 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51354,7 +51414,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 118 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51791,7 +51851,7 @@ __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').d
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 119 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51823,81 +51883,16 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 120 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 121 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
-hack.$inject = ['$templateCache'];
-var menu_footer = __webpack_require__(128);
-function hack($templateCache) {
-    $templateCache.put('tpl/view/footer.template.html', menu_footer);
-}
-
-/***/ }),
-/* 128 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"footer_binds\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_binds__item item_invest\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g@3x_INVEST.png\" alt=\"\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_binds__item item_invest_bids\">\n            <div class=\"footer_binds__img\"><img src=\"/images/b@3x_BIDS.png\" alt=\"\"></div>\n            bids\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_sale\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_2@3x_SALE.png\" alt=\"\"></div>\n            sale\n        </div>\n    </a>\n    <a href=\"\">\n        <div class=\"footer_binds__item item_invest_wallet\">\n            <div class=\"footer_binds__img\"><img src=\"/images/g_3@3x_WALLET.png\" alt=\"\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
-
-/***/ }),
 /* 129 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n\n        <bids-carousel ng-if=\"BdsRspnsCtrl._opts.dataLoad\"\n                       bids=\"BdsRspnsCtrl.bids\"\n        >\n        </bids-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 130 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>";
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
-
-/***/ }),
-/* 135 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" ng-controller=\"FilterBidResponsesController as FltrBdsRspnsCtrl\">\n    <div class=\"binds binds_full_sc\">\n\n        <div class=\"tabs-wr\">\n            <div class=\"active_status col-md-12\">\n                Bids\n            </div>\n            <div class=\"tabs-wr__title col-md-12\">\n\n                <a ui-sref=\"bids-filter({filter: menuItem.name})\" ng-repeat=\"menuItem in FltrBdsRspnsCtrl.menu\" ng-bind=\"menuItem.name\" style=\"text-transform:capitalize\"></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids class=\"bids_row__fullscreen\" bids=\"FltrBdsRspnsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
