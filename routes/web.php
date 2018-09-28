@@ -23,6 +23,13 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+/*
+Route::group(['prefix' => 'events'], function() {
+    Route::get('/', 'EventsController@index')->name('events');
+    Route::get('/all', 'EventsController@eventsList')->name('all-events');
+    Route::get('/{event}', 'EventsController@event')->name('event');
+});*/
+
 
 
 Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
@@ -50,11 +57,6 @@ Route::group(['middleware' => 'auth','prefix' => 'profile'], function(){
     });
 });
 
-Route::group(['prefix' => 'events'], function() {
-    Route::get('/', 'EventsController@index')->name('events');
-    Route::get('/all', 'EventsController@eventsList')->name('all-events');
-    Route::get('/{event}', 'EventsController@event')->name('event');
-});
 
 
 

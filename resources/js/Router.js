@@ -19,30 +19,12 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('index', {
             url: '/',
             template: require('./views/main.template.html'),
-            data: {
-                permissions: {
-                    except: 'Auth',
-                    redirectTo: () => {
-                        return {
-                            state: 'dashboard'
-                        }
-                    }
-                }
-            }
         })
-        .state('dashboard', {
-            url: '/dashboard',
-            template: require('./views/dashboard.template.html'),
-            data: {
-                permissions: {
-                    only: 'Auth',
-                    redirectTo: () => {
-                        return {
-                            state: 'index'
-                        }
-                    }
-                }
-            }
+        .state('events', {
+            url: '/events',
+            template: require('./views/events/index.template.html'),
+            controller: 'EventsController',
+            controllerAs: 'EvntsCtrl',
         })
 
     ;

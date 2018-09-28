@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(88)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(93)))
 
 /***/ }),
 /* 1 */
@@ -1249,7 +1249,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(95);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(36);
@@ -1267,7 +1267,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(105);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1281,7 +1281,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(106);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1291,13 +1291,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(107);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(48);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(44);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(108);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1315,7 +1315,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(111);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -3654,10 +3654,10 @@ var BaseLocationServices = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(62);
 /**
  * # Angular 1 types
@@ -3935,7 +3935,7 @@ var Queue = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(12);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(94);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(35);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
@@ -4353,21 +4353,21 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(104);
 /** @publicapi @module transition */ /** */
 
 
@@ -9831,8 +9831,8 @@ var UrlRouterProvider = /** @class */ (function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(64);
-__webpack_require__(115);
-module.exports = __webpack_require__(116);
+__webpack_require__(120);
+module.exports = __webpack_require__(121);
 
 
 /***/ }),
@@ -9843,9 +9843,9 @@ module.exports = __webpack_require__(116);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
 var angular = __webpack_require__(15);
 
@@ -9855,7 +9855,7 @@ var angular = __webpack_require__(15);
 
 
 
-var ngRouter = __webpack_require__(87).default;
+var ngRouter = __webpack_require__(92).default;
 
 var app = angular.module('poker', [ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
 
@@ -46598,30 +46598,12 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(76),
-        data: {
-            permissions: {
-                except: 'Auth',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'dashboard'
-                    };
-                }
-            }
-        }
-    }).state('dashboard', {
-        url: '/dashboard',
+        template: __webpack_require__(76)
+    }).state('events', {
+        url: '/events',
         template: __webpack_require__(127),
-        data: {
-            permissions: {
-                only: 'Auth',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
+        controller: 'EventsController',
+        controllerAs: 'EvntsCtrl'
     });
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -46635,7 +46617,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 /* 76 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without\">\n                Continue without registration\n            </div>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <a class=\"contine_without\" ui-sref=\"events\">\n                Continue without registration\n            </a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 77 */,
@@ -46643,10 +46625,28 @@ module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(85);
+/* harmony export (immutable) */ __webpack_exports__["a"] = middlewares;
+middlewares.$inject = ['PermRoleStore'];
+
+function middlewares(PermRoleStore) {
+    PermRoleStore.defineRole('Auth', function () {
+        return window.__user !== null;
+    });
+
+    PermRoleStore.defineRole('Guest', function () {
+        return window.__user === null;
+    });
+}
+
+/***/ }),
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(86);
 var angular = __webpack_require__(15);
 
 
@@ -46663,7 +46663,7 @@ module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_event
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46689,19 +46689,19 @@ var BidsComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(80),
+    template: __webpack_require__(81),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"binds-item\"\n         ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n         ng-repeat=\"item in $ctrl.bids\">\n        <!--<div class=\"binds-item-wr\">-->\n        <!--</div>-->\n    <div class=\"binds-item__profile_info\">\n        <div class=\"profile__photo\">\n            <img src=\"/images/players.png\" alt=\"\">\n        </div>\n        <div class=\"profile_text\">\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n            </div>\n            <div class=\"profile__country\">\n                MILLIONS Russia, 1A\n            </div>\n\n        </div>\n\n    </div>\n    <div class=\"loop_counter\">\n        Second loop\n    </div>\n    <div class=\"binds-item__game_info\">\n        <div class=\"geme__text\">\n            <div class=\"by_in\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n        <div class=\"game_atrs\">\n            <div class=\"game_atrs__markup\">\n                <span>Markup</span><br>\n                1.20\n            </div>\n            <div class=\"game_atrs__value\">\n                <span>Value</span><br>\n                £2,404.08\n            </div>\n            <div class=\"game_atrs__date_start\">\n                <span>Date of Start</span><br>\n                1 Sep\n            </div>\n        </div>\n    </div>\n    </div>\n";
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46729,19 +46729,19 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(82),
+    template: __webpack_require__(83),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <div class=\"see_all\">See All</div>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46755,6 +46755,7 @@ var Events = function () {
         _classCallCheck(this, Events);
 
         this.opened = [];
+        console.log(this.events);
     }
 
     _createClass(Events, [{
@@ -46763,6 +46764,7 @@ var Events = function () {
     }, {
         key: 'openDetail',
         value: function openDetail(event_id) {
+            console.log(event_id);
             var rInd = this.opened.indexOf(event_id);
             if (rInd === -1) {
                 this.opened.push(event_id);
@@ -46789,19 +46791,19 @@ var EventsComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(84),
+    template: __webpack_require__(85),
     controller: Events,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n<!--\n\n<div class=\"see_info_event\" ng-if=\"$ctrl.showDetail()\">\n    <span><a href=\"\">See info</a></span>\n\n    <div class=\"event-item__title\">{{$event->title}}</div>\n    <div class=\"event-item__summa\">£{{$event->fund}} GTD</div>\n    <div class=\"event-item__date\">{{$event->formatted_data}}</div>\n\n\n    <div class=\"event_main-wr\">\n        <span>Events List</span>\n    </div>\n</div>\n-->\n\n{%$ctrl.state%}\n<div ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"EvntsLstCtrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"EvntsLstCtrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
+module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n        <a href=\"\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n\n    </div>\n</div>\n\n\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\" ng-if=\"$ctrl.showDetail(item.id)\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.formated_data\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n\n    </div>\n\n</div>\n";
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46813,9 +46815,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var EventsCarousel = function () {
     function EventsCarousel() {
         _classCallCheck(this, EventsCarousel);
-
-        console.log(this.events);
-        console.log(this.state);
     }
 
     _createClass(EventsCarousel, [{
@@ -46831,2896 +46830,19 @@ var EventsCarouselComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(86),
+    template: __webpack_require__(87),
     controller: EventsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
-
-/***/ }),
-/* 87 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(21);
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "watchDigests", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getLocals", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__ = __webpack_require__(34);
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getNg1ViewConfigFactory", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ng1ViewsBuilder", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Ng1ViewConfig", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateProvider__ = __webpack_require__(61);
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(62);
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
-/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlConfig"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UIRouterGlobals"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UIRouter"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UIRouterPluginBase"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "root", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["root"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fromJson", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["fromJson"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "toJson", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["toJson"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "forEach", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["forEach"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "extend", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["extend"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "equals", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["equals"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["identity"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "noop", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["noop"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createProxyFunctions", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["createProxyFunctions"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "inherit", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["inherit"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "inArray", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["inArray"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_inArray", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_inArray"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "removeFrom", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["removeFrom"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_removeFrom", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_removeFrom"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushTo", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pushTo"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_pushTo", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_pushTo"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "deregAll", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["deregAll"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaults", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["defaults"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mergeR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["mergeR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ancestors", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ancestors"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pick", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pick"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "omit", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["omit"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pluck", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pluck"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "filter", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["filter"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "find", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["find"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mapObj", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["mapObj"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "map", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["map"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "values", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["values"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "allTrueR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["allTrueR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "anyTrueR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["anyTrueR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "unnestR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["unnestR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "flattenR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["flattenR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pushR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "uniqR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["uniqR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "unnest", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["unnest"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "flatten", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["flatten"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "assertPredicate", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["assertPredicate"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "assertMap", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["assertMap"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "assertFn", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["assertFn"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pairs", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pairs"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "arrayTuples", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["arrayTuples"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "applyPairs", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["applyPairs"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tail", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["tail"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "copy", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["copy"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_extend", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_extend"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "silenceUncaughtInPromise", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["silenceUncaughtInPromise"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "silentRejection", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["silentRejection"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "makeStub", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["makeStub"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "services", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["services"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Glob", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Glob"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "curry", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["curry"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["compose"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pipe", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pipe"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "prop", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["prop"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "propEq", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["propEq"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["parse"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "not", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["not"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "and", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["and"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "or", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["or"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "all", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["all"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "any", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["any"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "is", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["is"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "eq", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["eq"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "val", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["val"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "invoke", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["invoke"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pattern", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pattern"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isUndefined", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isUndefined"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isDefined", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isDefined"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isNull", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isNull"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isNullOrUndefined", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isNullOrUndefined"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isFunction", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isFunction"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isNumber", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isNumber"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isString"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isObject"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isArray", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isArray"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isDate", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isDate"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isRegExp", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isRegExp"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isInjectable", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isInjectable"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isPromise", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isPromise"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Queue", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Queue"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "maxLength", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["maxLength"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "padString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["padString"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "kebobString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["kebobString"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "functionToString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["functionToString"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fnToString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["fnToString"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "stringify", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["stringify"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "beforeAfterSubstr", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["beforeAfterSubstr"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hostRegex", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["hostRegex"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "stripLastPathElement", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["stripLastPathElement"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitHash", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitHash"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitQuery", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitQuery"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitEqual", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitEqual"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "trimHashVal", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["trimHashVal"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitOnDelim", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitOnDelim"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "joinNeighborsR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["joinNeighborsR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Category", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Category"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Trace", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Trace"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "trace", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["trace"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "DefType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["DefType"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Param", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Param"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ParamTypes"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateParams"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ParamType"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["PathNode"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["PathUtils"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "resolvePolicies", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["resolvePolicies"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultResolvePolicy", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["defaultResolvePolicy"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Resolvable", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Resolvable"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NATIVE_INJECTOR_TOKEN", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["NATIVE_INJECTOR_TOKEN"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ResolveContext", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ResolveContext"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "resolvablesBuilder", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["resolvablesBuilder"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateBuilder", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateBuilder"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateObject", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateObject"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateMatcher", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateMatcher"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateQueueManager", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateQueueManager"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateRegistry"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TargetState"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionHookPhase"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionHookScope"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["HookBuilder"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "matchState", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["matchState"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "RegisteredHook", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["RegisteredHook"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "makeEvent", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["makeEvent"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "RejectType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["RejectType"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Rejection", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Rejection"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Transition", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Transition"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHook", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionHook"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionEventType"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["defaultTransOpts"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlMatcher"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ParamFactory"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcherFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlMatcherFactory"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRouter"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRuleFactory"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["BaseUrlRule"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ViewService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["$q"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["$injector"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["BaseLocationServices"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HashLocationService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["HashLocationService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MemoryLocationService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["MemoryLocationService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PushStateLocationService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["PushStateLocationService"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MemoryLocationConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["MemoryLocationConfig"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BrowserLocationConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["BrowserLocationConfig"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "keyValsToObjectR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["keyValsToObjectR"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getParams", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["getParams"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "parseUrl", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["parseUrl"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "buildUrl", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["buildUrl"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "locationPluginFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["locationPluginFactory"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "servicesPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["servicesPlugin"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["hashLocationPlugin"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pushStateLocationPlugin"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["memoryLocationPlugin"]; });
-
-
-
-
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ('ui.router');
-
-
-
-//# sourceMappingURL=index.js.map
+module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
 
 /***/ }),
 /* 88 */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 89 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParamTypes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(25);
-/** @publicapi @module params */ /** */
-
-
-
-
-
-/**
- * A registry for parameter types.
- *
- * This registry manages the built-in (and custom) parameter types.
- *
- * The built-in parameter types are:
- *
- * - [[string]]
- * - [[path]]
- * - [[query]]
- * - [[hash]]
- * - [[int]]
- * - [[bool]]
- * - [[date]]
- * - [[json]]
- * - [[any]]
- *
- * To register custom parameter types, use [[UrlConfig.type]], i.e.,
- *
- * ```js
- * router.urlService.config.type(customType)
- * ```
- */
-var ParamTypes = /** @class */ (function () {
-    /** @internalapi */
-    function ParamTypes() {
-        /** @hidden */
-        this.enqueue = true;
-        /** @hidden */
-        this.typeQueue = [];
-        /** @internalapi */
-        this.defaultTypes = Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["H" /* pick */])(ParamTypes.prototype, [
-            'hash',
-            'string',
-            'query',
-            'path',
-            'int',
-            'bool',
-            'date',
-            'json',
-            'any',
-        ]);
-        // Register default types. Store them in the prototype of this.types.
-        var makeType = function (definition, name) { return new __WEBPACK_IMPORTED_MODULE_4__paramType__["a" /* ParamType */](Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])({ name: name }, definition)); };
-        this.types = Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["A" /* inherit */])(Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["B" /* map */])(this.defaultTypes, makeType), {});
-    }
-    /** @internalapi */
-    ParamTypes.prototype.dispose = function () {
-        this.types = {};
-    };
-    /**
-     * Registers a parameter type
-     *
-     * End users should call [[UrlMatcherFactory.type]], which delegates to this method.
-     */
-    ParamTypes.prototype.type = function (name, definition, definitionFn) {
-        if (!Object(__WEBPACK_IMPORTED_MODULE_1__common_predicates__["c" /* isDefined */])(definition))
-            return this.types[name];
-        if (this.types.hasOwnProperty(name))
-            throw new Error("A type named '" + name + "' has already been defined.");
-        this.types[name] = new __WEBPACK_IMPORTED_MODULE_4__paramType__["a" /* ParamType */](Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])({ name: name }, definition));
-        if (definitionFn) {
-            this.typeQueue.push({ name: name, def: definitionFn });
-            if (!this.enqueue)
-                this._flushTypeQueue();
-        }
-        return this;
-    };
-    /** @internalapi */
-    ParamTypes.prototype._flushTypeQueue = function () {
-        while (this.typeQueue.length) {
-            var type = this.typeQueue.shift();
-            if (type.pattern)
-                throw new Error("You cannot override a type's .pattern at runtime.");
-            Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])(this.types[type.name], __WEBPACK_IMPORTED_MODULE_3__common_coreservices__["b" /* services */].$injector.invoke(type.def));
-        }
-    };
-    return ParamTypes;
-}());
-
-/** @hidden */
-function initDefaultTypes() {
-    var makeDefaultType = function (def) {
-        var valToString = function (val) { return (val != null ? val.toString() : val); };
-        var defaultTypeBase = {
-            encode: valToString,
-            decode: valToString,
-            is: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["h" /* is */])(String),
-            pattern: /.*/,
-            // tslint:disable-next-line:triple-equals
-            equals: function (a, b) { return a == b; },
-        };
-        return Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])({}, defaultTypeBase, def);
-    };
-    // Default Parameter Type Definitions
-    Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])(ParamTypes.prototype, {
-        string: makeDefaultType({}),
-        path: makeDefaultType({
-            pattern: /[^/]*/,
-        }),
-        query: makeDefaultType({}),
-        hash: makeDefaultType({
-            inherit: false,
-        }),
-        int: makeDefaultType({
-            decode: function (val) { return parseInt(val, 10); },
-            is: function (val) {
-                return !Object(__WEBPACK_IMPORTED_MODULE_1__common_predicates__["g" /* isNullOrUndefined */])(val) && this.decode(val.toString()) === val;
-            },
-            pattern: /-?\d+/,
-        }),
-        bool: makeDefaultType({
-            encode: function (val) { return (val && 1) || 0; },
-            decode: function (val) { return parseInt(val, 10) !== 0; },
-            is: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["h" /* is */])(Boolean),
-            pattern: /0|1/,
-        }),
-        date: makeDefaultType({
-            encode: function (val) {
-                return !this.is(val)
-                    ? undefined
-                    : [val.getFullYear(), ('0' + (val.getMonth() + 1)).slice(-2), ('0' + val.getDate()).slice(-2)].join('-');
-            },
-            decode: function (val) {
-                if (this.is(val))
-                    return val;
-                var match = this.capture.exec(val);
-                return match ? new Date(match[1], match[2] - 1, match[3]) : undefined;
-            },
-            is: function (val) { return val instanceof Date && !isNaN(val.valueOf()); },
-            equals: function (l, r) {
-                return ['getFullYear', 'getMonth', 'getDate'].reduce(function (acc, fn) { return acc && l[fn]() === r[fn](); }, true);
-            },
-            pattern: /[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[1-2][0-9]|3[0-1])/,
-            capture: /([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])/,
-        }),
-        json: makeDefaultType({
-            encode: __WEBPACK_IMPORTED_MODULE_0__common_common__["Q" /* toJson */],
-            decode: __WEBPACK_IMPORTED_MODULE_0__common_common__["x" /* fromJson */],
-            is: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["h" /* is */])(Object),
-            equals: __WEBPACK_IMPORTED_MODULE_0__common_common__["q" /* equals */],
-            pattern: /[^/]*/,
-        }),
-        // does not encode/decode
-        any: makeDefaultType({
-            encode: __WEBPACK_IMPORTED_MODULE_0__common_common__["y" /* identity */],
-            decode: __WEBPACK_IMPORTED_MODULE_0__common_common__["y" /* identity */],
-            is: function () { return true; },
-            equals: __WEBPACK_IMPORTED_MODULE_0__common_common__["q" /* equals */],
-        }),
-    });
-}
-initDefaultTypes();
-//# sourceMappingURL=paramTypes.js.map
-
-/***/ }),
-/* 90 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pathNode__ = __webpack_require__(26);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__pathNode__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pathUtils__ = __webpack_require__(16);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__pathUtils__["a"]; });
-/** @internalapi @module path */ /** */
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 91 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerAddCoreResolvables; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return treeChangesCleanup; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__transition_transition__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolve__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common__ = __webpack_require__(3);
-/** @internalapi @module hooks */ /** */
-
-
-
-
-function addCoreResolvables(trans) {
-    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData(__WEBPACK_IMPORTED_MODULE_1__router__["a" /* UIRouter */], trans.router), '');
-    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData(__WEBPACK_IMPORTED_MODULE_0__transition_transition__["a" /* Transition */], trans), '');
-    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData('$transition$', trans), '');
-    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData('$stateParams', trans.params()), '');
-    trans.entering().forEach(function (state) {
-        trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData('$state$', state), state);
-    });
-}
-var registerAddCoreResolvables = function (transitionService) {
-    return transitionService.onCreate({}, addCoreResolvables);
-};
-var TRANSITION_TOKENS = ['$transition$', __WEBPACK_IMPORTED_MODULE_0__transition_transition__["a" /* Transition */]];
-var isTransition = Object(__WEBPACK_IMPORTED_MODULE_3__common__["N" /* inArray */])(TRANSITION_TOKENS);
-// References to Transition in the treeChanges pathnodes makes all
-// previous Transitions reachable in memory, causing a memory leak
-// This function removes resolves for '$transition$' and `Transition` from the treeChanges.
-// Do not use this on current transitions, only on old ones.
-var treeChangesCleanup = function (trans) {
-    var nodes = Object(__WEBPACK_IMPORTED_MODULE_3__common__["_45" /* values */])(trans.treeChanges())
-        .reduce(__WEBPACK_IMPORTED_MODULE_3__common__["_43" /* unnestR */], [])
-        .reduce(__WEBPACK_IMPORTED_MODULE_3__common__["_41" /* uniqR */], []);
-    // If the resolvable is a Transition, return a new resolvable with null data
-    var replaceTransitionWithNull = function (r) {
-        return isTransition(r.token) ? __WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData(r.token, null) : r;
-    };
-    nodes.forEach(function (node) {
-        node.resolvables = node.resolvables.map(replaceTransitionWithNull);
-    });
-};
-//# sourceMappingURL=coreResolvables.js.map
-
-/***/ }),
-/* 92 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerRedirectToHook; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(13);
-/** @internalapi @module hooks */ /** */
-
-
-
-/**
- * A [[TransitionHookFn]] that redirects to a different state or params
- *
- * Registered using `transitionService.onStart({ to: (state) => !!state.redirectTo }, redirectHook);`
- *
- * See [[StateDeclaration.redirectTo]]
- */
-var redirectToHook = function (trans) {
-    var redirect = trans.to().redirectTo;
-    if (!redirect)
-        return;
-    var $state = trans.router.stateService;
-    function handleResult(result) {
-        if (!result)
-            return;
-        if (result instanceof __WEBPACK_IMPORTED_MODULE_2__state_targetState__["a" /* TargetState */])
-            return result;
-        if (Object(__WEBPACK_IMPORTED_MODULE_0__common_predicates__["l" /* isString */])(result))
-            return $state.target(result, trans.params(), trans.options());
-        if (result['state'] || result['params'])
-            return $state.target(result['state'] || trans.to(), result['params'] || trans.params(), trans.options());
-    }
-    if (Object(__WEBPACK_IMPORTED_MODULE_0__common_predicates__["d" /* isFunction */])(redirect)) {
-        return __WEBPACK_IMPORTED_MODULE_1__common_coreservices__["b" /* services */].$q.when(redirect(trans)).then(handleResult);
-    }
-    return handleResult(redirect);
-};
-var registerRedirectToHook = function (transitionService) {
-    return transitionService.onStart({ to: function (state) { return !!state.redirectTo; } }, redirectToHook);
-};
-//# sourceMappingURL=redirectTo.js.map
-
-/***/ }),
-/* 93 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerOnExitHook; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return registerOnRetainHook; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerOnEnterHook; });
-/**
- * A factory which creates an onEnter, onExit or onRetain transition hook function
- *
- * The returned function invokes the (for instance) state.onEnter hook when the
- * state is being entered.
- *
- * @hidden
- */
-function makeEnterExitRetainHook(hookName) {
-    return function (transition, state) {
-        var _state = state.$$state();
-        var hookFn = _state[hookName];
-        return hookFn(transition, state);
-    };
-}
-/**
- * The [[TransitionStateHookFn]] for onExit
- *
- * When the state is being exited, the state's .onExit function is invoked.
- *
- * Registered using `transitionService.onExit({ exiting: (state) => !!state.onExit }, onExitHook);`
- *
- * See: [[IHookRegistry.onExit]]
- */
-var onExitHook = makeEnterExitRetainHook('onExit');
-var registerOnExitHook = function (transitionService) {
-    return transitionService.onExit({ exiting: function (state) { return !!state.onExit; } }, onExitHook);
-};
-/**
- * The [[TransitionStateHookFn]] for onRetain
- *
- * When the state was already entered, and is not being exited or re-entered, the state's .onRetain function is invoked.
- *
- * Registered using `transitionService.onRetain({ retained: (state) => !!state.onRetain }, onRetainHook);`
- *
- * See: [[IHookRegistry.onRetain]]
- */
-var onRetainHook = makeEnterExitRetainHook('onRetain');
-var registerOnRetainHook = function (transitionService) {
-    return transitionService.onRetain({ retained: function (state) { return !!state.onRetain; } }, onRetainHook);
-};
-/**
- * The [[TransitionStateHookFn]] for onEnter
- *
- * When the state is being entered, the state's .onEnter function is invoked.
- *
- * Registered using `transitionService.onEnter({ entering: (state) => !!state.onEnter }, onEnterHook);`
- *
- * See: [[IHookRegistry.onEnter]]
- */
-var onEnterHook = makeEnterExitRetainHook('onEnter');
-var registerOnEnterHook = function (transitionService) {
-    return transitionService.onEnter({ entering: function (state) { return !!state.onEnter; } }, onEnterHook);
-};
-//# sourceMappingURL=onEnterExitRetain.js.map
-
-/***/ }),
-/* 94 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export RESOLVE_HOOK_PRIORITY */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerEagerResolvePath; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyResolveState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return registerResolveRemaining; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
-/** @internalapi @module hooks */ /** */
-
-
-
-var RESOLVE_HOOK_PRIORITY = 1000;
-/**
- * A [[TransitionHookFn]] which resolves all EAGER Resolvables in the To Path
- *
- * Registered using `transitionService.onStart({}, eagerResolvePath, { priority: 1000 });`
- *
- * When a Transition starts, this hook resolves all the EAGER Resolvables, which the transition then waits for.
- *
- * See [[StateDeclaration.resolve]]
- */
-var eagerResolvePath = function (trans) {
-    return new __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__["b" /* ResolveContext */](trans.treeChanges().to).resolvePath('EAGER', trans).then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
-};
-var registerEagerResolvePath = function (transitionService) {
-    return transitionService.onStart({}, eagerResolvePath, { priority: RESOLVE_HOOK_PRIORITY });
-};
-/**
- * A [[TransitionHookFn]] which resolves all LAZY Resolvables for the state (and all its ancestors) in the To Path
- *
- * Registered using `transitionService.onEnter({ entering: () => true }, lazyResolveState, { priority: 1000 });`
- *
- * When a State is being entered, this hook resolves all the Resolvables for this state, which the transition then waits for.
- *
- * See [[StateDeclaration.resolve]]
- */
-var lazyResolveState = function (trans, state) {
-    return new __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__["b" /* ResolveContext */](trans.treeChanges().to)
-        .subContext(state.$$state())
-        .resolvePath('LAZY', trans)
-        .then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
-};
-var registerLazyResolveState = function (transitionService) {
-    return transitionService.onEnter({ entering: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["p" /* val */])(true) }, lazyResolveState, { priority: RESOLVE_HOOK_PRIORITY });
-};
-/**
- * A [[TransitionHookFn]] which resolves any dynamically added (LAZY or EAGER) Resolvables.
- *
- * Registered using `transitionService.onFinish({}, eagerResolvePath, { priority: 1000 });`
- *
- * After all entering states have been entered, this hook resolves any remaining Resolvables.
- * These are typically dynamic resolves which were added by some Transition Hook using [[Transition.addResolvable]].
- *
- * See [[StateDeclaration.resolve]]
- */
-var resolveRemaining = function (trans) {
-    return new __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__["b" /* ResolveContext */](trans.treeChanges().to).resolvePath('LAZY', trans).then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
-};
-var registerResolveRemaining = function (transitionService) {
-    return transitionService.onFinish({}, resolveRemaining, { priority: RESOLVE_HOOK_PRIORITY });
-};
-//# sourceMappingURL=resolve.js.map
-
-/***/ }),
-/* 95 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLoadEnteringViews; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerActivateViews; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
-/** @internalapi @module hooks */ /** */
-
-
-/**
- * A [[TransitionHookFn]] which waits for the views to load
- *
- * Registered using `transitionService.onStart({}, loadEnteringViews);`
- *
- * Allows the views to do async work in [[ViewConfig.load]] before the transition continues.
- * In angular 1, this includes loading the templates.
- */
-var loadEnteringViews = function (transition) {
-    var $q = __WEBPACK_IMPORTED_MODULE_1__common_coreservices__["b" /* services */].$q;
-    var enteringViews = transition.views('entering');
-    if (!enteringViews.length)
-        return;
-    return $q.all(enteringViews.map(function (view) { return $q.when(view.load()); })).then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
-};
-var registerLoadEnteringViews = function (transitionService) {
-    return transitionService.onFinish({}, loadEnteringViews);
-};
-/**
- * A [[TransitionHookFn]] which activates the new views when a transition is successful.
- *
- * Registered using `transitionService.onSuccess({}, activateViews);`
- *
- * After a transition is complete, this hook deactivates the old views from the previous state,
- * and activates the new views from the destination state.
- *
- * See [[ViewService]]
- */
-var activateViews = function (transition) {
-    var enteringViews = transition.views('entering');
-    var exitingViews = transition.views('exiting');
-    if (!enteringViews.length && !exitingViews.length)
-        return;
-    var $view = transition.router.viewService;
-    exitingViews.forEach(function (vc) { return $view.deactivateViewConfig(vc); });
-    enteringViews.forEach(function (vc) { return $view.activateViewConfig(vc); });
-    $view.sync();
-};
-var registerActivateViews = function (transitionService) {
-    return transitionService.onSuccess({}, activateViews);
-};
-//# sourceMappingURL=views.js.map
-
-/***/ }),
-/* 96 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerUpdateGlobalState; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-
-/**
- * A [[TransitionHookFn]] which updates global UI-Router state
- *
- * Registered using `transitionService.onBefore({}, updateGlobalState);`
- *
- * Before a [[Transition]] starts, updates the global value of "the current transition" ([[Globals.transition]]).
- * After a successful [[Transition]], updates the global values of "the current state"
- * ([[Globals.current]] and [[Globals.$current]]) and "the current param values" ([[Globals.params]]).
- *
- * See also the deprecated properties:
- * [[StateService.transition]], [[StateService.current]], [[StateService.params]]
- */
-var updateGlobalState = function (trans) {
-    var globals = trans.router.globals;
-    var transitionSuccessful = function () {
-        globals.successfulTransitions.enqueue(trans);
-        globals.$current = trans.$to();
-        globals.current = globals.$current.self;
-        Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["m" /* copy */])(trans.params(), globals.params);
-    };
-    var clearCurrentTransition = function () {
-        // Do not clear globals.transition if a different transition has started in the meantime
-        if (globals.transition === trans)
-            globals.transition = null;
-    };
-    trans.onSuccess({}, transitionSuccessful, { priority: 10000 });
-    trans.promise.then(clearCurrentTransition, clearCurrentTransition);
-};
-var registerUpdateGlobalState = function (transitionService) {
-    return transitionService.onCreate({}, updateGlobalState);
-};
-//# sourceMappingURL=updateGlobals.js.map
-
-/***/ }),
-/* 97 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerUpdateUrl; });
-/**
- * A [[TransitionHookFn]] which updates the URL after a successful transition
- *
- * Registered using `transitionService.onSuccess({}, updateUrl);`
- */
-var updateUrl = function (transition) {
-    var options = transition.options();
-    var $state = transition.router.stateService;
-    var $urlRouter = transition.router.urlRouter;
-    // Dont update the url in these situations:
-    // The transition was triggered by a URL sync (options.source === 'url')
-    // The user doesn't want the url to update (options.location === false)
-    // The destination state, and all parents have no navigable url
-    if (options.source !== 'url' && options.location && $state.$current.navigable) {
-        var urlOptions = { replace: options.location === 'replace' };
-        $urlRouter.push($state.$current.navigable.url, $state.params, urlOptions);
-    }
-    $urlRouter.update(true);
-};
-var registerUpdateUrl = function (transitionService) {
-    return transitionService.onSuccess({}, updateUrl, { priority: 9999 });
-};
-//# sourceMappingURL=url.js.map
-
-/***/ }),
-/* 98 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerIgnoredTransitionHook; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__ = __webpack_require__(10);
-/** @internalapi @module hooks */ /** */
-
-
-/**
- * A [[TransitionHookFn]] that skips a transition if it should be ignored
- *
- * This hook is invoked at the end of the onBefore phase.
- *
- * If the transition should be ignored (because no parameter or states changed)
- * then the transition is ignored and not processed.
- */
-function ignoredHook(trans) {
-    var ignoredReason = trans._ignoredReason();
-    if (!ignoredReason)
-        return;
-    __WEBPACK_IMPORTED_MODULE_0__common_trace__["c" /* trace */].traceTransitionIgnored(trans);
-    var pending = trans.router.globals.transition;
-    // The user clicked a link going back to the *current state* ('A')
-    // However, there is also a pending transition in flight (to 'B')
-    // Abort the transition to 'B' because the user now wants to be back at 'A'.
-    if (ignoredReason === 'SameAsCurrent' && pending) {
-        pending.abort();
-    }
-    return __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__["b" /* Rejection */].ignored().toPromise();
-}
-var registerIgnoredTransitionHook = function (transitionService) {
-    return transitionService.onBefore({}, ignoredHook, { priority: -9999 });
-};
-//# sourceMappingURL=ignoredTransition.js.map
-
-/***/ }),
-/* 99 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerInvalidTransitionHook; });
-/** @internalapi @module hooks */ /** */
-/**
- * A [[TransitionHookFn]] that rejects the Transition if it is invalid
- *
- * This hook is invoked at the end of the onBefore phase.
- * If the transition is invalid (for example, param values do not validate)
- * then the transition is rejected.
- */
-function invalidTransitionHook(trans) {
-    if (!trans.valid()) {
-        throw new Error(trans.error().toString());
-    }
-}
-var registerInvalidTransitionHook = function (transitionService) {
-    return transitionService.onBefore({}, invalidTransitionHook, { priority: -10000 });
-};
-//# sourceMappingURL=invalidTransition.js.map
-
-/***/ }),
-/* 100 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hookBuilder__ = __webpack_require__(43);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__hookBuilder__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rejectFactory__ = __webpack_require__(10);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transition__ = __webpack_require__(30);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__transition__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transitionHook__ = __webpack_require__(14);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_5__transitionHook__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transitionEventType__ = __webpack_require__(53);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__transitionEventType__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionService__ = __webpack_require__(29);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_7__transitionService__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_7__transitionService__["b"]; });
-/**
- * # Transition subsystem
- *
- * This module contains APIs related to a Transition.
- *
- * See:
- * - [[TransitionService]]
- * - [[Transition]]
- * - [[HookFn]], [[TransitionHookFn]], [[TransitionStateHookFn]], [[HookMatchCriteria]], [[HookResult]]
- *
- * @preferred @publicapi @module transition
- */ /** */
-
-
-
-
-
-
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 101 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(19);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__urlMatcher__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__ = __webpack_require__(45);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__urlRouter__ = __webpack_require__(46);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_2__urlRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(32);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRule__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRule__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__urlService__ = __webpack_require__(49);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_4__urlService__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__urlRules__ = __webpack_require__(50);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_5__urlRules__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__urlConfig__ = __webpack_require__(51);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__urlConfig__["a"]; });
-
-
-
-
-
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 102 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__view__ = __webpack_require__(47);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__view__["a"]; });
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 103 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(104);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["d"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["e"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["f"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["g"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["h"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["i"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["j"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["k"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["l"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["m"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["n"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["o"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["p"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "q", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["q"]; });
-/** @internalapi @module vanilla */ /** */
-
-//# sourceMappingURL=vanilla.js.map
-
-/***/ }),
-/* 104 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__q__ = __webpack_require__(54);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__q__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__injector__ = __webpack_require__(55);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__injector__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__baseLocationService__ = __webpack_require__(20);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__baseLocationService__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hashLocationService__ = __webpack_require__(56);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__hashLocationService__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__ = __webpack_require__(57);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pushStateLocationService__ = __webpack_require__(58);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_5__pushStateLocationService__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__memoryLocationConfig__ = __webpack_require__(59);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__memoryLocationConfig__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__browserLocationConfig__ = __webpack_require__(60);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_7__browserLocationConfig__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(33);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(105);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "q", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["d"]; });
-
-
-
-
-
-
-
-
-
-
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 105 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["d"] = servicesPlugin;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return hashLocationPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return pushStateLocationPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return memoryLocationPlugin; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hashLocationService__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pushStateLocationService__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__injector__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__q__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(5);
-/** @internalapi @module vanilla */ /** */
-
-
-
-
-
-
-
-
-
-function servicesPlugin(router) {
-    __WEBPACK_IMPORTED_MODULE_8__common_coreservices__["b" /* services */].$injector = __WEBPACK_IMPORTED_MODULE_6__injector__["a" /* $injector */];
-    __WEBPACK_IMPORTED_MODULE_8__common_coreservices__["b" /* services */].$q = __WEBPACK_IMPORTED_MODULE_7__q__["a" /* $q */];
-    return { name: 'vanilla.services', $q: __WEBPACK_IMPORTED_MODULE_7__q__["a" /* $q */], $injector: __WEBPACK_IMPORTED_MODULE_6__injector__["a" /* $injector */], dispose: function () { return null; } };
-}
-/** A `UIRouterPlugin` uses the browser hash to get/set the current location */
-var hashLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* locationPluginFactory */])('vanilla.hashBangLocation', false, __WEBPACK_IMPORTED_MODULE_1__hashLocationService__["a" /* HashLocationService */], __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__["a" /* BrowserLocationConfig */]);
-/** A `UIRouterPlugin` that gets/sets the current location using the browser's `location` and `history` apis */
-var pushStateLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* locationPluginFactory */])('vanilla.pushStateLocation', true, __WEBPACK_IMPORTED_MODULE_3__pushStateLocationService__["a" /* PushStateLocationService */], __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__["a" /* BrowserLocationConfig */]);
-/** A `UIRouterPlugin` that gets/sets the current location from an in-memory object */
-var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* locationPluginFactory */])('vanilla.memoryLocation', false, __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__["a" /* MemoryLocationService */], __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__["a" /* MemoryLocationConfig */]);
-//# sourceMappingURL=plugins.js.map
-
-/***/ }),
-/* 106 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UIRouterPluginBase; });
-/**
- * # Core classes and interfaces
- *
- * The classes and interfaces that are core to ui-router and do not belong
- * to a more specific subsystem (such as resolve).
- *
- * @preferred @publicapi @module core
- */ /** */
-/** @internalapi */
-var UIRouterPluginBase = /** @class */ (function () {
-    function UIRouterPluginBase() {
-    }
-    UIRouterPluginBase.prototype.dispose = function (router) { };
-    return UIRouterPluginBase;
-}());
-
-//# sourceMappingURL=interface.js.map
-
-/***/ }),
-/* 107 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
-/** @publicapi @module view */ /** */
-
-
-/**
- * Service which manages loading of templates from a ViewConfig.
- */
-var TemplateFactory = /** @class */ (function () {
-    function TemplateFactory() {
-        var _this = this;
-        /** @hidden */ this._useHttp = __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].version.minor < 3;
-        /** @hidden */ this.$get = [
-            '$http',
-            '$templateCache',
-            '$injector',
-            function ($http, $templateCache, $injector) {
-                _this.$templateRequest = $injector.has && $injector.has('$templateRequest') && $injector.get('$templateRequest');
-                _this.$http = $http;
-                _this.$templateCache = $templateCache;
-                return _this;
-            },
-        ];
-    }
-    /** @hidden */
-    TemplateFactory.prototype.useHttpService = function (value) {
-        this._useHttp = value;
-    };
-    /**
-     * Creates a template from a configuration object.
-     *
-     * @param config Configuration object for which to load a template.
-     * The following properties are search in the specified order, and the first one
-     * that is defined is used to create the template:
-     *
-     * @param params  Parameters to pass to the template function.
-     * @param context The resolve context associated with the template's view
-     *
-     * @return {string|object}  The template html as a string, or a promise for
-     * that string,or `null` if no template is configured.
-     */
-    TemplateFactory.prototype.fromConfig = function (config, params, context) {
-        var defaultTemplate = '<ui-view></ui-view>';
-        var asTemplate = function (result) { return __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$q.when(result).then(function (str) { return ({ template: str }); }); };
-        var asComponent = function (result) { return __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$q.when(result).then(function (str) { return ({ component: str }); }); };
-        return Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.template)
-            ? asTemplate(this.fromString(config.template, params))
-            : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.templateUrl)
-                ? asTemplate(this.fromUrl(config.templateUrl, params))
-                : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.templateProvider)
-                    ? asTemplate(this.fromProvider(config.templateProvider, params, context))
-                    : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.component)
-                        ? asComponent(config.component)
-                        : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.componentProvider)
-                            ? asComponent(this.fromComponentProvider(config.componentProvider, params, context))
-                            : asTemplate(defaultTemplate);
-    };
-    /**
-     * Creates a template from a string or a function returning a string.
-     *
-     * @param template html template as a string or function that returns an html template as a string.
-     * @param params Parameters to pass to the template function.
-     *
-     * @return {string|object} The template html as a string, or a promise for that
-     * string.
-     */
-    TemplateFactory.prototype.fromString = function (template, params) {
-        return Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isFunction"])(template) ? template(params) : template;
-    };
-    /**
-     * Loads a template from the a URL via `$http` and `$templateCache`.
-     *
-     * @param {string|Function} url url of the template to load, or a function
-     * that returns a url.
-     * @param {Object} params Parameters to pass to the url function.
-     * @return {string|Promise.<string>} The template html as a string, or a promise
-     * for that string.
-     */
-    TemplateFactory.prototype.fromUrl = function (url, params) {
-        if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isFunction"])(url))
-            url = url(params);
-        if (url == null)
-            return null;
-        if (this._useHttp) {
-            return this.$http
-                .get(url, { cache: this.$templateCache, headers: { Accept: 'text/html' } })
-                .then(function (response) {
-                return response.data;
-            });
-        }
-        return this.$templateRequest(url);
-    };
-    /**
-     * Creates a template by invoking an injectable provider function.
-     *
-     * @param provider Function to invoke via `locals`
-     * @param {Function} injectFn a function used to invoke the template provider
-     * @return {string|Promise.<string>} The template html as a string, or a promise
-     * for that string.
-     */
-    TemplateFactory.prototype.fromProvider = function (provider, params, context) {
-        var deps = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.annotate(provider);
-        var providerFn = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(provider) ? Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["tail"])(provider) : provider;
-        var resolvable = new __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["Resolvable"]('', providerFn, deps);
-        return resolvable.get(context);
-    };
-    /**
-     * Creates a component's template by invoking an injectable provider function.
-     *
-     * @param provider Function to invoke via `locals`
-     * @param {Function} injectFn a function used to invoke the template provider
-     * @return {string} The template html as a string: "<component-name input1='::$resolve.foo'></component-name>".
-     */
-    TemplateFactory.prototype.fromComponentProvider = function (provider, params, context) {
-        var deps = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.annotate(provider);
-        var providerFn = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(provider) ? Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["tail"])(provider) : provider;
-        var resolvable = new __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["Resolvable"]('', providerFn, deps);
-        return resolvable.get(context);
-    };
-    /**
-     * Creates a template from a component's name
-     *
-     * This implements route-to-component.
-     * It works by retrieving the component (directive) metadata from the injector.
-     * It analyses the component's bindings, then constructs a template that instantiates the component.
-     * The template wires input and output bindings to resolves or from the parent component.
-     *
-     * @param uiView {object} The parent ui-view (for binding outputs to callbacks)
-     * @param context The ResolveContext (for binding outputs to callbacks returned from resolves)
-     * @param component {string} Component's name in camel case.
-     * @param bindings An object defining the component's bindings: {foo: '<'}
-     * @return {string} The template as a string: "<component-name input1='::$resolve.foo'></component-name>".
-     */
-    TemplateFactory.prototype.makeComponentTemplate = function (uiView, context, component, bindings) {
-        bindings = bindings || {};
-        // Bind once prefix
-        var prefix = __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].version.minor >= 3 ? '::' : '';
-        // Convert to kebob name. Add x- prefix if the string starts with `x-` or `data-`
-        var kebob = function (camelCase) {
-            var kebobed = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["kebobString"])(camelCase);
-            return /^(x|data)-/.exec(kebobed) ? "x-" + kebobed : kebobed;
-        };
-        var attributeTpl = function (input) {
-            var name = input.name, type = input.type;
-            var attrName = kebob(name);
-            // If the ui-view has an attribute which matches a binding on the routed component
-            // then pass that attribute through to the routed component template.
-            // Prefer ui-view wired mappings to resolve data, unless the resolve was explicitly bound using `bindings:`
-            if (uiView.attr(attrName) && !bindings[name])
-                return attrName + "='" + uiView.attr(attrName) + "'";
-            var resolveName = bindings[name] || name;
-            // Pre-evaluate the expression for "@" bindings by enclosing in {{ }}
-            // some-attr="{{ ::$resolve.someResolveName }}"
-            if (type === '@')
-                return attrName + "='{{" + prefix + "$resolve." + resolveName + "}}'";
-            // Wire "&" callbacks to resolves that return a callback function
-            // Get the result of the resolve (should be a function) and annotate it to get its arguments.
-            // some-attr="$resolve.someResolveResultName(foo, bar)"
-            if (type === '&') {
-                var res = context.getResolvable(resolveName);
-                var fn = res && res.data;
-                var args = (fn && __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.annotate(fn)) || [];
-                // account for array style injection, i.e., ['foo', function(foo) {}]
-                var arrayIdxStr = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(fn) ? "[" + (fn.length - 1) + "]" : '';
-                return attrName + "='$resolve." + resolveName + arrayIdxStr + "(" + args.join(',') + ")'";
-            }
-            // some-attr="::$resolve.someResolveName"
-            return attrName + "='" + prefix + "$resolve." + resolveName + "'";
-        };
-        var attrs = getComponentBindings(component)
-            .map(attributeTpl)
-            .join(' ');
-        var kebobName = kebob(component);
-        return "<" + kebobName + " " + attrs + "></" + kebobName + ">";
-    };
-    return TemplateFactory;
-}());
-
-// Gets all the directive(s)' inputs ('@', '=', and '<') and outputs ('&')
-function getComponentBindings(name) {
-    var cmpDefs = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.get(name + 'Directive'); // could be multiple
-    if (!cmpDefs || !cmpDefs.length)
-        throw new Error("Unable to find component named '" + name + "'");
-    return cmpDefs.map(getBindings).reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["unnestR"], []);
-}
-// Given a directive definition, find its object input attributes
-// Use different properties, depending on the type of directive (component, bindToController, normal)
-var getBindings = function (def) {
-    if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isObject"])(def.bindToController))
-        return scopeBindings(def.bindToController);
-    return scopeBindings(def.scope);
-};
-// for ng 1.2 style, process the scope: { input: "=foo" }
-// for ng 1.3 through ng 1.5, process the component's bindToController: { input: "=foo" } object
-var scopeBindings = function (bindingsObj) {
-    return Object.keys(bindingsObj || {})
-        // [ 'input', [ '=foo', '=', 'foo' ] ]
-        .map(function (key) { return [key, /^([=<@&])[?]?(.*)/.exec(bindingsObj[key])]; })
-        // skip malformed values
-        .filter(function (tuple) { return Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(tuple) && Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(tuple[1]); })
-        // { name: ('foo' || 'input'), type: '=' }
-        .map(function (tuple) { return ({ name: tuple[1][2] || tuple[0], type: tuple[1][1] }); });
-};
-//# sourceMappingURL=templateFactory.js.map
-
-/***/ }),
-/* 108 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStateHookBuilder; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(21);
-/** @publicapi @module ng1 */ /** */
-
-
-/**
- * This is a [[StateBuilder.builder]] function for angular1 `onEnter`, `onExit`,
- * `onRetain` callback hooks on a [[Ng1StateDeclaration]].
- *
- * When the [[StateBuilder]] builds a [[StateObject]] object from a raw [[StateDeclaration]], this builder
- * ensures that those hooks are injectable for @uirouter/angularjs (ng1).
- *
- * @internalapi
- */
-var getStateHookBuilder = function (hookName) {
-    return function stateHookBuilder(stateObject, parentFn) {
-        var hook = stateObject[hookName];
-        var pathname = hookName === 'onExit' ? 'from' : 'to';
-        function decoratedNg1Hook(trans, state) {
-            var resolveContext = new __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["ResolveContext"](trans.treeChanges(pathname));
-            var subContext = resolveContext.subContext(state.$$state());
-            var locals = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["extend"])(Object(__WEBPACK_IMPORTED_MODULE_1__services__["a" /* getLocals */])(subContext), { $state$: state, $transition$: trans });
-            return __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["services"].$injector.invoke(hook, this, locals);
-        }
-        return hook ? decoratedNg1Hook : undefined;
-    };
-};
-//# sourceMappingURL=onEnterExitRetain.js.map
-
-/***/ }),
-/* 109 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1LocationServices; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
-/** @publicapi @module ng1 */ /** */
-
-
-/**
- * Implements UI-Router LocationServices and LocationConfig using Angular 1's $location service
- * @internalapi
- */
-var Ng1LocationServices = /** @class */ (function () {
-    function Ng1LocationServices($locationProvider) {
-        // .onChange() registry
-        this._urlListeners = [];
-        this.$locationProvider = $locationProvider;
-        var _lp = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["val"])($locationProvider);
-        Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["createProxyFunctions"])(_lp, this, _lp, ['hashPrefix']);
-    }
-    /**
-     * Applys ng1-specific path parameter encoding
-     *
-     * The Angular 1 `$location` service is a bit weird.
-     * It doesn't allow slashes to be encoded/decoded bi-directionally.
-     *
-     * See the writeup at https://github.com/angular-ui/ui-router/issues/2598
-     *
-     * This code patches the `path` parameter type so it encoded/decodes slashes as ~2F
-     *
-     * @param router
-     */
-    Ng1LocationServices.monkeyPatchPathParameterType = function (router) {
-        var pathType = router.urlMatcherFactory.type('path');
-        pathType.encode = function (x) {
-            return x != null ? x.toString().replace(/(~|\/)/g, function (m) { return ({ '~': '~~', '/': '~2F' }[m]); }) : x;
-        };
-        pathType.decode = function (x) {
-            return x != null ? x.toString().replace(/(~~|~2F)/g, function (m) { return ({ '~~': '~', '~2F': '/' }[m]); }) : x;
-        };
-    };
-    Ng1LocationServices.prototype.dispose = function () { };
-    Ng1LocationServices.prototype.onChange = function (callback) {
-        var _this = this;
-        this._urlListeners.push(callback);
-        return function () { return Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["removeFrom"])(_this._urlListeners)(callback); };
-    };
-    Ng1LocationServices.prototype.html5Mode = function () {
-        var html5Mode = this.$locationProvider.html5Mode();
-        html5Mode = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isObject"])(html5Mode) ? html5Mode.enabled : html5Mode;
-        return html5Mode && this.$sniffer.history;
-    };
-    Ng1LocationServices.prototype.baseHref = function () {
-        return this._baseHref || (this._baseHref = this.$browser.baseHref() || this.$window.location.pathname);
-    };
-    Ng1LocationServices.prototype.url = function (newUrl, replace, state) {
-        if (replace === void 0) { replace = false; }
-        if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isDefined"])(newUrl))
-            this.$location.url(newUrl);
-        if (replace)
-            this.$location.replace();
-        if (state)
-            this.$location.state(state);
-        return this.$location.url();
-    };
-    Ng1LocationServices.prototype._runtimeServices = function ($rootScope, $location, $sniffer, $browser, $window) {
-        var _this = this;
-        this.$location = $location;
-        this.$sniffer = $sniffer;
-        this.$browser = $browser;
-        this.$window = $window;
-        // Bind $locationChangeSuccess to the listeners registered in LocationService.onChange
-        $rootScope.$on('$locationChangeSuccess', function (evt) { return _this._urlListeners.forEach(function (fn) { return fn(evt); }); });
-        var _loc = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["val"])($location);
-        // Bind these LocationService functions to $location
-        Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["createProxyFunctions"])(_loc, this, _loc, ['replace', 'path', 'search', 'hash']);
-        // Bind these LocationConfig functions to $location
-        Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["createProxyFunctions"])(_loc, this, _loc, ['port', 'protocol', 'host']);
-    };
-    return Ng1LocationServices;
-}());
-
-//# sourceMappingURL=locationServices.js.map
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports) {
-
-/**
- * The current (or pending) State Parameters
- *
- * An injectable global **Service Object** which holds the state parameters for the latest **SUCCESSFUL** transition.
- *
- * The values are not updated until *after* a `Transition` successfully completes.
- *
- * **Also:** an injectable **Per-Transition Object** object which holds the pending state parameters for the pending `Transition` currently running.
- *
- * ### Deprecation warning:
- *
- * The value injected for `$stateParams` is different depending on where it is injected.
- *
- * - When injected into an angular service, the object injected is the global **Service Object** with the parameter values for the latest successful `Transition`.
- * - When injected into transition hooks, resolves, or view controllers, the object is the **Per-Transition Object** with the parameter values for the running `Transition`.
- *
- * Because of these confusing details, this service is deprecated.
- *
- * ### Instead of using the global `$stateParams` service object,
- * inject [[$uiRouterGlobals]] and use [[UIRouterGlobals.params]]
- *
- * ```js
- * MyService.$inject = ['$uiRouterGlobals'];
- * function MyService($uiRouterGlobals) {
- *   return {
- *     paramValues: function () {
- *       return $uiRouterGlobals.params;
- *     }
- *   }
- * }
- * ```
- *
- * ### Instead of using the per-transition `$stateParams` object,
- * inject the current `Transition` (as [[$transition$]]) and use [[Transition.params]]
- *
- * ```js
- * MyController.$inject = ['$transition$'];
- * function MyController($transition$) {
- *   var username = $transition$.params().username;
- *   // .. do something with username
- * }
- * ```
- *
- * ---
- *
- * This object can be injected into other services.
- *
- * #### Deprecated Example:
- * ```js
- * SomeService.$inject = ['$http', '$stateParams'];
- * function SomeService($http, $stateParams) {
- *   return {
- *     getUser: function() {
- *       return $http.get('/api/users/' + $stateParams.username);
- *     }
- *   }
- * };
- * angular.service('SomeService', SomeService);
- * ```
- * @deprecated
- */
-var $stateParams;
-/**
- * Global UI-Router variables
- *
- * The router global state as a **Service Object** (injectable during runtime).
- *
- * This object contains globals such as the current state and current parameter values.
- */
-var $uiRouterGlobals;
-/**
- * The UI-Router instance
- *
- * The [[UIRouter]] singleton (the router instance) as a **Service Object** (injectable during runtime).
- *
- * This object is the UI-Router singleton instance, created by angular dependency injection during application bootstrap.
- * It has references to the other UI-Router services
- *
- * #### Note: This object is also exposed as [[$uiRouterProvider]] for injection during angular config time.
- */
-var $uiRouter;
-/**
- * The UI-Router instance
- *
- * The [[UIRouter]] singleton (the router instance) as a **Provider Object** (injectable during config phase).
- *
- * This object is the UI-Router singleton instance, created by angular dependency injection during application bootstrap.
- * It has references to the other UI-Router services
- *
- * #### Note: This object is also exposed as [[$uiRouter]] for injection during runtime.
- */
-var $uiRouterProvider;
-/**
- * Transition debug/tracing
- *
- * The [[Trace]] singleton as a **Service Object** (injectable during runtime).
- *
- * Enables or disables Transition tracing which can help to debug issues.
- */
-var $trace;
-/**
- * The Transition Service
- *
- * The [[TransitionService]] singleton as a **Service Object** (injectable during runtime).
- *
- * This angular service exposes the [[TransitionService]] singleton, which is primarily
- * used to register global transition hooks.
- *
- * #### Note: This object is also exposed as [[$transitionsProvider]] for injection during the config phase.
- */
-var $transitions;
-/**
- * The Transition Service
- *
- * The [[TransitionService]] singleton as a **Provider Object** (injectable during config phase)
- *
- * This angular service exposes the [[TransitionService]] singleton, which is primarily
- * used to register global transition hooks.
- *
- * #### Note: This object is also exposed as [[$transitions]] for injection during runtime.
- */
-var $transitionsProvider;
-/**
- * The current [[Transition]] object
- *
- * The current [[Transition]] object as a **Per-Transition Object** (injectable into Resolve, Hooks, Controllers)
- *
- * This object returns information about the current transition, including:
- *
- * - To/from states
- * - To/from parameters
- * - Transition options
- * - States being entered, exited, and retained
- * - Resolve data
- * - A Promise for the transition
- * - Any transition failure information
- * - An injector for both Service and Per-Transition Objects
- */
-var $transition$;
-/**
- * The State Service
- *
- * The [[StateService]] singleton as a **Service Object** (injectable during runtime).
- *
- * This service used to manage and query information on registered states.
- * It exposes state related APIs including:
- *
- * - Start a [[Transition]]
- * - Imperatively lazy load states
- * - Check if a state is currently active
- * - Look up states by name
- * - Build URLs for a state+parameters
- * - Configure the global Transition error handler
- *
- * This angular service exposes the [[StateService]] singleton.
- */
-var $state;
-/**
- * The State Registry
- *
- * The [[StateRegistry]] singleton as a **Service Object** (injectable during runtime).
- *
- * This service is used to register/deregister states.
- * It has state registration related APIs including:
- *
- * - Register/deregister states
- * - Listen for state registration/deregistration
- * - Get states by name
- * - Add state decorators (to customize the state creation process)
- *
- * #### Note: This object is also exposed as [[$stateRegistryProvider]] for injection during the config phase.
- */
-var $stateRegistry;
-/**
- * The State Registry
- *
- * The [[StateRegistry]] singleton as a **Provider Object** (injectable during config time).
- *
- * This service is used to register/deregister states.
- * It has state registration related APIs including:
- *
- * - Register/deregister states
- * - Listen for state registration/deregistration
- * - Get states by name
- * - Add state decorators (to customize the state creation process)
- *
- * #### Note: This object is also exposed as [[$stateRegistry]] for injection during runtime.
- */
-var $stateRegistryProvider;
-/**
- * The View Scroll provider
- *
- * The [[UIViewScrollProvider]] as a **Provider Object** (injectable during config time).
- *
- * This angular service exposes the [[UIViewScrollProvider]] singleton and is
- * used to disable UI-Router's scroll behavior.
- */
-var $uiViewScrollProvider;
-/**
- * The View Scroll function
- *
- * The View Scroll function as a **Service Object** (injectable during runtime).
- *
- * This is a function that scrolls an element into view.
- * The element is scrolled after a `$timeout` so the DOM has time to refresh.
- *
- * If you prefer to rely on `$anchorScroll` to scroll the view to the anchor,
- * this can be enabled by calling [[UIViewScrollProvider.useAnchorScroll]].
- *
- * Note: this function is used by the [[directives.uiView]] when the `autoscroll` expression evaluates to true.
- */
-var $uiViewScroll;
-/**
- * The StateProvider
- *
- * An angular1-only [[StateProvider]] as a **Provider Object** (injectable during config time).
- *
- * This angular service exposes the [[StateProvider]] singleton.
- *
- * The `StateProvider` is primarily used to register states or add custom state decorators.
- *
- * ##### Note: This provider is a ng1 vestige.
- * It is a passthrough to [[$stateRegistry]] and [[$state]].
- */
-var $stateProvider;
-/**
- * The URL Service Provider
- *
- * The [[UrlService]] singleton as a **Provider Object** (injectable during the angular config phase).
- *
- * A service used to configure and interact with the URL.
- * It has URL related APIs including:
- *
- * - register custom Parameter types `UrlService.config.type` ([[UrlConfigApi.type]])
- * - add URL rules: `UrlService.rules.when` ([[UrlRulesApi.when]])
- * - configure behavior when no url matches: `UrlService.rules.otherwise` ([[UrlRulesApi.otherwise]])
- * - delay initial URL synchronization [[UrlService.deferIntercept]].
- * - get or set the current url: [[UrlService.url]]
- *
- * ##### Note: This service can also be injected during runtime as [[$urlService]].
- */
-var $urlServiceProvider;
-/**
- * The URL Service
- *
- * The [[UrlService]] singleton as a **Service Object** (injectable during runtime).
- *
- * Note: This service can also be injected during the config phase as [[$urlServiceProvider]].
- *
- * Used to configure the URL.
- * It has URL related APIs including:
- *
- * - register custom Parameter types `UrlService.config.type` ([[UrlConfigApi.type]])
- * - add URL rules: `UrlService.rules.when` ([[UrlRulesApi.when]])
- * - configure behavior when no url matches: `UrlService.rules.otherwise` ([[UrlRulesApi.otherwise]])
- * - delay initial URL synchronization [[UrlService.deferIntercept]].
- * - get or set the current url: [[UrlService.url]]
- *
- * ##### Note: This service can also be injected during the config phase as [[$urlServiceProvider]].
- */
-var $urlService;
-/**
- * The URL Router Provider
- *
- * ### Deprecation warning: This object is now considered internal. Use [[$urlServiceProvider]] instead.
- *
- * The [[UrlRouter]] singleton as a **Provider Object** (injectable during config time).
- *
- * #### Note: This object is also exposed as [[$urlRouter]] for injection during runtime.
- *
- * @deprecated
- */
-var $urlRouterProvider;
-/**
- * The Url Router
- *
- * ### Deprecation warning: This object is now considered internal. Use [[$urlService]] instead.
- *
- * The [[UrlRouter]] singleton as a **Service Object** (injectable during runtime).
- *
- * #### Note: This object is also exposed as [[$urlRouterProvider]] for injection during angular config time.
- *
- * @deprecated
- */
-var $urlRouter;
-/**
- * The URL Matcher Factory
- *
- * ### Deprecation warning: This object is now considered internal. Use [[$urlService]] instead.
- *
- * The [[UrlMatcherFactory]] singleton as a **Service Object** (injectable during runtime).
- *
- * This service is used to set url mapping options, define custom parameter types, and create [[UrlMatcher]] objects.
- *
- * #### Note: This object is also exposed as [[$urlMatcherFactoryProvider]] for injection during angular config time.
- *
- * @deprecated
- */
-var $urlMatcherFactory;
-/**
- * The URL Matcher Factory
- *
- * ### Deprecation warning: This object is now considered internal. Use [[$urlService]] instead.
- *
- * The [[UrlMatcherFactory]] singleton as a **Provider Object** (injectable during config time).
- *
- * This service is used to set url mapping options, define custom parameter types, and create [[UrlMatcher]] objects.
- *
- * #### Note: This object is also exposed as [[$urlMatcherFactory]] for injection during runtime.
- *
- * @deprecated
- */
-var $urlMatcherFactoryProvider;
-//# sourceMappingURL=injectables.js.map
-
-/***/ }),
-/* 111 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
-/**
- * # Angular 1 Directives
- *
- * These are the directives included in UI-Router for Angular 1.
- * These directives are used in templates to create viewports and link/navigate to states.
- *
- * @preferred @publicapi @module directives
- */ /** */
-
-
-/** @hidden */
-function parseStateRef(ref) {
-    var parsed;
-    var paramsOnly = ref.match(/^\s*({[^}]*})\s*$/);
-    if (paramsOnly)
-        ref = '(' + paramsOnly[1] + ')';
-    parsed = ref.replace(/\n/g, ' ').match(/^\s*([^(]*?)\s*(\((.*)\))?\s*$/);
-    if (!parsed || parsed.length !== 4)
-        throw new Error("Invalid state ref '" + ref + "'");
-    return { state: parsed[1] || null, paramExpr: parsed[3] || null };
-}
-/** @hidden */
-function stateContext(el) {
-    var $uiView = el.parent().inheritedData('$uiView');
-    var path = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["parse"])('$cfg.path')($uiView);
-    return path ? Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["tail"])(path).state.name : undefined;
-}
-/** @hidden */
-function processedDef($state, $element, def) {
-    var uiState = def.uiState || $state.current.name;
-    var uiStateOpts = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["extend"])(defaultOpts($element, $state), def.uiStateOpts || {});
-    var href = $state.href(uiState, def.uiStateParams, uiStateOpts);
-    return { uiState: uiState, uiStateParams: def.uiStateParams, uiStateOpts: uiStateOpts, href: href };
-}
-/** @hidden */
-function getTypeInfo(el) {
-    // SVGAElement does not use the href attribute, but rather the 'xlinkHref' attribute.
-    var isSvg = Object.prototype.toString.call(el.prop('href')) === '[object SVGAnimatedString]';
-    var isForm = el[0].nodeName === 'FORM';
-    return {
-        attr: isForm ? 'action' : isSvg ? 'xlink:href' : 'href',
-        isAnchor: el.prop('tagName').toUpperCase() === 'A',
-        clickable: !isForm,
-    };
-}
-/** @hidden */
-function clickHook(el, $state, $timeout, type, getDef) {
-    return function (e) {
-        var button = e.which || e.button, target = getDef();
-        if (!(button > 1 || e.ctrlKey || e.metaKey || e.shiftKey || el.attr('target'))) {
-            // HACK: This is to allow ng-clicks to be processed before the transition is initiated:
-            var transition_1 = $timeout(function () {
-                if (!el.attr('disabled')) {
-                    $state.go(target.uiState, target.uiStateParams, target.uiStateOpts);
-                }
-            });
-            e.preventDefault();
-            // if the state has no URL, ignore one preventDefault from the <a> directive.
-            var ignorePreventDefaultCount_1 = type.isAnchor && !target.href ? 1 : 0;
-            e.preventDefault = function () {
-                if (ignorePreventDefaultCount_1-- <= 0)
-                    $timeout.cancel(transition_1);
-            };
-        }
-    };
-}
-/** @hidden */
-function defaultOpts(el, $state) {
-    return {
-        relative: stateContext(el) || $state.$current,
-        inherit: true,
-        source: 'sref',
-    };
-}
-/** @hidden */
-function bindEvents(element, scope, hookFn, uiStateOpts) {
-    var events;
-    if (uiStateOpts) {
-        events = uiStateOpts.events;
-    }
-    if (!Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(events)) {
-        events = ['click'];
-    }
-    var on = element.on ? 'on' : 'bind';
-    for (var _i = 0, events_1 = events; _i < events_1.length; _i++) {
-        var event_1 = events_1[_i];
-        element[on](event_1, hookFn);
-    }
-    scope.$on('$destroy', function () {
-        var off = element.off ? 'off' : 'unbind';
-        for (var _i = 0, events_2 = events; _i < events_2.length; _i++) {
-            var event_2 = events_2[_i];
-            element[off](event_2, hookFn);
-        }
-    });
-}
-/**
- * `ui-sref`: A directive for linking to a state
- *
- * A directive which links to a state (and optionally, parameters).
- * When clicked, this directive activates the linked state with the supplied parameter values.
- *
- * ### Linked State
- * The attribute value of the `ui-sref` is the name of the state to link to.
- *
- * #### Example:
- * This will activate the `home` state when the link is clicked.
- * ```html
- * <a ui-sref="home">Home</a>
- * ```
- *
- * ### Relative Links
- * You can also use relative state paths within `ui-sref`, just like a relative path passed to `$state.go()` ([[StateService.go]]).
- * You just need to be aware that the path is relative to the state that *created* the link.
- * This allows a state to create a relative `ui-sref` which always targets the same destination.
- *
- * #### Example:
- * Both these links are relative to the parent state, even when a child state is currently active.
- * ```html
- * <a ui-sref=".child1">child 1 state</a>
- * <a ui-sref=".child2">child 2 state</a>
- * ```
- *
- * This link activates the parent state.
- * ```html
- * <a ui-sref="^">Return</a>
- * ```
- *
- * ### hrefs
- * If the linked state has a URL, the directive will automatically generate and
- * update the `href` attribute (using the [[StateService.href]]  method).
- *
- * #### Example:
- * Assuming the `users` state has a url of `/users/`
- * ```html
- * <a ui-sref="users" href="/users/">Users</a>
- * ```
- *
- * ### Parameter Values
- * In addition to the state name, a `ui-sref` can include parameter values which are applied when activating the state.
- * Param values can be provided in the `ui-sref` value after the state name, enclosed by parentheses.
- * The content inside the parentheses is an expression, evaluated to the parameter values.
- *
- * #### Example:
- * This example renders a list of links to users.
- * The state's `userId` parameter value comes from each user's `user.id` property.
- * ```html
- * <li ng-repeat="user in users">
- *   <a ui-sref="users.detail({ userId: user.id })">{{ user.displayName }}</a>
- * </li>
- * ```
- *
- * Note:
- * The parameter values expression is `$watch`ed for updates.
- *
- * ### Transition Options
- * You can specify [[TransitionOptions]] to pass to [[StateService.go]] by using the `ui-sref-opts` attribute.
- * Options are restricted to `location`, `inherit`, and `reload`.
- *
- * #### Example:
- * ```html
- * <a ui-sref="home" ui-sref-opts="{ reload: true }">Home</a>
- * ```
- *
- * ### Other DOM Events
- *
- * You can also customize which DOM events to respond to (instead of `click`) by
- * providing an `events` array in the `ui-sref-opts` attribute.
- *
- * #### Example:
- * ```html
- * <input type="text" ui-sref="contacts" ui-sref-opts="{ events: ['change', 'blur'] }">
- * ```
- *
- * ### Highlighting the active link
- * This directive can be used in conjunction with [[uiSrefActive]] to highlight the active link.
- *
- * ### Examples
- * If you have the following template:
- *
- * ```html
- * <a ui-sref="home">Home</a>
- * <a ui-sref="about">About</a>
- * <a ui-sref="{page: 2}">Next page</a>
- *
- * <ul>
- *     <li ng-repeat="contact in contacts">
- *         <a ui-sref="contacts.detail({ id: contact.id })">{{ contact.name }}</a>
- *     </li>
- * </ul>
- * ```
- *
- * Then (assuming the current state is `contacts`) the rendered html including hrefs would be:
- *
- * ```html
- * <a href="#/home" ui-sref="home">Home</a>
- * <a href="#/about" ui-sref="about">About</a>
- * <a href="#/contacts?page=2" ui-sref="{page: 2}">Next page</a>
- *
- * <ul>
- *     <li ng-repeat="contact in contacts">
- *         <a href="#/contacts/1" ui-sref="contacts.detail({ id: contact.id })">Joe</a>
- *     </li>
- *     <li ng-repeat="contact in contacts">
- *         <a href="#/contacts/2" ui-sref="contacts.detail({ id: contact.id })">Alice</a>
- *     </li>
- *     <li ng-repeat="contact in contacts">
- *         <a href="#/contacts/3" ui-sref="contacts.detail({ id: contact.id })">Bob</a>
- *     </li>
- * </ul>
- *
- * <a href="#/home" ui-sref="home" ui-sref-opts="{reload: true}">Home</a>
- * ```
- *
- * ### Notes
- *
- * - You can use `ui-sref` to change **only the parameter values** by omitting the state name and parentheses.
- * #### Example:
- * Sets the `lang` parameter to `en` and remains on the same state.
- *
- * ```html
- * <a ui-sref="{ lang: 'en' }">English</a>
- * ```
- *
- * - A middle-click, right-click, or ctrl-click is handled (natively) by the browser to open the href in a new window, for example.
- *
- * - Unlike the parameter values expression, the state name is not `$watch`ed (for performance reasons).
- * If you need to dynamically update the state being linked to, use the fully dynamic [[uiState]] directive.
- */
-var uiSrefDirective;
-uiSrefDirective = [
-    '$uiRouter',
-    '$timeout',
-    function $StateRefDirective($uiRouter, $timeout) {
-        var $state = $uiRouter.stateService;
-        return {
-            restrict: 'A',
-            require: ['?^uiSrefActive', '?^uiSrefActiveEq'],
-            link: function (scope, element, attrs, uiSrefActive) {
-                var type = getTypeInfo(element);
-                var active = uiSrefActive[1] || uiSrefActive[0];
-                var unlinkInfoFn = null;
-                var hookFn;
-                var rawDef = {};
-                var getDef = function () { return processedDef($state, element, rawDef); };
-                var ref = parseStateRef(attrs.uiSref);
-                rawDef.uiState = ref.state;
-                rawDef.uiStateOpts = attrs.uiSrefOpts ? scope.$eval(attrs.uiSrefOpts) : {};
-                function update() {
-                    var def = getDef();
-                    if (unlinkInfoFn)
-                        unlinkInfoFn();
-                    if (active)
-                        unlinkInfoFn = active.$$addStateInfo(def.uiState, def.uiStateParams);
-                    if (def.href != null)
-                        attrs.$set(type.attr, def.href);
-                }
-                if (ref.paramExpr) {
-                    scope.$watch(ref.paramExpr, function (val) {
-                        rawDef.uiStateParams = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["extend"])({}, val);
-                        update();
-                    }, true);
-                    rawDef.uiStateParams = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["extend"])({}, scope.$eval(ref.paramExpr));
-                }
-                update();
-                scope.$on('$destroy', $uiRouter.stateRegistry.onStatesChanged(update));
-                scope.$on('$destroy', $uiRouter.transitionService.onSuccess({}, update));
-                if (!type.clickable)
-                    return;
-                hookFn = clickHook(element, $state, $timeout, type, getDef);
-                bindEvents(element, scope, hookFn, rawDef.uiStateOpts);
-            },
-        };
-    },
-];
-/**
- * `ui-state`: A fully dynamic directive for linking to a state
- *
- * A directive which links to a state (and optionally, parameters).
- * When clicked, this directive activates the linked state with the supplied parameter values.
- *
- * **This directive is very similar to [[uiSref]], but it `$observe`s and `$watch`es/evaluates all its inputs.**
- *
- * A directive which links to a state (and optionally, parameters).
- * When clicked, this directive activates the linked state with the supplied parameter values.
- *
- * ### Linked State
- * The attribute value of `ui-state` is an expression which is `$watch`ed and evaluated as the state to link to.
- * **This is in contrast with `ui-sref`, which takes a state name as a string literal.**
- *
- * #### Example:
- * Create a list of links.
- * ```html
- * <li ng-repeat="link in navlinks">
- *   <a ui-state="link.state">{{ link.displayName }}</a>
- * </li>
- * ```
- *
- * ### Relative Links
- * If the expression evaluates to a relative path, it is processed like [[uiSref]].
- * You just need to be aware that the path is relative to the state that *created* the link.
- * This allows a state to create relative `ui-state` which always targets the same destination.
- *
- * ### hrefs
- * If the linked state has a URL, the directive will automatically generate and
- * update the `href` attribute (using the [[StateService.href]]  method).
- *
- * ### Parameter Values
- * In addition to the state name expression, a `ui-state` can include parameter values which are applied when activating the state.
- * Param values should be provided using the `ui-state-params` attribute.
- * The `ui-state-params` attribute value is `$watch`ed and evaluated as an expression.
- *
- * #### Example:
- * This example renders a list of links with param values.
- * The state's `userId` parameter value comes from each user's `user.id` property.
- * ```html
- * <li ng-repeat="link in navlinks">
- *   <a ui-state="link.state" ui-state-params="link.params">{{ link.displayName }}</a>
- * </li>
- * ```
- *
- * ### Transition Options
- * You can specify [[TransitionOptions]] to pass to [[StateService.go]] by using the `ui-state-opts` attribute.
- * Options are restricted to `location`, `inherit`, and `reload`.
- * The value of the `ui-state-opts` is `$watch`ed and evaluated as an expression.
- *
- * #### Example:
- * ```html
- * <a ui-state="returnto.state" ui-state-opts="{ reload: true }">Home</a>
- * ```
- *
- * ### Other DOM Events
- *
- * You can also customize which DOM events to respond to (instead of `click`) by
- * providing an `events` array in the `ui-state-opts` attribute.
- *
- * #### Example:
- * ```html
- * <input type="text" ui-state="contacts" ui-state-opts="{ events: ['change', 'blur'] }">
- * ```
- *
- * ### Highlighting the active link
- * This directive can be used in conjunction with [[uiSrefActive]] to highlight the active link.
- *
- * ### Notes
- *
- * - You can use `ui-params` to change **only the parameter values** by omitting the state name and supplying only `ui-state-params`.
- *   However, it might be simpler to use [[uiSref]] parameter-only links.
- *
- * #### Example:
- * Sets the `lang` parameter to `en` and remains on the same state.
- *
- * ```html
- * <a ui-state="" ui-state-params="{ lang: 'en' }">English</a>
- * ```
- *
- * - A middle-click, right-click, or ctrl-click is handled (natively) by the browser to open the href in a new window, for example.
- * ```
- */
-var uiStateDirective;
-uiStateDirective = [
-    '$uiRouter',
-    '$timeout',
-    function $StateRefDynamicDirective($uiRouter, $timeout) {
-        var $state = $uiRouter.stateService;
-        return {
-            restrict: 'A',
-            require: ['?^uiSrefActive', '?^uiSrefActiveEq'],
-            link: function (scope, element, attrs, uiSrefActive) {
-                var type = getTypeInfo(element);
-                var active = uiSrefActive[1] || uiSrefActive[0];
-                var unlinkInfoFn = null;
-                var hookFn;
-                var rawDef = {};
-                var getDef = function () { return processedDef($state, element, rawDef); };
-                var inputAttrs = ['uiState', 'uiStateParams', 'uiStateOpts'];
-                var watchDeregFns = inputAttrs.reduce(function (acc, attr) { return ((acc[attr] = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["noop"]), acc); }, {});
-                function update() {
-                    var def = getDef();
-                    if (unlinkInfoFn)
-                        unlinkInfoFn();
-                    if (active)
-                        unlinkInfoFn = active.$$addStateInfo(def.uiState, def.uiStateParams);
-                    if (def.href != null)
-                        attrs.$set(type.attr, def.href);
-                }
-                inputAttrs.forEach(function (field) {
-                    rawDef[field] = attrs[field] ? scope.$eval(attrs[field]) : null;
-                    attrs.$observe(field, function (expr) {
-                        watchDeregFns[field]();
-                        watchDeregFns[field] = scope.$watch(expr, function (newval) {
-                            rawDef[field] = newval;
-                            update();
-                        }, true);
-                    });
-                });
-                update();
-                scope.$on('$destroy', $uiRouter.stateRegistry.onStatesChanged(update));
-                scope.$on('$destroy', $uiRouter.transitionService.onSuccess({}, update));
-                if (!type.clickable)
-                    return;
-                hookFn = clickHook(element, $state, $timeout, type, getDef);
-                bindEvents(element, scope, hookFn, rawDef.uiStateOpts);
-            },
-        };
-    },
-];
-/**
- * `ui-sref-active` and `ui-sref-active-eq`: A directive that adds a CSS class when a `ui-sref` is active
- *
- * A directive working alongside [[uiSref]] and [[uiState]] to add classes to an element when the
- * related directive's state is active (and remove them when it is inactive).
- *
- * The primary use-case is to highlight the active link in navigation menus,
- * distinguishing it from the inactive menu items.
- *
- * ### Linking to a `ui-sref` or `ui-state`
- * `ui-sref-active` can live on the same element as `ui-sref`/`ui-state`, or it can be on a parent element.
- * If a `ui-sref-active` is a parent to more than one `ui-sref`/`ui-state`, it will apply the CSS class when **any of the links are active**.
- *
- * ### Matching
- *
- * The `ui-sref-active` directive applies the CSS class when the `ui-sref`/`ui-state`'s target state **or any child state is active**.
- * This is a "fuzzy match" which uses [[StateService.includes]].
- *
- * The `ui-sref-active-eq` directive applies the CSS class when the `ui-sref`/`ui-state`'s target state is directly active (not when child states are active).
- * This is an "exact match" which uses [[StateService.is]].
- *
- * ### Parameter values
- * If the `ui-sref`/`ui-state` includes parameter values, the current parameter values must match the link's values for the link to be highlighted.
- * This allows a list of links to the same state with different parameters to be rendered, and the correct one highlighted.
- *
- * #### Example:
- * ```html
- * <li ng-repeat="user in users" ui-sref-active="active">
- *   <a ui-sref="user.details({ userId: user.id })">{{ user.lastName }}</a>
- * </li>
- * ```
- *
- * ### Examples
- *
- * Given the following template:
- * #### Example:
- * ```html
- * <ul>
- *   <li ui-sref-active="active" class="item">
- *     <a href ui-sref="app.user({user: 'bilbobaggins'})">@bilbobaggins</a>
- *   </li>
- * </ul>
- * ```
- *
- * When the app state is `app.user` (or any child state),
- * and contains the state parameter "user" with value "bilbobaggins",
- * the resulting HTML will appear as (note the 'active' class):
- *
- * ```html
- * <ul>
- *   <li ui-sref-active="active" class="item active">
- *     <a ui-sref="app.user({user: 'bilbobaggins'})" href="/users/bilbobaggins">@bilbobaggins</a>
- *   </li>
- * </ul>
- * ```
- *
- * ### Glob mode
- *
- * It is possible to pass `ui-sref-active` an expression that evaluates to an object.
- * The objects keys represent active class names and values represent the respective state names/globs.
- * `ui-sref-active` will match if the current active state **includes** any of
- * the specified state names/globs, even the abstract ones.
- *
- * #### Example:
- * Given the following template, with "admin" being an abstract state:
- * ```html
- * <div ui-sref-active="{'active': 'admin.**'}">
- *   <a ui-sref-active="active" ui-sref="admin.roles">Roles</a>
- * </div>
- * ```
- *
- * Arrays are also supported as values in the `ngClass`-like interface.
- * This allows multiple states to add `active` class.
- *
- * #### Example:
- * Given the following template, with "admin.roles" being the current state, the class will be added too:
- * ```html
- * <div ui-sref-active="{'active': ['owner.**', 'admin.**']}">
- *   <a ui-sref-active="active" ui-sref="admin.roles">Roles</a>
- * </div>
- * ```
- *
- * When the current state is "admin.roles" the "active" class will be applied to both the `<div>` and `<a>` elements.
- * It is important to note that the state names/globs passed to `ui-sref-active` override any state provided by a linked `ui-sref`.
- *
- * ### Notes:
- *
- * - The class name is interpolated **once** during the directives link time (any further changes to the
- * interpolated value are ignored).
- *
- * - Multiple classes may be specified in a space-separated format: `ui-sref-active='class1 class2 class3'`
- */
-var uiSrefActiveDirective;
-uiSrefActiveDirective = [
-    '$state',
-    '$stateParams',
-    '$interpolate',
-    '$uiRouter',
-    function $StateRefActiveDirective($state, $stateParams, $interpolate, $uiRouter) {
-        return {
-            restrict: 'A',
-            controller: [
-                '$scope',
-                '$element',
-                '$attrs',
-                function ($scope, $element, $attrs) {
-                    var states = [];
-                    var activeEqClass;
-                    var uiSrefActive;
-                    // There probably isn't much point in $observing this
-                    // uiSrefActive and uiSrefActiveEq share the same directive object with some
-                    // slight difference in logic routing
-                    activeEqClass = $interpolate($attrs.uiSrefActiveEq || '', false)($scope);
-                    try {
-                        uiSrefActive = $scope.$eval($attrs.uiSrefActive);
-                    }
-                    catch (e) {
-                        // Do nothing. uiSrefActive is not a valid expression.
-                        // Fall back to using $interpolate below
-                    }
-                    uiSrefActive = uiSrefActive || $interpolate($attrs.uiSrefActive || '', false)($scope);
-                    setStatesFromDefinitionObject(uiSrefActive);
-                    // Allow uiSref to communicate with uiSrefActive[Equals]
-                    this.$$addStateInfo = function (newState, newParams) {
-                        // we already got an explicit state provided by ui-sref-active, so we
-                        // shadow the one that comes from ui-sref
-                        if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isObject"])(uiSrefActive) && states.length > 0) {
-                            return;
-                        }
-                        var deregister = addState(newState, newParams, uiSrefActive);
-                        update();
-                        return deregister;
-                    };
-                    function updateAfterTransition(trans) {
-                        trans.promise.then(update, __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["noop"]);
-                    }
-                    $scope.$on('$destroy', setupEventListeners());
-                    if ($uiRouter.globals.transition) {
-                        updateAfterTransition($uiRouter.globals.transition);
-                    }
-                    function setupEventListeners() {
-                        var deregisterStatesChangedListener = $uiRouter.stateRegistry.onStatesChanged(handleStatesChanged);
-                        var deregisterOnStartListener = $uiRouter.transitionService.onStart({}, updateAfterTransition);
-                        var deregisterStateChangeSuccessListener = $scope.$on('$stateChangeSuccess', update);
-                        return function cleanUp() {
-                            deregisterStatesChangedListener();
-                            deregisterOnStartListener();
-                            deregisterStateChangeSuccessListener();
-                        };
-                    }
-                    function handleStatesChanged() {
-                        setStatesFromDefinitionObject(uiSrefActive);
-                    }
-                    function setStatesFromDefinitionObject(statesDefinition) {
-                        if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isObject"])(statesDefinition)) {
-                            states = [];
-                            Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["forEach"])(statesDefinition, function (stateOrName, activeClass) {
-                                // Helper function to abstract adding state.
-                                var addStateForClass = function (stateOrName, activeClass) {
-                                    var ref = parseStateRef(stateOrName);
-                                    addState(ref.state, $scope.$eval(ref.paramExpr), activeClass);
-                                };
-                                if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isString"])(stateOrName)) {
-                                    // If state is string, just add it.
-                                    addStateForClass(stateOrName, activeClass);
-                                }
-                                else if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(stateOrName)) {
-                                    // If state is an array, iterate over it and add each array item individually.
-                                    Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["forEach"])(stateOrName, function (stateOrName) {
-                                        addStateForClass(stateOrName, activeClass);
-                                    });
-                                }
-                            });
-                        }
-                    }
-                    function addState(stateName, stateParams, activeClass) {
-                        var state = $state.get(stateName, stateContext($element));
-                        var stateInfo = {
-                            state: state || { name: stateName },
-                            params: stateParams,
-                            activeClass: activeClass,
-                        };
-                        states.push(stateInfo);
-                        return function removeState() {
-                            Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["removeFrom"])(states)(stateInfo);
-                        };
-                    }
-                    // Update route state
-                    function update() {
-                        var splitClasses = function (str) { return str.split(/\s/).filter(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["identity"]); };
-                        var getClasses = function (stateList) {
-                            return stateList
-                                .map(function (x) { return x.activeClass; })
-                                .map(splitClasses)
-                                .reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["unnestR"], []);
-                        };
-                        var allClasses = getClasses(states)
-                            .concat(splitClasses(activeEqClass))
-                            .reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["uniqR"], []);
-                        var fuzzyClasses = getClasses(states.filter(function (x) { return $state.includes(x.state.name, x.params); }));
-                        var exactlyMatchesAny = !!states.filter(function (x) { return $state.is(x.state.name, x.params); }).length;
-                        var exactClasses = exactlyMatchesAny ? splitClasses(activeEqClass) : [];
-                        var addClasses = fuzzyClasses.concat(exactClasses).reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["uniqR"], []);
-                        var removeClasses = allClasses.filter(function (cls) { return !Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["inArray"])(addClasses, cls); });
-                        $scope.$evalAsync(function () {
-                            addClasses.forEach(function (className) { return $element.addClass(className); });
-                            removeClasses.forEach(function (className) { return $element.removeClass(className); });
-                        });
-                    }
-                    update();
-                },
-            ],
-        };
-    },
-];
-__WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
-    .module('ui.router.state')
-    .directive('uiSref', uiSrefDirective)
-    .directive('uiSrefActive', uiSrefActiveDirective)
-    .directive('uiSrefActiveEq', uiSrefActiveDirective)
-    .directive('uiState', uiStateDirective);
-//# sourceMappingURL=stateDirectives.js.map
-
-/***/ }),
-/* 112 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export $IsStateFilter */
-/* unused harmony export $IncludedByStateFilter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
-/** @publicapi @module ng1 */ /** */
-
-/**
- * `isState` Filter: truthy if the current state is the parameter
- *
- * Translates to [[StateService.is]] `$state.is("stateName")`.
- *
- * #### Example:
- * ```html
- * <div ng-if="'stateName' | isState">show if state is 'stateName'</div>
- * ```
- */
-$IsStateFilter.$inject = ['$state'];
-function $IsStateFilter($state) {
-    var isFilter = function (state, params, options) {
-        return $state.is(state, params, options);
-    };
-    isFilter.$stateful = true;
-    return isFilter;
-}
-/**
- * `includedByState` Filter: truthy if the current state includes the parameter
- *
- * Translates to [[StateService.includes]]` $state.is("fullOrPartialStateName")`.
- *
- * #### Example:
- * ```html
- * <div ng-if="'fullOrPartialStateName' | includedByState">show if state includes 'fullOrPartialStateName'</div>
- * ```
- */
-$IncludedByStateFilter.$inject = ['$state'];
-function $IncludedByStateFilter($state) {
-    var includesFilter = function (state, params, options) {
-        return $state.includes(state, params, options);
-    };
-    includesFilter.$stateful = true;
-    return includesFilter;
-}
-__WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
-    .module('ui.router.state')
-    .filter('isState', $IsStateFilter)
-    .filter('includedByState', $IncludedByStateFilter);
-//# sourceMappingURL=stateFilters.js.map
-
-/***/ }),
-/* 113 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export uiView */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__ = __webpack_require__(34);
-/** @publicapi @module directives */ /** */
-
-
-
-
-/**
- * `ui-view`: A viewport directive which is filled in by a view from the active state.
- *
- * ### Attributes
- *
- * - `name`: (Optional) A view name.
- *   The name should be unique amongst the other views in the same state.
- *   You can have views of the same name that live in different states.
- *   The ui-view can be targeted in a View using the name ([[Ng1StateDeclaration.views]]).
- *
- * - `autoscroll`: an expression. When it evaluates to true, the `ui-view` will be scrolled into view when it is activated.
- *   Uses [[$uiViewScroll]] to do the scrolling.
- *
- * - `onload`: Expression to evaluate whenever the view updates.
- *
- * #### Example:
- * A view can be unnamed or named.
- * ```html
- * <!-- Unnamed -->
- * <div ui-view></div>
- *
- * <!-- Named -->
- * <div ui-view="viewName"></div>
- *
- * <!-- Named (different style) -->
- * <ui-view name="viewName"></ui-view>
- * ```
- *
- * You can only have one unnamed view within any template (or root html). If you are only using a
- * single view and it is unnamed then you can populate it like so:
- *
- * ```html
- * <div ui-view></div>
- * $stateProvider.state("home", {
- *   template: "<h1>HELLO!</h1>"
- * })
- * ```
- *
- * The above is a convenient shortcut equivalent to specifying your view explicitly with the
- * [[Ng1StateDeclaration.views]] config property, by name, in this case an empty name:
- *
- * ```js
- * $stateProvider.state("home", {
- *   views: {
- *     "": {
- *       template: "<h1>HELLO!</h1>"
- *     }
- *   }
- * })
- * ```
- *
- * But typically you'll only use the views property if you name your view or have more than one view
- * in the same template. There's not really a compelling reason to name a view if its the only one,
- * but you could if you wanted, like so:
- *
- * ```html
- * <div ui-view="main"></div>
- * ```
- *
- * ```js
- * $stateProvider.state("home", {
- *   views: {
- *     "main": {
- *       template: "<h1>HELLO!</h1>"
- *     }
- *   }
- * })
- * ```
- *
- * Really though, you'll use views to set up multiple views:
- *
- * ```html
- * <div ui-view></div>
- * <div ui-view="chart"></div>
- * <div ui-view="data"></div>
- * ```
- *
- * ```js
- * $stateProvider.state("home", {
- *   views: {
- *     "": {
- *       template: "<h1>HELLO!</h1>"
- *     },
- *     "chart": {
- *       template: "<chart_thing/>"
- *     },
- *     "data": {
- *       template: "<data_thing/>"
- *     }
- *   }
- * })
- * ```
- *
- * #### Examples for `autoscroll`:
- * ```html
- * <!-- If autoscroll present with no expression,
- *      then scroll ui-view into view -->
- * <ui-view autoscroll/>
- *
- * <!-- If autoscroll present with valid expression,
- *      then scroll ui-view into view if expression evaluates to true -->
- * <ui-view autoscroll='true'/>
- * <ui-view autoscroll='false'/>
- * <ui-view autoscroll='scopeVariable'/>
- * ```
- *
- * Resolve data:
- *
- * The resolved data from the state's `resolve` block is placed on the scope as `$resolve` (this
- * can be customized using [[Ng1ViewDeclaration.resolveAs]]).  This can be then accessed from the template.
- *
- * Note that when `controllerAs` is being used, `$resolve` is set on the controller instance *after* the
- * controller is instantiated.  The `$onInit()` hook can be used to perform initialization code which
- * depends on `$resolve` data.
- *
- * #### Example:
- * ```js
- * $stateProvider.state('home', {
- *   template: '<my-component user="$resolve.user"></my-component>',
- *   resolve: {
- *     user: function(UserService) { return UserService.fetchUser(); }
- *   }
- * });
- * ```
- */
-var uiView;
-uiView = [
-    '$view',
-    '$animate',
-    '$uiViewScroll',
-    '$interpolate',
-    '$q',
-    function $ViewDirective($view, $animate, $uiViewScroll, $interpolate, $q) {
-        function getRenderer(attrs, scope) {
-            return {
-                enter: function (element, target, cb) {
-                    if (__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].version.minor > 2) {
-                        $animate.enter(element, null, target).then(cb);
-                    }
-                    else {
-                        $animate.enter(element, null, target, cb);
-                    }
-                },
-                leave: function (element, cb) {
-                    if (__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].version.minor > 2) {
-                        $animate.leave(element).then(cb);
-                    }
-                    else {
-                        $animate.leave(element, cb);
-                    }
-                },
-            };
-        }
-        function configsEqual(config1, config2) {
-            return config1 === config2;
-        }
-        var rootData = {
-            $cfg: { viewDecl: { $context: $view._pluginapi._rootViewContext() } },
-            $uiView: {},
-        };
-        var directive = {
-            count: 0,
-            restrict: 'ECA',
-            terminal: true,
-            priority: 400,
-            transclude: 'element',
-            compile: function (tElement, tAttrs, $transclude) {
-                return function (scope, $element, attrs) {
-                    var onloadExp = attrs['onload'] || '', autoScrollExp = attrs['autoscroll'], renderer = getRenderer(attrs, scope), inherited = $element.inheritedData('$uiView') || rootData, name = $interpolate(attrs['uiView'] || attrs['name'] || '')(scope) || '$default';
-                    var previousEl, currentEl, currentScope, viewConfig, unregister;
-                    var activeUIView = {
-                        $type: 'ng1',
-                        id: directive.count++,
-                        name: name,
-                        fqn: inherited.$uiView.fqn ? inherited.$uiView.fqn + '.' + name : name,
-                        config: null,
-                        configUpdated: configUpdatedCallback,
-                        get creationContext() {
-                            // The context in which this ui-view "tag" was created
-                            var fromParentTagConfig = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('$cfg.viewDecl.$context')(inherited);
-                            // Allow <ui-view name="foo"><ui-view name="bar"></ui-view></ui-view>
-                            // See https://github.com/angular-ui/ui-router/issues/3355
-                            var fromParentTag = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('$uiView.creationContext')(inherited);
-                            return fromParentTagConfig || fromParentTag;
-                        },
-                    };
-                    __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Linking', activeUIView);
-                    function configUpdatedCallback(config) {
-                        if (config && !(config instanceof __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__["a" /* Ng1ViewConfig */]))
-                            return;
-                        if (configsEqual(viewConfig, config))
-                            return;
-                        __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewConfigUpdated(activeUIView, config && config.viewDecl && config.viewDecl.$context);
-                        viewConfig = config;
-                        updateView(config);
-                    }
-                    $element.data('$uiView', { $uiView: activeUIView });
-                    updateView();
-                    unregister = $view.registerUIView(activeUIView);
-                    scope.$on('$destroy', function () {
-                        __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Destroying/Unregistering', activeUIView);
-                        unregister();
-                    });
-                    function cleanupLastView() {
-                        if (previousEl) {
-                            __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Removing (previous) el', previousEl.data('$uiView'));
-                            previousEl.remove();
-                            previousEl = null;
-                        }
-                        if (currentScope) {
-                            __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Destroying scope', activeUIView);
-                            currentScope.$destroy();
-                            currentScope = null;
-                        }
-                        if (currentEl) {
-                            var _viewData_1 = currentEl.data('$uiViewAnim');
-                            __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Animate out', _viewData_1);
-                            renderer.leave(currentEl, function () {
-                                _viewData_1.$$animLeave.resolve();
-                                previousEl = null;
-                            });
-                            previousEl = currentEl;
-                            currentEl = null;
-                        }
-                    }
-                    function updateView(config) {
-                        var newScope = scope.$new();
-                        var animEnter = $q.defer(), animLeave = $q.defer();
-                        var $uiViewData = {
-                            $cfg: config,
-                            $uiView: activeUIView,
-                        };
-                        var $uiViewAnim = {
-                            $animEnter: animEnter.promise,
-                            $animLeave: animLeave.promise,
-                            $$animLeave: animLeave,
-                        };
-                        /**
-                         * @ngdoc event
-                         * @name ui.router.state.directive:ui-view#$viewContentLoading
-                         * @eventOf ui.router.state.directive:ui-view
-                         * @eventType emits on ui-view directive scope
-                         * @description
-                         *
-                         * Fired once the view **begins loading**, *before* the DOM is rendered.
-                         *
-                         * @param {Object} event Event object.
-                         * @param {string} viewName Name of the view.
-                         */
-                        newScope.$emit('$viewContentLoading', name);
-                        var cloned = $transclude(newScope, function (clone) {
-                            clone.data('$uiViewAnim', $uiViewAnim);
-                            clone.data('$uiView', $uiViewData);
-                            renderer.enter(clone, $element, function onUIViewEnter() {
-                                animEnter.resolve();
-                                if (currentScope)
-                                    currentScope.$emit('$viewContentAnimationEnded');
-                                if ((Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isDefined"])(autoScrollExp) && !autoScrollExp) || scope.$eval(autoScrollExp)) {
-                                    $uiViewScroll(clone);
-                                }
-                            });
-                            cleanupLastView();
-                        });
-                        currentEl = cloned;
-                        currentScope = newScope;
-                        /**
-                         * @ngdoc event
-                         * @name ui.router.state.directive:ui-view#$viewContentLoaded
-                         * @eventOf ui.router.state.directive:ui-view
-                         * @eventType emits on ui-view directive scope
-                         * @description           *
-                         * Fired once the view is **loaded**, *after* the DOM is rendered.
-                         *
-                         * @param {Object} event Event object.
-                         */
-                        currentScope.$emit('$viewContentLoaded', config || viewConfig);
-                        currentScope.$eval(onloadExp);
-                    }
-                };
-            },
-        };
-        return directive;
-    },
-];
-$ViewDirectiveFill.$inject = ['$compile', '$controller', '$transitions', '$view', '$q', '$timeout'];
-/** @hidden */
-function $ViewDirectiveFill($compile, $controller, $transitions, $view, $q, $timeout) {
-    var getControllerAs = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('viewDecl.controllerAs');
-    var getResolveAs = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('viewDecl.resolveAs');
-    return {
-        restrict: 'ECA',
-        priority: -400,
-        compile: function (tElement) {
-            var initial = tElement.html();
-            tElement.empty();
-            return function (scope, $element) {
-                var data = $element.data('$uiView');
-                if (!data) {
-                    $element.html(initial);
-                    $compile($element.contents())(scope);
-                    return;
-                }
-                var cfg = data.$cfg || { viewDecl: {}, getTemplate: __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["noop"] };
-                var resolveCtx = cfg.path && new __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["ResolveContext"](cfg.path);
-                $element.html(cfg.getTemplate($element, resolveCtx) || initial);
-                __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewFill(data.$uiView, $element.html());
-                var link = $compile($element.contents());
-                var controller = cfg.controller;
-                var controllerAs = getControllerAs(cfg);
-                var resolveAs = getResolveAs(cfg);
-                var locals = resolveCtx && Object(__WEBPACK_IMPORTED_MODULE_2__services__["a" /* getLocals */])(resolveCtx);
-                scope[resolveAs] = locals;
-                if (controller) {
-                    var controllerInstance = ($controller(controller, Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["extend"])({}, locals, { $scope: scope, $element: $element })));
-                    if (controllerAs) {
-                        scope[controllerAs] = controllerInstance;
-                        scope[controllerAs][resolveAs] = locals;
-                    }
-                    // TODO: Use $view service as a central point for registering component-level hooks
-                    // Then, when a component is created, tell the $view service, so it can invoke hooks
-                    // $view.componentLoaded(controllerInstance, { $scope: scope, $element: $element });
-                    // scope.$on('$destroy', () => $view.componentUnloaded(controllerInstance, { $scope: scope, $element: $element }));
-                    $element.data('$ngControllerController', controllerInstance);
-                    $element.children().data('$ngControllerController', controllerInstance);
-                    registerControllerCallbacks($q, $transitions, controllerInstance, scope, cfg);
-                }
-                // Wait for the component to appear in the DOM
-                if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isString"])(cfg.component)) {
-                    var kebobName = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["kebobString"])(cfg.component);
-                    var tagRegexp_1 = new RegExp("^(x-|data-)?" + kebobName + "$", 'i');
-                    var getComponentController = function () {
-                        var directiveEl = [].slice
-                            .call($element[0].children)
-                            .filter(function (el) { return el && el.tagName && tagRegexp_1.exec(el.tagName); });
-                        return directiveEl && __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].element(directiveEl).data("$" + cfg.component + "Controller");
-                    };
-                    var deregisterWatch_1 = scope.$watch(getComponentController, function (ctrlInstance) {
-                        if (!ctrlInstance)
-                            return;
-                        registerControllerCallbacks($q, $transitions, ctrlInstance, scope, cfg);
-                        deregisterWatch_1();
-                    });
-                }
-                link(scope);
-            };
-        },
-    };
-}
-/** @hidden */
-var hasComponentImpl = typeof __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router')['component'] === 'function';
-/** @hidden incrementing id */
-var _uiCanExitId = 0;
-/** @hidden TODO: move these callbacks to $view and/or `/hooks/components.ts` or something */
-function registerControllerCallbacks($q, $transitions, controllerInstance, $scope, cfg) {
-    // Call $onInit() ASAP
-    if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isFunction"])(controllerInstance.$onInit) && !(cfg.viewDecl.component && hasComponentImpl)) {
-        controllerInstance.$onInit();
-    }
-    var viewState = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["tail"])(cfg.path).state.self;
-    var hookOptions = { bind: controllerInstance };
-    // Add component-level hook for onUiParamsChanged
-    if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isFunction"])(controllerInstance.uiOnParamsChanged)) {
-        var resolveContext = new __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["ResolveContext"](cfg.path);
-        var viewCreationTrans_1 = resolveContext.getResolvable('$transition$').data;
-        // Fire callback on any successful transition
-        var paramsUpdated = function ($transition$) {
-            // Exit early if the $transition$ is the same as the view was created within.
-            // Exit early if the $transition$ will exit the state the view is for.
-            if ($transition$ === viewCreationTrans_1 || $transition$.exiting().indexOf(viewState) !== -1)
-                return;
-            var toParams = $transition$.params('to');
-            var fromParams = $transition$.params('from');
-            var getNodeSchema = function (node) { return node.paramSchema; };
-            var toSchema = $transition$
-                .treeChanges('to')
-                .map(getNodeSchema)
-                .reduce(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["unnestR"], []);
-            var fromSchema = $transition$
-                .treeChanges('from')
-                .map(getNodeSchema)
-                .reduce(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["unnestR"], []);
-            // Find the to params that have different values than the from params
-            var changedToParams = toSchema.filter(function (param) {
-                var idx = fromSchema.indexOf(param);
-                return idx === -1 || !fromSchema[idx].type.equals(toParams[param.id], fromParams[param.id]);
-            });
-            // Only trigger callback if a to param has changed or is new
-            if (changedToParams.length) {
-                var changedKeys_1 = changedToParams.map(function (x) { return x.id; });
-                // Filter the params to only changed/new to params.  `$transition$.params()` may be used to get all params.
-                var newValues = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["filter"])(toParams, function (val, key) { return changedKeys_1.indexOf(key) !== -1; });
-                controllerInstance.uiOnParamsChanged(newValues, $transition$);
-            }
-        };
-        $scope.$on('$destroy', $transitions.onSuccess({}, paramsUpdated, hookOptions));
-    }
-    // Add component-level hook for uiCanExit
-    if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isFunction"])(controllerInstance.uiCanExit)) {
-        var id_1 = _uiCanExitId++;
-        var cacheProp_1 = '_uiCanExitIds';
-        // Returns true if a redirect transition already answered truthy
-        var prevTruthyAnswer_1 = function (trans) {
-            return !!trans && ((trans[cacheProp_1] && trans[cacheProp_1][id_1] === true) || prevTruthyAnswer_1(trans.redirectedFrom()));
-        };
-        // If a user answered yes, but the transition was later redirected, don't also ask for the new redirect transition
-        var wrappedHook = function (trans) {
-            var promise;
-            var ids = (trans[cacheProp_1] = trans[cacheProp_1] || {});
-            if (!prevTruthyAnswer_1(trans)) {
-                promise = $q.when(controllerInstance.uiCanExit(trans));
-                promise.then(function (val) { return (ids[id_1] = val !== false); });
-            }
-            return promise;
-        };
-        var criteria = { exiting: viewState.name };
-        $scope.$on('$destroy', $transitions.onBefore(criteria, wrappedHook, hookOptions));
-    }
-}
-__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').directive('uiView', uiView);
-__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').directive('uiView', $ViewDirectiveFill);
-//# sourceMappingURL=viewDirective.js.map
-
-/***/ }),
-/* 114 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
-/** @publicapi @module ng1 */ /** */
-
-/** @hidden */
-function $ViewScrollProvider() {
-    var useAnchorScroll = false;
-    this.useAnchorScroll = function () {
-        useAnchorScroll = true;
-    };
-    this.$get = [
-        '$anchorScroll',
-        '$timeout',
-        function ($anchorScroll, $timeout) {
-            if (useAnchorScroll) {
-                return $anchorScroll;
-            }
-            return function ($element) {
-                return $timeout(function () {
-                    $element[0].scrollIntoView();
-                }, 0, false);
-            };
-        },
-    ];
-}
-__WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').provider('$uiViewScroll', $ViewScrollProvider);
-//# sourceMappingURL=viewScroll.js.map
-
-/***/ }),
-/* 115 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -49735,9 +46857,9 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 (function () {
   'use strict';
 
-  var permission = __webpack_require__(123),
-    ngPermission = __webpack_require__(124),
-    uiPermission = __webpack_require__(125);
+  var permission = __webpack_require__(89),
+    ngPermission = __webpack_require__(90),
+    uiPermission = __webpack_require__(91);
 
   module.exports = {
     permission: permission,
@@ -49748,7 +46870,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 
 
 /***/ }),
-/* 123 */
+/* 89 */
 /***/ (function(module, exports) {
 
 /**
@@ -50992,7 +48114,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 
 
 /***/ }),
-/* 124 */
+/* 90 */
 /***/ (function(module, exports) {
 
 /**
@@ -51216,7 +48338,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 
 
 /***/ }),
-/* 125 */
+/* 91 */
 /***/ (function(module, exports) {
 
 /**
@@ -51800,28 +48922,2887 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 
 
 /***/ }),
-/* 126 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = middlewares;
-middlewares.$inject = ['PermRoleStore'];
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(21);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "watchDigests", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getLocals", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__ = __webpack_require__(34);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getNg1ViewConfigFactory", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ng1ViewsBuilder", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Ng1ViewConfig", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateProvider__ = __webpack_require__(61);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(62);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlConfig"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UIRouterGlobals"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UIRouter"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UIRouterPluginBase"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "root", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["root"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fromJson", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["fromJson"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "toJson", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["toJson"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "forEach", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["forEach"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "extend", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["extend"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "equals", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["equals"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "identity", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["identity"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "noop", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["noop"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "createProxyFunctions", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["createProxyFunctions"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "inherit", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["inherit"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "inArray", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["inArray"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_inArray", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_inArray"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "removeFrom", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["removeFrom"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_removeFrom", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_removeFrom"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushTo", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pushTo"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_pushTo", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_pushTo"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "deregAll", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["deregAll"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaults", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["defaults"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mergeR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["mergeR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ancestors", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ancestors"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pick", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pick"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "omit", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["omit"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pluck", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pluck"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "filter", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["filter"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "find", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["find"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mapObj", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["mapObj"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "map", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["map"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "values", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["values"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "allTrueR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["allTrueR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "anyTrueR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["anyTrueR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "unnestR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["unnestR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "flattenR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["flattenR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pushR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "uniqR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["uniqR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "unnest", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["unnest"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "flatten", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["flatten"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "assertPredicate", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["assertPredicate"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "assertMap", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["assertMap"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "assertFn", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["assertFn"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pairs", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pairs"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "arrayTuples", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["arrayTuples"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "applyPairs", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["applyPairs"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tail", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["tail"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "copy", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["copy"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "_extend", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["_extend"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "silenceUncaughtInPromise", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["silenceUncaughtInPromise"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "silentRejection", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["silentRejection"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "makeStub", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["makeStub"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "services", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["services"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Glob", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Glob"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "curry", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["curry"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["compose"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pipe", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pipe"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "prop", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["prop"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "propEq", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["propEq"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "parse", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["parse"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "not", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["not"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "and", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["and"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "or", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["or"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "all", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["all"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "any", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["any"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "is", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["is"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "eq", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["eq"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "val", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["val"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "invoke", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["invoke"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pattern", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pattern"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isUndefined", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isUndefined"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isDefined", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isDefined"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isNull", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isNull"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isNullOrUndefined", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isNullOrUndefined"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isFunction", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isFunction"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isNumber", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isNumber"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isString"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isObject"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isArray", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isArray"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isDate", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isDate"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isRegExp", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isRegExp"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isInjectable", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isInjectable"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "isPromise", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["isPromise"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Queue", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Queue"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "maxLength", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["maxLength"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "padString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["padString"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "kebobString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["kebobString"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "functionToString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["functionToString"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fnToString", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["fnToString"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "stringify", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["stringify"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "beforeAfterSubstr", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["beforeAfterSubstr"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hostRegex", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["hostRegex"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "stripLastPathElement", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["stripLastPathElement"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitHash", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitHash"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitQuery", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitQuery"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitEqual", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitEqual"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "trimHashVal", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["trimHashVal"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "splitOnDelim", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["splitOnDelim"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "joinNeighborsR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["joinNeighborsR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Category", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Category"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Trace", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Trace"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "trace", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["trace"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "DefType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["DefType"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Param", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Param"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ParamTypes"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateParams"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ParamType"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["PathNode"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["PathUtils"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "resolvePolicies", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["resolvePolicies"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultResolvePolicy", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["defaultResolvePolicy"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Resolvable", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Resolvable"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NATIVE_INJECTOR_TOKEN", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["NATIVE_INJECTOR_TOKEN"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ResolveContext", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ResolveContext"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "resolvablesBuilder", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["resolvablesBuilder"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateBuilder", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateBuilder"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateObject", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateObject"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateMatcher", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateMatcher"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateQueueManager", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateQueueManager"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateRegistry"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["StateService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TargetState"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionHookPhase"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionHookScope"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["HookBuilder"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "matchState", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["matchState"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "RegisteredHook", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["RegisteredHook"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "makeEvent", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["makeEvent"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "RejectType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["RejectType"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Rejection", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Rejection"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Transition", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["Transition"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHook", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionHook"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionEventType"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["defaultTransOpts"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["TransitionService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlMatcher"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ParamFactory"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcherFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlMatcherFactory"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRouter"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRuleFactory"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["BaseUrlRule"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["ViewService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["$q"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["$injector"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["BaseLocationServices"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HashLocationService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["HashLocationService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MemoryLocationService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["MemoryLocationService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PushStateLocationService", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["PushStateLocationService"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "MemoryLocationConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["MemoryLocationConfig"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BrowserLocationConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["BrowserLocationConfig"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "keyValsToObjectR", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["keyValsToObjectR"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getParams", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["getParams"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "parseUrl", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["parseUrl"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "buildUrl", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["buildUrl"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "locationPluginFactory", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["locationPluginFactory"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "servicesPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["servicesPlugin"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["hashLocationPlugin"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["pushStateLocationPlugin"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["memoryLocationPlugin"]; });
 
-function middlewares(PermRoleStore) {
-    PermRoleStore.defineRole('Auth', function () {
-        return window.__user !== null;
-    });
 
-    PermRoleStore.defineRole('Guest', function () {
-        return window.__user === null;
-    });
-}
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ('ui.router');
+
+
+
+//# sourceMappingURL=index.js.map
 
 /***/ }),
+/* 93 */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 94 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParamTypes; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(25);
+/** @publicapi @module params */ /** */
+
+
+
+
+
+/**
+ * A registry for parameter types.
+ *
+ * This registry manages the built-in (and custom) parameter types.
+ *
+ * The built-in parameter types are:
+ *
+ * - [[string]]
+ * - [[path]]
+ * - [[query]]
+ * - [[hash]]
+ * - [[int]]
+ * - [[bool]]
+ * - [[date]]
+ * - [[json]]
+ * - [[any]]
+ *
+ * To register custom parameter types, use [[UrlConfig.type]], i.e.,
+ *
+ * ```js
+ * router.urlService.config.type(customType)
+ * ```
+ */
+var ParamTypes = /** @class */ (function () {
+    /** @internalapi */
+    function ParamTypes() {
+        /** @hidden */
+        this.enqueue = true;
+        /** @hidden */
+        this.typeQueue = [];
+        /** @internalapi */
+        this.defaultTypes = Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["H" /* pick */])(ParamTypes.prototype, [
+            'hash',
+            'string',
+            'query',
+            'path',
+            'int',
+            'bool',
+            'date',
+            'json',
+            'any',
+        ]);
+        // Register default types. Store them in the prototype of this.types.
+        var makeType = function (definition, name) { return new __WEBPACK_IMPORTED_MODULE_4__paramType__["a" /* ParamType */](Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])({ name: name }, definition)); };
+        this.types = Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["A" /* inherit */])(Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["B" /* map */])(this.defaultTypes, makeType), {});
+    }
+    /** @internalapi */
+    ParamTypes.prototype.dispose = function () {
+        this.types = {};
+    };
+    /**
+     * Registers a parameter type
+     *
+     * End users should call [[UrlMatcherFactory.type]], which delegates to this method.
+     */
+    ParamTypes.prototype.type = function (name, definition, definitionFn) {
+        if (!Object(__WEBPACK_IMPORTED_MODULE_1__common_predicates__["c" /* isDefined */])(definition))
+            return this.types[name];
+        if (this.types.hasOwnProperty(name))
+            throw new Error("A type named '" + name + "' has already been defined.");
+        this.types[name] = new __WEBPACK_IMPORTED_MODULE_4__paramType__["a" /* ParamType */](Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])({ name: name }, definition));
+        if (definitionFn) {
+            this.typeQueue.push({ name: name, def: definitionFn });
+            if (!this.enqueue)
+                this._flushTypeQueue();
+        }
+        return this;
+    };
+    /** @internalapi */
+    ParamTypes.prototype._flushTypeQueue = function () {
+        while (this.typeQueue.length) {
+            var type = this.typeQueue.shift();
+            if (type.pattern)
+                throw new Error("You cannot override a type's .pattern at runtime.");
+            Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])(this.types[type.name], __WEBPACK_IMPORTED_MODULE_3__common_coreservices__["b" /* services */].$injector.invoke(type.def));
+        }
+    };
+    return ParamTypes;
+}());
+
+/** @hidden */
+function initDefaultTypes() {
+    var makeDefaultType = function (def) {
+        var valToString = function (val) { return (val != null ? val.toString() : val); };
+        var defaultTypeBase = {
+            encode: valToString,
+            decode: valToString,
+            is: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["h" /* is */])(String),
+            pattern: /.*/,
+            // tslint:disable-next-line:triple-equals
+            equals: function (a, b) { return a == b; },
+        };
+        return Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])({}, defaultTypeBase, def);
+    };
+    // Default Parameter Type Definitions
+    Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["r" /* extend */])(ParamTypes.prototype, {
+        string: makeDefaultType({}),
+        path: makeDefaultType({
+            pattern: /[^/]*/,
+        }),
+        query: makeDefaultType({}),
+        hash: makeDefaultType({
+            inherit: false,
+        }),
+        int: makeDefaultType({
+            decode: function (val) { return parseInt(val, 10); },
+            is: function (val) {
+                return !Object(__WEBPACK_IMPORTED_MODULE_1__common_predicates__["g" /* isNullOrUndefined */])(val) && this.decode(val.toString()) === val;
+            },
+            pattern: /-?\d+/,
+        }),
+        bool: makeDefaultType({
+            encode: function (val) { return (val && 1) || 0; },
+            decode: function (val) { return parseInt(val, 10) !== 0; },
+            is: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["h" /* is */])(Boolean),
+            pattern: /0|1/,
+        }),
+        date: makeDefaultType({
+            encode: function (val) {
+                return !this.is(val)
+                    ? undefined
+                    : [val.getFullYear(), ('0' + (val.getMonth() + 1)).slice(-2), ('0' + val.getDate()).slice(-2)].join('-');
+            },
+            decode: function (val) {
+                if (this.is(val))
+                    return val;
+                var match = this.capture.exec(val);
+                return match ? new Date(match[1], match[2] - 1, match[3]) : undefined;
+            },
+            is: function (val) { return val instanceof Date && !isNaN(val.valueOf()); },
+            equals: function (l, r) {
+                return ['getFullYear', 'getMonth', 'getDate'].reduce(function (acc, fn) { return acc && l[fn]() === r[fn](); }, true);
+            },
+            pattern: /[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[1-2][0-9]|3[0-1])/,
+            capture: /([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])/,
+        }),
+        json: makeDefaultType({
+            encode: __WEBPACK_IMPORTED_MODULE_0__common_common__["Q" /* toJson */],
+            decode: __WEBPACK_IMPORTED_MODULE_0__common_common__["x" /* fromJson */],
+            is: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["h" /* is */])(Object),
+            equals: __WEBPACK_IMPORTED_MODULE_0__common_common__["q" /* equals */],
+            pattern: /[^/]*/,
+        }),
+        // does not encode/decode
+        any: makeDefaultType({
+            encode: __WEBPACK_IMPORTED_MODULE_0__common_common__["y" /* identity */],
+            decode: __WEBPACK_IMPORTED_MODULE_0__common_common__["y" /* identity */],
+            is: function () { return true; },
+            equals: __WEBPACK_IMPORTED_MODULE_0__common_common__["q" /* equals */],
+        }),
+    });
+}
+initDefaultTypes();
+//# sourceMappingURL=paramTypes.js.map
+
+/***/ }),
+/* 95 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pathNode__ = __webpack_require__(26);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__pathNode__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pathUtils__ = __webpack_require__(16);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__pathUtils__["a"]; });
+/** @internalapi @module path */ /** */
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 96 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerAddCoreResolvables; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return treeChangesCleanup; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__transition_transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolve__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common__ = __webpack_require__(3);
+/** @internalapi @module hooks */ /** */
+
+
+
+
+function addCoreResolvables(trans) {
+    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData(__WEBPACK_IMPORTED_MODULE_1__router__["a" /* UIRouter */], trans.router), '');
+    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData(__WEBPACK_IMPORTED_MODULE_0__transition_transition__["a" /* Transition */], trans), '');
+    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData('$transition$', trans), '');
+    trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData('$stateParams', trans.params()), '');
+    trans.entering().forEach(function (state) {
+        trans.addResolvable(__WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData('$state$', state), state);
+    });
+}
+var registerAddCoreResolvables = function (transitionService) {
+    return transitionService.onCreate({}, addCoreResolvables);
+};
+var TRANSITION_TOKENS = ['$transition$', __WEBPACK_IMPORTED_MODULE_0__transition_transition__["a" /* Transition */]];
+var isTransition = Object(__WEBPACK_IMPORTED_MODULE_3__common__["N" /* inArray */])(TRANSITION_TOKENS);
+// References to Transition in the treeChanges pathnodes makes all
+// previous Transitions reachable in memory, causing a memory leak
+// This function removes resolves for '$transition$' and `Transition` from the treeChanges.
+// Do not use this on current transitions, only on old ones.
+var treeChangesCleanup = function (trans) {
+    var nodes = Object(__WEBPACK_IMPORTED_MODULE_3__common__["_45" /* values */])(trans.treeChanges())
+        .reduce(__WEBPACK_IMPORTED_MODULE_3__common__["_43" /* unnestR */], [])
+        .reduce(__WEBPACK_IMPORTED_MODULE_3__common__["_41" /* uniqR */], []);
+    // If the resolvable is a Transition, return a new resolvable with null data
+    var replaceTransitionWithNull = function (r) {
+        return isTransition(r.token) ? __WEBPACK_IMPORTED_MODULE_2__resolve__["b" /* Resolvable */].fromData(r.token, null) : r;
+    };
+    nodes.forEach(function (node) {
+        node.resolvables = node.resolvables.map(replaceTransitionWithNull);
+    });
+};
+//# sourceMappingURL=coreResolvables.js.map
+
+/***/ }),
+/* 97 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerRedirectToHook; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(13);
+/** @internalapi @module hooks */ /** */
+
+
+
+/**
+ * A [[TransitionHookFn]] that redirects to a different state or params
+ *
+ * Registered using `transitionService.onStart({ to: (state) => !!state.redirectTo }, redirectHook);`
+ *
+ * See [[StateDeclaration.redirectTo]]
+ */
+var redirectToHook = function (trans) {
+    var redirect = trans.to().redirectTo;
+    if (!redirect)
+        return;
+    var $state = trans.router.stateService;
+    function handleResult(result) {
+        if (!result)
+            return;
+        if (result instanceof __WEBPACK_IMPORTED_MODULE_2__state_targetState__["a" /* TargetState */])
+            return result;
+        if (Object(__WEBPACK_IMPORTED_MODULE_0__common_predicates__["l" /* isString */])(result))
+            return $state.target(result, trans.params(), trans.options());
+        if (result['state'] || result['params'])
+            return $state.target(result['state'] || trans.to(), result['params'] || trans.params(), trans.options());
+    }
+    if (Object(__WEBPACK_IMPORTED_MODULE_0__common_predicates__["d" /* isFunction */])(redirect)) {
+        return __WEBPACK_IMPORTED_MODULE_1__common_coreservices__["b" /* services */].$q.when(redirect(trans)).then(handleResult);
+    }
+    return handleResult(redirect);
+};
+var registerRedirectToHook = function (transitionService) {
+    return transitionService.onStart({ to: function (state) { return !!state.redirectTo; } }, redirectToHook);
+};
+//# sourceMappingURL=redirectTo.js.map
+
+/***/ }),
+/* 98 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerOnExitHook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return registerOnRetainHook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerOnEnterHook; });
+/**
+ * A factory which creates an onEnter, onExit or onRetain transition hook function
+ *
+ * The returned function invokes the (for instance) state.onEnter hook when the
+ * state is being entered.
+ *
+ * @hidden
+ */
+function makeEnterExitRetainHook(hookName) {
+    return function (transition, state) {
+        var _state = state.$$state();
+        var hookFn = _state[hookName];
+        return hookFn(transition, state);
+    };
+}
+/**
+ * The [[TransitionStateHookFn]] for onExit
+ *
+ * When the state is being exited, the state's .onExit function is invoked.
+ *
+ * Registered using `transitionService.onExit({ exiting: (state) => !!state.onExit }, onExitHook);`
+ *
+ * See: [[IHookRegistry.onExit]]
+ */
+var onExitHook = makeEnterExitRetainHook('onExit');
+var registerOnExitHook = function (transitionService) {
+    return transitionService.onExit({ exiting: function (state) { return !!state.onExit; } }, onExitHook);
+};
+/**
+ * The [[TransitionStateHookFn]] for onRetain
+ *
+ * When the state was already entered, and is not being exited or re-entered, the state's .onRetain function is invoked.
+ *
+ * Registered using `transitionService.onRetain({ retained: (state) => !!state.onRetain }, onRetainHook);`
+ *
+ * See: [[IHookRegistry.onRetain]]
+ */
+var onRetainHook = makeEnterExitRetainHook('onRetain');
+var registerOnRetainHook = function (transitionService) {
+    return transitionService.onRetain({ retained: function (state) { return !!state.onRetain; } }, onRetainHook);
+};
+/**
+ * The [[TransitionStateHookFn]] for onEnter
+ *
+ * When the state is being entered, the state's .onEnter function is invoked.
+ *
+ * Registered using `transitionService.onEnter({ entering: (state) => !!state.onEnter }, onEnterHook);`
+ *
+ * See: [[IHookRegistry.onEnter]]
+ */
+var onEnterHook = makeEnterExitRetainHook('onEnter');
+var registerOnEnterHook = function (transitionService) {
+    return transitionService.onEnter({ entering: function (state) { return !!state.onEnter; } }, onEnterHook);
+};
+//# sourceMappingURL=onEnterExitRetain.js.map
+
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export RESOLVE_HOOK_PRIORITY */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerEagerResolvePath; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyResolveState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return registerResolveRemaining; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
+/** @internalapi @module hooks */ /** */
+
+
+
+var RESOLVE_HOOK_PRIORITY = 1000;
+/**
+ * A [[TransitionHookFn]] which resolves all EAGER Resolvables in the To Path
+ *
+ * Registered using `transitionService.onStart({}, eagerResolvePath, { priority: 1000 });`
+ *
+ * When a Transition starts, this hook resolves all the EAGER Resolvables, which the transition then waits for.
+ *
+ * See [[StateDeclaration.resolve]]
+ */
+var eagerResolvePath = function (trans) {
+    return new __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__["b" /* ResolveContext */](trans.treeChanges().to).resolvePath('EAGER', trans).then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
+};
+var registerEagerResolvePath = function (transitionService) {
+    return transitionService.onStart({}, eagerResolvePath, { priority: RESOLVE_HOOK_PRIORITY });
+};
+/**
+ * A [[TransitionHookFn]] which resolves all LAZY Resolvables for the state (and all its ancestors) in the To Path
+ *
+ * Registered using `transitionService.onEnter({ entering: () => true }, lazyResolveState, { priority: 1000 });`
+ *
+ * When a State is being entered, this hook resolves all the Resolvables for this state, which the transition then waits for.
+ *
+ * See [[StateDeclaration.resolve]]
+ */
+var lazyResolveState = function (trans, state) {
+    return new __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__["b" /* ResolveContext */](trans.treeChanges().to)
+        .subContext(state.$$state())
+        .resolvePath('LAZY', trans)
+        .then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
+};
+var registerLazyResolveState = function (transitionService) {
+    return transitionService.onEnter({ entering: Object(__WEBPACK_IMPORTED_MODULE_2__common_hof__["p" /* val */])(true) }, lazyResolveState, { priority: RESOLVE_HOOK_PRIORITY });
+};
+/**
+ * A [[TransitionHookFn]] which resolves any dynamically added (LAZY or EAGER) Resolvables.
+ *
+ * Registered using `transitionService.onFinish({}, eagerResolvePath, { priority: 1000 });`
+ *
+ * After all entering states have been entered, this hook resolves any remaining Resolvables.
+ * These are typically dynamic resolves which were added by some Transition Hook using [[Transition.addResolvable]].
+ *
+ * See [[StateDeclaration.resolve]]
+ */
+var resolveRemaining = function (trans) {
+    return new __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__["b" /* ResolveContext */](trans.treeChanges().to).resolvePath('LAZY', trans).then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
+};
+var registerResolveRemaining = function (transitionService) {
+    return transitionService.onFinish({}, resolveRemaining, { priority: RESOLVE_HOOK_PRIORITY });
+};
+//# sourceMappingURL=resolve.js.map
+
+/***/ }),
+/* 100 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLoadEnteringViews; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerActivateViews; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/** @internalapi @module hooks */ /** */
+
+
+/**
+ * A [[TransitionHookFn]] which waits for the views to load
+ *
+ * Registered using `transitionService.onStart({}, loadEnteringViews);`
+ *
+ * Allows the views to do async work in [[ViewConfig.load]] before the transition continues.
+ * In angular 1, this includes loading the templates.
+ */
+var loadEnteringViews = function (transition) {
+    var $q = __WEBPACK_IMPORTED_MODULE_1__common_coreservices__["b" /* services */].$q;
+    var enteringViews = transition.views('entering');
+    if (!enteringViews.length)
+        return;
+    return $q.all(enteringViews.map(function (view) { return $q.when(view.load()); })).then(__WEBPACK_IMPORTED_MODULE_0__common_common__["E" /* noop */]);
+};
+var registerLoadEnteringViews = function (transitionService) {
+    return transitionService.onFinish({}, loadEnteringViews);
+};
+/**
+ * A [[TransitionHookFn]] which activates the new views when a transition is successful.
+ *
+ * Registered using `transitionService.onSuccess({}, activateViews);`
+ *
+ * After a transition is complete, this hook deactivates the old views from the previous state,
+ * and activates the new views from the destination state.
+ *
+ * See [[ViewService]]
+ */
+var activateViews = function (transition) {
+    var enteringViews = transition.views('entering');
+    var exitingViews = transition.views('exiting');
+    if (!enteringViews.length && !exitingViews.length)
+        return;
+    var $view = transition.router.viewService;
+    exitingViews.forEach(function (vc) { return $view.deactivateViewConfig(vc); });
+    enteringViews.forEach(function (vc) { return $view.activateViewConfig(vc); });
+    $view.sync();
+};
+var registerActivateViews = function (transitionService) {
+    return transitionService.onSuccess({}, activateViews);
+};
+//# sourceMappingURL=views.js.map
+
+/***/ }),
+/* 101 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerUpdateGlobalState; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
+
+/**
+ * A [[TransitionHookFn]] which updates global UI-Router state
+ *
+ * Registered using `transitionService.onBefore({}, updateGlobalState);`
+ *
+ * Before a [[Transition]] starts, updates the global value of "the current transition" ([[Globals.transition]]).
+ * After a successful [[Transition]], updates the global values of "the current state"
+ * ([[Globals.current]] and [[Globals.$current]]) and "the current param values" ([[Globals.params]]).
+ *
+ * See also the deprecated properties:
+ * [[StateService.transition]], [[StateService.current]], [[StateService.params]]
+ */
+var updateGlobalState = function (trans) {
+    var globals = trans.router.globals;
+    var transitionSuccessful = function () {
+        globals.successfulTransitions.enqueue(trans);
+        globals.$current = trans.$to();
+        globals.current = globals.$current.self;
+        Object(__WEBPACK_IMPORTED_MODULE_0__common_common__["m" /* copy */])(trans.params(), globals.params);
+    };
+    var clearCurrentTransition = function () {
+        // Do not clear globals.transition if a different transition has started in the meantime
+        if (globals.transition === trans)
+            globals.transition = null;
+    };
+    trans.onSuccess({}, transitionSuccessful, { priority: 10000 });
+    trans.promise.then(clearCurrentTransition, clearCurrentTransition);
+};
+var registerUpdateGlobalState = function (transitionService) {
+    return transitionService.onCreate({}, updateGlobalState);
+};
+//# sourceMappingURL=updateGlobals.js.map
+
+/***/ }),
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerUpdateUrl; });
+/**
+ * A [[TransitionHookFn]] which updates the URL after a successful transition
+ *
+ * Registered using `transitionService.onSuccess({}, updateUrl);`
+ */
+var updateUrl = function (transition) {
+    var options = transition.options();
+    var $state = transition.router.stateService;
+    var $urlRouter = transition.router.urlRouter;
+    // Dont update the url in these situations:
+    // The transition was triggered by a URL sync (options.source === 'url')
+    // The user doesn't want the url to update (options.location === false)
+    // The destination state, and all parents have no navigable url
+    if (options.source !== 'url' && options.location && $state.$current.navigable) {
+        var urlOptions = { replace: options.location === 'replace' };
+        $urlRouter.push($state.$current.navigable.url, $state.params, urlOptions);
+    }
+    $urlRouter.update(true);
+};
+var registerUpdateUrl = function (transitionService) {
+    return transitionService.onSuccess({}, updateUrl, { priority: 9999 });
+};
+//# sourceMappingURL=url.js.map
+
+/***/ }),
+/* 103 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerIgnoredTransitionHook; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__ = __webpack_require__(10);
+/** @internalapi @module hooks */ /** */
+
+
+/**
+ * A [[TransitionHookFn]] that skips a transition if it should be ignored
+ *
+ * This hook is invoked at the end of the onBefore phase.
+ *
+ * If the transition should be ignored (because no parameter or states changed)
+ * then the transition is ignored and not processed.
+ */
+function ignoredHook(trans) {
+    var ignoredReason = trans._ignoredReason();
+    if (!ignoredReason)
+        return;
+    __WEBPACK_IMPORTED_MODULE_0__common_trace__["c" /* trace */].traceTransitionIgnored(trans);
+    var pending = trans.router.globals.transition;
+    // The user clicked a link going back to the *current state* ('A')
+    // However, there is also a pending transition in flight (to 'B')
+    // Abort the transition to 'B' because the user now wants to be back at 'A'.
+    if (ignoredReason === 'SameAsCurrent' && pending) {
+        pending.abort();
+    }
+    return __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__["b" /* Rejection */].ignored().toPromise();
+}
+var registerIgnoredTransitionHook = function (transitionService) {
+    return transitionService.onBefore({}, ignoredHook, { priority: -9999 });
+};
+//# sourceMappingURL=ignoredTransition.js.map
+
+/***/ }),
+/* 104 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerInvalidTransitionHook; });
+/** @internalapi @module hooks */ /** */
+/**
+ * A [[TransitionHookFn]] that rejects the Transition if it is invalid
+ *
+ * This hook is invoked at the end of the onBefore phase.
+ * If the transition is invalid (for example, param values do not validate)
+ * then the transition is rejected.
+ */
+function invalidTransitionHook(trans) {
+    if (!trans.valid()) {
+        throw new Error(trans.error().toString());
+    }
+}
+var registerInvalidTransitionHook = function (transitionService) {
+    return transitionService.onBefore({}, invalidTransitionHook, { priority: -10000 });
+};
+//# sourceMappingURL=invalidTransition.js.map
+
+/***/ }),
+/* 105 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hookBuilder__ = __webpack_require__(43);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__hookBuilder__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["c"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rejectFactory__ = __webpack_require__(10);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transition__ = __webpack_require__(30);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__transition__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transitionHook__ = __webpack_require__(14);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_5__transitionHook__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transitionEventType__ = __webpack_require__(53);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__transitionEventType__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionService__ = __webpack_require__(29);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_7__transitionService__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_7__transitionService__["b"]; });
+/**
+ * # Transition subsystem
+ *
+ * This module contains APIs related to a Transition.
+ *
+ * See:
+ * - [[TransitionService]]
+ * - [[Transition]]
+ * - [[HookFn]], [[TransitionHookFn]], [[TransitionStateHookFn]], [[HookMatchCriteria]], [[HookResult]]
+ *
+ * @preferred @publicapi @module transition
+ */ /** */
+
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 106 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(19);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__urlMatcher__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__ = __webpack_require__(45);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__urlRouter__ = __webpack_require__(46);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_2__urlRouter__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(32);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRule__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRule__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__urlService__ = __webpack_require__(49);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_4__urlService__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__urlRules__ = __webpack_require__(50);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_5__urlRules__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__urlConfig__ = __webpack_require__(51);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__urlConfig__["a"]; });
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 107 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__view__ = __webpack_require__(47);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__view__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 108 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(109);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["e"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["g"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["h"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["i"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["j"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["k"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["l"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["m"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["n"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["o"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["p"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "q", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["q"]; });
+/** @internalapi @module vanilla */ /** */
+
+//# sourceMappingURL=vanilla.js.map
+
+/***/ }),
+/* 109 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__q__ = __webpack_require__(54);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__q__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__injector__ = __webpack_require__(55);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__injector__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__baseLocationService__ = __webpack_require__(20);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__baseLocationService__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hashLocationService__ = __webpack_require__(56);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__hashLocationService__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__ = __webpack_require__(57);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pushStateLocationService__ = __webpack_require__(58);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_5__pushStateLocationService__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__memoryLocationConfig__ = __webpack_require__(59);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__memoryLocationConfig__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__browserLocationConfig__ = __webpack_require__(60);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_7__browserLocationConfig__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(33);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(110);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "q", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["d"]; });
+
+
+
+
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 110 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["d"] = servicesPlugin;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return hashLocationPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return pushStateLocationPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return memoryLocationPlugin; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hashLocationService__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pushStateLocationService__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__injector__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__q__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(5);
+/** @internalapi @module vanilla */ /** */
+
+
+
+
+
+
+
+
+
+function servicesPlugin(router) {
+    __WEBPACK_IMPORTED_MODULE_8__common_coreservices__["b" /* services */].$injector = __WEBPACK_IMPORTED_MODULE_6__injector__["a" /* $injector */];
+    __WEBPACK_IMPORTED_MODULE_8__common_coreservices__["b" /* services */].$q = __WEBPACK_IMPORTED_MODULE_7__q__["a" /* $q */];
+    return { name: 'vanilla.services', $q: __WEBPACK_IMPORTED_MODULE_7__q__["a" /* $q */], $injector: __WEBPACK_IMPORTED_MODULE_6__injector__["a" /* $injector */], dispose: function () { return null; } };
+}
+/** A `UIRouterPlugin` uses the browser hash to get/set the current location */
+var hashLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* locationPluginFactory */])('vanilla.hashBangLocation', false, __WEBPACK_IMPORTED_MODULE_1__hashLocationService__["a" /* HashLocationService */], __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__["a" /* BrowserLocationConfig */]);
+/** A `UIRouterPlugin` that gets/sets the current location using the browser's `location` and `history` apis */
+var pushStateLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* locationPluginFactory */])('vanilla.pushStateLocation', true, __WEBPACK_IMPORTED_MODULE_3__pushStateLocationService__["a" /* PushStateLocationService */], __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__["a" /* BrowserLocationConfig */]);
+/** A `UIRouterPlugin` that gets/sets the current location from an in-memory object */
+var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* locationPluginFactory */])('vanilla.memoryLocation', false, __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__["a" /* MemoryLocationService */], __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__["a" /* MemoryLocationConfig */]);
+//# sourceMappingURL=plugins.js.map
+
+/***/ }),
+/* 111 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UIRouterPluginBase; });
+/**
+ * # Core classes and interfaces
+ *
+ * The classes and interfaces that are core to ui-router and do not belong
+ * to a more specific subsystem (such as resolve).
+ *
+ * @preferred @publicapi @module core
+ */ /** */
+/** @internalapi */
+var UIRouterPluginBase = /** @class */ (function () {
+    function UIRouterPluginBase() {
+    }
+    UIRouterPluginBase.prototype.dispose = function (router) { };
+    return UIRouterPluginBase;
+}());
+
+//# sourceMappingURL=interface.js.map
+
+/***/ }),
+/* 112 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateFactory; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
+/** @publicapi @module view */ /** */
+
+
+/**
+ * Service which manages loading of templates from a ViewConfig.
+ */
+var TemplateFactory = /** @class */ (function () {
+    function TemplateFactory() {
+        var _this = this;
+        /** @hidden */ this._useHttp = __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].version.minor < 3;
+        /** @hidden */ this.$get = [
+            '$http',
+            '$templateCache',
+            '$injector',
+            function ($http, $templateCache, $injector) {
+                _this.$templateRequest = $injector.has && $injector.has('$templateRequest') && $injector.get('$templateRequest');
+                _this.$http = $http;
+                _this.$templateCache = $templateCache;
+                return _this;
+            },
+        ];
+    }
+    /** @hidden */
+    TemplateFactory.prototype.useHttpService = function (value) {
+        this._useHttp = value;
+    };
+    /**
+     * Creates a template from a configuration object.
+     *
+     * @param config Configuration object for which to load a template.
+     * The following properties are search in the specified order, and the first one
+     * that is defined is used to create the template:
+     *
+     * @param params  Parameters to pass to the template function.
+     * @param context The resolve context associated with the template's view
+     *
+     * @return {string|object}  The template html as a string, or a promise for
+     * that string,or `null` if no template is configured.
+     */
+    TemplateFactory.prototype.fromConfig = function (config, params, context) {
+        var defaultTemplate = '<ui-view></ui-view>';
+        var asTemplate = function (result) { return __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$q.when(result).then(function (str) { return ({ template: str }); }); };
+        var asComponent = function (result) { return __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$q.when(result).then(function (str) { return ({ component: str }); }); };
+        return Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.template)
+            ? asTemplate(this.fromString(config.template, params))
+            : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.templateUrl)
+                ? asTemplate(this.fromUrl(config.templateUrl, params))
+                : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.templateProvider)
+                    ? asTemplate(this.fromProvider(config.templateProvider, params, context))
+                    : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.component)
+                        ? asComponent(config.component)
+                        : Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(config.componentProvider)
+                            ? asComponent(this.fromComponentProvider(config.componentProvider, params, context))
+                            : asTemplate(defaultTemplate);
+    };
+    /**
+     * Creates a template from a string or a function returning a string.
+     *
+     * @param template html template as a string or function that returns an html template as a string.
+     * @param params Parameters to pass to the template function.
+     *
+     * @return {string|object} The template html as a string, or a promise for that
+     * string.
+     */
+    TemplateFactory.prototype.fromString = function (template, params) {
+        return Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isFunction"])(template) ? template(params) : template;
+    };
+    /**
+     * Loads a template from the a URL via `$http` and `$templateCache`.
+     *
+     * @param {string|Function} url url of the template to load, or a function
+     * that returns a url.
+     * @param {Object} params Parameters to pass to the url function.
+     * @return {string|Promise.<string>} The template html as a string, or a promise
+     * for that string.
+     */
+    TemplateFactory.prototype.fromUrl = function (url, params) {
+        if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isFunction"])(url))
+            url = url(params);
+        if (url == null)
+            return null;
+        if (this._useHttp) {
+            return this.$http
+                .get(url, { cache: this.$templateCache, headers: { Accept: 'text/html' } })
+                .then(function (response) {
+                return response.data;
+            });
+        }
+        return this.$templateRequest(url);
+    };
+    /**
+     * Creates a template by invoking an injectable provider function.
+     *
+     * @param provider Function to invoke via `locals`
+     * @param {Function} injectFn a function used to invoke the template provider
+     * @return {string|Promise.<string>} The template html as a string, or a promise
+     * for that string.
+     */
+    TemplateFactory.prototype.fromProvider = function (provider, params, context) {
+        var deps = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.annotate(provider);
+        var providerFn = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(provider) ? Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["tail"])(provider) : provider;
+        var resolvable = new __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["Resolvable"]('', providerFn, deps);
+        return resolvable.get(context);
+    };
+    /**
+     * Creates a component's template by invoking an injectable provider function.
+     *
+     * @param provider Function to invoke via `locals`
+     * @param {Function} injectFn a function used to invoke the template provider
+     * @return {string} The template html as a string: "<component-name input1='::$resolve.foo'></component-name>".
+     */
+    TemplateFactory.prototype.fromComponentProvider = function (provider, params, context) {
+        var deps = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.annotate(provider);
+        var providerFn = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(provider) ? Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["tail"])(provider) : provider;
+        var resolvable = new __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["Resolvable"]('', providerFn, deps);
+        return resolvable.get(context);
+    };
+    /**
+     * Creates a template from a component's name
+     *
+     * This implements route-to-component.
+     * It works by retrieving the component (directive) metadata from the injector.
+     * It analyses the component's bindings, then constructs a template that instantiates the component.
+     * The template wires input and output bindings to resolves or from the parent component.
+     *
+     * @param uiView {object} The parent ui-view (for binding outputs to callbacks)
+     * @param context The ResolveContext (for binding outputs to callbacks returned from resolves)
+     * @param component {string} Component's name in camel case.
+     * @param bindings An object defining the component's bindings: {foo: '<'}
+     * @return {string} The template as a string: "<component-name input1='::$resolve.foo'></component-name>".
+     */
+    TemplateFactory.prototype.makeComponentTemplate = function (uiView, context, component, bindings) {
+        bindings = bindings || {};
+        // Bind once prefix
+        var prefix = __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].version.minor >= 3 ? '::' : '';
+        // Convert to kebob name. Add x- prefix if the string starts with `x-` or `data-`
+        var kebob = function (camelCase) {
+            var kebobed = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["kebobString"])(camelCase);
+            return /^(x|data)-/.exec(kebobed) ? "x-" + kebobed : kebobed;
+        };
+        var attributeTpl = function (input) {
+            var name = input.name, type = input.type;
+            var attrName = kebob(name);
+            // If the ui-view has an attribute which matches a binding on the routed component
+            // then pass that attribute through to the routed component template.
+            // Prefer ui-view wired mappings to resolve data, unless the resolve was explicitly bound using `bindings:`
+            if (uiView.attr(attrName) && !bindings[name])
+                return attrName + "='" + uiView.attr(attrName) + "'";
+            var resolveName = bindings[name] || name;
+            // Pre-evaluate the expression for "@" bindings by enclosing in {{ }}
+            // some-attr="{{ ::$resolve.someResolveName }}"
+            if (type === '@')
+                return attrName + "='{{" + prefix + "$resolve." + resolveName + "}}'";
+            // Wire "&" callbacks to resolves that return a callback function
+            // Get the result of the resolve (should be a function) and annotate it to get its arguments.
+            // some-attr="$resolve.someResolveResultName(foo, bar)"
+            if (type === '&') {
+                var res = context.getResolvable(resolveName);
+                var fn = res && res.data;
+                var args = (fn && __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.annotate(fn)) || [];
+                // account for array style injection, i.e., ['foo', function(foo) {}]
+                var arrayIdxStr = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(fn) ? "[" + (fn.length - 1) + "]" : '';
+                return attrName + "='$resolve." + resolveName + arrayIdxStr + "(" + args.join(',') + ")'";
+            }
+            // some-attr="::$resolve.someResolveName"
+            return attrName + "='" + prefix + "$resolve." + resolveName + "'";
+        };
+        var attrs = getComponentBindings(component)
+            .map(attributeTpl)
+            .join(' ');
+        var kebobName = kebob(component);
+        return "<" + kebobName + " " + attrs + "></" + kebobName + ">";
+    };
+    return TemplateFactory;
+}());
+
+// Gets all the directive(s)' inputs ('@', '=', and '<') and outputs ('&')
+function getComponentBindings(name) {
+    var cmpDefs = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["services"].$injector.get(name + 'Directive'); // could be multiple
+    if (!cmpDefs || !cmpDefs.length)
+        throw new Error("Unable to find component named '" + name + "'");
+    return cmpDefs.map(getBindings).reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["unnestR"], []);
+}
+// Given a directive definition, find its object input attributes
+// Use different properties, depending on the type of directive (component, bindToController, normal)
+var getBindings = function (def) {
+    if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isObject"])(def.bindToController))
+        return scopeBindings(def.bindToController);
+    return scopeBindings(def.scope);
+};
+// for ng 1.2 style, process the scope: { input: "=foo" }
+// for ng 1.3 through ng 1.5, process the component's bindToController: { input: "=foo" } object
+var scopeBindings = function (bindingsObj) {
+    return Object.keys(bindingsObj || {})
+        // [ 'input', [ '=foo', '=', 'foo' ] ]
+        .map(function (key) { return [key, /^([=<@&])[?]?(.*)/.exec(bindingsObj[key])]; })
+        // skip malformed values
+        .filter(function (tuple) { return Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isDefined"])(tuple) && Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(tuple[1]); })
+        // { name: ('foo' || 'input'), type: '=' }
+        .map(function (tuple) { return ({ name: tuple[1][2] || tuple[0], type: tuple[1][1] }); });
+};
+//# sourceMappingURL=templateFactory.js.map
+
+/***/ }),
+/* 113 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStateHookBuilder; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(21);
+/** @publicapi @module ng1 */ /** */
+
+
+/**
+ * This is a [[StateBuilder.builder]] function for angular1 `onEnter`, `onExit`,
+ * `onRetain` callback hooks on a [[Ng1StateDeclaration]].
+ *
+ * When the [[StateBuilder]] builds a [[StateObject]] object from a raw [[StateDeclaration]], this builder
+ * ensures that those hooks are injectable for @uirouter/angularjs (ng1).
+ *
+ * @internalapi
+ */
+var getStateHookBuilder = function (hookName) {
+    return function stateHookBuilder(stateObject, parentFn) {
+        var hook = stateObject[hookName];
+        var pathname = hookName === 'onExit' ? 'from' : 'to';
+        function decoratedNg1Hook(trans, state) {
+            var resolveContext = new __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["ResolveContext"](trans.treeChanges(pathname));
+            var subContext = resolveContext.subContext(state.$$state());
+            var locals = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["extend"])(Object(__WEBPACK_IMPORTED_MODULE_1__services__["a" /* getLocals */])(subContext), { $state$: state, $transition$: trans });
+            return __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["services"].$injector.invoke(hook, this, locals);
+        }
+        return hook ? decoratedNg1Hook : undefined;
+    };
+};
+//# sourceMappingURL=onEnterExitRetain.js.map
+
+/***/ }),
+/* 114 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1LocationServices; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/** @publicapi @module ng1 */ /** */
+
+
+/**
+ * Implements UI-Router LocationServices and LocationConfig using Angular 1's $location service
+ * @internalapi
+ */
+var Ng1LocationServices = /** @class */ (function () {
+    function Ng1LocationServices($locationProvider) {
+        // .onChange() registry
+        this._urlListeners = [];
+        this.$locationProvider = $locationProvider;
+        var _lp = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["val"])($locationProvider);
+        Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["createProxyFunctions"])(_lp, this, _lp, ['hashPrefix']);
+    }
+    /**
+     * Applys ng1-specific path parameter encoding
+     *
+     * The Angular 1 `$location` service is a bit weird.
+     * It doesn't allow slashes to be encoded/decoded bi-directionally.
+     *
+     * See the writeup at https://github.com/angular-ui/ui-router/issues/2598
+     *
+     * This code patches the `path` parameter type so it encoded/decodes slashes as ~2F
+     *
+     * @param router
+     */
+    Ng1LocationServices.monkeyPatchPathParameterType = function (router) {
+        var pathType = router.urlMatcherFactory.type('path');
+        pathType.encode = function (x) {
+            return x != null ? x.toString().replace(/(~|\/)/g, function (m) { return ({ '~': '~~', '/': '~2F' }[m]); }) : x;
+        };
+        pathType.decode = function (x) {
+            return x != null ? x.toString().replace(/(~~|~2F)/g, function (m) { return ({ '~~': '~', '~2F': '/' }[m]); }) : x;
+        };
+    };
+    Ng1LocationServices.prototype.dispose = function () { };
+    Ng1LocationServices.prototype.onChange = function (callback) {
+        var _this = this;
+        this._urlListeners.push(callback);
+        return function () { return Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["removeFrom"])(_this._urlListeners)(callback); };
+    };
+    Ng1LocationServices.prototype.html5Mode = function () {
+        var html5Mode = this.$locationProvider.html5Mode();
+        html5Mode = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isObject"])(html5Mode) ? html5Mode.enabled : html5Mode;
+        return html5Mode && this.$sniffer.history;
+    };
+    Ng1LocationServices.prototype.baseHref = function () {
+        return this._baseHref || (this._baseHref = this.$browser.baseHref() || this.$window.location.pathname);
+    };
+    Ng1LocationServices.prototype.url = function (newUrl, replace, state) {
+        if (replace === void 0) { replace = false; }
+        if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isDefined"])(newUrl))
+            this.$location.url(newUrl);
+        if (replace)
+            this.$location.replace();
+        if (state)
+            this.$location.state(state);
+        return this.$location.url();
+    };
+    Ng1LocationServices.prototype._runtimeServices = function ($rootScope, $location, $sniffer, $browser, $window) {
+        var _this = this;
+        this.$location = $location;
+        this.$sniffer = $sniffer;
+        this.$browser = $browser;
+        this.$window = $window;
+        // Bind $locationChangeSuccess to the listeners registered in LocationService.onChange
+        $rootScope.$on('$locationChangeSuccess', function (evt) { return _this._urlListeners.forEach(function (fn) { return fn(evt); }); });
+        var _loc = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["val"])($location);
+        // Bind these LocationService functions to $location
+        Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["createProxyFunctions"])(_loc, this, _loc, ['replace', 'path', 'search', 'hash']);
+        // Bind these LocationConfig functions to $location
+        Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["createProxyFunctions"])(_loc, this, _loc, ['port', 'protocol', 'host']);
+    };
+    return Ng1LocationServices;
+}());
+
+//# sourceMappingURL=locationServices.js.map
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports) {
+
+/**
+ * The current (or pending) State Parameters
+ *
+ * An injectable global **Service Object** which holds the state parameters for the latest **SUCCESSFUL** transition.
+ *
+ * The values are not updated until *after* a `Transition` successfully completes.
+ *
+ * **Also:** an injectable **Per-Transition Object** object which holds the pending state parameters for the pending `Transition` currently running.
+ *
+ * ### Deprecation warning:
+ *
+ * The value injected for `$stateParams` is different depending on where it is injected.
+ *
+ * - When injected into an angular service, the object injected is the global **Service Object** with the parameter values for the latest successful `Transition`.
+ * - When injected into transition hooks, resolves, or view controllers, the object is the **Per-Transition Object** with the parameter values for the running `Transition`.
+ *
+ * Because of these confusing details, this service is deprecated.
+ *
+ * ### Instead of using the global `$stateParams` service object,
+ * inject [[$uiRouterGlobals]] and use [[UIRouterGlobals.params]]
+ *
+ * ```js
+ * MyService.$inject = ['$uiRouterGlobals'];
+ * function MyService($uiRouterGlobals) {
+ *   return {
+ *     paramValues: function () {
+ *       return $uiRouterGlobals.params;
+ *     }
+ *   }
+ * }
+ * ```
+ *
+ * ### Instead of using the per-transition `$stateParams` object,
+ * inject the current `Transition` (as [[$transition$]]) and use [[Transition.params]]
+ *
+ * ```js
+ * MyController.$inject = ['$transition$'];
+ * function MyController($transition$) {
+ *   var username = $transition$.params().username;
+ *   // .. do something with username
+ * }
+ * ```
+ *
+ * ---
+ *
+ * This object can be injected into other services.
+ *
+ * #### Deprecated Example:
+ * ```js
+ * SomeService.$inject = ['$http', '$stateParams'];
+ * function SomeService($http, $stateParams) {
+ *   return {
+ *     getUser: function() {
+ *       return $http.get('/api/users/' + $stateParams.username);
+ *     }
+ *   }
+ * };
+ * angular.service('SomeService', SomeService);
+ * ```
+ * @deprecated
+ */
+var $stateParams;
+/**
+ * Global UI-Router variables
+ *
+ * The router global state as a **Service Object** (injectable during runtime).
+ *
+ * This object contains globals such as the current state and current parameter values.
+ */
+var $uiRouterGlobals;
+/**
+ * The UI-Router instance
+ *
+ * The [[UIRouter]] singleton (the router instance) as a **Service Object** (injectable during runtime).
+ *
+ * This object is the UI-Router singleton instance, created by angular dependency injection during application bootstrap.
+ * It has references to the other UI-Router services
+ *
+ * #### Note: This object is also exposed as [[$uiRouterProvider]] for injection during angular config time.
+ */
+var $uiRouter;
+/**
+ * The UI-Router instance
+ *
+ * The [[UIRouter]] singleton (the router instance) as a **Provider Object** (injectable during config phase).
+ *
+ * This object is the UI-Router singleton instance, created by angular dependency injection during application bootstrap.
+ * It has references to the other UI-Router services
+ *
+ * #### Note: This object is also exposed as [[$uiRouter]] for injection during runtime.
+ */
+var $uiRouterProvider;
+/**
+ * Transition debug/tracing
+ *
+ * The [[Trace]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * Enables or disables Transition tracing which can help to debug issues.
+ */
+var $trace;
+/**
+ * The Transition Service
+ *
+ * The [[TransitionService]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * This angular service exposes the [[TransitionService]] singleton, which is primarily
+ * used to register global transition hooks.
+ *
+ * #### Note: This object is also exposed as [[$transitionsProvider]] for injection during the config phase.
+ */
+var $transitions;
+/**
+ * The Transition Service
+ *
+ * The [[TransitionService]] singleton as a **Provider Object** (injectable during config phase)
+ *
+ * This angular service exposes the [[TransitionService]] singleton, which is primarily
+ * used to register global transition hooks.
+ *
+ * #### Note: This object is also exposed as [[$transitions]] for injection during runtime.
+ */
+var $transitionsProvider;
+/**
+ * The current [[Transition]] object
+ *
+ * The current [[Transition]] object as a **Per-Transition Object** (injectable into Resolve, Hooks, Controllers)
+ *
+ * This object returns information about the current transition, including:
+ *
+ * - To/from states
+ * - To/from parameters
+ * - Transition options
+ * - States being entered, exited, and retained
+ * - Resolve data
+ * - A Promise for the transition
+ * - Any transition failure information
+ * - An injector for both Service and Per-Transition Objects
+ */
+var $transition$;
+/**
+ * The State Service
+ *
+ * The [[StateService]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * This service used to manage and query information on registered states.
+ * It exposes state related APIs including:
+ *
+ * - Start a [[Transition]]
+ * - Imperatively lazy load states
+ * - Check if a state is currently active
+ * - Look up states by name
+ * - Build URLs for a state+parameters
+ * - Configure the global Transition error handler
+ *
+ * This angular service exposes the [[StateService]] singleton.
+ */
+var $state;
+/**
+ * The State Registry
+ *
+ * The [[StateRegistry]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * This service is used to register/deregister states.
+ * It has state registration related APIs including:
+ *
+ * - Register/deregister states
+ * - Listen for state registration/deregistration
+ * - Get states by name
+ * - Add state decorators (to customize the state creation process)
+ *
+ * #### Note: This object is also exposed as [[$stateRegistryProvider]] for injection during the config phase.
+ */
+var $stateRegistry;
+/**
+ * The State Registry
+ *
+ * The [[StateRegistry]] singleton as a **Provider Object** (injectable during config time).
+ *
+ * This service is used to register/deregister states.
+ * It has state registration related APIs including:
+ *
+ * - Register/deregister states
+ * - Listen for state registration/deregistration
+ * - Get states by name
+ * - Add state decorators (to customize the state creation process)
+ *
+ * #### Note: This object is also exposed as [[$stateRegistry]] for injection during runtime.
+ */
+var $stateRegistryProvider;
+/**
+ * The View Scroll provider
+ *
+ * The [[UIViewScrollProvider]] as a **Provider Object** (injectable during config time).
+ *
+ * This angular service exposes the [[UIViewScrollProvider]] singleton and is
+ * used to disable UI-Router's scroll behavior.
+ */
+var $uiViewScrollProvider;
+/**
+ * The View Scroll function
+ *
+ * The View Scroll function as a **Service Object** (injectable during runtime).
+ *
+ * This is a function that scrolls an element into view.
+ * The element is scrolled after a `$timeout` so the DOM has time to refresh.
+ *
+ * If you prefer to rely on `$anchorScroll` to scroll the view to the anchor,
+ * this can be enabled by calling [[UIViewScrollProvider.useAnchorScroll]].
+ *
+ * Note: this function is used by the [[directives.uiView]] when the `autoscroll` expression evaluates to true.
+ */
+var $uiViewScroll;
+/**
+ * The StateProvider
+ *
+ * An angular1-only [[StateProvider]] as a **Provider Object** (injectable during config time).
+ *
+ * This angular service exposes the [[StateProvider]] singleton.
+ *
+ * The `StateProvider` is primarily used to register states or add custom state decorators.
+ *
+ * ##### Note: This provider is a ng1 vestige.
+ * It is a passthrough to [[$stateRegistry]] and [[$state]].
+ */
+var $stateProvider;
+/**
+ * The URL Service Provider
+ *
+ * The [[UrlService]] singleton as a **Provider Object** (injectable during the angular config phase).
+ *
+ * A service used to configure and interact with the URL.
+ * It has URL related APIs including:
+ *
+ * - register custom Parameter types `UrlService.config.type` ([[UrlConfigApi.type]])
+ * - add URL rules: `UrlService.rules.when` ([[UrlRulesApi.when]])
+ * - configure behavior when no url matches: `UrlService.rules.otherwise` ([[UrlRulesApi.otherwise]])
+ * - delay initial URL synchronization [[UrlService.deferIntercept]].
+ * - get or set the current url: [[UrlService.url]]
+ *
+ * ##### Note: This service can also be injected during runtime as [[$urlService]].
+ */
+var $urlServiceProvider;
+/**
+ * The URL Service
+ *
+ * The [[UrlService]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * Note: This service can also be injected during the config phase as [[$urlServiceProvider]].
+ *
+ * Used to configure the URL.
+ * It has URL related APIs including:
+ *
+ * - register custom Parameter types `UrlService.config.type` ([[UrlConfigApi.type]])
+ * - add URL rules: `UrlService.rules.when` ([[UrlRulesApi.when]])
+ * - configure behavior when no url matches: `UrlService.rules.otherwise` ([[UrlRulesApi.otherwise]])
+ * - delay initial URL synchronization [[UrlService.deferIntercept]].
+ * - get or set the current url: [[UrlService.url]]
+ *
+ * ##### Note: This service can also be injected during the config phase as [[$urlServiceProvider]].
+ */
+var $urlService;
+/**
+ * The URL Router Provider
+ *
+ * ### Deprecation warning: This object is now considered internal. Use [[$urlServiceProvider]] instead.
+ *
+ * The [[UrlRouter]] singleton as a **Provider Object** (injectable during config time).
+ *
+ * #### Note: This object is also exposed as [[$urlRouter]] for injection during runtime.
+ *
+ * @deprecated
+ */
+var $urlRouterProvider;
+/**
+ * The Url Router
+ *
+ * ### Deprecation warning: This object is now considered internal. Use [[$urlService]] instead.
+ *
+ * The [[UrlRouter]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * #### Note: This object is also exposed as [[$urlRouterProvider]] for injection during angular config time.
+ *
+ * @deprecated
+ */
+var $urlRouter;
+/**
+ * The URL Matcher Factory
+ *
+ * ### Deprecation warning: This object is now considered internal. Use [[$urlService]] instead.
+ *
+ * The [[UrlMatcherFactory]] singleton as a **Service Object** (injectable during runtime).
+ *
+ * This service is used to set url mapping options, define custom parameter types, and create [[UrlMatcher]] objects.
+ *
+ * #### Note: This object is also exposed as [[$urlMatcherFactoryProvider]] for injection during angular config time.
+ *
+ * @deprecated
+ */
+var $urlMatcherFactory;
+/**
+ * The URL Matcher Factory
+ *
+ * ### Deprecation warning: This object is now considered internal. Use [[$urlService]] instead.
+ *
+ * The [[UrlMatcherFactory]] singleton as a **Provider Object** (injectable during config time).
+ *
+ * This service is used to set url mapping options, define custom parameter types, and create [[UrlMatcher]] objects.
+ *
+ * #### Note: This object is also exposed as [[$urlMatcherFactory]] for injection during runtime.
+ *
+ * @deprecated
+ */
+var $urlMatcherFactoryProvider;
+//# sourceMappingURL=injectables.js.map
+
+/***/ }),
+/* 116 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
+/**
+ * # Angular 1 Directives
+ *
+ * These are the directives included in UI-Router for Angular 1.
+ * These directives are used in templates to create viewports and link/navigate to states.
+ *
+ * @preferred @publicapi @module directives
+ */ /** */
+
+
+/** @hidden */
+function parseStateRef(ref) {
+    var parsed;
+    var paramsOnly = ref.match(/^\s*({[^}]*})\s*$/);
+    if (paramsOnly)
+        ref = '(' + paramsOnly[1] + ')';
+    parsed = ref.replace(/\n/g, ' ').match(/^\s*([^(]*?)\s*(\((.*)\))?\s*$/);
+    if (!parsed || parsed.length !== 4)
+        throw new Error("Invalid state ref '" + ref + "'");
+    return { state: parsed[1] || null, paramExpr: parsed[3] || null };
+}
+/** @hidden */
+function stateContext(el) {
+    var $uiView = el.parent().inheritedData('$uiView');
+    var path = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["parse"])('$cfg.path')($uiView);
+    return path ? Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["tail"])(path).state.name : undefined;
+}
+/** @hidden */
+function processedDef($state, $element, def) {
+    var uiState = def.uiState || $state.current.name;
+    var uiStateOpts = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["extend"])(defaultOpts($element, $state), def.uiStateOpts || {});
+    var href = $state.href(uiState, def.uiStateParams, uiStateOpts);
+    return { uiState: uiState, uiStateParams: def.uiStateParams, uiStateOpts: uiStateOpts, href: href };
+}
+/** @hidden */
+function getTypeInfo(el) {
+    // SVGAElement does not use the href attribute, but rather the 'xlinkHref' attribute.
+    var isSvg = Object.prototype.toString.call(el.prop('href')) === '[object SVGAnimatedString]';
+    var isForm = el[0].nodeName === 'FORM';
+    return {
+        attr: isForm ? 'action' : isSvg ? 'xlink:href' : 'href',
+        isAnchor: el.prop('tagName').toUpperCase() === 'A',
+        clickable: !isForm,
+    };
+}
+/** @hidden */
+function clickHook(el, $state, $timeout, type, getDef) {
+    return function (e) {
+        var button = e.which || e.button, target = getDef();
+        if (!(button > 1 || e.ctrlKey || e.metaKey || e.shiftKey || el.attr('target'))) {
+            // HACK: This is to allow ng-clicks to be processed before the transition is initiated:
+            var transition_1 = $timeout(function () {
+                if (!el.attr('disabled')) {
+                    $state.go(target.uiState, target.uiStateParams, target.uiStateOpts);
+                }
+            });
+            e.preventDefault();
+            // if the state has no URL, ignore one preventDefault from the <a> directive.
+            var ignorePreventDefaultCount_1 = type.isAnchor && !target.href ? 1 : 0;
+            e.preventDefault = function () {
+                if (ignorePreventDefaultCount_1-- <= 0)
+                    $timeout.cancel(transition_1);
+            };
+        }
+    };
+}
+/** @hidden */
+function defaultOpts(el, $state) {
+    return {
+        relative: stateContext(el) || $state.$current,
+        inherit: true,
+        source: 'sref',
+    };
+}
+/** @hidden */
+function bindEvents(element, scope, hookFn, uiStateOpts) {
+    var events;
+    if (uiStateOpts) {
+        events = uiStateOpts.events;
+    }
+    if (!Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(events)) {
+        events = ['click'];
+    }
+    var on = element.on ? 'on' : 'bind';
+    for (var _i = 0, events_1 = events; _i < events_1.length; _i++) {
+        var event_1 = events_1[_i];
+        element[on](event_1, hookFn);
+    }
+    scope.$on('$destroy', function () {
+        var off = element.off ? 'off' : 'unbind';
+        for (var _i = 0, events_2 = events; _i < events_2.length; _i++) {
+            var event_2 = events_2[_i];
+            element[off](event_2, hookFn);
+        }
+    });
+}
+/**
+ * `ui-sref`: A directive for linking to a state
+ *
+ * A directive which links to a state (and optionally, parameters).
+ * When clicked, this directive activates the linked state with the supplied parameter values.
+ *
+ * ### Linked State
+ * The attribute value of the `ui-sref` is the name of the state to link to.
+ *
+ * #### Example:
+ * This will activate the `home` state when the link is clicked.
+ * ```html
+ * <a ui-sref="home">Home</a>
+ * ```
+ *
+ * ### Relative Links
+ * You can also use relative state paths within `ui-sref`, just like a relative path passed to `$state.go()` ([[StateService.go]]).
+ * You just need to be aware that the path is relative to the state that *created* the link.
+ * This allows a state to create a relative `ui-sref` which always targets the same destination.
+ *
+ * #### Example:
+ * Both these links are relative to the parent state, even when a child state is currently active.
+ * ```html
+ * <a ui-sref=".child1">child 1 state</a>
+ * <a ui-sref=".child2">child 2 state</a>
+ * ```
+ *
+ * This link activates the parent state.
+ * ```html
+ * <a ui-sref="^">Return</a>
+ * ```
+ *
+ * ### hrefs
+ * If the linked state has a URL, the directive will automatically generate and
+ * update the `href` attribute (using the [[StateService.href]]  method).
+ *
+ * #### Example:
+ * Assuming the `users` state has a url of `/users/`
+ * ```html
+ * <a ui-sref="users" href="/users/">Users</a>
+ * ```
+ *
+ * ### Parameter Values
+ * In addition to the state name, a `ui-sref` can include parameter values which are applied when activating the state.
+ * Param values can be provided in the `ui-sref` value after the state name, enclosed by parentheses.
+ * The content inside the parentheses is an expression, evaluated to the parameter values.
+ *
+ * #### Example:
+ * This example renders a list of links to users.
+ * The state's `userId` parameter value comes from each user's `user.id` property.
+ * ```html
+ * <li ng-repeat="user in users">
+ *   <a ui-sref="users.detail({ userId: user.id })">{{ user.displayName }}</a>
+ * </li>
+ * ```
+ *
+ * Note:
+ * The parameter values expression is `$watch`ed for updates.
+ *
+ * ### Transition Options
+ * You can specify [[TransitionOptions]] to pass to [[StateService.go]] by using the `ui-sref-opts` attribute.
+ * Options are restricted to `location`, `inherit`, and `reload`.
+ *
+ * #### Example:
+ * ```html
+ * <a ui-sref="home" ui-sref-opts="{ reload: true }">Home</a>
+ * ```
+ *
+ * ### Other DOM Events
+ *
+ * You can also customize which DOM events to respond to (instead of `click`) by
+ * providing an `events` array in the `ui-sref-opts` attribute.
+ *
+ * #### Example:
+ * ```html
+ * <input type="text" ui-sref="contacts" ui-sref-opts="{ events: ['change', 'blur'] }">
+ * ```
+ *
+ * ### Highlighting the active link
+ * This directive can be used in conjunction with [[uiSrefActive]] to highlight the active link.
+ *
+ * ### Examples
+ * If you have the following template:
+ *
+ * ```html
+ * <a ui-sref="home">Home</a>
+ * <a ui-sref="about">About</a>
+ * <a ui-sref="{page: 2}">Next page</a>
+ *
+ * <ul>
+ *     <li ng-repeat="contact in contacts">
+ *         <a ui-sref="contacts.detail({ id: contact.id })">{{ contact.name }}</a>
+ *     </li>
+ * </ul>
+ * ```
+ *
+ * Then (assuming the current state is `contacts`) the rendered html including hrefs would be:
+ *
+ * ```html
+ * <a href="#/home" ui-sref="home">Home</a>
+ * <a href="#/about" ui-sref="about">About</a>
+ * <a href="#/contacts?page=2" ui-sref="{page: 2}">Next page</a>
+ *
+ * <ul>
+ *     <li ng-repeat="contact in contacts">
+ *         <a href="#/contacts/1" ui-sref="contacts.detail({ id: contact.id })">Joe</a>
+ *     </li>
+ *     <li ng-repeat="contact in contacts">
+ *         <a href="#/contacts/2" ui-sref="contacts.detail({ id: contact.id })">Alice</a>
+ *     </li>
+ *     <li ng-repeat="contact in contacts">
+ *         <a href="#/contacts/3" ui-sref="contacts.detail({ id: contact.id })">Bob</a>
+ *     </li>
+ * </ul>
+ *
+ * <a href="#/home" ui-sref="home" ui-sref-opts="{reload: true}">Home</a>
+ * ```
+ *
+ * ### Notes
+ *
+ * - You can use `ui-sref` to change **only the parameter values** by omitting the state name and parentheses.
+ * #### Example:
+ * Sets the `lang` parameter to `en` and remains on the same state.
+ *
+ * ```html
+ * <a ui-sref="{ lang: 'en' }">English</a>
+ * ```
+ *
+ * - A middle-click, right-click, or ctrl-click is handled (natively) by the browser to open the href in a new window, for example.
+ *
+ * - Unlike the parameter values expression, the state name is not `$watch`ed (for performance reasons).
+ * If you need to dynamically update the state being linked to, use the fully dynamic [[uiState]] directive.
+ */
+var uiSrefDirective;
+uiSrefDirective = [
+    '$uiRouter',
+    '$timeout',
+    function $StateRefDirective($uiRouter, $timeout) {
+        var $state = $uiRouter.stateService;
+        return {
+            restrict: 'A',
+            require: ['?^uiSrefActive', '?^uiSrefActiveEq'],
+            link: function (scope, element, attrs, uiSrefActive) {
+                var type = getTypeInfo(element);
+                var active = uiSrefActive[1] || uiSrefActive[0];
+                var unlinkInfoFn = null;
+                var hookFn;
+                var rawDef = {};
+                var getDef = function () { return processedDef($state, element, rawDef); };
+                var ref = parseStateRef(attrs.uiSref);
+                rawDef.uiState = ref.state;
+                rawDef.uiStateOpts = attrs.uiSrefOpts ? scope.$eval(attrs.uiSrefOpts) : {};
+                function update() {
+                    var def = getDef();
+                    if (unlinkInfoFn)
+                        unlinkInfoFn();
+                    if (active)
+                        unlinkInfoFn = active.$$addStateInfo(def.uiState, def.uiStateParams);
+                    if (def.href != null)
+                        attrs.$set(type.attr, def.href);
+                }
+                if (ref.paramExpr) {
+                    scope.$watch(ref.paramExpr, function (val) {
+                        rawDef.uiStateParams = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["extend"])({}, val);
+                        update();
+                    }, true);
+                    rawDef.uiStateParams = Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["extend"])({}, scope.$eval(ref.paramExpr));
+                }
+                update();
+                scope.$on('$destroy', $uiRouter.stateRegistry.onStatesChanged(update));
+                scope.$on('$destroy', $uiRouter.transitionService.onSuccess({}, update));
+                if (!type.clickable)
+                    return;
+                hookFn = clickHook(element, $state, $timeout, type, getDef);
+                bindEvents(element, scope, hookFn, rawDef.uiStateOpts);
+            },
+        };
+    },
+];
+/**
+ * `ui-state`: A fully dynamic directive for linking to a state
+ *
+ * A directive which links to a state (and optionally, parameters).
+ * When clicked, this directive activates the linked state with the supplied parameter values.
+ *
+ * **This directive is very similar to [[uiSref]], but it `$observe`s and `$watch`es/evaluates all its inputs.**
+ *
+ * A directive which links to a state (and optionally, parameters).
+ * When clicked, this directive activates the linked state with the supplied parameter values.
+ *
+ * ### Linked State
+ * The attribute value of `ui-state` is an expression which is `$watch`ed and evaluated as the state to link to.
+ * **This is in contrast with `ui-sref`, which takes a state name as a string literal.**
+ *
+ * #### Example:
+ * Create a list of links.
+ * ```html
+ * <li ng-repeat="link in navlinks">
+ *   <a ui-state="link.state">{{ link.displayName }}</a>
+ * </li>
+ * ```
+ *
+ * ### Relative Links
+ * If the expression evaluates to a relative path, it is processed like [[uiSref]].
+ * You just need to be aware that the path is relative to the state that *created* the link.
+ * This allows a state to create relative `ui-state` which always targets the same destination.
+ *
+ * ### hrefs
+ * If the linked state has a URL, the directive will automatically generate and
+ * update the `href` attribute (using the [[StateService.href]]  method).
+ *
+ * ### Parameter Values
+ * In addition to the state name expression, a `ui-state` can include parameter values which are applied when activating the state.
+ * Param values should be provided using the `ui-state-params` attribute.
+ * The `ui-state-params` attribute value is `$watch`ed and evaluated as an expression.
+ *
+ * #### Example:
+ * This example renders a list of links with param values.
+ * The state's `userId` parameter value comes from each user's `user.id` property.
+ * ```html
+ * <li ng-repeat="link in navlinks">
+ *   <a ui-state="link.state" ui-state-params="link.params">{{ link.displayName }}</a>
+ * </li>
+ * ```
+ *
+ * ### Transition Options
+ * You can specify [[TransitionOptions]] to pass to [[StateService.go]] by using the `ui-state-opts` attribute.
+ * Options are restricted to `location`, `inherit`, and `reload`.
+ * The value of the `ui-state-opts` is `$watch`ed and evaluated as an expression.
+ *
+ * #### Example:
+ * ```html
+ * <a ui-state="returnto.state" ui-state-opts="{ reload: true }">Home</a>
+ * ```
+ *
+ * ### Other DOM Events
+ *
+ * You can also customize which DOM events to respond to (instead of `click`) by
+ * providing an `events` array in the `ui-state-opts` attribute.
+ *
+ * #### Example:
+ * ```html
+ * <input type="text" ui-state="contacts" ui-state-opts="{ events: ['change', 'blur'] }">
+ * ```
+ *
+ * ### Highlighting the active link
+ * This directive can be used in conjunction with [[uiSrefActive]] to highlight the active link.
+ *
+ * ### Notes
+ *
+ * - You can use `ui-params` to change **only the parameter values** by omitting the state name and supplying only `ui-state-params`.
+ *   However, it might be simpler to use [[uiSref]] parameter-only links.
+ *
+ * #### Example:
+ * Sets the `lang` parameter to `en` and remains on the same state.
+ *
+ * ```html
+ * <a ui-state="" ui-state-params="{ lang: 'en' }">English</a>
+ * ```
+ *
+ * - A middle-click, right-click, or ctrl-click is handled (natively) by the browser to open the href in a new window, for example.
+ * ```
+ */
+var uiStateDirective;
+uiStateDirective = [
+    '$uiRouter',
+    '$timeout',
+    function $StateRefDynamicDirective($uiRouter, $timeout) {
+        var $state = $uiRouter.stateService;
+        return {
+            restrict: 'A',
+            require: ['?^uiSrefActive', '?^uiSrefActiveEq'],
+            link: function (scope, element, attrs, uiSrefActive) {
+                var type = getTypeInfo(element);
+                var active = uiSrefActive[1] || uiSrefActive[0];
+                var unlinkInfoFn = null;
+                var hookFn;
+                var rawDef = {};
+                var getDef = function () { return processedDef($state, element, rawDef); };
+                var inputAttrs = ['uiState', 'uiStateParams', 'uiStateOpts'];
+                var watchDeregFns = inputAttrs.reduce(function (acc, attr) { return ((acc[attr] = __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["noop"]), acc); }, {});
+                function update() {
+                    var def = getDef();
+                    if (unlinkInfoFn)
+                        unlinkInfoFn();
+                    if (active)
+                        unlinkInfoFn = active.$$addStateInfo(def.uiState, def.uiStateParams);
+                    if (def.href != null)
+                        attrs.$set(type.attr, def.href);
+                }
+                inputAttrs.forEach(function (field) {
+                    rawDef[field] = attrs[field] ? scope.$eval(attrs[field]) : null;
+                    attrs.$observe(field, function (expr) {
+                        watchDeregFns[field]();
+                        watchDeregFns[field] = scope.$watch(expr, function (newval) {
+                            rawDef[field] = newval;
+                            update();
+                        }, true);
+                    });
+                });
+                update();
+                scope.$on('$destroy', $uiRouter.stateRegistry.onStatesChanged(update));
+                scope.$on('$destroy', $uiRouter.transitionService.onSuccess({}, update));
+                if (!type.clickable)
+                    return;
+                hookFn = clickHook(element, $state, $timeout, type, getDef);
+                bindEvents(element, scope, hookFn, rawDef.uiStateOpts);
+            },
+        };
+    },
+];
+/**
+ * `ui-sref-active` and `ui-sref-active-eq`: A directive that adds a CSS class when a `ui-sref` is active
+ *
+ * A directive working alongside [[uiSref]] and [[uiState]] to add classes to an element when the
+ * related directive's state is active (and remove them when it is inactive).
+ *
+ * The primary use-case is to highlight the active link in navigation menus,
+ * distinguishing it from the inactive menu items.
+ *
+ * ### Linking to a `ui-sref` or `ui-state`
+ * `ui-sref-active` can live on the same element as `ui-sref`/`ui-state`, or it can be on a parent element.
+ * If a `ui-sref-active` is a parent to more than one `ui-sref`/`ui-state`, it will apply the CSS class when **any of the links are active**.
+ *
+ * ### Matching
+ *
+ * The `ui-sref-active` directive applies the CSS class when the `ui-sref`/`ui-state`'s target state **or any child state is active**.
+ * This is a "fuzzy match" which uses [[StateService.includes]].
+ *
+ * The `ui-sref-active-eq` directive applies the CSS class when the `ui-sref`/`ui-state`'s target state is directly active (not when child states are active).
+ * This is an "exact match" which uses [[StateService.is]].
+ *
+ * ### Parameter values
+ * If the `ui-sref`/`ui-state` includes parameter values, the current parameter values must match the link's values for the link to be highlighted.
+ * This allows a list of links to the same state with different parameters to be rendered, and the correct one highlighted.
+ *
+ * #### Example:
+ * ```html
+ * <li ng-repeat="user in users" ui-sref-active="active">
+ *   <a ui-sref="user.details({ userId: user.id })">{{ user.lastName }}</a>
+ * </li>
+ * ```
+ *
+ * ### Examples
+ *
+ * Given the following template:
+ * #### Example:
+ * ```html
+ * <ul>
+ *   <li ui-sref-active="active" class="item">
+ *     <a href ui-sref="app.user({user: 'bilbobaggins'})">@bilbobaggins</a>
+ *   </li>
+ * </ul>
+ * ```
+ *
+ * When the app state is `app.user` (or any child state),
+ * and contains the state parameter "user" with value "bilbobaggins",
+ * the resulting HTML will appear as (note the 'active' class):
+ *
+ * ```html
+ * <ul>
+ *   <li ui-sref-active="active" class="item active">
+ *     <a ui-sref="app.user({user: 'bilbobaggins'})" href="/users/bilbobaggins">@bilbobaggins</a>
+ *   </li>
+ * </ul>
+ * ```
+ *
+ * ### Glob mode
+ *
+ * It is possible to pass `ui-sref-active` an expression that evaluates to an object.
+ * The objects keys represent active class names and values represent the respective state names/globs.
+ * `ui-sref-active` will match if the current active state **includes** any of
+ * the specified state names/globs, even the abstract ones.
+ *
+ * #### Example:
+ * Given the following template, with "admin" being an abstract state:
+ * ```html
+ * <div ui-sref-active="{'active': 'admin.**'}">
+ *   <a ui-sref-active="active" ui-sref="admin.roles">Roles</a>
+ * </div>
+ * ```
+ *
+ * Arrays are also supported as values in the `ngClass`-like interface.
+ * This allows multiple states to add `active` class.
+ *
+ * #### Example:
+ * Given the following template, with "admin.roles" being the current state, the class will be added too:
+ * ```html
+ * <div ui-sref-active="{'active': ['owner.**', 'admin.**']}">
+ *   <a ui-sref-active="active" ui-sref="admin.roles">Roles</a>
+ * </div>
+ * ```
+ *
+ * When the current state is "admin.roles" the "active" class will be applied to both the `<div>` and `<a>` elements.
+ * It is important to note that the state names/globs passed to `ui-sref-active` override any state provided by a linked `ui-sref`.
+ *
+ * ### Notes:
+ *
+ * - The class name is interpolated **once** during the directives link time (any further changes to the
+ * interpolated value are ignored).
+ *
+ * - Multiple classes may be specified in a space-separated format: `ui-sref-active='class1 class2 class3'`
+ */
+var uiSrefActiveDirective;
+uiSrefActiveDirective = [
+    '$state',
+    '$stateParams',
+    '$interpolate',
+    '$uiRouter',
+    function $StateRefActiveDirective($state, $stateParams, $interpolate, $uiRouter) {
+        return {
+            restrict: 'A',
+            controller: [
+                '$scope',
+                '$element',
+                '$attrs',
+                function ($scope, $element, $attrs) {
+                    var states = [];
+                    var activeEqClass;
+                    var uiSrefActive;
+                    // There probably isn't much point in $observing this
+                    // uiSrefActive and uiSrefActiveEq share the same directive object with some
+                    // slight difference in logic routing
+                    activeEqClass = $interpolate($attrs.uiSrefActiveEq || '', false)($scope);
+                    try {
+                        uiSrefActive = $scope.$eval($attrs.uiSrefActive);
+                    }
+                    catch (e) {
+                        // Do nothing. uiSrefActive is not a valid expression.
+                        // Fall back to using $interpolate below
+                    }
+                    uiSrefActive = uiSrefActive || $interpolate($attrs.uiSrefActive || '', false)($scope);
+                    setStatesFromDefinitionObject(uiSrefActive);
+                    // Allow uiSref to communicate with uiSrefActive[Equals]
+                    this.$$addStateInfo = function (newState, newParams) {
+                        // we already got an explicit state provided by ui-sref-active, so we
+                        // shadow the one that comes from ui-sref
+                        if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isObject"])(uiSrefActive) && states.length > 0) {
+                            return;
+                        }
+                        var deregister = addState(newState, newParams, uiSrefActive);
+                        update();
+                        return deregister;
+                    };
+                    function updateAfterTransition(trans) {
+                        trans.promise.then(update, __WEBPACK_IMPORTED_MODULE_1__uirouter_core__["noop"]);
+                    }
+                    $scope.$on('$destroy', setupEventListeners());
+                    if ($uiRouter.globals.transition) {
+                        updateAfterTransition($uiRouter.globals.transition);
+                    }
+                    function setupEventListeners() {
+                        var deregisterStatesChangedListener = $uiRouter.stateRegistry.onStatesChanged(handleStatesChanged);
+                        var deregisterOnStartListener = $uiRouter.transitionService.onStart({}, updateAfterTransition);
+                        var deregisterStateChangeSuccessListener = $scope.$on('$stateChangeSuccess', update);
+                        return function cleanUp() {
+                            deregisterStatesChangedListener();
+                            deregisterOnStartListener();
+                            deregisterStateChangeSuccessListener();
+                        };
+                    }
+                    function handleStatesChanged() {
+                        setStatesFromDefinitionObject(uiSrefActive);
+                    }
+                    function setStatesFromDefinitionObject(statesDefinition) {
+                        if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isObject"])(statesDefinition)) {
+                            states = [];
+                            Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["forEach"])(statesDefinition, function (stateOrName, activeClass) {
+                                // Helper function to abstract adding state.
+                                var addStateForClass = function (stateOrName, activeClass) {
+                                    var ref = parseStateRef(stateOrName);
+                                    addState(ref.state, $scope.$eval(ref.paramExpr), activeClass);
+                                };
+                                if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isString"])(stateOrName)) {
+                                    // If state is string, just add it.
+                                    addStateForClass(stateOrName, activeClass);
+                                }
+                                else if (Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["isArray"])(stateOrName)) {
+                                    // If state is an array, iterate over it and add each array item individually.
+                                    Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["forEach"])(stateOrName, function (stateOrName) {
+                                        addStateForClass(stateOrName, activeClass);
+                                    });
+                                }
+                            });
+                        }
+                    }
+                    function addState(stateName, stateParams, activeClass) {
+                        var state = $state.get(stateName, stateContext($element));
+                        var stateInfo = {
+                            state: state || { name: stateName },
+                            params: stateParams,
+                            activeClass: activeClass,
+                        };
+                        states.push(stateInfo);
+                        return function removeState() {
+                            Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["removeFrom"])(states)(stateInfo);
+                        };
+                    }
+                    // Update route state
+                    function update() {
+                        var splitClasses = function (str) { return str.split(/\s/).filter(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["identity"]); };
+                        var getClasses = function (stateList) {
+                            return stateList
+                                .map(function (x) { return x.activeClass; })
+                                .map(splitClasses)
+                                .reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["unnestR"], []);
+                        };
+                        var allClasses = getClasses(states)
+                            .concat(splitClasses(activeEqClass))
+                            .reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["uniqR"], []);
+                        var fuzzyClasses = getClasses(states.filter(function (x) { return $state.includes(x.state.name, x.params); }));
+                        var exactlyMatchesAny = !!states.filter(function (x) { return $state.is(x.state.name, x.params); }).length;
+                        var exactClasses = exactlyMatchesAny ? splitClasses(activeEqClass) : [];
+                        var addClasses = fuzzyClasses.concat(exactClasses).reduce(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["uniqR"], []);
+                        var removeClasses = allClasses.filter(function (cls) { return !Object(__WEBPACK_IMPORTED_MODULE_1__uirouter_core__["inArray"])(addClasses, cls); });
+                        $scope.$evalAsync(function () {
+                            addClasses.forEach(function (className) { return $element.addClass(className); });
+                            removeClasses.forEach(function (className) { return $element.removeClass(className); });
+                        });
+                    }
+                    update();
+                },
+            ],
+        };
+    },
+];
+__WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
+    .module('ui.router.state')
+    .directive('uiSref', uiSrefDirective)
+    .directive('uiSrefActive', uiSrefActiveDirective)
+    .directive('uiSrefActiveEq', uiSrefActiveDirective)
+    .directive('uiState', uiStateDirective);
+//# sourceMappingURL=stateDirectives.js.map
+
+/***/ }),
+/* 117 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export $IsStateFilter */
+/* unused harmony export $IncludedByStateFilter */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/** @publicapi @module ng1 */ /** */
+
+/**
+ * `isState` Filter: truthy if the current state is the parameter
+ *
+ * Translates to [[StateService.is]] `$state.is("stateName")`.
+ *
+ * #### Example:
+ * ```html
+ * <div ng-if="'stateName' | isState">show if state is 'stateName'</div>
+ * ```
+ */
+$IsStateFilter.$inject = ['$state'];
+function $IsStateFilter($state) {
+    var isFilter = function (state, params, options) {
+        return $state.is(state, params, options);
+    };
+    isFilter.$stateful = true;
+    return isFilter;
+}
+/**
+ * `includedByState` Filter: truthy if the current state includes the parameter
+ *
+ * Translates to [[StateService.includes]]` $state.is("fullOrPartialStateName")`.
+ *
+ * #### Example:
+ * ```html
+ * <div ng-if="'fullOrPartialStateName' | includedByState">show if state includes 'fullOrPartialStateName'</div>
+ * ```
+ */
+$IncludedByStateFilter.$inject = ['$state'];
+function $IncludedByStateFilter($state) {
+    var includesFilter = function (state, params, options) {
+        return $state.includes(state, params, options);
+    };
+    includesFilter.$stateful = true;
+    return includesFilter;
+}
+__WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
+    .module('ui.router.state')
+    .filter('isState', $IsStateFilter)
+    .filter('includedByState', $IncludedByStateFilter);
+//# sourceMappingURL=stateFilters.js.map
+
+/***/ }),
+/* 118 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export uiView */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__ = __webpack_require__(34);
+/** @publicapi @module directives */ /** */
+
+
+
+
+/**
+ * `ui-view`: A viewport directive which is filled in by a view from the active state.
+ *
+ * ### Attributes
+ *
+ * - `name`: (Optional) A view name.
+ *   The name should be unique amongst the other views in the same state.
+ *   You can have views of the same name that live in different states.
+ *   The ui-view can be targeted in a View using the name ([[Ng1StateDeclaration.views]]).
+ *
+ * - `autoscroll`: an expression. When it evaluates to true, the `ui-view` will be scrolled into view when it is activated.
+ *   Uses [[$uiViewScroll]] to do the scrolling.
+ *
+ * - `onload`: Expression to evaluate whenever the view updates.
+ *
+ * #### Example:
+ * A view can be unnamed or named.
+ * ```html
+ * <!-- Unnamed -->
+ * <div ui-view></div>
+ *
+ * <!-- Named -->
+ * <div ui-view="viewName"></div>
+ *
+ * <!-- Named (different style) -->
+ * <ui-view name="viewName"></ui-view>
+ * ```
+ *
+ * You can only have one unnamed view within any template (or root html). If you are only using a
+ * single view and it is unnamed then you can populate it like so:
+ *
+ * ```html
+ * <div ui-view></div>
+ * $stateProvider.state("home", {
+ *   template: "<h1>HELLO!</h1>"
+ * })
+ * ```
+ *
+ * The above is a convenient shortcut equivalent to specifying your view explicitly with the
+ * [[Ng1StateDeclaration.views]] config property, by name, in this case an empty name:
+ *
+ * ```js
+ * $stateProvider.state("home", {
+ *   views: {
+ *     "": {
+ *       template: "<h1>HELLO!</h1>"
+ *     }
+ *   }
+ * })
+ * ```
+ *
+ * But typically you'll only use the views property if you name your view or have more than one view
+ * in the same template. There's not really a compelling reason to name a view if its the only one,
+ * but you could if you wanted, like so:
+ *
+ * ```html
+ * <div ui-view="main"></div>
+ * ```
+ *
+ * ```js
+ * $stateProvider.state("home", {
+ *   views: {
+ *     "main": {
+ *       template: "<h1>HELLO!</h1>"
+ *     }
+ *   }
+ * })
+ * ```
+ *
+ * Really though, you'll use views to set up multiple views:
+ *
+ * ```html
+ * <div ui-view></div>
+ * <div ui-view="chart"></div>
+ * <div ui-view="data"></div>
+ * ```
+ *
+ * ```js
+ * $stateProvider.state("home", {
+ *   views: {
+ *     "": {
+ *       template: "<h1>HELLO!</h1>"
+ *     },
+ *     "chart": {
+ *       template: "<chart_thing/>"
+ *     },
+ *     "data": {
+ *       template: "<data_thing/>"
+ *     }
+ *   }
+ * })
+ * ```
+ *
+ * #### Examples for `autoscroll`:
+ * ```html
+ * <!-- If autoscroll present with no expression,
+ *      then scroll ui-view into view -->
+ * <ui-view autoscroll/>
+ *
+ * <!-- If autoscroll present with valid expression,
+ *      then scroll ui-view into view if expression evaluates to true -->
+ * <ui-view autoscroll='true'/>
+ * <ui-view autoscroll='false'/>
+ * <ui-view autoscroll='scopeVariable'/>
+ * ```
+ *
+ * Resolve data:
+ *
+ * The resolved data from the state's `resolve` block is placed on the scope as `$resolve` (this
+ * can be customized using [[Ng1ViewDeclaration.resolveAs]]).  This can be then accessed from the template.
+ *
+ * Note that when `controllerAs` is being used, `$resolve` is set on the controller instance *after* the
+ * controller is instantiated.  The `$onInit()` hook can be used to perform initialization code which
+ * depends on `$resolve` data.
+ *
+ * #### Example:
+ * ```js
+ * $stateProvider.state('home', {
+ *   template: '<my-component user="$resolve.user"></my-component>',
+ *   resolve: {
+ *     user: function(UserService) { return UserService.fetchUser(); }
+ *   }
+ * });
+ * ```
+ */
+var uiView;
+uiView = [
+    '$view',
+    '$animate',
+    '$uiViewScroll',
+    '$interpolate',
+    '$q',
+    function $ViewDirective($view, $animate, $uiViewScroll, $interpolate, $q) {
+        function getRenderer(attrs, scope) {
+            return {
+                enter: function (element, target, cb) {
+                    if (__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].version.minor > 2) {
+                        $animate.enter(element, null, target).then(cb);
+                    }
+                    else {
+                        $animate.enter(element, null, target, cb);
+                    }
+                },
+                leave: function (element, cb) {
+                    if (__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].version.minor > 2) {
+                        $animate.leave(element).then(cb);
+                    }
+                    else {
+                        $animate.leave(element, cb);
+                    }
+                },
+            };
+        }
+        function configsEqual(config1, config2) {
+            return config1 === config2;
+        }
+        var rootData = {
+            $cfg: { viewDecl: { $context: $view._pluginapi._rootViewContext() } },
+            $uiView: {},
+        };
+        var directive = {
+            count: 0,
+            restrict: 'ECA',
+            terminal: true,
+            priority: 400,
+            transclude: 'element',
+            compile: function (tElement, tAttrs, $transclude) {
+                return function (scope, $element, attrs) {
+                    var onloadExp = attrs['onload'] || '', autoScrollExp = attrs['autoscroll'], renderer = getRenderer(attrs, scope), inherited = $element.inheritedData('$uiView') || rootData, name = $interpolate(attrs['uiView'] || attrs['name'] || '')(scope) || '$default';
+                    var previousEl, currentEl, currentScope, viewConfig, unregister;
+                    var activeUIView = {
+                        $type: 'ng1',
+                        id: directive.count++,
+                        name: name,
+                        fqn: inherited.$uiView.fqn ? inherited.$uiView.fqn + '.' + name : name,
+                        config: null,
+                        configUpdated: configUpdatedCallback,
+                        get creationContext() {
+                            // The context in which this ui-view "tag" was created
+                            var fromParentTagConfig = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('$cfg.viewDecl.$context')(inherited);
+                            // Allow <ui-view name="foo"><ui-view name="bar"></ui-view></ui-view>
+                            // See https://github.com/angular-ui/ui-router/issues/3355
+                            var fromParentTag = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('$uiView.creationContext')(inherited);
+                            return fromParentTagConfig || fromParentTag;
+                        },
+                    };
+                    __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Linking', activeUIView);
+                    function configUpdatedCallback(config) {
+                        if (config && !(config instanceof __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__["a" /* Ng1ViewConfig */]))
+                            return;
+                        if (configsEqual(viewConfig, config))
+                            return;
+                        __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewConfigUpdated(activeUIView, config && config.viewDecl && config.viewDecl.$context);
+                        viewConfig = config;
+                        updateView(config);
+                    }
+                    $element.data('$uiView', { $uiView: activeUIView });
+                    updateView();
+                    unregister = $view.registerUIView(activeUIView);
+                    scope.$on('$destroy', function () {
+                        __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Destroying/Unregistering', activeUIView);
+                        unregister();
+                    });
+                    function cleanupLastView() {
+                        if (previousEl) {
+                            __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Removing (previous) el', previousEl.data('$uiView'));
+                            previousEl.remove();
+                            previousEl = null;
+                        }
+                        if (currentScope) {
+                            __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Destroying scope', activeUIView);
+                            currentScope.$destroy();
+                            currentScope = null;
+                        }
+                        if (currentEl) {
+                            var _viewData_1 = currentEl.data('$uiViewAnim');
+                            __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewEvent('Animate out', _viewData_1);
+                            renderer.leave(currentEl, function () {
+                                _viewData_1.$$animLeave.resolve();
+                                previousEl = null;
+                            });
+                            previousEl = currentEl;
+                            currentEl = null;
+                        }
+                    }
+                    function updateView(config) {
+                        var newScope = scope.$new();
+                        var animEnter = $q.defer(), animLeave = $q.defer();
+                        var $uiViewData = {
+                            $cfg: config,
+                            $uiView: activeUIView,
+                        };
+                        var $uiViewAnim = {
+                            $animEnter: animEnter.promise,
+                            $animLeave: animLeave.promise,
+                            $$animLeave: animLeave,
+                        };
+                        /**
+                         * @ngdoc event
+                         * @name ui.router.state.directive:ui-view#$viewContentLoading
+                         * @eventOf ui.router.state.directive:ui-view
+                         * @eventType emits on ui-view directive scope
+                         * @description
+                         *
+                         * Fired once the view **begins loading**, *before* the DOM is rendered.
+                         *
+                         * @param {Object} event Event object.
+                         * @param {string} viewName Name of the view.
+                         */
+                        newScope.$emit('$viewContentLoading', name);
+                        var cloned = $transclude(newScope, function (clone) {
+                            clone.data('$uiViewAnim', $uiViewAnim);
+                            clone.data('$uiView', $uiViewData);
+                            renderer.enter(clone, $element, function onUIViewEnter() {
+                                animEnter.resolve();
+                                if (currentScope)
+                                    currentScope.$emit('$viewContentAnimationEnded');
+                                if ((Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isDefined"])(autoScrollExp) && !autoScrollExp) || scope.$eval(autoScrollExp)) {
+                                    $uiViewScroll(clone);
+                                }
+                            });
+                            cleanupLastView();
+                        });
+                        currentEl = cloned;
+                        currentScope = newScope;
+                        /**
+                         * @ngdoc event
+                         * @name ui.router.state.directive:ui-view#$viewContentLoaded
+                         * @eventOf ui.router.state.directive:ui-view
+                         * @eventType emits on ui-view directive scope
+                         * @description           *
+                         * Fired once the view is **loaded**, *after* the DOM is rendered.
+                         *
+                         * @param {Object} event Event object.
+                         */
+                        currentScope.$emit('$viewContentLoaded', config || viewConfig);
+                        currentScope.$eval(onloadExp);
+                    }
+                };
+            },
+        };
+        return directive;
+    },
+];
+$ViewDirectiveFill.$inject = ['$compile', '$controller', '$transitions', '$view', '$q', '$timeout'];
+/** @hidden */
+function $ViewDirectiveFill($compile, $controller, $transitions, $view, $q, $timeout) {
+    var getControllerAs = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('viewDecl.controllerAs');
+    var getResolveAs = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["parse"])('viewDecl.resolveAs');
+    return {
+        restrict: 'ECA',
+        priority: -400,
+        compile: function (tElement) {
+            var initial = tElement.html();
+            tElement.empty();
+            return function (scope, $element) {
+                var data = $element.data('$uiView');
+                if (!data) {
+                    $element.html(initial);
+                    $compile($element.contents())(scope);
+                    return;
+                }
+                var cfg = data.$cfg || { viewDecl: {}, getTemplate: __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["noop"] };
+                var resolveCtx = cfg.path && new __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["ResolveContext"](cfg.path);
+                $element.html(cfg.getTemplate($element, resolveCtx) || initial);
+                __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["trace"].traceUIViewFill(data.$uiView, $element.html());
+                var link = $compile($element.contents());
+                var controller = cfg.controller;
+                var controllerAs = getControllerAs(cfg);
+                var resolveAs = getResolveAs(cfg);
+                var locals = resolveCtx && Object(__WEBPACK_IMPORTED_MODULE_2__services__["a" /* getLocals */])(resolveCtx);
+                scope[resolveAs] = locals;
+                if (controller) {
+                    var controllerInstance = ($controller(controller, Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["extend"])({}, locals, { $scope: scope, $element: $element })));
+                    if (controllerAs) {
+                        scope[controllerAs] = controllerInstance;
+                        scope[controllerAs][resolveAs] = locals;
+                    }
+                    // TODO: Use $view service as a central point for registering component-level hooks
+                    // Then, when a component is created, tell the $view service, so it can invoke hooks
+                    // $view.componentLoaded(controllerInstance, { $scope: scope, $element: $element });
+                    // scope.$on('$destroy', () => $view.componentUnloaded(controllerInstance, { $scope: scope, $element: $element }));
+                    $element.data('$ngControllerController', controllerInstance);
+                    $element.children().data('$ngControllerController', controllerInstance);
+                    registerControllerCallbacks($q, $transitions, controllerInstance, scope, cfg);
+                }
+                // Wait for the component to appear in the DOM
+                if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isString"])(cfg.component)) {
+                    var kebobName = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["kebobString"])(cfg.component);
+                    var tagRegexp_1 = new RegExp("^(x-|data-)?" + kebobName + "$", 'i');
+                    var getComponentController = function () {
+                        var directiveEl = [].slice
+                            .call($element[0].children)
+                            .filter(function (el) { return el && el.tagName && tagRegexp_1.exec(el.tagName); });
+                        return directiveEl && __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].element(directiveEl).data("$" + cfg.component + "Controller");
+                    };
+                    var deregisterWatch_1 = scope.$watch(getComponentController, function (ctrlInstance) {
+                        if (!ctrlInstance)
+                            return;
+                        registerControllerCallbacks($q, $transitions, ctrlInstance, scope, cfg);
+                        deregisterWatch_1();
+                    });
+                }
+                link(scope);
+            };
+        },
+    };
+}
+/** @hidden */
+var hasComponentImpl = typeof __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router')['component'] === 'function';
+/** @hidden incrementing id */
+var _uiCanExitId = 0;
+/** @hidden TODO: move these callbacks to $view and/or `/hooks/components.ts` or something */
+function registerControllerCallbacks($q, $transitions, controllerInstance, $scope, cfg) {
+    // Call $onInit() ASAP
+    if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isFunction"])(controllerInstance.$onInit) && !(cfg.viewDecl.component && hasComponentImpl)) {
+        controllerInstance.$onInit();
+    }
+    var viewState = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["tail"])(cfg.path).state.self;
+    var hookOptions = { bind: controllerInstance };
+    // Add component-level hook for onUiParamsChanged
+    if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isFunction"])(controllerInstance.uiOnParamsChanged)) {
+        var resolveContext = new __WEBPACK_IMPORTED_MODULE_0__uirouter_core__["ResolveContext"](cfg.path);
+        var viewCreationTrans_1 = resolveContext.getResolvable('$transition$').data;
+        // Fire callback on any successful transition
+        var paramsUpdated = function ($transition$) {
+            // Exit early if the $transition$ is the same as the view was created within.
+            // Exit early if the $transition$ will exit the state the view is for.
+            if ($transition$ === viewCreationTrans_1 || $transition$.exiting().indexOf(viewState) !== -1)
+                return;
+            var toParams = $transition$.params('to');
+            var fromParams = $transition$.params('from');
+            var getNodeSchema = function (node) { return node.paramSchema; };
+            var toSchema = $transition$
+                .treeChanges('to')
+                .map(getNodeSchema)
+                .reduce(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["unnestR"], []);
+            var fromSchema = $transition$
+                .treeChanges('from')
+                .map(getNodeSchema)
+                .reduce(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["unnestR"], []);
+            // Find the to params that have different values than the from params
+            var changedToParams = toSchema.filter(function (param) {
+                var idx = fromSchema.indexOf(param);
+                return idx === -1 || !fromSchema[idx].type.equals(toParams[param.id], fromParams[param.id]);
+            });
+            // Only trigger callback if a to param has changed or is new
+            if (changedToParams.length) {
+                var changedKeys_1 = changedToParams.map(function (x) { return x.id; });
+                // Filter the params to only changed/new to params.  `$transition$.params()` may be used to get all params.
+                var newValues = Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["filter"])(toParams, function (val, key) { return changedKeys_1.indexOf(key) !== -1; });
+                controllerInstance.uiOnParamsChanged(newValues, $transition$);
+            }
+        };
+        $scope.$on('$destroy', $transitions.onSuccess({}, paramsUpdated, hookOptions));
+    }
+    // Add component-level hook for uiCanExit
+    if (Object(__WEBPACK_IMPORTED_MODULE_0__uirouter_core__["isFunction"])(controllerInstance.uiCanExit)) {
+        var id_1 = _uiCanExitId++;
+        var cacheProp_1 = '_uiCanExitIds';
+        // Returns true if a redirect transition already answered truthy
+        var prevTruthyAnswer_1 = function (trans) {
+            return !!trans && ((trans[cacheProp_1] && trans[cacheProp_1][id_1] === true) || prevTruthyAnswer_1(trans.redirectedFrom()));
+        };
+        // If a user answered yes, but the transition was later redirected, don't also ask for the new redirect transition
+        var wrappedHook = function (trans) {
+            var promise;
+            var ids = (trans[cacheProp_1] = trans[cacheProp_1] || {});
+            if (!prevTruthyAnswer_1(trans)) {
+                promise = $q.when(controllerInstance.uiCanExit(trans));
+                promise.then(function (val) { return (ids[id_1] = val !== false); });
+            }
+            return promise;
+        };
+        var criteria = { exiting: viewState.name };
+        $scope.$on('$destroy', $transitions.onBefore(criteria, wrappedHook, hookOptions));
+    }
+}
+__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').directive('uiView', uiView);
+__WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').directive('uiView', $ViewDirectiveFill);
+//# sourceMappingURL=viewDirective.js.map
+
+/***/ }),
+/* 119 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/** @publicapi @module ng1 */ /** */
+
+/** @hidden */
+function $ViewScrollProvider() {
+    var useAnchorScroll = false;
+    this.useAnchorScroll = function () {
+        useAnchorScroll = true;
+    };
+    this.$get = [
+        '$anchorScroll',
+        '$timeout',
+        function ($anchorScroll, $timeout) {
+            if (useAnchorScroll) {
+                return $anchorScroll;
+            }
+            return function ($element) {
+                return $timeout(function () {
+                    $element[0].scrollIntoView();
+                }, 0, false);
+            };
+        },
+    ];
+}
+__WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').provider('$uiViewScroll', $ViewScrollProvider);
+//# sourceMappingURL=viewScroll.js.map
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
 /* 127 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a href=\"\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a href=\"\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without\">\n                Continue without registration!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n            </div>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a href=\"\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"EvntsCtrl._opts.dataLoad\"\n                              events=\"EvntsCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing tabs_item__active\">Closing</div>\n                    <div class=\"tabs_players__lower\">Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n                @include($_typeDevice.'.bids.parts.bid')\n\n\n\n            </div>\n\n\n\n            @include($_typeDevice.'.partial.footer-binds')\n\n        </div>\n\n    </div>\n</div>";
 
 /***/ })
 /******/ ]);
