@@ -4,7 +4,7 @@
 
 
 
-    <div class="row" ng-controller="EventsListController as EvntsLstCtrl">
+    <div class="row" ng-controller="EventsController as EvntsCtrl">
         <div class="binds event-list-main-wr">
             <div class="col-md-12">
                 <div class="logo_img">
@@ -13,9 +13,11 @@
                 </div>
             </div>
             <div class="all_events-wr">
-                @foreach($events as $event)
+                <events ng-if="EvntsCtrl._opts.dataLoad"
+                        events="EvntsCtrl.events" state="list">
+                {{--@foreach($events as $event)
                     @include($_typeDevice.'.events.parts.event-list', ['event' => $event])
-                @endforeach
+                @endforeach--}}
             </div>
         </div>
         @include($_typeDevice.'.partial.footer-binds')

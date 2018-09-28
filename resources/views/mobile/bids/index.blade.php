@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-
+    <a ui-sref="ngbids" ui-sref-active="active">Hello</a>
 
     <div class="row" ng-controller="BidResponsesController as BdsRspnsCtrl">
         <div class="col-md-12 binds">

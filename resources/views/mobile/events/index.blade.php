@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="row">
+    <div class="row" ng-controller="EventsController as EvntsCtrl">
         <div class="col-md-12 binds">
             <div class="logo_img">
                 LOGO
@@ -14,19 +14,11 @@
                     <div class="tabs-wr__title-name">Events</div>
                     <div class="see_all"><a href="{{route('all-events')}}">See All</a></div>
                 </div>
-                <div class="slider_container">
-
-                    <div class="swipe-wr">
-
-                        @foreach($events as $event)
-                        @include($_typeDevice.'.events.parts.event')
-                        @endforeach
 
 
+                <events-carousel ng-if="EvntsCtrl._opts.dataLoad"
+                        events="EvntsCtrl.events" state="row"></events-carousel>
 
-                    </div>
-
-                </div>
                 <div class="tabs-wr__title">
                     <div class="tabs-wr__title-name">Players</div>
                     <div class="see_all">See All</div>
@@ -39,15 +31,13 @@
                 </div>
                 <div class="swipe-wr full_sc events_player">
 
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
-                    @include($_typeDevice.'.bids.parts.tabs')
+                    @include($_typeDevice.'.bids.parts.bid')
+                    @include($_typeDevice.'.bids.parts.bid')
+                    @include($_typeDevice.'.bids.parts.bid')
+                    @include($_typeDevice.'.bids.parts.bid')
+                    @include($_typeDevice.'.bids.parts.bid')
+
+
 
                 </div>
 

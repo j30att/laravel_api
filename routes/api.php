@@ -20,5 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['middleware' => 'auth'], function(){
     Route::apiResource('bids', 'Api\BidController');
     Route::apiResource('bidResponse', 'Api\BidResponseController');
+    Route::apiResource('events', 'Api\EventController');
 });
 

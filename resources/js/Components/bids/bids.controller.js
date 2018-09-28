@@ -1,4 +1,4 @@
-class BidsRow {
+class Bids {
 
     constructor() {
 
@@ -10,11 +10,11 @@ class BidsRow {
 
 }
 
-export const BidsRowComponent = {
+export const BidsComponent = {
     bindings: {
         bids:    '<',
     },
-    template: require('./bids-row.template.html'),
-    controller: BidsRow,
+    template: require('./bids.template.html'),
+    controller: Bids,
     controllerAs: '$ctrl'
 };

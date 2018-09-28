@@ -21,7 +21,7 @@
                 </div>
                 <div class="slider_container slider_container__full">
                     <div class="swipe-wr full_sc">
-                        <bids-row class="bids_row__fullscreen" bids="FltrBdsRspnsCtrl.bids"></bids-row>
+                        <bids class="bids_row__fullscreen" bids="FltrBdsRspnsCtrl.bids"></bids>
                     </div>
                 </div>
             </div>

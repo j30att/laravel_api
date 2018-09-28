@@ -1,0 +1,56 @@
+<div class="event-item" ng-if="$ctrl.state == 'row'" ng-repeat="item in $ctrl.events">
+    <div class="event-item-wr">
+        <a href="">
+            <div class="event-item__img">
+                <img src="/images/event.png" alt="">
+            </div>
+        </a>
+        <div class="event-item__text">
+            <a href="">
+                <div class="event-item__title" ng-bind="item.title"></div>
+            </a>
+            <div class="event-item__summa">£ {%item.fund%} GTD</div>
+
+            <div class="event-item__date" ng-bind="item.formated_data"></div>
+        </div>
+
+    </div>
+</div>
+<!--
+
+<div class="see_info_event" ng-if="$ctrl.showDetail()">
+    <span><a href="">See info</a></span>
+
+    <div class="event-item__title">{{$event->title}}</div>
+    <div class="event-item__summa">£{{$event->fund}} GTD</div>
+    <div class="event-item__date">{{$event->formatted_data}}</div>
+
+
+    <div class="event_main-wr">
+        <span>Events List</span>
+    </div>
+</div>
+-->
+
+{%$ctrl.state%}
+<div ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
+
+    <div class="selected_event" ng-if="EvntsLstCtrl.showDetail(item.id)">
+        <img src="/images/select_event_bg.png" alt="">
+    </div>
+    <div class="selected_event_info event_item col-md-12">
+
+        <div class="event_list-wr" ng-click="EvntsLstCtrl.openDetail(item.id)">
+
+
+            <div class="event-item__title" ng-bind="item.title"></div>
+            <div class="event-item__summa">£ {%item.fund%} GTD</div>
+            <div class="event-item__date" ng-bind="item.formated_data"></div>
+        </div>
+        <a href="">
+            <div class="see_more"></div>
+        </a>
+
+    </div>
+
+</div>

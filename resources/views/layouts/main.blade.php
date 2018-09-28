@@ -10,6 +10,8 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height container">
+            <ui-view></ui-view>
+
             <main>
                 @yield('content')
             </main>

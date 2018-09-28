@@ -3,6 +3,7 @@ let angular = require('angular');
 import {LoginController} from "./Controllers/LoginController";
 import {RegisterController} from "./Controllers/RegisterController";
 import {ProfileController} from "./Controllers/ProfileController";
+import {EventsController} from "./Controllers/EventsController";
 import {EventsListController} from "./Controllers/EventsListController";
 import {FilterBidsController} from "./Controllers/FilterBidsController";
 import {BidResponsesController} from "./Controllers/BidResponsesController";
@@ -17,6 +18,7 @@ module.controller('EventsListController', EventsListController);
 module.controller('FilterBidsController', FilterBidsController);
 module.controller('BidResponsesController', BidResponsesController);
 module.controller('FilterBidResponsesController', FilterBidResponsesController);
+module.controller('EventsController', EventsController);
 
 export default module.name;
 

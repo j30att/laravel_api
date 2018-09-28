@@ -1,15 +1,20 @@
 let angular = require('angular');
 
 import Controllers from './Controllers';
-//import Components from  './Components'
+import routes from './Router';
 
-import {BidsRowComponent} from "./Components/bids/bids-row.controller";
+
+import {BidsComponent} from "./Components/bids/bids.controller";
 import {BidsCarouselComponent} from "./Components/bids-carousel/bids-carousel.controller";
+import {EventsComponent} from "./Components/events/events.controller";
+import {EventsCarouselComponent} from "./Components/events-carousel/events-carousel.controller";
 
+let ngRouter = require('angular-ui-router').default;
 
 let app = angular.module('poker', [
+    ngRouter,
     Controllers,
-//    Components
+
 ]);
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {
@@ -17,5 +22,9 @@ app.config(['$interpolateProvider', ($interpolateProvider) => {
     $interpolateProvider.endSymbol('%}');
 }]);
 
+app.component('bids', BidsComponent);
 app.component('bidsCarousel', BidsCarouselComponent);
-app.component('bidsRow', BidsRowComponent);
+app.component('events', EventsComponent);
+app.component('eventsCarousel', EventsCarouselComponent);
+
+app.config(routes);

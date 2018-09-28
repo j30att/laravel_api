@@ -17,3 +17,7 @@ export const BIDS_INDEX = '/api/bids';
 
 //**BIDSRESPONSE**//
 export const BID_RESPONSE_INDEX = '/api/bidResponse';
+
+
+//**EVENTS**//
+export const BID_EVENTS_INDEX = '/api/events';
