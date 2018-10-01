@@ -1,6 +1,7 @@
 <div class="event-item" ng-if="$ctrl.state == 'row'" ng-repeat="item in $ctrl.events">
     <div class="event-item-wr">
-        <a href="">
+
+        <a ui-sref="event({id:item.id})">
             <div class="event-item__img">
                 <img src="/images/event.png" alt="">
             </div>

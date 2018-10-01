@@ -22,6 +22,8 @@ export const EVENTS_INDEX = '/api/events';
 export const EVENT_SINGLE = '/api/events/';
 
 //**SALE**//
-
 export const SALE_INDEX = '/api/sale';
 export const SALE_CREATE = '/api/sale';
+
+//**SUBEVENTS**//
+export const SUBEVENTS_INDEX = '/api/subevents';

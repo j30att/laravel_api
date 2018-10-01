@@ -19,6 +19,9 @@ class CreateSalesTable extends Migration
             $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
 
+            $table->integer('event_id')->unsigned()->nullable();
+            $table->foreign('event_id')->references('id')->on('sub_events')->onDelete('set null');
+
             $table->integer('sub_event_id')->unsigned()->nullable();
             $table->foreign('sub_event_id')->references('id')->on('sub_events')->onDelete('set null');
 

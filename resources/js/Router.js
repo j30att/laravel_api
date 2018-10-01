@@ -79,6 +79,12 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controller: 'EventsListController',
                 controllerAs: 'EvntsLstCtrl',
             })
+            .state('event',{
+                url: 'event/{id}',
+                template: require('./views/invest/events/single.template.html'),
+                controller: 'EventController',
+                controllerAs: 'EventCtrl',
+            })
 
         .state('bids', {
             url: '/bids',
@@ -107,7 +113,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controllerAs: 'SaleFrmCtrl',
             })
             .state('sale-filter', {
-                url:'/sale/{filter}',
+                url: '/sales/{filter}',
                 template: require('./views/sale/filter.template.html'),
                 controller: 'SaleController',
                 controllerAs: 'SaleCtrl',

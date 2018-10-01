@@ -6,6 +6,7 @@ use App\Http\Resources\SaleResource;
 use App\Models\Sale;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 
 class SaleController extends Controller
@@ -100,7 +101,11 @@ class SaleController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = Auth::user();
+        $sale = Sale::query()->where('id', $id)->first();
+
+        return  new SaleResource($sale);
+
     }
 
     /**
@@ -123,7 +128,7 @@ class SaleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Sale::query()->where('id', $id)->update($request->all());
     }
 
     /**

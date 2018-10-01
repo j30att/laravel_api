@@ -12,36 +12,47 @@
             </div>
 
             <label>Event</label>
-
             <select ng-if="SaleFrmCtrl._opts.load === false">
                 <option ng-bind="'Choose an event'"></option>
             </select>
-
-            <select ng-model="SaleFrmCtrl.event" ng-if="SaleFrmCtrl._opts.load === true">
+            <select  ng-model="SaleFrmCtrl.sale.event_id"
+                     ng-if="SaleFrmCtrl._opts.load === true"
+                     ng-change="SaleFrmCtrl.getSubevents()">
                 <option ng-repeat="item in SaleFrmCtrl.events"
                         ng-bind="item.title"
-                        ng-value="{%item%}"></option>
+                        ng-value="{%item.id%}"></option>
             </select>
 
-            <label>Flight</label>
 
+            <label>Flight</label>
+<!--
             <select name="flight" ng-if="SaleFrmCtrl.event === null">
                 <option selected>Choose an flight
                 </option>
+            </select>-->
+
+
+            <select ng-model="SaleFrmCtrl.sale.sub_event_id"
+                    ng-change="SaleFrmCtrl.fillSale()">
+                <option ng-repeat="item in SaleFrmCtrl.subevents"
+                        ng-bind="item.title"
+                        ng-value="{%item.id%}">
+
+                </option>
             </select>
+
+<!--
 
             <select name="flight"
-                    ng-if="SaleFrmCtrl.event != null"
-                    ng-model="SaleFrmCtrl.subevent"
+
+                    ng-model="SaleFrmCtrl.sale.sub_event_id"
                     ng-change="SaleFrmCtrl.fillSale()">
-                <option ng-repeat="item in SaleFrmCtrl.event.subevents"
-                        ng-bind="item.title"
-                        ng-value="{%item%}"
-                ></option>
+
             </select>
+-->
 
             <label>Buy-in</label>
-            <input type="text" ng-model="SaleFrmCtrl.sale.buy_in" placeholder="Will be display after selection of flight">
+            <input type="text" ng-model="SaleFrmCtrl.buy_in" placeholder="Will be display after selection of flight">
             <div class="offer">
                 <div class="offer__title">Offer</div>
                 <div class="offer-wr">
@@ -60,8 +71,11 @@
                 </div>
 
 
-                <div class="creact_sale" ng-click="SaleFrmCtrl.createSale()">
+                <div ng-if="SaleFrmCtrl._opts.update !=true " class="creact_sale" ng-click="SaleFrmCtrl.createSale()">
                     Create a Sale
+                </div>
+                <div ng-if="SaleFrmCtrl._opts.update == true " class="creact_sale" ng-click="SaleFrmCtrl.updateSale()">
+                    Update a Sale
                 </div>
 
             </div>

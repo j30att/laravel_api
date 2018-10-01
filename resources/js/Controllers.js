@@ -14,7 +14,9 @@ import {BidsController} from "./Controllers/BidsController";
 import {SaleController} from "./Controllers/SaleController"
 import {SaleFormController} from "./Controllers/SaleFormController"
 import {InvestController} from "./Controllers/InvestController";
+import {EventController} from "./Controllers/EventController";
 import {EventsListController} from "./Controllers/EventsListController";
+
 
 
 let module = angular.module('Controllers', []);
@@ -33,6 +35,7 @@ module.controller('BidsController', BidsController);
 module.controller('SaleController', SaleController);
 module.controller('SaleFormController', SaleFormController);
 module.controller('InvestController', InvestController);
+module.controller('EventController', EventController);
 module.controller('EventsListController', EventsListController);
 
 export default module.name;

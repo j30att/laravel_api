@@ -21,6 +21,7 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::apiResource('bids', 'Api\BidController');
     Route::apiResource('sale', 'Api\SaleController');
     Route::apiResource('events', 'Api\EventController');
+    Route::apiResource('subevents', 'Api\SubEventController');
 
 
 });

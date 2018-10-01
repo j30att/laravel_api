@@ -8,8 +8,10 @@ import {permission, uiPermission} from 'angular-permission';
 import hack from './Hack';
 
 let ngRouter = require('angular-ui-router').default;
+let bootstrap = require('angular-ui-bootstrap');
 
 let app = angular.module('poker', [
+    bootstrap,
     ngRouter,
     Controllers,
     Components,

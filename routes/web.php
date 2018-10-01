@@ -22,9 +22,9 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 
-Route::get('desktop/all', function (){
-    return view('desktop.bids.index');
-});
+Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
+
+
 
 
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -45,7 +45,9 @@ Route::group(['prefix' => 'events'], function() {
 
 
 
-Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
+Route::get('desktop/all', function (){
+    return view('desktop.bids.index');
+});
 
 /*
 Route::group(['prefix'=>'bids'], function (){

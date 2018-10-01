@@ -12,7 +12,9 @@ class Sale extends Model
 
     protected $fillable=[
         'user_id',
+        'event_id',
         'sub_event_id',
+        'buy_in',
         'flight_id',
         'status',
         'markup',
