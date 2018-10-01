@@ -6,6 +6,7 @@ use App\Http\Resources\BidResource;
 use App\Models\Bid;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class BidController extends Controller
 {
@@ -16,8 +17,11 @@ class BidController extends Controller
      */
     public function index(Request $request)
     {
+        $user = Auth::user();
+        dd($user);
+        dd('hui');
         $filter = $request->get('filter');
-        if (empty($filter)) return abort(403);
+        //if (empty($filter)) return abort(403);
         if ($filter){
             $bids = Bid::query()->where('type', $filter)->get();
             return BidResource::collection($bids);

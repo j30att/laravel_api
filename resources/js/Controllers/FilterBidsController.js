@@ -1,8 +1,5 @@
-import {BIDS_MATCHED} from "../Constants"
-import {BIDS_UNMATCHED} from "../Constants"
-import {BIDS_SETTLED} from "../Constants"
+import {BIDS_ACTIVE} from "../Constants"
 import {BIDS_CANCELED} from "../Constants"
-
 
 import {BIDS_INDEX} from "../Constants"
 

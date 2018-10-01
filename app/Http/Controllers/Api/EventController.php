@@ -16,7 +16,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::query()->get();
+
+        $events = Event::query()->with('subEvents')->get();
+
         return EventResource::collection($events);
     }
 

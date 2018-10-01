@@ -1,0 +1,11 @@
+<div class="tabs-wr" ng-repeat="(key, value) in $ctrl.sales">
+    <div class="tabs-wr__title sale_tabs__title">
+        <div class="tabs-wr__title-name">{%key%}</div>
+        <a ui-sref="sale-filter({filter: key})" class="see_all">See All</a>
+    </div>
+    <div class="slider_container">
+        <div class="swipe-wr">
+            <sales sales="$ctrl.sales" state="$ctrl.state" style="display: inline-flex"></sales>
+        </div>
+    </div>
+</div>

@@ -15,8 +15,8 @@ class EventsSeeder extends Seeder
         $events = [
             1 => [
                 'title' => 'Caribbean Poker Party Event',
-                'image_id' => 1,
-                'fund' => '1',
+                'image_id' => null,
+                'fund' => '1000000',
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 20)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'description' => '
@@ -26,15 +26,15 @@ with combined guarantees of a jaw-dropping <strong>$10,000,000</strong> with all
 ',
                 'buy_in' => 10000,
                 'reg_fee' => 1000,
-                'currency_token' => 'USD',
+                /*'currency_token' => 'USD',
                 'country' => 'Bahamas',
                 'category_slug' => 'Caribbean',
-                'category_name' => 'caribbean'
+                'category_name' => 'caribbean'*/
             ],
             2 => [
                 'title' => 'Las Vegas Poker Party',
-                'image_id' => 1,
-                'fund' => '1',
+                'image_id' => null,
+                'fund' => '1000000',
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 40)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 45)),
                 'description' => '<p>We’re giving players the chance to <strong>win one of 100 prize packages worth $12,000</strong> each for the
@@ -42,15 +42,15 @@ with combined guarantees of a jaw-dropping <strong>$10,000,000</strong> with all
 award-winning golf, and a variety of live poker events that will show you the best Sin City has to offer!</p>',
                 'buy_in' => 1000,
                 'reg_fee' => 100,
-                'currency_token' => 'USD',
+                /*'currency_token' => 'USD',
                 'country' => 'USA',
                 'category_slug' => 'lasvegas',
-                'category_name' => 'Las Vegas'
+                'category_name' => 'Las Vegas'*/
             ],
             3 => [
                 'title' => 'partypoker MILLIONS',
-                'image_id' => 1,
-                'fund' => '1',
+                'image_id' => null,
+                'fund' => '1000000000',
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 10)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 15)),
                 'description' => '<p>Play your role in the biggest tournament in partypoker history and you could walk away with £1 million cash! We’re
@@ -58,15 +58,15 @@ going back to our roots to revive our first ever tourney, the partypoker MILLION
 unbelievable £6 million prizepool including at least £1 million for the winner!</p>',
                 'buy_in' => 5000,
                 'reg_fee' => 300,
-                'currency_token' => 'GBP',
+                /*'currency_token' => 'GBP',
                 'country' => 'UK',
                 'category_slug' => 'millions',
-                'category_name' => 'Millions'
+                'category_name' => 'Millions'*/
             ],
             4 => [
                 'title' => 'EAPT Kazakhstan',
-                'image_id' => 1,
-                'fund' => '1',
+                'image_id' => null,
+                'fund' => '1000000000',
                 'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
                 'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
                 'description' => '<p>There’s no limit to where partypoker LIVE events are held—wherever the players need us, we’ll be there! From 5th –
@@ -77,27 +77,27 @@ and gorgeous mountains. Take in the remarkable scenery, let loose at the nearby 
 seriously big prizepool!</p>',
                 'buy_in' => 2500,
                 'reg_fee' => 250,
-                'currency_token' => 'CAN',
+                /*'currency_token' => 'CAN',
                 'country' => 'Kazakhstan',
                 'category_slug' => 'EAPT',
-                'category_name' => 'eapt'
+                'category_name' => 'eapt'*/
             ],
         ];
 
         foreach ($events as $event){
             \App\Models\Event::create([
                 'title' => $event['title'],
-                'image_id' => $event['image_id'],
+                'image_id' => null,
                 'fund' => $event['fund'],
                 'date_start' => $event['date_start'],
                 'date_end' => $event['date_end'],
                 'description' => $event['description'],
                 'buy_in' => $event['buy_in'],
                 'reg_fee' => $event['reg_fee'],
-                'currency_token' => $event['currency_token'],
+                /*'currency_token' => $event['currency_token'],
                 'country' => $event['country'],
                 'category_slug' => $event['category_slug'],
-                'category_name' => $event['category_name']
+                'category_name' => $event['category_name']*/
             ]);
         }
 

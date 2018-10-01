@@ -3,11 +3,19 @@ let angular = require('angular');
 import {LoginController} from "./Controllers/LoginController";
 import {RegisterController} from "./Controllers/RegisterController";
 import {ProfileController} from "./Controllers/ProfileController";
-import {EventsController} from "./Controllers/EventsController";
-import {EventsListController} from "./Controllers/EventsListController";
+
+
 import {FilterBidsController} from "./Controllers/FilterBidsController";
 import {BidResponsesController} from "./Controllers/BidResponsesController";
 import {FilterBidResponsesController} from "./Controllers/FilterBidResponsesController";
+import {BidsController} from "./Controllers/BidsController";
+
+////////////////////////////////////////////////////////
+import {SaleController} from "./Controllers/SaleController"
+import {SaleFormController} from "./Controllers/SaleFormController"
+import {InvestController} from "./Controllers/InvestController";
+import {EventsListController} from "./Controllers/EventsListController";
+
 
 let module = angular.module('Controllers', []);
 
@@ -18,7 +26,14 @@ module.controller('EventsListController', EventsListController);
 module.controller('FilterBidsController', FilterBidsController);
 module.controller('BidResponsesController', BidResponsesController);
 module.controller('FilterBidResponsesController', FilterBidResponsesController);
-module.controller('EventsController', EventsController);
+
+module.controller('BidsController', BidsController);
+
+/////////////////////////////////////////////////////////////
+module.controller('SaleController', SaleController);
+module.controller('SaleFormController', SaleFormController);
+module.controller('InvestController', InvestController);
+module.controller('EventsListController', EventsListController);
 
 export default module.name;
 

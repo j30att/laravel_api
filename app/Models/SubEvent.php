@@ -6,16 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubEvent extends Model
 {
-    protected $fillable=[
+    protected $fillable =[
         'event_id',
-        'title',
         'image_id',
+        'title',
         'fund',
+        'buy_in',
         'date_start',
-        'date_end'
+        'date_end',
     ];
 
-    public function event(){
-        return $this->belongsTo(Event::class,'event_id');
+
+    public function flights(){
+        return $this->hasMany(Flight::class, 'sub_event_id');
     }
+
 }

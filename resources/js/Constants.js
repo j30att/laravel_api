@@ -1,7 +1,5 @@
-export const BIDS_MATCHED    = 1;
-export const BIDS_UNMATCHED  = 2;
-export const BIDS_SETTLED    = 3;
-export const BIDS_CANCELED   = 4;
+export const SALE_ACTIVE    = 1;
+export const SALE_CLOSED  = 2;
 
 export const BID_RESPONSE_MATCHED    = 1;
 export const BID_RESPONSE_UNMATCHED  = 2;
@@ -15,9 +13,14 @@ export const PROFILE_URL = '/login/userproftest';
 //**BIDS**//
 export const BIDS_INDEX = '/api/bids';
 
-//**BIDSRESPONSE**//
+
 export const BID_RESPONSE_INDEX = '/api/bidResponse';
 
-
 //**EVENTS**//
-export const BID_EVENTS_INDEX = '/api/events';
+export const EVENTS_INDEX = '/api/events';
+
+
+//**SALE**//
+
+export const SALE_INDEX = '/api/sale';
+export const SALE_CREATE = '/api/sale';

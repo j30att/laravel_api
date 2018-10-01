@@ -15,44 +15,50 @@ class SubEventsSeeder extends Seeder
             0 => [
                 'event_id' => '1',
                 'title' => 'saturday',
-                'fund' => '500000',
-                'date_start' => '2018-09-21 09:00:00',
-                'date_end' => '2018-10-22 09:00:00'
+                'fund' => 500000,
+                'buy_in' => 10000,
+                'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
+                'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
             ],
             1 => [
                 'event_id' => '1',
                 'title' => 'sunday',
-                'fund' => '500000',
-                'date_start' => '2018-11-23 09:00:00',
-                'date_end' => '2018-12-24 09:00:00'
+                'fund' => 500000,
+                'buy_in' => 10000,
+                'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
+                'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
             ],
             2 => [
                 'event_id' => '2',
                 'title' => 'monday',
-                'fund' => '50000',
-                'date_start' => '2019-01-21 09:00:00',
-                'date_end' => '2019-03-21 09:00:00'
+                'fund' => 500000,
+                'buy_in' => 10000,
+                'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
+                'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
             ],
             3 => [
                 'event_id' => '2',
                 'title' => 'tuesday',
-                'fund' => '60000',
-                'date_start' => '2019-01-21 09:00:00',
-                'date_end' => '2019-03-21 09:00:00'
+                'fund' => 500000,
+                'buy_in' => 10000,
+                'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
+                'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
             ],
             4 => [
                 'event_id' => '3',
                 'title' => 'wednesday',
-                'fund' => '70000',
-                'date_start' => '2019-01-21 09:00:00',
-                'date_end' => '2019-03-21 09:00:00'
+                'fund' => 500000,
+                'buy_in' => 10000,
+                'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
+                'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
             ],
             5 => [
                 'event_id' => '3',
                 'title' => 'mega turbo',
-                'fund' => '7000000',
-                'date_start' => '2019-01-21 09:00:00',
-                'date_end' => '2019-03-21 09:00:00'
+                'fund' => 500000,
+                'buy_in' => 10000,
+                'date_start' => new \DateTimeImmutable(sprintf('+%d days', 30)),
+                'date_end' => new \DateTimeImmutable(sprintf('+%d days', 35)),
             ],
 
         ];
@@ -60,8 +66,9 @@ class SubEventsSeeder extends Seeder
             \App\Models\SubEvent::create([
                 'event_id' => $subEvent['event_id'],
                 'title' => $subEvent['title'],
-
+                'image_id' => null,
                 'fund' => $subEvent['fund'],
+                'buy_in' => $subEvent['buy_in'],
                 'date_start' => $subEvent['date_start'],
                 'date_end' => $subEvent['date_end'],
             ]);

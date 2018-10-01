@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="sale_main-wr col-md-12">
+        <div class="logo_img">
+            LOGO
+            <img src="/" alt="">
+        </div>
+        <a ui-sref="sale-create">
+            <div class="creact_sale">
+                Create a Sale
+            </div>
+        </a>
+
+        <sales-carousel sales="SaleCtrl.sales" state="'row'" ng-if="SaleCtrl._opts.dataLoad == true"></sales-carousel>
+        <span ng-include="'tpl/view/footer.template.html'"></span>
+    </div>
+</div>

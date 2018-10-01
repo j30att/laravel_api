@@ -11,7 +11,6 @@ class BidResponsesController {
     constructor($window, $http) {
         this.$window = $window;
         this.$http = $http;
-        this.filter = BID_RESPONSE_MATCHED;
         this.bids = [];
         this.showList();
         this._opts = {dataLoad: false};
@@ -26,10 +25,8 @@ class BidResponsesController {
     showList() {
         this.$http.get(BID_RESPONSE_INDEX,
         ).then(response => {
-
             this.bids = response.data;
             this._opts.dataLoad = true;
-            console.log(this.bids, 'console.log(this.bids)');
         });
     }
 

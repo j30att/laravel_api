@@ -17,9 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });*/
 
-Route::group(['middleware' => 'auth'], function(){
+Route::group([/*'middleware' => 'auth'*/], function(){
     Route::apiResource('bids', 'Api\BidController');
-    Route::apiResource('bidResponse', 'Api\BidResponseController');
+    Route::apiResource('sale', 'Api\SaleController');
     Route::apiResource('events', 'Api\EventController');
+
+
 });
 

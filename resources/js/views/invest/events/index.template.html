@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="binds event-list-main-wr">
+        <div class="col-md-12">
+            <div class="logo_img">
+                LOGO
+                <img src="/" alt="">
+            </div>
+        </div>
+        <div class="all_events-wr">
+
+
+            <events class="events_list" ng-if="EvntsLstCtrl._opts.dataLoad"
+                    events="EvntsLstCtrl.events" state="'list'">
+            </events>
+
+        </div>
+    </div>
+    <span ng-include="'tpl/view/footer.template.html'"></span>
+
+</div>

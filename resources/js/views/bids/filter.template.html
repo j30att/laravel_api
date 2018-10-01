@@ -7,7 +7,11 @@
             </div>
             <div class="tabs-wr__title col-md-12">
 
-                <a ui-sref="bids-filter({filter: menuItem.name})" ng-repeat="menuItem in FltrBdsRspnsCtrl.menu" ng-bind="menuItem.name" style="text-transform:capitalize"></a>
+                <a ui-sref="bids-filter({filter: menuItem.name})"
+                   ng-repeat="menuItem in FltrBdsRspnsCtrl.menu"
+                   ng-bind="menuItem.name" style="text-transform:capitalize"
+                   ng-class="{'tabs_item__active':FltrBdsRspnsCtrl.$stateParams.filter === menuItem.name}"
+                ></a>
             </div>
             <div class="slider_container slider_container__full">
                 <div class="swipe-wr full_sc">

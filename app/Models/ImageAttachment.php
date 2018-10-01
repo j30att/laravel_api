@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ImageAttachment extends Model
 {
-
     const SALT = 'OQ80SVxUPTfazaVhszahiZx8TbwwfcjC8JB';
 
 
@@ -59,5 +58,4 @@ class ImageAttachment extends Model
     }
 
     public function getUrlAttribute () {return $this->getUrl();}
-
 }

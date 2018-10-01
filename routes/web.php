@@ -41,7 +41,7 @@ Route::group(['prefix' => 'events'], function() {
 
 Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
 
-
+/*
 Route::group(['prefix'=>'bids'], function (){
     Route::get('/', 'BidsController@index')->name('bids');
     Route::get('/filter', 'BidsController@filter')->name('bids-filter');
@@ -74,17 +74,17 @@ Route::group(['prefix'=>'sale'], function (){
     Route::get('/close', 'SaleController@closeSale')->name('sale-close');
 });
 
-
+*/
 /*
 
 Route::get('/bids/matched', function(){
     return view('mobile.bids.parts.matched');
 });
 */
-
+/*
 Route::get('/place-a-bit', function(){
     return view('mobile.bids.place_a_bit.index');
-})->name('place-a-bit');
+})->name('place-a-bit');*/
 
 
 
@@ -92,7 +92,7 @@ Route::get('/place-a-bit', function(){
 /*Route::get('/login', function(){
     return view('login.index');
 })->name('login');*/
-Route::get('/login/personal-information', function(){
+/*Route::get('/login/personal-information', function(){
     return view('login.personal-inf');
 });
 
@@ -141,4 +141,4 @@ Route::get('/event-filter', function(){
 
 
 
-
+*/

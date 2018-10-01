@@ -1,0 +1,19 @@
+<div class="row">
+
+    <div class="sale__title col-md-12">
+        Sales
+        <a ui-sref="sale"><div class="goback goback_sale"></div></a>
+    </div>
+    <div class="sales_tabs">
+        <a ui-sref="sale-filter({filter: menuItem.name})"
+           ng-repeat="menuItem in SaleCtrl.menu"
+           ng-bind="menuItem.name" style="text-transform:capitalize"
+           ng-class="{'tabs_item__active':SaleCtrl.$stateParams.filter === menuItem.name}"
+        ></a>
+    </div>
+
+    <sales sales="SaleCtrl.sales" state="'list'" ></sales>
+
+    <span ng-include="'tpl/view/footer.template.html'"></span>
+
+</div>
