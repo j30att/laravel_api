@@ -1,4 +1,4 @@
-import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX} from "../Constants"
+import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../Constants"
 
 
 class InvestController {
@@ -10,7 +10,11 @@ class InvestController {
         this.filter=SALE_CLOSED;
         this.showList();
         this.getSales();
+    }
 
+    setFilter(param){
+        if (param == 'closed') {this.filter=SALE_CLOSED; this.getSales()}
+        if (param == 'markup') {this.filter=SALE_MARKUP; this.getSales()}
     }
 
     showList() {
@@ -22,12 +26,13 @@ class InvestController {
         });
     }
 
+
     getSales(){
         this.$http.get(SALE_INDEX, {params: {status: this.filter}})
         .then(response => {
             this.sales = response.data.data;
             this._opts.dataLoad = true;
-            console.log(this.events, 'console.log(this.events)');
+            return true;
         });
 
     }

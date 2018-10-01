@@ -22,8 +22,8 @@
             </div>
             <div class="tabs-wr__players">
                 <div class="tabs_players">
-                    <div class="tabs_players__closing tabs_item__active">Closing</div>
-                    <div class="tabs_players__lower">Lowest markup</div>
+                    <div class="tabs_players__closing" ng-class="{'tabs_item__active': InvstCtrl.filter == 2}" ng-click="InvstCtrl.setFilter('closed')">Closing</div>
+                    <div class="tabs_players__lower" ng-class="{'tabs_item__active': InvstCtrl.filter == 3}" ng-click="InvstCtrl.setFilter('markup')" >Lowest markup</div>
                 </div>
             </div>
             <div class="swipe-wr full_sc events_player">

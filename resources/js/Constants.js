@@ -1,5 +1,6 @@
 export const SALE_ACTIVE    = 1;
-export const SALE_CLOSED  = 2;
+export const SALE_CLOSED    = 2;
+export const SALE_MARKUP    = 3;
 
 export const BID_RESPONSE_MATCHED    = 1;
 export const BID_RESPONSE_UNMATCHED  = 2;

@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sale extends Model
 {
-    const SALE_ACTIVE    = 1;
+    const SALE_ACTIVE  = 1;
     const SALE_CLOSED  = 2;
+    const SALE_MARKUP  = 3;
 
     protected $fillable=[
         'user_id',

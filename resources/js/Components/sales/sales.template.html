@@ -34,7 +34,8 @@
     </div>
 </div>
 
-<div class="as__item-wr active_sale" ng-if="$ctrl.state === 'row'"
+
+<div class="as__item-wr active_sale" ng-click="$ctrl.click()" ng-if="$ctrl.state === 'row'"
      ng-repeat="item in $ctrl.sales">
     <div class="as__item__text">
         <div class="as__item__title">MILLIONS Russia, 1A</div>
@@ -47,7 +48,7 @@
         </div>
         <div class="tags_markup">
             <span>Markup</span><br>
-            1.20
+            <span ng-bind="item.markup"></span>
         </div>
         <div class="tags_share">
             <span>Share sold</span><br>
@@ -79,8 +80,8 @@
             </div>
 
         </div>
-        <div class="loop_counter">
-            Second loop
+        <div class="loop_counter" ng-bind="item.subevent.title">
+
         </div>
         <div class="binds-item__game_info">
             <div class="geme__text">
@@ -93,16 +94,16 @@
             </div>
             <div class="game_atrs">
                 <div class="game_atrs__markup">
-                    <span>Markup</span>
-                    1.20
+                    <span>Markup</span><br>
+                    <span ng-bind="item.markup"></span>
                 </div>
                 <div class="game_atrs__value">
-                    <span>Value</span>
-                    £2,404.08
+                    <span>Value</span><br>
+                    £<span ng-bind="item.amount"></span>
                 </div>
                 <div class="game_atrs__date_start">
                     <span>Date of Start</span><br>
-                    1 Sep
+                    <span ng-bind="item.subevent.date_start"></span>
                 </div>
             </div>
         </div>

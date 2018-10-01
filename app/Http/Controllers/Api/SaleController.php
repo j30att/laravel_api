@@ -19,11 +19,13 @@ class SaleController extends Controller
     {
         $user = Auth::user();
         $filter = $request->all();
+        $sale = null;
 
-        $filter += ['user_id'=>$user->id];
+
 
         if ($user != null){
-            if ($filter == null){
+            if (empty($filter)){
+
                 $saleActive     = Sale::query()->where(['status'=> Sale::SALE_ACTIVE, 'user_id'=>$user->id])->get();
                 $saleCanceled   = Sale::query()->where(['status'=> Sale::SALE_CLOSED, 'user_id'=>$user->id])->get();
 
@@ -34,11 +36,24 @@ class SaleController extends Controller
                     ]
                 ]);
             } else {
-                $sale = Sale::query()
-                    ->where($filter)
-                    ->with('creator')
-                    ->with('subevent')
-                    ->get();
+
+                $filter += ['user_id'=>$user->id];
+                if ($filter['status'] == Sale::SALE_MARKUP){
+                    $filter['status'] = Sale::SALE_ACTIVE;
+                    $sale = Sale::query()
+                        ->where($filter)
+                        ->with('creator')
+                        ->with('subevent')
+                        ->orderBy('markup')
+                        ->get();
+                } else {
+                    $sale = Sale::query()
+                        ->where($filter)
+                        ->with('creator')
+                        ->with('subevent')
+                        ->get();
+                }
+
                 return SaleResource::collection($sale);
             }
 

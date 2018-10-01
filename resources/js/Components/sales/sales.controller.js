@@ -8,6 +8,9 @@ class Sales {
 
     }
 
+    click(){
+        console.log(this.sales);
+    }
 
 }
 
