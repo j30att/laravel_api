@@ -1,27 +1,38 @@
 import {EVENTS_INDEX} from "../Constants";
 
 class EventController {
-    constructor($window, $http){
+    constructor($window, $http, $stateParams){
         this.$window = $window;
         this.$http = $http;
-        this.opened = [] ;
+        this.$stateParams = $stateParams;
         this._opts = {dataLoad: false};
         this.showList();
         console.log('event controller')
     }
 
-    showList() {
-        /*this.$http.get(EVENTS_INDEX,
-        ).then(response => {
 
-            this.events = response.data.data;
+
+    showList() {
+        this.$http.get(EVENTS_INDEX+'/'+this.$stateParams.id,
+        ).then(response => {
+            this.event = response.data.data;
+            this.opened = (this.event.subevents[0].id);
+
             this._opts.dataLoad = true;
-            console.log(this.events, 'console.log(this.events)');
-        });*/
+        });
+    }
+
+    clickTab(id){
+        this.opened = id;
+    }
+
+    showTab(id){
+        if (this.opened === id) return true
+        return false;
     }
 
 };
 
-EventController.$inject = ['$window', '$http'];
+EventController.$inject = ['$window', '$http', '$stateParams'];
 
 export {EventController};

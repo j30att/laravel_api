@@ -46840,12 +46840,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 var EventController = function () {
-    function EventController($window, $http) {
+    function EventController($window, $http, $stateParams) {
         _classCallCheck(this, EventController);
 
         this.$window = $window;
         this.$http = $http;
-        this.opened = [];
+        this.$stateParams = $stateParams;
         this._opts = { dataLoad: false };
         this.showList();
         console.log('event controller');
@@ -46854,12 +46854,25 @@ var EventController = function () {
     _createClass(EventController, [{
         key: 'showList',
         value: function showList() {
-            /*this.$http.get(EVENTS_INDEX,
-            ).then(response => {
-                 this.events = response.data.data;
-                this._opts.dataLoad = true;
-                console.log(this.events, 'console.log(this.events)');
-            });*/
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+                _this.event = response.data.data;
+                _this.opened = _this.event.subevents[0].id;
+
+                _this._opts.dataLoad = true;
+            });
+        }
+    }, {
+        key: 'clickTab',
+        value: function clickTab(id) {
+            this.opened = id;
+        }
+    }, {
+        key: 'showTab',
+        value: function showTab(id) {
+            if (this.opened === id) return true;
+            return false;
         }
     }]);
 
@@ -46868,7 +46881,7 @@ var EventController = function () {
 
 ;
 
-EventController.$inject = ['$window', '$http'];
+EventController.$inject = ['$window', '$http', '$stateParams'];
 
 
 
@@ -46986,13 +46999,13 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         controller: 'InvestController',
         controllerAs: 'InvstCtrl'
     }).state('events', {
-        url: '/invest/events',
-        template: __webpack_require__(89),
+        url: '/events',
+        template: __webpack_require__(151),
         controller: 'EventsListController',
         controllerAs: 'EvntsLstCtrl'
     }).state('event', {
-        url: 'event/{id}',
-        template: __webpack_require__(90),
+        url: '/event/{id}',
+        template: __webpack_require__(152),
         controller: 'EventController',
         controllerAs: 'EventCtrl'
     }).state('bids', {
@@ -47077,18 +47090,8 @@ module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-
 module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a ui-sref=\"events\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"InvstCtrl._opts.dataLoad\"\n                              events=\"InvstCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <div class=\"see_all\">See All</div>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 2}\" ng-click=\"InvstCtrl.setFilter('closed')\">Closing</div>\n                    <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 3}\" ng-click=\"InvstCtrl.setFilter('markup')\" >Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n                <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\n            </div>\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
-/* 89 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"binds event-list-main-wr\">\n        <div class=\"col-md-12\">\n            <div class=\"logo_img\">\n                LOGO\n                <img src=\"/\" alt=\"\">\n            </div>\n        </div>\n        <div class=\"all_events-wr\">\n\n\n            <events class=\"events_list\" ng-if=\"EvntsLstCtrl._opts.dataLoad\"\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\n            </events>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports) {
-
-module.exports = "\nхуй\n<!--\n\n\n<div class=\"row\">\n    <div class=\"single__header\">\n        <div class=\"single__title\">Millions Russia</div>\n        <div class=\"single__date\">3 - 14 Aug, 2018</div>\n        <a href=\"{{route('all-events')}}\">\n            <div class=\"goback\"></div>\n        </a>\n    </div>\n    <div class=\"subevents_all-wr col-md-12\">\n        <div class=\"subevents_all\">\n            <div class=\"main_event subevent_item\">Main event</div>\n            @foreach($subevents as $subevent)\n            <div class=\"subevent_item\">{{$subevent->title}}</div>\n            @endforeach\n        </div>\n    </div>\n    <div class=\"main_event_info\">\n        <div class=\"fund_info\">\n            Buy in £1,000,000 • £500,000 GTE\n        </div>\n        <div class=\"date_info\">\n            3 - 14 Aug, 2018\n        </div>\n        <div class=\"location_info\">\n            Casino Sochi, Sochi, Russia\n        </div>\n\n    </div>\n    <div class=\"single_page_players\">\n        <div class=\"single_page_players_item\">\n\n            <div class=\"binds-item-wr\">\n                <div class=\"binds-item__profile_info\">\n                    <div class=\"profile__photo\">\n                        <img src=\"/images/pl_2.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_text\">\n                        <div class=\"profile__name\">\n                            Louise Romero\n                        </div>\n                        <div class=\"profile__country\">\n                            MILLIONS Russia, 1A\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div class=\"binds-item__game_info\">\n                    <div class=\"geme__text\">\n                        <div class=\"by_in\">\n                            Buy in £ <span>1,000,000</span>\n                        </div>\n                        <div class=\"gte\">\n                            £ <span>1,000,000</span> GTE\n                        </div>\n                    </div>\n                    <div class=\"game_atrs\">\n                        <div class=\"game_atrs__markup\">\n                            <span>Markup</span><br>\n                            1.20\n                        </div>\n                        <div class=\"game_atrs__value\">\n                            <span>Share</span><br>\n                            20%\n                        </div>\n                        <div class=\"game_atrs__date_start\">\n                            <span>Time</span><br>\n                            < 18 days\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"binds-item-wr\">\n                <div class=\"binds-item__profile_info\">\n                    <div class=\"profile__photo\">\n                        <img src=\"/images/pl_3.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_text\">\n                        <div class=\"profile__name\">\n                            Adam McGee\n                        </div>\n                        <div class=\"profile__country\">\n                            MILLIONS Russia, 1A\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div class=\"binds-item__game_info\">\n                    <div class=\"geme__text\">\n                        <div class=\"by_in\">\n                            Buy in £ <span>1,000,000</span>\n                        </div>\n                        <div class=\"gte\">\n                            £ <span>1,000,000</span> GTE\n                        </div>\n                    </div>\n                    <div class=\"game_atrs\">\n                        <div class=\"game_atrs__markup\">\n                            <span>Markup</span><br>\n                            1.20\n                        </div>\n                        <div class=\"game_atrs__value\">\n                            <span>Share</span><br>\n                            20%\n                        </div>\n                        <div class=\"game_atrs__date_start\">\n                            <span>Time</span><br>\n                            < 18 days\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"binds-item-wr\">\n                <div class=\"binds-item__profile_info\">\n                    <div class=\"profile__photo\">\n                        <img src=\"/images/pl_4.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_text\">\n                        <div class=\"profile__name\">\n                            Louise Romero\n                        </div>\n                        <div class=\"profile__country\">\n                            Hyper-Turbo Deep Stack\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div class=\"binds-item__game_info\">\n                    <div class=\"geme__text\">\n                        <div class=\"by_in\">\n                            Buy in £ <span>1,000,000</span>\n                        </div>\n                        <div class=\"gte\">\n                            £ <span>1,000,000</span> GTE\n                        </div>\n                    </div>\n                    <div class=\"game_atrs\">\n                        <div class=\"game_atrs__markup\">\n                            <span>Markup</span><br>\n                            1.20\n                        </div>\n                        <div class=\"game_atrs__value\">\n                            <span>Share</span><br>\n                            20%\n                        </div>\n                        <div class=\"game_atrs__date_start\">\n                            <span>Time</span><br>\n                            < 18 days\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"binds-item-wr\">\n                <div class=\"binds-item__profile_info\">\n                    <div class=\"profile__photo\">\n                        <img src=\"/images/pl_2.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_text\">\n                        <div class=\"profile__name\">\n                            Louise Romero\n                        </div>\n                        <div class=\"profile__country\">\n                            MILLIONS Russia, 1A\n                        </div>\n\n                    </div>\n\n                </div>\n\n                <div class=\"binds-item__game_info\">\n                    <div class=\"geme__text\">\n                        <div class=\"by_in\">\n                            Buy in £ <span>1,000,000</span>\n                        </div>\n                        <div class=\"gte\">\n                            £ <span>1,000,000</span> GTE\n                        </div>\n                    </div>\n                    <div class=\"game_atrs\">\n                        <div class=\"game_atrs__markup\">\n                            <span>Markup</span><br>\n                            1.20\n                        </div>\n                        <div class=\"game_atrs__value\">\n                            <span>Share</span><br>\n                            20%\n                        </div>\n                        <div class=\"game_atrs__date_start\">\n                            <span>Time</span><br>\n                            < 18 days\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n\n        </div>\n    </div>\n\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n</div>\n\n</div>\n-->\n";
-
-/***/ }),
+/* 89 */,
+/* 90 */,
 /* 91 */
 /***/ (function(module, exports) {
 
@@ -60177,6 +60180,23 @@ angular.module('ui.bootstrap.typeahead').run(function() {!angular.$$csp().noInli
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */,
+/* 150 */,
+/* 151 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"binds event-list-main-wr\">\n        <div class=\"col-md-12\">\n            <div class=\"logo_img\">\n                LOGO\n                <img src=\"/\" alt=\"\">\n            </div>\n        </div>\n        <div class=\"all_events-wr\">\n\n\n            <events class=\"events_list\" ng-if=\"EvntsLstCtrl._opts.dataLoad\"\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\n            </events>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
+
+/***/ }),
+/* 152 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"single__header\">\n        <div class=\"single__title\" ng-bind=\"EventCtrl.event.title\"></div>\n        <div class=\"single__date\" ng-bind=\"EventCtrl.event.date\"></div>\n        <a ui-sref=\"invest\">\n            <div class=\"goback\"></div>\n        </a>\n    </div>\n    <div class=\"subevents_all-wr col-md-12\">\n        <div class=\"subevents_all\">\n\n            <div ng-repeat=\"item in EventCtrl.event.subevents\" >\n                <div class=\"main_event subevent_item\"\n                     ng-bind=\"item.title\" ng-click=\"EventCtrl.clickTab(item.id)\">\n                </div>\n                <div ng-if=\"EventCtrl.showTab(item.id)\" >\n\n                    <div class=\"main_event_info\">\n                        <div class=\"fund_info\">\n                            Buy in £1,000,000 • £500,000 GTE\n                        </div>\n                        <div class=\"date_info\" ng-bind=\"EventCtrl.event.date\">\n                        </div>\n                        <div class=\"location_info\">\n                            Casino Sochi, Sochi, Russia\n                        </div>\n                    </div>\n                    <sales sales=\"item.sales\" state=\"'invest'\"></sales>\n                </div>\n            </div>\n\n        </div>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
 
 /***/ })
 /******/ ]);

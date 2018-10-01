@@ -21,4 +21,7 @@ class SubEvent extends Model
         return $this->hasMany(Flight::class, 'sub_event_id');
     }
 
+    public function sales(){
+        return $this->hasMany(Sale::class, 'sub_event_id');
+    }
 }

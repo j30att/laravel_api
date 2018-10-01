@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="single__header">
+        <div class="single__title" ng-bind="EventCtrl.event.title"></div>
+        <div class="single__date" ng-bind="EventCtrl.event.date"></div>
+        <a ui-sref="invest">
+            <div class="goback"></div>
+        </a>
+    </div>
+    <div class="subevents_all-wr col-md-12">
+        <div class="subevents_all">
+
+            <div ng-repeat="item in EventCtrl.event.subevents" >
+                <div class="main_event subevent_item"
+                     ng-bind="item.title" ng-click="EventCtrl.clickTab(item.id)">
+                </div>
+                <div ng-if="EventCtrl.showTab(item.id)" >
+
+                    <div class="main_event_info">
+                        <div class="fund_info">
+                            Buy in £1,000,000 • £500,000 GTE
+                        </div>
+                        <div class="date_info" ng-bind="EventCtrl.event.date">
+                        </div>
+                        <div class="location_info">
+                            Casino Sochi, Sochi, Russia
+                        </div>
+                    </div>
+                    <sales sales="item.sales" state="'invest'"></sales>
+                </div>
+            </div>
+
+        </div>
+        <span ng-include="'tpl/view/footer.template.html'"></span>
+    </div>
+</div>

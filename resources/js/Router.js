@@ -73,15 +73,15 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controller: 'InvestController',
             controllerAs: 'InvstCtrl',
         })
-            .state('events', {
-                url: '/invest/events',
-                template: require('./views/invest/events/index.template.html'),
-                controller: 'EventsListController',
-                controllerAs: 'EvntsLstCtrl',
-            })
+        .state('events', {
+            url: '/events',
+            template: require('./views/events/index.template.html'),
+            controller: 'EventsListController',
+            controllerAs: 'EvntsLstCtrl',
+        })
             .state('event',{
-                url: 'event/{id}',
-                template: require('./views/invest/events/single.template.html'),
+                url: '/event/{id}',
+                template: require('./views/events/single.template.html'),
                 controller: 'EventController',
                 controllerAs: 'EventCtrl',
             })

@@ -51,7 +51,9 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        
+        $event = Event::query()->where('id', $id)
+            ->with('subEvents.sales.creator')->first();
+        return new EventResource($event);
     }
 
     /**
