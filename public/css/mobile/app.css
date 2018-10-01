@@ -10473,6 +10473,12 @@ a.text-dark:focus {
   }
 }
 
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10494,6 +10500,18 @@ a {
 
 a:visited {
   color: black;
+}
+
+.button {
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  text-align: center;
+  border-radius: 10pt;
+  background-color: #007fed;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 menu.main {
@@ -10795,6 +10813,10 @@ main button {
   margin-bottom: 10pt;
 }
 
+.tabs-wr__title .see_all a {
+  color: #007fed;
+}
+
 .see_all {
   cursor: pointer;
   color: #007fed;
@@ -11070,14 +11092,22 @@ a .login_in,
   cursor: pointer;
 }
 
+.contine_without_wr {
+  width: 100%;
+  text-align: center;
+}
+
 a.contine_without {
-  margin-left: 25px;
   color: #fff;
   width: 100%;
   text-align: center;
   font-size: 16pt;
   font-weight: 700;
   cursor: pointer;
+}
+
+.contine_without_wr > a:visited {
+  color: #949494;
 }
 
 @media screen and (max-width: 320px) {
@@ -11152,6 +11182,7 @@ a.contine_without {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 20pt;
+  margin-top: 20pt;
 }
 
 /*account*/
@@ -11258,6 +11289,14 @@ a.contine_without {
   top: 0;
   left: -46px;
   background-color: #949494;
+}
+
+.check-box__email input:checked + label::after {
+  content: "\2714";
+  text-align: center;
+  color: #fff;
+  line-height: 24pt;
+  font-size: 20px;
 }
 
 input:checked + label::after {
