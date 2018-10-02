@@ -14,6 +14,16 @@ class SaleResource extends JsonResource
      */
     public function toArray($request)
     {
+
+        return [
+            'id'        => $this->id,
+            'title'     => $this->title,
+            'status'    => $this->status,
+            'markup'    => $this->markup,
+            'share'     => $this->share,
+            'amount'    => $this->amount,
+            'subevent' => new SubEventResource($this->subevent),
+        ];
         return parent::toArray($request);
     }
 }

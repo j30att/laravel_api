@@ -103,10 +103,10 @@
         <div class="binds-item__game_info">
             <div class="geme__text">
                 <div class="by_in">
-                    Buy in £ <span>1,000,000</span>
+                    Buy in £ <span ng-bind="item.subevent.buy_in"></span>
                 </div>
                 <div class="gte">
-                    £ <span>1,000,000</span> GTE
+                    £ <span ng-bind="item.subevent.fund"></span> GTE
                 </div>
             </div>
             <div class="game_atrs">
@@ -120,7 +120,8 @@
                 </div>
                 <div class="game_atrs__date_start">
                     <span>Date of Start</span><br>
-                    <span ng-bind="item.subevent.date_start"></span>
+
+                    <span ng-bind="item.subevent.date"></span>
                 </div>
             </div>
         </div>

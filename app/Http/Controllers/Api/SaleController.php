@@ -45,6 +45,7 @@ class SaleController extends Controller
                         ->where($filter)
                         ->with('creator')
                         ->with('subevent')
+                        ->with('event')
                         ->orderBy('markup')
                         ->get();
                 } else {
@@ -52,6 +53,7 @@ class SaleController extends Controller
                         ->where($filter)
                         ->with('creator')
                         ->with('subevent')
+                        ->with('event')
                         ->get();
                 }
 
@@ -59,7 +61,14 @@ class SaleController extends Controller
             }
 
         } else {
-            return abort(403);
+            $sale = Sale::query()
+                ->where($filter)
+                ->with('creator')
+                ->with('subevent')
+                ->with('event')
+                ->orderBy('markup')
+                ->get();
+            return SaleResource::collection($sale);
         }
 
     }

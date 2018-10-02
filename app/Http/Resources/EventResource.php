@@ -16,9 +16,10 @@ class EventResource extends JsonResource
     {
 
         return [
-            'id'=> $this->resource->id,
-            'title' => $this->resource->title,
-            'date'=> $this->formatted_date,
+            'id'        => $this->resource->id,
+            'title'     => str_limit($this->resource->title, 20),
+            'date'      => $this->formatted_date,
+            'fund'      => $this->fund,
             'subevents' => $this->resource->subEvents,
             ];
         return parent::toArray($request);

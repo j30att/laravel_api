@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class SubEvent extends Model
@@ -24,4 +25,15 @@ class SubEvent extends Model
     public function sales(){
         return $this->hasMany(Sale::class, 'sub_event_id');
     }
+
+    public function getFormattedDateAttribute(){
+        $start_date = Carbon::parse($this->date_start);
+
+        $start_day = $start_date->day;
+        $start_monty =$start_date->englishMonth;
+
+
+        return $start_day . '  ' . $start_monty;
+    }
 }
+

@@ -12,7 +12,7 @@
             </a>
             <div class="event-item__summa">£ {%item.fund%} GTD</div>
 
-            <div class="event-item__date" ng-bind="item.formated_data"></div>
+            <div class="event-item__date" ng-bind="item.date"></div>
         </div>
 
     </div>
@@ -21,7 +21,7 @@
 
 <div class="event_item_rpt" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
 
-    <div class="selected_event" ng-if="$ctrl.showDetail(item.id)">
+    <div class="selected_event">
         <img src="/images/select_event_bg.png" alt="">
     </div>
     <div class="selected_event_info event_item col-md-12">
@@ -30,13 +30,21 @@
 
 
             <div class="event-item__title" ng-bind="item.title"></div>
+            <a ui-sref="evet({id:item.id})">See info</a>
             <div class="event-item__summa">£ {%item.fund%} GTD</div>
-            <div class="event-item__date" ng-bind="item.formated_data"></div>
+            <div class="event-item__date" ng-bind="item.date"></div>
         </div>
         <a href="">
             <div class="see_more"></div>
         </a>
+        <div ng-if="$ctrl.showDetail(item.id)">Event list</div>
+        <div ng-if="$ctrl.showDetail(item.id)" ng-repeat="subevent in item.subevents">
 
+            <div ng-bind="subevent.title"></div>
+            <div class="event-item__summa">£ {%item.fund%} GTD</div> . <div class="event-item__summa">£ {%subevent.fund%} GTD</div>
+            <div ng-bind="item.date"></div>
+        </div>
     </div>
+
 
 </div>
