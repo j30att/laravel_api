@@ -1,16 +1,109 @@
-<div class="row">
-    <div class="sale_main-wr col-md-12">
-        <div class="logo_img">
-            LOGO
-            <img src="/" alt="">
-        </div>
-        <a ui-sref="sale-create">
-            <div class="creact_sale">
-                Create a Sale
-            </div>
-        </a>
+<div class="deskwr">
+    <div ng-include="'tpl/view/footer.template.html'"></div>
+    <div class="main_content">
+        <div class="full_sc-wr">
+            <div class="right_side_content-wr">
+                <div class="right_side_content">
+                    <div class="right_side_content__title">
+                        My sale
+                        <div class="right_side_content__close"></div>
+                    </div>
+                    <div class="profile_status">
+                        <div>
+                            <div>
+                                <div class="profile_status__event">MILLIONS Russia, 1A</div>
+                                <span class="buyin_span">Buy in $3,234 + $2,004</span>
+                            </div>
+                            <div class="gte_and_by">
+                                <div class="profile_status__buyin">£1,000</div>
+                                <div class="profile_status__gte">£500,000 GTE</div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="profile_status__markup"><span>Closes in</span><br>73 days</div>
+                            <div class="profile_status__share"><span>Share sold</span><br>5%</div>
+                            <div class="profile_status__value"><span>Amount raised</span><br>$1,938</div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="profile_status__markup"><span>Markup</span><br>1.20</div>
+                            <div class="profile_status__share"><span>Share</span><br>30%</div>
+                            <div class="profile_status__value"><span>Value</span><br>1.20</div>
+                        </div>
+                    </div>
+                    <div class="unmatched_bids bids_status">
+                        <span>UNMATCHED BIDS</span>
+                        <div>
+                            <input type="text" placeholder="1.20">
+                            <input type="text" placeholder="1.53%">
+                            <input type="text" placeholder="$1,182.22">
+                            <div class="confirm_bids"></div>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.09">
+                            <input type="text" placeholder="0.38%">
+                            <input type="text" placeholder="$443">
+                            <div class="confirm_bids"></div>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.20">
+                            <input type="text" placeholder="1.53%">
+                            <input type="text" placeholder="$1,182.22">
+                            <div class="confirm_bids"></div>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.09">
+                            <input type="text" placeholder="0.38%">
+                            <input type="text" placeholder="$443">
+                            <div class="confirm_bids"></div>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.20">
+                            <input type="text" placeholder="1.53%">
+                            <input type="text" placeholder="$1,182.22">
+                            <div class="confirm_bids"></div>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.09">
+                            <input type="text" placeholder="0.38%">
+                            <input type="text" placeholder="$443">
+                            <div class="confirm_bids confirm_bids_accept"></div>
+                        </div>
 
-        <sales-carousel sales="SaleCtrl.sales" state="'row'" ng-if="SaleCtrl._opts.dataLoad == true"></sales-carousel>
-        <span ng-include="'tpl/view/footer.template.html'"></span>
+                    </div>
+                    <div class="right_side_content__footer">
+                        <div class="right_side_content__footer_btn">
+                            <div class="cansel_sale">Cancel sale</div>
+                            <div class="pay_remaining">Pay remaining $3,245</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accept-wr">
+                <div class="log_out_profile change_share">
+                    <div class="log_out_text">
+                        Change share
+                        <span>This changes will hold $3,234 in your account. Continue?</span>
+                    </div>
+                    <div class="log_out_btn">
+                        <div class="log_out_cancel">Cancel</div>
+                        <div class="log_out_ok">Accept</div>
+                    </div>
+                </div>
+                <div class="log_out_profile accept_bid">
+                    <div class="log_out_text">
+                        <div class="accept_changed_input">
+                            <input type="text" placeholder="1.20">
+                            <input type="text" placeholder="1.53%">
+                            <input type="text" placeholder="$1,182.22">
+                        </div>
+                        <span>Accept bid. Your markup will be decreased to 1.1 to accept all bids</span>
+                    </div>
+                    <div class="log_out_btn">
+                        <div class="log_out_cancel">Cancel</div>
+                        <div class="log_out_ok">Accept</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
