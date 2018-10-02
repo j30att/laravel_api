@@ -78,6 +78,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
           /*  controller: 'SaleController',
             controllerAs: 'SaleCtrl',*/
         })
+        .state('bids',{
+            url: '/bids',
+            template: require('./views/bids/index.template.html')
+        })
 
         /*.state('invest', {
             url: '/invest',

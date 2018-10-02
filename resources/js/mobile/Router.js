@@ -112,6 +112,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controller: 'SaleFormController',
                 controllerAs: 'SaleFrmCtrl',
             })
+            .state('sale-manage',{
+                url:'/sale/manage',
+                template: require('./views/sale/manage.template.html')
+            })
             .state('sale-filter', {
                 url: '/sales/{filter}',
                 template: require('./views/sale/filter.template.html'),
@@ -124,6 +128,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controller: 'SaleFormController',
                 controllerAs: 'SaleFrmCtrl',
             })
+
         .state('wallet', {
             url: '/wallet',
             template: require('./views/wallet/index.template.html'),
