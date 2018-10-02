@@ -8,29 +8,29 @@
     </div>
     <div class="subevents_all-wr col-md-12">
         <div class="subevents_all">
+           <div class="event_detail">
+               <div class="d-flex">
+                   <div ng-repeat="item in EventCtrl.event.subevents">
+                       <div class="main_event subevent_item"
+                            ng-bind="item.title" ng-click="EventCtrl.getSale(item.id)">
+                       </div>
+                   </div>
+               </div>
 
-            <div ng-repeat="item in EventCtrl.event.subevents">
-                <div class="main_event subevent_item"
-                     ng-bind="item.title" ng-click="EventCtrl.getSale(item.id)">
-                </div>
-            </div>
-
-            <div>
-                <div>
-
-                    <div class="main_event_info">
-                        <div class="fund_info">
-                            Buy in £1,000,000 • £500,000 GTE
-                        </div>
-                        <div class="date_info" ng-bind="EventCtrl.event.date">
-                        </div>
-                        <div class="location_info">
-                            Casino Sochi, Sochi, Russia
-                        </div>
-                    </div>
-                    <sales sales="EventCtrl.sales" state="'invest'"></sales>
-                </div>
-            </div>
+               <div>
+                   <div class="main_event_info">
+                       <div class="fund_info">
+                           Buy in £1,000,000 • £500,000 GTE
+                       </div>
+                       <div class="date_info" ng-bind="EventCtrl.event.date">
+                       </div>
+                       <div class="location_info">
+                           Casino Sochi, Sochi, Russia
+                       </div>
+                   </div>
+                   <sales sales="EventCtrl.sales" state="'invest'"></sales>
+               </div>
+           </div>
 
         </div>
         <span ng-include="'tpl/view/footer.template.html'"></span>

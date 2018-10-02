@@ -12065,3 +12065,22 @@ input:checked + label::after {
   width: 100%;
 }
 
+.subevents_all {
+  width: 100%;
+}
+
+.event_detail {
+  width: 100%;
+}
+
+.event_detail sales .binds-item {
+  margin-right: 0;
+  width: 100%;
+  margin-right: 0;
+  background-color: inherit;
+}
+
+.event_detail sales .binds-item:last-child {
+  margin-bottom: 100px;
+}
+
