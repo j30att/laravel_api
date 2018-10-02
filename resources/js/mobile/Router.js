@@ -124,6 +124,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controller: 'SaleFormController',
                 controllerAs: 'SaleFrmCtrl',
             })
+        .state('wallet', {
+            url: '/wallet',
+            template: require('./views/wallet/index.template.html'),
+        })
 
     ;
 
