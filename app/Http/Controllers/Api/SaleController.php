@@ -22,7 +22,13 @@ class SaleController extends Controller
         $filter = $request->all();
         $sale = null;
 
-
+        if ($filter['sub_event_id']){
+            $sale = Sale::query()
+                ->where($filter)
+                ->with('creator')
+                ->get();
+            return SaleResource::collection($sale);
+        }
 
         if ($user != null){
             if (empty($filter)){

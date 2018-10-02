@@ -10,7 +10,7 @@ import hack from './Hack';
 let ngRouter = require('angular-ui-router').default;
 
 let app = angular.module('poker', [
-    bootstrap,
+
     ngRouter,
     Controllers,
     Components,

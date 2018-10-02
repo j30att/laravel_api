@@ -66,8 +66,14 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controller: 'RegisterController',
                 controllerAs: 'RgCtrl'
             })
+        .state('events', {
+            url: '/events',
+            template: require('./views/events/index.template.html'),
+            /*controller: 'EventsListController',
+            controllerAs: 'EvntsLstCtrl',*/
+        })
 
-        .state('invest', {
+        /*.state('invest', {
             url: '/invest',
             template: require('./views/invest/index.template.html'),
             controller: 'InvestController',
@@ -124,7 +130,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controller: 'SaleFormController',
                 controllerAs: 'SaleFrmCtrl',
             })
-
+*/
     ;
 
 

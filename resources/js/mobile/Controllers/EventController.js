@@ -1,4 +1,4 @@
-import {EVENTS_INDEX} from "../Constants";
+import {EVENTS_INDEX, SALE_INDEX} from "../Constants";
 
 class EventController {
     constructor($window, $http, $stateParams){
@@ -16,6 +16,15 @@ class EventController {
         this.$http.get(EVENTS_INDEX+'/'+this.$stateParams.id,
         ).then(response => {
             this.event = response.data.data;
+            this.opened = (this.event.subevents[0].id);
+            this._opts.dataLoad = true;
+        });
+    }
+
+    getSale(id){
+        this.$http.get(SALE_INDEX, {params: {sub_event_id: id}})
+        .then(response => {
+            this.sales = response.data.data;
             this.opened = (this.event.subevents[0].id);
 
             this._opts.dataLoad = true;
