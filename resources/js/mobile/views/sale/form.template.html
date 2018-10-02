@@ -25,14 +25,16 @@
 
 
             <label>Flight</label>
-<!--
-            <select name="flight" ng-if="SaleFrmCtrl.event === null">
+
+            <select name="flight" ng-if="SaleFrmCtrl.sale.event_id == null">
                 <option selected>Choose an flight
                 </option>
-            </select>-->
+            </select>
 
 
             <select ng-model="SaleFrmCtrl.sale.sub_event_id"
+                    ng-if="SaleFrmCtrl.sale.event_id != null"
+
                     ng-change="SaleFrmCtrl.fillSale()">
                 <option ng-repeat="item in SaleFrmCtrl.subevents"
                         ng-bind="item.title"
@@ -40,16 +42,6 @@
 
                 </option>
             </select>
-
-<!--
-
-            <select name="flight"
-
-                    ng-model="SaleFrmCtrl.sale.sub_event_id"
-                    ng-change="SaleFrmCtrl.fillSale()">
-
-            </select>
--->
 
             <label>Buy-in</label>
             <input type="text" ng-model="SaleFrmCtrl.buy_in" placeholder="Will be display after selection of flight">

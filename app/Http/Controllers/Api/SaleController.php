@@ -22,6 +22,9 @@ class SaleController extends Controller
         $filter = $request->all();
         $sale = null;
 
+
+
+
         if (array_key_exists('user_id', $filter)) {
             if ($filter['user_id'] != $user->id) {
                 App::abort(403);

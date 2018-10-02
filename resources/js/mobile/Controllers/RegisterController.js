@@ -26,10 +26,11 @@ class RegisterController {
         };
         this.$http.post(REGISTER_URL, data).then(function (response) {
 
-            if (response.data.status === 0){
-                console.log('валидация не прошла')
+            if (response.status === 200){
+                window.location.href = '/';
+
             } else {
-                window.location.href = '/'
+                console.log('валидация не прошла')
             }
 
         })

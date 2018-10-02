@@ -29,6 +29,8 @@ class SubEvent extends Model
         return $this->hasMany(Sale::class, 'sub_event_id');
     }
 
+
+
     public function getFormattedDateAttribute(){
         $start_date = Carbon::parse($this->date_start);
 

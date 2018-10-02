@@ -22,11 +22,12 @@ class SaleFormController {
         } else {
 
             this.sale = {
+                event_id: null,
                 user_id: window.__user.id,
                 flight_id:1,
                 status:1,
                 sub_event_id:null,
-                buy_in: null,markup: null,
+                markup: null,
                 share:null,
                 amount:null
             };
@@ -76,7 +77,7 @@ class SaleFormController {
         let data = this.sale;
         this.$http.post(SALE_CREATE, data)
             .then(response => {
-                if (response.status === 200) window.location.href = '/sale';
+                if (response.status === 200) window.location.href = '/sales';
                 console.log(response);
             });
         console.log(this.sale, 'sale');

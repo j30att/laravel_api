@@ -41,7 +41,9 @@
 </div>
 
 
-<div class="as__item-wr active_sale" ng-click="$ctrl.click()" ng-if="$ctrl.state === 'row'"
+<div class="as__item-wr active_sale"
+     ng-click="$ctrl.click()"
+     ng-if="$ctrl.state === 'row'"
      ng-class="{
      'sale_active': item.status === 1,
      'sale_canceled': item.status === 2,
