@@ -139,8 +139,21 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 controllerAs: 'SaleFrmCtrl',
             })
             .state('sale-manage',{
-                url:'/sale/manage',
-                template: require('./views/sale/manage.template.html')
+                url:'/sale/manage/{id}',
+                template: require('./views/sale/manage.template.html'),
+                data: {
+                    permissions: {
+                        except: 'Guest',
+                        redirectTo: () => {
+                            return {
+                                state: 'invest'
+                            }
+                        }
+                    }
+                },
+                controller: 'SaleManageController',
+                controllerAs: 'SaleMngCtrl',
+
             })
             .state('sale-filter', {
                 url: '/sales/{filter}',

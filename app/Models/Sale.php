@@ -28,7 +28,7 @@ class Sale extends Model
     }
 
     public function bids(){
-        return $this->belongsToMany(Bid::class,'bid_id');
+        return $this->hasMany(Bid::class,'sale_id');
     }
 
     public function subevent(){

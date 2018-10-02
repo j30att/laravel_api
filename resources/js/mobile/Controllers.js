@@ -10,6 +10,7 @@ import {FilterBidsController} from "./Controllers/FilterBidsController";
 import {BidsController} from "./Controllers/BidsController";
 import {SaleController} from "./Controllers/SaleController"
 import {SaleAllController} from "./Controllers/SaleAllController"
+import {SaleManageController} from "./Controllers/SaleManageController"
 import {SaleFormController} from "./Controllers/SaleFormController"
 import {InvestController} from "./Controllers/InvestController";
 import {EventController} from "./Controllers/EventController";
@@ -31,6 +32,8 @@ module.controller('FilterBidsController', FilterBidsController);
 module.controller('SaleController', SaleController);
 module.controller('SaleAllController', SaleAllController);
 module.controller('SaleFormController', SaleFormController);
+module.controller('SaleManageController', SaleManageController);
+
 module.controller('InvestController', InvestController);
 module.controller('EventController', EventController);
 module.controller('EventsListController', EventsListController);

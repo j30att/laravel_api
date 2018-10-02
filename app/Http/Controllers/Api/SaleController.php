@@ -108,8 +108,10 @@ class SaleController extends Controller
     public function show($id)
     {
         $user = Auth::user();
-        $sale = Sale::query()->where('id', $id)->first();
+        $sale = Sale::query()->where('id', $id)->with(['bids'=> function ($query){
+            $query->where('status',1);
 
+        }])->first();
         return new SaleResource($sale);
 
     }

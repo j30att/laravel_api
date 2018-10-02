@@ -24,6 +24,7 @@ class SaleResource extends JsonResource
             'amount'    => $this->amount,
             'event'     => new EventResource($this->event),
             'subevent'  => new SubEventResource($this->subevent),
+            'bids'      => $this->bids
         ];
         return parent::toArray($request);
     }
