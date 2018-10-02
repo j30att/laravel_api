@@ -22,31 +22,97 @@ class SaleController extends Controller
         $filter = $request->all();
         $sale = null;
 
-        if ($filter['sub_event_id']){
+        if (array_key_exists('user_id', $filter)) {
+            if ($filter['user_id'] != $user->id) {
+                App::abort(403);
+            }
+        }
+
+
+        if (array_key_exists('page', $filter)) {
+            if (array_key_exists('status', $filter)) {
+                unset($filter['page']);
+                $sale = Sale::query()
+                    ->where($filter)
+                    ->with('creator')
+                    ->with('subevent')
+                    ->with('event')
+                    ->get();
+
+
+            }else{
+                if ($filter['page'] == 'sales') {
+                    $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->get();
+                    $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->get();
+
+                    return response()->json([
+                        'data' => [
+                            'active' => SaleResource::collection($saleActive),
+                            'canceled' => SaleResource::collection($saleCanceled)
+                        ]
+                    ]);
+                }
+            }
+        } else{
             $sale = Sale::query()
                 ->where($filter)
                 ->with('creator')
+                ->with('subevent')
+                ->with('event')
                 ->get();
-            return SaleResource::collection($sale);
         }
+        return SaleResource::collection($sale);
 
-        if ($user != null){
-            if (empty($filter)){
 
-                $saleActive     = Sale::query()->where(['status'=> Sale::SALE_ACTIVE, 'user_id'=>$user->id])->get();
-                $saleCanceled   = Sale::query()->where(['status'=> Sale::SALE_CLOSED, 'user_id'=>$user->id])->get();
+//        return SaleResource::collection($sale);
 
-                return response()->json([
-                    'data'=> [
-                    'active'   => SaleResource::collection($saleActive),
-                    'canceled' => SaleResource::collection($saleCanceled)
-                    ]
-                ]);
-            } else {
 
-                $filter += ['user_id'=>$user->id];
-                if ($filter['status'] == Sale::SALE_MARKUP){
-                    $filter['status'] = Sale::SALE_ACTIVE;
+        /*
+                if ($filter['sub_event_id']){
+                    $sale = Sale::query()
+                        ->where($filter)
+                        ->with('creator')
+                        ->get();
+                    return SaleResource::collection($sale);
+                }
+
+                if ($user != null){
+                    if (empty($filter)){
+
+                        $saleActive     = Sale::query()->where(['status'=> Sale::SALE_ACTIVE, 'user_id'=>$user->id])->get();
+                        $saleCanceled   = Sale::query()->where(['status'=> Sale::SALE_CLOSED, 'user_id'=>$user->id])->get();
+
+                        return response()->json([
+                            'data'=> [
+                            'active'   => SaleResource::collection($saleActive),
+                            'canceled' => SaleResource::collection($saleCanceled)
+                            ]
+                        ]);
+                    } else {
+
+                        $filter += ['user_id'=>$user->id];
+                        if ($filter['status'] == Sale::SALE_MARKUP){
+                            $filter['status'] = Sale::SALE_ACTIVE;
+                            $sale = Sale::query()
+                                ->where($filter)
+                                ->with('creator')
+                                ->with('subevent')
+                                ->with('event')
+                                ->orderBy('markup')
+                                ->get();
+                        } else {
+                            $sale = Sale::query()
+                                ->where($filter)
+                                ->with('creator')
+                                ->with('subevent')
+                                ->with('event')
+                                ->get();
+                        }
+
+                        return SaleResource::collection($sale);
+                    }
+
+                } else {
                     $sale = Sale::query()
                         ->where($filter)
                         ->with('creator')
@@ -54,28 +120,8 @@ class SaleController extends Controller
                         ->with('event')
                         ->orderBy('markup')
                         ->get();
-                } else {
-                    $sale = Sale::query()
-                        ->where($filter)
-                        ->with('creator')
-                        ->with('subevent')
-                        ->with('event')
-                        ->get();
-                }
-
-                return SaleResource::collection($sale);
-            }
-
-        } else {
-            $sale = Sale::query()
-                ->where($filter)
-                ->with('creator')
-                ->with('subevent')
-                ->with('event')
-                ->orderBy('markup')
-                ->get();
-            return SaleResource::collection($sale);
-        }
+                    return SaleResource::collection($sale);
+                }*/
 
     }
 
@@ -92,7 +138,7 @@ class SaleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -104,14 +150,14 @@ class SaleController extends Controller
         $data = $request->all();
         $sale = Sale::create($data);
 
-        return response(json_encode(['status'=>1]));
+        return response(json_encode(['status' => 1]));
 
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -119,14 +165,14 @@ class SaleController extends Controller
         $user = Auth::user();
         $sale = Sale::query()->where('id', $id)->first();
 
-        return  new SaleResource($sale);
+        return new SaleResource($sale);
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -137,8 +183,8 @@ class SaleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -149,7 +195,7 @@ class SaleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

@@ -11,8 +11,11 @@
            <div class="event_detail">
                <div class="d-flex">
                    <div ng-repeat="item in EventCtrl.event.subevents">
-                       <div class="main_event subevent_item"
-                            ng-bind="item.title" ng-click="EventCtrl.getSale(item.id)">
+                       <div class="subevent_item"
+                            ng-bind="item.title"
+                            ng-click="EventCtrl.getSale(item.id)"
+                            ng-class="{'main_event': EventCtrl.opened == item.id}"
+>
                        </div>
                    </div>
                </div>
