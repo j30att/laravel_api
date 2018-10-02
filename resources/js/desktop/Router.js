@@ -80,7 +80,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
         .state('bids',{
             url: '/bids',
-            template: require('./views/sale/index.template.html')
+            template: require('./views/bids/index.template.html')
         })
 
         /*.state('invest', {
