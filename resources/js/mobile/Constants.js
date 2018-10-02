@@ -2,10 +2,10 @@ export const SALE_ACTIVE    = 1;
 export const SALE_CLOSED    = 2;
 export const SALE_MARKUP    = 3;
 
-export const BID_RESPONSE_MATCHED    = 1;
-export const BID_RESPONSE_UNMATCHED  = 2;
-export const BID_RESPONSE_SETTLED    = 3;
-export const BID_RESPONSE_CANCELED   = 4;
+export const BID_MATCHED    = 1;
+export const BID_UNMATCHED  = 2;
+export const BID_SETTLED    = 3;
+export const BID_CANCELED   = 4;
 
 export const LOGIN_URL = '/login';
 export const REGISTER_URL = '/register';

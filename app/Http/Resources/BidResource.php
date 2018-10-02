@@ -14,6 +14,11 @@ class BidResource extends JsonResource
      */
     public function toArray($request)
     {
+        return[
+            'id' => $this->id,
+            'status' => $this->status,
+            'investor' => $this->investor,
+        ];
         return parent::toArray($request);
     }
 }

@@ -89,15 +89,15 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('bids', {
             url: '/bids',
             template: require('./views/bids/index.template.html'),
-            controller: 'BidResponsesController',
-            controllerAs: 'BdsRspnsCtrl',
+            controller: 'BidsController',
+            controllerAs: 'BidsCtrl',
         })
 
             .state('bids-filter', {
                 url: '/bids/{filter}',
                 template: require('./views/bids/filter.template.html'),
-                controller: 'FilterBidResponsesController',
-                controllerAs: 'FltrBdsRspnsCtrl',
+                controller: 'BidsController',
+                controllerAs: 'BidsCtrl',
             })
 
         .state('sale',{

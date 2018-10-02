@@ -24,8 +24,8 @@ class Bid extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function bid(){
-        return $this->belongsTo(Bid::class,'sale_id');
+    public function sale(){
+        return $this->belongsTo(Sale::class,'sale_id');
     }
 
 }

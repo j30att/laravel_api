@@ -18,16 +18,28 @@ class BidController extends Controller
     public function index(Request $request)
     {
         $user = Auth::user();
-        dd($user);
-        dd('hui');
-        $filter = $request->get('filter');
-        //if (empty($filter)) return abort(403);
-        if ($filter){
-            $bids = Bid::query()->where('type', $filter)->get();
+        $filter = $request->all();
+
+
+        if(array_key_exists('status', $filter)){
+                $bids = Bid::query()->where($filter)
+                    ->with('sale.subevent.event')
+                    ->with('investor')
+                    ->get();
             return BidResource::collection($bids);
-        } else{
-            return abort(403);
         }
+        $bidsMutched    = Bid::query()->where(['status'=> Bid::BIDS_MATCHED])->with('sale.subevent.event')->get();
+        $bidsUnmutched  = Bid::query()->where(['status'=> Bid::BIDS_UNMATCHED])->with('sale.subevent.event')->get();
+        $bidsSetted     = Bid::query()->where(['status'=> Bid::BIDS_SETTLED])->with('sale.subevent.event')->get();
+        $bidsCanceled   = Bid::query()->where(['status'=> Bid::BIDS_CANCELED])->with('sale.subevent.event')->get();
+
+        return response()->json(['data' =>[
+            'matched'   => BidResource::collection($bidsMutched),
+            'unmatched' => BidResource::collection($bidsUnmutched),
+            'settled' => BidResource::collection($bidsSetted),
+            'canceled' => BidResource::collection($bidsCanceled)]
+        ]);
+
 
     }
 

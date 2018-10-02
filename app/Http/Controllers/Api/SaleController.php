@@ -64,64 +64,6 @@ class SaleController extends Controller
         return SaleResource::collection($sale);
 
 
-//        return SaleResource::collection($sale);
-
-
-        /*
-                if ($filter['sub_event_id']){
-                    $sale = Sale::query()
-                        ->where($filter)
-                        ->with('creator')
-                        ->get();
-                    return SaleResource::collection($sale);
-                }
-
-                if ($user != null){
-                    if (empty($filter)){
-
-                        $saleActive     = Sale::query()->where(['status'=> Sale::SALE_ACTIVE, 'user_id'=>$user->id])->get();
-                        $saleCanceled   = Sale::query()->where(['status'=> Sale::SALE_CLOSED, 'user_id'=>$user->id])->get();
-
-                        return response()->json([
-                            'data'=> [
-                            'active'   => SaleResource::collection($saleActive),
-                            'canceled' => SaleResource::collection($saleCanceled)
-                            ]
-                        ]);
-                    } else {
-
-                        $filter += ['user_id'=>$user->id];
-                        if ($filter['status'] == Sale::SALE_MARKUP){
-                            $filter['status'] = Sale::SALE_ACTIVE;
-                            $sale = Sale::query()
-                                ->where($filter)
-                                ->with('creator')
-                                ->with('subevent')
-                                ->with('event')
-                                ->orderBy('markup')
-                                ->get();
-                        } else {
-                            $sale = Sale::query()
-                                ->where($filter)
-                                ->with('creator')
-                                ->with('subevent')
-                                ->with('event')
-                                ->get();
-                        }
-
-                        return SaleResource::collection($sale);
-                    }
-
-                } else {
-                    $sale = Sale::query()
-                        ->where($filter)
-                        ->with('creator')
-                        ->with('subevent')
-                        ->with('event')
-                        ->orderBy('markup')
-                        ->get();
-                    return SaleResource::collection($sale);
-                }*/
 
     }
 

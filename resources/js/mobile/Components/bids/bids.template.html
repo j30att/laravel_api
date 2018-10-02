@@ -1,13 +1,13 @@
+
 <div class="binds-item"
-         ng-class="{
+     ng-class="{
                     'binds-item__matched':      item.status === 1,
                     'binds-item__unmatched':    item.status === 2,
                     'binds-item__settled':      item.status === 3,
                     'binds-item__canceled':     item.status === 4,
                      }"
-         ng-repeat="item in $ctrl.bids">
-        <!--<div class="binds-item-wr">-->
-        <!--</div>-->
+     ng-repeat="item in $ctrl.bids">
+
     <div class="binds-item__profile_info">
         <div class="profile__photo">
             <img src="/images/players.png" alt="">
@@ -16,6 +16,7 @@
             <div class="profile__name" ng-bind="item.investor.name">
 
             </div>
+
             <div class="profile__country">
                 MILLIONS Russia, 1A
             </div>
@@ -50,4 +51,4 @@
             </div>
         </div>
     </div>
-    </div>
+</div>
