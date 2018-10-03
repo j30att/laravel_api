@@ -74,7 +74,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
         .state('event-detail', {
             url:'/event/detail',
-            template: require('./views/events/single.template.html')
+            template: require('./views/events/singl.template.html'),
         })
         .state('sale',{
             url: '/sales',
