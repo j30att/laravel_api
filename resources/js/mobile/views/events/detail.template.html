@@ -4,14 +4,14 @@
             <div class="event_card_list">
                 <div class="selected_event event_card_list_img">
                     <img src="/images/select_event_bg.png" alt="">
-                    <div class="event_card_list_back"></div>
+                    <a ui-sref="invest"><div class="event_card_list_back"></div></a>
                     <div class="event_card_list_open"></div>
                 </div>
                 <div class="event_card_list_info col-md-12">
                     <div class="event_card_list_wr">
                         <div class="event_card_title" ng-bind="EventInfoCtrl.event.title"></div>
                         <div class="blocks_header_link event_card_details_link">
-                            <a class="" ui-sref="evet({id:item.id})">See info</a>
+                            <a class="" ui-sref="event-info({id:EventInfoCtrl.event.id})">See info</a>
                         </div>
                         <div class="event_card_fund">£{%EventInfoCtrl.event.fund%} GTD</div>
                         <div class="event_card_date" ng-bind="EventInfoCtrl.event.date"></div>

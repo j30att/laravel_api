@@ -27,6 +27,18 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}
+a:visited{text-decoration: none};
+a:hover{
+    color: #000;
+    text-decoration: none};
+
 .fullscreen{
     width: 100%;
     overflow: hidden;

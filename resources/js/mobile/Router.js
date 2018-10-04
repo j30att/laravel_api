@@ -80,22 +80,15 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controller: 'SaleAllController',
             controllerAs: 'SaleAllCtrl'
         })
-        /*.state('events', {
-            url: '/events',
-            template: require('./views/events/index.template.html'),
-            controller: 'EventsListController',
-            controllerAs: 'EvntsLstCtrl',
-        })
-*/
-            .state('event-info',{
-                url: '/event/info/{id}',
-                template: require('./views/events/detail.template.html'),
-                controller: 'EventInfoController',
-                controllerAs: 'EventInfoCtrl',
-            })
 
         .state('event',{
-                url: '/event/{id}',
+            url: '/event/{id}',
+            template: require('./views/events/detail.template.html'),
+            controller: 'EventInfoController',
+            controllerAs: 'EventInfoCtrl',
+        })
+        .state('event-info',{
+                url: '/event/info/{id}',
                 template: require('./views/events/single.template.html'),
                 controller: 'EventController',
                 controllerAs: 'EventCtrl',
