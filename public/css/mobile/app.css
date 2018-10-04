@@ -10592,21 +10592,62 @@ modal_place_a_bid_close {
   text-align: left;
 }
 
-.event_card__row_title {
+.event_card_title {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 4px;
   text-transform: capitalize;
   color: #000;
   display: block;
 }
 
-.event_card__row_fund,
-.event_card__row_date {
+.event_card_fund,
+.event_card_date {
   font-size: 13px;
   font-weight: 400;
   color: #949494;
-  margin-bottom: 4px;
+}
+
+.event_card_list_last_child {
+  margin-bottom: 50px;
+}
+
+.event_card_list_img {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+.event_card_list_img img {
+  width: 100%;
+  height: auto;
+}
+
+.event_card_list_info {
+  position: relative;
+}
+
+.event_card_list_wr {
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.event_card_list_subevents {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.event_card__see_more {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url(/images/see_more.png) no-repeat center;
+  top: calc(50% - 11px);
+  right: 0;
+  background-size: 30%;
 }
 
 .modal_wrapper {
@@ -10760,7 +10801,6 @@ modal_place_a_bid_close {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 13px;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -10769,10 +10809,23 @@ modal_place_a_bid_close {
   color: #949494;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 13px;
 }
 
 .blocks_header_link {
   color: #007fed;
+  font-size: 13px;
+}
+
+.event_card_subevent_list_title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.event_card_details_link {
+  position: absolute;
+  top: 5px;
+  right: 0;
 }
 
 .invest_sales {
@@ -10862,6 +10915,45 @@ modal_place_a_bid_close {
 
 .footer_item__active {
   color: black;
+}
+
+.header {
+  width: 100%;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.header_logo {
+  width: 45px;
+  height: 20px;
+  text-align: center;
+  color: #000;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.header_profile {
+  width: 22px;
+  height: 22px;
+  background: url("/images/header/header_profile.png") no-repeat center;
+  background-size: 100%;
+}
+
+.header_filter {
+  width: 22px;
+  height: 22px;
+  background: url("/images/header/header_filter.png") no-repeat center;
+  background-size: 100%;
 }
 
 body {
@@ -11256,8 +11348,6 @@ main button {
   content: '\2022';
 }
 
-/*parts manched*/
-
 .full_sc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11322,10 +11412,6 @@ main button {
 
 .login_block {
   margin-top: 100%;
-}
-
-.event_item_rpt:last-child {
-  margin-bottom: 100px;
 }
 
 .buy_stakes {
@@ -11715,17 +11801,6 @@ sales > .binds-item {
   border-radius: 0;
 }
 
-.selected_event {
-  position: relative;
-  width: 100%;
-  height: 140px;
-}
-
-.selected_event img {
-  width: 100%;
-  height: auto;
-}
-
 .open_event {
   width: 38px;
   height: 38px;
@@ -11740,12 +11815,6 @@ sales > .binds-item {
   background: url(/images/left_arrow_white.png) no-repeat center;
 }
 
-.event_list-wr {
-  position: relative;
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 20px;
-}
-
 .event_main-wr span {
   color: #949494;
   font-weight: 600;
@@ -11755,29 +11824,8 @@ sales > .binds-item {
   width: 100%;
 }
 
-.see_more {
-  position: absolute;
-  width: 16px;
-  height: 30px;
-  background: url(/images/see_more.png) no-repeat center;
-  top: calc(50% - 8px);
-  left: calc(100% - 35px);
-}
-
 .event-list-main-wr {
   width: 100%;
-}
-
-.selected_event_info {
-  position: relative;
-}
-
-.selected_event_info span {
-  display: block;
-  width: 100%;
-  text-align: right;
-  position: absolute;
-  top: 5px;
 }
 
 /*single event page*/
@@ -12360,11 +12408,6 @@ input:checked + label::after {
   color: #949494;
   margin-bottom: 10px;
   font-weight: 600;
-}
-
-.sub_event_item {
-  margin-bottom: 10px;
-  border-bottom: 1px solid #e5e5e5;
 }
 
 .see_info_a {
