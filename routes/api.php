@@ -29,7 +29,6 @@ Route::group([/*'middleware' => 'auth'*/], function(){
 });
 
 Route::group(['middleware' => 'auth'], function (){
-
     Route::post('/sales/my',        'Api\SaleController@mySales');
     Route::post('/sales/my/active', 'Api\SaleController@myFilterSales');
     Route::post('/sales/my/closed', 'Api\SaleController@myFilterSales');
@@ -39,7 +38,8 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/unmatched',   'Api\BidController@myFilterBids');
     Route::post('/bids/my/settled',     'Api\BidController@myFilterBids');
     Route::post('/bids/my/canceled',    'Api\BidController@myFilterBids');
-
-
-
 });
+
+Route::post('/sales/lowest', 'Api\SaleController@lowestSales');
+Route::post('/sales/closing', 'Api\SaleController@closingSales');
+Route::post('/sales/subevent', 'Api\SaleController@subeventSales');

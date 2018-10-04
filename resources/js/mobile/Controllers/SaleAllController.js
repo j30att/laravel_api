@@ -1,4 +1,4 @@
-import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../Constants"
+import {SALE_LOWEST, SALE_CLOSING} from "../Constants"
 
 
 class SaleAllController {
@@ -7,19 +7,18 @@ class SaleAllController {
         this.$http = $http;
         this.events =[];
         this._opts = {dataLoad: false};
-        this.filter=SALE_CLOSED;
+        this.filter = 'closing';
+        this.setFilter(this.filter);
 
-        this.getSales();
-        console.log('hui');
     }
 
     setFilter(param){
-        if (param == 'closed') {this.filter=SALE_CLOSED; this.getSales()}
-        if (param == 'markup') {this.filter=SALE_MARKUP; this.getSales()}
+        if (param == 'closing') {this.filter = 'closing'; this.getSales(SALE_CLOSING)}
+        if (param == 'markup') {this.filter = 'markup'; this.getSales(SALE_LOWEST)}
     }
 
-   getSales(){
-        this.$http.get(SALE_INDEX, {params: {status: this.filter}})
+    getSales(url){
+        this.$http.post(url)
             .then(response => {
                 this.sales = response.data.data;
                 this._opts.dataLoad = true;
@@ -27,7 +26,6 @@ class SaleAllController {
             });
 
     }
-
 
 };
 

@@ -1459,7 +1459,7 @@ function joinNeighborsR(acc, x) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return SALE_ACTIVE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SALE_CLOSED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return SALE_MARKUP; });
+/* unused harmony export SALE_MARKUP */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BID_MATCHED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BID_UNMATCHED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return BID_SETTLED; });
@@ -1475,12 +1475,15 @@ function joinNeighborsR(acc, x) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BIDS_MY_CANCELED; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return EVENTS_INDEX; });
 /* unused harmony export EVENT_SINGLE */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return SALE_MY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return SALE_MY_ACTIVE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return SALE_MY_CLOSED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return SALE_INDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SALE_CREATE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return SUBEVENTS_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return SALE_MY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return SALE_MY_ACTIVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return SALE_MY_CLOSED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SALE_CLOSING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return SALE_LOWEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return SALE_SUBEVENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return SALE_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return SALE_CREATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return SUBEVENTS_INDEX; });
 var SALE_ACTIVE = 1;
 var SALE_CLOSED = 2;
 var SALE_MARKUP = 3;
@@ -1511,6 +1514,10 @@ var EVENT_SINGLE = '/api/events/';
 var SALE_MY = '/api/sales/my';
 var SALE_MY_ACTIVE = '/api/sales/my/active';
 var SALE_MY_CLOSED = '/api/sales/my/closed';
+
+var SALE_CLOSING = '/api/sales/closing';
+var SALE_LOWEST = '/api/sales/lowest';
+var SALE_SUBEVENT = '/api/sales/subevent';
 
 var SALE_INDEX = '/api/sale';
 var SALE_CREATE = '/api/sale';
@@ -51438,7 +51445,7 @@ var SaleController = function () {
         value: function showList() {
             var _this = this;
 
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_MY */], { user_id: this.user.id }).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_MY */], { user_id: this.user.id }).then(function (response) {
                 _this.sales = response.data.data;
                 _this._opts.dataLoad = true;
             });
@@ -51475,28 +51482,26 @@ var SaleAllController = function () {
         this.$http = $http;
         this.events = [];
         this._opts = { dataLoad: false };
-        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];
-
-        this.getSales();
-        console.log('hui');
+        this.filter = 'closing';
+        this.setFilter(this.filter);
     }
 
     _createClass(SaleAllController, [{
         key: 'setFilter',
         value: function setFilter(param) {
-            if (param == 'closed') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];this.getSales();
+            if (param == 'closing') {
+                this.filter = 'closing';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CLOSING */]);
             }
             if (param == 'markup') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_MARKUP */];this.getSales();
+                this.filter = 'markup';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_LOWEST */]);
             }
         }
     }, {
         key: 'getSales',
-        value: function getSales() {
+        value: function getSales(url) {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */], { params: { status: this.filter } }).then(function (response) {
+            this.$http.post(url).then(function (response) {
                 _this.sales = response.data.data;
                 _this._opts.dataLoad = true;
                 return true;
@@ -51550,11 +51555,11 @@ var SaleFilterController = function () {
             var url = null;
             var filter = null;
             if (this.$stateParams.filter === 'active') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_MY_ACTIVE */];
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["u" /* SALE_MY_ACTIVE */];
                 filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* SALE_ACTIVE */];
             }
             if (this.$stateParams.filter === 'closed') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["u" /* SALE_MY_CLOSED */];
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["v" /* SALE_MY_CLOSED */];
                 filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];
             }
             this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
@@ -51636,7 +51641,7 @@ var SaleManageController = function () {
         value: function getSale() {
             var _this = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
                 _this.sale = response.data.data;
                 console.log(_this.sale);
             });
@@ -51740,7 +51745,7 @@ var SaleFormController = function () {
         value: function getSubevents() {
             var _this2 = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["v" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["x" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
                 _this2.buy_in = null;
                 _this2.subevents = response.data.data;
                 _this2._opts.load = true;
@@ -51763,7 +51768,7 @@ var SaleFormController = function () {
         value: function getSale() {
             var _this3 = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
                 _this3.sale = response.data.data;
                 if (_this3._opts.update) _this3.getSubevents();
             });
@@ -51772,7 +51777,7 @@ var SaleFormController = function () {
         key: "createSale",
         value: function createSale() {
             var data = this.sale;
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CREATE */], data).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CREATE */], data).then(function (response) {
                 if (response.status === 200) window.location.href = '/sales';
                 console.log(response);
             });
@@ -51782,8 +51787,8 @@ var SaleFormController = function () {
         key: "updateSale",
         value: function updateSale() {
             var data = this.sale;
-            console.log(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CREATE */] + '/' + this.sale.id);
-            this.$http.put(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CREATE */] + '/' + this.sale.id, data).then(function (response) {
+            console.log(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CREATE */] + '/' + this.sale.id);
+            this.$http.put(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CREATE */] + '/' + this.sale.id, data).then(function (response) {
                 console.log(response);
                 if (response.status == 200) window.location.href = '/sale';
                 console.log(response);
@@ -51822,19 +51827,20 @@ var InvestController = function () {
         this.$http = $http;
         this.events = [];
         this._opts = { dataLoad: false };
-        this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];
+        this.filter = 'closing';
+
         this.showList();
-        this.getSales();
+        this.setFilter(this.filter);
     }
 
     _createClass(InvestController, [{
         key: 'setFilter',
         value: function setFilter(param) {
-            if (param == 'closed') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_CLOSED */];this.getSales();
+            if (param == 'closing') {
+                this.filter = 'closing';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CLOSING */]);
             }
             if (param == 'markup') {
-                this.filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_MARKUP */];this.getSales();
+                this.filter = 'markup';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_LOWEST */]);
             }
         }
     }, {
@@ -51850,10 +51856,10 @@ var InvestController = function () {
         }
     }, {
         key: 'getSales',
-        value: function getSales() {
+        value: function getSales(url) {
             var _this2 = this;
 
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */], { params: { status: this.filter } }).then(function (response) {
+            this.$http.post(url).then(function (response) {
                 _this2.sales = response.data.data;
                 _this2._opts.dataLoad = true;
                 return true;
@@ -51891,10 +51897,7 @@ var EventController = function () {
         this.$http = $http;
         this.$stateParams = $stateParams;
         this._opts = { dataLoad: false };
-        this.subevents = [];
-        this.subevents.push(this.$stateParams.id);
         this.showList();
-        console.log('event controller');
     }
 
     _createClass(EventController, [{
@@ -51905,7 +51908,6 @@ var EventController = function () {
             this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
                 _this.event = response.data.data;
                 _this.getSale(_this.event.subevents[0].id);
-                _this._opts.dataLoad = true;
             });
         }
     }, {
@@ -51914,7 +51916,7 @@ var EventController = function () {
             var _this2 = this;
 
             this.opened = id;
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_INDEX */], { params: { sub_event_id: id } }).then(function (response) {
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["w" /* SALE_SUBEVENT */], { sub_event_id: id }).then(function (response) {
                 _this2.sales = response.data.data;
                 _this2._opts.dataLoad = true;
             });
@@ -52196,13 +52198,13 @@ module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-
 /* 122 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a ui-sref=\"events\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"InvstCtrl._opts.dataLoad\"\n                              events=\"InvstCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <a ui-sref=\"sale-all\"><div class=\"see_all\">See All</div></a>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 2}\" ng-click=\"InvstCtrl.setFilter('closed')\">Closing</div>\n                    <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 3}\" ng-click=\"InvstCtrl.setFilter('markup')\" >Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n                <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\n            </div>\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\" >\n    <div class=\"col-md-12 binds\">\n        <div class=\"logo_img\">\n            LOGO\n            <img src=\"/\" alt=\"\">\n        </div>\n        <div class=\"tabs-wr\">\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Events</div>\n                <div class=\"see_all\"><a ui-sref=\"events\">See All</a></div>\n            </div>\n\n\n            <events-carousel  ng-if=\"InvstCtrl._opts.dataLoad\"\n                              events=\"InvstCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n\n            <div class=\"tabs-wr__title\">\n                <div class=\"tabs-wr__title-name\">Players</div>\n                <a ui-sref=\"sale-all\"><div class=\"see_all\">See All</div></a>\n            </div>\n            <div class=\"tabs-wr__players\">\n                <div class=\"tabs_players\">\n                    <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'closing'}\" ng-click=\"InvstCtrl.setFilter('closing')\">Closing</div>\n                    <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'markup'}\" ng-click=\"InvstCtrl.setFilter('markup')\" >Lowest markup</div>\n                </div>\n            </div>\n            <div class=\"swipe-wr full_sc events_player\">\n                <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\n            </div>\n            <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 123 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n    <div class=\"sale__title col-md-12\">\n        Sales\n        <a ui-sref=\"invest\"><div class=\"goback goback_sale\"></div></a>\n    </div>\n    <div class=\"tabs-wr__players\">\n        <div class=\"tabs_players\">\n            <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 2}\" ng-click=\"SaleAllCtrl.setFilter('closed')\">Closing</div>\n            <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 3}\" ng-click=\"SaleAllCtrl.setFilter('markup')\" >Lowest markup</div>\n        </div>\n    </div>\n    <div class=\"swipe-wr full_sc events_player\">\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
+module.exports = "<div class=\"row\">\n\n    <div class=\"sale__title col-md-12\">\n        Sales\n        <a ui-sref=\"invest\"><div class=\"goback goback_sale\"></div></a>\n    </div>\n    <div class=\"tabs-wr__players\">\n        <div class=\"tabs_players\">\n            <div class=\"tabs_players__closing\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'closing'}\" ng-click=\"SaleAllCtrl.setFilter('closing')\">Closing</div>\n            <div class=\"tabs_players__lower\" ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'markup'}\" ng-click=\"SaleAllCtrl.setFilter('markup')\" >Lowest markup</div>\n        </div>\n    </div>\n    <div class=\"swipe-wr full_sc events_player\">\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>";
 
 /***/ }),
 /* 124 */
@@ -52238,7 +52240,7 @@ module.exports = "<div class=\"row\">\n    <div class=\"sale_main-wr col-md-12\"
 /* 129 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"right_side_content my_sale-wr\">\n    <div class=\"my_sale_title\">\n        My sale\n        <div class=\"my_sale_close\"></div>\n    </div>\n    <div class=\"profile_status\">\n        <div>\n            <div>\n                <div class=\"my_sale__event\" ng-bind=\"SaleMngCtrl.sale.event.title\"></div>\n                <span class=\"buyin_span\">Buy in $<span ng-bind=\"SaleMngCtrl.sale.event.buy_in\"></span> + $<span ng-bind=\"SaleMngCtrl.sale.subevent.buy_in\"></span>\n            </div>\n            <div class=\"gte_and_by\">\n                <div class=\"profile_status__buyin\">£1,000</div>\n                <div class=\"profile_status__gte\">£500,000 GTE</div>\n            </div>\n        </div>\n\n        <table class=\"my_sale_table\">\n            <tr>\n                <td><span>Closes in</span><br>73 days</td>\n                <td><span>Share sold</span><br>5%</td>\n                <td><span>Amount raised</span><br>$<span ng-bind=\"SaleMngCtrl.sale.amount\"></span></td>\n            </tr>\n            <tr>\n                <td class=\"my_sale_markup\"><span>Markup</span><br><input type=\"text\" placeholder=\"1.00\" ng-model=\"SaleMngCtrl.sale.markup\"></td>\n                <td class=\"my_sale_share\"><span>Share</span><br><input type=\"text\" placeholder=\"1.38%\" ng-model=\"SaleMngCtrl.sale.share\"></td>\n                <td class=\"my_sale_value\"><span>Value</span><br><input type=\"text\" placeholder=\"$1938\" ng-model=\"SaleMngCtrl.sale.value\"></td>\n            </tr>\n        </table>\n    </div>\n    <div class=\"unmatched_bids bids_status\">\n        <span>UNMATCHED BIDS</span>\n\n        <div ng-repeat=\"bid in SaleMngCtrl.sale.bids\">\n            <input type=\"text\" placeholder=\"1.09\" ng-model=\"bid.markup\">\n            <input type=\"text\" placeholder=\"0.38%\" ng-model=\"bid.share\">\n            <input type=\"text\" placeholder=\"$443\" ng-model=\"bid.amount\">\n            <div class=\"confirm_bids confirm_bids_accept\"></div>\n        </div>\n\n    </div>\n    <hr>\n    <div class=\"my_sale_attention\">\n        Your sale is almost finished, top-up your sale if you want sell more\n    </div>\n    <div class=\"increase_btn button\">\n        Increase your share\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n</div>\n\n\n\n";
+module.exports = "<div class=\"right_side_content my_sale-wr\">\n    <div class=\"my_sale_title\">\n        My sale\n        <div class=\"my_sale_close\"></div>\n    </div>\n    <div class=\"profile_status\">\n        <div>\n            <div>\n                <div class=\"my_sale__event\" ng-bind=\"SaleMngCtrl.sale.event.title\"></div>\n                <span class=\"buyin_span\">Buy in $<span ng-bind=\"SaleMngCtrl.sale.event.buy_in\"></span> + $<span ng-bind=\"SaleMngCtrl.sale.subevent.buy_in\"></span>\n            </div>\n            <div class=\"gte_and_by\">\n                <div class=\"profile_status__buyin\">£1,000</div>\n                <div class=\"profile_status__gte\">£500,000 GTE</div>\n            </div>\n        </div>\n\n        <table class=\"my_sale_table\">\n            <tr>\n                <td><span>Closes in</span><br>73 days</td>\n                <td><span>Share sold</span><br>5%</td>\n                <td><span>Amount raised</span><br>$<span ng-bind=\"SaleMngCtrl.sale.amount\"></span></td>\n            </tr>\n            <tr>\n                <td class=\"my_sale_markup\"><span>Markup</span><br><input type=\"text\" placeholder=\"1.00\" ng-model=\"SaleMngCtrl.sale.markup\"></td>\n                <td class=\"my_sale_share\"><span>Share</span><br><input type=\"text\" placeholder=\"1.38%\" ng-model=\"SaleMngCtrl.sale.share\"></td>\n                <td class=\"my_sale_value\"><span>Value</span><br><input type=\"text\" placeholder=\"$1938\" ng-model=\"SaleMngCtrl.sale.value\"></td>\n            </tr>\n        </table>\n    </div>\n    <div class=\"unmatched_bids bids_status\">\n        <span>UNMATCHED BIDS</span>\n\n        <div ng-repeat=\"bid in SaleMngCtrl.sale.bids\">\n            <input type=\"number\" placeholder=\"1.09\" ng-model=\"bid.markup\">\n            <input type=\"number\" placeholder=\"0.38%\" ng-model=\"bid.share\">\n            <input type=\"number\" placeholder=\"$443\" ng-model=\"bid.amount\">\n            <div class=\"confirm_bids confirm_bids_accept\"></div>\n        </div>\n\n    </div>\n    <hr>\n    <div class=\"my_sale_attention\">\n        Your sale is almost finished, top-up your sale if you want sell more\n    </div>\n    <div class=\"increase_btn button\">\n        Increase your share\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n</div>\n\n\n\n";
 
 /***/ }),
 /* 130 */
@@ -52598,9 +52600,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var SaleModal = function () {
     function SaleModal() {
         _classCallCheck(this, SaleModal);
-
-        console.log(this.sale);
-        console.log('modal - sale');
     }
 
     _createClass(SaleModal, [{
@@ -52609,7 +52608,6 @@ var SaleModal = function () {
     }, {
         key: 'close',
         value: function close() {
-            console.log(this.sale);
             this.show = !this.show;
         }
     }]);

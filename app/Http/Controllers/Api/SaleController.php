@@ -32,6 +32,13 @@ class SaleController extends Controller
 
     }
 
+    /**
+     * Show the sale of authorized user by filter.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+
     public function myFilterSales(Request $request)
     {
         $user = Auth::user();
@@ -45,6 +52,53 @@ class SaleController extends Controller
             ->get();
 
         return SaleResource::collection($sale);
+    }
+
+    /**
+     * Show the sale order_by markup.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function lowestSales(){
+        $sale = Sale::query()
+            ->with('creator')
+            ->with('subevent')
+            ->with('event')
+            ->orderBy('markup')
+            ->get();
+        return SaleResource::collection($sale);
+    }
+
+    /**
+     * Show the sale order_by date_end in subevents.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function closingSales(){
+        $sale = Sale::query()
+            ->with('creator')
+            ->with(['subevent'=>function($query){
+                $query->orderBy('date_end');
+            }])
+            ->with('event')
+            ->orderBy('markup')
+            ->get();
+        return SaleResource::collection($sale);
+    }
+
+    /**
+     * Show the sale for subevent.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function subeventSales(Request $request){
+        $filter = $request->all();
+        $sale = Sale::query()->where($filter)->with('subevent')->get();
+        return SaleResource::collection($sale);
+
     }
 
     public function index(Request $request)
@@ -89,12 +143,6 @@ class SaleController extends Controller
      */
     public function show($id)
     {
-        $user = Auth::user();
-        $sale = Sale::query()->where('id', $id)->with(['bids' => function ($query) {
-            $query->where('status', 1);
-
-        }])->first();
-        return new SaleResource($sale);
 
     }
 

@@ -1,7 +1,5 @@
 class SaleModal {
     constructor() {
-        console.log(this.sale);
-        console.log('modal - sale')
     }
 
 
@@ -9,7 +7,6 @@ class SaleModal {
     }
 
     close(){
-        console.log(this.sale);
         this.show = !this.show;
     }
 }

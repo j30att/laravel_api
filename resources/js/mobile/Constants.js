@@ -31,6 +31,10 @@ export const SALE_MY        = '/api/sales/my';
 export const SALE_MY_ACTIVE = '/api/sales/my/active';
 export const SALE_MY_CLOSED = '/api/sales/my/closed';
 
+export const SALE_CLOSING   ='/api/sales/closing';
+export const SALE_LOWEST    ='/api/sales/lowest';
+export const SALE_SUBEVENT  ='/api/sales/subevent';
+
 export const SALE_INDEX     = '/api/sale';
 export const SALE_CREATE    = '/api/sale';
 

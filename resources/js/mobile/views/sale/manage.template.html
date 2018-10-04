@@ -32,9 +32,9 @@
         <span>UNMATCHED BIDS</span>
 
         <div ng-repeat="bid in SaleMngCtrl.sale.bids">
-            <input type="text" placeholder="1.09" ng-model="bid.markup">
-            <input type="text" placeholder="0.38%" ng-model="bid.share">
-            <input type="text" placeholder="$443" ng-model="bid.amount">
+            <input type="number" placeholder="1.09" ng-model="bid.markup">
+            <input type="number" placeholder="0.38%" ng-model="bid.share">
+            <input type="number" placeholder="$443" ng-model="bid.amount">
             <div class="confirm_bids confirm_bids_accept"></div>
         </div>
 

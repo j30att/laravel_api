@@ -10473,6 +10473,20 @@ a.text-dark:focus {
   }
 }
 
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal_wrapper > div {
+  margin: auto;
+}
+
 button,
 button:active,
 button:focus {
