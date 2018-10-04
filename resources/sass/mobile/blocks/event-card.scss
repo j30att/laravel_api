@@ -86,4 +86,22 @@
     right: 0;
     background-size: 30%;
 }
+.event_card_list_back{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background: url("/images/left_arrow_white.png") no-repeat center;
+    background-size: 100%;
+    left: 16px;
+    top: 11px;
+}
+.event_card_list_open{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background: url("/images/open_event.png") no-repeat center;
+    background-size: 100%;
+    top: 11px;
+    right: 15px;
+}
 

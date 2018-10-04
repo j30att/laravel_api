@@ -20,8 +20,10 @@
 
 <div class="event_card_list" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
 
-    <div class="selected_event event_card_list_img">
+    <div class="event_card_list_img">
         <img src="/images/select_event_bg.png" alt="">
+        <div class="event_card_list_back"></div>
+        <div class="event_card_list_open"></div>
     </div>
     <div class="event_card_list_info col-md-12">
 
@@ -44,7 +46,7 @@
             <div class="event_card_fund">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>
             <div class="event_card_date" ng-bind="item.date"></div>
 
-                <div class="event_card__see_more"></div>
+            <div class="event_card__see_more"></div>
 
         </div>
     </div>
