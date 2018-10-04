@@ -1,44 +1,41 @@
 <div class="row">
-    <div class="single__header">
-        <div class="single__title" ng-bind="EventCtrl.event.title"></div>
-        <div class="single__date" ng-bind="EventCtrl.event.date"></div>
-        <a ui-sref="invest">
-            <div class="goback"></div>
+    <div class="event_detail__header">
+        <div class="event_detail__header_title" ng-bind="EventCtrl.event.title"></div>
+        <div class="event_detail__header_date" ng-bind="EventCtrl.event.date"></div>
+        <a ui-sref="invest" class="goback">
+
         </a>
     </div>
 
-    <div class="subevents_all-wr">
+    <div class="courusel_no_limit_wr">
 
-        <div class="subevents_all">
-            <div class="subevent_item_title-wr">
-                <div class="subevent_item_title_carusel">
-                    <div ng-repeat="item in EventCtrl.event.subevents">
-                        <div class="subevent_item"
+        <div class="courusel_no_limit_content">
+            <div class="courusel_no_limit_item_wr">
+                <div class="courusel_no_limit_item">
+
+                        <div class="courusel_item"
+                             ng-repeat="item in EventCtrl.event.subevents"
                              ng-bind="item.title"
                              ng-click="EventCtrl.getSale(item.id)"
-                             ng-class="{'main_event': EventCtrl.opened == item.id}"
-                        >
+                             ng-class="{'main_event': EventCtrl.opened == item.id}">
                         </div>
-                    </div>
+
                 </div>
             </div>
-           <div class="event_detail">
 
 
-               <div>
-                   <div class="main_event_info">
-                       <div class="fund_info">
-                           Buy in £1,000,000 • £500,000 GTE
-                       </div>
-                       <div class="date_info" ng-bind="EventCtrl.event.date">
-                       </div>
-                       <div class="location_info">
-                           Casino Sochi, Sochi, Russia
-                       </div>
-                   </div>
-                   <sales sales="EventCtrl.sales" state="'invest'"></sales>
-               </div>
-           </div>
+
+            <div class="event_detail_info">
+
+                <div class="event_card_title">Buy in £1,000,000 • £500,000 GTE</div>
+
+                <div class="event_card_attr" ng-bind="EventCtrl.event.date"></div>
+                <div class="event_card_attr">
+                    Casino Sochi, Sochi, Russia
+                </div>
+            </div>
+
+            <sales sales="EventCtrl.sales" state="'invest'" subevent="false"></sales>
 
         </div>
         <span ng-include="'tpl/view/footer.template.html'"></span>

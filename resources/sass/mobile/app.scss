@@ -711,15 +711,7 @@ input[name="new_email"]{
     line-height: 26pt;
     text-align: center;
 }
-.goback{
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    background: url(/images/b@3x_left-arrow.png) no-repeat center;
-    background-size: 22px;
-    left: 15px;
-    top: 32px;
-}
+
 
 /*events */
 .event-item{
@@ -811,41 +803,13 @@ sales > .binds-item{
 }
 
 /*single event page*/
-.single__header{
-    width: 100%;
-    text-align: center;
-    margin-top: 6px;
-    margin-bottom: 12pt;
-}
-.single__title{
-    font-size: 16pt;
-    font-weight: 600;
-}
-.single__date{
-    font-size: 13pt;
-    font-weight: 400;
-    color: #949494;
-}
-.subevents_all-wr{
-    width: 100%;
-    overflow: hidden;
-}
 
-.subevents_all{
-    //display: inline-flex;
-    font-size: 13pt;
-}
-.subevent_item{
-    color: #949494;
-    margin-bottom: 12pt;
-    margin-right: 25pt;
-    width: 100px;
-    text-align: center;
-    padding-bottom: 13pt;
-}
-.subevent_item:first-letter{
-    text-transform: capitalize;
-}
+
+
+
+
+
+
 .main_event{
     border-bottom: 1px solid #000;
     color: #000;
@@ -1263,9 +1227,7 @@ input:checked + label::after{
 .check-box{
     width: 100%;
 }
-.subevents_all{
-    width: 100%;
-}
+
 .event_detail{
     width: 100%;
 }
@@ -1278,12 +1240,8 @@ input:checked + label::after{
 .event_detail sales .binds-item:last-child{
     margin-bottom: 100px;
 }
-.subevent_item_title-wr{
-    overflow-y: hidden;
-}
-.subevent_item_title_carusel{
-    display: inline-flex;
-}
+
+
 .event-items_list_title{
     font-size: 13pt;
     color: rgb(148,148,148);

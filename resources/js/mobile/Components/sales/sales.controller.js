@@ -19,6 +19,7 @@ Sales.$inject = ['ngDialog', '$scope'];
 
 export const SalesComponent = {
     bindings: {
+        subevent: '<',
         sales:    '<',
         state:     '<',
     },
