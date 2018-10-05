@@ -10605,6 +10605,21 @@ a.text-dark:focus {
 
 /*colors end*/
 
+/*manage sales*/
+
+.manage_sale_wr {
+  overflow: hidden;
+}
+
+.manage_sale_wr .binds-item__game_info {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.manage_sale_wr .binds-item__game_info .card__event_info_attr {
+  color: #000;
+}
+
 .card__bids {
   width: 250px;
   margin-right: 12px;
@@ -11068,6 +11083,11 @@ a.text-dark:focus {
   color: #000000;
 }
 
+.sale_form_content .layout-align-start-stretch md-select {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
 .sale_form_content .blocks_header_title_name {
   margin: 0 0 12px 0;
   text-transform: capitalize;
@@ -11107,6 +11127,14 @@ a.text-dark:focus {
   width: 80%;
   padding-bottom: 10px;
   border-bottom-color: #949494;
+}
+
+.card__attribute_static .sale_card_list_atr_item:first-child {
+  width: 45%;
+}
+
+.card__attribute_static .sale_card_list_atr_item:nth-child(2) {
+  width: 55%;
 }
 
 .offer {
