@@ -1,0 +1,95 @@
+.card__bids{
+  width: 100%;
+  margin-bottom: 2pt;
+  margin-right: 0;
+  border-radius: 0;
+  padding: 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.card__bids:last-child{
+  margin-bottom: 50px;
+}
+
+
+.card__profile_info{
+  width: 100%;
+  margin-left: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+
+}
+.card__profile_foto{
+  width: 36px;
+  height: 36px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background-color: grey;
+  margin-right: 10px;
+}
+.card__profile_foto img{
+  width: 100%;
+  height: auto;
+}
+
+.card__profile_name{
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.card__event{
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.card__subevent{
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: relative;
+  margin-left: 72.5px;
+  margin-bottom: 8px;
+
+}
+
+.card__subevent::before{
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  opacity: .3;
+  position: absolute;
+  top: calc(50% - 4px);
+  left: -10px;
+}
+
+.card__attribute{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .card__attribute_value{
+    color: #000000;
+  }
+
+}
+
+.card__attribute_row{
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.sale_card_list_atr_item span{
+  color: $warmGrey;
+}

@@ -9,7 +9,7 @@
 
 //blocks
 @import "/blocks/modal";
-@import "blocks/bid-card";
+@import "blocks/card";
 @import "blocks/carousel";
 @import "blocks/carousel-tabs";
 @import "blocks/event-card";
@@ -415,7 +415,7 @@ main {
     -o-border-radius: 0;
 }
 .full_sc .binds-item:last-child{
-    margin-bottom: 68px;
+    margin-bottom: 50px;
 }
 .active_status{
     text-align: center;

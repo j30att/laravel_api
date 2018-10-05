@@ -18,6 +18,12 @@ class BidResource extends JsonResource
             'id' => $this->id,
             'status' => $this->status,
             'investor' => $this->investor,
+            'sale'=> $this->sale,
+            'markup'=> $this->markup,
+            'share'=> $this->share,
+            'amount'=> $this->amount,
+            'subevent'=> new SubEventResource($this->sale->subevent)
+
         ];
         return parent::toArray($request);
     }
