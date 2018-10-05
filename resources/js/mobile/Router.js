@@ -1,3 +1,5 @@
+import {EventsListController} from "./Controllers/EventsListController";
+
 routes.$inject = [
     '$locationProvider',
     '$stateProvider',
@@ -79,6 +81,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/sale/all.template.html'),
             controller: 'SaleAllController',
             controllerAs: 'SaleAllCtrl'
+        })
+
+        .state('events', {
+            url: '/events',
+            template: require('./views/events/index.template.html'),
+            controller: 'EventsListController',
+            controllerAs: 'EvntsLstCtrl'
         })
 
         .state('event',{
