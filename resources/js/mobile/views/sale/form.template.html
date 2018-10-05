@@ -1,77 +1,71 @@
-<div class="row">
-    <div class="sale col-md-12">
-        <div class="sale__title">
+<div class="row sale_form_wr">
+    <div class="sale_form col-md-12">
+        <div class="page_title col-md-12">
             Create new sale
-            <a ui-sref="sale">
-                <div class="goback goback_sale"></div>
+            <a ui-sref="bids" class="goback" href="/sale/">
+
             </a>
         </div>
-        <div class="events_and_by">
-            <div class="events_and_by__title">
+        <div class="sale_form_content">
+            <div class="blocks_header_title_name sale_form_title">
                 Event and buy-in
             </div>
 
-            <label>Event</label>
-            <select ng-if="SaleFrmCtrl._opts.load === false">
-                <option ng-bind="'Choose an event'"></option>
-            </select>
-            <select  ng-model="SaleFrmCtrl.sale.event_id"
-                     ng-if="SaleFrmCtrl._opts.load === true"
-                     ng-change="SaleFrmCtrl.getSubevents()">
-                <option ng-repeat="item in SaleFrmCtrl.events"
-                        ng-bind="item.title"
-                        ng-value="{%item.id%}"></option>
-            </select>
+
+            <label class="blocks_header_title_name">Event</label>
+            <div layout="row" layout-align="start_stretch">
+                <md-select class="md-no-underline form-Select-theme"
+                           ng-change="SaleFrmCtrl.getSubevents()"
+                           ng-model="SaleFrmCtrl.sale.event_id" placeholder="Choose an event">
+                    <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.events">{%item.title%}</md-option>
+                </md-select>
+            </div>
 
 
-            <label>Flight</label>
+            <label class="blocks_header_title_name">Flight</label>
+            <div layout="row" layout-align="start_stretch">
+                <md-select class="md-no-underline form-Select-theme"
+                           ng-model="SaleFrmCtrl.sale.sub_event_id" placeholder="Choose an Flight">
+                    <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.subevents">{%item.title%}</md-option>
+                </md-select>
+            </div>
 
-            <select name="flight" ng-if="SaleFrmCtrl.sale.event_id == null">
-                <option selected>Choose an flight
-                </option>
-            </select>
 
 
-            <select ng-model="SaleFrmCtrl.sale.sub_event_id"
-                    ng-if="SaleFrmCtrl.sale.event_id != null"
 
-                    ng-change="SaleFrmCtrl.fillSale()">
-                <option ng-repeat="item in SaleFrmCtrl.subevents"
-                        ng-bind="item.title"
-                        ng-value="{%item.id%}">
 
-                </option>
-            </select>
-
-            <label>Buy-in</label>
-            <input type="text" ng-model="SaleFrmCtrl.buy_in" placeholder="Will be display after selection of flight">
-            <div class="offer">
-                <div class="offer__title">Offer</div>
-                <div class="offer-wr">
-                    <div>
-                        <label>Share</label>
-                        <input ng-model="SaleFrmCtrl.sale.share" type="number" placeholder="0">
-                    </div>
-                    <div>
-                        <label>Markup</label>
-                        <input ng-model="SaleFrmCtrl.sale.markup" type="number" placeholder="1.0">
-                    </div>
-                    <div>
-                        <label>Amount $</label>
-                        <input ng-model="SaleFrmCtrl.sale.amount" type="number" placeholder="0">
-                    </div>
+            <div class="card__attribute card__attribute_static">
+                <div class="sale_card_list_atr_item">
+                    <span>Buy-in</span><br>
+                    <span class="card__attribute_value">$3000</span>
+                </div>
+                <div class="sale_card_list_atr_item">
+                    <span>Closing time</span><br>
+                    <span class="card__attribute_value">10:44, 10 Apr 2018</span>
                 </div>
 
+            </div>
+            <div class="hr"></div>
+            <div class="blocks_header_title_name sale_form_title">Offer</div>
+            <div class="card__attribute">
+                <div class="sale_card_list_atr_item">
+                    <span>Share</span><br>
+                    <input ng-model="SaleFrmCtrl.sale.share" type="number" placeholder="0">
 
-                <div ng-if="SaleFrmCtrl._opts.update !=true " class="creact_sale" ng-click="SaleFrmCtrl.createSale()">
-                    Create a Sale
                 </div>
-                <div ng-if="SaleFrmCtrl._opts.update == true " class="creact_sale" ng-click="SaleFrmCtrl.updateSale()">
-                    Update a Sale
+                <div class="sale_card_list_atr_item">
+                    <span>Markup</span><br>
+                    <input ng-model="SaleFrmCtrl.sale.share" type="number" placeholder="1.0">
+
+                </div>
+                <div class="sale_card_list_atr_item">
+                    <span>Amount $</span><br>
+                    <input ng-model="SaleFrmCtrl.sale.amount" type="number" placeholder="0">
                 </div>
 
             </div>
 
         </div>
+        <div class="button creact_sale_btn">Create a Sale</div>
     </div>
 </div>

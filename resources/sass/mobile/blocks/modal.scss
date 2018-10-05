@@ -99,3 +99,15 @@
     background-color: #edebf6;
 }
 /*colors end*/
+
+/*manage sales*/
+.manage_sale_wr{
+    overflow: hidden;
+    .binds-item__game_info {
+        padding-left: 0;
+        margin-top: 0;
+        .card__event_info_attr{
+            color: #000;
+        }
+    }
+}

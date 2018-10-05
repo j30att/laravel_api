@@ -27,10 +27,101 @@
 .sale_card_list_atr_item span{
     color: $warmGrey;
 }
-//.sale_card_list_atr div span
-//{
-//    color: rgb(148, 148, 148);
-//}
-//.game_atrs__date_start{
-//    width: 45%;
-//}
+
+/*sales create*/
+.sale_form_wr{
+    overflow: hidden;
+}
+.sale_form{
+    position: relative;
+    .page_title{
+        margin-bottom: 12px;
+    }
+}
+.sale_form_content{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #000000;
+
+    .layout-align-start-stretch{
+        md-select{
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+    }
+    .blocks_header_title_name{
+        margin: 0 0 12px 0;
+        text-transform: capitalize;
+    }
+    .sale_form_title{
+        text-transform: uppercase;
+
+    }
+    select{
+        margin-bottom: 16px;
+        color: #000000;
+        height: 48px;
+        border-radius: 10px;
+        outline: none;
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 16px;
+        color: #000000;
+        outline: none;
+
+    }
+    .card__attribute{
+        padding: 0;
+        position: relative;
+        margin-bottom: 25px;
+        .card__attribute_value{
+            font-size: 16px;
+        }
+    }
+
+    .sale_card_list_atr_item input{
+        width: 80%;
+        padding-bottom: 10px;
+        border-bottom-color: $warmGrey;
+    }
+}
+
+.card__attribute_static{
+    .sale_card_list_atr_item:first-child{
+        width: 45%;
+    }
+    .sale_card_list_atr_item:nth-child(2){
+        width: 55%;
+    }
+}
+
+
+/////////
+
+.offer{
+    margin-top: 16pt;
+}
+.offer__title{
+    text-transform: uppercase;
+    margin-bottom: 12pt;
+}
+
+.offer-wr{
+    display: flex;
+}
+.offer-wr > div{
+    width: 30%;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.offer-wr > div input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #949494;
+}
+
+
+

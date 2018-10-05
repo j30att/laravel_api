@@ -1,13 +1,64 @@
-<div class="right_side_content my_sale-wr">
-    <div class="my_sale_title">
-        My sale
-        <div class="my_sale_close"></div>
+<div class="manage_sale_wr">
+
+    <div class="header">
+        <div class="header_close" ng-click="$ctrl.close()"></div>
+        <div class="header_title">My sale</div>
+        <div class="header_filter_empty"></div>
     </div>
+
+    <div class="event_card_title">MILLIONS Russia, 1A</div>
+    <!--<span class="buyin_span">Buy in $5,000 + $300</span>-->
+
+    <div class="binds-item__game_info card__event_info">
+        <div class="geme__text card__event_info_item">
+            <div class="card__event_info_attr">
+                Buy in $5,000 + $300
+            </div>
+        </div>
+
+
+        <div class="card__attribute card__attribute_row ng-scope">
+            <div class="sale_card_list_atr_item">
+                <span>Closes in</span><br>
+                <span class="card__attribute_value ng-binding">73 days</span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Share sold</span><br>
+                <span class="card__attribute_value">5%</span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Amount raised</span><br>
+                <span class="card__attribute_value ng-binding">$1892</span>
+            </div>
+        </div>
+        <div class="card__attribute card__attribute_row ng-scope">
+            <div class="sale_card_list_atr_item">
+                <span>Markup</span><br>
+                <span class="card__attribute_value ng-binding">1.00</span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Share</span><br>
+                <span class="card__attribute_value">1.38%</span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Value</span><br>
+                <span class="card__attribute_value ng-binding">$1938</span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <div class="profile_status">
         <div>
             <div>
                 <div class="my_sale__event" ng-bind="SaleMngCtrl.sale.event.title"></div>
-                <span class="buyin_span">Buy in $<span ng-bind="SaleMngCtrl.sale.event.buy_in"></span> + $<span ng-bind="SaleMngCtrl.sale.subevent.buy_in"></span>
+                <span class="buyin_span">Buy in $<span ng-bind="SaleMngCtrl.sale.event.buy_in"></span> + $
+                <span ng-bind="SaleMngCtrl.sale.subevent.buy_in"></span>
             </div>
             <div class="gte_and_by">
                 <div class="profile_status__buyin">£1,000</div>

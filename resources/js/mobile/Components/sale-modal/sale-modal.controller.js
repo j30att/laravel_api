@@ -11,7 +11,7 @@ class SaleModal {
     }
 }
 
-SaleModal.$inject = ['ngDialog', '$scope'];
+SaleModal.$inject = ['$scope'];
 
 export const SaleModalComponent = {
     bindings: {

@@ -1,6 +1,6 @@
 class Sales {
-    constructor(ngDialog, $scope) {
-        this.$scope = $scope;
+    constructor() {
+
         this.show = false;
         this.item = null;
     }
@@ -15,7 +15,7 @@ class Sales {
     }
 }
 
-Sales.$inject = ['ngDialog', '$scope'];
+
 
 export const SalesComponent = {
     bindings: {

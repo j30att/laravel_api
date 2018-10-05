@@ -8,16 +8,26 @@ import {permission, uiPermission} from 'angular-permission';
 import hack from './Hack';
 
 let ngRouter = require('angular-ui-router').default;
-let ngDialog = require('ng-dialog');
+let ngMaterial = require('angular-material');
+let ngAria = require('angular-aria');
+let ngAnimate = require('angular-animate');
 
 let app = angular.module('poker', [
-    ngDialog,
+    ngMaterial,
+    ngAria,
+    ngAnimate,
     ngRouter,
     Controllers,
     Components,
     permission,
     uiPermission
 ]);
+/*
+angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {
+    $mdThemingProvider.theme('formSelect');
+    $mdThemingProvider.setDefaultTheme('formSelect');
+}]);*/
+
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {
     $interpolateProvider.startSymbol('{%');

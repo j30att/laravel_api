@@ -1,8 +1,7 @@
 class SalesCarousel {
 
-    constructor(ngDialog) {
-        this.ngDialog = ngDialog
-        console.log(ngDialog);
+    constructor() {
+
     }
 
     $onInit() {

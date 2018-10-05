@@ -1,6 +1,6 @@
 class ModalController {
-    constructor($interval, ngDialog, $scope) {
-        this.$interval = $interval;
+    constructor() {
+
         this.active = 0;
         this.flag = true;
         console.log(ngDialog);
@@ -14,6 +14,6 @@ class ModalController {
 
 };
 
-ModalController.$inject = ['$interval', 'ngDialog', '$scope'];
+
 
 export {ModalController};

@@ -6,6 +6,12 @@
 
 // Bootstrap
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+@import "../../../node_modules/angular-material/angular-material.min.css";
+/*
+@import "~angular-aria";
+@import "~angular-animate";
+*/
+
 
 //blocks
 @import "/blocks/modal";
@@ -21,6 +27,30 @@
 @import "blocks/footer";
 @import "blocks/header";
 @import "blocks/button";
+
+
+.form_event{
+    margin-bottom: 16px;
+    color: #000000;
+    height: 48px;
+    border-radius: 10px;
+    outline: none;
+    width: 300px;
+    margin: 0px;
+}
+
+
+md-select.form-Select-theme{
+    width:98%;
+    height: 48px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #000;
+    padding-left: 13px;
+    padding-right: 15px;
+    box-sizing:content-box;
+}
 
 
 body{
@@ -44,7 +74,9 @@ a:hover{
     width: 100%;
     overflow: hidden;
 }
-
+::-webkit-input-placeholder{
+    color: #000000;
+}
 
 
 ///////////////////////////////////////////////////////
@@ -55,19 +87,10 @@ button:active,
 button:focus {
     outline: none;
 }
-
-
-
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-
-
-
-
-
-
 
 .sale_canceled{
     background-color: red;
@@ -83,7 +106,6 @@ button:focus {
     border: none;
     cursor: pointer;
 }
-
 menu.main {
     position: fixed;
     bottom: 0;
@@ -915,57 +937,9 @@ __game_info{
 .goback_sale{
     top: calc(50% - 11px);
 }
-.events_and_by__title{
-    text-transform: uppercase;
-    font-size: 13pt;
-    color: #949494;
-    margin-bottom: 12pt;
-}
-.events_and_by{
-    display: flex;
-    flex-direction: column;
-}
-.events_and_by select{
-    margin-bottom: 16pt;
-    color: #949494;
-    height: 48px;
-    border-radius: 10pt;
-    outline: none;
-}
-.events_and_by{
-    font-size: 13pt;
-    color: #949494;
-}
-.events_and_by > input{
-    border: none;
-    border-bottom: 1px solid #949494;
-    padding-bottom: 16px;
-    color: #949494;
-    outline: none;
 
-}
 
-.offer{
-    margin-top: 16pt;
-}
-.offer__title{
-    text-transform: uppercase;
-    margin-bottom: 12pt;
-}
 
-.offer-wr{
-    display: flex;
-}
-.offer-wr > div{
-    width: 30%;
-    justify-content: space-between;
-    margin-right: 10px;
-}
-.offer-wr > div input{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #949494;
-}
 
 
 
