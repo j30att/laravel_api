@@ -206,6 +206,11 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/wallet/index.template.html'),
             menu: 'wallet',
         })
+        .state('profile', {
+            url: '/profile',
+            template: require('./views/profile/index.template.html'),
+        })
+
 
     ;
 

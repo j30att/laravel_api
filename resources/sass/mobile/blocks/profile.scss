@@ -1,0 +1,77 @@
+.profile {
+  &_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  &_hint {
+    width: 100%;
+    text-align: center;
+    color: $warmGrey;
+  }
+  &_name {
+    margin-top: 16px;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  &_button {
+    width: 100%;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color: rgb(0, 127, 237);
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+  }
+  &_block_title {
+    margin-top: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $warmGrey;
+  }
+  &_menu_item{
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    display: flex;
+    justify-content: space-between;
+
+    div{
+      display: flex;
+
+      align-self: center;
+    }
+    &__text{
+      font-size: 16px;
+      margin-left: 16px;
+    }
+    &__more{
+      width: 16px;
+      height: 16px;
+      background: url("/images/see_more.png") no-repeat ;
+      background-size: contain;
+
+    }
+  }
+  &_menu_item:last-child{
+    margin-bottom: 23px;
+  }
+  &_img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    img {
+      width: 100px;
+      height: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      border-radius: 4px;
+    }
+  }
+}
+
+
+
+
+

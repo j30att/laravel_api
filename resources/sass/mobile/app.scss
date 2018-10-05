@@ -28,6 +28,8 @@
 @import "blocks/header";
 @import "blocks/button";
 
+@import "blocks/profile";
+
 
 body:active, :hover, :focus {
     outline: 0;
@@ -272,23 +274,31 @@ main {
     }
 }
 /*images for <a>*/
-.profile-settings-acc-notification{
-    background: url("/images/b@3x_notification.png") no-repeat left;
-}
-.profile-settings-acc-privacy{
-    background: url("/images/b@3x_privacy.png") no-repeat left;
-}
-.profile-settings-acc-account{
-    background: url("/images/b@3x_acc.png") no-repeat left;
-}
-.profile-settings-acc-support{
-    background: url("/images/b@3x_support.png") no-repeat left;
-}
-.profile-settings-acc-tell{
-    background: url("/images/b@3x_tell.png") no-repeat left;
-}
-.profile-settings-acc-setting{
-    background: url("/images/b@3x_setting.png") no-repeat left;
+
+
+.icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+
+    &_notification{
+        background-image: url("/images/b@3x_notification.png");
+    }
+    &_privacy{
+        background-image: url("/images/b@3x_privacy.png");
+    }
+    &_account{
+        background-image: url("/images/b@3x_acc.png");
+    }
+    &_support{
+        background-image: url("/images/b@3x_support.png");
+    }
+    &_tell{
+        background-image: url("/images/b@3x_tell.png");
+    }
+    &_setting{
+        background-image: url("/images/b@3x_setting.png");
+    }
 }
 /*profile btn*/
 .btn{
