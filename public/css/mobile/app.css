@@ -10620,6 +10620,26 @@ a.text-dark:focus {
   color: #000;
 }
 
+.manage_sale_wr .modal_type_bids .blocks_header_title_name {
+  margin-bottom: 8px;
+  margin-top: 24px;
+}
+
+.manage_sale_atr {
+  padding-left: 0 !important;
+}
+
+.manage_sale_atr_item {
+  width: 33%;
+}
+
+.manage_sale_atr_item input {
+  width: 80%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 .card__bids {
   width: 250px;
   margin-right: 12px;
@@ -11445,6 +11465,13 @@ a.text-dark:focus {
   background-color: rgba(0, 0, 0, 0.08);
   margin-left: -15px;
   margin-bottom: 16px;
+}
+
+.manage_sale_btn {
+  position: fixed;
+  bottom: 16px;
+  left: 5%;
+  width: 90%;
 }
 
 .form_event {
@@ -13011,10 +13038,6 @@ input:checked + label::after {
   color: #fc4c02;
   margin-bottom: 16px;
   font-size: 13px;
-}
-
-.increase_btn {
-  margin-bottom: 50px;
 }
 
 /**/

@@ -110,4 +110,21 @@
             color: #000;
         }
     }
+    .modal_type_bids{
+        .blocks_header_title_name{
+            margin-bottom: 8px;
+            margin-top: 24px;}
+    }
+}
+.manage_sale_atr{
+    padding-left: 0 !important;
+}
+.manage_sale_atr_item{
+    width: 33%;
+    input{
+        width: 80%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(224,224,224);
+    }
 }
