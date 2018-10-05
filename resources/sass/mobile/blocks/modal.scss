@@ -53,6 +53,7 @@
     display: flex;
     justify-content: space-between;
     border-radius: 4px;
+    position: relative;
 }
 .modal_type_bids__item{
     width: 24.75%;
@@ -72,7 +73,7 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.modal_type_bids__item:last-child{
+.modal_type_bids__item:nth-child(3){
     width: 49.5%;
     -webkit-border-top-right-radius: 4px;
     -webkit-border-bottom-right-radius: 4px;
@@ -81,7 +82,37 @@
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
-
+.modal_type_bids__item:last-child{
+    //width: 40px;
+    //height: 100%;
+    //background-color: #1ad03b;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.modal_type_bids__item_confirm{
+    width: 40px;
+    height: 100%;
+    background-color: #e7f7e4;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: 1px solid #ffffff;
+    position: relative;
+}
+.modal_type_bids__item_confirm::after{
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url("/images/confirm.png")no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 /*colors*/
 .modal_bids_item_color_highest{
     background-color: rgb(237,248,253);
@@ -109,5 +140,22 @@
         .card__event_info_attr{
             color: #000;
         }
+    }
+    .modal_type_bids{
+        .blocks_header_title_name{
+            margin-bottom: 8px;
+            margin-top: 24px;}
+    }
+}
+.manage_sale_atr{
+    padding-left: 0 !important;
+}
+.manage_sale_atr_item{
+    width: 33%;
+    input{
+        width: 80%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid rgb(224,224,224);
     }
 }

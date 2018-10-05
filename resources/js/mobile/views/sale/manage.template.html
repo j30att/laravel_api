@@ -17,87 +17,83 @@
         </div>
 
 
-        <div class="card__attribute card__attribute_row ng-scope">
-            <div class="sale_card_list_atr_item">
+        <div class="card__attribute manage_sale_atr">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
                 <span>Closes in</span><br>
                 <span class="card__attribute_value ng-binding">73 days</span>
             </div>
-            <div class="sale_card_list_atr_item">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
                 <span>Share sold</span><br>
                 <span class="card__attribute_value">5%</span>
             </div>
-            <div class="sale_card_list_atr_item">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
                 <span>Amount raised</span><br>
                 <span class="card__attribute_value ng-binding">$1892</span>
             </div>
+
         </div>
-        <div class="card__attribute card__attribute_row ng-scope">
-            <div class="sale_card_list_atr_item">
+        <div class="card__attribute manage_sale_atr">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
                 <span>Markup</span><br>
-                <span class="card__attribute_value ng-binding">1.00</span>
+
+                <input type="number" placeholder="1.00">
             </div>
-            <div class="sale_card_list_atr_item">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
                 <span>Share</span><br>
-                <span class="card__attribute_value">1.38%</span>
+
+                <input type="number" placeholder="1.38%">
             </div>
-            <div class="sale_card_list_atr_item">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
                 <span>Value</span><br>
-                <span class="card__attribute_value ng-binding">$1938</span>
+
+                <input type="number" placeholder="$1938">
             </div>
         </div>
     </div>
 
+    <div class="modal_type_bids">
+        <div class="blocks_header_title_name">
+            HIGHEST BIDS
+        </div>
 
-
-
-
-
-
-    <div class="profile_status">
-        <div>
-            <div>
-                <div class="my_sale__event" ng-bind="SaleMngCtrl.sale.event.title"></div>
-                <span class="buyin_span">Buy in $<span ng-bind="SaleMngCtrl.sale.event.buy_in"></span> + $
-                <span ng-bind="SaleMngCtrl.sale.subevent.buy_in"></span>
+        <div class="modal_type_bids_type">
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">
+                <div>$1,182.22</div>
+                <div></div>
             </div>
-            <div class="gte_and_by">
-                <div class="profile_status__buyin">£1,000</div>
-                <div class="profile_status__gte">£500,000 GTE</div>
+        </div>
+        <div class="modal_type_bids_type">
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">
+                <div>$1,182.22</div>
+                <div></div>
+            </div>
+        </div>
+        <div class="modal_type_bids_type">
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">
+                <div>$1,182.22</div>
+                <div class="modal_type_bids__item_confirm"></div>
             </div>
         </div>
 
-        <table class="my_sale_table">
-            <tr>
-                <td><span>Closes in</span><br>73 days</td>
-                <td><span>Share sold</span><br>5%</td>
-                <td><span>Amount raised</span><br>$<span ng-bind="SaleMngCtrl.sale.amount"></span></td>
-            </tr>
-            <tr>
-                <td class="my_sale_markup"><span>Markup</span><br><input type="tel" placeholder="1.00" ng-model="SaleMngCtrl.sale.markup"></td>
-                <td class="my_sale_share"><span>Share</span><br><input type="tel" placeholder="1.38%" ng-model="SaleMngCtrl.sale.share"></td>
-                <td class="my_sale_value"><span>Value</span><br><input type="tel" placeholder="$1938" ng-model="SaleMngCtrl.sale.value"></td>
-            </tr>
-        </table>
-    </div>
-    <div class="unmatched_bids bids_status">
-        <span>UNMATCHED BIDS</span>
-
-        <div ng-repeat="bid in SaleMngCtrl.sale.bids">
-            <input type="number" placeholder="1.09" ng-model="bid.markup">
-            <input type="number" placeholder="0.38%" ng-model="bid.share">
-            <input type="number" placeholder="$443" ng-model="bid.amount">
-            <div class="confirm_bids confirm_bids_accept"></div>
-        </div>
 
     </div>
+
     <hr>
+
     <div class="my_sale_attention">
         Your sale is almost finished, top-up your sale if you want sell more
     </div>
-    <div class="increase_btn button">
+
+    <div class="manage_sale_btn button">
         Increase your share
     </div>
-    <span ng-include="'tpl/view/footer.template.html'"></span>
+
 </div>
 
 

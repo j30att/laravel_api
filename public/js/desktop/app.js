@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 161);
+/******/ 	return __webpack_require__(__webpack_require__.s = 163);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -117,7 +117,7 @@
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return silentRejection; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coreservices__ = __webpack_require__(4);
 /**
  * Random utility functions used in the UI-Router code
  *
@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(70)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(71)))
 
 /***/ }),
 /* 1 */
@@ -1007,7 +1007,7 @@ function pattern(struct) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["S"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["T"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["U"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coreservices__ = __webpack_require__(4);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return __WEBPACK_IMPORTED_MODULE_1__coreservices__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return __WEBPACK_IMPORTED_MODULE_1__coreservices__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__glob__ = __webpack_require__(23);
@@ -1081,66 +1081,6 @@ function pattern(struct) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return SALE_ACTIVE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return SALE_CLOSED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SALE_MARKUP; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BID_RESPONSE_MATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BID_RESPONSE_UNMATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BID_RESPONSE_SETTLED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BID_RESPONSE_CANCELED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return LOGIN_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return REGISTER_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return PROFILE_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_INDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BID_RESPONSE_INDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return EVENTS_INDEX; });
-/* unused harmony export EVENT_SINGLE */
-/* unused harmony export SALE_MY */
-/* unused harmony export SALE_MY_ACTIVE */
-/* unused harmony export SALE_MY_CLOSED */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return SALE_INDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return SALE_CREATE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SUBEVENTS_INDEX; });
-var SALE_ACTIVE = 1;
-var SALE_CLOSED = 2;
-var SALE_MARKUP = 3;
-
-var BID_RESPONSE_MATCHED = 1;
-var BID_RESPONSE_UNMATCHED = 2;
-var BID_RESPONSE_SETTLED = 3;
-var BID_RESPONSE_CANCELED = 4;
-
-var LOGIN_URL = '/login';
-var REGISTER_URL = '/register';
-var PROFILE_URL = '/login/userproftest';
-
-//**BIDS**//
-var BIDS_INDEX = '/api/bids';
-
-var BID_RESPONSE_INDEX = '/api/bidResponse';
-
-//**EVENTS**//
-var EVENTS_INDEX = '/api/events';
-var EVENT_SINGLE = '/api/events/';
-
-//**SALE**//
-
-
-var SALE_MY = '/sale/my';
-var SALE_MY_ACTIVE = '/sale/my/active';
-var SALE_MY_CLOSED = '/sale/my/closed';
-
-var SALE_INDEX = '/api/sale';
-var SALE_CREATE = '/api/sale';
-
-//**SUBEVENTS**//
-var SUBEVENTS_INDEX = '/api/subevents';
-
-/***/ }),
-/* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return makeStub; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return services; });
 var noImpl = function (fnname) { return function () {
@@ -1157,7 +1097,7 @@ var services = {
 //# sourceMappingURL=coreservices.js.map
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1267,7 +1207,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(73);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(37);
@@ -1285,7 +1225,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(83);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1299,7 +1239,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(84);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1309,13 +1249,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(85);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(49);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(45);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(86);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1333,7 +1273,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(89);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -1349,6 +1289,66 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return SALE_ACTIVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return SALE_CLOSED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SALE_MARKUP; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BID_RESPONSE_MATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BID_RESPONSE_UNMATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BID_RESPONSE_SETTLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BID_RESPONSE_CANCELED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return LOGIN_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return REGISTER_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return PROFILE_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BID_RESPONSE_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return EVENTS_INDEX; });
+/* unused harmony export EVENT_SINGLE */
+/* unused harmony export SALE_MY */
+/* unused harmony export SALE_MY_ACTIVE */
+/* unused harmony export SALE_MY_CLOSED */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return SALE_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return SALE_CREATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SUBEVENTS_INDEX; });
+var SALE_ACTIVE = 1;
+var SALE_CLOSED = 2;
+var SALE_MARKUP = 3;
+
+var BID_RESPONSE_MATCHED = 1;
+var BID_RESPONSE_UNMATCHED = 2;
+var BID_RESPONSE_SETTLED = 3;
+var BID_RESPONSE_CANCELED = 4;
+
+var LOGIN_URL = '/login';
+var REGISTER_URL = '/register';
+var PROFILE_URL = '/login/userproftest';
+
+//**BIDS**//
+var BIDS_INDEX = '/api/bids';
+
+var BID_RESPONSE_INDEX = '/api/bidResponse';
+
+//**EVENTS**//
+var EVENTS_INDEX = '/api/events';
+var EVENT_SINGLE = '/api/events/';
+
+//**SALE**//
+
+
+var SALE_MY = '/sale/my';
+var SALE_MY_ACTIVE = '/sale/my/active';
+var SALE_MY_CLOSED = '/sale/my/closed';
+
+var SALE_INDEX = '/api/sale';
+var SALE_CREATE = '/api/sale';
+
+//**SUBEVENTS**//
+var SUBEVENTS_INDEX = '/api/subevents';
 
 /***/ }),
 /* 7 */
@@ -1945,7 +1945,7 @@ var TransitionHookScope;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(26);
 /** @publicapi @module params */ /** */
 
@@ -2319,7 +2319,7 @@ var TargetState = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rejectFactory__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__state_targetState__ = __webpack_require__(14);
 /** @publicapi @module transition */ /** */
@@ -2526,7 +2526,7 @@ var TransitionHook = /** @class */ (function () {
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(64);
+__webpack_require__(65);
 module.exports = angular;
 
 
@@ -2716,7 +2716,7 @@ var PathUtils = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return defaultResolvePolicy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Resolvable; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
@@ -2859,7 +2859,7 @@ var Resolvable = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interface__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(17);
@@ -3671,12 +3671,12 @@ var BaseLocationServices = /** @class */ (function () {
 /* harmony export (immutable) */ __webpack_exports__["b"] = watchDigests;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getLocals; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(63);
 /**
  * # Angular 1 types
@@ -3954,7 +3954,7 @@ var Queue = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(13);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(72);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(36);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
@@ -4372,21 +4372,21 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(82);
 /** @publicapi @module transition */ /** */
 
 
@@ -4651,7 +4651,7 @@ var TransitionService = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
@@ -5793,7 +5793,7 @@ function locationPluginFactory(name, isHtml5, serviceClass, configurationClass) 
 /* harmony export (immutable) */ __webpack_exports__["b"] = getNg1ViewConfigFactory;
 /* harmony export (immutable) */ __webpack_exports__["c"] = ng1ViewsBuilder;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1ViewConfig; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
 
 /** @internalapi */
 function getNg1ViewConfigFactory() {
@@ -6003,7 +6003,7 @@ var resolvePolicies = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(4);
 /** @publicapi @module state */ /** */
 
 
@@ -6633,7 +6633,7 @@ var StateRegistry = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_queue__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__path_pathUtils__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__path_pathNode__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transition_transitionService__ = __webpack_require__(30);
@@ -8948,7 +8948,7 @@ var UrlConfig = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyLoadHook; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = lazyLoadState;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_coreservices__ = __webpack_require__(4);
 
 /**
  * A [[TransitionHookFn]] that performs lazy loading
@@ -9501,7 +9501,7 @@ var BrowserLocationConfig = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
 /** @publicapi @module ng1 */ /** */
 
 /**
@@ -9647,7 +9647,7 @@ var StateProvider = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlRouterProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
 /** @publicapi @module url */ /** */
 
 
@@ -9847,6 +9847,12 @@ var UrlRouterProvider = /** @class */ (function () {
 
 /***/ }),
 /* 64 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <br>\r\n        <div class=\"bids_content_wr bids_content_matched\">\r\n            <div class=\"bids_nav\">\r\n                <ul class=\"bids_nav_list\">\r\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Matched</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Unmatched</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Settled</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Canceled</a></li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"bids_table\">\r\n                <thead class=\"bids_table_head\">\r\n                <td class=\"t_h_from\">FROM</td>\r\n                <td>EVENT</td>\r\n                <td>buy in</td>\r\n                <td>GTE</td>\r\n                <td>Markup</td>\r\n                <td>VALUE</td>\r\n                <td>Time</td>\r\n                </thead>\r\n                <tbody class=\"bids_table_body\">\r\n\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.10</td>\r\n                    <td class=\"t_value\">£2,746</td>\r\n                    <td class=\"t_time\">Sep 1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.10</td>\r\n                    <td class=\"t_value\">£2,746</td>\r\n                    <td class=\"t_time\">Sep 1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.10</td>\r\n                    <td class=\"t_value\">£2,746</td>\r\n                    <td class=\"t_time\">Sep 1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.10</td>\r\n                    <td class=\"t_value\">£2,746</td>\r\n                    <td class=\"t_time\">Sep 1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.10</td>\r\n                    <td class=\"t_value\">£2,746</td>\r\n                    <td class=\"t_time\">Sep 1</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.10</td>\r\n                    <td class=\"t_value\">£2,746</td>\r\n                    <td class=\"t_time\">Sep 1</td>\r\n                </tr>\r\n\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n<br>\r\n\r\n        <div class=\"bids_content_wr bids_content_unmatched\">\r\n            <div class=\"bids_nav\">\r\n                <ul class=\"bids_nav_list\">\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Matched</a></li>\r\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Unmatched</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Settled</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Canceled</a></li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"bids_table\">\r\n                <thead class=\"bids_table_head\">\r\n                <td class=\"t_h_from\">FROM</td>\r\n                <td>EVENT</td>\r\n                <td>buy in</td>\r\n                <td>GTE</td>\r\n                <td>Sale</td>\r\n                <td>BID</td>\r\n                <td>VALUE</td>\r\n                <td>T. until close</td>\r\n                </thead>\r\n                <tbody class=\"bids_table_body\">\r\n\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_sale\">1.22</td>\r\n                    <td class=\"t_bid\">1.10</td>\r\n                    <td class=\"t_value\">$100</td>\r\n                    <td class=\"t_close\">2 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Theodore Guerrero</span></td>\r\n                    <td class=\"t_event\">Barrière Poker Tour</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.2</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$200</td>\r\n                    <td class=\"t_close\">10 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_3.png\" alt=\"profile photo\"></div><span>Mark Patterson</span></td>\r\n                    <td class=\"t_event\">WSOP International Circuit...</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_sale\">1.18</td>\r\n                    <td class=\"t_bid\">1.10</td>\r\n                    <td class=\"t_value\">$203</td>\r\n                    <td class=\"t_close\">10 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_4.png\" alt=\"profile photo\"></div><span>Theodore Curtis</span></td>\r\n                    <td class=\"t_event\">International Poker Cup</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.15</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$827</td>\r\n                    <td class=\"t_close\">11 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_5.png\" alt=\"profile photo\"></div><span>Mike Walters</span></td>\r\n                    <td class=\"t_event\">International Poker Cup</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.15</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$827</td>\r\n                    <td class=\"t_close\">14 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_6.png\" alt=\"profile photo\"></div><span>Joseph Padilla</span></td>\r\n                    <td class=\"t_event\">Barrière Poker Tour</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.15</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$827</td>\r\n                    <td class=\"t_close\">20 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_7.png\" alt=\"profile photo\"></div><span>Joe Ramos</span></td>\r\n                    <td class=\"t_event\">Barrière Poker Tour</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.15</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$827</td>\r\n                    <td class=\"t_close\">20 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_8.png\" alt=\"profile photo\"></div><span>Oscar Mendez</span></td>\r\n                    <td class=\"t_event\">Barrière Poker Tour</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.15</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$827</td>\r\n                    <td class=\"t_close\">20 days</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_9.png\" alt=\"profile photo\"></div><span>Noah Alexander</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£5,000</td>\r\n                    <td class=\"t_gte\">£1,000,000</td>\r\n                    <td class=\"t_sale\">1.15</td>\r\n                    <td class=\"t_bid\">1.11</td>\r\n                    <td class=\"t_value\">$827</td>\r\n                    <td class=\"t_close\">22 days</td>\r\n                </tr>\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n<br>\r\n\r\n        <div class=\"bids_content_wr bids_content_settled\">\r\n            <div class=\"bids_nav\">\r\n                <ul class=\"bids_nav_list\">\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Matched</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Unmatched</a></li>\r\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Settled</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Canceled</a></li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"bids_table\">\r\n                <thead class=\"bids_table_head\">\r\n                <td class=\"t_h_from\">FROM</td>\r\n                <td>EVENT</td>\r\n                <td>buy in</td>\r\n                <td>GTE</td>\r\n                <td>MARKUP</td>\r\n                <td>VALUE</td>\r\n                <td>STATUS</td>\r\n                <td>Outcome</td>\r\n                </thead>\r\n                <tbody class=\"bids_table_body\">\r\n\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_status\">Closed</td>\r\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\r\n                </tr>\r\n\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n        <br>\r\n        <div class=\"bids_content_wr bids_content_canceled\">\r\n            <div class=\"bids_nav\">\r\n                <ul class=\"bids_nav_list\">\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Matched</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Unmatched</a></li>\r\n                    <li class=\"bids_nav_item\"><a href=\"#\">Settled</a></li>\r\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Canceled</a></li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"bids_table\">\r\n                <thead class=\"bids_table_head\">\r\n                <td class=\"t_h_from\">FROM</td>\r\n                <td>EVENT</td>\r\n                <td>buy in</td>\r\n                <td>GTE</td>\r\n                <td>MARKUP</td>\r\n                <td>VALUE</td>\r\n                <td>Refund</td>\r\n                <td>Status</td>\r\n                </thead>\r\n                <tbody class=\"bids_table_body\">\r\n\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_refund\">12 days</td>\r\n                    <td class=\"t_status\">In profress</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_2.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_refund\">12 days</td>\r\n                    <td class=\"t_status\">In profress</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_3.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_refund\">12 days</td>\r\n                    <td class=\"t_status\">In profress</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_4.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_refund\">12 days</td>\r\n                    <td class=\"t_status\">In profress</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_5.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_value\">$2,294</td>\r\n                    <td class=\"t_refund\">12 days</td>\r\n                    <td class=\"t_status\">In profress</td>\r\n                </tr>\r\n\r\n\r\n                </tbody>\r\n            </table>\r\n        </div>\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 65 */
 /***/ (function(module, exports) {
 
 /**
@@ -46068,7 +46074,7 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46083,9 +46089,9 @@ $provide.value("$locale", {
 (function () {
   'use strict';
 
-  var permission = __webpack_require__(66),
-    ngPermission = __webpack_require__(67),
-    uiPermission = __webpack_require__(68);
+  var permission = __webpack_require__(67),
+    ngPermission = __webpack_require__(68),
+    uiPermission = __webpack_require__(69);
 
   module.exports = {
     permission: permission,
@@ -46096,7 +46102,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports) {
 
 /**
@@ -47340,7 +47346,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports) {
 
 /**
@@ -47564,7 +47570,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports) {
 
 /**
@@ -48148,7 +48154,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48164,13 +48170,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(63);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(5);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlConfig"]; });
@@ -48349,7 +48355,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports) {
 
 var g;
@@ -48376,7 +48382,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48384,7 +48390,7 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(26);
 /** @publicapi @module params */ /** */
 
@@ -48548,7 +48554,7 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48562,7 +48568,7 @@ initDefaultTypes();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48610,13 +48616,13 @@ var treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerRedirectToHook; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(14);
 /** @internalapi @module hooks */ /** */
 
@@ -48655,7 +48661,7 @@ var registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48719,7 +48725,7 @@ var registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48787,14 +48793,14 @@ var registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLoadEnteringViews; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerActivateViews; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
 /** @internalapi @module hooks */ /** */
 
 
@@ -48842,7 +48848,7 @@ var registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48883,7 +48889,7 @@ var registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48913,7 +48919,7 @@ var registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48951,7 +48957,7 @@ var registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48975,7 +48981,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49023,7 +49029,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49053,7 +49059,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49063,11 +49069,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(87);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
@@ -49090,7 +49096,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49116,7 +49122,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(88);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
@@ -49134,7 +49140,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49150,7 +49156,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__injector__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__q__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(4);
 /** @internalapi @module vanilla */ /** */
 
 
@@ -49175,7 +49181,7 @@ var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* lo
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49199,13 +49205,13 @@ var UIRouterPluginBase = /** @class */ (function () {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateFactory; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
 /** @publicapi @module view */ /** */
 
 
@@ -49410,12 +49416,12 @@ var scopeBindings = function (bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStateHookBuilder; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(22);
 /** @publicapi @module ng1 */ /** */
 
@@ -49445,12 +49451,12 @@ var getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1LocationServices; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
 /** @publicapi @module ng1 */ /** */
 
 
@@ -49531,7 +49537,7 @@ var Ng1LocationServices = /** @class */ (function () {
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports) {
 
 /**
@@ -49850,12 +49856,12 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
 /**
  * # Angular 1 Directives
  *
@@ -50487,7 +50493,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50539,12 +50545,12 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export uiView */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__ = __webpack_require__(35);
@@ -50976,7 +50982,7 @@ __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').d
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51008,44 +51014,16 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 97 */,
 /* 98 */,
 /* 99 */,
-/* 100 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 100 */,
+/* 101 */,
+/* 102 */
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesCarouselComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SalesCarousel = function () {
-    function SalesCarousel() {
-        _classCallCheck(this, SalesCarousel);
-    }
-
-    _createClass(SalesCarousel, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
-
-    return SalesCarousel;
-}();
-
-var SalesCarouselComponent = {
-    bindings: {
-        sales: '<',
-        state: '<'
-    },
-    template: __webpack_require__(190),
-    controller: SalesCarousel,
-    controllerAs: '$ctrl'
-};
+module.exports = "<header class=\"header\">\r\n    <div class=\"logo\">\r\n        <a ui-sref=\"invest\">\r\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\r\n        </a>\r\n    </div>\r\n    <nav class=\"menu\">\r\n        <ul class=\"menu_list\">\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('invest')\"\r\n                   ui-sref=\"invest\"\r\n                >\r\n                    Invest\r\n                </a>\r\n                <div class=\"menu_item__count\">2</div>\r\n            </li>\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('bids')\"\r\n                   ui-sref=\"bids\"\r\n                >\r\n                    Bids\r\n                </a>\r\n            </li>\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('sale')\"\r\n                   ui-sref=\"sale\"\r\n                >\r\n                    Sale\r\n                </a>\r\n            </li>\r\n            <li class=\"menu_item\">\r\n                <a class=\"menu_item__link\"\r\n                   ng-class=\"$ctrl.isActive('wallet')\"\r\n                   ui-sref=\"wallet\"\r\n                >\r\n                    Wallet\r\n                </a>\r\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\r\n            </li>\r\n        </ul>\r\n    </nav>\r\n    <div class=\"last_up\">\r\n        <div class=\"last_up__title\">Last Updates</div>\r\n        <div class=\"last_up__item last_up__item_blue\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\r\n\r\n        </div>\r\n        <div class=\"last_up__item last_up__item_yellow\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\r\n\r\n        </div>\r\n        <div class=\"last_up__item last_up__item_green\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\r\n\r\n        </div>\r\n        <div class=\"last_up__item last_up__item_red\">\r\n            <div class=\"last_up_marker\">\r\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\r\n\r\n        </div>\r\n    </div>\r\n    <div class=\"profile\">\r\n        <div class=\"profile_info\">\r\n            <div class=\"profile_left-side\">\r\n                <div class=\"profile_img\">\r\n                    <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_name\">James. Co</div>\r\n            </div>\r\n            <a class=\"profile_logout\"\r\n               ui-sref=\"logout\"></a>\r\n        </div>\r\n    </div>\r\n    <div class=\"headers_footer\">\r\n        <a href=\"#\">Terms of Service</a>\r\n        <a href=\"#\">Privacy Policy</a>\r\n        <a href=\"#\">Contact Us</a>\r\n        <a href=\"#\">English</a>\r\n    </div>\r\n</header>\r\n\r\n<div class=\"log_out-wr\">\r\n    <div class=\"log_out_profile\">\r\n        <div class=\"log_out_text\">\r\n            Log out\r\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\r\n        </div>\r\n        <div class=\"log_out_btn\">\r\n            <div class=\"log_out_cancel\">Cancel</div>\r\n            <div class=\"log_out_ok\">Log Out</div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"your_profile_wr\">\r\n    <div class=\"your_profile_content-wr\">\r\n        <div class=\"your_profile_content\">\r\n            <div class=\"your_profile__title\">\r\n                Your Profile\r\n                <div class=\"your_profile_close\"></div>\r\n            </div>\r\n            <div class=\"your_profile_info\">\r\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\r\n                <div class=\"your_profile__name\">\r\n                    James. Co\r\n                    <div class=\"change_photo\">Replace photo</div>\r\n                </div>\r\n            </div>\r\n            <div class=\"link_party_pk\">\r\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\r\n                <div class=\"link_party_btn\">Link Party Poker account</div>\r\n            </div>\r\n            <div class=\"your_profile_nav\">\r\n                <ul class=\"pr_nav_list\">\r\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\r\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\r\n                </ul>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n";
 
 /***/ }),
-/* 101 */,
-/* 102 */,
 /* 103 */,
 /* 104 */,
 /* 105 */,
@@ -51104,25 +51082,27 @@ var SalesCarouselComponent = {
 /* 158 */,
 /* 159 */,
 /* 160 */,
-/* 161 */
+/* 161 */,
+/* 162 */,
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(162);
+module.exports = __webpack_require__(164);
 
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__TemplateCache__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__TemplateCache__ = __webpack_require__(206);
 var angular = __webpack_require__(16);
 
 
@@ -51132,7 +51112,7 @@ var angular = __webpack_require__(16);
 
 
 
-var ngRouter = __webpack_require__(69).default;
+var ngRouter = __webpack_require__(70).default;
 
 var app = angular.module('poker', [ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
 
@@ -51146,23 +51126,23 @@ app.run(__WEBPACK_IMPORTED_MODULE_2__Middlewares__["a" /* default */]);
 app.run(__WEBPACK_IMPORTED_MODULE_5__TemplateCache__["a" /* default */]);
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidResponsesController__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_bids_controller__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleController__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFilterController__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_FilterBidResponsesController__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_bids_controller__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleController__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFilterController__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(179);
 var angular = __webpack_require__(16);
 
 
@@ -51204,12 +51184,12 @@ module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controll
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51253,12 +51233,12 @@ LoginController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51312,12 +51292,12 @@ RegisterController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51366,12 +51346,12 @@ ProfileController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterBidsController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51416,12 +51396,12 @@ FilterBidsController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidResponsesController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51467,12 +51447,12 @@ BidResponsesController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export FilterBidResponsesController */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51527,13 +51507,66 @@ FilterBidResponsesController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 170 */,
-/* 171 */
+/* 172 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(173);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var BidsController = function () {
+    function BidsController($window, $http) {
+        _classCallCheck(this, BidsController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.filter = null;
+        this.bids = [];
+
+        //this.showListFiltered();
+    }
+
+    _createClass(BidsController, [{
+        key: 'showListFiltered',
+        value: function showListFiltered() {
+            var _this = this;
+
+            this.$http.get(BIDS_INDEX, {
+                params: { filter: this.filter }
+            }).then(function (response) {
+                console.log(response.data.data);
+                _this.bids = response.data.data;
+            });
+        }
+    }]);
+
+    return BidsController;
+}();
+
+BidsController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 173 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export BIDS_TYPES */
+var BIDS_TYPES = ['matched', 'unmatched', 'settled', 'canceled'];
+
+/***/ }),
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51584,12 +51617,12 @@ SaleController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 172 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFormController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51708,12 +51741,12 @@ SaleFormController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 173 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFilterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51764,12 +51797,12 @@ SaleFilterController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 174 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InvestController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51833,12 +51866,12 @@ InvestController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 175 */
+/* 178 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51892,12 +51925,12 @@ EventController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 176 */
+/* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsListController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51939,7 +51972,7 @@ EventsListController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 177 */
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51958,7 +51991,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(178),
+        template: __webpack_require__(181),
         data: {
             permissions: {
                 except: 'Auth',
@@ -51971,41 +52004,41 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('events', {
         url: '/events',
-        template: __webpack_require__(184)
+        template: __webpack_require__(182)
         /*controller: 'EventsListController',
         controllerAs: 'EvntsLstCtrl',*/
     }).state('invest', {
         url: '/invest',
-        template: __webpack_require__(187)
+        template: __webpack_require__(183)
     }).state('sale', {
         url: '/sales',
-        template: __webpack_require__(185)
+        template: __webpack_require__(184)
         /*  controller: 'SaleController',
           controllerAs: 'SaleCtrl',*/
     }).state('bids', {
         url: '/bids',
         controller: 'BidsController',
-        template: __webpack_require__(186)
+        template: __webpack_require__(185)
     }).state('bids-matched', {
         url: '/bids/matched',
-        template: __webpack_require__(210)
+        template: __webpack_require__(64)
     }).state('bids-unmatched', {
         url: '/bids/unmatched',
-        template: __webpack_require__(210)
+        template: __webpack_require__(64)
     }).state('bids-settled', {
         url: '/bids/settled',
-        template: __webpack_require__(210)
+        template: __webpack_require__(64)
     }).state('bids-canceled', {
         url: '/bids/canceled',
-        template: __webpack_require__(210)
+        template: __webpack_require__(64)
     }).state('terms-and-conditions', {
         url: '/terms-and-conditions',
-        template: __webpack_require__(179)
+        template: __webpack_require__(186)
     }).state('privacy-policy', {
         url: '/privacy-policy',
-        template: __webpack_require__(180)
+        template: __webpack_require__(187)
     }).state('auth', {
-        template: __webpack_require__(181),
+        template: __webpack_require__(188),
         data: {
             permissions: {
                 except: 'Auth',
@@ -52019,12 +52052,12 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
     }).state('auth.login', {
         //ng-controller="LoginController as LgCtrl"
         url: '/login',
-        template: __webpack_require__(182),
+        template: __webpack_require__(189),
         controller: 'LoginController',
         controllerAs: 'LgCtrl'
     }).state('auth.registration', {
         url: '/register',
-        template: __webpack_require__(183),
+        template: __webpack_require__(190),
         //ng-controller="RegisterController as RgCtrl"
         controller: 'RegisterController',
         controllerAs: 'RgCtrl'
@@ -52041,67 +52074,67 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 }
 
 /***/ }),
-/* 178 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without_wr\">\n                <a class=\"contine_without\" ui-sref=\"invest\">\n                    Continue without registration\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 179 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\n            Privacy\n        </div>\n\n\n        <div class=\"data-privacy\">\n            <span>Data & Privacy</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
-
-/***/ }),
-/* 180 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\n            Home\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
-
-/***/ }),
 /* 181 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
+module.exports = "<div class=\"row\">\r\n    <div class=\"login_page-wr col-md-12\">\r\n        <div class=\"login_block\">\r\n            <div class=\"buy_stakes\">\r\n                Buy stakes in poker players in tournaments online and around the world\r\n            </div>\r\n            <div class=\"btn_block\">\r\n                <a ui-sref=\"auth.login\">\r\n                    <div class=\"login_btn login_in\">Log in</div>\r\n                </a>\r\n                <a ui-sref=\"auth.registration\">\r\n                    <div class=\"login_btn login_registration\" >Register</div>\r\n                </a>\r\n            </div>\r\n            <div class=\"contine_without_wr\">\r\n                <a class=\"contine_without\" ui-sref=\"invest\">\r\n                    Continue without registration\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
 /* 182 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n            Please Login\n        </div>\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\n\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\n\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\n\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\n        </form>\n\n    </div>\n</div>\n";
+module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"event_content-wr\">\r\n            <div class=\"event_content__title\">Events\r\n                <div class=\"event_content__see_more\"><a href=\"#\">See all</a></div>\r\n            </div>\r\n            <div class=\"event_content_filter-wr filter-wr\">\r\n                <div class=\"filter_item event_content_filter__\">\r\n                    <select name=\"\" id=\"\">\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                    </select>\r\n                </div>\r\n\r\n\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n            </div>\r\n            <div class=\"events_item-wr\">\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"events_tabs-wr\">\r\n            <div class=\"events_tabs_nav\">\r\n                <ul class=\"events_tabs_list\">\r\n                    <li class=\"events_tabs_item events_tabs_item_active\">Closing soon</li>\r\n                    <li class=\"events_tabs_item\">Lowest markup</li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"table_events_list\">\r\n                <thead class=\"table_events_head\">\r\n                <td>FROM</td>\r\n                <td>EVENT</td>\r\n                <td>buy in</td>\r\n                <td>GTE</td>\r\n                <td>Markup</td>\r\n                <td>share</td>\r\n                <td>Time</td>\r\n                </thead>\r\n                <tbody class=\"table_events_body\">\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 183 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" >\n    <div class=\"personal_inform col-md-12\">\n        <div class=\"personal_inform__title \">\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\n\n            Registration\n        </div>\n\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\n        </form>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"event_content-wr\">\r\n            <div class=\"event_content__title\">Events\r\n                <div class=\"event_content__see_more\"><a href=\"#\">See all</a></div>\r\n            </div>\r\n            <div class=\"event_content_filter-wr filter-wr\">\r\n                <div class=\"filter_item event_content_filter__\">\r\n                    <select name=\"\" id=\"\">\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                        <option value=\"\">Filter value</option>\r\n                    </select>\r\n                </div>\r\n\r\n\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                    <option value=\"\">Filter value</option>\r\n                </select></div>\r\n            </div>\r\n            <div class=\"events_item-wr\">\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n                <div class=\"event_item\">\r\n                    <div class=\"event_item__pic\">\r\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\r\n                    </div>\r\n                    <div class=\"event_info\">\r\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\r\n                        <div class=\"event_info_date-gtd\">\r\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\r\n\r\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\r\n                        </div>\r\n\r\n                    </div>\r\n\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"events_tabs-wr\">\r\n            <div class=\"events_tabs_nav\">\r\n                <ul class=\"events_tabs_list\">\r\n                    <li class=\"events_tabs_item events_tabs_item_active\">Closing soon</li>\r\n                    <li class=\"events_tabs_item\">Lowest markup</li>\r\n                </ul>\r\n            </div>\r\n            <table class=\"table_events_list\">\r\n                <thead class=\"table_events_head\">\r\n                <td>FROM</td>\r\n                <td>EVENT</td>\r\n                <td>buy in</td>\r\n                <td>GTE</td>\r\n                <td>Markup</td>\r\n                <td>share</td>\r\n                <td>Time</td>\r\n                </thead>\r\n                <tbody class=\"table_events_body\">\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"t_from t_from_event\">\r\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\r\n                                                     alt=\"profile photo\">\r\n                        </div>\r\n                        <span>Austin Vargas</span></td>\r\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\r\n                    <td class=\"t_buy_in\">£1,000</td>\r\n                    <td class=\"t_gte\">£500,000</td>\r\n                    <td class=\"t_markup\">1.22</td>\r\n                    <td class=\"t_share\">20%</td>\r\n                    <td class=\"t_time\">< 24 hours</td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 184 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"event_content-wr\">\n            <div class=\"event_content__title\">Events\n                <div class=\"event_content__see_more\"><a href=\"#\">See all</a></div>\n            </div>\n            <div class=\"event_content_filter-wr filter-wr\">\n                <div class=\"filter_item event_content_filter__\">\n                    <select name=\"\" id=\"\">\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                    </select>\n                </div>\n\n\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n            </div>\n            <div class=\"events_item-wr\">\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n            </div>\n\n        </div>\n        <div class=\"events_tabs-wr\">\n            <div class=\"events_tabs_nav\">\n                <ul class=\"events_tabs_list\">\n                    <li class=\"events_tabs_item events_tabs_item_active\">Closing soon</li>\n                    <li class=\"events_tabs_item\">Lowest markup</li>\n                </ul>\n            </div>\n            <table class=\"table_events_list\">\n                <thead class=\"table_events_head\">\n                <td>FROM</td>\n                <td>EVENT</td>\n                <td>buy in</td>\n                <td>GTE</td>\n                <td>Markup</td>\n                <td>share</td>\n                <td>Time</td>\n                </thead>\n                <tbody class=\"table_events_body\">\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                </tbody>\n            </table>\n\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"full_sc-wr\">\r\n            <div class=\"right_side_content-wr\">\r\n                <div class=\"right_side_content\">\r\n                    <div class=\"right_side_content__title\">\r\n                        My sale\r\n                        <div class=\"right_side_content__close\"></div>\r\n                    </div>\r\n                    <div class=\"profile_status\">\r\n                        <div>\r\n                            <div>\r\n                                <div class=\"profile_status__event\">MILLIONS Russia, 1A</div>\r\n                                <span class=\"buyin_span\">Buy in $3,234 + $2,004</span>\r\n                            </div>\r\n                            <div class=\"gte_and_by\">\r\n                                <div class=\"profile_status__buyin\">£1,000</div>\r\n                                <div class=\"profile_status__gte\">£500,000 GTE</div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"d-flex\">\r\n                            <div class=\"profile_status__markup\"><span>Closes in</span><br>73 days</div>\r\n                            <div class=\"profile_status__share\"><span>Share sold</span><br>5%</div>\r\n                            <div class=\"profile_status__value\"><span>Amount raised</span><br>$1,938</div>\r\n                        </div>\r\n                        <div class=\"d-flex\">\r\n                            <div class=\"profile_status__markup\"><span>Markup</span><br>1.20</div>\r\n                            <div class=\"profile_status__share\"><span>Share</span><br>30%</div>\r\n                            <div class=\"profile_status__value\"><span>Value</span><br>1.20</div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"unmatched_bids bids_status\">\r\n                        <span>UNMATCHED BIDS</span>\r\n                        <div>\r\n                            <input type=\"text\" placeholder=\"1.20\">\r\n                            <input type=\"text\" placeholder=\"1.53%\">\r\n                            <input type=\"text\" placeholder=\"$1,182.22\">\r\n                            <div class=\"confirm_bids\"></div>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"text\" placeholder=\"1.09\">\r\n                            <input type=\"text\" placeholder=\"0.38%\">\r\n                            <input type=\"text\" placeholder=\"$443\">\r\n                            <div class=\"confirm_bids\"></div>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"text\" placeholder=\"1.20\">\r\n                            <input type=\"text\" placeholder=\"1.53%\">\r\n                            <input type=\"text\" placeholder=\"$1,182.22\">\r\n                            <div class=\"confirm_bids\"></div>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"text\" placeholder=\"1.09\">\r\n                            <input type=\"text\" placeholder=\"0.38%\">\r\n                            <input type=\"text\" placeholder=\"$443\">\r\n                            <div class=\"confirm_bids\"></div>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"text\" placeholder=\"1.20\">\r\n                            <input type=\"text\" placeholder=\"1.53%\">\r\n                            <input type=\"text\" placeholder=\"$1,182.22\">\r\n                            <div class=\"confirm_bids\"></div>\r\n                        </div>\r\n                        <div>\r\n                            <input type=\"text\" placeholder=\"1.09\">\r\n                            <input type=\"text\" placeholder=\"0.38%\">\r\n                            <input type=\"text\" placeholder=\"$443\">\r\n                            <div class=\"confirm_bids confirm_bids_accept\"></div>\r\n                        </div>\r\n\r\n                    </div>\r\n                    <div class=\"right_side_content__footer\">\r\n                        <div class=\"right_side_content__footer_btn\">\r\n                            <div class=\"cansel_sale\">Cancel sale</div>\r\n                            <div class=\"pay_remaining\">Pay remaining $3,245</div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"accept-wr\">\r\n                <div class=\"log_out_profile change_share\">\r\n                    <div class=\"log_out_text\">\r\n                        Change share\r\n                        <span>This changes will hold $3,234 in your account. Continue?</span>\r\n                    </div>\r\n                    <div class=\"log_out_btn\">\r\n                        <div class=\"log_out_cancel\">Cancel</div>\r\n                        <div class=\"log_out_ok\">Accept</div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"log_out_profile accept_bid\">\r\n                    <div class=\"log_out_text\">\r\n                        <div class=\"accept_changed_input\">\r\n                            <input type=\"text\" placeholder=\"1.20\">\r\n                            <input type=\"text\" placeholder=\"1.53%\">\r\n                            <input type=\"text\" placeholder=\"$1,182.22\">\r\n                        </div>\r\n                        <span>Accept bid. Your markup will be decreased to 1.1 to accept all bids</span>\r\n                    </div>\r\n                    <div class=\"log_out_btn\">\r\n                        <div class=\"log_out_cancel\">Cancel</div>\r\n                        <div class=\"log_out_ok\">Accept</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 185 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"full_sc-wr\">\n            <div class=\"right_side_content-wr\">\n                <div class=\"right_side_content\">\n                    <div class=\"right_side_content__title\">\n                        My sale\n                        <div class=\"right_side_content__close\"></div>\n                    </div>\n                    <div class=\"profile_status\">\n                        <div>\n                            <div>\n                                <div class=\"profile_status__event\">MILLIONS Russia, 1A</div>\n                                <span class=\"buyin_span\">Buy in $3,234 + $2,004</span>\n                            </div>\n                            <div class=\"gte_and_by\">\n                                <div class=\"profile_status__buyin\">£1,000</div>\n                                <div class=\"profile_status__gte\">£500,000 GTE</div>\n                            </div>\n                        </div>\n                        <div class=\"d-flex\">\n                            <div class=\"profile_status__markup\"><span>Closes in</span><br>73 days</div>\n                            <div class=\"profile_status__share\"><span>Share sold</span><br>5%</div>\n                            <div class=\"profile_status__value\"><span>Amount raised</span><br>$1,938</div>\n                        </div>\n                        <div class=\"d-flex\">\n                            <div class=\"profile_status__markup\"><span>Markup</span><br>1.20</div>\n                            <div class=\"profile_status__share\"><span>Share</span><br>30%</div>\n                            <div class=\"profile_status__value\"><span>Value</span><br>1.20</div>\n                        </div>\n                    </div>\n                    <div class=\"unmatched_bids bids_status\">\n                        <span>UNMATCHED BIDS</span>\n                        <div>\n                            <input type=\"text\" placeholder=\"1.20\">\n                            <input type=\"text\" placeholder=\"1.53%\">\n                            <input type=\"text\" placeholder=\"$1,182.22\">\n                            <div class=\"confirm_bids\"></div>\n                        </div>\n                        <div>\n                            <input type=\"text\" placeholder=\"1.09\">\n                            <input type=\"text\" placeholder=\"0.38%\">\n                            <input type=\"text\" placeholder=\"$443\">\n                            <div class=\"confirm_bids\"></div>\n                        </div>\n                        <div>\n                            <input type=\"text\" placeholder=\"1.20\">\n                            <input type=\"text\" placeholder=\"1.53%\">\n                            <input type=\"text\" placeholder=\"$1,182.22\">\n                            <div class=\"confirm_bids\"></div>\n                        </div>\n                        <div>\n                            <input type=\"text\" placeholder=\"1.09\">\n                            <input type=\"text\" placeholder=\"0.38%\">\n                            <input type=\"text\" placeholder=\"$443\">\n                            <div class=\"confirm_bids\"></div>\n                        </div>\n                        <div>\n                            <input type=\"text\" placeholder=\"1.20\">\n                            <input type=\"text\" placeholder=\"1.53%\">\n                            <input type=\"text\" placeholder=\"$1,182.22\">\n                            <div class=\"confirm_bids\"></div>\n                        </div>\n                        <div>\n                            <input type=\"text\" placeholder=\"1.09\">\n                            <input type=\"text\" placeholder=\"0.38%\">\n                            <input type=\"text\" placeholder=\"$443\">\n                            <div class=\"confirm_bids confirm_bids_accept\"></div>\n                        </div>\n\n                    </div>\n                    <div class=\"right_side_content__footer\">\n                        <div class=\"right_side_content__footer_btn\">\n                            <div class=\"cansel_sale\">Cancel sale</div>\n                            <div class=\"pay_remaining\">Pay remaining $3,245</div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"accept-wr\">\n                <div class=\"log_out_profile change_share\">\n                    <div class=\"log_out_text\">\n                        Change share\n                        <span>This changes will hold $3,234 in your account. Continue?</span>\n                    </div>\n                    <div class=\"log_out_btn\">\n                        <div class=\"log_out_cancel\">Cancel</div>\n                        <div class=\"log_out_ok\">Accept</div>\n                    </div>\n                </div>\n                <div class=\"log_out_profile accept_bid\">\n                    <div class=\"log_out_text\">\n                        <div class=\"accept_changed_input\">\n                            <input type=\"text\" placeholder=\"1.20\">\n                            <input type=\"text\" placeholder=\"1.53%\">\n                            <input type=\"text\" placeholder=\"$1,182.22\">\n                        </div>\n                        <span>Accept bid. Your markup will be decreased to 1.1 to accept all bids</span>\n                    </div>\n                    <div class=\"log_out_btn\">\n                        <div class=\"log_out_cancel\">Cancel</div>\n                        <div class=\"log_out_ok\">Accept</div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"deskwr\">\r\n    <main-menu></main-menu>\r\n    <div class=\"main_content\">\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Matched Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-matched\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__green\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__green\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__green\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Unmatched Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-unmatched\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__red\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__red\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__red\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Settled Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-settled\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__blue\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__blue\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__blue\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"bids_container\">\r\n            <div class=\"bids_title\">\r\n                <div class=\"bids_title__text\">Canceled Bids</div>\r\n                <a class=\"bids_title__link\" ui-sref=\"bids-canceled\">See all</a>\r\n            </div>\r\n            <div class=\"bids_row\">\r\n                <div class=\"bids_card bids_card__grey\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/players.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__grey\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/players.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n                <div class=\"bids_card bids_card__grey\">\r\n                    <div class=\"bids_card__title\">\r\n                        <div class=\"bids_card__title_img\">\r\n                            <img src=\"/images/players.png\" alt=\"\"/>\r\n                        </div>\r\n                        <div class=\"bids_card__title_text\">\r\n                            <span>Louise Romero</span>\r\n                            <span>MILLIONS Russia, 1A</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"bids_card__price\">\r\n                        <span>£1,000</span>\r\n                        <div class=\"bids_card__price_dot\"></div>\r\n                        <span>£500,000 GTE</span>\r\n                    </div>\r\n                    <div class=\"bids_card__options\">\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Markup</span>\r\n                            <span>1.20</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Value</span>\r\n                            <span>£2,404.08</span>\r\n                        </div>\r\n                        <div class=\"bids_card__options_column\">\r\n                            <span>Start time</span>\r\n                            <span>Closed</span>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
 /* 186 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Matched Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-matched\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__green\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__green\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__green\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_4.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Unmatched Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-unmatched\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__red\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__red\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__red\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_2.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Settled Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-settled\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__blue\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__blue\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__blue\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/pl_5.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class=\"bids_container\">\n            <div class=\"bids_title\">\n                <div class=\"bids_title__text\">Canceled Bids</div>\n                <a class=\"bids_title__link\" ui-sref=\"bids-canceled\">See all</a>\n            </div>\n            <div class=\"bids_row\">\n                <div class=\"bids_card bids_card__grey\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/players.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__grey\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/players.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"bids_card bids_card__grey\">\n                    <div class=\"bids_card__title\">\n                        <div class=\"bids_card__title_img\">\n                            <img src=\"/images/players.png\" alt=\"\"/>\n                        </div>\n                        <div class=\"bids_card__title_text\">\n                            <span>Louise Romero</span>\n                            <span>MILLIONS Russia, 1A</span>\n                        </div>\n                    </div>\n                    <div class=\"bids_card__price\">\n                        <span>£1,000</span>\n                        <div class=\"bids_card__price_dot\"></div>\n                        <span>£500,000 GTE</span>\n                    </div>\n                    <div class=\"bids_card__options\">\n                        <div class=\"bids_card__options_column\">\n                            <span>Markup</span>\n                            <span>1.20</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Value</span>\n                            <span>£2,404.08</span>\n                        </div>\n                        <div class=\"bids_card__options_column\">\n                            <span>Start time</span>\n                            <span>Closed</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"auth.registration\" ><div class=\"goback\"></div></a>\r\n            Privacy\r\n        </div>\r\n\r\n\r\n        <div class=\"data-privacy\">\r\n            <span>Data & Privacy</span>\r\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\r\n        </div>\r\n        <div class=\"check-box-wr\">\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"sms_new\" checked>\r\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\r\n\r\n            </div>\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"email_new\" checked>\r\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\r\n\r\n            </div>\r\n        </div>\r\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\r\n\r\n\r\n\r\n        <div class=\"see_policy\">\r\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 187 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <div class=\"event_content-wr\">\n            <div class=\"event_content__title\">Events\n                <div class=\"event_content__see_more\"><a href=\"#\">See all</a></div>\n            </div>\n            <div class=\"event_content_filter-wr filter-wr\">\n                <div class=\"filter_item event_content_filter__\">\n                    <select name=\"\" id=\"\">\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                        <option value=\"\">Filter value</option>\n                    </select>\n                </div>\n\n\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n                <div class=\"filter_item event_content_filter__\"><select name=\"\" id=\"\">\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                    <option value=\"\">Filter value</option>\n                </select></div>\n            </div>\n            <div class=\"events_item-wr\">\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_1.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_2.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_3.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_4.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_5.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n                <div class=\"event_item\">\n                    <div class=\"event_item__pic\">\n                        <img src=\"/images/desk/event_pic_6.png\" alt=\"event\">\n                    </div>\n                    <div class=\"event_info\">\n                        <div class=\"event_info_name\">WSOP International Circuit - Rotterdam</div>\n                        <div class=\"event_info_date-gtd\">\n                            <div class=\"event_info_date\">Jul 20 – Aug 10</div>\n\n                            <div class=\"event_info_gtd\">£1,000,000 GTD</div>\n                        </div>\n\n                    </div>\n\n                </div>\n            </div>\n\n        </div>\n        <div class=\"events_tabs-wr\">\n            <div class=\"events_tabs_nav\">\n                <ul class=\"events_tabs_list\">\n                    <li class=\"events_tabs_item events_tabs_item_active\">Closing soon</li>\n                    <li class=\"events_tabs_item\">Lowest markup</li>\n                </ul>\n            </div>\n            <table class=\"table_events_list\">\n                <thead class=\"table_events_head\">\n                <td>FROM</td>\n                <td>EVENT</td>\n                <td>buy in</td>\n                <td>GTE</td>\n                <td>Markup</td>\n                <td>share</td>\n                <td>Time</td>\n                </thead>\n                <tbody class=\"table_events_body\">\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from t_from_event\">\n                        <div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\"\n                                                     alt=\"profile photo\">\n                        </div>\n                        <span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_share\">20%</td>\n                    <td class=\"t_time\">< 24 hours</td>\n                </tr>\n                </tbody>\n            </table>\n\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"auth.registration\"><div class=\"goback\"></div></a>\r\n            Home\r\n        </div>\r\n        <div>\r\n            What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n        </div>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 188 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <ui-view></ui-view>\r\n</div>";
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\r\n            Please Login\r\n        </div>\r\n        <form ng-submit=\"LgCtrl.sendAuthData($event)\" class=\"form_personal_inf\">\r\n\r\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"LgCtrl.userEmail\" required>\r\n\r\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"LgCtrl.userPassword\" required>\r\n\r\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"LgCtrl.sendAuthData($event)\">Enter</button>\r\n        </form>\r\n\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" >\r\n    <div class=\"personal_inform col-md-12\">\r\n        <div class=\"personal_inform__title \">\r\n            <a ui-sref=\"index\"><div class=\"goback\"></div></a>\r\n\r\n            Registration\r\n        </div>\r\n\r\n        <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"form_personal_inf\">\r\n            <input type=\"text\"  placeholder=\"Your name\" ng-model=\"RgCtrl.userName\"  required>\r\n            <input type=\"text\"  placeholder=\"Your e-mail\" ng-model=\"RgCtrl.userEmail\" required>\r\n            <input type=\"text\"  placeholder=\"Your age\" ng-model=\"RgCtrl.userAge\" required>\r\n            <input type=\"password\"  placeholder=\"Your password\" ng-model=\"RgCtrl.userPassword\" required>\r\n            <input type=\"password\"  placeholder=\"Confirm password\"  ng-model=\"RgCtrl.passwordConfirmation\" required>\r\n            <button class=\"button\" type=\"submit\"  style=\"border-radius:10pt;\" ng-click=\"RgCtrl.sendRegisterForm($event)\">continue</button>\r\n        </form>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52119,17 +52152,17 @@ function middlewares(PermRoleStore) {
 }
 
 /***/ }),
-/* 189 */
+/* 192 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_main_menu_main_menu_controller__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_main_menu_main_menu_controller__ = __webpack_require__(205);
 
 
 
@@ -52152,13 +52185,7 @@ module.component('mainMenu', __WEBPACK_IMPORTED_MODULE_6__Components_main_menu_m
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 190 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\n    <div class=\"tabs-wr__title sale_tabs__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"sale-filter({filter: key})\" class=\"see_all\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\n        </div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 191 */
+/* 193 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52184,19 +52211,19 @@ var BidsComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(192),
+    template: __webpack_require__(194),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 192 */
+/* 194 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"binds-item\"\n         ng-class=\"{\n                    'binds-item__matched':      item.status === 1,\n                    'binds-item__unmatched':    item.status === 2,\n                    'binds-item__settled':      item.status === 3,\n                    'binds-item__canceled':     item.status === 4,\n                     }\"\n         ng-repeat=\"item in $ctrl.bids\">\n        <!--<div class=\"binds-item-wr\">-->\n        <!--</div>-->\n    <div class=\"binds-item__profile_info\">\n        <div class=\"profile__photo\">\n            <img src=\"/images/players.png\" alt=\"\">\n        </div>\n        <div class=\"profile_text\">\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\n\n            </div>\n            <div class=\"profile__country\">\n                MILLIONS Russia, 1A\n            </div>\n\n        </div>\n\n    </div>\n    <div class=\"loop_counter\">\n        Second loop\n    </div>\n    <div class=\"binds-item__game_info\">\n        <div class=\"geme__text\">\n            <div class=\"by_in\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n        <div class=\"game_atrs\">\n            <div class=\"game_atrs__markup\">\n                <span>Markup</span><br>\n                1.20\n            </div>\n            <div class=\"game_atrs__value\">\n                <span>Value</span><br>\n                £2,404.08\n            </div>\n            <div class=\"game_atrs__date_start\">\n                <span>Date of Start</span><br>\n                1 Sep\n            </div>\n        </div>\n    </div>\n    </div>\n";
+module.exports = "<div class=\"binds-item\"\r\n         ng-class=\"{\r\n                    'binds-item__matched':      item.status === 1,\r\n                    'binds-item__unmatched':    item.status === 2,\r\n                    'binds-item__settled':      item.status === 3,\r\n                    'binds-item__canceled':     item.status === 4,\r\n                     }\"\r\n         ng-repeat=\"item in $ctrl.bids\">\r\n        <!--<div class=\"binds-item-wr\">-->\r\n        <!--</div>-->\r\n    <div class=\"binds-item__profile_info\">\r\n        <div class=\"profile__photo\">\r\n            <img src=\"/images/players.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"profile_text\">\r\n            <div class=\"profile__name\" ng-bind=\"item.investor.name\">\r\n\r\n            </div>\r\n            <div class=\"profile__country\">\r\n                MILLIONS Russia, 1A\r\n            </div>\r\n\r\n        </div>\r\n\r\n    </div>\r\n    <div class=\"loop_counter\">\r\n        Second loop\r\n    </div>\r\n    <div class=\"binds-item__game_info\">\r\n        <div class=\"geme__text\">\r\n            <div class=\"by_in\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n        <div class=\"game_atrs\">\r\n            <div class=\"game_atrs__markup\">\r\n                <span>Markup</span><br>\r\n                1.20\r\n            </div>\r\n            <div class=\"game_atrs__value\">\r\n                <span>Value</span><br>\r\n                £2,404.08\r\n            </div>\r\n            <div class=\"game_atrs__date_start\">\r\n                <span>Date of Start</span><br>\r\n                1 Sep\r\n            </div>\r\n        </div>\r\n    </div>\r\n    </div>\r\n";
 
 /***/ }),
-/* 193 */
+/* 195 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52224,19 +52251,19 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(194),
+    template: __webpack_require__(196),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 194 */
+/* 196 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"tabs-wr__title\">\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\">See All</a>\n    </div>\n    <div class=\"slider_container\">\n        <div class=\"swipe-wr\">\n            <bids class=\"bids_row\"\n                    bids=\"value\">\n            </bids>\n        </div>\n    </div>\n</div>\n";
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\r\n    <div class=\"tabs-wr__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <a ui-sref=\"bids-filter({filter: key})\" class=\"see_all\">See All</a>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <bids class=\"bids_row\"\r\n                    bids=\"value\">\r\n            </bids>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 195 */
+/* 197 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52286,19 +52313,19 @@ var EventsComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(196),
+    template: __webpack_require__(198),
     controller: Events,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 196 */
+/* 198 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n    <div class=\"event-item-wr\">\n\n        <a ui-sref=\"event({id:item.id})\">\n            <div class=\"event-item__img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n        <div class=\"event-item__text\">\n            <a href=\"\">\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            </a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n        </div>\n\n    </div>\n</div>\n\n\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"selected_event\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n    </div>\n    <div class=\"selected_event_info event_item col-md-12\">\n\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\n            <a ui-sref=\"evet({id:item.id})\">See info</a>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\n        </div>\n        <a href=\"\">\n            <div class=\"see_more\"></div>\n        </a>\n        <div ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\n        <div ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\n\n            <div ng-bind=\"subevent.title\"></div>\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div> . <div class=\"event-item__summa\">£ {%subevent.fund%} GTD</div>\n            <div ng-bind=\"item.date\"></div>\n        </div>\n    </div>\n\n\n</div>\n";
+module.exports = "<div class=\"event-item\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\r\n    <div class=\"event-item-wr\">\r\n\r\n        <a ui-sref=\"event({id:item.id})\">\r\n            <div class=\"event-item__img\">\r\n                <img src=\"/images/event.png\" alt=\"\">\r\n            </div>\r\n        </a>\r\n        <div class=\"event-item__text\">\r\n            <a href=\"\">\r\n                <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\r\n            </a>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\r\n\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"event_item_rpt\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\r\n\r\n    <div class=\"selected_event\">\r\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"selected_event_info event_item col-md-12\">\r\n\r\n        <div class=\"event_list-wr\" ng-click=\"$ctrl.openDetail(item.id)\">\r\n\r\n\r\n            <div class=\"event-item__title\" ng-bind=\"item.title\"></div>\r\n            <a ui-sref=\"evet({id:item.id})\">See info</a>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div>\r\n            <div class=\"event-item__date\" ng-bind=\"item.date\"></div>\r\n        </div>\r\n        <a href=\"\">\r\n            <div class=\"see_more\"></div>\r\n        </a>\r\n        <div ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\r\n        <div ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\r\n\r\n            <div ng-bind=\"subevent.title\"></div>\r\n            <div class=\"event-item__summa\">£ {%item.fund%} GTD</div> . <div class=\"event-item__summa\">£ {%subevent.fund%} GTD</div>\r\n            <div ng-bind=\"item.date\"></div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n</div>\r\n";
 
 /***/ }),
-/* 197 */
+/* 199 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52325,19 +52352,19 @@ var EventsCarouselComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(198),
+    template: __webpack_require__(200),
     controller: EventsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 198 */
+/* 200 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"slider_container\">\n    <div class=\"swipe-wr\">\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n    </div>\n</div>";
+module.exports = "<div class=\"slider_container\">\r\n    <div class=\"swipe-wr\">\r\n       <events class=\"events_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 199 */
+/* 201 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52369,94 +52396,58 @@ var SalesComponent = {
         sales: '<',
         state: '<'
     },
-    template: __webpack_require__(200),
+    template: __webpack_require__(202),
     controller: Sales,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 200 */
+/* 202 */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"as__item-wr as__item-wr-active\"\n     ng-if=\"$ctrl.state === 'list'\"\n     ng-repeat=\"item in $ctrl.sales\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     >\n\n    <div class=\"as__item__text\">\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\n        <a ui-sref=\"sale-edit({id: item.id})\">Edit</a>\n        <div class=\"loop_counter loop_counter_sale\" ng-bind=\"item.sub_event_id\">\n            Second loop\n        </div>\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"as__item__tags as__item__tags-active\">\n        <div class=\"tags_closes\">\n            <span>Closes</span><br>\n            73 days\n        </div>\n        <div class=\"tags_markup\">\n            <span>Markup</span><br>\n            1.20\n        </div>\n        <div class=\"tags_average\">\n            <span>Average markup</span><br>\n            0\n        </div>\n        <div class=\"tags_share\">\n            <span>Share sold</span><br>\n            0% of 20%\n        </div>\n        <div class=\"tags_amount\">\n            <span>Amount raised</span><br>\n            $400 of $1,000\n        </div>\n    </div>\n</div>\n\n\n<div class=\"as__item-wr active_sale\" ng-click=\"$ctrl.click()\" ng-if=\"$ctrl.state === 'row'\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     ng-repeat=\"item in $ctrl.sales\">\n    <div class=\"as__item__text\">\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"as__item__tags\">\n        <div class=\"tags_closes\">\n            <span>Closes</span><br>\n            73 days\n        </div>\n        <div class=\"tags_markup\">\n            <span>Markup</span><br>\n            <span ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"tags_share\">\n            <span>Share sold</span><br>\n            0% of 20%\n        </div>\n        <div class=\"tags_amount\">\n            <span>Amount raised</span><br>\n            $400 of $1,000\n        </div>\n    </div>\n\n</div>\n\n\n<div class=\"binds-item\"\n     ng-if=\"$ctrl.state === 'invest'\"\n     ng-repeat=\"item in $ctrl.sales\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n>\n    <div class=\"binds-item-wr\">\n        <div class=\"binds-item__profile_info\">\n            <div class=\"profile__photo\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"profile__name\" ng-bind=\"item.creator.name\">\n\n                </div>\n                <div class=\"profile__country\">\n                    MILLIONS Russia, 1A\n                </div>\n\n            </div>\n\n        </div>\n        <div class=\"loop_counter\" ng-bind=\"item.subevent.title\">\n\n        </div>\n        <div class=\"binds-item__game_info\">\n            <div class=\"geme__text\">\n                <div class=\"by_in\">\n                    Buy in £ <span ng-bind=\"item.subevent.buy_in\"></span>\n                </div>\n                <div class=\"gte\">\n                    £ <span ng-bind=\"item.subevent.fund\"></span> GTE\n                </div>\n            </div>\n            <div class=\"game_atrs\">\n                <div class=\"game_atrs__markup\">\n                    <span>Markup</span><br>\n                    <span ng-bind=\"item.markup\"></span>\n                </div>\n                <div class=\"game_atrs__value\">\n                    <span>Value</span><br>\n                    £<span ng-bind=\"item.amount\"></span>\n                </div>\n                <div class=\"game_atrs__date_start\">\n                    <span>Date of Start</span><br>\n\n                    <span ng-bind=\"item.subevent.date\"></span>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
+module.exports = "\r\n<div class=\"as__item-wr as__item-wr-active\"\r\n     ng-if=\"$ctrl.state === 'list'\"\r\n     ng-repeat=\"item in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     >\r\n\r\n    <div class=\"as__item__text\">\r\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\r\n        <a ui-sref=\"sale-edit({id: item.id})\">Edit</a>\r\n        <div class=\"loop_counter loop_counter_sale\" ng-bind=\"item.sub_event_id\">\r\n            Second loop\r\n        </div>\r\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"as__item__tags as__item__tags-active\">\r\n        <div class=\"tags_closes\">\r\n            <span>Closes</span><br>\r\n            73 days\r\n        </div>\r\n        <div class=\"tags_markup\">\r\n            <span>Markup</span><br>\r\n            1.20\r\n        </div>\r\n        <div class=\"tags_average\">\r\n            <span>Average markup</span><br>\r\n            0\r\n        </div>\r\n        <div class=\"tags_share\">\r\n            <span>Share sold</span><br>\r\n            0% of 20%\r\n        </div>\r\n        <div class=\"tags_amount\">\r\n            <span>Amount raised</span><br>\r\n            $400 of $1,000\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"as__item-wr active_sale\" ng-click=\"$ctrl.click()\" ng-if=\"$ctrl.state === 'row'\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     ng-repeat=\"item in $ctrl.sales\">\r\n    <div class=\"as__item__text\">\r\n        <div class=\"as__item__title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"as__item__by\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"as__item__tags\">\r\n        <div class=\"tags_closes\">\r\n            <span>Closes</span><br>\r\n            73 days\r\n        </div>\r\n        <div class=\"tags_markup\">\r\n            <span>Markup</span><br>\r\n            <span ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"tags_share\">\r\n            <span>Share sold</span><br>\r\n            0% of 20%\r\n        </div>\r\n        <div class=\"tags_amount\">\r\n            <span>Amount raised</span><br>\r\n            $400 of $1,000\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n<div class=\"binds-item\"\r\n     ng-if=\"$ctrl.state === 'invest'\"\r\n     ng-repeat=\"item in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n>\r\n    <div class=\"binds-item-wr\">\r\n        <div class=\"binds-item__profile_info\">\r\n            <div class=\"profile__photo\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"profile__name\" ng-bind=\"item.creator.name\">\r\n\r\n                </div>\r\n                <div class=\"profile__country\">\r\n                    MILLIONS Russia, 1A\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"loop_counter\" ng-bind=\"item.subevent.title\">\r\n\r\n        </div>\r\n        <div class=\"binds-item__game_info\">\r\n            <div class=\"geme__text\">\r\n                <div class=\"by_in\">\r\n                    Buy in £ <span ng-bind=\"item.subevent.buy_in\"></span>\r\n                </div>\r\n                <div class=\"gte\">\r\n                    £ <span ng-bind=\"item.subevent.fund\"></span> GTE\r\n                </div>\r\n            </div>\r\n            <div class=\"game_atrs\">\r\n                <div class=\"game_atrs__markup\">\r\n                    <span>Markup</span><br>\r\n                    <span ng-bind=\"item.markup\"></span>\r\n                </div>\r\n                <div class=\"game_atrs__value\">\r\n                    <span>Value</span><br>\r\n                    £<span ng-bind=\"item.amount\"></span>\r\n                </div>\r\n                <div class=\"game_atrs__date_start\">\r\n                    <span>Date of Start</span><br>\r\n\r\n                    <span ng-bind=\"item.subevent.date\"></span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div class=\"main_content\">\n        <br>\n        <div class=\"bids_content_wr bids_content_matched\">\n            <div class=\"bids_nav\">\n                <ul class=\"bids_nav_list\">\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Matched</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Unmatched</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Settled</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Canceled</a></li>\n                </ul>\n            </div>\n            <table class=\"bids_table\">\n                <thead class=\"bids_table_head\">\n                <td class=\"t_h_from\">FROM</td>\n                <td>EVENT</td>\n                <td>buy in</td>\n                <td>GTE</td>\n                <td>Markup</td>\n                <td>VALUE</td>\n                <td>Time</td>\n                </thead>\n                <tbody class=\"bids_table_body\">\n\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.10</td>\n                    <td class=\"t_value\">£2,746</td>\n                    <td class=\"t_time\">Sep 1</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.10</td>\n                    <td class=\"t_value\">£2,746</td>\n                    <td class=\"t_time\">Sep 1</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.10</td>\n                    <td class=\"t_value\">£2,746</td>\n                    <td class=\"t_time\">Sep 1</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.10</td>\n                    <td class=\"t_value\">£2,746</td>\n                    <td class=\"t_time\">Sep 1</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.10</td>\n                    <td class=\"t_value\">£2,746</td>\n                    <td class=\"t_time\">Sep 1</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.10</td>\n                    <td class=\"t_value\">£2,746</td>\n                    <td class=\"t_time\">Sep 1</td>\n                </tr>\n\n\n                </tbody>\n            </table>\n        </div>\n<br>\n\n        <div class=\"bids_content_wr bids_content_unmatched\">\n            <div class=\"bids_nav\">\n                <ul class=\"bids_nav_list\">\n                    <li class=\"bids_nav_item\"><a href=\"#\">Matched</a></li>\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Unmatched</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Settled</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Canceled</a></li>\n                </ul>\n            </div>\n            <table class=\"bids_table\">\n                <thead class=\"bids_table_head\">\n                <td class=\"t_h_from\">FROM</td>\n                <td>EVENT</td>\n                <td>buy in</td>\n                <td>GTE</td>\n                <td>Sale</td>\n                <td>BID</td>\n                <td>VALUE</td>\n                <td>T. until close</td>\n                </thead>\n                <tbody class=\"bids_table_body\">\n\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_sale\">1.22</td>\n                    <td class=\"t_bid\">1.10</td>\n                    <td class=\"t_value\">$100</td>\n                    <td class=\"t_close\">2 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Theodore Guerrero</span></td>\n                    <td class=\"t_event\">Barrière Poker Tour</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.2</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$200</td>\n                    <td class=\"t_close\">10 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_3.png\" alt=\"profile photo\"></div><span>Mark Patterson</span></td>\n                    <td class=\"t_event\">WSOP International Circuit...</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_sale\">1.18</td>\n                    <td class=\"t_bid\">1.10</td>\n                    <td class=\"t_value\">$203</td>\n                    <td class=\"t_close\">10 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_4.png\" alt=\"profile photo\"></div><span>Theodore Curtis</span></td>\n                    <td class=\"t_event\">International Poker Cup</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.15</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$827</td>\n                    <td class=\"t_close\">11 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_5.png\" alt=\"profile photo\"></div><span>Mike Walters</span></td>\n                    <td class=\"t_event\">International Poker Cup</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.15</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$827</td>\n                    <td class=\"t_close\">14 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_6.png\" alt=\"profile photo\"></div><span>Joseph Padilla</span></td>\n                    <td class=\"t_event\">Barrière Poker Tour</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.15</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$827</td>\n                    <td class=\"t_close\">20 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_7.png\" alt=\"profile photo\"></div><span>Joe Ramos</span></td>\n                    <td class=\"t_event\">Barrière Poker Tour</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.15</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$827</td>\n                    <td class=\"t_close\">20 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_8.png\" alt=\"profile photo\"></div><span>Oscar Mendez</span></td>\n                    <td class=\"t_event\">Barrière Poker Tour</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.15</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$827</td>\n                    <td class=\"t_close\">20 days</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_9.png\" alt=\"profile photo\"></div><span>Noah Alexander</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£5,000</td>\n                    <td class=\"t_gte\">£1,000,000</td>\n                    <td class=\"t_sale\">1.15</td>\n                    <td class=\"t_bid\">1.11</td>\n                    <td class=\"t_value\">$827</td>\n                    <td class=\"t_close\">22 days</td>\n                </tr>\n\n                </tbody>\n            </table>\n        </div>\n\n<br>\n\n        <div class=\"bids_content_wr bids_content_settled\">\n            <div class=\"bids_nav\">\n                <ul class=\"bids_nav_list\">\n                    <li class=\"bids_nav_item\"><a href=\"#\">Matched</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Unmatched</a></li>\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Settled</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Canceled</a></li>\n                </ul>\n            </div>\n            <table class=\"bids_table\">\n                <thead class=\"bids_table_head\">\n                <td class=\"t_h_from\">FROM</td>\n                <td>EVENT</td>\n                <td>buy in</td>\n                <td>GTE</td>\n                <td>MARKUP</td>\n                <td>VALUE</td>\n                <td>STATUS</td>\n                <td>Outcome</td>\n                </thead>\n                <tbody class=\"bids_table_body\">\n\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_minus\">-$2,242</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_status\">Closed</td>\n                    <td class=\"t_outcome t_outcome_plus\">+$2,182</td>\n                </tr>\n\n\n                </tbody>\n            </table>\n        </div>\n\n\n        <br>\n        <div class=\"bids_content_wr bids_content_canceled\">\n            <div class=\"bids_nav\">\n                <ul class=\"bids_nav_list\">\n                    <li class=\"bids_nav_item\"><a href=\"#\">Matched</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Unmatched</a></li>\n                    <li class=\"bids_nav_item\"><a href=\"#\">Settled</a></li>\n                    <li class=\"bids_nav_item bids_nav_item_active\"><a href=\"#\">Canceled</a></li>\n                </ul>\n            </div>\n            <table class=\"bids_table\">\n                <thead class=\"bids_table_head\">\n                <td class=\"t_h_from\">FROM</td>\n                <td>EVENT</td>\n                <td>buy in</td>\n                <td>GTE</td>\n                <td>MARKUP</td>\n                <td>VALUE</td>\n                <td>Refund</td>\n                <td>Status</td>\n                </thead>\n                <tbody class=\"bids_table_body\">\n\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_refund\">12 days</td>\n                    <td class=\"t_status\">In profress</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_2.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_refund\">12 days</td>\n                    <td class=\"t_status\">In profress</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_3.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_refund\">12 days</td>\n                    <td class=\"t_status\">In profress</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_4.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_refund\">12 days</td>\n                    <td class=\"t_status\">In profress</td>\n                </tr>\n                <tr>\n                    <td class=\"t_from\"><div class=\"t_from_img\"><img src=\"/images/desk/players_img/profile_img_5.png\" alt=\"profile photo\"></div><span>Austin Vargas</span></td>\n                    <td class=\"t_event\">MILLIONS Russia, 1A</td>\n                    <td class=\"t_buy_in\">£1,000</td>\n                    <td class=\"t_gte\">£500,000</td>\n                    <td class=\"t_markup\">1.22</td>\n                    <td class=\"t_value\">$2,294</td>\n                    <td class=\"t_refund\">12 days</td>\n                    <td class=\"t_status\">In profress</td>\n                </tr>\n\n\n                </tbody>\n            </table>\n        </div>\n\n\n\n    </div>\n</div>\n";
-
-/***/ }),
-/* 211 */
-/***/ (function(module, exports) {
-
-module.exports = "<header class=\"header\">\n    <div class=\"logo\">\n        <a ui-sref=\"invest\">\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\n        </a>\n    </div>\n    <nav class=\"menu\">\n        <ul class=\"menu_list\">\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('invest')\"\n                   ui-sref=\"invest\"\n                >\n                    Invest\n                </a>\n                <div class=\"menu_item__count\">2</div>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('bids')\"\n                   ui-sref=\"bids\"\n                >\n                    Bids\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('sale')\"\n                   ui-sref=\"sale\"\n                >\n                    Sale\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('wallet')\"\n                   ui-sref=\"wallet\"\n                >\n                    Wallet\n                </a>\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\n            </li>\n        </ul>\n    </nav>\n    <div class=\"last_up\">\n        <div class=\"last_up__title\">Last Updates</div>\n        <div class=\"last_up__item last_up__item_blue\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_yellow\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_green\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_red\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\n\n        </div>\n    </div>\n    <div class=\"profile\">\n        <div class=\"profile_info\">\n            <div class=\"profile_left-side\">\n                <div class=\"profile_img\">\n                    <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                </div>\n                <div class=\"profile_name\">James. Co</div>\n            </div>\n            <a class=\"profile_logout\"\n               ui-sref=\"logout\"></a>\n        </div>\n    </div>\n    <div class=\"headers_footer\">\n        <a href=\"#\">Terms of Service</a>\n        <a href=\"#\">Privacy Policy</a>\n        <a href=\"#\">Contact Us</a>\n        <a href=\"#\">English</a>\n    </div>\n</header>\n\n<div class=\"log_out-wr\">\n    <div class=\"log_out_profile\">\n        <div class=\"log_out_text\">\n            Log out\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\n        </div>\n        <div class=\"log_out_btn\">\n            <div class=\"log_out_cancel\">Cancel</div>\n            <div class=\"log_out_ok\">Log Out</div>\n        </div>\n    </div>\n</div>\n<div class=\"your_profile_wr\">\n    <div class=\"your_profile_content-wr\">\n        <div class=\"your_profile_content\">\n            <div class=\"your_profile__title\">\n                Your Profile\n                <div class=\"your_profile_close\"></div>\n            </div>\n            <div class=\"your_profile_info\">\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\n                <div class=\"your_profile__name\">\n                    James. Co\n                    <div class=\"change_photo\">Replace photo</div>\n                </div>\n            </div>\n            <div class=\"link_party_pk\">\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\n                <div class=\"link_party_btn\">Link Party Poker account</div>\n            </div>\n            <div class=\"your_profile_nav\">\n                <ul class=\"pr_nav_list\">\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\n                </ul>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n";
-
-/***/ }),
-/* 212 */
+/* 203 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__constants__ = __webpack_require__(213);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesCarouselComponent; });
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-
-
-var BidsController = function () {
-    function BidsController($window, $http) {
-        _classCallCheck(this, BidsController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.filter = null;
-        this.bids = [];
-
-        //this.showListFiltered();
+var SalesCarousel = function () {
+    function SalesCarousel() {
+        _classCallCheck(this, SalesCarousel);
     }
 
-    _createClass(BidsController, [{
-        key: 'showListFiltered',
-        value: function showListFiltered() {
-            var _this = this;
-
-            this.$http.get(BIDS_INDEX, {
-                params: { filter: this.filter }
-            }).then(function (response) {
-                console.log(response.data.data);
-                _this.bids = response.data.data;
-            });
-        }
+    _createClass(SalesCarousel, [{
+        key: '$onInit',
+        value: function $onInit() {}
     }]);
 
-    return BidsController;
+    return SalesCarousel;
 }();
 
-BidsController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 213 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export BIDS_TYPES */
-var BIDS_TYPES = ['matched', 'unmatched', 'settled', 'canceled'];
+var SalesCarouselComponent = {
+    bindings: {
+        sales: '<',
+        state: '<'
+    },
+    template: __webpack_require__(204),
+    controller: SalesCarousel,
+    controllerAs: '$ctrl'
+};
 
 /***/ }),
-/* 214 */
+/* 204 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\r\n    <div class=\"tabs-wr__title sale_tabs__title\">\r\n        <div class=\"tabs-wr__title-name\">{%key%}</div>\r\n        <a ui-sref=\"sale-filter({filter: key})\" class=\"see_all\">See All</a>\r\n    </div>\r\n    <div class=\"slider_container\">\r\n        <div class=\"swipe-wr\">\r\n            <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 205 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52491,18 +52482,18 @@ var MainMenuComponent = {
     bindings: {
         state: '<'
     },
-    template: __webpack_require__(211),
+    template: __webpack_require__(102),
     controller: MainMenuController,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 215 */
+/* 206 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 function templateCache($templateCache) {
-    $templateCache.put('view/menu.template.html', __webpack_require__(211));
+    $templateCache.put('view/menu.template.html', __webpack_require__(102));
 }
 
 templateCache.$inject = ['$templateCache'];
