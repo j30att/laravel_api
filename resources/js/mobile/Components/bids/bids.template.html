@@ -1,5 +1,5 @@
 
-<div class="binds-item"
+<div class="card__bids"
      ng-class="{
                     'binds-item__matched':      item.status === 1,
                     'binds-item__unmatched':    item.status === 2,
@@ -20,20 +20,22 @@
                 <div class="card__event" ng-bind="item.sale.subevent.event.title">
                 </div>
             </div>
+            <div class="blocks_header_link"><a ui-sref="events">edit</a></div>
         </div>
         <div class="card__subevent" ng-bind="item.subevent.title">
         </div>
     </div>
 
-    <div class="binds-item__game_info">
-        <div class="geme__text">
-            <div class="by_in">
+    <div class="binds-item__game_info card__event_info">
+        <div class="geme__text card__event_info_item">
+            <div class="by_in card__event_info_attr">
                 Buy in £ <span>1,000,000</span>
             </div>
-            <div class="gte">
+            <div class="gte card__event_info_attr" >
                 £ <span>1,000,000</span> GTE
             </div>
         </div>
+
         <div class="card__attribute card__attribute_row">
             <div class="sale_card_list_atr_item">
                 <span>Markup</span><br>
@@ -46,6 +48,10 @@
             </div>
             <div class="sale_card_list_atr_item">
                 <span>Date of Start</span><br>
+                <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
+            </div>
+            <div class="sale_card_list_atr_item" ng-if="item.status ===2">
+                <span>T. until close</span><br>
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
         </div>

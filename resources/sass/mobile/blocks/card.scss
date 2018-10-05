@@ -1,3 +1,20 @@
+.card__bids{
+  width: 100%;
+  margin-bottom: 2pt;
+  margin-right: 0;
+  border-radius: 0;
+  padding: 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.card__bids:last-child{
+  margin-bottom: 50px;
+}
+
+
 .card__profile_info{
   width: 100%;
   margin-left: 16px;
