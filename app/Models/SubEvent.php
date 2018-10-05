@@ -31,11 +31,22 @@ class SubEvent extends Model
 
 
 
+
     public function getFormattedDateAttribute(){
         $start_date = Carbon::parse($this->date_start);
 
         $start_day = $start_date->day;
         $start_monty =$start_date->englishMonth;
+
+
+        return $start_day . '  ' . $start_monty;
+    }
+
+    public function getFormattedShortDateAttribute(){
+        $start_date = Carbon::parse($this->date_start);
+
+        $start_day = $start_date->day;
+        $start_monty =$start_date->shortEnglishMonth;
 
 
         return $start_day . '  ' . $start_monty;

@@ -1,4 +1,4 @@
-<div class="as__item-wr as__item-wr-active"
+<div class="sale_card__list sale_card__list_sales"
      ng-if="$ctrl.state === 'list'"
      ng-repeat="item in $ctrl.sales"
      ng-class="{
@@ -7,41 +7,38 @@
      }"
 >
 
-    <div class="as__item__text">
-        <div class="as__item__title" ng-bind="item.event.title"></div>
-        <a ui-sref="sale-manage({id: item.id})">Edit</a>
-        <div class="loop_counter loop_counter_sale" ng-bind="item.sub_event_id">
-            Second loop
+    <div class="event_card_text">
+        <div class="event_card_title" ng-bind="item.event.title"></div>
+        <div class="blocks_header_link"><a ui-sref="events">edit</a></div>
+
+        <div class="card__subevent" ng-bind="item.subevent.title">
         </div>
-        <div class="as__item__by">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
-                ng-bind="item.subevent.buy_in"></span></div>
+        <div class="card__sale_event_byin">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
+            ng-bind="item.subevent.buy_in"></span></div>
     </div>
-    <div class="as__item__tags as__item__tags-active">
-        <div class="tags_closes">
+    <div class="card__attribute_sale_card">
+        <div class="sale_card_list_atr_item">
             <span>Closes</span><br>
-            73 days
+            <span class="card__attribute_value">21</span>
         </div>
-        <div class="tags_markup">
+        <div class="sale_card_list_atr_item">
             <span>Markup</span><br>
-            1.20
+            <span class="card__attribute_value" ng-bind="item.markup"></span>
         </div>
-        <div class="tags_average">
-            <span>Average markup</span><br>
-            0
-        </div>
-        <div class="tags_share">
+        <div class="sale_card_list_atr_item">
             <span>Share sold</span><br>
-            0% of 20%
+            <span class="card__attribute_value">0% of 20%</span>
         </div>
-        <div class="tags_amount">
+        <div class="sale_card_list_atr_item">
             <span>Amount raised</span><br>
-            $400 of $1,000
+            <span class="card__attribute_value">$400 of $1,000</span>
         </div>
     </div>
+
 </div>
 
 
-<div class="as__item-wr active_sale"
+<div class="sale_card__row"
 
      ng-if="$ctrl.state === 'row'"
      ng-class="{
@@ -49,29 +46,30 @@
      'sale_canceled': item.status === 2,
      }"
      ng-repeat="item in $ctrl.sales">
-    <div class="as__item__text">
-        <div class="as__item__title" ng-bind="item.event.title"></div>
-        <div class="as__item__by">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
+    <div class="event_card_text">
+        <div class="event_card_title" ng-bind="item.event.title"></div>
+        <div class="card__sale_event_byin">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
                 ng-bind="item.subevent.buy_in"></span></div>
     </div>
-    <div class="as__item__tags">
-        <div class="tags_closes">
+
+    <div class="card__attribute_sale_card">
+        <div class="sale_card_list_atr_item">
             <span>Closes</span><br>
-            73 days
+            <span class="card__attribute_value">21</span>
         </div>
-        <div class="tags_markup">
-            <span>Markup</span><br><span ng-bind="item.markup"></span>
+        <div class="sale_card_list_atr_item">
+            <span>Markup</span><br>
+            <span class="card__attribute_value" ng-bind="item.markup"></span>
         </div>
-        <div class="tags_share">
+        <div class="sale_card_list_atr_item">
             <span>Share sold</span><br>
-            0% of 20%
+            <span class="card__attribute_value">0% of 20%</span>
         </div>
-        <div class="tags_amount">
+        <div class="sale_card_list_atr_item">
             <span>Amount raised</span><br>
-            $400 of $1,000
+            <span class="card__attribute_value">$400 of $1,000</span>
         </div>
     </div>
-
 </div>
 
 <!--INVEST-->

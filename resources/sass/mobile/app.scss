@@ -20,6 +20,7 @@
 @import "blocks/invest";
 @import "blocks/footer";
 @import "blocks/header";
+@import "blocks/button";
 
 
 body{
@@ -993,32 +994,13 @@ __game_info{
     border-bottom: 1px solid #949494;
 }
 
-.creact_sale{
-    width: 100%;
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
-    color: #fff;
-    background-color: #007fed;
-    border-radius: 10pt;
-    margin-top: 50px;
-}
+
 
 .active_sale-wr{
     overflow-y: hidden;
 }
-.active_sale{
-    display: inline-flex;
-}
-.as__item-wr{
-    width: 250px;
-    background-color: #fff9e8;
-    border-radius: 16px;
-    margin-right: 12pt;
-    padding: 16px 0 16px 16px;
-    display: flex;
-    flex-direction: column;
-}
+
+
 .sale_active{
     background-color: #fff9e8;
 }
@@ -1029,18 +1011,8 @@ __game_info{
     font-size: 16pt;
     font-weight: 600;
 }
-.as__item__tags{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 8pt;
-}
-.as__item__tags > div{
-    width: 45%;
 
-}
-.as__item__tags > div > span{
-    color: #949494;
-}
+
 .sale_tabs__title{
     margin-top: 20pt;
 }
@@ -1078,15 +1050,7 @@ __game_info{
 .loop_counter_sale{
     margin-left: 15px;
 }
-.as__item__text{
-    position: relative;
-}
-.as__item__text a{
-    position: absolute;
-    top: 5px;
-    right: 16pt;
-    color: rgb(0, 127, 237);
-}
+
 .as__item__tags-active > div{
     width: 32%;
 }

@@ -151,3 +151,51 @@
 .card__event_info{
     margin-top: 16px;
 }
+
+
+.card__sale_event_byin{
+    font-size: 13px;
+
+}
+
+.card__attribute_sale_card{
+    display: flex;
+    flex-wrap: wrap;
+
+    .card__attribute_value{
+        color: #000000;
+    }
+}
+.card__attribute_sale_card > div{
+    width: 45%;
+
+}
+
+.event_card_text{
+    position: relative;
+    .blocks_header_link{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .card__subevent{
+        margin-left: 10.5px;
+        margin-bottom: 0;
+    }
+}
+
+.sale_card__list_sales{
+    border-bottom: 0 !important;
+    padding: 15px;
+    margin-bottom: 2px;
+}
+
+.sale_card__row{
+    width: 250px;
+    background-color: #fff9e8;
+    border-radius: 16px;
+    margin-right: 12pt;
+    padding: 16px 0 16px 16px;
+    display: flex;
+    flex-direction: column;
+}

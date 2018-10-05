@@ -10670,6 +10670,62 @@ modal_place_a_bid_close {
   margin-top: 16px;
 }
 
+.card__sale_event_byin {
+  font-size: 13px;
+}
+
+.card__attribute_sale_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card__attribute_sale_card .card__attribute_value {
+  color: #000000;
+}
+
+.card__attribute_sale_card > div {
+  width: 45%;
+}
+
+.event_card_text {
+  position: relative;
+}
+
+.event_card_text .blocks_header_link {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.event_card_text .card__subevent {
+  margin-left: 10.5px;
+  margin-bottom: 0;
+}
+
+.sale_card__list_sales {
+  border-bottom: 0 !important;
+  padding: 15px;
+  margin-bottom: 2px;
+}
+
+.sale_card__row {
+  width: 250px;
+  background-color: #fff9e8;
+  border-radius: 16px;
+  margin-right: 12pt;
+  padding: 16px 0 16px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .carousel_container {
   overflow-y: hidden;
 }
@@ -10896,13 +10952,19 @@ modal_place_a_bid_close {
 .tabs_item {
   width: 50%;
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
   color: #949494;
   height: 41px;
   line-height: 41px;
+  text-transform: capitalize;
 }
 
 .tabs_item__active {
+  color: #000;
+}
+
+.tabs_item__active_entity {
+  border-bottom: 2px solid black;
   color: #000;
 }
 
@@ -10940,6 +11002,17 @@ modal_place_a_bid_close {
   position: absolute;
   top: 5px;
   right: 0;
+}
+
+.page_title {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  position: relative;
+  height: 44px;
+  line-height: 44px;
 }
 
 .invest_sales {
@@ -11075,6 +11148,17 @@ modal_place_a_bid_close {
 
 .header_filter_empty {
   width: 22px;
+}
+
+.creact_sale {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #fff;
+  background-color: #007fed;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 body {
@@ -12123,40 +12207,8 @@ __game_info {
   border-bottom: 1px solid #949494;
 }
 
-.creact_sale {
-  width: 100%;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  color: #fff;
-  background-color: #007fed;
-  border-radius: 10pt;
-  margin-top: 50px;
-}
-
 .active_sale-wr {
   overflow-y: hidden;
-}
-
-.active_sale {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.as__item-wr {
-  width: 250px;
-  background-color: #fff9e8;
-  border-radius: 16px;
-  margin-right: 12pt;
-  padding: 16px 0 16px 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .sale_active {
@@ -12170,23 +12222,6 @@ __game_info {
 .as__item__title {
   font-size: 16pt;
   font-weight: 600;
-}
-
-.as__item__tags {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 8pt;
-}
-
-.as__item__tags > div {
-  width: 45%;
-}
-
-.as__item__tags > div > span {
-  color: #949494;
 }
 
 .sale_tabs__title {
@@ -12231,17 +12266,6 @@ __game_info {
 
 .loop_counter_sale {
   margin-left: 15px;
-}
-
-.as__item__text {
-  position: relative;
-}
-
-.as__item__text a {
-  position: absolute;
-  top: 5px;
-  right: 16pt;
-  color: #007fed;
 }
 
 .as__item__tags-active > div {

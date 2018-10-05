@@ -16,11 +16,12 @@ class SubEventResource extends JsonResource
     {
 
         return [
-            'id'        => $this->id,
-            'title'     => $this->title,
-            'fund'      => $this->fund,
-            'buy_in'    => $this->buy_in,
-            'date'      => $this->formatted_date,
+            'id'            => $this->id,
+            'title'         => $this->title,
+            'fund'          => $this->fund,
+            'buy_in'        => $this->buy_in,
+            'date'          => $this->formatted_date,
+            'short_date'    => $this->formatted_short_date
 
         ];
         return parent::toArray($request);

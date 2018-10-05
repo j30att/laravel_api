@@ -66,11 +66,54 @@
             </div>
             <div class="sale_card_list_atr_item">
                 <span>Value</span><br>
-                <span class="card__attribute_value">1233</span>
+                <span class="card__attribute_value">20</span>
             </div>
-            <div class="sale_card_list_atr_item" ng-if="item.status ===2">
+            <div class="sale_card_list_atr_item">
                 <span>Time</span><br>
-                <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
+                <span class="card__attribute_value" ng-bind="item.subevent.short_date"></span>
+            </div>
+        </div>
+
+        <div class="card__attribute card__attribute_row" ng-if="item.status ===3">
+            <div class="sale_card_list_atr_item">
+                <span>Markup</span><br>
+                <span class="card__attribute_value" ng-bind="item.markup"></span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Value</span><br>
+                <span class="card__attribute_value">£</span>
+                <span class="card__attribute_value" ng-bind="item.amount"></span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Refund</span><br>
+                <span class="card__attribute_value" ng-bind="item.subevent.short_date"></span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Outcome</span><br>
+                <span class="card__attribute_status_red" >-£<span class="card__attribute_status_red">256</span>
+
+
+                </span>
+            </div>
+        </div>
+
+        <div class="card__attribute card__attribute_row" ng-if="item.status ===4">
+            <div class="sale_card_list_atr_item">
+                <span>Markup</span><br>
+                <span class="card__attribute_value" ng-bind="item.markup"></span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Value</span><br>
+                <span class="card__attribute_value">£</span>
+                <span class="card__attribute_value" ng-bind="item.amount"></span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Refund</span><br>
+                <span class="card__attribute_value">12 days</span>
+            </div>
+            <div class="sale_card_list_atr_item">
+                <span>Status</span><br>
+                <span class="card__attribute_status_green" > In progress</span>
             </div>
         </div>
 

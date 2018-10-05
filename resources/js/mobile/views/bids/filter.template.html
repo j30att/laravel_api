@@ -2,15 +2,19 @@
     <div class="fullscreen">
 
         <div class="tabs-wr">
-            <div class="active_status col-md-12">
+           <div class="page_title col-md-12">
                 Bids
-            </div>
-            <div class="tabs-wr__title col-md-12">
+                <a ui-sref="bids" class="goback" href="/bids/invest">
 
-                <a ui-sref="bids-filter({filter: menuItem.name})"
+                </a>
+            </div>
+            <div class="tabs_list">
+
+                <a class="tabs_item"
+                   ui-sref="bids-filter({filter: menuItem.name})"
                    ng-repeat="menuItem in BidsCtrl.menu"
-                   ng-bind="menuItem.name" style="text-transform:capitalize"
-                   ng-class="{'tabs_item__active':BidsCtrl.$stateParams.filter === menuItem.name}"
+                   ng-bind="menuItem.name"
+                   ng-class="{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}"
                 ></a>
             </div>
             <div class="slider_container slider_container__full">
