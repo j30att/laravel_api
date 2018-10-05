@@ -45,6 +45,18 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             /*  controller: 'SaleController',
               controllerAs: 'SaleCtrl',*/
         })
+        .state('sale-active', {
+            url: '/sales/active',
+            template: require('./views/sale/list.template.html'),
+            /*  controller: 'SaleController',
+              controllerAs: 'SaleCtrl',*/
+        })
+        .state('sale-closed', {
+            url: '/sales/closed',
+            template: require('./views/sale/list.template.html'),
+            /*  controller: 'SaleController',
+              controllerAs: 'SaleCtrl',*/
+        })
         .state('bids', {
             url: '/bids',
             controller: 'BidsController',

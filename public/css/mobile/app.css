@@ -11514,6 +11514,10 @@ a.text-dark:focus {
   width: 90%;
 }
 
+.goback_unset {
+  position: unset;
+}
+
 .button_login {
   border-radius: 10pt;
   border: none;
@@ -11521,10 +11525,6 @@ a.text-dark:focus {
   position: fixed;
   bottom: 15px;
   left: 5%;
-}
-
-.goback_unset {
-  position: unset;
 }
 
 .form_event {
