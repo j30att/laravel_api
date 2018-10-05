@@ -49,20 +49,24 @@
     width: 100%;
     height: 140px;
     overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 .event_card_list_img img{
     width: 100%;
-    height: auto;
+    //height: auto;
+    height: 100%;
 }
 .event_card_list_info{
     position: relative;
+    padding-left: 0;
 
 }
 
 .event_card_list_wr{
     position: relative;
-    border-bottom: 1px solid #e5e5e5;
-    margin-bottom: 10px;
+    //border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
 }
 
 
