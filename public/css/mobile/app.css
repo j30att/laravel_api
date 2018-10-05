@@ -10501,18 +10501,45 @@ modal_place_a_bid_close {
 }
 
 .card__bids {
-  width: 100%;
+  width: 250px;
+  margin-right: 12px;
   margin-bottom: 2pt;
-  margin-right: 0;
-  border-radius: 0;
-  padding: 1px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  border-radius: 8px;
 }
 
-.card__bids:last-child {
+.card_row {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.card__bids_list {
+  padding: 16px 16px 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.card__bids_list .card__profile_info {
+  margin: 0;
+}
+
+.card__bids_list .card__attribute_row {
+  padding-bottom: 16px;
+  margin-bottom: 2px;
+}
+
+.card__bids_list .blocks_header_link {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+}
+
+.card__bids_list .card__event_info {
+  margin-top: 8px;
+}
+
+.card__bids_list:last-child {
   margin-bottom: 50px;
 }
 
@@ -10602,6 +10629,45 @@ modal_place_a_bid_close {
 
 .sale_card_list_atr_item span {
   color: #949494;
+}
+
+.card__attribute_status_green {
+  color: #00c811 !important;
+  font-weight: 600;
+}
+
+.card__attribute_status_red {
+  color: #ff334c !important;
+  font-weight: 600;
+}
+
+.bids-item__matched {
+  background-color: #e7f7e4;
+}
+
+.bids-item__unmatched {
+  background-color: #fff4ec;
+}
+
+.bids-item__settled {
+  background-color: #edf8fd;
+}
+
+.bids-item__canceled {
+  background-color: #edebf6;
+}
+
+.card__event_info_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #949494;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.card__event_info {
+  margin-top: 16px;
 }
 
 .carousel_container {
@@ -11339,12 +11405,6 @@ main button {
   margin-right: 12pt;
 }
 
-.bids_row {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
 .bids_row__fullscreen {
   width: 100%;
   margin-bottom: 5px;
@@ -11352,22 +11412,6 @@ main button {
 
 .binds_full_sc {
   width: 100%;
-}
-
-.binds-item__matched {
-  background-color: #e7f7e4;
-}
-
-.binds-item__unmatched {
-  background-color: #fff4ec;
-}
-
-.binds-item__settled {
-  background-color: #edf8fd;
-}
-
-.binds-item__canceled {
-  background-color: #edebf6;
 }
 
 .binds .tabs-wr:last-child {
@@ -11401,15 +11445,6 @@ main button {
 
 .binds-item__game_info {
   padding-left: 16px;
-}
-
-.geme__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #949494;
-  font-size: 13px;
-  margin-bottom: 8pt;
 }
 
 .by_in {
@@ -11919,7 +11954,7 @@ sales > .binds-item {
   overflow: hidden;
 }
 
-.single_page_players_item .binds-item__game_info {
+.single_page_players_item {
   margin-top: 16px;
 }
 
@@ -11949,7 +11984,7 @@ sales > .binds-item {
   font-weight: 400;
 }
 
-.place_a_bit .binds-item__game_info {
+__game_info {
   margin-top: 12pt;
 }
 

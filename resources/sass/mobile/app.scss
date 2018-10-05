@@ -203,7 +203,7 @@ main {
                     background-size: 25px;
                     position: relative;
                 }
-               
+
                 a:after {
                     content:"";
                     width: 25px;
@@ -317,9 +317,7 @@ main {
     margin-bottom: 5pt;
     margin-right: 12pt;
 }
-.bids_row{
-    display: inline-flex;
-}
+
 
 .bids_row__fullscreen{
     width: 100%;
@@ -334,19 +332,7 @@ main {
     width: 100%;
 }
 
-.binds-item__matched{
-    background-color: #e7f7e4;
 
-}
-.binds-item__unmatched{
-    background-color: #fff4ec;
-}
-.binds-item__settled{
-    background-color: #edf8fd;
-}
-.binds-item__canceled{
-    background-color: #edebf6;
-}
 
 
 .binds .tabs-wr:last-child{
@@ -387,12 +373,7 @@ main {
 }
 
 
-.geme__text{
-    display: flex;
-    color: rgb(148, 148, 148);
-    font-size: 13px;
-    margin-bottom: 8pt;
-}
+
 .by_in{
     margin-right: 5px;
 }
@@ -845,7 +826,7 @@ sales > .binds-item{
     width: 100%;
     overflow: hidden;
 }
-.single_page_players_item .binds-item__game_info{
+.single_page_players_item {
     margin-top: 16px;
 }
 
@@ -873,9 +854,6 @@ sales > .binds-item{
     top: 12pt;
     font-weight: 400;
 }
-.place_a_bit .
-
-
 
 
 

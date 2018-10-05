@@ -1,16 +1,36 @@
 .card__bids{
-  width: 100%;
+    width: 250px;
+    margin-right: 12px;
   margin-bottom: 2pt;
-  margin-right: 0;
-  border-radius: 0;
-  padding: 1px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  border-radius: 8px;
+
+}
+.card_row{
+    display: inline-flex;
+}
+.card__bids_list{
+   padding: 16px 16px 0 16px;
+    box-sizing: border-box;
+    position: relative;
+    .card__profile_info{
+        margin: 0;
+    }
+    .card__attribute_row{
+        padding-bottom: 16px;
+        margin-bottom: 2px;
+    }
+    .blocks_header_link{
+        position: absolute;
+        right: 15px;
+        top: 16px;
+    }
+    .card__event_info{
+        margin-top: 8px;
+    }
+
 }
 
-.card__bids:last-child{
+.card__bids_list:last-child{
   margin-bottom: 50px;
 }
 
@@ -85,6 +105,7 @@
 
 }
 
+
 .card__attribute_row{
   padding-left: 0px;
   padding-right: 10px;
@@ -92,4 +113,41 @@
 
 .sale_card_list_atr_item span{
   color: $warmGrey;
+}
+
+.card__attribute_status_green{
+    color: rgb(0,200,17) !important;
+    font-weight: 600;
+}
+.card__attribute_status_red{
+    color: rgb(255,51,76) !important;
+    font-weight: 600;
+}
+
+.bids-item__matched{
+    background-color: #e7f7e4;
+
+}
+.bids-item__unmatched{
+    background-color: #fff4ec;
+}
+.bids-item__settled{
+    background-color: #edf8fd;
+}
+.bids-item__canceled{
+    background-color: #edebf6;
+}
+
+
+
+
+
+.card__event_info_item{
+    display: flex;
+    color: rgb(148, 148, 148);
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+.card__event_info{
+    margin-top: 16px;
 }

@@ -1,7 +1,7 @@
 class Bids {
 
     constructor() {
-
+    console.log(this.bids);
     }
 
     $onInit() {
@@ -13,6 +13,7 @@ class Bids {
 export const BidsComponent = {
     bindings: {
         bids:    '<',
+        state:   '<'
     },
     template: require('./bids.template.html'),
     controller: Bids,
