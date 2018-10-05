@@ -1,17 +1,42 @@
-<div class="row" >
-    <div class="personal_inform col-md-12">
-        <div class="personal_inform__title ">
-            <a ui-sref="index"><div class="goback"></div></a>
+<div class="row">
+    <div class="fullscreen">
+
+        <div class="page_title col-md-12">
             Please Login
+            <a ui-sref="bids" class="goback" href="index">
+
+            </a>
         </div>
-        <form ng-submit="LgCtrl.sendAuthData($event)" class="form_personal_inf">
 
-            <input type="text"  placeholder="Your e-mail" ng-model="LgCtrl.userEmail" required>
+        <div class="col-md-12">
+            <form ng-submit="LgCtrl.sendAuthData($event)" style="width:100%">
+                <md-input-container class="md-block login_input">
+                    <label>Client Email</label>
+                    <input required type="email" name="clientEmail" ng-model="LgCtrl.userEmail"
+                           minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
 
-            <input type="password"  placeholder="Your password" ng-model="LgCtrl.userPassword" required>
+                    <div ng-messages="" role="alert">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Your email must look like an e-mail address.
+                        </div>
+                    </div>
+                </md-input-container>
 
-            <button class="button" type="submit"  style="border-radius:10pt;" ng-click="LgCtrl.sendAuthData($event)">Enter</button>
-        </form>
+                <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
+                    <label>Your password</label>
+                    <input type="password" ng-model="LgCtrl.userPassword" name="clientPassword" required>
 
+                    <div ng-messages="" role="alert">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Password field cannot be empty.
+                        </div>
+                    </div>
+                </md-input-container>
+
+                <button class="button button_login" type="submit" style=""
+                        ng-click="LgCtrl.sendAuthData($event)">Enter
+                </button>
+            </form>
+        </div>
     </div>
 </div>

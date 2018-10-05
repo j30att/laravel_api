@@ -10548,7 +10548,6 @@ a.text-dark:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 4px;
-  position: relative;
 }
 
 .modal_type_bids__item {
@@ -10572,7 +10571,7 @@ a.text-dark:focus {
   border-bottom-left-radius: 4px;
 }
 
-.modal_type_bids__item:nth-child(3) {
+.modal_type_bids__item:last-child {
   width: 49.5%;
   -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
@@ -10580,42 +10579,6 @@ a.text-dark:focus {
   -moz-border-radius-bottomright: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-}
-
-.modal_type_bids__item:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.modal_type_bids__item_confirm {
-  width: 40px;
-  height: 100%;
-  background-color: #e7f7e4;
-  -webkit-border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  -moz-border-radius-topright: 4px;
-  -moz-border-radius-bottomright: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-left: 1px solid #ffffff;
-  position: relative;
-}
-
-.modal_type_bids__item_confirm::after {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background: url("/images/confirm.png") no-repeat center;
-  background-size: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /*colors*/
@@ -10656,26 +10619,6 @@ a.text-dark:focus {
 
 .manage_sale_wr .binds-item__game_info .card__event_info_attr {
   color: #000;
-}
-
-.manage_sale_wr .modal_type_bids .blocks_header_title_name {
-  margin-bottom: 8px;
-  margin-top: 24px;
-}
-
-.manage_sale_atr {
-  padding-left: 0 !important;
-}
-
-.manage_sale_atr_item {
-  width: 33%;
-}
-
-.manage_sale_atr_item input {
-  width: 80%;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .card__bids {
@@ -11507,11 +11450,13 @@ a.text-dark:focus {
   margin-bottom: 16px;
 }
 
-.manage_sale_btn {
-  position: fixed;
-  bottom: 16px;
-  left: 5%;
+.button_login {
+  border-radius: 10pt;
+  border: none;
   width: 90%;
+  position: fixed;
+  bottom: 15px;
+  left: 5%;
 }
 
 .goback_unset {
@@ -11535,10 +11480,17 @@ md-select.form-Select-theme {
   border-radius: 10px;
   font-size: 16px;
   color: #000;
-  padding-left: 13 px;
+  padding-left: 13px;
   padding-right: 15px;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+}
+
+md-input-container.login_input {
+  font-size: 16px;
+  margin-top: 60px;
+  height: 30px;
+  line-height: 30px;
 }
 
 body {
@@ -13082,6 +13034,10 @@ input:checked + label::after {
   color: #fc4c02;
   margin-bottom: 16px;
   font-size: 13px;
+}
+
+.increase_btn {
+  margin-bottom: 50px;
 }
 
 /**/
