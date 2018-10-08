@@ -6,7 +6,7 @@ class SaleManage {
         this.$state = $state;
         this.$timeout = $timeout;
         this.$scope = $scope;
-        //$state.modalOpened = false;
+        $state.modalOpened = false;
         this.user = window.__user;
 
         this._opts = {

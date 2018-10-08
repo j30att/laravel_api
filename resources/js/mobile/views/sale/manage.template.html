@@ -1,113 +1,100 @@
-<div class="modal_wrapper" ng-if="$ctrl.show ">
+<div class="manage_sale_wr">
 
-    <div class="row col-md-12 modal_header_fixed">
-        <div class="header">
-            <div class="header_close" ng-click="$ctrl.close()"></div>
-            <div class="header_title">Place a bid</div>
-            <div class="header_filter_empty"></div>
+    <div class="header">
+        <div class="header_close" ng-click="$ctrl.close()"></div>
+        <div class="header_title">My sale</div>
+        <div class="header_filter_empty"></div>
+    </div>
+
+    <div class="event_card_title">MILLIONS Russia, 1A</div>
+    <!--<span class="buyin_span">Buy in $5,000 + $300</span>-->
+
+    <div class="binds-item__game_info card__event_info">
+        <div class="geme__text card__event_info_item">
+            <div class="card__event_info_attr">
+                Buy in $5,000 + $300
+            </div>
         </div>
 
 
-        <div>
-            <div class="card__profile_info">
-                <div class="sale_card__list_profile__photo card__profile_foto">
-                    <img src="/images/players.png" alt="">
-                </div>
-                <div class="profile_text">
-                    <div class="card__profile_name" ng-bind="$ctrl.sale.creator.name">
-                    </div>
-                    <div class="card__event" ng-bind="$ctrl.sale.event.title">
-                    </div>
-                </div>
+        <div class="card__attribute manage_sale_atr">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
+                <span>Closes in</span><br>
+                <span class="card__attribute_value ng-binding">73 days</span>
+            </div>
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
+                <span>Share sold</span><br>
+                <span class="card__attribute_value">5%</span>
+            </div>
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
+                <span>Amount raised</span><br>
+                <span class="card__attribute_value ng-binding">$1892</span>
             </div>
 
         </div>
+        <div class="card__attribute manage_sale_atr">
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
+                <span>Markup</span><br>
 
-
-        <div class="binds-item__game_info card__event_info">
-            <div class="geme__text card__event_info_item">
-                <div class="by_in card__event_info_attr">
-                    Buy in £ <span>1,000,000</span>
-                </div>
-                <div class="gte card__event_info_attr">
-                    £ <span>1,000,000</span> GTE
-                </div>
+                <input type="number" placeholder="1.00">
             </div>
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
+                <span>Share</span><br>
 
+                <input type="number" placeholder="1.38%">
+            </div>
+            <div class="sale_card_list_atr_item manage_sale_atr_item">
+                <span>Value</span><br>
 
-            <div class="card__attribute card__attribute_row ng-scope">
-                <div class="sale_card_list_atr_item">
-                    <span>Markup</span><br>
-                    <span class="card__attribute_value ng-binding">1.2</span>
-                </div>
-                <div class="sale_card_list_atr_item">
-                    <span>Value</span><br>
-                    <span class="card__attribute_value">£</span>
-                    <span class="card__attribute_value ng-binding">300</span>
-                </div>
-                <div class="sale_card_list_atr_item">
-                    <span>Date of Start</span><br>
-                    <span class="card__attribute_value ng-binding">31  October</span>
-                </div>
+                <input type="number" placeholder="$1938">
             </div>
         </div>
     </div>
 
+    <div class="modal_type_bids">
+        <div class="blocks_header_title_name">
+            HIGHEST BIDS
+        </div>
 
-    <div class="modal_bids_block_wr col-md-12">
-        <div class="modal_bids_block">
-            <div class="modal_type_bids">
-                <div class="blocks_header_title_name">
-                    HIGHEST BIDS
-                </div>
-                <div class="modal_type_bids_type" ng-repeat="bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3">
-                    <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.markup"></div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.share"></div>
-                    <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.amount"></div>
-                </div>
-
-                <div class="blocks_header_title_name">
-                    MATCHED BID
-                </div>
-                <div class="modal_type_bids_type" ng-repeat="  bid in  $ctrl.sale.bids | filter: {status:2}">
-                    <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.markup"></div>
-                    <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.share"></div>
-                    <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.amount"></div>
-                </div>
-            </div>
-
-            <div class="bid_new" ng-if="$ctrl._opts.stateCreate">
-                <div class="blocks_header_title_name">
-                    your bid
-                </div>
-                <div class="bid_new__attribute_wraper">
-                    <div class="bid_new__attribute">
-                        <span>Markup</span>
-                        <input class="bid_attribute_input" placeholder="1.0" ng-model="$ctrl.bid.markup">
-                    </div>
-                    <div class="bid_new__attribute">
-                        <span>Share</span>
-                        <input class="bid_attribute_input" placeholder="1.0%" ng-model="$ctrl.bid.share">
-                    </div>
-                    <div class="bid_new__attribute">
-                        <span>Amount</span>
-                        <input class="bid_attribute_input" placeholder="$100" ng-model="$ctrl.bid.amount">
-                    </div>
-                </div>
-            </div>
-
-            <div class="manage_button">
-                <div class="button_half__white" ng-click="$ctrl.setState()">
-                    Cancel
-                </div>
-                <div class="button_half__blue" ng-click="$ctrl.setState('store')">
-                    Place
-                </div>
-            </div>
-            <div class="modal_add_bid" ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
-                Add new bid
+        <div class="modal_type_bids_type">
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">
+                <div>$1,182.22</div>
+                <div></div>
             </div>
         </div>
+        <div class="modal_type_bids_type">
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">
+                <div>$1,182.22</div>
+                <div></div>
+            </div>
+        </div>
+        <div class="modal_type_bids_type">
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+            <div class="modal_type_bids__item modal_bids_item_color_highest">
+                <div>$1,182.22</div>
+                <div class="modal_type_bids__item_confirm"></div>
+            </div>
+        </div>
+
+
     </div>
+
+    <hr>
+
+    <div class="my_sale_attention">
+        Your sale is almost finished, top-up your sale if you want sell more
+    </div>
+
+    <div class="manage_sale_btn button">
+        Increase your share
+    </div>
+
 </div>
+
+
 
