@@ -1,9 +1,10 @@
 let angular = require('angular');
 
 import Controllers from './Controllers';
+import Components from './Components';
+import Services from './Services'
 import routes from './Router';
 import middlewares from './Middlewares';
-import Components from './Components';
 import {permission, uiPermission} from 'angular-permission';
 import hack from './Hack';
 
@@ -19,6 +20,7 @@ let app = angular.module('poker', [
     ngRouter,
     Controllers,
     Components,
+    Services,
     permission,
     uiPermission
 ]);
@@ -27,7 +29,6 @@ angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvide
     $mdThemingProvider.theme('formSelect');
     $mdThemingProvider.setDefaultTheme('formSelect');
 }]);*/
-
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {
     $interpolateProvider.startSymbol('{%');

@@ -1,7 +1,7 @@
 class Bids {
 
     constructor() {
-    console.log(this.bids);
+
     }
 
     $onInit() {

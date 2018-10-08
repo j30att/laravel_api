@@ -5,7 +5,7 @@ class BidsCarousel {
     }
 
     $onInit() {
-        console.log(this.bids);
+
     }
 
 }

@@ -11248,6 +11248,11 @@ a.text-dark:focus {
   font-size: 13px;
 }
 
+.tabs_list__single {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .tabs_item {
   width: 50%;
   text-align: center;

@@ -5,9 +5,8 @@ import {SALE_CLOSED} from "../Constants";
 
 
 class SaleFilterController {
-    constructor($http, $stateParams) {
-        this.$http = $http;
-        this.sales = null;
+    constructor(SalesResourceService, $stateParams) {
+        this.SalesResourceService = SalesResourceService;
         this.user = window.__user;
         this.menu = [
             {status: SALE_ACTIVE, name: 'active'},
@@ -20,27 +19,21 @@ class SaleFilterController {
 
 
     getList() {
-        let url = null;
-        let filter = null;
         if(this.$stateParams.filter === 'active'){
-            url = SALE_MY_ACTIVE;
-            filter = SALE_ACTIVE;
-
+            this.SalesResourceService.getMySalesActive(this.user.id).then(response => {
+                this.sales = response.data.data;
+            })
         }
         if(this.$stateParams.filter === 'closed'){
-            url = SALE_MY_CLOSED;
-            filter = SALE_CLOSED
-        }
-        this.$http.post(url, {status: filter, user_id: this.user.id})
-            .then(response => {
+            this.SalesResourceService.getMySalesClosed(this.user.id).then(response => {
                 this.sales = response.data.data;
-                this._opts.dataLoad = true;
-            });
+            })
+        }
     }
 
 
 };
 
-SaleFilterController.$inject = ['$http', '$stateParams'];
+SaleFilterController.$inject = ['SalesResourceService', '$stateParams'];
 
 export {SaleFilterController};
