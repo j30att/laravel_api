@@ -45,8 +45,10 @@
 }
 .modal_bids_block_wr{
     width: 100%;
-    height: calc(100vh - 190px);
+    //height: calc(100vh - 190px);
+    height: calc(100vh - 75px);
     position: relative;
+    overflow: scroll;
 }
 .modal_type_bids_type {
     width: 100%;

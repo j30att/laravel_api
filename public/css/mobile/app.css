@@ -10535,8 +10535,9 @@ a.text-dark:focus {
 
 .modal_bids_block_wr {
   width: 100%;
-  height: calc(100vh - 190px);
+  height: calc(100vh - 75px);
   position: relative;
+  overflow: scroll;
 }
 
 .modal_type_bids_type {
@@ -11531,6 +11532,7 @@ a.text-dark:focus {
   text-align: center;
   position: fixed;
   bottom: 16px;
+  right: 15px;
   left: 5%;
   z-index: 500;
   background-color: #ffffff;
@@ -11578,6 +11580,7 @@ a.text-dark:focus {
   position: fixed;
   z-index: 500;
   background-color: #ffffff;
+  right: 0;
 }
 
 .button_half {
@@ -11585,7 +11588,7 @@ a.text-dark:focus {
 }
 
 .button_half__white {
-  width: 45%;
+  width: 43%;
   height: 48px;
   line-height: 48px;
   border: 1px solid #e0e0e0;
@@ -11593,7 +11596,7 @@ a.text-dark:focus {
   text-align: center;
   position: fixed;
   bottom: 16px;
-  left: 3%;
+  left: 5%;
   z-index: 500;
   background-color: #ffffff;
 }
@@ -11608,7 +11611,7 @@ a.text-dark:focus {
   text-align: center;
   position: fixed;
   bottom: 16px;
-  left: 50%;
+  left: 49%;
   z-index: 500;
   background-color: #007fed;
 }
