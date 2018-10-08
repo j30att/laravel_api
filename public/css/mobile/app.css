@@ -10483,6 +10483,10 @@ a.text-dark:focus {
 @import "~angular-animate";
 */
 
+.no_scroll {
+  overflow: hidden;
+}
+
 .modal_wrapper {
   overflow: scroll;
 }
