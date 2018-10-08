@@ -6,6 +6,7 @@ export const BID_RESPONSE_MATCHED    = 1;
 export const BID_RESPONSE_UNMATCHED  = 2;
 export const BID_RESPONSE_SETTLED    = 3;
 export const BID_RESPONSE_CANCELED   = 4;
+export const BIDS_TYPES = ['matched','unmatched','settled','canceled'];
 
 export const LOGIN_URL = '/login';
 export const REGISTER_URL = '/register';

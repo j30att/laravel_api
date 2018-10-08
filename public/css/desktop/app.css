@@ -378,6 +378,44 @@
   color: #00c811;
 }
 
+.event_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.event_left-side {
+  width: 40%;
+}
+
+.event_left-side_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.event_left-side_header_link {
+  color: #999999;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.event_right-side {
+  height: 100vh;
+  width: 60%;
+  background: #f6f6f6;
+  padding: 32px;
+  margin-top: -32px;
+  margin-right: -32px;
+}
+
 body,
 html {
   padding: 0;
@@ -786,6 +824,19 @@ a {
   height: auto;
 }
 
+.t_event,
+.t_buy_in,
+.t_gte,
+.t_time {
+  color: #999999;
+}
+
+.t_markup,
+.t_from,
+.t_share {
+  font-weight: 600;
+}
+
 /*logOut*/
 
 .log_out-wr {
@@ -1071,8 +1122,7 @@ a {
 /*events */
 
 .event_content-wr {
-  width: 996px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .event_content__title {
@@ -1086,7 +1136,7 @@ a {
 
 .event_content__see_more {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   font-size: 15px;
   font-weight: 600;
@@ -1136,32 +1186,33 @@ a {
 /*event filter end*/
 
 .events_item-wr {
-  width: 100%;
+  margin: 0 -9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .event_item {
-  width: 320px;
-  margin: 0 18px 24px 0;
-}
-
-.event_item:nth-child(3n) {
-  margin: 0 0 24px 0;
+  margin: 0 9px 24px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .event_item__pic {
   width: 100%;
-  height: 160px;
+  height: auto;
   overflow: hidden;
   margin-bottom: 12px;
 }
 
 .event_item__pic img {
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -1210,22 +1261,37 @@ a {
 /*Closing soon*/
 
 .events_tabs-wr {
-  width: 996px;
+  width: 100%;
+  min-width: 820px;
   margin-bottom: 60px;
 }
 
 .events_tabs_nav {
-  width: 100%;
-  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.events_tabs_nav__link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #007fed;
+  text-decoration: none;
 }
 
 .events_tabs_list {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .events_tabs_item {
@@ -1244,13 +1310,15 @@ a {
   border-spacing: 0 1px;
 }
 
-.table_events_head td {
+.table_events_head th {
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.table_events_head td:last-child,
+.table_events_head th:last-child,
 .t_time {
   text-align: right;
 }

@@ -1,4 +1,4 @@
-import {BIDS_TYPES} from "./constants";
+import {BIDS_TYPES} from "../../Constants";
 
 class BidsController {
     constructor($window, $http, $state) {

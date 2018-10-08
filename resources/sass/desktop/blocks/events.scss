@@ -1,0 +1,33 @@
+.event {
+
+  &_wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  &_left-side{
+    width:40%;
+
+    &_header{
+      display: flex;
+      height: 20px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+
+      &_link{
+        color:#999999;
+        font-size: 15px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &_right-side{
+    height: 100vh;
+    width: 60%;
+    background: #f6f6f6;
+    padding: 32px;
+    margin-top: -32px;
+    margin-right: -32px;
+  }
+}
