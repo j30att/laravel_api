@@ -10544,9 +10544,10 @@ a.text-dark:focus {
 
 .modal_bids_block_wr {
   width: 100%;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 90px);
   position: relative;
   overflow: scroll;
+  margin-bottom: 100px;
 }
 
 .modal_type_bids_type {

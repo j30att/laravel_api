@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 103);
+/******/ 	return __webpack_require__(__webpack_require__.s = 66);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -117,7 +117,7 @@
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return silentRejection; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__coreservices__ = __webpack_require__(5);
 /**
  * Random utility functions used in the UI-Router code
  *
@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(71)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(128)))
 
 /***/ }),
 /* 1 */
@@ -959,6 +959,83 @@ function pattern(struct) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SALE_ACTIVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SALE_CLOSED; });
+/* unused harmony export SALE_MARKUP */
+/* unused harmony export BID_NEW */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return BID_MATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return BID_UNMATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BID_SETTLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BID_CANCELED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return LOGIN_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return REGISTER_URL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return PROFILE_URL; });
+/* unused harmony export BIDS_INDEX */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_MY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BIDS_MY_MATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BIDS_MY_UNMATCHED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BIDS_MY_SETTLED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BIDS_MY_CANCELED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BIDS_MY_STORE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return EVENTS_INDEX; });
+/* unused harmony export EVENT_SINGLE */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return SALE_MY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return SALE_MY_ACTIVE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return SALE_MY_CLOSED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return SALE_CLOSING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return SALE_LOWEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return SALE_SUBEVENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return SALE_INDEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return SALE_CREATE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return SUBEVENTS_INDEX; });
+var SALE_ACTIVE = 1;
+var SALE_CLOSED = 2;
+var SALE_MARKUP = 3;
+
+var BID_NEW = 1;
+var BID_MATCHED = 2;
+var BID_UNMATCHED = 3;
+var BID_SETTLED = 4;
+var BID_CANCELED = 5;
+
+var LOGIN_URL = '/login';
+var REGISTER_URL = '/register';
+var PROFILE_URL = '/login/userproftest';
+
+//**BIDS**//
+var BIDS_INDEX = '/api/bids';
+var BIDS_MY = '/api/bids/my';
+var BIDS_MY_MATCHED = '/api/bids/my/matched';
+var BIDS_MY_UNMATCHED = '/api/bids/my/unmatched';
+var BIDS_MY_SETTLED = '/api/bids/my/settled';
+var BIDS_MY_CANCELED = '/api/bids/my/canceled';
+var BIDS_MY_STORE = '/api/bids/my/store';
+
+//**EVENTS**//
+var EVENTS_INDEX = '/api/events';
+var EVENT_SINGLE = '/api/events/';
+
+//**SALE**//
+
+var SALE_MY = '/api/sales/my';
+var SALE_MY_ACTIVE = '/api/sales/my/active';
+var SALE_MY_CLOSED = '/api/sales/my/closed';
+
+var SALE_CLOSING = '/api/sales/closing';
+var SALE_LOWEST = '/api/sales/lowest';
+var SALE_SUBEVENT = '/api/sales/subevent';
+
+var SALE_INDEX = '/api/sale';
+var SALE_CREATE = '/api/sale';
+
+//**SUBEVENTS**//
+var SUBEVENTS_INDEX = '/api/subevents';
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(0);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["b"]; });
@@ -1007,10 +1084,10 @@ function pattern(struct) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["S"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["T"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return __WEBPACK_IMPORTED_MODULE_0__common__["U"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__coreservices__ = __webpack_require__(5);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return __WEBPACK_IMPORTED_MODULE_1__coreservices__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return __WEBPACK_IMPORTED_MODULE_1__coreservices__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__glob__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__glob__ = __webpack_require__(22);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__glob__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hof__ = __webpack_require__(2);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_3__hof__["a"]; });
@@ -1043,9 +1120,9 @@ function pattern(struct) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return __WEBPACK_IMPORTED_MODULE_4__predicates__["k"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return __WEBPACK_IMPORTED_MODULE_4__predicates__["l"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return __WEBPACK_IMPORTED_MODULE_4__predicates__["m"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__queue__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__queue__ = __webpack_require__(23);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_5__queue__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__strings__ = __webpack_require__(7);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "t", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "H", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "K", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["c"]; });
@@ -1061,7 +1138,7 @@ function pattern(struct) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["m"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["n"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["o"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__trace__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__trace__ = __webpack_require__(8);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_7__trace__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_7__trace__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return __WEBPACK_IMPORTED_MODULE_7__trace__["c"]; });
@@ -1077,7 +1154,7 @@ function pattern(struct) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1097,12 +1174,12 @@ var services = {
 //# sourceMappingURL=coreservices.js.map
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_index__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_index__ = __webpack_require__(4);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "root", function() { return __WEBPACK_IMPORTED_MODULE_0__common_index__["_27"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fromJson", function() { return __WEBPACK_IMPORTED_MODULE_0__common_index__["J"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "toJson", function() { return __WEBPACK_IMPORTED_MODULE_0__common_index__["_38"]; });
@@ -1201,13 +1278,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Category", function() { return __WEBPACK_IMPORTED_MODULE_0__common_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Trace", function() { return __WEBPACK_IMPORTED_MODULE_0__common_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "trace", function() { return __WEBPACK_IMPORTED_MODULE_0__common_index__["_39"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__params_index__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__params_index__ = __webpack_require__(24);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "DefType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Param", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(130);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(37);
@@ -1216,7 +1293,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Resolvable", function() { return __WEBPACK_IMPORTED_MODULE_3__resolve_index__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "NATIVE_INJECTOR_TOKEN", function() { return __WEBPACK_IMPORTED_MODULE_3__resolve_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ResolveContext", function() { return __WEBPACK_IMPORTED_MODULE_3__resolve_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state_index__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state_index__ = __webpack_require__(27);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "resolvablesBuilder", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateBuilder", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateObject", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["c"]; });
@@ -1225,7 +1302,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(140);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1239,7 +1316,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(141);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1249,13 +1326,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(142);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(49);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(45);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(143);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1273,7 +1350,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(146);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -1291,85 +1368,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SALE_ACTIVE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return SALE_CLOSED; });
-/* unused harmony export SALE_MARKUP */
-/* unused harmony export BID_NEW */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return BID_MATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return BID_UNMATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return BID_SETTLED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return BID_CANCELED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return LOGIN_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return REGISTER_URL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return PROFILE_URL; });
-/* unused harmony export BIDS_INDEX */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BIDS_MY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return BIDS_MY_MATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return BIDS_MY_UNMATCHED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return BIDS_MY_SETTLED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return BIDS_MY_CANCELED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return BIDS_MY_STORE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return EVENTS_INDEX; });
-/* unused harmony export EVENT_SINGLE */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return SALE_MY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return SALE_MY_ACTIVE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return SALE_MY_CLOSED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return SALE_CLOSING; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return SALE_LOWEST; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return SALE_SUBEVENT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return SALE_INDEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return SALE_CREATE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return SUBEVENTS_INDEX; });
-var SALE_ACTIVE = 1;
-var SALE_CLOSED = 2;
-var SALE_MARKUP = 3;
-
-var BID_NEW = 1;
-var BID_MATCHED = 2;
-var BID_UNMATCHED = 3;
-var BID_SETTLED = 4;
-var BID_CANCELED = 5;
-
-var LOGIN_URL = '/login';
-var REGISTER_URL = '/register';
-var PROFILE_URL = '/login/userproftest';
-
-//**BIDS**//
-var BIDS_INDEX = '/api/bids';
-var BIDS_MY = '/api/bids/my';
-var BIDS_MY_MATCHED = '/api/bids/my/matched';
-var BIDS_MY_UNMATCHED = '/api/bids/my/unmatched';
-var BIDS_MY_SETTLED = '/api/bids/my/settled';
-var BIDS_MY_CANCELED = '/api/bids/my/canceled';
-var BIDS_MY_STORE = '/api/bids/my/store';
-
-//**EVENTS**//
-var EVENTS_INDEX = '/api/events';
-var EVENT_SINGLE = '/api/events/';
-
-//**SALE**//
-
-var SALE_MY = '/api/sales/my';
-var SALE_MY_ACTIVE = '/api/sales/my/active';
-var SALE_MY_CLOSED = '/api/sales/my/closed';
-
-var SALE_CLOSING = '/api/sales/closing';
-var SALE_LOWEST = '/api/sales/lowest';
-var SALE_SUBEVENT = '/api/sales/subevent';
-
-var SALE_INDEX = '/api/sale';
-var SALE_CREATE = '/api/sale';
-
-//**SUBEVENTS**//
-var SUBEVENTS_INDEX = '/api/subevents';
-
-/***/ }),
-/* 7 */,
-/* 8 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1389,7 +1388,7 @@ var SUBEVENTS_INDEX = '/api/subevents';
 /* harmony export (immutable) */ __webpack_exports__["k"] = splitOnDelim;
 /* harmony export (immutable) */ __webpack_exports__["e"] = joinNeighborsR;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hof__ = __webpack_require__(2);
 /**
@@ -1530,7 +1529,7 @@ function joinNeighborsR(acc, x) {
 //# sourceMappingURL=strings.js.map
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1539,7 +1538,7 @@ function joinNeighborsR(acc, x) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return trace; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__strings__ = __webpack_require__(7);
 /**
  * # Transition tracing (debug)
  *
@@ -1788,12 +1787,12 @@ var trace = new Trace();
 //# sourceMappingURL=trace.js.map
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ng; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 /** @publicapi @module ng1 */ /** */
 
@@ -1802,14 +1801,14 @@ var trace = new Trace();
 //# sourceMappingURL=angular.js.map
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RejectType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Rejection; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
 /** @publicapi @module transition */ /** */
 
@@ -1930,7 +1929,7 @@ var Rejection = /** @class */ (function () {
 //# sourceMappingURL=rejectFactory.js.map
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1953,6 +1952,14 @@ var TransitionHookScope;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(68);
+module.exports = angular;
+
+
+/***/ }),
 /* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1962,8 +1969,8 @@ var TransitionHookScope;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(25);
 /** @publicapi @module params */ /** */
 
 
@@ -2179,8 +2186,8 @@ var Param = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TargetState; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(4);
 /** @publicapi @module state */ /** */
 
 
@@ -2330,14 +2337,14 @@ var TargetState = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransitionHook; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rejectFactory__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__rejectFactory__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__state_targetState__ = __webpack_require__(14);
 /** @publicapi @module transition */ /** */
 
@@ -2541,14 +2548,6 @@ var TransitionHook = /** @class */ (function () {
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(65);
-module.exports = angular;
-
-
-/***/ }),
-/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2556,7 +2555,7 @@ module.exports = angular;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pathNode__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pathNode__ = __webpack_require__(26);
 /** @internalapi @module path */ /** */
 
 
@@ -2726,16 +2725,16 @@ var PathUtils = /** @class */ (function () {
 //# sourceMappingURL=pathUtils.js.map
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return defaultResolvePolicy; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Resolvable; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
 /** @publicapi @module resolve */ /** */
 
@@ -2867,7 +2866,7 @@ var Resolvable = /** @class */ (function () {
 //# sourceMappingURL=resolvable.js.map
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2875,13 +2874,13 @@ var Resolvable = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ResolveContext; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interface__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_strings__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common__ = __webpack_require__(4);
 /** @publicapi @module resolve */ /** */
 
 
@@ -3087,7 +3086,7 @@ var UIInjectorImpl = /** @class */ (function () {
 //# sourceMappingURL=resolveContext.js.map
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3096,8 +3095,8 @@ var UIInjectorImpl = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__params_param__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_strings__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common__ = __webpack_require__(4);
 /** @publicapi @module url */ /** */
 
 
@@ -3634,13 +3633,13 @@ var UrlMatcher = /** @class */ (function () {
 //# sourceMappingURL=urlMatcher.js.map
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseLocationServices; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(33);
 /** @internalapi @module vanilla */ /** */
 
 
@@ -3681,19 +3680,19 @@ var BaseLocationServices = /** @class */ (function () {
 //# sourceMappingURL=baseLocationService.js.map
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["b"] = watchDigests;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getLocals; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(147);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(63);
 /**
  * # Angular 1 types
@@ -3819,7 +3818,7 @@ var getLocals = function (ctx) {
 //# sourceMappingURL=services.js.map
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3906,7 +3905,7 @@ var Glob = /** @class */ (function () {
 //# sourceMappingURL=glob.js.map
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3964,18 +3963,18 @@ var Queue = /** @class */ (function () {
 //# sourceMappingURL=queue.js.map
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(13);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(129);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(36);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__paramType__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__paramType__ = __webpack_require__(25);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__paramType__["a"]; });
 
 
@@ -3984,7 +3983,7 @@ var Queue = /** @class */ (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4142,7 +4141,7 @@ function ArrayType(type, mode) {
 //# sourceMappingURL=paramType.js.map
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4229,14 +4228,14 @@ var PathNode = /** @class */ (function () {
 //# sourceMappingURL=pathNode.js.map
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__stateBuilder__ = __webpack_require__(39);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__stateBuilder__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__stateBuilder__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateObject__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateObject__ = __webpack_require__(28);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__stateObject__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateMatcher__ = __webpack_require__(40);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__stateMatcher__["a"]; });
@@ -4258,14 +4257,14 @@ var PathNode = /** @class */ (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateObject; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_glob__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_glob__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_predicates__ = __webpack_require__(1);
 
 
@@ -4380,30 +4379,30 @@ var StateObject = /** @class */ (function () {
 //# sourceMappingURL=stateObject.js.map
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return defaultTransOpts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransitionService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(139);
 /** @publicapi @module transition */ /** */
 
 
@@ -4662,27 +4661,27 @@ var TransitionService = /** @class */ (function () {
 //# sourceMappingURL=transitionService.js.map
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transition; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__interface__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__interface__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionHook__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hookRegistry__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hookRegistry__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hookBuilder__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__path_pathUtils__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__path_pathUtils__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__params_param__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__resolve_resolvable__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__resolve_resolveContext__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__rejectFactory__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__resolve_resolvable__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__resolve_resolveContext__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__rejectFactory__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common__ = __webpack_require__(4);
 /** @publicapi @module transition */ /** */
 
 
@@ -5361,15 +5360,15 @@ var Transition = /** @class */ (function () {
 //# sourceMappingURL=transition.js.map
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["c"] = matchState;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisteredHook; });
 /* harmony export (immutable) */ __webpack_exports__["b"] = makeEvent;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interface__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interface__ = __webpack_require__(11);
 /** @publicapi @module transition */ /** */
 
 
@@ -5524,17 +5523,17 @@ function makeEvent(registry, transitionService, eventType) {
 //# sourceMappingURL=hookRegistry.js.map
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UrlRuleFactory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseUrlRule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state_stateObject__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state_stateObject__ = __webpack_require__(28);
 /** @publicapi @module url */ /** */
 
 
@@ -5737,7 +5736,7 @@ var BaseUrlRule = /** @class */ (function () {
 //# sourceMappingURL=urlRule.js.map
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5746,7 +5745,7 @@ var BaseUrlRule = /** @class */ (function () {
 /* harmony export (immutable) */ __webpack_exports__["e"] = parseUrl;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return buildUrl; });
 /* harmony export (immutable) */ __webpack_exports__["d"] = locationPluginFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
 /** @internalapi @module vanilla */ /** */
 
 var keyValsToObjectR = function (accum, _a) {
@@ -5803,14 +5802,14 @@ function locationPluginFactory(name, isHtml5, serviceClass, configurationClass) 
 //# sourceMappingURL=utils.js.map
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["b"] = getNg1ViewConfigFactory;
 /* harmony export (immutable) */ __webpack_exports__["c"] = ng1ViewsBuilder;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1ViewConfig; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 
 /** @internalapi */
 function getNg1ViewConfigFactory() {
@@ -5924,6 +5923,53 @@ var Ng1ViewConfig = /** @class */ (function () {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsListController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var EventsListController = function () {
+    function EventsListController($window, $http) {
+        _classCallCheck(this, EventsListController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.opened = [];
+        this._opts = { dataLoad: false };
+        this.showList();
+    }
+
+    _createClass(EventsListController, [{
+        key: 'showList',
+        value: function showList() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */]).then(function (response) {
+
+                _this.events = response.data.data;
+                _this._opts.dataLoad = true;
+                console.log(_this.events, 'console.log(this.events)');
+            });
+        }
+    }]);
+
+    return EventsListController;
+}();
+
+;
+
+EventsListController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
 /* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5976,10 +6022,10 @@ var StateParams = /** @class */ (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(38);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolvable__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolvable__ = __webpack_require__(17);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__resolvable__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__resolvable__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolveContext__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolveContext__ = __webpack_require__(18);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__resolveContext__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__resolveContext__["b"]; });
 /** @publicapi @module resolve */ /** */
@@ -6017,10 +6063,10 @@ var resolvePolicies = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateBuilder; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(5);
 /** @publicapi @module state */ /** */
 
 
@@ -6383,8 +6429,8 @@ var StateMatcher = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateQueueManager; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateObject__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stateObject__ = __webpack_require__(28);
 /** @publicapi @module state */ /** */
 
 
@@ -6649,16 +6695,16 @@ var StateRegistry = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_queue__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__path_pathUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__path_pathNode__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transition_transitionService__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transition_rejectFactory__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_queue__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__path_pathUtils__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__path_pathNode__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transition_transitionService__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transition_rejectFactory__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__targetState__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__params_param__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_glob__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__resolve_resolveContext__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_glob__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__resolve_resolveContext__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__hooks_lazyLoad__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_hof__ = __webpack_require__(2);
 /** @publicapi @module state */ /** */
@@ -7234,7 +7280,7 @@ var StateService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HookBuilder; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interface__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__interface__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transitionHook__ = __webpack_require__(15);
 /** @publicapi @module transition */ /** */
 
@@ -7362,7 +7408,7 @@ function tupleSort(reverseDepthSort) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UIRouter; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__url_urlMatcherFactory__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__url_urlRouter__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__transition_transitionService__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__transition_transitionService__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_view__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state_stateRegistry__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__state_stateService__ = __webpack_require__(43);
@@ -7370,8 +7416,8 @@ function tupleSort(reverseDepthSort) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__url_urlService__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common__ = __webpack_require__(4);
 /** @publicapi @module core */ /** */
 
 
@@ -7568,9 +7614,9 @@ var UIRouter = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParamFactory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UrlMatcherFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__params__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__params__ = __webpack_require__(24);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -7678,8 +7724,8 @@ var UrlMatcherFactory = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlRouter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlRule__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlRule__ = __webpack_require__(32);
 /** @publicapi @module url */ /** */
 
 
@@ -7826,7 +7872,7 @@ var UrlRouter = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_trace__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_trace__ = __webpack_require__(8);
 /** @publicapi @module view */ /** */
 
 
@@ -8126,7 +8172,7 @@ var ViewService = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UIRouterGlobals; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__params_stateParams__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_queue__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_queue__ = __webpack_require__(23);
 /** @publicapi @module core */ /** */
 
 
@@ -8167,10 +8213,10 @@ var UIRouterGlobals = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlRules__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__urlConfig__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__state__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__state__ = __webpack_require__(27);
 
 
 
@@ -8439,10 +8485,10 @@ var UrlService = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlRules; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__state__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcher__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(32);
 
 
 
@@ -8799,8 +8845,8 @@ var UrlRules = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlConfig; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__params__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__params__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(4);
 
 
 /**
@@ -8965,7 +9011,7 @@ var UrlConfig = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyLoadHook; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = lazyLoadState;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_coreservices__ = __webpack_require__(5);
 
 /**
  * A [[TransitionHookFn]] that performs lazy loading
@@ -9103,7 +9149,7 @@ var TransitionEventType = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return $q; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_index__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_index__ = __webpack_require__(4);
 /** @internalapi @module vanilla */ /** */
 
 /**
@@ -9166,7 +9212,7 @@ var $q = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return $injector; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_index__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_index__ = __webpack_require__(4);
 /** @internalapi @module vanilla */ /** */
 
 // globally available injectables
@@ -9268,8 +9314,8 @@ var $injector = {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HashLocationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseLocationService__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__baseLocationService__ = __webpack_require__(20);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9312,7 +9358,7 @@ var HashLocationService = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MemoryLocationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(20);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9348,8 +9394,8 @@ var MemoryLocationService = /** @class */ (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PushStateLocationService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseLocationService__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(4);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9518,7 +9564,7 @@ var BrowserLocationConfig = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module ng1 */ /** */
 
 /**
@@ -9664,7 +9710,7 @@ var StateProvider = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UrlRouterProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module url */ /** */
 
 
@@ -9863,8 +9909,74 @@ var UrlRouterProvider = /** @class */ (function () {
 //# sourceMappingURL=urlRouterProvider.js.map
 
 /***/ }),
-/* 64 */,
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(156);
+module.exports = 'ngAnimate';
+
+
+/***/ }),
 /* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(157);
+module.exports = 'ngAria';
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(67);
+module.exports = __webpack_require__(159);
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(124);
+var angular = __webpack_require__(12);
+
+
+
+
+
+
+
+
+var ngRouter = __webpack_require__(127).default;
+var ngMaterial = __webpack_require__(155);
+var ngAria = __webpack_require__(65);
+var ngAnimate = __webpack_require__(64);
+
+var app = angular.module('poker', [ngMaterial, ngAria, ngAnimate, ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
+/*
+angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {
+    $mdThemingProvider.theme('formSelect');
+    $mdThemingProvider.setDefaultTheme('formSelect');
+}]);*/
+
+app.config(['$interpolateProvider', function ($interpolateProvider) {
+    $interpolateProvider.startSymbol('{%');
+    $interpolateProvider.endSymbol('%}');
+}]);
+
+app.config(__WEBPACK_IMPORTED_MODULE_1__Router__["a" /* default */]);
+app.run(__WEBPACK_IMPORTED_MODULE_2__Middlewares__["a" /* default */]);
+app.run(__WEBPACK_IMPORTED_MODULE_5__Hack__["a" /* default */]);
+
+/***/ }),
+/* 68 */
 /***/ (function(module, exports) {
 
 /**
@@ -46086,7 +46198,1701 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 66 */
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Controllers_MenuController__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Controllers_EventInfoController__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Controllers_MainController__ = __webpack_require__(165);
+var angular = __webpack_require__(12);
+
+
+
+
+
+////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var module = angular.module('Controllers', []);
+
+module.controller('LoginController', __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__["a" /* LoginController */]);
+module.controller('RegisterController', __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__["a" /* RegisterController */]);
+module.controller('ProfileController', __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__["a" /* ProfileController */]);
+module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
+
+/////////////////////////////////////////////////////////////
+
+module.controller('SaleController', __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__["a" /* SaleController */]);
+module.controller('SaleFilterController', __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__["a" /* SaleFilterController */]);
+module.controller('SaleAllController', __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__["a" /* SaleAllController */]);
+module.controller('SaleFormController', __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__["a" /* SaleFormController */]);
+module.controller('SaleManageController', __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__["a" /* SaleManageController */]);
+
+module.controller('InvestController', __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__["a" /* InvestController */]);
+module.controller('EventController', __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__["a" /* EventController */]);
+module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
+module.controller('BidsController', __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__["a" /* BidsController */]);
+module.controller('BidsFilterController', __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__["a" /* BidsFilterController */]);
+module.controller('MenuController', __WEBPACK_IMPORTED_MODULE_13__Controllers_MenuController__["a" /* MenuController */]);
+module.controller('EventInfoController', __WEBPACK_IMPORTED_MODULE_14__Controllers_EventInfoController__["a" /* EventInfoController */]);
+module.controller('MainController', __WEBPACK_IMPORTED_MODULE_15__Controllers_MainController__["a" /* MainController */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (module.name);
+
+/***/ }),
+/* 70 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var LoginController = function () {
+    function LoginController($window, $http) {
+        _classCallCheck(this, LoginController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.firstName = '';
+    }
+
+    _createClass(LoginController, [{
+        key: 'sendAuthData',
+        value: function sendAuthData(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var data = {
+                email: this.userEmail,
+                password: this.userPassword
+            };
+
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["l" /* LOGIN_URL */], data).then(function (response) {
+                if (response.status === 200) {
+                    window.location.href = '/';
+                }
+            });
+        }
+    }]);
+
+    return LoginController;
+}();
+
+;
+
+LoginController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 71 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var RegisterController = function () {
+    function RegisterController($window, $http) {
+        _classCallCheck(this, RegisterController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.userName = '';
+        this.userEmail = '';
+        this.userPassword = '';
+        this.passwordConfirmation = '';
+        this.userAge = '';
+    }
+
+    _createClass(RegisterController, [{
+        key: 'sendRegisterForm',
+        value: function sendRegisterForm(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            var data = {
+                name: this.userName,
+                email: this.userEmail,
+                password: this.userPassword,
+                password_confirmation: this.passwordConfirmation,
+                age: this.userAge
+            };
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* REGISTER_URL */], data).then(function (response) {
+
+                if (response.status === 200) {
+                    window.location.href = '/';
+                } else {
+                    console.log('валидация не прошла');
+                }
+            });
+        }
+    }]);
+
+    return RegisterController;
+}();
+
+;
+
+RegisterController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var ProfileController = function () {
+    function ProfileController($window, $http) {
+        _classCallCheck(this, ProfileController);
+
+        this.user = window.user;
+        this.$window = $window;
+        this.$http = $http;
+
+        console.log(this.user);
+    }
+
+    // changeProfile(){
+    //     //console.log(this.userName.value(););
+    //     console.log('change value');
+    //
+    // };
+
+
+    _createClass(ProfileController, [{
+        key: 'changeProfile',
+        value: function changeProfile() {
+            var data = {
+                name: this.user.name,
+                age: this.user.age,
+                id: this.user.id
+            };
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* PROFILE_URL */], data).then(function (response) {
+
+                // console.log(response.data.status);
+                console.log(response.data);
+
+                // if (response.data.status == 0){
+                //     console.log('валидация не прошла')
+                // } else {
+                //     window.location.href = response.data.url;
+                // }
+            });
+        }
+    }]);
+
+    return ProfileController;
+}();
+
+ProfileController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 73 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+var BidsController = function () {
+    function BidsController($http) {
+        _classCallCheck(this, BidsController);
+
+        this.$http = $http;
+        this.user = window.__user;
+        this.bids = [];
+        this._opts = { dataLoad: false };
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_CANCELED */], name: 'canceled' }];
+        this.getList();
+    }
+
+    _createClass(BidsController, [{
+        key: "getList",
+        value: function getList() {
+            var _this = this;
+
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* BIDS_MY */], { user_id: this.user.id }).then(function (response) {
+                _this.bids = response.data.data;
+                _this._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return BidsController;
+}();
+
+;
+
+BidsController.$inject = ['$http'];
+
+
+
+/***/ }),
+/* 74 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsFilterController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var BidsFilterController = function () {
+    function BidsFilterController($http, $stateParams) {
+        _classCallCheck(this, BidsFilterController);
+
+        this.$http = $http;
+        this.$stateParams = $stateParams;
+        this.bids = [];
+        this.user = window.__user;
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_CANCELED */], name: 'canceled' }];
+        this._opts = { dataLoad: false };
+        this.getList();
+    }
+
+    _createClass(BidsFilterController, [{
+        key: "getList",
+        value: function getList() {
+            var _this = this;
+
+            var url = null;
+            var filter = null;
+
+            if (this.$stateParams.filter === 'matched') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BIDS_MY_MATCHED */];
+                filter = 1;
+            }
+            if (this.$stateParams.filter === 'unmatched') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BIDS_MY_UNMATCHED */];
+                filter = 2;
+            }
+            if (this.$stateParams.filter === 'settled') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BIDS_MY_SETTLED */];
+                filter = 3;
+            }
+            if (this.$stateParams.filter === 'canceled') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* BIDS_MY_CANCELED */];
+                filter = 4;
+            }
+
+            this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
+                _this.bids = response.data.data;
+                _this._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return BidsFilterController;
+}();
+
+;
+
+BidsFilterController.$inject = ['$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var SaleController = function () {
+    function SaleController($http) {
+        _classCallCheck(this, SaleController);
+
+        this.$http = $http;
+        this.user = window.__user;
+        this.sales = null;
+        this._opts = { dataLoad: false };
+        this.showList();
+    }
+
+    _createClass(SaleController, [{
+        key: "showList",
+        value: function showList() {
+            var _this = this;
+
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["u" /* SALE_MY */], { user_id: this.user.id }).then(function (response) {
+                _this.sales = response.data.data;
+                _this._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return SaleController;
+}();
+
+;
+
+SaleController.$inject = ['$http'];
+
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleAllController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var SaleAllController = function () {
+    function SaleAllController($window, $http) {
+        _classCallCheck(this, SaleAllController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.events = [];
+        this._opts = { dataLoad: false };
+        this.filter = 'closing';
+        this.setFilter(this.filter);
+    }
+
+    _createClass(SaleAllController, [{
+        key: 'setFilter',
+        value: function setFilter(param) {
+            if (param == 'closing') {
+                this.filter = 'closing';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CLOSING */]);
+            }
+            if (param == 'markup') {
+                this.filter = 'markup';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_LOWEST */]);
+            }
+        }
+    }, {
+        key: 'getSales',
+        value: function getSales(url) {
+            var _this = this;
+
+            this.$http.post(url).then(function (response) {
+                _this.sales = response.data.data;
+                _this._opts.dataLoad = true;
+                return true;
+            });
+        }
+    }]);
+
+    return SaleAllController;
+}();
+
+;
+
+SaleAllController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFilterController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+
+
+var SaleFilterController = function () {
+    function SaleFilterController($http, $stateParams) {
+        _classCallCheck(this, SaleFilterController);
+
+        this.$http = $http;
+        this.sales = null;
+        this.user = window.__user;
+        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_ACTIVE */], name: 'active' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CLOSED */], name: 'closed' }];
+        this.$stateParams = $stateParams;
+        this._opts = { dataLoad: false };
+        this.getList();
+    }
+
+    _createClass(SaleFilterController, [{
+        key: "getList",
+        value: function getList() {
+            var _this = this;
+
+            var url = null;
+            var filter = null;
+            if (this.$stateParams.filter === 'active') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["v" /* SALE_MY_ACTIVE */];
+                filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_ACTIVE */];
+            }
+            if (this.$stateParams.filter === 'closed') {
+                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["w" /* SALE_MY_CLOSED */];
+                filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CLOSED */];
+            }
+            this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
+                _this.sales = response.data.data;
+                _this._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return SaleFilterController;
+}();
+
+;
+
+SaleFilterController.$inject = ['$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var SaleManageController = function () {
+    function SaleManageController($window, $http, $stateParams) {
+        _classCallCheck(this, SaleManageController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.$stateParams = $stateParams;
+        this.event = null;
+        this.subevents = null;
+        this.subevent = null;
+        this.buy_in = null;
+        this._opts = {
+            load: false,
+            update: false
+        };
+        this.getSale();
+    }
+
+    /*  getEvents() {
+          this.$http.get(EVENTS_INDEX)
+              .then(response => {
+                  this.events = response.data.data;
+                  this._opts.load = true;
+              });
+      }
+      getSubevents(){
+          this.$http.get(SUBEVENTS_INDEX, {params: {event_id: this.sale.event_id}})
+              .then(response => {
+                  this.buy_in = null;
+                  this.subevents = response.data.data;
+                  this._opts.load = true;
+                  this.fillSale()
+              });
+        }
+      fillSale(){
+          let self = this;
+          console.log(this.subevents, 'this.subevents');
+          angular.forEach(this.subevents, function (value, key) {
+              if (value.id == self.sale.sub_event_id){
+                  self.buy_in = value.event.buy_in;
+              }
+          });
+        }
+    */
+
+    _createClass(SaleManageController, [{
+        key: 'getSale',
+        value: function getSale() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+                _this.sale = response.data.data;
+                console.log(_this.sale);
+            });
+        }
+
+        /*  createSale(){
+              let data = this.sale;
+              this.$http.post(SALE_CREATE, data)
+                  .then(response => {
+                      if (response.status === 200) window.location.href = '/sales';
+                      console.log(response);
+                  });
+              console.log(this.sale, 'sale');
+          }
+            updateSale(){
+              let data = this.sale;
+              console.log(SALE_CREATE+'/'+this.sale.id);
+              this.$http.put(SALE_CREATE+'/'+this.sale.id, data)
+                  .then(response => {
+                      console.log(response);
+                      if (response.status == 200) window.location.href = '/sale';
+                      console.log(response);
+                  });
+              console.log(this.sale, 'sale');
+          }
+        */
+
+    }]);
+
+    return SaleManageController;
+}();
+
+;
+
+SaleManageController.$inject = ['$window', '$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 79 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFormController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+
+var SaleFormController = function () {
+    function SaleFormController($window, $http, $stateParams) {
+        _classCallCheck(this, SaleFormController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.$stateParams = $stateParams;
+        this.event = null;
+        this.subevents = null;
+        this.subevent = null;
+        this.buy_in = null;
+
+        this._opts = {
+            load: false,
+            update: false
+        };
+
+        if (this.$stateParams.hasOwnProperty('id')) {
+            this._opts.update = true;
+            this.getSale();
+        } else {
+
+            this.sale = {
+                event_id: null,
+                user_id: window.__user.id,
+                flight_id: 1,
+                status: 1,
+                sub_event_id: null,
+                markup: null,
+                share: null,
+                amount: null
+            };
+        }
+        this.getEvents();
+    }
+
+    _createClass(SaleFormController, [{
+        key: "getEvents",
+        value: function getEvents() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */]).then(function (response) {
+                _this.events = response.data.data;
+                _this._opts.load = true;
+            });
+        }
+    }, {
+        key: "getSubevents",
+        value: function getSubevents() {
+            var _this2 = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["y" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
+                _this2.buy_in = null;
+                _this2.subevents = response.data.data;
+                _this2._opts.load = true;
+                _this2.fillSale();
+            });
+        }
+    }, {
+        key: "fillSale",
+        value: function fillSale() {
+            var self = this;
+            console.log(this.subevents, 'this.subevents');
+            angular.forEach(this.subevents, function (value, key) {
+                if (value.id == self.sale.sub_event_id) {
+                    self.buy_in = value.event.buy_in;
+                }
+            });
+        }
+    }, {
+        key: "getSale",
+        value: function getSale() {
+            var _this3 = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+                _this3.sale = response.data.data;
+                if (_this3._opts.update) _this3.getSubevents();
+            });
+        }
+    }, {
+        key: "createSale",
+        value: function createSale() {
+            var data = this.sale;
+            console.log(data);
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_CREATE */], data).then(function (response) {
+                //if (response.status === 200) window.location.href = '/sales';
+                console.log(response);
+            });
+            console.log(this.sale, 'sale');
+        }
+    }, {
+        key: "updateSale",
+        value: function updateSale() {
+            var data = this.sale;
+            console.log(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_CREATE */] + '/' + this.sale.id);
+            this.$http.put(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_CREATE */] + '/' + this.sale.id, data).then(function (response) {
+                console.log(response);
+                if (response.status == 200) window.location.href = '/sale';
+                console.log(response);
+            });
+            console.log(this.sale, 'sale');
+        }
+    }]);
+
+    return SaleFormController;
+}();
+
+;
+
+SaleFormController.$inject = ['$window', '$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 80 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InvestController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var InvestController = function () {
+    function InvestController($window, $http) {
+        _classCallCheck(this, InvestController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.events = [];
+        this._opts = { dataLoad: false };
+        this.filter = 'closing';
+
+        this.showList();
+        this.setFilter(this.filter);
+    }
+
+    _createClass(InvestController, [{
+        key: 'setFilter',
+        value: function setFilter(param) {
+            if (param == 'closing') {
+                this.filter = 'closing';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CLOSING */]);
+            }
+            if (param == 'markup') {
+                this.filter = 'markup';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_LOWEST */]);
+            }
+        }
+    }, {
+        key: 'showList',
+        value: function showList() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */]).then(function (response) {
+                _this.events = response.data.data;
+                _this._opts.dataLoad = true;
+                console.log(_this.events, 'console.log(this.events)');
+            });
+        }
+    }, {
+        key: 'getSales',
+        value: function getSales(url) {
+            var _this2 = this;
+
+            this.$http.post(url).then(function (response) {
+                _this2.sales = response.data.data;
+                _this2._opts.dataLoad = true;
+                return true;
+            });
+        }
+    }]);
+
+    return InvestController;
+}();
+
+;
+
+InvestController.$inject = ['$window', '$http'];
+
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var EventController = function () {
+    function EventController($window, $http, $stateParams) {
+        _classCallCheck(this, EventController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.$stateParams = $stateParams;
+        this._opts = { dataLoad: false };
+        this.showList();
+    }
+
+    _createClass(EventController, [{
+        key: 'showList',
+        value: function showList() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+                _this.event = response.data.data;
+                _this.getSale(_this.event.subevents[0].id);
+            });
+        }
+    }, {
+        key: 'getSale',
+        value: function getSale(id) {
+            var _this2 = this;
+
+            this.opened = id;
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["x" /* SALE_SUBEVENT */], { sub_event_id: id }).then(function (response) {
+                _this2.sales = response.data.data;
+                _this2._opts.dataLoad = true;
+            });
+        }
+    }]);
+
+    return EventController;
+}();
+
+;
+
+EventController.$inject = ['$window', '$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 82 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuController; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MenuController = function MenuController($state) {
+    _classCallCheck(this, MenuController);
+
+    this.$state = $state;
+    console.log(this.$state);
+    this.menuItem = this.$state.current.menu;
+};
+
+;
+
+MenuController.$inject = ['$state'];
+
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventInfoController; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var EventInfoController = function () {
+    function EventInfoController($window, $http, $stateParams) {
+        _classCallCheck(this, EventInfoController);
+
+        this.$window = $window;
+        this.$http = $http;
+        this.$stateParams = $stateParams;
+        this._opts = { dataLoad: false };
+        this.showList();
+    }
+
+    _createClass(EventInfoController, [{
+        key: 'showList',
+        value: function showList() {
+            var _this = this;
+
+            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
+                _this.event = response.data.data;
+                console.log(_this.event);
+            });
+        }
+    }]);
+
+    return EventInfoController;
+}();
+
+;
+
+EventInfoController.$inject = ['$window', '$http', '$stateParams'];
+
+
+
+/***/ }),
+/* 84 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = routes;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_EventsListController__ = __webpack_require__(35);
+
+
+routes.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
+
+function routes($locationProvider, $stateProvider, $urlRouterProvider) {
+    $locationProvider.html5Mode({ enabled: true, requireBase: false });
+
+    $urlRouterProvider.rule(function ($injector, $location) {
+        var path = $location.path();
+        if (path !== '/' && path.slice(-1) === '/') {
+            $location.replace().path(path.slice(0, -1));
+        }
+    });
+
+    $stateProvider.state('index', {
+        url: '/',
+        template: __webpack_require__(85),
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'invest'
+                    };
+                }
+            }
+        }
+    }).state('terms-and-conditions', {
+        url: '/terms-and-conditions',
+        template: __webpack_require__(86)
+    }).state('privacy-policy', {
+        url: '/privacy-policy',
+        template: __webpack_require__(87)
+    }).state('auth', {
+        template: __webpack_require__(88),
+        data: {
+            permissions: {
+                except: 'Auth',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'invest'
+                    };
+                }
+            }
+        }
+    }).state('auth.login', {
+        //ng-controller="LoginController as LgCtrl"
+        url: '/login',
+        template: __webpack_require__(89),
+        controller: 'LoginController',
+        controllerAs: 'LgCtrl'
+    }).state('auth.registration', {
+        url: '/register',
+        template: __webpack_require__(90),
+        //ng-controller="RegisterController as RgCtrl"
+        controller: 'RegisterController',
+        controllerAs: 'RgCtrl'
+    }).state('invest', {
+        url: '/invest',
+        template: __webpack_require__(91),
+        menu: 'invest',
+        controller: 'InvestController',
+        controllerAs: 'InvstCtrl'
+    }).state('sale-all', {
+        url: '/invest/sales',
+        template: __webpack_require__(92),
+        controller: 'SaleAllController',
+        controllerAs: 'SaleAllCtrl'
+    }).state('events', {
+        url: '/events',
+        template: __webpack_require__(93),
+        controller: 'EventsListController',
+        controllerAs: 'EvntsLstCtrl'
+    }).state('event', {
+        url: '/event/{id}',
+        template: __webpack_require__(94),
+        controller: 'EventInfoController',
+        controllerAs: 'EventInfoCtrl'
+    }).state('event-info', {
+        url: '/event/info/{id}',
+        template: __webpack_require__(95),
+        controller: 'EventController',
+        controllerAs: 'EventCtrl'
+    }).state('bids', {
+        url: '/bids',
+        template: __webpack_require__(96),
+        menu: 'bids',
+        controller: 'BidsController',
+        controllerAs: 'BidsCtrl',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+    }).state('bids-filter', {
+        url: '/bids/{filter}',
+        template: __webpack_require__(97),
+        controller: 'BidsFilterController',
+        controllerAs: 'BidsCtrl',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+    }).state('sale', {
+        url: '/sales',
+        template: __webpack_require__(98),
+        menu: 'sales',
+        controller: 'SaleController',
+        controllerAs: 'SaleCtrl',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+    }).state('sale-create', {
+        url: '/sale/create',
+        template: __webpack_require__(99),
+        controller: 'SaleFormController',
+        controllerAs: 'SaleFrmCtrl',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+    }).state('sale-manage', {
+        url: '/sale/manage/{id}',
+        template: __webpack_require__(100),
+        controller: 'SaleManageController',
+        controllerAs: 'SaleMngCtrl',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+
+    }).state('sale-filter', {
+        url: '/sales/{filter}',
+        template: __webpack_require__(101),
+        controller: 'SaleFilterController',
+        controllerAs: 'SaleCtrl',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+    }).state('wallet', {
+        url: '/wallet',
+        template: __webpack_require__(102),
+        menu: 'wallet',
+        data: {
+            permissions: {
+                except: 'Guest',
+                redirectTo: function redirectTo() {
+                    return {
+                        state: 'index'
+                    };
+                }
+            }
+        }
+    }).state('profile', {
+        url: '/profile',
+        template: __webpack_require__(103)
+    });
+
+    $urlRouterProvider.otherwise(function ($injector, $location) {
+        var state = $injector.get('$state');
+        state.go('404');
+        return $location.path();
+    });
+}
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"login_page-wr col-md-12\">\r\n        <div class=\"login_block\">\r\n            <div class=\"buy_stakes\">\r\n                Buy stakes in poker players in tournaments online and around the world\r\n            </div>\r\n            <div class=\"btn_block\">\r\n                <a ui-sref=\"auth.login\">\r\n                    <div class=\"login_btn login_in\">Log in</div>\r\n                </a>\r\n                <a ui-sref=\"auth.registration\">\r\n                    <div class=\"login_btn login_registration\" >Register</div>\r\n                </a>\r\n            </div>\r\n            <div class=\"contine_without_wr\">\r\n                <a class=\"contine_without\" ui-sref=\"invest\">\r\n                    Continue without registration\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n           <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\r\n\r\n\r\n            <div class=\"data-privacy\">\r\n            <span>Terms & Conditions</span>\r\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\r\n        </div>\r\n        <div class=\"check-box-wr\">\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"sms_new\" checked>\r\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\r\n\r\n            </div>\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"email_new\" checked>\r\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\r\n\r\n            </div>\r\n        </div>\r\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\r\n\r\n\r\n\r\n        <div class=\"see_policy\">\r\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\r\n\r\n\r\n        <div class=\"data-privacy\">\r\n\r\n            Privacy Policy\r\n        </div>\r\n        <div>\r\n            What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\r\n\r\n        </div>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <ui-view></ui-view>\r\n</div>";
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"fullscreen\">\r\n\r\n        <div class=\"page_title col-md-12\">\r\n            Please Login\r\n            <a ui-sref=\"index\" class=\"goback\" href=\"index\">\r\n\r\n            </a>\r\n        </div>\r\n\r\n        <div class=\"col-md-12\">\r\n            <form ng-submit=\"LgCtrl.sendAuthData($event)\" style=\"width:100%\">\r\n                <md-input-container class=\"md-block login_input\">\r\n                    <label>Client Email</label>\r\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"LgCtrl.userEmail\"\r\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Your email must look like an e-mail address.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your password</label>\r\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Password field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n                <button class=\"button button_login\" type=\"submit\" style=\"\"\r\n                        ng-click=\"LgCtrl.sendAuthData($event)\">Enter\r\n                </button>\r\n            </form>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"fullscreen\">\r\n\r\n        <div class=\"page_title col-md-12\">\r\n            Registration\r\n            <a ui-sref=\"index\" class=\"goback\"></a>\r\n        </div>\r\n\r\n        <div class=\"col-md-12\">\r\n            <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"\">\r\n\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your Name</label>\r\n                    <input type=\"text\" ng-model=\"RgCtrl.userName\" name=\"clientName\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required']\">\r\n                            Name field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n\r\n                <md-input-container class=\"md-block login_input\">\r\n                    <label>Client Email</label>\r\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"RgCtrl.userEmail\"\r\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Your email must look like an e-mail address.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your Name</label>\r\n                    <input type=\"number\" ng-model=\"RgCtrl.userAge\" name=\"clientAge\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required']\">\r\n                            Age field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your password</label>\r\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Password field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your password</label>\r\n                    <input type=\"password\" ng-model=\"RgCtrl.passwordConfirmation\" name=\"clientPasswordConfirmation\"\r\n                           required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Password field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n                <button class=\"button\" type=\"submit button_login\" style=\"border-radius:10pt; width: 100%\"\r\n                        ng-click=\"RgCtrl.sendRegisterForm($event)\">continue\r\n                </button>\r\n            </form>\r\n            <div class=\"private_policy\">\r\n                By creating an account you agree to our\r\n                <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and <a ui-sref=\"privacy-policy\">Privacy\r\n                Policy</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" ng-cloak>\r\n    <div class=\"col-md-12\">\r\n        <div class=\"header\">\r\n            <a ui-sref=\"profile\">\r\n                <div class=\"header_profile\"></div>\r\n            </a>\r\n            <div class=\"header_logo\">LOGO</div>\r\n            <div class=\"header_filter\"></div>\r\n        </div>\r\n        <div class=\"invest_events\">\r\n            <div class=\"blocks_header_title\">\r\n                <div class=\"blocks_header_title_name\">Events</div>\r\n                <div class=\"blocks_header_link\"><a ui-sref=\"events\">See All</a></div>\r\n            </div>\r\n\r\n\r\n            <events-carousel ng-if=\"InvstCtrl._opts.dataLoad\"\r\n                             events=\"InvstCtrl.events\" state=\"'row'\">\r\n            </events-carousel>\r\n\r\n            <div class=\"blocks_header_title\">\r\n                <div class=\"blocks_header_title_name\">Players</div>\r\n                <div class=\"blocks_header_link\"><a ui-sref=\"sale-all\">See All</a></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"fullscreen\">\r\n        <div class=\"invest_sales\">\r\n            <div class=\"tabs_list\">\r\n                <div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'closing'}\"\r\n                     ng-click=\"InvstCtrl.setFilter('closing')\">Closing\r\n                </div>\r\n                <div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'markup'}\"\r\n                     ng-click=\"InvstCtrl.setFilter('markup')\">Lowest markup\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\r\n        <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\r\n\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"container\">\r\n    <div class=\"header\">\r\n        <a ui-sref=\"invest\"><div class=\"header_back\"></div></a>\r\n        <div class=\"header_title\">Players</div>\r\n        <div class=\"header_empty\"></div>\r\n    </div>\r\n    </div>\r\n    <div class=\"fullscreen\">\r\n        <div class=\"invest_sales\">\r\n            <div class=\"tabs_list\">\r\n                <div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'closing'}\"\r\n                     ng-click=\"SaleAllCtrl.setFilter('closing')\">Closing\r\n                </div>\r\n                <div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'markup'}\"\r\n                     ng-click=\"SaleAllCtrl.setFilter('markup')\">Lowest markup\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\r\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\r\n\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"binds event-list-main-wr col-md-12\">\r\n        <div class=\"header\">\r\n            <a ui-sref=\"invest\"><div class=\"goback goback_unset\"></div></a>\r\n            <div class=\"header_logo\">Events</div>\r\n            <div class=\"header_filter\"></div>\r\n        </div>\r\n\r\n        <div class=\"all_events-wr\">\r\n\r\n\r\n            <events ng-if=\"EvntsLstCtrl._opts.dataLoad\"\r\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\r\n            </events>\r\n\r\n        </div>\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>\r\n";
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"binds event-list-main-wr\">\r\n\r\n        <div class=\"all_events-wr\">\r\n            <div class=\"event_card_list\">\r\n                <div class=\"selected_event event_card_list_img\" style=\"border-radius: 0px\">\r\n                    <img src=\"/images/select_event_bg.png\" alt=\"\">\r\n                    <a ui-sref=\"invest\"><div class=\"event_card_list_back\"></div></a>\r\n                    <div class=\"event_card_list_open\"></div>\r\n                </div>\r\n                <div class=\"event_card_list_info col-md-12\">\r\n                    <div class=\"event_card_list_wr\">\r\n                        <div class=\"event_card_title\" ng-bind=\"EventInfoCtrl.event.title\"></div>\r\n                        <div class=\"blocks_header_link event_card_details_link\">\r\n                            <a class=\"\" ui-sref=\"event-info({id:EventInfoCtrl.event.id})\">See info</a>\r\n                        </div>\r\n                        <div class=\"event_card_attr\">£{%EventInfoCtrl.event.fund%} GTD</div>\r\n                        <div class=\"event_card_attr\" ng-bind=\"EventInfoCtrl.event.date\"></div>\r\n                        <div class=\"blocks_header_title_name event_card_subevent_list_title\">Event\r\n                            list\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"event_card_list_subevents\"\r\n                         ng-repeat=\"(key, subevent) in EventInfoCtrl.event.subevents\" ng-class=\"{' event_card_list_last_child':EventInfoCtrl.event.subevents.length == key+1 }\">\r\n                        <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\r\n                        <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\r\n                        <div class=\"event_card_date\" ng-bind=\"EventInfoCtrl.event.date\"></div>\r\n                        <div class=\"event_card__see_more\"></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>\r\n";
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"event_detail__header\">\n        <div class=\"event_detail__header_title\" ng-bind=\"EventCtrl.event.title\"></div>\n        <div class=\"event_detail__header_date\" ng-bind=\"EventCtrl.event.date\"></div>\n        <a ui-sref=\"invest\" class=\"goback\">\n\n        </a>\n    </div>\n\n    <div class=\"courusel_no_limit_wr\">\n\n        <div class=\"courusel_no_limit_content\">\n            <div class=\"courusel_no_limit_item_wr\">\n                <div class=\"courusel_no_limit_item\">\n\n                        <div class=\"courusel_item\"\n                             ng-repeat=\"item in EventCtrl.event.subevents\"\n                             ng-bind=\"item.title\"\n                             ng-click=\"EventCtrl.getSale(item.id)\"\n                             ng-class=\"{'main_event': EventCtrl.opened == item.id}\">\n                        </div>\n\n                </div>\n            </div>\n\n\n\n            <div class=\"event_detail_info\">\n\n                <div class=\"event_card_title\">Buy in £1,000,000 • £500,000 GTE</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"EventCtrl.event.date\"></div>\n                <div class=\"event_card_attr\">\n                    Casino Sochi, Sochi, Russia\n                </div>\n            </div>\n\n            <sales sales=\"EventCtrl.sales\" state=\"'invest'\" subevent=\"false\"></sales>\n\n        </div>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"header\">\r\n            <div class=\"header_profile\"></div>\r\n            <div class=\"header_logo\">LOGO</div>\r\n            <div class=\"header_filter_empty\" ></div>\r\n        </div>\r\n        <bids-carousel ng-if=\"BidsCtrl._opts.dataLoad\"\r\n                       bids=\"BidsCtrl.bids\"\r\n        >\r\n        </bids-carousel>\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n\r\n</div>";
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"tabs-wr\">\n           <div class=\"page_title col-md-12\">\n                Bids\n                <a ui-sref=\"bids\" class=\"goback\" href=\"/bids/invest\">\n\n                </a>\n            </div>\n            <div class=\"tabs_list\">\n\n                <a class=\"tabs_item\"\n                   ui-sref=\"bids-filter({filter: menuItem.name})\"\n                   ng-repeat=\"menuItem in BidsCtrl.menu\"\n                   ng-bind=\"menuItem.name\"\n                   ng-class=\"{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}\"\n                ></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids state=\"'list'\" class=\"bids_row__fullscreen\" bids=\"BidsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>\n";
+
+/***/ }),
+/* 98 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <div class=\"header_profile\"></div>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter_empty\" ></div>\n        </div>\n        <a ui-sref=\"sale-create\">\n            <div class=\"creact_sale\">\n                Create a Sale\n            </div>\n        </a>\n\n        <sales-carousel sales=\"SaleCtrl.sales\" state=\"'row'\" ng-if=\"SaleCtrl._opts.dataLoad == true\"></sales-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row sale_form_wr\">\r\n    <div class=\"sale_form col-md-12\">\r\n        <div class=\"page_title col-md-12\">\r\n            Create new sale\r\n            <a ui-sref=\"bids\" class=\"goback\" href=\"/sale/\" style=\"left: 0\">\r\n\r\n            </a>\r\n        </div>\r\n        <div class=\"sale_form_content\">\r\n            <div class=\"blocks_header_title_name sale_form_title\">\r\n                Event and buy-in\r\n            </div>\r\n\r\n\r\n            <label class=\"blocks_header_title_name\">Event</label>\r\n            <div layout=\"row\" layout-align=\"start_stretch\">\r\n                <md-select class=\"md-no-underline form-Select-theme\"\r\n                           ng-change=\"SaleFrmCtrl.getSubevents()\"\r\n                           ng-model=\"SaleFrmCtrl.sale.event_id\" placeholder=\"Choose an event\">\r\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.events\">{%item.title%}</md-option>\r\n                </md-select>\r\n            </div>\r\n\r\n\r\n            <label class=\"blocks_header_title_name\">Flight</label>\r\n            <div layout=\"row\" layout-align=\"start_stretch\">\r\n                <md-select class=\"md-no-underline form-Select-theme\"\r\n                           ng-model=\"SaleFrmCtrl.sale.sub_event_id\" placeholder=\"Choose an Flight\">\r\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.subevents\">{%item.title%}</md-option>\r\n                </md-select>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div class=\"card__attribute card__attribute_static\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Buy-in</span><br>\r\n                    <span class=\"card__attribute_value\">$3000</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Closing time</span><br>\r\n                    <span class=\"card__attribute_value\">10:44, 10 Apr 2018</span>\r\n                </div>\r\n\r\n            </div>\r\n            <div class=\"hr\"></div>\r\n            <div class=\"blocks_header_title_name sale_form_title\">Offer</div>\r\n            <div class=\"card__attribute\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Share</span><br>\r\n                    <input ng-model=\"SaleFrmCtrl.sale.share\" type=\"number\" placeholder=\"0\">\r\n\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Markup</span><br>\r\n                    <input ng-model=\"SaleFrmCtrl.sale.markup\" type=\"number\" placeholder=\"1.0\">\r\n\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Amount $</span><br>\r\n                    <input ng-model=\"SaleFrmCtrl.sale.amount\" type=\"number\" placeholder=\"0\">\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"button creact_sale_btn\" ng-click=\"SaleFrmCtrl.createSale()\">Create a Sale</div>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\r\n\r\n    <div class=\"row col-md-12 modal_header_fixed\">\r\n        <div class=\"header\">\r\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\r\n            <div class=\"header_title\">Place a bid</div>\r\n            <div class=\"header_filter_empty\"></div>\r\n        </div>\r\n\r\n\r\n        <div>\r\n            <div class=\"card__profile_info\">\r\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                    <img src=\"/images/players.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_text\">\r\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\r\n                    </div>\r\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n\r\n\r\n        <div class=\"binds-item__game_info card__event_info\">\r\n            <div class=\"geme__text card__event_info_item\">\r\n                <div class=\"by_in card__event_info_attr\">\r\n                    Buy in £ <span>1,000,000</span>\r\n                </div>\r\n                <div class=\"gte card__event_info_attr\">\r\n                    £ <span>1,000,000</span> GTE\r\n                </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"card__attribute card__attribute_row ng-scope\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Markup</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Value</span><br>\r\n                    <span class=\"card__attribute_value\">£</span>\r\n                    <span class=\"card__attribute_value ng-binding\">300</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Date of Start</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"modal_bids_block_wr col-md-12\">\r\n        <div class=\"modal_bids_block\">\r\n            <div class=\"modal_type_bids\">\r\n                <div class=\"blocks_header_title_name\">\r\n                    HIGHEST BIDS\r\n                </div>\r\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\r\n                </div>\r\n\r\n                <div class=\"blocks_header_title_name\">\r\n                    MATCHED BID\r\n                </div>\r\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\r\n                <div class=\"blocks_header_title_name\">\r\n                    your bid\r\n                </div>\r\n                <div class=\"bid_new__attribute_wraper\">\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Markup</span>\r\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\r\n                    </div>\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Share</span>\r\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\r\n                    </div>\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Amount</span>\r\n                        <input class=\"bid_attribute_input\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"manage_button\">\r\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\r\n                    Cancel\r\n                </div>\r\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\r\n                    Place\r\n                </div>\r\n            </div>\r\n            <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\r\n                Add new bid\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n";
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n    <div class=\"page_title col-md-12\">\n        Sales\n        <a ui-sref=\"sale\" class=\"goback\" href=\"/bids/invest\">\n\n        </a>\n\n    </div>\n        <div class=\"tabs_list\">\n\n            <a class=\"tabs_item\"\n               ui-sref=\"sale-filter({filter: menuItem.name})\"\n               ng-repeat=\"menuItem in SaleCtrl.menu\"\n               ng-bind=\"menuItem.name\"\n               ng-class=\"{'tabs_item__active_entity':SaleCtrl.$stateParams.filter === menuItem.name}\"\n            ></a>\n        </div>\n\n\n\n    <sales sales=\"SaleCtrl.sales\" state=\"'list'\" ></sales>\n\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wallet-wr\">\n    <div class=\"balance col-md-12\">\n        <div class=\"wallet_header\">\n            <div class=\"w_to_profile\"></div>\n            <div class=\"w_to_setting\"></div>\n        </div>\n        <div class=\"balance_count\">\n            $ <span>500</span>.00\n        </div>\n        <div class=\"balance__title\">My balance</div>\n        <div class=\"make_deposit\">Make Deposit</div>\n    </div>\n    <div class=\"transaction_wr\">\n        <span>Transactions</span>\n        <div class=\"transaction_tabs_list-wr\">\n            <div class=\"transaction_tabs_list\">\n                <div>April 2018</div>\n                <div class=\"main_event\">May 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n    </div>\n</div>\n<span ng-include=\"'tpl/view/footer.template.html'\"></span>\n";
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"header\">\r\n    <div class=\"header_close\"></div>\r\n    <div class=\"header_title\">Yor profile</div>\r\n    <div class=\"header_empty\"></div>\r\n</div>\r\n<div class=\"profile_info\">\r\n    <div class=\"profile_img\">\r\n        <img src=\"/images/user_logo.png\">\r\n    </div>\r\n    <div class=\"profile_hint\">Tap to replace photo</div>\r\n    <div class=\"profile_name\">Milton Jimenez</div>\r\n    <div class=\"profile_button\">Link Party Poker account</div>\r\n</div>\r\n<div class=\"profile_block_title\">settings</div>\r\n<div class=\"profile_menu\">\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_notification\"></div>\r\n            <div class=\"profile_menu_item__text\">Notifications and sounds</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_privacy\"></div>\r\n            <div class=\"profile_menu_item__text\">Privacy and security</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_account\"></div>\r\n            <div class=\"profile_menu_item__text\">Account info</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item \">\r\n        <div>\r\n            <div class=\"icon icon_support\"></div>\r\n            <div class=\"profile_menu_item__text\">Support</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_tell\"></div>\r\n            <div class=\"profile_menu_item__text\">Tell a friend</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_setting\"></div>\r\n            <div class=\"profile_menu_item__text\">Settings</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n\r\n</div>\r\n\r\n";
+
+/***/ }),
+/* 104 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = middlewares;
+middlewares.$inject = ['PermRoleStore'];
+
+function middlewares(PermRoleStore) {
+    PermRoleStore.defineRole('Auth', function () {
+        return window.__user !== null;
+    });
+
+    PermRoleStore.defineRole('Guest', function () {
+        return window.__user === null;
+    });
+}
+
+/***/ }),
+/* 105 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__ = __webpack_require__(166);
+
+var angular = __webpack_require__(12);
+
+
+
+
+
+
+
+
+
+
+var module = angular.module('Components', []);
+module.component('bids', __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__["a" /* BidsComponent */]);
+module.component('bidsCarousel', __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__["a" /* BidsCarouselComponent */]);
+module.component('events', __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__["a" /* EventsComponent */]);
+module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__["a" /* EventsCarouselComponent */]);
+module.component('sales', __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__["a" /* SalesComponent */]);
+module.component('salesCarousel', __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__["a" /* SalesCarouselComponent */]);
+module.component('saleModal', __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__["a" /* SaleModalComponent */]);
+module.component('saleManage', __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__["a" /* SaleManageComponent */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (module.name);
+
+/***/ }),
+/* 106 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Bids = function () {
+    function Bids() {
+        _classCallCheck(this, Bids);
+
+        console.log(this.bids);
+    }
+
+    _createClass(Bids, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }]);
+
+    return Bids;
+}();
+
+var BidsComponent = {
+    bindings: {
+        bids: '<',
+        state: '<'
+    },
+    template: __webpack_require__(107),
+    controller: Bids,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card__bids\"\r\n     ng-class=\"{\r\n                    'bids-item__matched':      item.status === 2,\r\n                    'bids-item__unmatched':    item.status === 3,\r\n                    'bids-item__settled':      item.status === 4,\r\n                    'bids-item__canceled':     item.status === 5,\r\n                     }\"\r\n     ng-repeat=\"item in $ctrl.bids\"\r\n     ng-if=\"$ctrl.state =='row'\"\r\n>\r\n\r\n    <div>\r\n\r\n        <div class=\"card__profile_info\">\r\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\r\n                </div>\r\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"binds-item__game_info card__event_info\">\r\n        <div class=\"geme__text card__event_info_item\">\r\n            <div class=\"by_in card__event_info_attr\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte card__event_info_attr\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n\r\n\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ==1 \">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Date of Start</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status == 2\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Sale</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Bid</span><br>\r\n                <span class=\"card__attribute_value\">£<span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span></span>\r\n\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">20</span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Time</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Outcome</span><br>\r\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">256</span>\r\n\r\n\r\n                </span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\">12 days</span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Status</span><br>\r\n                <span class=\"card__attribute_status_green\" > In progress</span>\r\n            </div>\r\n        </div>\r\n\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"card__bids_list\"\r\n     ng-class=\"{\r\n                    'bids-item__matched':      item.status === 2,\r\n                    'bids-item__unmatched':    item.status === 3,\r\n                    'bids-item__settled':      item.status === 4,\r\n                    'bids-item__canceled':     item.status === 5,\r\n                     }\"\r\n     ng-repeat=\"item in $ctrl.bids\"\r\n     ng-if=\"$ctrl.state == 'list'\">\r\n\r\n    <div>\r\n\r\n        <div class=\"card__profile_info\">\r\n            <div class=\"blocks_header_link\" ng-if=\"item.status==2\"><a ui-sref=\"events\">edit</a></div>\r\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\r\n                </div>\r\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"item.status==1\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"card__event_info\">\r\n        <div class=\"card__event_info_item\">\r\n            <div class=\"by_in card__event_info_attr\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte card__event_info_attr\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===1\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Date of Start</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===2\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Date of Start</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\" >\r\n                <span>T. until close</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Outcome</span><br>\r\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">1,000,000</span>\r\n\r\n\r\n                </span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Status</span><br>\r\n                <span class=\"card__attribute_status_green\" > In progress</span>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 108 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsCarouselComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BidsCarousel = function () {
+    function BidsCarousel() {
+        _classCallCheck(this, BidsCarousel);
+    }
+
+    _createClass(BidsCarousel, [{
+        key: '$onInit',
+        value: function $onInit() {
+            console.log(this.bids);
+        }
+    }]);
+
+    return BidsCarousel;
+}();
+
+var BidsCarouselComponent = {
+    bindings: {
+        bids: '<'
+    },
+    template: __webpack_require__(109),
+    controller: BidsCarousel,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"blocks_header_title\">\n        <div class=\"blocks_header_title_name\">{%key%}</div>\n        <div><a ui-sref=\"bids-filter({filter: key})\">See All</a></div>\n    </div>\n\n\n    <div class=\"carousel_container\">\n        <bids class=\"card_row\" state=\"'row'\" bids=\"value\"></bids>\n    </div>\n\n</div>\n";
+
+/***/ }),
+/* 110 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Events = function () {
+    function Events() {
+        _classCallCheck(this, Events);
+
+        this.opened = [];
+        console.log(this.events);
+    }
+
+    _createClass(Events, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'openDetail',
+        value: function openDetail(event_id) {
+            console.log(event_id);
+            var rInd = this.opened.indexOf(event_id);
+            if (rInd === -1) {
+                this.opened.push(event_id);
+            } else {
+                this.opened.splice(rInd, 1);
+            }
+        }
+    }, {
+        key: 'showDetail',
+        value: function showDetail(event_id) {
+            if (this.opened.indexOf(event_id) != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }, {
+        key: 'hideArrow',
+        value: function hideArrow(event_id) {
+            if (this.opened.indexOf(event_id) != -1) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }]);
+
+    return Events;
+}();
+
+var EventsComponent = {
+    bindings: {
+        events: '<',
+        state: '<'
+    },
+    template: __webpack_require__(111),
+    controller: Events,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"event_card__row\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n\n\n        <a ui-sref=\"event({id:item.id})\">\n            <div class=\"event_card__row_img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n            <div class=\"event_card__row_info\">\n                <a class=\"event_card_title\" href=\"\" ng-bind=\"item.title\">\n                </a>\n                <div class=\"event_card_attr\">£{%item.fund%} GTD</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"item.date\"></div>\n            </div>\n\n\n</div>\n\n\n<div class=\"event_card_list\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"event_card_list_img\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n        <!--<div class=\"event_card_list_back\"></div>-->\n        <!--<div class=\"event_card_list_open\"></div>-->\n    </div>\n    <div class=\"event_card_list_info col-md-12\">\n\n        <div class=\"event_card_list_wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event_card_title\" ng-bind=\"item.title\"></div>\n            <div class=\"blocks_header_link event_card_details_link\">\n            <!--<a class=\"\" ui-sref=\"evet({id:item.id})\">See info</a>-->\n            </div>\n            <div class=\"event_card_fund\">£{%item.fund%} GTD</div>\n            <div class=\"event_card_date\" ng-bind=\"item.date\"></div>\n            <div class=\"blocks_header_title_name event_card_subevent_list_title\" ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\n        </div>\n\n\n        <div class=\"event_card_list_subevents\" ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\n\n            <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\n            <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\n            <div class=\"event_card_date\" ng-bind=\"item.date\"></div>\n\n            <div class=\"event_card__see_more\"></div>\n\n        </div>\n    </div>\n\n\n</div>\n";
+
+/***/ }),
+/* 112 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsCarouselComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var EventsCarousel = function () {
+    function EventsCarousel() {
+        _classCallCheck(this, EventsCarousel);
+    }
+
+    _createClass(EventsCarousel, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }]);
+
+    return EventsCarousel;
+}();
+
+var EventsCarouselComponent = {
+    bindings: {
+        events: '<',
+        state: '<'
+    },
+    template: __webpack_require__(113),
+    controller: EventsCarousel,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"carousel_container\">\n       <events class=\"component_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n</div>\n";
+
+/***/ }),
+/* 114 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Sales = function () {
+    function Sales($state) {
+        _classCallCheck(this, Sales);
+
+        this.$state = $state;
+        this.showPlace = false;
+        this.showManage = false;
+        this.item = null;
+    }
+
+    _createClass(Sales, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'showModal',
+        value: function showModal(key, type) {
+            console.log('hui');
+
+            if (type == 'manage') this.showManage = true;
+            if (type == 'place') this.showPlace = true;
+            this.$state.modalOpened = true;
+            this.item = this.sales[key];
+        }
+    }]);
+
+    return Sales;
+}();
+
+Sales.$inject = ['$state'];
+
+var SalesComponent = {
+    bindings: {
+        subevent: '<',
+        sales: '<',
+        state: '<'
+    },
+    template: __webpack_require__(115),
+    controller: Sales,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sale_card__list sale_card__list_sales\"\r\n     ng-if=\"$ctrl.state === 'list'\"\r\n     ng-repeat=\"(key,item) in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_card__list-last_child': $ctrl.sales.length == key+1,\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n>\r\n\r\n    <div class=\"event_card_text\">\r\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"blocks_header_link\" ng-if=\"item.status == 1\" ng-click=\"$ctrl.showModal(key, 'manage')\">edit</div>\r\n\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\r\n        </div>\r\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\r\n                ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"card__attribute_sale_card\">\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Closes</span><br>\r\n            <span class=\"card__attribute_value\">21</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Markup</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Share sold</span><br>\r\n            <span class=\"card__attribute_value\">0% of 20%</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Amount raised</span><br>\r\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n<div class=\"sale_card__row\"\r\n\r\n     ng-if=\"$ctrl.state === 'row'\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     ng-repeat=\"item in $ctrl.sales\">\r\n    <div class=\"event_card_text\">\r\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\r\n                ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n\r\n    <div class=\"card__attribute_sale_card\">\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Closes</span><br>\r\n            <span class=\"card__attribute_value\">21</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Markup</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Share sold</span><br>\r\n            <span class=\"card__attribute_value\">0% of 20%</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Amount raised</span><br>\r\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<!--INVEST-->\r\n\r\n<div class=\"sale_card__list\"\r\n     ng-class=\"{'sale_card__list-last_child': $ctrl.sales.length == key+1}\"\r\n     ng-click=\"$ctrl.showModal(key, 'place')\"\r\n     ng-if=\"$ctrl.state === 'invest'\"\r\n     ng-repeat=\" (key, item) in $ctrl.sales\">\r\n\r\n\r\n    <div>\r\n        <div class=\"card__profile_info\">\r\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"card__profile_name\" ng-bind=\"item.creator.name\">\r\n                </div>\r\n                <div class=\"card__event\" ng-bind=\"item.event.title\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"$ctrl.subevent\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"card__attribute\">\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Markup</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Value</span><br>\r\n            <span class=\"card__attribute_value\">£</span>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Date of Start</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.event.date_start\"></span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<sale-modal sale=\"$ctrl.item\" show=\"$ctrl.showPlace\"></sale-modal>\r\n<!--\r\n<sale-manage sale=\"$ctrl.item\" show=\"$ctrl.showManage\"></sale-manage>-->\r\n";
+
+/***/ }),
+/* 116 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesCarouselComponent; });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SalesCarousel = function () {
+    function SalesCarousel() {
+        _classCallCheck(this, SalesCarousel);
+    }
+
+    _createClass(SalesCarousel, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }]);
+
+    return SalesCarousel;
+}();
+
+var SalesCarouselComponent = {
+    bindings: {
+        sales: '<',
+        state: '<'
+    },
+    template: __webpack_require__(117),
+    controller: SalesCarousel,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\n    <div class=\"blocks_header_title\">\n        <div class=\"blocks_header_title_name\">{%key%}</div>\n        <div><a ui-sref=\"sale-filter({filter: key})\">See All</a></div>\n    </div>\n    <div class=\"carousel_container\">\n\n        <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\n    \n    </div>\n</div>\n";
+
+/***/ }),
+/* 118 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleModalComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var SaleModal = function () {
+    function SaleModal($window, $http, $state, $timeout, $scope) {
+        _classCallCheck(this, SaleModal);
+
+        this.$http = $http;
+        this.$state = $state;
+        this.$timeout = $timeout;
+        this.$scope = $scope;
+        $state.modalOpened = false;
+        this.user = window.__user;
+        this._opts = {
+            stateCreate: false
+        };
+        this.bid = {
+            status: 2,
+            markup: '',
+            share: '',
+            amount: ''
+        };
+    }
+
+    _createClass(SaleModal, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'setState',
+        value: function setState() {
+            var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+            console.log(this.sale, 'this.sale');
+            this._opts.stateCreate = !this._opts.stateCreate;
+            if (action == 'store') this.storeMyBid();
+        }
+    }, {
+        key: 'close',
+        value: function close() {
+            this.show = !this.show;
+            this.$state.modalOpened = !this.$state.modalOpened;
+        }
+    }, {
+        key: 'storeMyBid',
+        value: function storeMyBid() {
+            var _this = this;
+
+            this.bid.sale_id = this.sale.id;
+            this.bid.user_id = this.user.id;
+
+            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BIDS_MY_STORE */], this.bid).then(function (response) {
+                console.log(response, 'response');
+                if (response.data.status == 1) _this.sale.bids.push(response.data.bid);
+
+                _this.$timeout(function () {
+                    _this.$scope.$apply();
+                }, 10);
+                console.log(_this.sale);
+            });
+        }
+    }]);
+
+    return SaleModal;
+}();
+
+SaleModal.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
+
+var SaleModalComponent = {
+    bindings: {
+        sale: '<',
+        show: '='
+    },
+    template: __webpack_require__(119),
+    controller: SaleModal,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\r\n\r\n    <div class=\"row col-md-12 modal_header_fixed\">\r\n        <div class=\"header\">\r\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\r\n            <div class=\"header_title\">Place a bid</div>\r\n            <div class=\"header_filter_empty\"></div>\r\n        </div>\r\n\r\n\r\n        <div>\r\n            <div class=\"card__profile_info\">\r\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                    <img src=\"/images/players.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_text\">\r\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\r\n                    </div>\r\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n\r\n\r\n        <div class=\"binds-item__game_info card__event_info\">\r\n            <div class=\"geme__text card__event_info_item\">\r\n                <div class=\"by_in card__event_info_attr\">\r\n                    Buy in £ <span>1,000,000</span>\r\n                </div>\r\n                <div class=\"gte card__event_info_attr\">\r\n                    £ <span>1,000,000</span> GTE\r\n                </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"card__attribute card__attribute_row ng-scope\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Markup</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Value</span><br>\r\n                    <span class=\"card__attribute_value\">£</span>\r\n                    <span class=\"card__attribute_value ng-binding\">300</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Date of Start</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"modal_bids_block_wr col-md-12\" ng-class=\"{'show_your_bid': $ctrl._opts.stateCreate == true}\">\r\n        <div class=\"modal_bids_block\">\r\n            <div class=\"modal_type_bids\">\r\n                <div class=\"blocks_header_title_name\">\r\n                    HIGHEST BIDS\r\n                </div>\r\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\r\n                </div>\r\n\r\n                <div class=\"blocks_header_title_name\">\r\n                    MATCHED BID\r\n                </div>\r\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\r\n                <div class=\"blocks_header_title_name\">\r\n                    your bid\r\n                </div>\r\n                <div class=\"bid_new__attribute_wraper\">\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Markup</span>\r\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\r\n                    </div>\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Share</span>\r\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\r\n                    </div>\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Amount</span>\r\n                        <input class=\"bid_attribute_input\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"manage_button\">\r\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\r\n                    Cancel\r\n                </div>\r\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\r\n                    Place\r\n                </div>\r\n            </div>\r\n            <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\r\n                Add new bid\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n";
+
+/***/ }),
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46101,9 +47907,9 @@ $provide.value("$locale", {
 (function () {
   'use strict';
 
-  var permission = __webpack_require__(67),
-    ngPermission = __webpack_require__(68),
-    uiPermission = __webpack_require__(69);
+  var permission = __webpack_require__(121),
+    ngPermission = __webpack_require__(122),
+    uiPermission = __webpack_require__(123);
 
   module.exports = {
     permission: permission,
@@ -46114,7 +47920,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 67 */
+/* 121 */
 /***/ (function(module, exports) {
 
 /**
@@ -47358,7 +49164,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 68 */
+/* 122 */
 /***/ (function(module, exports) {
 
 /**
@@ -47582,7 +49388,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 69 */
+/* 123 */
 /***/ (function(module, exports) {
 
 /**
@@ -48166,15 +49972,41 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 70 */
+/* 124 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
+hack.$inject = ['$templateCache'];
+var menu_footer = __webpack_require__(125);
+var bid_place = __webpack_require__(126);
+function hack($templateCache) {
+    $templateCache.put('tpl/view/footer.template.html', menu_footer);
+    $templateCache.put('tpl/view/bid-place.template.html', bid_place);
+}
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"footer\" ng-controller=\"MenuController as MenuCtrl\">\r\n    <a ui-sref=\"invest\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'invest'}\">\r\n            <div class=\"footer_img footer_img_invest\" ng-class=\"{'footer_img__active_invest': MenuCtrl.menuItem == 'invest'}\"></div>\r\n            invest\r\n        </div>\r\n    </a>\r\n    <a ui-sref=\"bids\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'bids'}\">\r\n            <div class=\"footer_img footer_img_bids\" ng-class=\"{'footer_img__active_bids': MenuCtrl.menuItem == 'bids'}\"></div>\r\n            bids\r\n        </div>\r\n    </a>\r\n    <a ui-sref=\"sale\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'sales'}\">\r\n            <div class=\"footer_img footer_img_sale\" ng-class=\"{'footer_img__active_sale': MenuCtrl.menuItem == 'sales'}\"></div>\r\n            sale\r\n        </div>\r\n    </a>\r\n    <a ui-sref=\"wallet\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'wallet'}\">\r\n            <div class=\"footer_img footer_img_wallet\" ng-class=\"{'footer_img__active_wallet': MenuCtrl.menuItem == 'wallet'}\"></div>\r\n            wallet\r\n        </div>\r\n    </a>\r\n</div>\r\n";
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports) {
+
+module.exports = "    <div class=\"modal_wrapper\">\r\n    <div class=\"row col-md-12\">\r\n    <div class=\"place_a_bit\">\r\n        <div class=\"place_a_bit__title\">\r\n            Place a bid\r\n            <div class=\"pab__close\">\r\n                X\r\n            </div>\r\n        </div>\r\n        <div class=\"binds-item-wr\">\r\n            <div class=\"binds-item__profile_info\">\r\n                <div class=\"profile__photo\">\r\n                    <img src=\"/images/pl_5.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_text\">\r\n                    <div class=\"profile__name\">\r\n                        Louise Romero\r\n                    </div>\r\n                    <div class=\"profile__country\">\r\n                        MILLIONS Russia, 1A\r\n                    </div>\r\n\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <div class=\"binds-item__game_info\">\r\n                <div class=\"geme__text\">\r\n                    <div class=\"by_in\">\r\n                        Buy in £ <span>1,000,000</span>\r\n                    </div>\r\n                    <div class=\"gte\">\r\n                        £ <span>1,000,000</span> GTE\r\n                    </div>\r\n                </div>\r\n                <div class=\"game_atrs\">\r\n                    <div class=\"game_atrs__markup\">\r\n                        <span>Markup</span><br>\r\n                        1.20\r\n                    </div>\r\n                    <div class=\"game_atrs__value\">\r\n                        <span>Share</span><br>\r\n                        20%</div>\r\n                    <div class=\"game_atrs__date_start\">\r\n                        <span>Value</span><br>\r\n                        1.20</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"highest_bids\">\r\n            <div class=\"highest_bids__title\">\r\n                HIGHEST BIDS\r\n            </div>\r\n            <div class=\"block_1\">\r\n                <input type=\"text\" placeholder=\"1\">\r\n                <input type=\"text\" placeholder=\"1.53%\">\r\n                <input type=\"text\" placeholder=\"$1,182.22\">\r\n            </div>\r\n            <div class=\"block_2\">\r\n                <input type=\"text\" placeholder=\"1.09\" id=\"123\">\r\n                <input type=\"text\" placeholder=\"0.53%\">\r\n                <input type=\"text\" placeholder=\"$442\">\r\n            </div>\r\n        </div>\r\n        <div class=\"matched_bid\">\r\n            <div class=\"matched_bid__title\">\r\n                MATCHED BID\r\n            </div>\r\n            <div class=\"block_1\">\r\n                <input type=\"text\" placeholder=\"1\">\r\n                <input type=\"text\" placeholder=\"1.53%\">\r\n                <input type=\"text\" placeholder=\"$1,182.22\">\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"add_bid\">\r\n            Add new bid\r\n        </div>\r\n    </div>\r\n</div>\r\n</div>";
+
+/***/ }),
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services__ = __webpack_require__(21);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "watchDigests", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getLocals", function() { return __WEBPACK_IMPORTED_MODULE_0__services__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__ = __webpack_require__(34);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "getNg1ViewConfigFactory", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ng1ViewsBuilder", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Ng1ViewConfig", function() { return __WEBPACK_IMPORTED_MODULE_1__statebuilders_views__["a"]; });
@@ -48182,13 +50014,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(63);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(6);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlConfig"]; });
@@ -48367,7 +50199,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 71 */
+/* 128 */
 /***/ (function(module, exports) {
 
 var g;
@@ -48394,7 +50226,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 72 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48402,8 +50234,8 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_coreservices__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__paramType__ = __webpack_require__(25);
 /** @publicapi @module params */ /** */
 
 
@@ -48566,13 +50398,13 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 73 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pathNode__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pathNode__ = __webpack_require__(26);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__pathNode__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pathUtils__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pathUtils__ = __webpack_require__(16);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__pathUtils__["a"]; });
 /** @internalapi @module path */ /** */
 
@@ -48580,16 +50412,16 @@ initDefaultTypes();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 74 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerAddCoreResolvables; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return treeChangesCleanup; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__transition_transition__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__transition_transition__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resolve__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common__ = __webpack_require__(4);
 /** @internalapi @module hooks */ /** */
 
 
@@ -48628,13 +50460,13 @@ var treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 75 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerRedirectToHook; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__state_targetState__ = __webpack_require__(14);
 /** @internalapi @module hooks */ /** */
 
@@ -48673,7 +50505,7 @@ var registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 76 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48737,7 +50569,7 @@ var registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 77 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48746,7 +50578,7 @@ var registerOnEnterHook = function (transitionService) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLazyResolveState; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return registerResolveRemaining; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__resolve_resolveContext__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
 /** @internalapi @module hooks */ /** */
 
@@ -48805,14 +50637,14 @@ var registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 78 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerLoadEnteringViews; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerActivateViews; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(5);
 /** @internalapi @module hooks */ /** */
 
 
@@ -48860,7 +50692,7 @@ var registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 79 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48901,7 +50733,7 @@ var registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 80 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48931,13 +50763,13 @@ var registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 81 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return registerIgnoredTransitionHook; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition_rejectFactory__ = __webpack_require__(10);
 /** @internalapi @module hooks */ /** */
 
 
@@ -48969,7 +50801,7 @@ var registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 82 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48993,29 +50825,29 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 83 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(11);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__interface__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hookBuilder__ = __webpack_require__(44);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__hookBuilder__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(31);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_2__hookRegistry__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rejectFactory__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__rejectFactory__ = __webpack_require__(10);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__rejectFactory__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transition__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__transition__ = __webpack_require__(30);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_4__transition__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transitionHook__ = __webpack_require__(15);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_5__transitionHook__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__transitionEventType__ = __webpack_require__(54);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__transitionEventType__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionService__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__transitionService__ = __webpack_require__(29);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_7__transitionService__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_7__transitionService__["b"]; });
 /**
@@ -49041,18 +50873,18 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 84 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__urlMatcher__ = __webpack_require__(19);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__urlMatcher__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__ = __webpack_require__(46);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__urlMatcherFactory__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__urlRouter__ = __webpack_require__(47);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_2__urlRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRule__ = __webpack_require__(32);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRule__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRule__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__urlService__ = __webpack_require__(50);
@@ -49071,7 +50903,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 85 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49081,11 +50913,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 86 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(144);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
@@ -49108,7 +50940,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 87 */
+/* 144 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49116,7 +50948,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__q__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__injector__ = __webpack_require__(56);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__injector__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__baseLocationService__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__baseLocationService__ = __webpack_require__(20);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__baseLocationService__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hashLocationService__ = __webpack_require__(57);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__hashLocationService__["a"]; });
@@ -49128,13 +50960,13 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__memoryLocationConfig__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__browserLocationConfig__ = __webpack_require__(61);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_7__browserLocationConfig__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils__ = __webpack_require__(33);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(145);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
@@ -49152,7 +50984,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 88 */
+/* 145 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49162,13 +50994,13 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return memoryLocationPlugin; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__browserLocationConfig__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__hashLocationService__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pushStateLocationService__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__memoryLocationService__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__memoryLocationConfig__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__injector__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__q__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_coreservices__ = __webpack_require__(5);
 /** @internalapi @module vanilla */ /** */
 
 
@@ -49193,7 +51025,7 @@ var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* lo
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 89 */
+/* 146 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49217,13 +51049,13 @@ var UIRouterPluginBase = /** @class */ (function () {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 90 */
+/* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module view */ /** */
 
 
@@ -49428,13 +51260,13 @@ var scopeBindings = function (bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 91 */
+/* 148 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStateHookBuilder; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(21);
 /** @publicapi @module ng1 */ /** */
 
 
@@ -49463,12 +51295,12 @@ var getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 92 */
+/* 149 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1LocationServices; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
 /** @publicapi @module ng1 */ /** */
 
 
@@ -49549,7 +51381,7 @@ var Ng1LocationServices = /** @class */ (function () {
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 93 */
+/* 150 */
 /***/ (function(module, exports) {
 
 /**
@@ -49868,12 +51700,12 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 94 */
+/* 151 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(6);
 /**
  * # Angular 1 Directives
  *
@@ -50505,13 +52337,13 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 95 */
+/* 152 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export $IsStateFilter */
 /* unused harmony export $IncludedByStateFilter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
 /** @publicapi @module ng1 */ /** */
 
 /**
@@ -50557,15 +52389,15 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 96 */
+/* 153 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export uiView */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__statebuilders_views__ = __webpack_require__(34);
 /** @publicapi @module directives */ /** */
 
 
@@ -50994,11 +52826,11 @@ __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').d
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 97 */
+/* 154 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(9);
 /** @publicapi @module ng1 */ /** */
 
 /** @hidden */
@@ -51026,1973 +52858,25 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 98 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsListController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var EventsListController = function () {
-    function EventsListController($window, $http) {
-        _classCallCheck(this, EventsListController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.opened = [];
-        this._opts = { dataLoad: false };
-        this.showList();
-    }
-
-    _createClass(EventsListController, [{
-        key: 'showList',
-        value: function showList() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */]).then(function (response) {
-
-                _this.events = response.data.data;
-                _this._opts.dataLoad = true;
-                console.log(_this.events, 'console.log(this.events)');
-            });
-        }
-    }]);
-
-    return EventsListController;
-}();
-
-;
-
-EventsListController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(163);
-module.exports = 'ngAnimate';
-
-
-/***/ }),
-/* 100 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(164);
-module.exports = 'ngAria';
-
-
-/***/ }),
-/* 101 */,
-/* 102 */,
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(104);
-__webpack_require__(166);
-module.exports = __webpack_require__(167);
-
-
-/***/ }),
-/* 104 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Router__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Middlewares__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(159);
-var angular = __webpack_require__(16);
-
-
-
-
-
-
-
-
-var ngRouter = __webpack_require__(70).default;
-var ngMaterial = __webpack_require__(162);
-var ngAria = __webpack_require__(100);
-var ngAnimate = __webpack_require__(99);
-
-var app = angular.module('poker', [ngMaterial, ngAria, ngAnimate, ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_4_angular_permission__["uiPermission"]]);
-/*
-angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {
-    $mdThemingProvider.theme('formSelect');
-    $mdThemingProvider.setDefaultTheme('formSelect');
-}]);*/
-
-app.config(['$interpolateProvider', function ($interpolateProvider) {
-    $interpolateProvider.startSymbol('{%');
-    $interpolateProvider.endSymbol('%}');
-}]);
-
-app.config(__WEBPACK_IMPORTED_MODULE_1__Router__["a" /* default */]);
-app.run(__WEBPACK_IMPORTED_MODULE_2__Middlewares__["a" /* default */]);
-app.run(__WEBPACK_IMPORTED_MODULE_5__Hack__["a" /* default */]);
-
-/***/ }),
-/* 105 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Controllers_MenuController__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Controllers_EventInfoController__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Controllers_MainController__ = __webpack_require__(120);
-var angular = __webpack_require__(16);
-
-
-
-
-
-////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var module = angular.module('Controllers', []);
-
-module.controller('LoginController', __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__["a" /* LoginController */]);
-module.controller('RegisterController', __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__["a" /* RegisterController */]);
-module.controller('ProfileController', __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__["a" /* ProfileController */]);
-module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
-
-/////////////////////////////////////////////////////////////
-
-module.controller('SaleController', __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__["a" /* SaleController */]);
-module.controller('SaleFilterController', __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__["a" /* SaleFilterController */]);
-module.controller('SaleAllController', __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__["a" /* SaleAllController */]);
-module.controller('SaleFormController', __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__["a" /* SaleFormController */]);
-module.controller('SaleManageController', __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__["a" /* SaleManageController */]);
-
-module.controller('InvestController', __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__["a" /* InvestController */]);
-module.controller('EventController', __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__["a" /* EventController */]);
-module.controller('EventsListController', __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__["a" /* EventsListController */]);
-module.controller('BidsController', __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__["a" /* BidsController */]);
-module.controller('BidsFilterController', __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__["a" /* BidsFilterController */]);
-module.controller('MenuController', __WEBPACK_IMPORTED_MODULE_13__Controllers_MenuController__["a" /* MenuController */]);
-module.controller('EventInfoController', __WEBPACK_IMPORTED_MODULE_14__Controllers_EventInfoController__["a" /* EventInfoController */]);
-module.controller('MainController', __WEBPACK_IMPORTED_MODULE_15__Controllers_MainController__["a" /* MainController */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (module.name);
-
-/***/ }),
-/* 106 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var LoginController = function () {
-    function LoginController($window, $http) {
-        _classCallCheck(this, LoginController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.firstName = '';
-    }
-
-    _createClass(LoginController, [{
-        key: 'sendAuthData',
-        value: function sendAuthData(e) {
-            e.stopPropagation();
-            e.preventDefault();
-            var data = {
-                email: this.userEmail,
-                password: this.userPassword
-            };
-
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["l" /* LOGIN_URL */], data).then(function (response) {
-                if (response.status === 200) {
-                    window.location.href = '/';
-                }
-            });
-        }
-    }]);
-
-    return LoginController;
-}();
-
-;
-
-LoginController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 107 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var RegisterController = function () {
-    function RegisterController($window, $http) {
-        _classCallCheck(this, RegisterController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.userName = '';
-        this.userEmail = '';
-        this.userPassword = '';
-        this.passwordConfirmation = '';
-        this.userAge = '';
-    }
-
-    _createClass(RegisterController, [{
-        key: 'sendRegisterForm',
-        value: function sendRegisterForm(e) {
-            e.stopPropagation();
-            e.preventDefault();
-
-            var data = {
-                name: this.userName,
-                email: this.userEmail,
-                password: this.userPassword,
-                password_confirmation: this.passwordConfirmation,
-                age: this.userAge
-            };
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["n" /* REGISTER_URL */], data).then(function (response) {
-
-                if (response.status === 200) {
-                    window.location.href = '/';
-                } else {
-                    console.log('валидация не прошла');
-                }
-            });
-        }
-    }]);
-
-    return RegisterController;
-}();
-
-;
-
-RegisterController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 108 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var ProfileController = function () {
-    function ProfileController($window, $http) {
-        _classCallCheck(this, ProfileController);
-
-        this.user = window.user;
-        this.$window = $window;
-        this.$http = $http;
-
-        console.log(this.user);
-    }
-
-    // changeProfile(){
-    //     //console.log(this.userName.value(););
-    //     console.log('change value');
-    //
-    // };
-
-
-    _createClass(ProfileController, [{
-        key: 'changeProfile',
-        value: function changeProfile() {
-            var data = {
-                name: this.user.name,
-                age: this.user.age,
-                id: this.user.id
-            };
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["m" /* PROFILE_URL */], data).then(function (response) {
-
-                // console.log(response.data.status);
-                console.log(response.data);
-
-                // if (response.data.status == 0){
-                //     console.log('валидация не прошла')
-                // } else {
-                //     window.location.href = response.data.url;
-                // }
-            });
-        }
-    }]);
-
-    return ProfileController;
-}();
-
-ProfileController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 109 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-
-
-var BidsController = function () {
-    function BidsController($http) {
-        _classCallCheck(this, BidsController);
-
-        this.$http = $http;
-        this.user = window.__user;
-        this.bids = [];
-        this._opts = { dataLoad: false };
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_CANCELED */], name: 'canceled' }];
-        this.getList();
-    }
-
-    _createClass(BidsController, [{
-        key: "getList",
-        value: function getList() {
-            var _this = this;
-
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["a" /* BIDS_MY */], { user_id: this.user.id }).then(function (response) {
-                _this.bids = response.data.data;
-                _this._opts.dataLoad = true;
-            });
-        }
-    }]);
-
-    return BidsController;
-}();
-
-;
-
-BidsController.$inject = ['$http'];
-
-
-
-/***/ }),
-/* 110 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsFilterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-
-var BidsFilterController = function () {
-    function BidsFilterController($http, $stateParams) {
-        _classCallCheck(this, BidsFilterController);
-
-        this.$http = $http;
-        this.$stateParams = $stateParams;
-        this.bids = [];
-        this.user = window.__user;
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["h" /* BID_MATCHED */], name: 'matched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["j" /* BID_UNMATCHED */], name: 'unmatched' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["i" /* BID_SETTLED */], name: 'settled' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["g" /* BID_CANCELED */], name: 'canceled' }];
-        this._opts = { dataLoad: false };
-        this.getList();
-    }
-
-    _createClass(BidsFilterController, [{
-        key: "getList",
-        value: function getList() {
-            var _this = this;
-
-            var url = null;
-            var filter = null;
-
-            if (this.$stateParams.filter === 'matched') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["c" /* BIDS_MY_MATCHED */];
-                filter = 1;
-            }
-            if (this.$stateParams.filter === 'unmatched') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["f" /* BIDS_MY_UNMATCHED */];
-                filter = 2;
-            }
-            if (this.$stateParams.filter === 'settled') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["d" /* BIDS_MY_SETTLED */];
-                filter = 3;
-            }
-            if (this.$stateParams.filter === 'canceled') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["b" /* BIDS_MY_CANCELED */];
-                filter = 4;
-            }
-
-            this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
-                _this.bids = response.data.data;
-                _this._opts.dataLoad = true;
-            });
-        }
-    }]);
-
-    return BidsFilterController;
-}();
-
-;
-
-BidsFilterController.$inject = ['$http', '$stateParams'];
-
-
-
-/***/ }),
-/* 111 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var SaleController = function () {
-    function SaleController($http) {
-        _classCallCheck(this, SaleController);
-
-        this.$http = $http;
-        this.user = window.__user;
-        this.sales = null;
-        this._opts = { dataLoad: false };
-        this.showList();
-    }
-
-    _createClass(SaleController, [{
-        key: "showList",
-        value: function showList() {
-            var _this = this;
-
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["u" /* SALE_MY */], { user_id: this.user.id }).then(function (response) {
-                _this.sales = response.data.data;
-                _this._opts.dataLoad = true;
-            });
-        }
-    }]);
-
-    return SaleController;
-}();
-
-;
-
-SaleController.$inject = ['$http'];
-
-
-
-/***/ }),
-/* 112 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleAllController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var SaleAllController = function () {
-    function SaleAllController($window, $http) {
-        _classCallCheck(this, SaleAllController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.events = [];
-        this._opts = { dataLoad: false };
-        this.filter = 'closing';
-        this.setFilter(this.filter);
-    }
-
-    _createClass(SaleAllController, [{
-        key: 'setFilter',
-        value: function setFilter(param) {
-            if (param == 'closing') {
-                this.filter = 'closing';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CLOSING */]);
-            }
-            if (param == 'markup') {
-                this.filter = 'markup';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_LOWEST */]);
-            }
-        }
-    }, {
-        key: 'getSales',
-        value: function getSales(url) {
-            var _this = this;
-
-            this.$http.post(url).then(function (response) {
-                _this.sales = response.data.data;
-                _this._opts.dataLoad = true;
-                return true;
-            });
-        }
-    }]);
-
-    return SaleAllController;
-}();
-
-;
-
-SaleAllController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 113 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFilterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-
-
-
-var SaleFilterController = function () {
-    function SaleFilterController($http, $stateParams) {
-        _classCallCheck(this, SaleFilterController);
-
-        this.$http = $http;
-        this.sales = null;
-        this.user = window.__user;
-        this.menu = [{ status: __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_ACTIVE */], name: 'active' }, { status: __WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CLOSED */], name: 'closed' }];
-        this.$stateParams = $stateParams;
-        this._opts = { dataLoad: false };
-        this.getList();
-    }
-
-    _createClass(SaleFilterController, [{
-        key: "getList",
-        value: function getList() {
-            var _this = this;
-
-            var url = null;
-            var filter = null;
-            if (this.$stateParams.filter === 'active') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["v" /* SALE_MY_ACTIVE */];
-                filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["o" /* SALE_ACTIVE */];
-            }
-            if (this.$stateParams.filter === 'closed') {
-                url = __WEBPACK_IMPORTED_MODULE_0__Constants__["w" /* SALE_MY_CLOSED */];
-                filter = __WEBPACK_IMPORTED_MODULE_0__Constants__["p" /* SALE_CLOSED */];
-            }
-            this.$http.post(url, { status: filter, user_id: this.user.id }).then(function (response) {
-                _this.sales = response.data.data;
-                _this._opts.dataLoad = true;
-            });
-        }
-    }]);
-
-    return SaleFilterController;
-}();
-
-;
-
-SaleFilterController.$inject = ['$http', '$stateParams'];
-
-
-
-/***/ }),
-/* 114 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var SaleManageController = function () {
-    function SaleManageController($window, $http, $stateParams) {
-        _classCallCheck(this, SaleManageController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.$stateParams = $stateParams;
-        this.event = null;
-        this.subevents = null;
-        this.subevent = null;
-        this.buy_in = null;
-        this._opts = {
-            load: false,
-            update: false
-        };
-        this.getSale();
-    }
-
-    /*  getEvents() {
-          this.$http.get(EVENTS_INDEX)
-              .then(response => {
-                  this.events = response.data.data;
-                  this._opts.load = true;
-              });
-      }
-      getSubevents(){
-          this.$http.get(SUBEVENTS_INDEX, {params: {event_id: this.sale.event_id}})
-              .then(response => {
-                  this.buy_in = null;
-                  this.subevents = response.data.data;
-                  this._opts.load = true;
-                  this.fillSale()
-              });
-       }
-      fillSale(){
-          let self = this;
-          console.log(this.subevents, 'this.subevents');
-          angular.forEach(this.subevents, function (value, key) {
-              if (value.id == self.sale.sub_event_id){
-                  self.buy_in = value.event.buy_in;
-              }
-          });
-       }
-    */
-
-    _createClass(SaleManageController, [{
-        key: 'getSale',
-        value: function getSale() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
-                _this.sale = response.data.data;
-                console.log(_this.sale);
-            });
-        }
-
-        /*  createSale(){
-              let data = this.sale;
-              this.$http.post(SALE_CREATE, data)
-                  .then(response => {
-                      if (response.status === 200) window.location.href = '/sales';
-                      console.log(response);
-                  });
-              console.log(this.sale, 'sale');
-          }
-           updateSale(){
-              let data = this.sale;
-              console.log(SALE_CREATE+'/'+this.sale.id);
-              this.$http.put(SALE_CREATE+'/'+this.sale.id, data)
-                  .then(response => {
-                      console.log(response);
-                      if (response.status == 200) window.location.href = '/sale';
-                      console.log(response);
-                  });
-              console.log(this.sale, 'sale');
-          }
-        */
-
-    }]);
-
-    return SaleManageController;
-}();
-
-;
-
-SaleManageController.$inject = ['$window', '$http', '$stateParams'];
-
-
-
-/***/ }),
-/* 115 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFormController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-
-var SaleFormController = function () {
-    function SaleFormController($window, $http, $stateParams) {
-        _classCallCheck(this, SaleFormController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.$stateParams = $stateParams;
-        this.event = null;
-        this.subevents = null;
-        this.subevent = null;
-        this.buy_in = null;
-
-        this._opts = {
-            load: false,
-            update: false
-        };
-
-        if (this.$stateParams.hasOwnProperty('id')) {
-            this._opts.update = true;
-            this.getSale();
-        } else {
-
-            this.sale = {
-                event_id: null,
-                user_id: window.__user.id,
-                flight_id: 1,
-                status: 1,
-                sub_event_id: null,
-                markup: null,
-                share: null,
-                amount: null
-            };
-        }
-        this.getEvents();
-    }
-
-    _createClass(SaleFormController, [{
-        key: "getEvents",
-        value: function getEvents() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */]).then(function (response) {
-                _this.events = response.data.data;
-                _this._opts.load = true;
-            });
-        }
-    }, {
-        key: "getSubevents",
-        value: function getSubevents() {
-            var _this2 = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["y" /* SUBEVENTS_INDEX */], { params: { event_id: this.sale.event_id } }).then(function (response) {
-                _this2.buy_in = null;
-                _this2.subevents = response.data.data;
-                _this2._opts.load = true;
-                _this2.fillSale();
-            });
-        }
-    }, {
-        key: "fillSale",
-        value: function fillSale() {
-            var self = this;
-            console.log(this.subevents, 'this.subevents');
-            angular.forEach(this.subevents, function (value, key) {
-                if (value.id == self.sale.sub_event_id) {
-                    self.buy_in = value.event.buy_in;
-                }
-            });
-        }
-    }, {
-        key: "getSale",
-        value: function getSale() {
-            var _this3 = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["s" /* SALE_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
-                _this3.sale = response.data.data;
-                if (_this3._opts.update) _this3.getSubevents();
-            });
-        }
-    }, {
-        key: "createSale",
-        value: function createSale() {
-            var data = this.sale;
-            console.log(data);
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_CREATE */], data).then(function (response) {
-                //if (response.status === 200) window.location.href = '/sales';
-                console.log(response);
-            });
-            console.log(this.sale, 'sale');
-        }
-    }, {
-        key: "updateSale",
-        value: function updateSale() {
-            var data = this.sale;
-            console.log(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_CREATE */] + '/' + this.sale.id);
-            this.$http.put(__WEBPACK_IMPORTED_MODULE_0__Constants__["r" /* SALE_CREATE */] + '/' + this.sale.id, data).then(function (response) {
-                console.log(response);
-                if (response.status == 200) window.location.href = '/sale';
-                console.log(response);
-            });
-            console.log(this.sale, 'sale');
-        }
-    }]);
-
-    return SaleFormController;
-}();
-
-;
-
-SaleFormController.$inject = ['$window', '$http', '$stateParams'];
-
-
-
-/***/ }),
-/* 116 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InvestController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var InvestController = function () {
-    function InvestController($window, $http) {
-        _classCallCheck(this, InvestController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.events = [];
-        this._opts = { dataLoad: false };
-        this.filter = 'closing';
-
-        this.showList();
-        this.setFilter(this.filter);
-    }
-
-    _createClass(InvestController, [{
-        key: 'setFilter',
-        value: function setFilter(param) {
-            if (param == 'closing') {
-                this.filter = 'closing';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["q" /* SALE_CLOSING */]);
-            }
-            if (param == 'markup') {
-                this.filter = 'markup';this.getSales(__WEBPACK_IMPORTED_MODULE_0__Constants__["t" /* SALE_LOWEST */]);
-            }
-        }
-    }, {
-        key: 'showList',
-        value: function showList() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */]).then(function (response) {
-                _this.events = response.data.data;
-                _this._opts.dataLoad = true;
-                console.log(_this.events, 'console.log(this.events)');
-            });
-        }
-    }, {
-        key: 'getSales',
-        value: function getSales(url) {
-            var _this2 = this;
-
-            this.$http.post(url).then(function (response) {
-                _this2.sales = response.data.data;
-                _this2._opts.dataLoad = true;
-                return true;
-            });
-        }
-    }]);
-
-    return InvestController;
-}();
-
-;
-
-InvestController.$inject = ['$window', '$http'];
-
-
-
-/***/ }),
-/* 117 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var EventController = function () {
-    function EventController($window, $http, $stateParams) {
-        _classCallCheck(this, EventController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.$stateParams = $stateParams;
-        this._opts = { dataLoad: false };
-        this.showList();
-    }
-
-    _createClass(EventController, [{
-        key: 'showList',
-        value: function showList() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
-                _this.event = response.data.data;
-                _this.getSale(_this.event.subevents[0].id);
-            });
-        }
-    }, {
-        key: 'getSale',
-        value: function getSale(id) {
-            var _this2 = this;
-
-            this.opened = id;
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["x" /* SALE_SUBEVENT */], { sub_event_id: id }).then(function (response) {
-                _this2.sales = response.data.data;
-                _this2._opts.dataLoad = true;
-            });
-        }
-    }]);
-
-    return EventController;
-}();
-
-;
-
-EventController.$inject = ['$window', '$http', '$stateParams'];
-
-
-
-/***/ }),
-/* 118 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuController; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MenuController = function MenuController($state) {
-    _classCallCheck(this, MenuController);
-
-    this.$state = $state;
-    console.log(this.$state);
-    this.menuItem = this.$state.current.menu;
-};
-
-;
-
-MenuController.$inject = ['$state'];
-
-
-
-/***/ }),
-/* 119 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventInfoController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var EventInfoController = function () {
-    function EventInfoController($window, $http, $stateParams) {
-        _classCallCheck(this, EventInfoController);
-
-        this.$window = $window;
-        this.$http = $http;
-        this.$stateParams = $stateParams;
-        this._opts = { dataLoad: false };
-        this.showList();
-    }
-
-    _createClass(EventInfoController, [{
-        key: 'showList',
-        value: function showList() {
-            var _this = this;
-
-            this.$http.get(__WEBPACK_IMPORTED_MODULE_0__Constants__["k" /* EVENTS_INDEX */] + '/' + this.$stateParams.id).then(function (response) {
-                _this.event = response.data.data;
-                console.log(_this.event);
-            });
-        }
-    }]);
-
-    return EventInfoController;
-}();
-
-;
-
-EventInfoController.$inject = ['$window', '$http', '$stateParams'];
-
-
-
-/***/ }),
-/* 120 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainController; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MainController = function MainController($state) {
-    _classCallCheck(this, MainController);
-
-    this.$state = $state;
-    console.log(this.$state);
-};
-
-;
-
-MainController.$inject = ['$state'];
-
-
-/***/ }),
-/* 121 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = routes;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_EventsListController__ = __webpack_require__(98);
-
-
-routes.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
-
-function routes($locationProvider, $stateProvider, $urlRouterProvider) {
-    $locationProvider.html5Mode({ enabled: true, requireBase: false });
-
-    $urlRouterProvider.rule(function ($injector, $location) {
-        var path = $location.path();
-        if (path !== '/' && path.slice(-1) === '/') {
-            $location.replace().path(path.slice(0, -1));
-        }
-    });
-
-    $stateProvider.state('index', {
-        url: '/',
-        template: __webpack_require__(122),
-        data: {
-            permissions: {
-                except: 'Auth',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'invest'
-                    };
-                }
-            }
-        }
-    }).state('terms-and-conditions', {
-        url: '/terms-and-conditions',
-        template: __webpack_require__(123)
-    }).state('privacy-policy', {
-        url: '/privacy-policy',
-        template: __webpack_require__(124)
-    }).state('auth', {
-        template: __webpack_require__(125),
-        data: {
-            permissions: {
-                except: 'Auth',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'invest'
-                    };
-                }
-            }
-        }
-    }).state('auth.login', {
-        //ng-controller="LoginController as LgCtrl"
-        url: '/login',
-        template: __webpack_require__(126),
-        controller: 'LoginController',
-        controllerAs: 'LgCtrl'
-    }).state('auth.registration', {
-        url: '/register',
-        template: __webpack_require__(127),
-        //ng-controller="RegisterController as RgCtrl"
-        controller: 'RegisterController',
-        controllerAs: 'RgCtrl'
-    }).state('invest', {
-        url: '/invest',
-        template: __webpack_require__(128),
-        menu: 'invest',
-        controller: 'InvestController',
-        controllerAs: 'InvstCtrl'
-    }).state('sale-all', {
-        url: '/invest/sales',
-        template: __webpack_require__(129),
-        controller: 'SaleAllController',
-        controllerAs: 'SaleAllCtrl'
-    }).state('events', {
-        url: '/events',
-        template: __webpack_require__(130),
-        controller: 'EventsListController',
-        controllerAs: 'EvntsLstCtrl'
-    }).state('event', {
-        url: '/event/{id}',
-        template: __webpack_require__(131),
-        controller: 'EventInfoController',
-        controllerAs: 'EventInfoCtrl'
-    }).state('event-info', {
-        url: '/event/info/{id}',
-        template: __webpack_require__(132),
-        controller: 'EventController',
-        controllerAs: 'EventCtrl'
-    }).state('bids', {
-        url: '/bids',
-        template: __webpack_require__(133),
-        menu: 'bids',
-        controller: 'BidsController',
-        controllerAs: 'BidsCtrl',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-    }).state('bids-filter', {
-        url: '/bids/{filter}',
-        template: __webpack_require__(134),
-        controller: 'BidsFilterController',
-        controllerAs: 'BidsCtrl',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-    }).state('sale', {
-        url: '/sales',
-        template: __webpack_require__(135),
-        menu: 'sales',
-        controller: 'SaleController',
-        controllerAs: 'SaleCtrl',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-    }).state('sale-create', {
-        url: '/sale/create',
-        template: __webpack_require__(136),
-        controller: 'SaleFormController',
-        controllerAs: 'SaleFrmCtrl',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-    }).state('sale-manage', {
-        url: '/sale/manage/{id}',
-        template: __webpack_require__(137),
-        controller: 'SaleManageController',
-        controllerAs: 'SaleMngCtrl',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-
-    }).state('sale-filter', {
-        url: '/sales/{filter}',
-        template: __webpack_require__(138),
-        controller: 'SaleFilterController',
-        controllerAs: 'SaleCtrl',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-    }).state('wallet', {
-        url: '/wallet',
-        template: __webpack_require__(139),
-        menu: 'wallet',
-        data: {
-            permissions: {
-                except: 'Guest',
-                redirectTo: function redirectTo() {
-                    return {
-                        state: 'index'
-                    };
-                }
-            }
-        }
-    }).state('profile', {
-        url: '/profile',
-        template: __webpack_require__(140)
-    });
-
-    $urlRouterProvider.otherwise(function ($injector, $location) {
-        var state = $injector.get('$state');
-        state.go('404');
-        return $location.path();
-    });
-}
-
-/***/ }),
-/* 122 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without_wr\">\n                <a class=\"contine_without\" ui-sref=\"invest\">\n                    Continue without registration\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 123 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n           <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\n\n\n            <div class=\"data-privacy\">\n            <span>Terms & Conditions</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
-
-/***/ }),
-/* 124 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\n\n\n        <div class=\"data-privacy\">\n\n            Privacy Policy\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
-
-/***/ }),
-/* 125 */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
-
-/***/ }),
-/* 126 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"page_title col-md-12\">\n            Please Login\n            <a ui-sref=\"index\" class=\"goback\" href=\"index\">\n\n            </a>\n        </div>\n\n        <div class=\"col-md-12\">\n            <form ng-submit=\"LgCtrl.sendAuthData($event)\" style=\"width:100%\">\n                <md-input-container class=\"md-block login_input\">\n                    <label>Client Email</label>\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"LgCtrl.userEmail\"\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Your email must look like an e-mail address.\n                        </div>\n                    </div>\n                </md-input-container>\n\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your password</label>\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Password field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n\n                <button class=\"button button_login\" type=\"submit\" style=\"\"\n                        ng-click=\"LgCtrl.sendAuthData($event)\">Enter\n                </button>\n            </form>\n        </div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 127 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"page_title col-md-12\">\n            Registration\n            <a ui-sref=\"index\" class=\"goback\"></a>\n        </div>\n\n        <div class=\"col-md-12\">\n            <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"\">\n\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your Name</label>\n                    <input type=\"text\" ng-model=\"RgCtrl.userName\" name=\"clientName\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required']\">\n                            Name field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n\n\n                <md-input-container class=\"md-block login_input\">\n                    <label>Client Email</label>\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"RgCtrl.userEmail\"\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Your email must look like an e-mail address.\n                        </div>\n                    </div>\n                </md-input-container>\n\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your Name</label>\n                    <input type=\"number\" ng-model=\"RgCtrl.userAge\" name=\"clientAge\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required']\">\n                            Age field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your password</label>\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Password field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your password</label>\n                    <input type=\"password\" ng-model=\"RgCtrl.passwordConfirmation\" name=\"clientPasswordConfirmation\"\n                           required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Password field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n                <button class=\"button\" type=\"submit button_login\" style=\"border-radius:10pt; width: 100%\"\n                        ng-click=\"RgCtrl.sendRegisterForm($event)\">continue\n                </button>\n            </form>\n            <div class=\"private_policy\">\n                By creating an account you agree to our\n                <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and <a ui-sref=\"privacy-policy\">Privacy\n                Policy</a>\n            </div>\n        </div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 128 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" ng-cloak>\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <a ui-sref=\"profile\">\n                <div class=\"header_profile\"></div>\n            </a>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter\"></div>\n        </div>\n        <div class=\"invest_events\">\n            <div class=\"blocks_header_title\">\n                <div class=\"blocks_header_title_name\">Events</div>\n                <div class=\"blocks_header_link\"><a ui-sref=\"events\">See All</a></div>\n            </div>\n\n\n            <events-carousel ng-if=\"InvstCtrl._opts.dataLoad\"\n                             events=\"InvstCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n            <div class=\"blocks_header_title\">\n                <div class=\"blocks_header_title_name\">Players</div>\n                <div class=\"blocks_header_link\"><a ui-sref=\"sale-all\">See All</a></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"fullscreen\">\n        <div class=\"invest_sales\">\n            <div class=\"tabs_list\">\n                <div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'closing'}\"\n                     ng-click=\"InvstCtrl.setFilter('closing')\">Closing\n                </div>\n                <div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'markup'}\"\n                     ng-click=\"InvstCtrl.setFilter('markup')\">Lowest markup\n                </div>\n            </div>\n        </div>\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\n        <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 129 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"container\">\n    <div class=\"header\">\n        <a ui-sref=\"invest\"><div class=\"header_back\"></div></a>\n        <div class=\"header_title\">Players</div>\n        <div class=\"header_empty\"></div>\n    </div>\n    </div>\n    <div class=\"fullscreen\">\n        <div class=\"invest_sales\">\n            <div class=\"tabs_list\">\n                <div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'closing'}\"\n                     ng-click=\"SaleAllCtrl.setFilter('closing')\">Closing\n                </div>\n                <div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'markup'}\"\n                     ng-click=\"SaleAllCtrl.setFilter('markup')\">Lowest markup\n                </div>\n            </div>\n        </div>\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>";
-
-/***/ }),
-/* 130 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n\n    <div class=\"binds event-list-main-wr col-md-12\">\n        <div class=\"header\">\n            <a ui-sref=\"invest\"><div class=\"goback goback_unset\"></div></a>\n            <div class=\"header_logo\">Events</div>\n            <div class=\"header_filter\"></div>\n        </div>\n\n        <div class=\"all_events-wr\">\n\n\n            <events ng-if=\"EvntsLstCtrl._opts.dataLoad\"\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\n            </events>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
-
-/***/ }),
-/* 131 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"binds event-list-main-wr\">\n\n        <div class=\"all_events-wr\">\n            <div class=\"event_card_list\">\n                <div class=\"selected_event event_card_list_img\" style=\"border-radius: 0px\">\n                    <img src=\"/images/select_event_bg.png\" alt=\"\">\n                    <a ui-sref=\"invest\"><div class=\"event_card_list_back\"></div></a>\n                    <div class=\"event_card_list_open\"></div>\n                </div>\n                <div class=\"event_card_list_info col-md-12\">\n                    <div class=\"event_card_list_wr\">\n                        <div class=\"event_card_title\" ng-bind=\"EventInfoCtrl.event.title\"></div>\n                        <div class=\"blocks_header_link event_card_details_link\">\n                            <a class=\"\" ui-sref=\"event-info({id:EventInfoCtrl.event.id})\">See info</a>\n                        </div>\n                        <div class=\"event_card_attr\">£{%EventInfoCtrl.event.fund%} GTD</div>\n                        <div class=\"event_card_attr\" ng-bind=\"EventInfoCtrl.event.date\"></div>\n                        <div class=\"blocks_header_title_name event_card_subevent_list_title\">Event\n                            list\n                        </div>\n                    </div>\n                    <div class=\"event_card_list_subevents\"\n                         ng-repeat=\"(key, subevent) in EventInfoCtrl.event.subevents\" ng-class=\"{' event_card_list_last_child':EventInfoCtrl.event.subevents.length == key+1 }\">\n                        <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\n                        <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\n                        <div class=\"event_card_date\" ng-bind=\"EventInfoCtrl.event.date\"></div>\n                        <div class=\"event_card__see_more\"></div>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
-
-/***/ }),
-/* 132 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"event_detail__header\">\n        <div class=\"event_detail__header_title\" ng-bind=\"EventCtrl.event.title\"></div>\n        <div class=\"event_detail__header_date\" ng-bind=\"EventCtrl.event.date\"></div>\n        <a ui-sref=\"invest\" class=\"goback\">\n\n        </a>\n    </div>\n\n    <div class=\"courusel_no_limit_wr\">\n\n        <div class=\"courusel_no_limit_content\">\n            <div class=\"courusel_no_limit_item_wr\">\n                <div class=\"courusel_no_limit_item\">\n\n                        <div class=\"courusel_item\"\n                             ng-repeat=\"item in EventCtrl.event.subevents\"\n                             ng-bind=\"item.title\"\n                             ng-click=\"EventCtrl.getSale(item.id)\"\n                             ng-class=\"{'main_event': EventCtrl.opened == item.id}\">\n                        </div>\n\n                </div>\n            </div>\n\n\n\n            <div class=\"event_detail_info\">\n\n                <div class=\"event_card_title\">Buy in £1,000,000 • £500,000 GTE</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"EventCtrl.event.date\"></div>\n                <div class=\"event_card_attr\">\n                    Casino Sochi, Sochi, Russia\n                </div>\n            </div>\n\n            <sales sales=\"EventCtrl.sales\" state=\"'invest'\" subevent=\"false\"></sales>\n\n        </div>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 133 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <div class=\"header_profile\"></div>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter_empty\" ></div>\n        </div>\n        <bids-carousel ng-if=\"BidsCtrl._opts.dataLoad\"\n                       bids=\"BidsCtrl.bids\"\n        >\n        </bids-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
-
-/***/ }),
-/* 134 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"tabs-wr\">\n           <div class=\"page_title col-md-12\">\n                Bids\n                <a ui-sref=\"bids\" class=\"goback\" href=\"/bids/invest\">\n\n                </a>\n            </div>\n            <div class=\"tabs_list\">\n\n                <a class=\"tabs_item\"\n                   ui-sref=\"bids-filter({filter: menuItem.name})\"\n                   ng-repeat=\"menuItem in BidsCtrl.menu\"\n                   ng-bind=\"menuItem.name\"\n                   ng-class=\"{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}\"\n                ></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids state=\"'list'\" class=\"bids_row__fullscreen\" bids=\"BidsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>\n";
-
-/***/ }),
-/* 135 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <div class=\"header_profile\"></div>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter_empty\" ></div>\n        </div>\n        <a ui-sref=\"sale-create\">\n            <div class=\"creact_sale\">\n                Create a Sale\n            </div>\n        </a>\n\n        <sales-carousel sales=\"SaleCtrl.sales\" state=\"'row'\" ng-if=\"SaleCtrl._opts.dataLoad == true\"></sales-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 136 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row sale_form_wr\">\n    <div class=\"sale_form col-md-12\">\n        <div class=\"page_title col-md-12\">\n            Create new sale\n            <a ui-sref=\"bids\" class=\"goback\" href=\"/sale/\" style=\"left: 0\">\n\n            </a>\n        </div>\n        <div class=\"sale_form_content\">\n            <div class=\"blocks_header_title_name sale_form_title\">\n                Event and buy-in\n            </div>\n\n\n            <label class=\"blocks_header_title_name\">Event</label>\n            <div layout=\"row\" layout-align=\"start_stretch\">\n                <md-select class=\"md-no-underline form-Select-theme\"\n                           ng-change=\"SaleFrmCtrl.getSubevents()\"\n                           ng-model=\"SaleFrmCtrl.sale.event_id\" placeholder=\"Choose an event\">\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.events\">{%item.title%}</md-option>\n                </md-select>\n            </div>\n\n\n            <label class=\"blocks_header_title_name\">Flight</label>\n            <div layout=\"row\" layout-align=\"start_stretch\">\n                <md-select class=\"md-no-underline form-Select-theme\"\n                           ng-model=\"SaleFrmCtrl.sale.sub_event_id\" placeholder=\"Choose an Flight\">\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.subevents\">{%item.title%}</md-option>\n                </md-select>\n            </div>\n\n\n\n\n\n            <div class=\"card__attribute card__attribute_static\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Buy-in</span><br>\n                    <span class=\"card__attribute_value\">$3000</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Closing time</span><br>\n                    <span class=\"card__attribute_value\">10:44, 10 Apr 2018</span>\n                </div>\n\n            </div>\n            <div class=\"hr\"></div>\n            <div class=\"blocks_header_title_name sale_form_title\">Offer</div>\n            <div class=\"card__attribute\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Share</span><br>\n                    <input ng-model=\"SaleFrmCtrl.sale.share\" type=\"number\" placeholder=\"0\">\n\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <input ng-model=\"SaleFrmCtrl.sale.markup\" type=\"number\" placeholder=\"1.0\">\n\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Amount $</span><br>\n                    <input ng-model=\"SaleFrmCtrl.sale.amount\" type=\"number\" placeholder=\"0\">\n                </div>\n\n            </div>\n\n        </div>\n        <div class=\"button creact_sale_btn\" ng-click=\"SaleFrmCtrl.createSale()\">Create a Sale</div>\n    </div>\n</div>\n";
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n\n    <div class=\"row col-md-12 modal_header_fixed\">\n        <div class=\"header\">\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n            <div class=\"header_title\">Place a bid</div>\n            <div class=\"header_filter_empty\"></div>\n        </div>\n\n\n        <div>\n            <div class=\"card__profile_info\">\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                    <img src=\"/images/players.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\n                    </div>\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\n                    </div>\n                </div>\n            </div>\n\n        </div>\n\n\n        <div class=\"binds-item__game_info card__event_info\">\n            <div class=\"geme__text card__event_info_item\">\n                <div class=\"by_in card__event_info_attr\">\n                    Buy in £ <span>1,000,000</span>\n                </div>\n                <div class=\"gte card__event_info_attr\">\n                    £ <span>1,000,000</span> GTE\n                </div>\n            </div>\n\n\n            <div class=\"card__attribute card__attribute_row ng-scope\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Value</span><br>\n                    <span class=\"card__attribute_value\">£</span>\n                    <span class=\"card__attribute_value ng-binding\">300</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Date of Start</span><br>\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"modal_bids_block_wr col-md-12\">\n        <div class=\"modal_bids_block\">\n            <div class=\"modal_type_bids\">\n                <div class=\"blocks_header_title_name\">\n                    HIGHEST BIDS\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\n                </div>\n\n                <div class=\"blocks_header_title_name\">\n                    MATCHED BID\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\n                </div>\n            </div>\n\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\n                <div class=\"blocks_header_title_name\">\n                    your bid\n                </div>\n                <div class=\"bid_new__attribute_wraper\">\n                    <div class=\"bid_new__attribute\">\n                        <span>Markup</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Share</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Amount</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"manage_button\">\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\n                    Cancel\n                </div>\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\n                    Place\n                </div>\n            </div>\n            <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\n                Add new bid\n            </div>\n        </div>\n    </div>\n</div>\n\n";
-
-/***/ }),
-/* 138 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n    <div class=\"page_title col-md-12\">\n        Sales\n        <a ui-sref=\"sale\" class=\"goback\" href=\"/bids/invest\">\n\n        </a>\n\n    </div>\n        <div class=\"tabs_list\">\n\n            <a class=\"tabs_item\"\n               ui-sref=\"sale-filter({filter: menuItem.name})\"\n               ng-repeat=\"menuItem in SaleCtrl.menu\"\n               ng-bind=\"menuItem.name\"\n               ng-class=\"{'tabs_item__active_entity':SaleCtrl.$stateParams.filter === menuItem.name}\"\n            ></a>\n        </div>\n\n\n\n    <sales sales=\"SaleCtrl.sales\" state=\"'list'\" ></sales>\n\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
-
-/***/ }),
-/* 139 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wallet-wr\">\n    <div class=\"balance col-md-12\">\n        <div class=\"wallet_header\">\n            <div class=\"w_to_profile\"></div>\n            <div class=\"w_to_setting\"></div>\n        </div>\n        <div class=\"balance_count\">\n            $ <span>500</span>.00\n        </div>\n        <div class=\"balance__title\">My balance</div>\n        <div class=\"make_deposit\">Make Deposit</div>\n    </div>\n    <div class=\"transaction_wr\">\n        <span>Transactions</span>\n        <div class=\"transaction_tabs_list-wr\">\n            <div class=\"transaction_tabs_list\">\n                <div>April 2018</div>\n                <div class=\"main_event\">May 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n    </div>\n</div>\n<span ng-include=\"'tpl/view/footer.template.html'\"></span>\n";
-
-/***/ }),
-/* 140 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"header\">\n    <div class=\"header_close\"></div>\n    <div class=\"header_title\">Yor profile</div>\n    <div class=\"header_empty\"></div>\n</div>\n<div class=\"profile_info\">\n    <div class=\"profile_img\">\n        <img src=\"/images/user_logo.png\">\n    </div>\n    <div class=\"profile_hint\">Tap to replace photo</div>\n    <div class=\"profile_name\">Milton Jimenez</div>\n    <div class=\"profile_button\">Link Party Poker account</div>\n</div>\n<div class=\"profile_block_title\">settings</div>\n<div class=\"profile_menu\">\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_notification\"></div>\n            <div class=\"profile_menu_item__text\">Notifications and sounds</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_privacy\"></div>\n            <div class=\"profile_menu_item__text\">Privacy and security</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_account\"></div>\n            <div class=\"profile_menu_item__text\">Account info</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item \">\n        <div>\n            <div class=\"icon icon_support\"></div>\n            <div class=\"profile_menu_item__text\">Support</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_tell\"></div>\n            <div class=\"profile_menu_item__text\">Tell a friend</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_setting\"></div>\n            <div class=\"profile_menu_item__text\">Settings</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n\n</div>\n\n";
-
-/***/ }),
-/* 141 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = middlewares;
-middlewares.$inject = ['PermRoleStore'];
-
-function middlewares(PermRoleStore) {
-    PermRoleStore.defineRole('Auth', function () {
-        return window.__user !== null;
-    });
-
-    PermRoleStore.defineRole('Guest', function () {
-        return window.__user === null;
-    });
-}
-
-/***/ }),
-/* 142 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__ = __webpack_require__(157);
-
-var angular = __webpack_require__(16);
-
-
-
-
-
-
-
-
-
-
-var module = angular.module('Components', []);
-module.component('bids', __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__["a" /* BidsComponent */]);
-module.component('bidsCarousel', __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__["a" /* BidsCarouselComponent */]);
-module.component('events', __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__["a" /* EventsComponent */]);
-module.component('eventsCarousel', __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__["a" /* EventsCarouselComponent */]);
-module.component('sales', __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__["a" /* SalesComponent */]);
-module.component('salesCarousel', __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__["a" /* SalesCarouselComponent */]);
-module.component('saleModal', __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__["a" /* SaleModalComponent */]);
-module.component('saleManage', __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__["a" /* SaleManageComponent */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (module.name);
-
-/***/ }),
-/* 143 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Bids = function () {
-    function Bids() {
-        _classCallCheck(this, Bids);
-
-        console.log(this.bids);
-    }
-
-    _createClass(Bids, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
-
-    return Bids;
-}();
-
-var BidsComponent = {
-    bindings: {
-        bids: '<',
-        state: '<'
-    },
-    template: __webpack_require__(144),
-    controller: Bids,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 144 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card__bids\"\n     ng-class=\"{\n                    'bids-item__matched':      item.status === 2,\n                    'bids-item__unmatched':    item.status === 3,\n                    'bids-item__settled':      item.status === 4,\n                    'bids-item__canceled':     item.status === 5,\n                     }\"\n     ng-repeat=\"item in $ctrl.bids\"\n     ng-if=\"$ctrl.state =='row'\"\n>\n\n    <div>\n\n        <div class=\"card__profile_info\">\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\n                </div>\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\n                </div>\n            </div>\n        </div>\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\n        </div>\n    </div>\n\n    <div class=\"binds-item__game_info card__event_info\">\n        <div class=\"geme__text card__event_info_item\">\n            <div class=\"by_in card__event_info_attr\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte card__event_info_attr\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n\n\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ==1 \">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Date of Start</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status == 2\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Sale</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Bid</span><br>\n                <span class=\"card__attribute_value\">£<span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span></span>\n\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">20</span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Time</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Outcome</span><br>\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">256</span>\n\n\n                </span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\">12 days</span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Status</span><br>\n                <span class=\"card__attribute_status_green\" > In progress</span>\n            </div>\n        </div>\n\n\n\n\n    </div>\n</div>\n\n\n<div class=\"card__bids_list\"\n     ng-class=\"{\n                    'bids-item__matched':      item.status === 2,\n                    'bids-item__unmatched':    item.status === 3,\n                    'bids-item__settled':      item.status === 4,\n                    'bids-item__canceled':     item.status === 5,\n                     }\"\n     ng-repeat=\"item in $ctrl.bids\"\n     ng-if=\"$ctrl.state == 'list'\">\n\n    <div>\n\n        <div class=\"card__profile_info\">\n            <div class=\"blocks_header_link\" ng-if=\"item.status==2\"><a ui-sref=\"events\">edit</a></div>\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\n                </div>\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\n                </div>\n            </div>\n\n        </div>\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"item.status==1\">\n        </div>\n    </div>\n\n    <div class=\"card__event_info\">\n        <div class=\"card__event_info_item\">\n            <div class=\"by_in card__event_info_attr\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte card__event_info_attr\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===1\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Date of Start</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===2\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Date of Start</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\" >\n                <span>T. until close</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Outcome</span><br>\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">1,000,000</span>\n\n\n                </span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Status</span><br>\n                <span class=\"card__attribute_status_green\" > In progress</span>\n            </div>\n        </div>\n\n    </div>\n</div>\n";
-
-/***/ }),
-/* 145 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsCarouselComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var BidsCarousel = function () {
-    function BidsCarousel() {
-        _classCallCheck(this, BidsCarousel);
-    }
-
-    _createClass(BidsCarousel, [{
-        key: '$onInit',
-        value: function $onInit() {
-            console.log(this.bids);
-        }
-    }]);
-
-    return BidsCarousel;
-}();
-
-var BidsCarouselComponent = {
-    bindings: {
-        bids: '<'
-    },
-    template: __webpack_require__(146),
-    controller: BidsCarousel,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 146 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"blocks_header_title\">\n        <div class=\"blocks_header_title_name\">{%key%}</div>\n        <div><a ui-sref=\"bids-filter({filter: key})\">See All</a></div>\n    </div>\n\n\n    <div class=\"carousel_container\">\n        <bids class=\"card_row\" state=\"'row'\" bids=\"value\"></bids>\n    </div>\n\n</div>\n";
-
-/***/ }),
-/* 147 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Events = function () {
-    function Events() {
-        _classCallCheck(this, Events);
-
-        this.opened = [];
-        console.log(this.events);
-    }
-
-    _createClass(Events, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }, {
-        key: 'openDetail',
-        value: function openDetail(event_id) {
-            console.log(event_id);
-            var rInd = this.opened.indexOf(event_id);
-            if (rInd === -1) {
-                this.opened.push(event_id);
-            } else {
-                this.opened.splice(rInd, 1);
-            }
-        }
-    }, {
-        key: 'showDetail',
-        value: function showDetail(event_id) {
-            if (this.opened.indexOf(event_id) != -1) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }, {
-        key: 'hideArrow',
-        value: function hideArrow(event_id) {
-            if (this.opened.indexOf(event_id) != -1) {
-                return false;
-            } else {
-                return true;
-            }
-        }
-    }]);
-
-    return Events;
-}();
-
-var EventsComponent = {
-    bindings: {
-        events: '<',
-        state: '<'
-    },
-    template: __webpack_require__(148),
-    controller: Events,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"event_card__row\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n\n\n        <a ui-sref=\"event({id:item.id})\">\n            <div class=\"event_card__row_img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n            <div class=\"event_card__row_info\">\n                <a class=\"event_card_title\" href=\"\" ng-bind=\"item.title\">\n                </a>\n                <div class=\"event_card_attr\">£{%item.fund%} GTD</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"item.date\"></div>\n            </div>\n\n\n</div>\n\n\n<div class=\"event_card_list\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"event_card_list_img\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n        <!--<div class=\"event_card_list_back\"></div>-->\n        <!--<div class=\"event_card_list_open\"></div>-->\n    </div>\n    <div class=\"event_card_list_info col-md-12\">\n\n        <div class=\"event_card_list_wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event_card_title\" ng-bind=\"item.title\"></div>\n            <div class=\"blocks_header_link event_card_details_link\">\n            <!--<a class=\"\" ui-sref=\"evet({id:item.id})\">See info</a>-->\n            </div>\n            <div class=\"event_card_fund\">£{%item.fund%} GTD</div>\n            <div class=\"event_card_date\" ng-bind=\"item.date\"></div>\n            <div class=\"blocks_header_title_name event_card_subevent_list_title\" ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\n        </div>\n\n\n        <div class=\"event_card_list_subevents\" ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\n\n            <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\n            <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\n            <div class=\"event_card_date\" ng-bind=\"item.date\"></div>\n\n            <div class=\"event_card__see_more\"></div>\n\n        </div>\n    </div>\n\n\n</div>\n";
-
-/***/ }),
-/* 149 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsCarouselComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var EventsCarousel = function () {
-    function EventsCarousel() {
-        _classCallCheck(this, EventsCarousel);
-    }
-
-    _createClass(EventsCarousel, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
-
-    return EventsCarousel;
-}();
-
-var EventsCarouselComponent = {
-    bindings: {
-        events: '<',
-        state: '<'
-    },
-    template: __webpack_require__(150),
-    controller: EventsCarousel,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"carousel_container\">\n       <events class=\"component_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n</div>\n";
-
-/***/ }),
-/* 151 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Sales = function () {
-    function Sales($state) {
-        _classCallCheck(this, Sales);
-
-        this.$state = $state;
-        this.showPlace = false;
-        this.showManage = false;
-        this.item = null;
-    }
-
-    _createClass(Sales, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }, {
-        key: 'showModal',
-        value: function showModal(key, type) {
-            console.log('hui');
-
-            if (type == 'manage') this.showManage = true;
-            if (type == 'place') this.showPlace = true;
-            this.$state.modalOpened = true;
-            this.item = this.sales[key];
-        }
-    }]);
-
-    return Sales;
-}();
-
-Sales.$inject = ['$state'];
-
-var SalesComponent = {
-    bindings: {
-        subevent: '<',
-        sales: '<',
-        state: '<'
-    },
-    template: __webpack_require__(152),
-    controller: Sales,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 152 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"sale_card__list sale_card__list_sales\"\n     ng-if=\"$ctrl.state === 'list'\"\n     ng-repeat=\"(key,item) in $ctrl.sales\"\n     ng-class=\"{\n     'sale_card__list-last_child': $ctrl.sales.length == key+1,\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n>\n\n    <div class=\"event_card_text\">\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"blocks_header_link\" ng-if=\"item.status == 1\" ng-click=\"$ctrl.showModal(key, 'manage')\">edit</div>\n\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\n        </div>\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\n                ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"card__attribute_sale_card\">\n        <div class=\"sale_card_list_atr_item\">\n            <span>Closes</span><br>\n            <span class=\"card__attribute_value\">21</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Markup</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Share sold</span><br>\n            <span class=\"card__attribute_value\">0% of 20%</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Amount raised</span><br>\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\n        </div>\n    </div>\n\n</div>\n\n\n<div class=\"sale_card__row\"\n\n     ng-if=\"$ctrl.state === 'row'\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     ng-repeat=\"item in $ctrl.sales\">\n    <div class=\"event_card_text\">\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\n                ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n\n    <div class=\"card__attribute_sale_card\">\n        <div class=\"sale_card_list_atr_item\">\n            <span>Closes</span><br>\n            <span class=\"card__attribute_value\">21</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Markup</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Share sold</span><br>\n            <span class=\"card__attribute_value\">0% of 20%</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Amount raised</span><br>\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\n        </div>\n    </div>\n</div>\n\n<!--INVEST-->\n\n<div class=\"sale_card__list\"\n     ng-class=\"{'sale_card__list-last_child': $ctrl.sales.length == key+1}\"\n     ng-click=\"$ctrl.showModal(key, 'place')\"\n     ng-if=\"$ctrl.state === 'invest'\"\n     ng-repeat=\" (key, item) in $ctrl.sales\">\n\n\n    <div>\n        <div class=\"card__profile_info\">\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"card__profile_name\" ng-bind=\"item.creator.name\">\n                </div>\n                <div class=\"card__event\" ng-bind=\"item.event.title\">\n                </div>\n            </div>\n        </div>\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"$ctrl.subevent\">\n        </div>\n    </div>\n\n    <div class=\"card__attribute\">\n        <div class=\"sale_card_list_atr_item\">\n            <span>Markup</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Value</span><br>\n            <span class=\"card__attribute_value\">£</span>\n            <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Date of Start</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.event.date_start\"></span>\n        </div>\n    </div>\n</div>\n\n\n<sale-modal sale=\"$ctrl.item\" show=\"$ctrl.showPlace\"></sale-modal>\n<!--\n<sale-manage sale=\"$ctrl.item\" show=\"$ctrl.showManage\"></sale-manage>-->\n";
-
-/***/ }),
-/* 153 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SalesCarouselComponent; });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SalesCarousel = function () {
-    function SalesCarousel() {
-        _classCallCheck(this, SalesCarousel);
-    }
-
-    _createClass(SalesCarousel, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }]);
-
-    return SalesCarousel;
-}();
-
-var SalesCarouselComponent = {
-    bindings: {
-        sales: '<',
-        state: '<'
-    },
-    template: __webpack_require__(154),
-    controller: SalesCarousel,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 154 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\n    <div class=\"blocks_header_title\">\n        <div class=\"blocks_header_title_name\">{%key%}</div>\n        <div><a ui-sref=\"sale-filter({filter: key})\">See All</a></div>\n    </div>\n    <div class=\"carousel_container\">\n\n        <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\n    \n    </div>\n</div>\n";
-
-/***/ }),
 /* 155 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleModalComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var SaleModal = function () {
-    function SaleModal($window, $http, $state, $timeout, $scope) {
-        _classCallCheck(this, SaleModal);
-
-        this.$http = $http;
-        this.$state = $state;
-        this.$timeout = $timeout;
-        this.$scope = $scope;
-        $state.modalOpened = false;
-        this.user = window.__user;
-        this._opts = {
-            stateCreate: false
-        };
-        this.bid = {
-            status: 2,
-            markup: '',
-            share: '',
-            amount: ''
-        };
-    }
-
-    _createClass(SaleModal, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }, {
-        key: 'setState',
-        value: function setState() {
-            var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-            console.log(this.sale, 'this.sale');
-            this._opts.stateCreate = !this._opts.stateCreate;
-            if (action == 'store') this.storeMyBid();
-        }
-    }, {
-        key: 'close',
-        value: function close() {
-            this.show = !this.show;
-            this.$state.modalOpened = !this.$state.modalOpened;
-        }
-    }, {
-        key: 'storeMyBid',
-        value: function storeMyBid() {
-            var _this = this;
-
-            this.bid.sale_id = this.sale.id;
-            this.bid.user_id = this.user.id;
-
-            this.$http.post(__WEBPACK_IMPORTED_MODULE_0__Constants__["e" /* BIDS_MY_STORE */], this.bid).then(function (response) {
-                console.log(response, 'response');
-                if (response.data.status == 1) _this.sale.bids.push(response.data.bid);
-
-                _this.$timeout(function () {
-                    _this.$scope.$apply();
-                }, 10);
-                console.log(_this.sale);
-            });
-        }
-    }]);
-
-    return SaleModal;
-}();
-
-SaleModal.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
-
-var SaleModalComponent = {
-    bindings: {
-        sale: '<',
-        show: '='
-    },
-    template: __webpack_require__(156),
-    controller: SaleModal,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 156 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n\n    <div class=\"row col-md-12 modal_header_fixed\">\n        <div class=\"header\">\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n            <div class=\"header_title\">Place a bid</div>\n            <div class=\"header_filter_empty\"></div>\n        </div>\n\n\n        <div>\n            <div class=\"card__profile_info\">\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                    <img src=\"/images/players.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\n                    </div>\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\n                    </div>\n                </div>\n            </div>\n\n        </div>\n\n\n        <div class=\"binds-item__game_info card__event_info\">\n            <div class=\"geme__text card__event_info_item\">\n                <div class=\"by_in card__event_info_attr\">\n                    Buy in £ <span>1,000,000</span>\n                </div>\n                <div class=\"gte card__event_info_attr\">\n                    £ <span>1,000,000</span> GTE\n                </div>\n            </div>\n\n\n            <div class=\"card__attribute card__attribute_row ng-scope\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Value</span><br>\n                    <span class=\"card__attribute_value\">£</span>\n                    <span class=\"card__attribute_value ng-binding\">300</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Date of Start</span><br>\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"modal_bids_block_wr col-md-12\" ng-class=\"{'show_your_bid': $ctrl._opts.stateCreate == true}\">\n        <div class=\"modal_bids_block\">\n            <div class=\"modal_type_bids\">\n                <div class=\"blocks_header_title_name\">\n                    HIGHEST BIDS\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\n                </div>\n\n                <div class=\"blocks_header_title_name\">\n                    MATCHED BID\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\n                </div>\n            </div>\n\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\n                <div class=\"blocks_header_title_name\">\n                    your bid\n                </div>\n                <div class=\"bid_new__attribute_wraper\">\n                    <div class=\"bid_new__attribute\">\n                        <span>Markup</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Share</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Amount</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"manage_button\">\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\n                    Cancel\n                </div>\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\n                    Place\n                </div>\n            </div>\n            <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\n                Add new bid\n            </div>\n        </div>\n    </div>\n</div>\n\n";
-
-/***/ }),
-/* 157 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var SaleManage = function () {
-    function SaleManage($window, $http, $state, $timeout, $scope) {
-        _classCallCheck(this, SaleManage);
-
-        this.$http = $http;
-        this.$state = $state;
-        this.$timeout = $timeout;
-        this.$scope = $scope;
-        //$state.modalOpened = false;
-        this.user = window.__user;
-
-        this._opts = {
-            stateCreate: false
-        };
-
-        this.bid = {
-            status: 2,
-            markup: '',
-            share: '',
-            amount: ''
-        };
-    }
-
-    _createClass(SaleManage, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }, {
-        key: 'setState',
-        value: function setState() {
-            var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-            console.log(this.sale, 'this.sale');
-            this._opts.stateCreate = !this._opts.stateCreate;
-            if (action == 'store') this.storeMyBid();
-        }
-    }, {
-        key: 'close',
-        value: function close() {
-            this.show = !this.show;
-            this.$state.modalOpened = !this.$state.modalOpened;
-        }
-
-        /*storeMyBid(){
-            this.bid.sale_id = this.sale.id;
-            this.bid.user_id = this.user.id;
-             this.$http.post(BIDS_MY_STORE, this.bid).then(response =>{
-                console.log(response, 'response');
-                if (response.data.status == 1) this.sale.bids.push(response.data.bid);
-                 this.$timeout(() => {
-                    this.$scope.$apply();
-                }, 10);
-                console.log(this.sale);
-            });
-         }*/
-
-    }]);
-
-    return SaleManage;
-}();
-
-SaleManage.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
-
-var SaleManageComponent = {
-    bindings: {
-        sale: '<',
-        show: '='
-    },
-    template: __webpack_require__(158),
-    controller: SaleManage,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 158 */
-/***/ (function(module, exports) {
-
-module.exports = "";
-
-/***/ }),
-/* 159 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = hack;
-hack.$inject = ['$templateCache'];
-var menu_footer = __webpack_require__(160);
-var bid_place = __webpack_require__(161);
-function hack($templateCache) {
-    $templateCache.put('tpl/view/footer.template.html', menu_footer);
-    $templateCache.put('tpl/view/bid-place.template.html', bid_place);
-}
-
-/***/ }),
-/* 160 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"footer\" ng-controller=\"MenuController as MenuCtrl\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'invest'}\">\n            <div class=\"footer_img footer_img_invest\" ng-class=\"{'footer_img__active_invest': MenuCtrl.menuItem == 'invest'}\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'bids'}\">\n            <div class=\"footer_img footer_img_bids\" ng-class=\"{'footer_img__active_bids': MenuCtrl.menuItem == 'bids'}\"></div>\n            bids\n        </div>\n    </a>\n    <a ui-sref=\"sale\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'sales'}\">\n            <div class=\"footer_img footer_img_sale\" ng-class=\"{'footer_img__active_sale': MenuCtrl.menuItem == 'sales'}\"></div>\n            sale\n        </div>\n    </a>\n    <a ui-sref=\"wallet\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'wallet'}\">\n            <div class=\"footer_img footer_img_wallet\" ng-class=\"{'footer_img__active_wallet': MenuCtrl.menuItem == 'wallet'}\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
-
-/***/ }),
-/* 161 */
-/***/ (function(module, exports) {
-
-module.exports = "    <div class=\"modal_wrapper\">\n    <div class=\"row col-md-12\">\n    <div class=\"place_a_bit\">\n        <div class=\"place_a_bit__title\">\n            Place a bid\n            <div class=\"pab__close\">\n                X\n            </div>\n        </div>\n        <div class=\"binds-item-wr\">\n            <div class=\"binds-item__profile_info\">\n                <div class=\"profile__photo\">\n                    <img src=\"/images/pl_5.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"profile__name\">\n                        Louise Romero\n                    </div>\n                    <div class=\"profile__country\">\n                        MILLIONS Russia, 1A\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div class=\"binds-item__game_info\">\n                <div class=\"geme__text\">\n                    <div class=\"by_in\">\n                        Buy in £ <span>1,000,000</span>\n                    </div>\n                    <div class=\"gte\">\n                        £ <span>1,000,000</span> GTE\n                    </div>\n                </div>\n                <div class=\"game_atrs\">\n                    <div class=\"game_atrs__markup\">\n                        <span>Markup</span><br>\n                        1.20\n                    </div>\n                    <div class=\"game_atrs__value\">\n                        <span>Share</span><br>\n                        20%</div>\n                    <div class=\"game_atrs__date_start\">\n                        <span>Value</span><br>\n                        1.20</div>\n                </div>\n            </div>\n        </div>\n        <div class=\"highest_bids\">\n            <div class=\"highest_bids__title\">\n                HIGHEST BIDS\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n            <div class=\"block_2\">\n                <input type=\"text\" placeholder=\"1.09\" id=\"123\">\n                <input type=\"text\" placeholder=\"0.53%\">\n                <input type=\"text\" placeholder=\"$442\">\n            </div>\n        </div>\n        <div class=\"matched_bid\">\n            <div class=\"matched_bid__title\">\n                MATCHED BID\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n\n        </div>\n        <div class=\"add_bid\">\n            Add new bid\n        </div>\n    </div>\n</div>\n</div>";
-
-/***/ }),
-/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Should already be required, here for clarity
-__webpack_require__(16);
+__webpack_require__(12);
 
 // Load Angular and dependent libs
-__webpack_require__(99);
-__webpack_require__(100);
+__webpack_require__(64);
+__webpack_require__(65);
 
 // Now load Angular Material
-__webpack_require__(165);
+__webpack_require__(158);
 
 // Export namespace
 module.exports = 'ngMaterial';
 
 
 /***/ }),
-/* 163 */
+/* 156 */
 /***/ (function(module, exports) {
 
 /**
@@ -57267,7 +57151,7 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 /***/ }),
-/* 164 */
+/* 157 */
 /***/ (function(module, exports) {
 
 /**
@@ -57700,7 +57584,7 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 
 
 /***/ }),
-/* 165 */
+/* 158 */
 /***/ (function(module, exports) {
 
 /*!
@@ -94816,16 +94700,126 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 })(window, window.angular);;window.ngMaterial={version:{full: "1.1.10"}};
 
 /***/ }),
-/* 166 */
+/* 159 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 160 */,
+/* 161 */,
+/* 162 */,
+/* 163 */,
+/* 164 */,
+/* 165 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainController; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MainController = function MainController($state) {
+    _classCallCheck(this, MainController);
+
+    this.$state = $state;
+    console.log(this.$state);
+};
+
+;
+
+MainController.$inject = ['$state'];
+
+
+/***/ }),
+/* 166 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(3);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var SaleManage = function () {
+    function SaleManage($window, $http, $state, $timeout, $scope) {
+        _classCallCheck(this, SaleManage);
+
+        this.$http = $http;
+        this.$state = $state;
+        this.$timeout = $timeout;
+        this.$scope = $scope;
+        //$state.modalOpened = false;
+        this.user = window.__user;
+
+        this._opts = {
+            stateCreate: false
+        };
+
+        this.bid = {
+            status: 2,
+            markup: '',
+            share: '',
+            amount: ''
+        };
+    }
+
+    _createClass(SaleManage, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'setState',
+        value: function setState() {
+            var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+            console.log(this.sale, 'this.sale');
+            this._opts.stateCreate = !this._opts.stateCreate;
+            if (action == 'store') this.storeMyBid();
+        }
+    }, {
+        key: 'close',
+        value: function close() {
+            this.show = !this.show;
+            this.$state.modalOpened = !this.$state.modalOpened;
+        }
+
+        /*storeMyBid(){
+            this.bid.sale_id = this.sale.id;
+            this.bid.user_id = this.user.id;
+              this.$http.post(BIDS_MY_STORE, this.bid).then(response =>{
+                console.log(response, 'response');
+                if (response.data.status == 1) this.sale.bids.push(response.data.bid);
+                  this.$timeout(() => {
+                    this.$scope.$apply();
+                }, 10);
+                console.log(this.sale);
+            });
+          }*/
+
+    }]);
+
+    return SaleManage;
+}();
+
+SaleManage.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
+
+var SaleManageComponent = {
+    bindings: {
+        sale: '<',
+        show: '='
+    },
+    template: __webpack_require__(167),
+    controller: SaleManage,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
 /* 167 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+module.exports = "";
 
 /***/ })
 /******/ ]);
