@@ -8,7 +8,7 @@ import {ProfileController} from "./Controllers/ProfileController";
 import {FilterBidsController} from "./Controllers/FilterBidsController";
 import {BidResponsesController} from "./Controllers/BidResponsesController";
 import {MainController} from "./Controllers/MainController";
-import {BidsController} from "./Controllers/bids/bids.controller";
+import {BidsController} from "./Controllers/bids/BidsController";
 
 ////////////////////////////////////////////////////////
 import {SaleController} from "./Controllers/SaleController"

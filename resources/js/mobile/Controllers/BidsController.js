@@ -14,7 +14,7 @@ class BidsController {
             {status: BID_SETTLED, name: 'settled'},
             {status: BID_CANCELED, name: 'canceled'}
         ];
-        this.getList();
+        this.getList({user_id: this.user.id});
     }
 
     getList() {

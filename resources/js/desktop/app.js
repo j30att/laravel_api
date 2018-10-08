@@ -4,6 +4,7 @@ import Controllers from './Controllers';
 import routes from './Router';
 import middlewares from './Middlewares';
 import Components from './Components';
+import Filters from './Filters';
 import {permission, uiPermission} from 'angular-permission';
 import templateCache from './TemplateCache';
 
@@ -13,6 +14,7 @@ let app = angular.module('poker', [
     ngRouter,
     Controllers,
     Components,
+    Filters,
     permission,
     uiPermission
 ]);
