@@ -92,13 +92,23 @@
             Your sale is almost finished, top-up your sale if you want sell more
         </div>
 
-        <div class="manage_sale_btn button">
-            Increase your share
-        </div>
 
     </div>
 
+    <div class="hideempty">
 
+        <div class="manage_button">
+            <div class="button_half__white" ng-click="$ctrl.setState()">
+                Cancel
+            </div>
+            <div class="button_half__blue" ng-click="$ctrl.setState('store')">
+                Save
+            </div>
+        </div>
+        <div class="modal_add_bid modal_add_bid_blue " ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
+            Increase your share
+        </div>
+    </div>
 
 
 </div>

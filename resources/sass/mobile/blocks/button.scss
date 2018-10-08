@@ -22,7 +22,11 @@
     left: 5%;
     z-index: 500;
     background-color: #ffffff;
-
+    &_blue{
+        background-color: #007fed;
+        color: #fff;
+        border-radius: 10px;
+    }
 }
 
 .creact_sale_btn{

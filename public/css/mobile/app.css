@@ -11546,6 +11546,12 @@ a.text-dark:focus {
   background-color: #ffffff;
 }
 
+.modal_add_bid_blue {
+  background-color: #007fed;
+  color: #fff;
+  border-radius: 10px;
+}
+
 .creact_sale_btn {
   width: 90%;
   position: fixed;
