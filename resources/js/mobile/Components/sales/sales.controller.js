@@ -1,7 +1,8 @@
 class Sales {
     constructor($state) {
         this.$state = $state;
-        this.show = false;
+        this.showPlace = false;
+        this.showManage = false
         this.item = null;
     }
 
@@ -9,9 +10,12 @@ class Sales {
     $onInit() {
     }
 
-    click(key){
-        this.show = true;
-        this.$state.modalOpened = this.show;
+    showModal(key, type){
+        console.log('hui');
+
+        if(type == 'manage')  this.showManage = true;
+        if(type == 'place')   this.showPlace = true;
+        this.$state.modalOpened = true;
         this.item = this.sales[key];
     }
 }
