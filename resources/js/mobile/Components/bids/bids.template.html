@@ -126,10 +126,10 @@
 
 <div class="card__bids_list"
      ng-class="{
-                    'bids-item__matched':      item.status === 1,
-                    'bids-item__unmatched':    item.status === 2,
-                    'bids-item__settled':      item.status === 3,
-                    'bids-item__canceled':     item.status === 4,
+                    'bids-item__matched':      item.status === 2,
+                    'bids-item__unmatched':    item.status === 3,
+                    'bids-item__settled':      item.status === 4,
+                    'bids-item__canceled':     item.status === 5,
                      }"
      ng-repeat="item in $ctrl.bids"
      ng-if="$ctrl.state == 'list'">

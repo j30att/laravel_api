@@ -60,7 +60,7 @@
                 <div class="blocks_header_title_name">
                     HIGHEST BIDS
                 </div>
-                <div class="modal_type_bids_type" ng-repeat="bid in  $ctrl.sale.bids | orderBy: {share} | limitTo:4">
+                <div class="modal_type_bids_type" ng-repeat="bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3">
                     <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.markup"></div>
                     <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.share"></div>
                     <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.amount"></div>
@@ -69,18 +69,11 @@
                 <div class="blocks_header_title_name">
                     MATCHED BID
                 </div>
-                <div class="modal_type_bids_type" ng-repeat="  bid in  $ctrl.sale.bids | filter: {status:2}" >
+                <div class="modal_type_bids_type" ng-repeat="  bid in  $ctrl.sale.bids | filter: {status:2}">
                     <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.markup"></div>
                     <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.share"></div>
                     <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.amount"></div>
                 </div>
-
-
-
-
-
-
-
             </div>
 
             <div class="bid_new" ng-if="$ctrl._opts.stateCreate">

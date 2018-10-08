@@ -1,7 +1,8 @@
 <div class="sale_card__list sale_card__list_sales"
      ng-if="$ctrl.state === 'list'"
-     ng-repeat="item in $ctrl.sales"
+     ng-repeat="(key,item) in $ctrl.sales"
      ng-class="{
+     'sale_card__list-last_child': $ctrl.sales.length == key+1,
      'sale_active': item.status === 1,
      'sale_canceled': item.status === 2,
      }"
@@ -9,7 +10,7 @@
 
     <div class="event_card_text">
         <div class="event_card_title" ng-bind="item.event.title"></div>
-        <div class="blocks_header_link"><a ui-sref="sale-manage({id:item.id})">edit</a></div>
+        <div class="blocks_header_link" ng-if="item.status == 1" ng-click="$ctrl.showModal(key, 'manage')">edit</div>
 
         <div class="card__subevent" ng-bind="item.subevent.title">
         </div>
@@ -76,7 +77,7 @@
 
 <div class="sale_card__list"
      ng-class="{'sale_card__list-last_child': $ctrl.sales.length == key+1}"
-     ng-click="$ctrl.click(key)"
+     ng-click="$ctrl.showModal(key, 'place')"
      ng-if="$ctrl.state === 'invest'"
      ng-repeat=" (key, item) in $ctrl.sales">
 
@@ -114,4 +115,5 @@
     </div>
 </div>
 
-<sale-modal sale="$ctrl.item" show="$ctrl.show"></sale-modal>
+<sale-manage sale="$ctrl.item" show="$ctrl.showManage"></sale-manage>
+<sale-modal sale="$ctrl.item" show="$ctrl.showPlace"></sale-modal>
