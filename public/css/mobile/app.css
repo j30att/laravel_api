@@ -11626,11 +11626,11 @@ a.text-dark:focus {
 
 .empty_block {
   width: 100%;
-  height: 60px;
+  height: 75px;
 }
 
 .hideempty {
-  height: 65px;
+  height: 80px;
   width: 100%;
   position: fixed;
   bottom: 0;
