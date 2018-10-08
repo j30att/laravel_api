@@ -1291,8 +1291,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 6 */,
-/* 7 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1369,6 +1368,7 @@ var SALE_CREATE = '/api/sale';
 var SUBEVENTS_INDEX = '/api/subevents';
 
 /***/ }),
+/* 7 */,
 /* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -51031,7 +51031,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventsListController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51076,7 +51076,7 @@ EventsListController.$inject = ['$window', '$http'];
 /* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(161);
+__webpack_require__(163);
 module.exports = 'ngAnimate';
 
 
@@ -51084,7 +51084,7 @@ module.exports = 'ngAnimate';
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(162);
+__webpack_require__(164);
 module.exports = 'ngAria';
 
 
@@ -51095,8 +51095,8 @@ module.exports = 'ngAria';
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(104);
-__webpack_require__(164);
-module.exports = __webpack_require__(165);
+__webpack_require__(166);
+module.exports = __webpack_require__(167);
 
 
 /***/ }),
@@ -51111,7 +51111,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Hack__ = __webpack_require__(159);
 var angular = __webpack_require__(16);
 
 
@@ -51122,7 +51122,7 @@ var angular = __webpack_require__(16);
 
 
 var ngRouter = __webpack_require__(70).default;
-var ngMaterial = __webpack_require__(160);
+var ngMaterial = __webpack_require__(162);
 var ngAria = __webpack_require__(100);
 var ngAnimate = __webpack_require__(99);
 
@@ -51216,7 +51216,7 @@ module.controller('MainController', __WEBPACK_IMPORTED_MODULE_15__Controllers_Ma
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51265,7 +51265,7 @@ LoginController.$inject = ['$window', '$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51324,7 +51324,7 @@ RegisterController.$inject = ['$window', '$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51384,7 +51384,7 @@ ProfileController.$inject = ['$window', '$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51432,7 +51432,7 @@ BidsController.$inject = ['$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BidsFilterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51500,7 +51500,7 @@ BidsFilterController.$inject = ['$http', '$stateParams'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51545,7 +51545,7 @@ SaleController.$inject = ['$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleAllController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51602,7 +51602,7 @@ SaleAllController.$inject = ['$window', '$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFilterController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51662,7 +51662,7 @@ SaleFilterController.$inject = ['$http', '$stateParams'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51764,7 +51764,7 @@ SaleManageController.$inject = ['$window', '$http', '$stateParams'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleFormController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51891,7 +51891,7 @@ SaleFormController.$inject = ['$window', '$http', '$stateParams'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InvestController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51961,7 +51961,7 @@ InvestController.$inject = ['$window', '$http'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -52039,7 +52039,7 @@ MenuController.$inject = ['$state'];
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventInfoController; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -52451,7 +52451,7 @@ function middlewares(PermRoleStore) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__ = __webpack_require__(157);
 
 var angular = __webpack_require__(16);
 
@@ -52696,7 +52696,7 @@ var Sales = function () {
             console.log('hui');
 
             if (type == 'manage') this.showManage = true;
-            if (type == 'place') this.show = true;
+            if (type == 'place') this.showPlace = true;
             this.$state.modalOpened = this.show;
             this.item = this.sales[key];
         }
@@ -52769,7 +52769,7 @@ module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleModalComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -52786,11 +52786,9 @@ var SaleModal = function () {
         this.$scope = $scope;
         $state.modalOpened = false;
         this.user = window.__user;
-
         this._opts = {
             stateCreate: false
         };
-
         this.bid = {
             status: 2,
             markup: '',
@@ -52856,36 +52854,127 @@ var SaleModalComponent = {
 /* 156 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n\n    <div class=\"row col-md-12 modal_header_fixed\">\n        <div class=\"header\">\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n            <div class=\"header_title\">Place a bid</div>\n            <div class=\"header_filter_empty\"></div>\n        </div>\n\n\n        <div>\n            <div class=\"card__profile_info\">\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                    <img src=\"/images/players.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\n                    </div>\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\n                    </div>\n                </div>\n            </div>\n\n        </div>\n\n\n        <div class=\"binds-item__game_info card__event_info\">\n            <div class=\"geme__text card__event_info_item\">\n                <div class=\"by_in card__event_info_attr\">\n                    Buy in £ <span>1,000,000</span>\n                </div>\n                <div class=\"gte card__event_info_attr\">\n                    £ <span>1,000,000</span> GTE\n                </div>\n            </div>\n\n\n            <div class=\"card__attribute card__attribute_row ng-scope\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Value</span><br>\n                    <span class=\"card__attribute_value\">£</span>\n                    <span class=\"card__attribute_value ng-binding\">300</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Date of Start</span><br>\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"modal_bids_block_wr col-md-12\">\n        <div class=\"modal_bids_block\">\n            <div class=\"modal_type_bids\">\n                <div class=\"blocks_header_title_name\">\n                    HIGHEST BIDS\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\n                </div>\n\n                <div class=\"blocks_header_title_name\">\n                    MATCHED BID\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\n                </div>\n            </div>\n\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\n                <div class=\"blocks_header_title_name\">\n                    your bid\n                </div>\n                <div class=\"bid_new__attribute_wraper\">\n                    <div class=\"bid_new__attribute\">\n                        <span>Markup</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Share</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Amount</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"manage_button\">\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\n                    Cancel\n                </div>\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\n                    Place\n                </div>\n            </div>\n            <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\n                Add new bid\n            </div>\n        </div>\n    </div>\n</div>\n\n";
+module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n\n    <div class=\"row col-md-12 modal_header_fixed\">\n        <div class=\"header\">\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n            <div class=\"header_title\">Place a bid</div>\n            <div class=\"header_filter_empty\"></div>\n        </div>\n\n\n        <div>\n            <div class=\"card__profile_info\">\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                    <img src=\"/images/players.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\n                    </div>\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\n                    </div>\n                </div>\n            </div>\n\n        </div>\n\n\n        <div class=\"binds-item__game_info card__event_info\">\n            <div class=\"geme__text card__event_info_item\">\n                <div class=\"by_in card__event_info_attr\">\n                    Buy in £ <span>1,000,000</span>\n                </div>\n                <div class=\"gte card__event_info_attr\">\n                    £ <span>1,000,000</span> GTE\n                </div>\n            </div>\n\n\n            <div class=\"card__attribute card__attribute_row ng-scope\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Value</span><br>\n                    <span class=\"card__attribute_value\">£</span>\n                    <span class=\"card__attribute_value ng-binding\">300</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Date of Start</span><br>\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"modal_bids_block_wr col-md-12\" ng-class=\"{'show_your_bid': $ctrl._opts.stateCreate == true}\">\n        <div class=\"modal_bids_block\">\n            <div class=\"modal_type_bids\">\n                <div class=\"blocks_header_title_name\">\n                    HIGHEST BIDS\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\n                </div>\n\n                <div class=\"blocks_header_title_name\">\n                    MATCHED BID\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\n                </div>\n            </div>\n\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\n                <div class=\"blocks_header_title_name\">\n                    your bid\n                </div>\n                <div class=\"bid_new__attribute_wraper\">\n                    <div class=\"bid_new__attribute\">\n                        <span>Markup</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Share</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Amount</span>\n                        <input class=\"bid_attribute_input\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"manage_button\">\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\n                    Cancel\n                </div>\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\n                    Place\n                </div>\n            </div>\n            <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\n                Add new bid\n            </div>\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }),
 /* 157 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var SaleManage = function () {
+    function SaleManage($window, $http, $state, $timeout, $scope) {
+        _classCallCheck(this, SaleManage);
+
+        this.$http = $http;
+        this.$state = $state;
+        this.$timeout = $timeout;
+        this.$scope = $scope;
+        $state.modalOpened = false;
+        this.user = window.__user;
+
+        this._opts = {
+            stateCreate: false
+        };
+
+        this.bid = {
+            status: 2,
+            markup: '',
+            share: '',
+            amount: ''
+        };
+    }
+
+    _createClass(SaleManage, [{
+        key: '$onInit',
+        value: function $onInit() {}
+    }, {
+        key: 'setState',
+        value: function setState() {
+            var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+            console.log(this.sale, 'this.sale');
+            this._opts.stateCreate = !this._opts.stateCreate;
+            if (action == 'store') this.storeMyBid();
+        }
+    }, {
+        key: 'close',
+        value: function close() {
+            this.show = !this.show;
+            this.$state.modalOpened = !this.$state.modalOpened;
+        }
+
+        /*storeMyBid(){
+            this.bid.sale_id = this.sale.id;
+            this.bid.user_id = this.user.id;
+             this.$http.post(BIDS_MY_STORE, this.bid).then(response =>{
+                console.log(response, 'response');
+                if (response.data.status == 1) this.sale.bids.push(response.data.bid);
+                 this.$timeout(() => {
+                    this.$scope.$apply();
+                }, 10);
+                console.log(this.sale);
+            });
+         }*/
+
+    }]);
+
+    return SaleManage;
+}();
+
+SaleManage.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
+
+var SaleManageComponent = {
+    bindings: {
+        sale: '<',
+        show: '='
+    },
+    template: __webpack_require__(158),
+    controller: SaleManage,
+    controllerAs: '$ctrl'
+};
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports) {
+
+module.exports = "";
+
+/***/ }),
+/* 159 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = hack;
 hack.$inject = ['$templateCache'];
-var menu_footer = __webpack_require__(158);
-var bid_place = __webpack_require__(159);
+var menu_footer = __webpack_require__(160);
+var bid_place = __webpack_require__(161);
 function hack($templateCache) {
     $templateCache.put('tpl/view/footer.template.html', menu_footer);
     $templateCache.put('tpl/view/bid-place.template.html', bid_place);
 }
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"footer\" ng-controller=\"MenuController as MenuCtrl\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'invest'}\">\n            <div class=\"footer_img footer_img_invest\" ng-class=\"{'footer_img__active_invest': MenuCtrl.menuItem == 'invest'}\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'bids'}\">\n            <div class=\"footer_img footer_img_bids\" ng-class=\"{'footer_img__active_bids': MenuCtrl.menuItem == 'bids'}\"></div>\n            bids\n        </div>\n    </a>\n    <a ui-sref=\"sale\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'sales'}\">\n            <div class=\"footer_img footer_img_sale\" ng-class=\"{'footer_img__active_sale': MenuCtrl.menuItem == 'sales'}\"></div>\n            sale\n        </div>\n    </a>\n    <a ui-sref=\"wallet\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'wallet'}\">\n            <div class=\"footer_img footer_img_wallet\" ng-class=\"{'footer_img__active_wallet': MenuCtrl.menuItem == 'wallet'}\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports) {
 
 module.exports = "    <div class=\"modal_wrapper\">\n    <div class=\"row col-md-12\">\n    <div class=\"place_a_bit\">\n        <div class=\"place_a_bit__title\">\n            Place a bid\n            <div class=\"pab__close\">\n                X\n            </div>\n        </div>\n        <div class=\"binds-item-wr\">\n            <div class=\"binds-item__profile_info\">\n                <div class=\"profile__photo\">\n                    <img src=\"/images/pl_5.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"profile__name\">\n                        Louise Romero\n                    </div>\n                    <div class=\"profile__country\">\n                        MILLIONS Russia, 1A\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div class=\"binds-item__game_info\">\n                <div class=\"geme__text\">\n                    <div class=\"by_in\">\n                        Buy in £ <span>1,000,000</span>\n                    </div>\n                    <div class=\"gte\">\n                        £ <span>1,000,000</span> GTE\n                    </div>\n                </div>\n                <div class=\"game_atrs\">\n                    <div class=\"game_atrs__markup\">\n                        <span>Markup</span><br>\n                        1.20\n                    </div>\n                    <div class=\"game_atrs__value\">\n                        <span>Share</span><br>\n                        20%</div>\n                    <div class=\"game_atrs__date_start\">\n                        <span>Value</span><br>\n                        1.20</div>\n                </div>\n            </div>\n        </div>\n        <div class=\"highest_bids\">\n            <div class=\"highest_bids__title\">\n                HIGHEST BIDS\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n            <div class=\"block_2\">\n                <input type=\"text\" placeholder=\"1.09\" id=\"123\">\n                <input type=\"text\" placeholder=\"0.53%\">\n                <input type=\"text\" placeholder=\"$442\">\n            </div>\n        </div>\n        <div class=\"matched_bid\">\n            <div class=\"matched_bid__title\">\n                MATCHED BID\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n\n        </div>\n        <div class=\"add_bid\">\n            Add new bid\n        </div>\n    </div>\n</div>\n</div>";
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Should already be required, here for clarity
@@ -52896,14 +52985,14 @@ __webpack_require__(99);
 __webpack_require__(100);
 
 // Now load Angular Material
-__webpack_require__(163);
+__webpack_require__(165);
 
 // Export namespace
 module.exports = 'ngMaterial';
 
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports) {
 
 /**
@@ -57178,7 +57267,7 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports) {
 
 /**
@@ -57611,7 +57700,7 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports) {
 
 /*!
@@ -94727,158 +94816,16 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 })(window, window.angular);;window.ngMaterial={version:{full: "1.1.10"}};
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 166 */,
-/* 167 */,
-/* 168 */,
-/* 169 */,
-/* 170 */,
-/* 171 */,
-/* 172 */,
-/* 173 */,
-/* 174 */,
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SaleManageComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(7);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-
-
-var SaleManage = function () {
-    function SaleManage($window, $http, $state, $timeout, $scope) {
-        _classCallCheck(this, SaleManage);
-
-        this.$http = $http;
-        this.$state = $state;
-        this.$timeout = $timeout;
-        this.$scope = $scope;
-        $state.modalOpened = false;
-        this.user = window.__user;
-
-        this._opts = {
-            stateCreate: false
-        };
-
-        this.bid = {
-            status: 2,
-            markup: '',
-            share: '',
-            amount: ''
-        };
-    }
-
-    _createClass(SaleManage, [{
-        key: '$onInit',
-        value: function $onInit() {}
-    }, {
-        key: 'setState',
-        value: function setState() {
-            var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-            console.log(this.sale, 'this.sale');
-            this._opts.stateCreate = !this._opts.stateCreate;
-            if (action == 'store') this.storeMyBid();
-        }
-    }, {
-        key: 'close',
-        value: function close() {
-            this.show = !this.show;
-            this.$state.modalOpened = !this.$state.modalOpened;
-        }
-
-        /*storeMyBid(){
-            this.bid.sale_id = this.sale.id;
-            this.bid.user_id = this.user.id;
-             this.$http.post(BIDS_MY_STORE, this.bid).then(response =>{
-                console.log(response, 'response');
-                if (response.data.status == 1) this.sale.bids.push(response.data.bid);
-                 this.$timeout(() => {
-                    this.$scope.$apply();
-                }, 10);
-                console.log(this.sale);
-            });
-         }*/
-
-    }]);
-
-    return SaleManage;
-}();
-
-SaleManage.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
-
-var SaleManageComponent = {
-    bindings: {
-        sale: '<',
-        show: '='
-    },
-    template: __webpack_require__(218),
-    controller: SaleManage,
-    controllerAs: '$ctrl'
-};
-
-/***/ }),
-/* 218 */
-/***/ (function(module, exports) {
-
-module.exports = "";
 
 /***/ })
 /******/ ]);
