@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bid extends Model
 {
-    const BIDS_MATCHED    = 1;
-    const BIDS_UNMATCHED  = 2;
-    const BIDS_SETTLED    = 3;
-    const BIDS_CANCELED   = 4;
+    const BID_NEW         = 1;
+    const BIDS_MATCHED    = 2;
+    const BIDS_UNMATCHED  = 3;
+    const BIDS_SETTLED    = 4;
+    const BIDS_CANCELED   = 5;
 
     protected $fillable=[
         'user_id',
