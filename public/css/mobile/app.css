@@ -10488,6 +10488,10 @@ a.text-dark:focus {
   position: fixed;
 }
 
+.show_your_bid {
+  height: calc(100vh - 175px) !important;
+}
+
 .modal_wrapper {
   overflow: scroll;
 }
@@ -10540,7 +10544,7 @@ a.text-dark:focus {
 
 .modal_bids_block_wr {
   width: 100%;
-  height: calc(100vh - 175px);
+  height: calc(100vh - 75px);
   position: relative;
   overflow: scroll;
 }
@@ -11016,7 +11020,6 @@ a.text-dark:focus {
 
 .event_card_list_info {
   position: relative;
-  padding-left: 0;
 }
 
 .event_card_list_wr {
@@ -11768,11 +11771,21 @@ a.text-dark:focus {
   border-radius: 4px;
 }
 
+body,
+html {
+  background-color: #fff;
+}
+
 body:active,
 :hover,
 :focus {
   outline: 0;
   outline-offset: 0;
+}
+
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 .form_event {
