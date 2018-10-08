@@ -11,7 +11,6 @@ class SaleModal {
             stateCreate: false
         };
 
-        if(this.show == true) this.$state.modalOpened = true;
         this.bid = {
                         status: 2,
             markup: '',
