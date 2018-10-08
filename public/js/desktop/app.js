@@ -1045,7 +1045,7 @@ function pattern(struct) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return __WEBPACK_IMPORTED_MODULE_4__predicates__["m"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__queue__ = __webpack_require__(24);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_5__queue__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__strings__ = __webpack_require__(8);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "t", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "H", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "K", function() { return __WEBPACK_IMPORTED_MODULE_6__strings__["c"]; });
@@ -1351,7 +1351,8 @@ var SALE_CREATE = '/api/sale';
 var SUBEVENTS_INDEX = '/api/subevents';
 
 /***/ }),
-/* 7 */
+/* 7 */,
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1512,7 +1513,6 @@ function joinNeighborsR(acc, x) {
 //# sourceMappingURL=strings.js.map
 
 /***/ }),
-/* 8 */,
 /* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1522,7 +1522,7 @@ function joinNeighborsR(acc, x) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return trace; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__strings__ = __webpack_require__(8);
 /**
  * # Transition tracing (debug)
  *
@@ -1792,7 +1792,7 @@ var trace = new Trace();
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RejectType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Rejection; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_hof__ = __webpack_require__(2);
 /** @publicapi @module transition */ /** */
 
@@ -2162,7 +2162,7 @@ var Param = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TargetState; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(3);
 /** @publicapi @module state */ /** */
 
@@ -2315,7 +2315,7 @@ var TargetState = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransitionHook; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_common__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_trace__ = __webpack_require__(9);
@@ -2718,7 +2718,7 @@ var PathUtils = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_trace__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
 /** @publicapi @module resolve */ /** */
 
@@ -2863,7 +2863,7 @@ var Resolvable = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__interface__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__resolvable__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__path_pathUtils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common__ = __webpack_require__(3);
 /** @publicapi @module resolve */ /** */
 
@@ -3079,7 +3079,7 @@ var UIInjectorImpl = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__params_param__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common__ = __webpack_require__(3);
 /** @publicapi @module url */ /** */
 
@@ -4652,7 +4652,7 @@ var TransitionService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transition; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_trace__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_coreservices__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_hof__ = __webpack_require__(2);
@@ -6000,7 +6000,7 @@ var resolvePolicies = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateBuilder; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_predicates__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_strings__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_hof__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resolve_resolvable__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_coreservices__ = __webpack_require__(4);
@@ -51026,7 +51026,7 @@ module.exports = "<div class=\"deskwr\">\n    <main-menu></main-menu>\n    <div 
 /* 102 */
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"header\">\n    <div class=\"logo\">\n        <a ui-sref=\"invest\">\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\n        </a>\n    </div>\n    <nav class=\"menu\">\n        <ul class=\"menu_list\">\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('invest')\"\n                   ui-sref=\"invest\"\n                >\n                    Invest\n                </a>\n                <div class=\"menu_item__count\">2</div>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('bids')\"\n                   ui-sref=\"bids\"\n                >\n                    Bids\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('sale')\"\n                   ui-sref=\"sale\"\n                >\n                    Sale\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('wallet')\"\n                   ui-sref=\"wallet\"\n                >\n                    Wallet\n                </a>\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\n            </li>\n        </ul>\n    </nav>\n    <div class=\"last_up\">\n        <div class=\"last_up__title\">Last Updates</div>\n        <div class=\"last_up__item last_up__item_blue\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_yellow\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_green\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_red\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\n\n        </div>\n    </div>\n    <div class=\"profile\">\n        <div class=\"profile_info\">\n            <div class=\"profile_left-side\">\n                <div class=\"profile_img\">\n                    <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                </div>\n                <div class=\"profile_name\">James. Co</div>\n            </div>\n            <a class=\"profile_logout\"\n               ui-sref=\"logout\"></a>\n        </div>\n    </div>\n    <div class=\"headers_footer\">\n        <a href=\"#\">Terms of Service</a>\n        <a href=\"#\">Privacy Policy</a>\n        <a href=\"#\">Contact Us</a>\n        <a href=\"#\">English</a>\n    </div>\n</header>\n\n<div class=\"log_out-wr\">\n    <div class=\"log_out_profile\">\n        <div class=\"log_out_text\">\n            Log out\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\n        </div>\n        <div class=\"log_out_btn\">\n            <div class=\"log_out_cancel\">Cancel</div>\n            <div class=\"log_out_ok\">Log Out</div>\n        </div>\n    </div>\n</div>\n<div class=\"your_profile_wr\">\n    <div class=\"your_profile_content-wr\">\n        <div class=\"your_profile_content\">\n            <div class=\"your_profile__title\">\n                Your Profile\n                <div class=\"your_profile_close\"></div>\n            </div>\n            <div class=\"your_profile_info\">\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\n                <div class=\"your_profile__name\">\n                    James. Co\n                    <div class=\"change_photo\">Replace photo</div>\n                </div>\n            </div>\n            <div class=\"link_party_pk\">\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\n                <div class=\"link_party_btn\">Link Party Poker account</div>\n            </div>\n            <div class=\"your_profile_nav\">\n                <ul class=\"pr_nav_list\">\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\n                </ul>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n";
+module.exports = "<header class=\"header\">\n    <div class=\"logo\">\n        <a ui-sref=\"invest\">\n            <img src=\"/images/desk/logo.png\" alt=\"Logo\">\n        </a>\n    </div>\n    <nav class=\"menu\">\n        <ul class=\"menu_list\">\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('invest')\"\n                   ui-sref=\"invest\"\n                >\n                    Invest\n                </a>\n                <div class=\"menu_item__count\">2</div>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('bids')\"\n                   ui-sref=\"bids\"\n                >\n                    Bids\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('sale')\"\n                   ui-sref=\"sale\"\n                >\n                    Sale\n                </a>\n            </li>\n            <li class=\"menu_item\">\n                <a class=\"menu_item__link\"\n                   ng-class=\"$ctrl.isActive('wallet')\"\n                   ui-sref=\"wallet\"\n                >\n                    Wallet\n                </a>\n                <span class=\"menu_item__wallet\">$ 20,240.98</span>\n            </li>\n        </ul>\n    </nav>\n    <div class=\"last_up\">\n        <div class=\"last_up__title\">Last Updates</div>\n        <div class=\"last_up__item last_up__item_blue\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was accepted by Austin Vargas</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_yellow\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">Your bid was declined by Theodore Guerrero</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_green\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/blue_circle.png\" alt=\"\">\n            </div>\n            <div class=\"message\">You sold 3% for Millions Russua (4% left)</div>\n\n        </div>\n        <div class=\"last_up__item last_up__item_red\">\n            <div class=\"last_up_marker\">\n                <img src=\"/images/desk/yellow_minus.png\" alt=\"\">\n            </div>\n            <div class=\"message\">New login attempt from a 73.223.92.66 (US)</div>\n\n        </div>\n    </div>\n    <div class=\"footer\">\n        <div class=\"profile\">\n            <div class=\"profile_info\">\n                <div class=\"profile_left-side\">\n                    <div class=\"profile_img\">\n                        <img src=\"/images/desk/players_img/profile_img_1.png\" alt=\"\">\n                    </div>\n                    <div class=\"profile_name\">James. Co</div>\n                </div>\n                <a class=\"profile_logout\"\n                   ui-sref=\"logout\"></a>\n            </div>\n        </div>\n        <div class=\"footer__links\">\n            <a href=\"#\">Terms of Service</a>\n            <a href=\"#\">Privacy Policy</a>\n            <a href=\"#\">Contact Us</a>\n            <a href=\"#\">English</a>\n        </div>\n    </div>\n</header>\n\n<div class=\"log_out-wr\">\n    <div class=\"log_out_profile\">\n        <div class=\"log_out_text\">\n            Log out\n            <span>Do you want to log out? Don’t do it, if you are not sure. Thanks!</span>\n        </div>\n        <div class=\"log_out_btn\">\n            <div class=\"log_out_cancel\">Cancel</div>\n            <div class=\"log_out_ok\">Log Out</div>\n        </div>\n    </div>\n</div>\n<div class=\"your_profile_wr\">\n    <div class=\"your_profile_content-wr\">\n        <div class=\"your_profile_content\">\n            <div class=\"your_profile__title\">\n                Your Profile\n                <div class=\"your_profile_close\"></div>\n            </div>\n            <div class=\"your_profile_info\">\n                <div class=\"your_profile__pic\"><img src=\"/images/desk/players_img/pl_big_pic.png\" alt=\"player photo\"></div>\n                <div class=\"your_profile__name\">\n                    James. Co\n                    <div class=\"change_photo\">Replace photo</div>\n                </div>\n            </div>\n            <div class=\"link_party_pk\">\n                <div class=\"link_party_inf\">Get a fast access to your bids and money, log in with Party poker account </div>\n                <div class=\"link_party_btn\">Link Party Poker account</div>\n            </div>\n            <div class=\"your_profile_nav\">\n                <ul class=\"pr_nav_list\">\n                    <li class=\"pr_nav_item pr_setting\"><a href=\"#\">Settings</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_notification\"><a href=\"#\">Notification</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_privacy\"><a href=\"#\">Privacy and security</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_acc_inf\"><a href=\"#\">Account info</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_support\"><a href=\"#\">Support</a><div class=\"pr_show_more\"></div></li>\n                    <li class=\"pr_nav_item pr_tell\"><a href=\"#\">Tell a friends</a><div class=\"pr_show_more\"></div></li>\n                </ul>\n            </div>\n\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }),
 /* 103 */,

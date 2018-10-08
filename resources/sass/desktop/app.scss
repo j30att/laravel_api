@@ -26,17 +26,20 @@ a {
 }
 
 .header {
+  position: fixed;
   width: 195px;
-  height: 100vh;
+  height: auto;
+  bottom:0;
+  top:0;
+  left:0;
+  right:0;
   display: flex;
   flex-direction: column;
-  margin-left: 32px;
-  position: fixed;
+  padding: 32px;
 }
 
 .logo {
   width: 100%;
-  margin-top: 32px;
 
   a {
     display: inline-block;
@@ -102,7 +105,11 @@ a {
 
 
 .last_up {
-  margin-top: 100px;
+  min-height: 251px;
+  height: 44%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &__title {
     width: 100%;
@@ -164,8 +171,30 @@ a {
   align-items: center;
 }
 
+.footer {
+  min-height: 108px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__links a {
+    width: 194px;
+    height: 40px;
+    opacity: 0.3;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    color: #000000;
+    margin-right: 10px;
+  }
+}
+
 .profile {
-  margin-top: 44px;
+
 
   &_info {
     width: 100%;
@@ -202,20 +231,6 @@ a {
     cursor: pointer;
     background: url("/images/desk/right_enter.png") no-repeat left;
   }
-}
-
-.headers_footer a {
-  width: 194px;
-  height: 40px;
-  opacity: 0.3;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.67;
-  letter-spacing: normal;
-  color: #000000;
-  margin-right: 10px;
 }
 
 /*main comtent*/
