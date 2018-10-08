@@ -10485,6 +10485,7 @@ a.text-dark:focus {
 
 .no_scroll {
   overflow: hidden;
+  position: fixed;
 }
 
 .modal_wrapper {
