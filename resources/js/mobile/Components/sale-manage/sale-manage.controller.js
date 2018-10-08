@@ -1,16 +1,18 @@
 import {BIDS_MY_STORE} from "../../Constants";
 
-class SaleModal {
+class SaleManage {
     constructor($window, $http, $state, $timeout, $scope) {
         this.$http = $http;
         this.$state = $state;
         this.$timeout = $timeout;
         this.$scope = $scope;
-        $state.modalOpened = false;
+        //$state.modalOpened = false;
         this.user = window.__user;
+
         this._opts = {
             stateCreate: false
         };
+
         this.bid = {
             status: 2,
             markup: '',
@@ -33,7 +35,7 @@ class SaleModal {
         this.$state.modalOpened = !this.$state.modalOpened
     }
 
-    storeMyBid(){
+    /*storeMyBid(){
         this.bid.sale_id = this.sale.id;
         this.bid.user_id = this.user.id;
 
@@ -47,17 +49,17 @@ class SaleModal {
             console.log(this.sale);
         });
 
-    }
+    }*/
 }
 
-SaleModal.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
+SaleManage.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];
 
-export const SaleModalComponent = {
+export const SaleManageComponent = {
     bindings: {
         sale: '<',
         show: '=',
     },
-    template: require('./sale-modal.template.html'),
-    controller: SaleModal,
+    template: require('./sale-manage.template.html'),
+    controller: SaleManage,
     controllerAs: '$ctrl'
 };

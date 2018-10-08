@@ -8,6 +8,7 @@ import {EventsCarouselComponent} from "./Components/events-carousel/events-carou
 import {SalesComponent} from "./Components/sales/sales.controller";
 import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel.controller";
 import {SaleModalComponent} from "./Components/sale-modal/sale-modal.controller";
+import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
 
 
 let module = angular.module('Components', []);
@@ -18,6 +19,7 @@ module.component('eventsCarousel', EventsCarouselComponent);
 module.component('sales', SalesComponent);
 module.component('salesCarousel', SalesCarouselComponent);
 module.component('saleModal', SaleModalComponent);
+module.component('saleManage', SaleManageComponent);
 
 export default module.name;
 
