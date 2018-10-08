@@ -51143,7 +51143,7 @@ app.run(__WEBPACK_IMPORTED_MODULE_5__TemplateCache__["a" /* default */]);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_FilterBidsController__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidResponsesController__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_MainController__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_MainController__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_bids_bids_controller__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleController__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleFormController__ = __webpack_require__(178);
@@ -51456,25 +51456,7 @@ BidResponsesController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 174 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainController; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MainController = function MainController($state) {
-    _classCallCheck(this, MainController);
-
-    this.$state = $state;
-    //console.log(this.$state);
-};
-
-MainController.$inject = ['$state'];
-
-
-
-/***/ }),
+/* 174 */,
 /* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52477,6 +52459,31 @@ function templateCache($templateCache) {
 templateCache.$inject = ['$templateCache'];
 
 /* harmony default export */ __webpack_exports__["a"] = (templateCache);
+
+/***/ }),
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainController; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MainController = function MainController($state) {
+    _classCallCheck(this, MainController);
+
+    this.$state = $state;
+    //console.log(this.$state);
+};
+
+MainController.$inject = ['$state'];
+
+
 
 /***/ })
 /******/ ]);
