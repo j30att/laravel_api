@@ -38,6 +38,8 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/unmatched',   'Api\BidController@myFilterBids');
     Route::post('/bids/my/settled',     'Api\BidController@myFilterBids');
     Route::post('/bids/my/canceled',    'Api\BidController@myFilterBids');
+
+    Route::post('/bids/my/store', 'Api\BidController@myStoreBid');
 });
 
 Route::post('/sales/lowest', 'Api\SaleController@lowestSales');

@@ -49,6 +49,22 @@ class BidController extends Controller
         return BidResource::collection($bids);
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function myStoreBid(Request $request)
+    {
+        $data = $request->all();
+        $bid = Bid::create($data);
+        return json_encode();
+        dd($data);
+    }
+
+
+
 
     public function index(Request $request)
     {

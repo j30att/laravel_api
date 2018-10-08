@@ -95,30 +95,32 @@
                 <div class="bid_new__attribute_wraper">
                     <div class="bid_new__attribute">
                         <span>Markup</span>
-                        <input class="bid_attribute_input" placeholder="1.0">
+                        <input class="bid_attribute_input" placeholder="1.0" ng-model="$ctrl.bid.markup">
                     </div>
                     <div class="bid_new__attribute">
                         <span>Share</span>
-                        <input class="bid_attribute_input" placeholder="1.0%">
+                        <input class="bid_attribute_input" placeholder="1.0%" ng-model="$ctrl.bid.share">
                     </div>
                     <div class="bid_new__attribute">
                         <span>Amount</span>
-                        <input class="bid_attribute_input" placeholder="$100">
+                        <input class="bid_attribute_input" placeholder="$100" ng-model="$ctrl.bid.amount">
                     </div>
                 </div>
 
             </div>
+
             <div class="manage_button">
                 <div class="button_half__white" ng-click="$ctrl.setState()">
                     Cancel
                 </div>
-                <div class="button_half__blue" ng-click="$ctrl.setState()">
+                <div class="button_half__blue" ng-click="$ctrl.setState('store')">
                     Place
                 </div>
             </div>
             <div class="modal_add_bid" ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
                 Add new bid
             </div>
+
         </div>
     </div>
 
