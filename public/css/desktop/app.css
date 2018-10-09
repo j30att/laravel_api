@@ -606,6 +606,275 @@
   margin-right: -32px;
 }
 
+.modal_content__bid .profile_status > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal_content__bid .profile_status > .d-flex {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.modal_content__bid .profile_status__photo {
+  margin-right: 10px;
+}
+
+.modal_content__bid .profile_status__name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.modal_content__bid .profile_status__event {
+  margin-right: 79px;
+  font-size: 12px;
+}
+
+.modal_content__bid .profile_status__gte_and_by {
+  font-size: 15px;
+  color: #949494;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal_content__bid .profile_status__buyin {
+  position: relative;
+  margin-right: 21px;
+}
+
+.modal_content__bid .profile_status__buyin::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #949494;
+  position: absolute;
+  top: 9px;
+  right: -11px;
+}
+
+.modal_content__bid .profile_status__attributs div {
+  margin-right: 68px;
+  font-size: 15px;
+}
+
+.modal_content__bid .profile_status__attributs div span {
+  font-size: 12px;
+  color: #949494;
+}
+
+.modal_content__bid .bids_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal_content__bid .bids_group__highest_color input {
+  background-color: #edf8fd;
+}
+
+.modal_content__bid .bids_group__matched_color input {
+  background-color: #e7f7e4;
+}
+
+.modal_content__bid .bids_group__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+.modal_content__bid .bids_group__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal_content__bid .bids_group__row input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100px;
+  height: 40px;
+  margin-right: 2px;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #000;
+}
+
+.modal_content__bid .bids_group__row input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.modal_content__bid .bids_group__row input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.modal_content__bid .bids_group__row input::-ms-input-placeholder {
+  color: #000000;
+}
+
+.modal_content__bid .bids_group__row input::placeholder {
+  color: #000000;
+}
+
+.modal_content__bid .bids_group__row input:last-child {
+  width: 220px;
+}
+
+.modal_content__bid .edit_status {
+  position: relative;
+}
+
+.modal_content__bid .edit_status input {
+  background-color: #fff2ec;
+}
+
+.modal_content__bid .edit_status .revocation_bid,
+.modal_content__bid .edit_status .conf_bid,
+.modal_content__bid .edit_status .del_bid {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 33px;
+  cursor: pointer;
+}
+
+.modal_content__bid .edit_status .revocation_bid {
+  left: 85%;
+  background: url("/images/checked.svg") no-repeat center;
+  background-size: 65%;
+}
+
+.modal_content__bid .edit_status .conf_bid {
+  left: 92%;
+  background: url("/images/cross-out.svg") no-repeat center;
+  background-size: 65%;
+}
+
+.modal_content__bid .edit_status .del_bid {
+  left: 100%;
+  background: url("/images/desk/trash_cart.png") no-repeat center;
+  background-size: 65%;
+}
+
+.modal_content__bid .you_bids__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.modal_content__bid .you_bids__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90px;
+  margin-right: 9px;
+  overflow: hidden;
+}
+
+.modal_content__bid .you_bids__item label {
+  font-size: 15px;
+  color: #949494;
+}
+
+.modal_content__bid .you_bids__item input {
+  width: 90px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.04);
+  padding-left: 12px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal_content__bid .you_bids__item input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.modal_content__bid .you_bids__item input:-ms-input-placeholder {
+  color: #000;
+}
+
+.modal_content__bid .you_bids__item input::-ms-input-placeholder {
+  color: #000;
+}
+
+.modal_content__bid .you_bids__item input::placeholder {
+  color: #000;
+}
+
+.modal_content__bid .you_bids__place_bid {
+  width: 118px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 6px;
+  background-color: #007fed;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+}
+
+.modal_content__bid .add_new {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  background-color: #007fed;
+  position: relative;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: none;
+}
+
+.modal_content__bid .add_new::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 8px);
+}
+
+.modal_content__bid .add_new::after {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 50%;
+  left: calc(50% - 8px);
+}
+
 body,
 html {
   padding: 0;
@@ -1556,236 +1825,6 @@ a {
 .place_a_bit_content {
   width: 100%;
   height: 100%;
-}
-
-.place_a_bit__title {
-  width: 100%;
-  position: relative;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.profile_status > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.profile_status__photo {
-  margin-right: 10px;
-}
-
-.profile_status__name {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.profile_status__event {
-  margin-right: 79px;
-  font-size: 15px;
-}
-
-.gte_and_by {
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.profile_status__buyin {
-  position: relative;
-  margin-right: 21px;
-}
-
-.profile_status__buyin::after {
-  content: '';
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  background-color: #949494;
-  position: absolute;
-  top: 6px;
-  right: -11px;
-}
-
-.profile_status > .d-flex {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.profile_status__markup,
-.profile_status__share {
-  margin-right: 68px;
-}
-
-.profile_status > .d-flex > div {
-  font-size: 15px;
-}
-
-.profile_status > .d-flex > div span {
-  font-size: 12px;
-  color: #949494;
-}
-
-.highest_bids {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.highest_bids span,
-.you_bids span {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 10px;
-}
-
-.highest_bids > div {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.highest_bids > div input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100px;
-  height: 40px;
-  margin-right: 2px;
-  margin-bottom: 4px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background-color: #edf8fd;
-  padding-left: 12px;
-  padding-right: 12px;
-  color: #000;
-}
-
-.highest_bids > div ::-webkit-input-placeholder {
-  color: #000;
-}
-
-.highest_bids > div input:last-child {
-  width: auto;
-}
-
-.matched_bids > div > input {
-  background-color: #e7f7e4;
-}
-
-.edit_status {
-  position: relative;
-}
-
-.revocation_bid,
-.conf_bid,
-.del_bid {
-  position: absolute;
-  width: 24px !important;
-  height: 24px;
-  top: 33px;
-  cursor: pointer;
-}
-
-.revocation_bid {
-  left: 78%;
-  background: url("/images/checked.svg") no-repeat center;
-  background-size: 80%;
-}
-
-.conf_bid {
-  left: 86%;
-  background: url("/images/cross-out.svg") no-repeat center;
-  background-size: 80%;
-}
-
-.del_bid {
-  left: 96%;
-  background: url("/images/desk/trash_cart.png") no-repeat center;
-}
-
-.you_bids span {
-  display: block;
-  font-size: 12px;
-  color: #949494;
-  margin-bottom: 10px;
-}
-
-.place_a_bit_content .edit_status input {
-  background-color: #fff2ec;
-}
-
-.you_bids > div {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.you_bids > div > div input {
-  width: 100px;
-  height: 38px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.04);
-  padding-left: 12px;
-  border: none;
-  outline: none;
-  margin-top: 5px;
-}
-
-.you_bids > div > div ::-webkit-input-placeholder {
-  color: #000;
-}
-
-.you_bids label {
-  font-size: 15px;
-  color: #949494;
-}
-
-.add_new {
-  width: 38px;
-  height: 38px;
-  border-radius: 6px;
-  background-color: #007fed;
-  position: relative;
-  cursor: pointer;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.add_new::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: calc(50% - 8px);
-}
-
-.add_new::after {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  top: 50%;
-  left: calc(50% - 8px);
 }
 
 /*modal window reaped elements*/

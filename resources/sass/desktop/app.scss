@@ -1,6 +1,7 @@
 @import "blocks/bids";
 @import "blocks/sales";
 @import "blocks/events";
+@import "blocks/place_bid";
 
 body, html {
   padding: 0;
@@ -846,236 +847,26 @@ a {
   height: 100%;
 }
 
-.place_a_bit__title {
-  width: 100%;
-  position: relative;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
 
-.profile_status > div {
-  display: flex;
 
-}
 
-.profile_status__photo {
-  margin-right: 10px;
-}
 
-.profile_status__name {
-  font-size: 15px;
-  font-weight: 600;
-}
 
-.profile_status__event {
-  margin-right: 79px;
-  font-size: 15px;
-}
 
-.gte_and_by {
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.5);
-  display: flex;
 
-}
 
-.profile_status__buyin {
-  position: relative;
-  margin-right: 21px;
-}
 
-.profile_status__buyin::after {
-  content: '';
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 100%;
-  background-color: #949494;
-  position: absolute;
-  top: 6px;
-  right: -11px;
-}
 
-.profile_status > .d-flex {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
 
-.profile_status__markup,
-.profile_status__share {
-  margin-right: 68px;
-}
 
-.profile_status > .d-flex > div {
-  font-size: 15px;
-}
 
-.profile_status > .d-flex > div span {
-  font-size: 12px;
-  color: #949494;
-}
 
-.highest_bids {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
 
-.highest_bids span,
-.you_bids span {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 10px;
-}
 
-.highest_bids > div {
-  width: 100%;
-  display: flex;
-}
 
-.highest_bids > div input {
-  box-sizing: border-box;
-  width: 100px;
-  height: 40px;
-  margin-right: 2px;
-  margin-bottom: 4px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background-color: #edf8fd;
-  padding-left: 12px;
-  padding-right: 12px;
-  color: #000;
-}
 
-.highest_bids > div ::-webkit-input-placeholder {
-  color: #000;
-}
 
-.highest_bids > div input:last-child {
-  width: auto;
-}
 
-.matched_bids > div > input {
-  background-color: #e7f7e4;
-}
-
-.edit_status {
-  position: relative;
-}
-
-.revocation_bid,
-.conf_bid,
-.del_bid {
-  position: absolute;
-  width: 24px !important;
-  height: 24px;
-  top: 33px;
-  cursor: pointer;
-}
-
-.revocation_bid {
-  left: 78%;
-  background: url("/images/checked.svg") no-repeat center;
-  background-size: 80%;
-}
-
-.conf_bid {
-  left: 86%;
-  background: url("/images/cross-out.svg") no-repeat center;
-  background-size: 80%;
-
-}
-
-.del_bid {
-  left: 96%;
-  background: url("/images/desk/trash_cart.png") no-repeat center;
-}
-
-.you_bids span {
-  display: block;
-  font-size: 12px;
-  color: #949494;
-  margin-bottom: 10px;
-}
-
-.place_a_bit_content .edit_status input {
-  background-color: #fff2ec;
-}
-
-.you_bids > div {
-  width: 100%;
-  display: flex;
-
-}
-
-.you_bids > div > div input {
-  width: 100px;
-  height: 38px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.04);
-  padding-left: 12px;
-  border: none;
-  outline: none;
-  margin-top: 5px;
-}
-
-.you_bids > div > div ::-webkit-input-placeholder {
-  color: #000;
-}
-
-.you_bids label {
-  font-size: 15px;
-  color: #949494;
-
-}
-
-.add_new {
-  width: 38px;
-  height: 38px;
-  border-radius: 6px;
-  background-color: #007fed;
-  position: relative;
-  cursor: pointer;
-  align-self: flex-end;
-}
-
-//.add_place_a_bit{
-//    width: 118px;
-//    height: 38px;
-//    line-height: 38px;
-//    border-radius: 6px;
-//    background-color: #007fed;
-//    cursor: pointer;
-//    align-self: flex-end;
-//    text-align: center;
-//    color: #ffffff;
-//}
-.add_new::before {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  top: calc(50% - 1px);
-  left: calc(50% - 8px);
-}
-
-.add_new::after {
-  content: '';
-  display: block;
-  width: 16px;
-  height: 2px;
-  background-color: #ffffff;
-  position: absolute;
-  transform: rotate(90deg);
-  top: 50%;
-  left: calc(50% - 8px);
-
-}
 
 /*modal window reaped elements*/
 .full_sc-wr {

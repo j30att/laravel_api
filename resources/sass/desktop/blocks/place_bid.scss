@@ -1,0 +1,204 @@
+.modal_content{
+    &__bid{
+       .profile_status{
+            >div{
+                display: flex;
+            }
+           > .d-flex{
+               margin-top: 8px;
+               margin-bottom: 20px;
+           }
+           &__photo{
+               margin-right: 10px;
+           }
+           &__name{
+               font-size: 15px;
+               font-weight: 700;
+           }
+           &__event{
+               margin-right: 79px;
+               font-size: 12px;
+           }
+           &__gte_and_by{
+               font-size: 15px;
+               color: #949494;
+               display: flex;
+           }
+           &__buyin{
+               position: relative;
+               margin-right: 21px;
+           }
+           &__buyin::after{
+               content: '';
+               display: block;
+               width: 4px;
+               height: 4px;
+               border-radius: 100%;
+               background-color: #949494;
+               position: absolute;
+               top: 9px;
+               right: -11px;
+           }
+           &__gte{
+
+           }
+           &__attributs{
+               div{
+                   margin-right: 68px;
+                   font-size: 15px;
+                   span {
+                       font-size: 12px;
+                       color: #949494;
+                   }
+               }
+           }
+       }
+       .bids_group{
+           display: flex;
+           flex-direction: column;
+           margin-bottom: 20px;
+           &__highest_color{
+               input{background-color: #edf8fd;}
+           }
+           &__matched_color{
+               input{background-color: #e7f7e4;}
+           }
+           &__title{
+               font-size: 12px;
+               font-weight: 700;
+               color: rgba(0, 0, 0, 0.4);
+               margin-bottom: 10px;
+           }
+           &__row{
+               width: 100%;
+               display: flex;
+               input{
+                   box-sizing: border-box;
+                   width: 100px;
+                   height: 40px;
+                   margin-right: 2px;
+                   margin-bottom: 4px;
+                   border-radius: 5px;
+                   border: none;
+                   outline: none;
+                   padding-left: 12px;
+                   padding-right: 12px;
+                   color: #000;
+               }
+               input::placeholder{color: #000000}
+               input:last-child {
+                   width: 220px;
+               }
+
+           }
+       }
+       .edit_status{
+           position: relative;
+           input{background-color: #fff2ec;}
+           .revocation_bid,
+           .conf_bid,
+           .del_bid {
+               position: absolute;
+               width: 24px;
+               height: 24px;
+               top: 33px;
+               cursor: pointer;
+           }
+
+           .revocation_bid {
+               left: 85%;
+               background: url("/images/checked.svg") no-repeat center;
+               background-size: 65%;
+           }
+
+           .conf_bid {
+               left: 92%;
+               background: url("/images/cross-out.svg") no-repeat center;
+               background-size: 65%;
+
+           }
+
+           .del_bid {
+               left: 100%;
+               background: url("/images/desk/trash_cart.png") no-repeat center;
+               background-size: 65%;
+           }
+       }
+       .you_bids{
+           &__wrapper{
+               display: flex;
+               margin-top: 10px;
+           }
+           &__item{
+               display: flex;
+               flex-direction: column;
+               width: 90px;
+               margin-right: 9px;
+               overflow: hidden;
+               label {
+                   font-size: 15px;
+                   color: #949494;
+               }
+               input {
+                   width: 90px;
+                   height: 38px;
+                   border-radius: 8px;
+                   background-color: rgba(0, 0, 0, 0.04);
+                   padding-left: 12px;
+                   border: none;
+                   outline: none;
+                   margin-top: 5px;
+                   box-sizing: border-box;
+               }
+               input::placeholder {
+                   color: #000;}
+           }
+           &__place_bid{
+               width: 118px;
+               height: 38px;
+               line-height: 38px;
+               border-radius: 6px;
+               background-color: #007fed;
+               text-align: center;
+               font-size: 15px;
+               font-weight: 600;
+               color: #ffffff;
+               align-self: flex-end;
+               cursor: pointer;
+           }
+       }
+       .add_new {
+           width: 38px;
+           height: 38px;
+           border-radius: 6px;
+           background-color: #007fed;
+           position: relative;
+           cursor: pointer;
+           align-self: flex-end;
+           display: none;
+       }
+       .add_new::before{
+           content: '';
+           display: block;
+           width: 16px;
+           height: 2px;
+           background-color: #ffffff;
+           position: absolute;
+           top: calc(50% - 1px);
+           left: calc(50% - 8px);
+       }
+       .add_new::after{
+           content: '';
+           display: block;
+           width: 16px;
+           height: 2px;
+           background-color: #ffffff;
+           position: absolute;
+           transform: rotate(90deg);
+           top: 50%;
+           left: calc(50% - 8px);
+       }
+    }
+}
+
+
