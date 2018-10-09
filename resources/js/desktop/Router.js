@@ -29,17 +29,36 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             }
         })
-
-        .state('events', {
-            url: '/events',
+        .state('invest', {
+            url: '/invest',
+            template: require('./views/invest/index.template.html'),
+            controller: 'InvestController',
+            controllerAs: 'InvestCtrl'
+        })
+        .state('invest-events', {
+            url: '/invest/events',
             template: require('./views/events/index.template.html'),
             /*controller: 'EventsListController',
             controllerAs: 'EvntsLstCtrl',*/
         })
-        .state('invest', {
-            url: '/invest',
-            template: require('./views/invest/index.template.html'),
+        .state('invest-events-detail', {
+            url: '/invest/events/{id}',
+            template: require('./views/events/detail.template.html'),
+            /*controller: 'EventsListController',
+            controllerAs: 'EvntsLstCtrl',*/
         })
+        /*.state('bids', {
+            url: '/bids',
+            template: require('./views/bids/index.template.html'),
+            controller: 'BidsController',
+            controllerAs: 'BidsCtrl'
+        })
+        .state('bids-list', {
+            url: '/bids/{type}',
+            template: require('./views/bids/list.template.html'),
+            controller: 'BidsController',
+            controllerAs: 'BidsCtrl'
+        })*/
         .state('sale', {
             url: '/sales',
             template: require('./views/sale/index.template.html'),

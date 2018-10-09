@@ -8,13 +8,14 @@ import {ProfileController} from "./Controllers/ProfileController";
 import {FilterBidsController} from "./Controllers/FilterBidsController";
 import {BidResponsesController} from "./Controllers/BidResponsesController";
 import {MainController} from "./Controllers/MainController";
-import {BidsController} from "./Controllers/bids/bids.controller";
+import {BidsController} from "./Controllers/bids/BidsController";
+import {InvestController} from "./Controllers/invest/InvestController";
 
 ////////////////////////////////////////////////////////
 import {SaleController} from "./Controllers/SaleController"
 import {SaleFormController} from "./Controllers/SaleFormController"
 import {SaleFilterController} from "./Controllers/SaleFilterController"
-import {InvestController} from "./Controllers/InvestController";
+
 import {EventController} from "./Controllers/EventController";
 import {EventsListController} from "./Controllers/EventsListController";
 

@@ -7,7 +7,11 @@
     justify-content: space-between;
     border-bottom: 1px solid rgba(0,0,0, 0.1);
     font-size: 13px;
+    &__single{
+        justify-content: space-around;
+    }
 }
+
 .tabs_item{
     width: 50%;
     text-align: center;

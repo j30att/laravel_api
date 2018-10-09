@@ -26,14 +26,10 @@
     </div>
     <div class="fullscreen">
         <div class="invest_sales">
-            <div class="tabs_list">
+            <div class="tabs_list tabs_list__single">
                 <div class="tabs_item"
                      ng-class="{'tabs_item__active': InvstCtrl.filter == 'closing'}"
                      ng-click="InvstCtrl.setFilter('closing')">Closing
-                </div>
-                <div class="tabs_item"
-                     ng-class="{'tabs_item__active': InvstCtrl.filter == 'markup'}"
-                     ng-click="InvstCtrl.setFilter('markup')">Lowest markup
                 </div>
             </div>
         </div>

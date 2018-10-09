@@ -4,7 +4,7 @@
         <div class="bids_container">
             <div class="bids_title">
                 <div class="bids_title__text">Matched Bids</div>
-                <a class="bids_title__link" ui-sref="bids-matched">See all</a>
+                <a class="bids_title__link" ui-sref="bids-list({type:'matched'})">See all</a>
             </div>
             <div class="bids_row">
                 <div class="bids_card bids_card__green">
@@ -102,7 +102,7 @@
         <div class="bids_container">
             <div class="bids_title">
                 <div class="bids_title__text">Unmatched Bids</div>
-                <a class="bids_title__link" ui-sref="bids-unmatched">See all</a>
+                <a class="bids_title__link" ui-sref="bids-list({type:'unmatched'})">See all</a>
             </div>
             <div class="bids_row">
                 <div class="bids_card bids_card__red">
@@ -200,7 +200,7 @@
         <div class="bids_container">
             <div class="bids_title">
                 <div class="bids_title__text">Settled Bids</div>
-                <a class="bids_title__link" ui-sref="bids-settled">See all</a>
+                <a class="bids_title__link" ui-sref="bids-list({type:'settled'})">See all</a>
             </div>
             <div class="bids_row">
                 <div class="bids_card bids_card__blue">
@@ -298,7 +298,7 @@
         <div class="bids_container">
             <div class="bids_title">
                 <div class="bids_title__text">Canceled Bids</div>
-                <a class="bids_title__link" ui-sref="bids-canceled">See all</a>
+                <a class="bids_title__link" ui-sref="bids-list({type:'canceled'})">See all</a>
             </div>
             <div class="bids_row">
                 <div class="bids_card bids_card__grey">

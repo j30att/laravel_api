@@ -1,5 +1,6 @@
 @import "blocks/bids";
 @import "blocks/sales";
+@import "blocks/events";
 
 body, html {
   padding: 0;
@@ -29,14 +30,15 @@ a {
   position: fixed;
   width: 195px;
   height: auto;
-  bottom:0;
-  top:0;
-  left:0;
-  right:0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   padding: 32px;
 }
+
 .pseudo-header {
   width: 256px;
   height: 100%;
@@ -105,8 +107,6 @@ a {
     }
   }
 }
-
-
 
 .last_up {
   min-height: 251px;
@@ -199,7 +199,6 @@ a {
 
 .profile {
 
-
   &_info {
     width: 100%;
     height: 24px;
@@ -237,12 +236,12 @@ a {
   }
 }
 
-/*main comtent*/
+/*main content*/
 .main_content {
   padding: 32px;
-  max-width: 996px;
+  max-width: 1145px;
   flex-grow: 1;
-  margin:0 auto;
+  margin: 0 auto;
   /*width: 100%;
   box-sizing: border-box;*/
 }
@@ -266,14 +265,17 @@ a {
   margin-right: 24px;
 }
 
-.bids_nav_item a {
-  font-size: 24px;
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.2);
-}
+.bids_nav_item {
 
-.bids_nav_item_active a {
-  color: rgba(0, 0, 0, 1);
+  a {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  a.active {
+    color: rgba(0, 0, 0, 1);
+  }
 }
 
 .bids_table {
@@ -282,7 +284,23 @@ a {
 }
 
 .bids_table_head {
-  text-transform: uppercase;
+  th {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+    height: 53px;
+
+    &:first-child {
+      padding-left: 10px;
+    }
+
+    &:last-child {
+      padding-right: 10px;
+      text-align: right;
+    }
+  }
+
 }
 
 .bids_table td {
@@ -341,13 +359,12 @@ a {
   height: auto;
 }
 
-.bids_table_head {
-  font-size: 12px;
-  font-weight: 900;
+.t_event, .t_buy_in, .t_gte, .t_time {
+  color: #999999;
 }
 
-.bids_table_head td:first-child {
-  padding-left: 10px;
+.t_markup, .t_from, .t_share {
+  font-weight: 600;
 }
 
 /*logOut*/
@@ -609,8 +626,7 @@ a {
 
 /*events */
 .event_content-wr {
-  width: 996px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .event_content__title {
@@ -624,7 +640,7 @@ a {
 
 .event_content__see_more {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   font-size: 15px;
   font-weight: 600;
@@ -672,29 +688,26 @@ a {
 
 /*event filter end*/
 .events_item-wr {
-  width: 100%;
+  margin: 0 -9px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .event_item {
-  width: 320px;
-  margin: 0 18px 24px 0;
-}
-
-.event_item:nth-child(3n) {
-  margin: 0 0 24px 0;
+  margin: 0 9px 24px;
+  flex-grow: 1;
 }
 
 .event_item__pic {
   width: 100%;
-  height: 160px;
+  height: auto;
   overflow: hidden;
   margin-bottom: 12px;
 }
 
 .event_item__pic img {
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -742,20 +755,29 @@ a {
 /*Closing soon*/
 
 .events_tabs-wr {
-  width: 996px;
+  width: 100%;
+  min-width: 820px;
   margin-bottom: 60px;
 }
 
 .events_tabs_nav {
-  width: 100%;
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  &__link {
+    font-size: 15px;
+    font-weight: 600;
+    color: #007fed;
+    text-decoration: none;
+  }
 }
 
 .events_tabs_list {
-  width: 100%;
   display: flex;
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .events_tabs_item {
@@ -774,14 +796,15 @@ a {
   border-spacing: 0 1px;
 }
 
-.table_events_head td {
+.table_events_head th {
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.table_events_head td:last-child,
-.t_time {
+.table_events_head th:last-child, .t_time {
   text-align: right;
 }
 

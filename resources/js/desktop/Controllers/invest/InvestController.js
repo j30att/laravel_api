@@ -1,4 +1,4 @@
-import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../Constants"
+import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
 
 
 class InvestController {

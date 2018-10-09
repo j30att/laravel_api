@@ -11,9 +11,10 @@ class BidResponsesController {
     constructor($window, $http) {
         this.$window = $window;
         this.$http = $http;
+        this.$state = $state;
         this.bids = [];
-        this.showList();
         this._opts = {dataLoad: false};
+
         this.menu = [
             {status: BID_RESPONSE_MATCHED,      name: 'Matched'},
             {status: BID_RESPONSE_UNMATCHED,    name: 'Unmatched'},
@@ -22,6 +23,7 @@ class BidResponsesController {
         ]
 
     }
+
     showList() {
         this.$http.get(BID_RESPONSE_INDEX,
         ).then(response => {
@@ -31,8 +33,8 @@ class BidResponsesController {
     }
 
 
-};
+}
 
-BidResponsesController.$inject = ['$window', '$http'];
+BidResponsesController.$inject = ['$window', '$http','$state'];
 
 export {BidResponsesController};

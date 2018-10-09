@@ -1,4 +1,5 @@
 import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP, SALE_CLOSING, SALE_LOWEST} from "../Constants"
+import {LoginController} from "./LoginController";
 
 
 class InvestController {
@@ -8,9 +9,9 @@ class InvestController {
         this.events =[];
         this._opts = {dataLoad: false};
         this.filter = 'closing';
-
         this.showList();
         this.setFilter(this.filter);
+
 
     }
 
@@ -43,7 +44,7 @@ class InvestController {
 
 
 };
+InvestController.$inject = ['$window', '$http',];
 
-InvestController.$inject = ['$window', '$http'];
 
 export {InvestController};
