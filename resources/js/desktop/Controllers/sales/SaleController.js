@@ -24,8 +24,7 @@ class SaleController {
 
             clickOutsideToClose: true,
 
-        }).openFrom('#left')
-            .then(function (answer) {
+        }).then(function (answer) {
 
             }, function () {
 

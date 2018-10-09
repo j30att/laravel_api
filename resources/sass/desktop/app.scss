@@ -3,6 +3,7 @@
 @import "blocks/sales";
 @import "blocks/events";
 @import "blocks/material";
+@import "blocks/place_bid";
 
 body, html {
   background-color: #fff !important;
@@ -722,6 +723,7 @@ a {
 }
 
 .event_item {
+  min-width: 24%;
   margin: 0 9px 24px;
   flex-grow: 1;
 }

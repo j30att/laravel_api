@@ -1,9 +1,11 @@
 import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
+import {DialogController} from "../DialogController";
 
 
 class InvestController {
-    constructor($window, $http){
+    constructor($window, $http, $mdDialog){
         this.$window = $window;
+        this.$mdDialog = $mdDialog;
         this.$http = $http;
         this.events =[];
         this._opts = {dataLoad: false};
@@ -27,6 +29,26 @@ class InvestController {
     }
 
 
+    showCreateForm(ev) {
+        let vm = this;
+        this.$mdDialog.show({
+            controller: DialogController,
+            controllerAs: 'vm',
+            template: require('../../views/bids/place.template.html'),
+            parent: angular.element(document.body),
+            targetEvent: ev,
+
+            clickOutsideToClose: true,
+
+        }).openFrom('#left')
+            .then(function (answer) {
+
+            }, function () {
+
+            });
+    };
+
+
     getSales(){
         this.$http.get(SALE_INDEX, {params: {status: this.filter}})
         .then(response => {
@@ -34,12 +56,11 @@ class InvestController {
             this._opts.dataLoad = true;
             return true;
         });
-
     }
 
 
 };
 
-InvestController.$inject = ['$window', '$http'];
+InvestController.$inject = ['$window', '$http', '$mdDialog'];
 
 export {InvestController};
