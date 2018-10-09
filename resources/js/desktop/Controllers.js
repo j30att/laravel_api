@@ -20,7 +20,6 @@ import {SaleController} from "./Controllers/sales/SaleController";
 import {SaleFilterController} from "./Controllers/sales/SaleFilterController"
 
 
-
 let module = angular.module('Controllers', []);
 
 module.controller('LoginController', LoginController);
