@@ -1,0 +1,15 @@
+md-dialog {
+  width: 500px;
+  box-sizing: border-box;
+  max-height: 100%;
+  height: 100%;
+  padding: 24px 40px 0 40px;
+}
+
+md-select {
+  margin: 0px;
+  padding: 4px 0px 0px 10px;
+}
+.md-dialog-container{
+  justify-content: flex-end;
+}

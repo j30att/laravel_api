@@ -1,7 +1,7 @@
 import {
     BIDS_MY_MATCHED, BIDS_MY_UNMATCHED, BIDS_MY_SETTLED, BIDS_MY_CANCELED, BIDS_MY_STORE, BIDS_MY,
     BID_MATCHED, BID_UNMATCHED, BID_SETTLED, BID_CANCELED
-} from "../../mobile/Constants";
+} from "../Constants";
 
 class BidsResourceService {
     constructor($http) {

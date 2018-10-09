@@ -24,11 +24,11 @@ let app = angular.module('poker', [
     permission,
     uiPermission
 ]);
-/*
+
 angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {
     $mdThemingProvider.theme('formSelect');
     $mdThemingProvider.setDefaultTheme('formSelect');
-}]);*/
+}]);
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {
     $interpolateProvider.startSymbol('{%');
