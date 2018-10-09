@@ -226,13 +226,25 @@
                 color: rgba(0,0,0,0.34);
                 text-transform: uppercase;
                 margin-bottom: 12px;
+                &_select{
+                    text-transform: capitalize;
+                }
             }
-            .row{
+            &_select{
                 width: 100%;
                 height: 38px;
                 background-color: rgba(0,0,0,0.04);
                 border-radius: 6px;
+                margin-bottom: 16px;
+                margin-top: 4px;
+                /*delete after add select content*/
+                box-sizing: border-box;
+                padding: 10px;
+                text-transform: uppercase;
+                /*delete after add select content end*/
+
             }
+
             .attributs_wrapper{
                 width: 100%;
                 display: flex;
@@ -240,17 +252,13 @@
                 .attributs_item{
                     font-size: 15px;
                     color: rgba(0,0,0,0.5);
-                }
-
-            }
-            .attributs_wrapper:first-child{
-                display: none;
-                .attributs_item{
+                    margin-bottom: 20px;
                     span{
                         display: block;
                         margin-bottom: 4px;
                     }
-                    .input{
+
+                    input{
                         border: none;
                         outline: none;
                         border-bottom: 1px solid #f2f2f2;
@@ -258,12 +266,27 @@
                         font-size: 18px;
                         color: #000;
                     }
-                    .input:first-child{
-                        width: 45%;
+                }
+                .attributs_item:first-child{
+                    width: 45%;
+                }
+                .attributs_item:last-child{
+                    width: 55%;
+                }
+                .attributs_item__border{
+                    width: 132px !important;
+                    overflow: hidden;
+                    input{
+                        width: 100%;
+                        background-color: rgba(0,0,0,0.04);
+                        box-sizing: border-box;
+                        padding: 8px 0 10px 12px;
+                        border-radius: 6px;
                     }
                 }
 
             }
+
         }
 
 
