@@ -6,11 +6,13 @@ body, html {
   padding: 0;
   margin: 0;
 }
-::-webkit-input-placeholder{
-    color: #000000;
-}
+
 body * {
   font-family: "Open Sans", sans-serif;
+}
+
+::-webkit-input-placeholder{
+  color: #000000;
 }
 
 .your_profile_wr_display {
@@ -19,6 +21,27 @@ body * {
 
 a {
   text-decoration: none;
+}
+
+.grey_dot{
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 7.5px;
+  border-radius: 2px;
+  background-color: #cdcdcd;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+.color-grey{
+  color: #626262;
+}
+
+.align-right{
+  text-align: right !important;
 }
 
 .deskwr {
@@ -238,12 +261,9 @@ a {
 
 /*main content*/
 .main_content {
-  padding: 32px;
-  max-width: 1145px;
+  padding: 32px 60px 32px 54px;
   flex-grow: 1;
   margin: 0 auto;
-  /*width: 100%;
-  box-sizing: border-box;*/
 }
 
 /*bids content*/
@@ -709,6 +729,7 @@ a {
 .event_item__pic img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .event_info {
