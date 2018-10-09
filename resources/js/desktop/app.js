@@ -1,3 +1,5 @@
+import Services from "../mobile/Services";
+
 let angular = require('angular');
 
 import Controllers from './Controllers';
@@ -9,12 +11,18 @@ import {permission, uiPermission} from 'angular-permission';
 import templateCache from './TemplateCache';
 
 let ngRouter = require('angular-ui-router').default;
+let ngMaterial = require('angular-material');
+let ngAria = require('angular-aria');
+let ngAnimate = require('angular-animate');
 
 let app = angular.module('poker', [
+    ngMaterial,
+    ngAria,
+    ngAnimate,
     ngRouter,
     Controllers,
     Components,
-    Filters,
+    Services,
     permission,
     uiPermission
 ]);

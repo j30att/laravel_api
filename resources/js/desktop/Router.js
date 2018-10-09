@@ -62,8 +62,8 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('sale', {
             url: '/sales',
             template: require('./views/sale/index.template.html'),
-            /*  controller: 'SaleController',
-              controllerAs: 'SaleCtrl',*/
+            controller: 'SaleController',
+            controllerAs: 'SaleCtrl',
         })
         .state('sale-active', {
             url: '/sales/active',

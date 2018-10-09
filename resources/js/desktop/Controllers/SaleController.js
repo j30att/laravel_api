@@ -4,7 +4,9 @@ import {SALE_CLOSED} from "../Constants";
 
 
 class SaleController {
-    constructor($window, $http, $stateParams) {
+    constructor($window, $http, $stateParams, $mdDialog) {
+        this.$mdDialog = $mdDialog;
+
         this.$window = $window;
         this.$http = $http;
         this.sales = null;
@@ -15,28 +17,31 @@ class SaleController {
             {status: SALE_CLOSED, name: 'closed'},
         ];
         this.$stateParams = $stateParams;
-
-        this.showList();
+        console.log(this.$mdDialog);
     }
 
 
-    showList() {
-        self = this;
-        this.menu.forEach(function (value, key) {
-           if (value.name == self.$stateParams.filter) self.filter = value.status;
-        });
+    showAdvanced(ev) {
+        console.log(1);
+        this.$mdDialog.show({
+            //controller: DialogController,
+            template: require('../views/sale/create.template.html'),
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true,
 
+        })
+            .then(function(answer) {
 
-        this.$http.get(SALE_INDEX, {params: {status: this.filter}})
-            .then(response => {
-                this.sales = response.data.data;
-                this._opts.dataLoad = true;
+            }, function() {
+
             });
-    }
+    };
+
 
 
 };
 
-SaleController.$inject = ['$window', '$http', '$stateParams'];
+SaleController.$inject = ['$window', '$http', '$stateParams', '$mdDialog'];
 
 export {SaleController};
