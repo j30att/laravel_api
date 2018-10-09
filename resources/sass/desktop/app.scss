@@ -5,6 +5,7 @@
 @import "blocks/material";
 
 body, html {
+  background-color: #fff;
   padding: 0;
   margin: 0;
 }
@@ -12,6 +13,8 @@ body, html {
 body * {
   font-family: "Open Sans", sans-serif;
 }
+
+
 
 ::-webkit-input-placeholder{
   color: #000000;
