@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 104);
+/******/ 	return __webpack_require__(__webpack_require__.s = 103);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -648,7 +648,7 @@ function _arraysEq(a1, a2) {
 var silenceUncaughtInPromise = function (promise) { return promise.catch(function (e) { return 0; }) && promise; };
 var silentRejection = function (error) { return silenceUncaughtInPromise(__WEBPACK_IMPORTED_MODULE_2__coreservices__["b" /* services */].$q.reject(error)); };
 //# sourceMappingURL=common.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(71)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(70)))
 
 /***/ }),
 /* 1 */
@@ -1207,7 +1207,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamTypes", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["d"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateParams", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ParamType", function() { return __WEBPACK_IMPORTED_MODULE_1__params_index__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__path_index__ = __webpack_require__(72);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathNode", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "PathUtils", function() { return __WEBPACK_IMPORTED_MODULE_2__path_index__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__resolve_index__ = __webpack_require__(37);
@@ -1225,7 +1225,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateRegistry", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["e"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateService", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TargetState", function() { return __WEBPACK_IMPORTED_MODULE_4__state_index__["g"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__transition_index__ = __webpack_require__(82);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionHookScope", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["i"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "HookBuilder", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["a"]; });
@@ -1239,7 +1239,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionEventType", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["f"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "defaultTransOpts", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "TransitionService", function() { return __WEBPACK_IMPORTED_MODULE_5__transition_index__["j"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__url_index__ = __webpack_require__(83);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["h"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlConfig", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["c"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlMatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["d"]; });
@@ -1249,13 +1249,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRuleFactory", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["g"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseUrlRule", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlService", function() { return __WEBPACK_IMPORTED_MODULE_6__url_index__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__view_index__ = __webpack_require__(84);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ViewService", function() { return __WEBPACK_IMPORTED_MODULE_7__view_index__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__globals__ = __webpack_require__(49);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterGlobals", function() { return __WEBPACK_IMPORTED_MODULE_8__globals__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__router__ = __webpack_require__(45);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouter", function() { return __WEBPACK_IMPORTED_MODULE_9__router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__vanilla__ = __webpack_require__(85);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$q", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["b"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "$injector", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["a"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "BaseLocationServices", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["c"]; });
@@ -1273,7 +1273,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hashLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["k"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pushStateLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["p"]; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "memoryLocationPlugin", function() { return __WEBPACK_IMPORTED_MODULE_10__vanilla__["n"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__interface__ = __webpack_require__(88);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UIRouterPluginBase", function() { return __WEBPACK_IMPORTED_MODULE_11__interface__["a"]; });
 /** @publicapi @module common */ /** */
 
@@ -1956,7 +1956,7 @@ var TransitionHookScope;
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(65);
+__webpack_require__(64);
 module.exports = angular;
 
 
@@ -3690,10 +3690,10 @@ var BaseLocationServices = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__uirouter_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__statebuilders_views__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__templateFactory__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__stateProvider__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(91);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__statebuilders_onEnterExitRetain__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__locationServices__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__urlRouterProvider__ = __webpack_require__(63);
 /**
  * # Angular 1 types
@@ -3971,7 +3971,7 @@ var Queue = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__param__ = __webpack_require__(14);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__param__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paramTypes__ = __webpack_require__(71);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__paramTypes__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__stateParams__ = __webpack_require__(36);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_2__stateParams__["a"]; });
@@ -4389,21 +4389,21 @@ var StateObject = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interface__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transition__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__hookRegistry__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__hooks_coreResolvables__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hooks_redirectTo__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__hooks_onEnterExitRetain__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__hooks_resolve__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__hooks_views__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__hooks_updateGlobals__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__hooks_url__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__hooks_lazyLoad__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__transitionEventType__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__transitionHook__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_predicates__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_common__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_hof__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hooks_ignoredTransition__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__hooks_invalidTransition__ = __webpack_require__(81);
 /** @publicapi @module transition */ /** */
 
 
@@ -9863,8 +9863,7 @@ var UrlRouterProvider = /** @class */ (function () {
 //# sourceMappingURL=urlRouterProvider.js.map
 
 /***/ }),
-/* 64 */,
-/* 65 */
+/* 64 */
 /***/ (function(module, exports) {
 
 /**
@@ -46086,7 +46085,7 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -46101,9 +46100,9 @@ $provide.value("$locale", {
 (function () {
   'use strict';
 
-  var permission = __webpack_require__(67),
-    ngPermission = __webpack_require__(68),
-    uiPermission = __webpack_require__(69);
+  var permission = __webpack_require__(66),
+    ngPermission = __webpack_require__(67),
+    uiPermission = __webpack_require__(68);
 
   module.exports = {
     permission: permission,
@@ -46114,7 +46113,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports) {
 
 /**
@@ -47358,7 +47357,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports) {
 
 /**
@@ -47582,7 +47581,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports) {
 
 /**
@@ -48166,7 +48165,7 @@ $provide.value("$locale", {
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48182,12 +48181,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "StateProvider", function() { return __WEBPACK_IMPORTED_MODULE_2__stateProvider__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__ = __webpack_require__(63);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRouterProvider", function() { return __WEBPACK_IMPORTED_MODULE_3__urlRouterProvider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__injectables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__injectables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_stateDirectives__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__stateFilters__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_viewDirective__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__viewScroll__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__uirouter_core__ = __webpack_require__(5);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "core", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__; });
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UrlRules", function() { return __WEBPACK_IMPORTED_MODULE_9__uirouter_core__["UrlRules"]; });
@@ -48367,7 +48366,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports) {
 
 var g;
@@ -48394,7 +48393,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48566,7 +48565,7 @@ initDefaultTypes();
 //# sourceMappingURL=paramTypes.js.map
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48580,7 +48579,7 @@ initDefaultTypes();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48628,7 +48627,7 @@ var treeChangesCleanup = function (trans) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48673,7 +48672,7 @@ var registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48737,7 +48736,7 @@ var registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48805,7 +48804,7 @@ var registerResolveRemaining = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48860,7 +48859,7 @@ var registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48901,7 +48900,7 @@ var registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48931,7 +48930,7 @@ var registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48969,7 +48968,7 @@ var registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48993,7 +48992,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49041,7 +49040,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49071,7 +49070,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49081,11 +49080,11 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__vanilla_index__ = __webpack_require__(86);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__vanilla_index__["c"]; });
@@ -49108,7 +49107,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49134,7 +49133,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["c"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_8__utils__["e"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__plugins__ = __webpack_require__(87);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_9__plugins__["c"]; });
@@ -49152,7 +49151,7 @@ var registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 88 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49193,7 +49192,7 @@ var memoryLocationPlugin = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["d" /* lo
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 89 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49217,7 +49216,7 @@ var UIRouterPluginBase = /** @class */ (function () {
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 90 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49428,7 +49427,7 @@ var scopeBindings = function (bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 91 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49463,7 +49462,7 @@ var getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -49549,7 +49548,7 @@ var Ng1LocationServices = /** @class */ (function () {
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports) {
 
 /**
@@ -49868,7 +49867,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50505,7 +50504,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50557,7 +50556,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */]
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50994,7 +50993,7 @@ __WEBPACK_IMPORTED_MODULE_1__angular__["a" /* ng */].module('ui.router.state').d
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51026,7 +51025,7 @@ __WEBPACK_IMPORTED_MODULE_0__angular__["a" /* ng */].module('ui.router.state').p
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51075,7 +51074,7 @@ LoginController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51122,46 +51121,46 @@ EventsListController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(166);
+__webpack_require__(165);
 module.exports = 'ngAnimate';
 
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(167);
+__webpack_require__(166);
 module.exports = 'ngAria';
 
 
 /***/ }),
+/* 101 */,
 /* 102 */,
-/* 103 */,
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(105);
-__webpack_require__(169);
-module.exports = __webpack_require__(170);
+__webpack_require__(104);
+__webpack_require__(168);
+module.exports = __webpack_require__(169);
 
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Router__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Middlewares__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_permission__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Services__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Router__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Middlewares__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_permission__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_permission___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular_permission__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Hack__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Hack__ = __webpack_require__(161);
 var angular = __webpack_require__(13);
 
 
@@ -51172,10 +51171,10 @@ var angular = __webpack_require__(13);
 
 
 
-var ngRouter = __webpack_require__(70).default;
-var ngMaterial = __webpack_require__(165);
-var ngAria = __webpack_require__(101);
-var ngAnimate = __webpack_require__(100);
+var ngRouter = __webpack_require__(69).default;
+var ngMaterial = __webpack_require__(164);
+var ngAria = __webpack_require__(100);
+var ngAnimate = __webpack_require__(99);
 
 var app = angular.module('poker', [ngMaterial, ngAria, ngAnimate, ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__Services__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_5_angular_permission__["uiPermission"]]);
 /*
@@ -51194,26 +51193,26 @@ app.run(__WEBPACK_IMPORTED_MODULE_4__Middlewares__["a" /* default */]);
 app.run(__WEBPACK_IMPORTED_MODULE_6__Hack__["a" /* default */]);
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Controllers_MenuController__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Controllers_EventInfoController__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Controllers_MainController__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_LoginController__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Controllers_RegisterController__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Controllers_ProfileController__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Controllers_BidsController__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Controllers_BidsFilterController__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Controllers_SaleController__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Controllers_SaleAllController__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controllers_SaleFilterController__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Controllers_SaleManageController__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__Controllers_SaleFormController__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Controllers_InvestController__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Controllers_EventController__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__Controllers_EventsListController__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__Controllers_MenuController__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Controllers_EventInfoController__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Controllers_MainController__ = __webpack_require__(119);
 var angular = __webpack_require__(13);
 
 
@@ -51262,7 +51261,7 @@ module.controller('MainController', __WEBPACK_IMPORTED_MODULE_15__Controllers_Ma
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51321,7 +51320,7 @@ RegisterController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51381,7 +51380,7 @@ ProfileController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51415,7 +51414,7 @@ BidsController.$inject = ['BidsResourceService'];
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51478,7 +51477,7 @@ BidsFilterController.$inject = ['$stateParams', 'BidsResourceService'];
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51509,7 +51508,7 @@ SaleController.$inject = ['SalesResourceService'];
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51566,7 +51565,7 @@ SaleAllController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51621,7 +51620,7 @@ SaleFilterController.$inject = ['SalesResourceService', '$stateParams'];
 
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51666,7 +51665,7 @@ var SaleManageController = function () {
                   this._opts.load = true;
                   this.fillSale()
               });
-        }
+       }
       fillSale(){
           let self = this;
           console.log(this.subevents, 'this.subevents');
@@ -51675,7 +51674,7 @@ var SaleManageController = function () {
                   self.buy_in = value.event.buy_in;
               }
           });
-        }
+       }
     */
 
     _createClass(SaleManageController, [{
@@ -51698,7 +51697,7 @@ var SaleManageController = function () {
                   });
               console.log(this.sale, 'sale');
           }
-            updateSale(){
+           updateSale(){
               let data = this.sale;
               console.log(SALE_CREATE+'/'+this.sale.id);
               this.$http.put(SALE_CREATE+'/'+this.sale.id, data)
@@ -51723,7 +51722,7 @@ SaleManageController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51850,13 +51849,13 @@ SaleFormController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InvestController; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Constants__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__LoginController__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__LoginController__ = __webpack_require__(97);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -51920,7 +51919,7 @@ InvestController.$inject = ['$window', '$http'];
 
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51976,7 +51975,7 @@ EventController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51997,7 +51996,7 @@ MenuController.$inject = ['$state'];
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52042,7 +52041,7 @@ EventInfoController.$inject = ['$window', '$http', '$stateParams'];
 
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52061,18 +52060,18 @@ MainController.$inject = ['$state'];
 
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Components_bids_bids_controller__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Components_bids_carousel_bids_carousel_controller__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Components_events_events_controller__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Components_events_carousel_events_carousel_controller__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Components_sales_sales_controller__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Components_sales_carousel_sales_carousel_controller__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Components_sale_modal_sale_modal_controller__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Components_sale_manage_sale_manage_controller__ = __webpack_require__(135);
 
 var angular = __webpack_require__(13);
 
@@ -52098,7 +52097,7 @@ module.component('saleManage', __WEBPACK_IMPORTED_MODULE_7__Components_sale_mana
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52125,19 +52124,19 @@ var BidsComponent = {
         bids: '<',
         state: '<'
     },
-    template: __webpack_require__(123),
+    template: __webpack_require__(122),
     controller: Bids,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card__bids\"\r\n     ng-class=\"{\r\n                    'bids-item__matched':      item.status === 2,\r\n                    'bids-item__unmatched':    item.status === 3,\r\n                    'bids-item__settled':      item.status === 4,\r\n                    'bids-item__canceled':     item.status === 5,\r\n                     }\"\r\n     ng-repeat=\"item in $ctrl.bids\"\r\n     ng-if=\"$ctrl.state =='row'\"\r\n>\r\n\r\n    <div>\r\n\r\n        <div class=\"card__profile_info\">\r\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\r\n                </div>\r\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"binds-item__game_info card__event_info\">\r\n        <div class=\"geme__text card__event_info_item\">\r\n            <div class=\"by_in card__event_info_attr\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte card__event_info_attr\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n\r\n\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ==1 \">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Date of Start</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status == 2\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Sale</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Bid</span><br>\r\n                <span class=\"card__attribute_value\">£<span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span></span>\r\n\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">20</span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Time</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Outcome</span><br>\r\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">256</span>\r\n\r\n\r\n                </span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\">12 days</span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Status</span><br>\r\n                <span class=\"card__attribute_status_green\" > In progress</span>\r\n            </div>\r\n        </div>\r\n\r\n\r\n\r\n\r\n    </div>\r\n</div>\r\n\r\n\r\n<div class=\"card__bids_list\"\r\n     ng-class=\"{\r\n                    'bids-item__matched':      item.status === 2,\r\n                    'bids-item__unmatched':    item.status === 3,\r\n                    'bids-item__settled':      item.status === 4,\r\n                    'bids-item__canceled':     item.status === 5,\r\n                     }\"\r\n     ng-repeat=\"item in $ctrl.bids\"\r\n     ng-if=\"$ctrl.state == 'list'\">\r\n\r\n    <div>\r\n\r\n        <div class=\"card__profile_info\">\r\n            <div class=\"blocks_header_link\" ng-if=\"item.status==2\"><a ui-sref=\"events\">edit</a></div>\r\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\r\n                </div>\r\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"item.status==1\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"card__event_info\">\r\n        <div class=\"card__event_info_item\">\r\n            <div class=\"by_in card__event_info_attr\">\r\n                Buy in £ <span>1,000,000</span>\r\n            </div>\r\n            <div class=\"gte card__event_info_attr\">\r\n                £ <span>1,000,000</span> GTE\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===1\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Date of Start</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===2\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Date of Start</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\" >\r\n                <span>T. until close</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Outcome</span><br>\r\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">1,000,000</span>\r\n\r\n\r\n                </span>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Markup</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Value</span><br>\r\n                <span class=\"card__attribute_value\">£</span>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Refund</span><br>\r\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item\">\r\n                <span>Status</span><br>\r\n                <span class=\"card__attribute_status_green\" > In progress</span>\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"card__bids\"\n     ng-class=\"{\n                    'bids-item__matched':      item.status === 2,\n                    'bids-item__unmatched':    item.status === 3,\n                    'bids-item__settled':      item.status === 4,\n                    'bids-item__canceled':     item.status === 5,\n                     }\"\n     ng-repeat=\"item in $ctrl.bids\"\n     ng-if=\"$ctrl.state =='row'\"\n>\n\n    <div>\n\n        <div class=\"card__profile_info\">\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\n                </div>\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\n                </div>\n            </div>\n        </div>\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\n        </div>\n    </div>\n\n    <div class=\"binds-item__game_info card__event_info\">\n        <div class=\"geme__text card__event_info_item\">\n            <div class=\"by_in card__event_info_attr\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte card__event_info_attr\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n\n\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ==1 \">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Date of Start</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status == 2\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Sale</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Bid</span><br>\n                <span class=\"card__attribute_value\">£<span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span></span>\n\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">20</span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Time</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.short_date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Outcome</span><br>\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">256</span>\n\n\n                </span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\">12 days</span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Status</span><br>\n                <span class=\"card__attribute_status_green\" > In progress</span>\n            </div>\n        </div>\n\n\n\n\n    </div>\n</div>\n\n\n<div class=\"card__bids_list\"\n     ng-class=\"{\n                    'bids-item__matched':      item.status === 2,\n                    'bids-item__unmatched':    item.status === 3,\n                    'bids-item__settled':      item.status === 4,\n                    'bids-item__canceled':     item.status === 5,\n                     }\"\n     ng-repeat=\"item in $ctrl.bids\"\n     ng-if=\"$ctrl.state == 'list'\">\n\n    <div>\n\n        <div class=\"card__profile_info\">\n            <div class=\"blocks_header_link\" ng-if=\"item.status==2\"><a ui-sref=\"events\">edit</a></div>\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"card__profile_name\" ng-bind=\"item.investor.name\">\n                </div>\n                <div class=\"card__event\" ng-bind=\"item.sale.subevent.event.title\">\n                </div>\n            </div>\n\n        </div>\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"item.status==1\">\n        </div>\n    </div>\n\n    <div class=\"card__event_info\">\n        <div class=\"card__event_info_item\">\n            <div class=\"by_in card__event_info_attr\">\n                Buy in £ <span>1,000,000</span>\n            </div>\n            <div class=\"gte card__event_info_attr\">\n                £ <span>1,000,000</span> GTE\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===1\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Date of Start</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===2\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Date of Start</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\" >\n                <span>T. until close</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===3\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Outcome</span><br>\n                <span class=\"card__attribute_status_red\" >-£<span class=\"card__attribute_status_red\">1,000,000</span>\n\n\n                </span>\n            </div>\n        </div>\n\n        <div class=\"card__attribute card__attribute_row\" ng-if=\"item.status ===4\">\n            <div class=\"sale_card_list_atr_item\">\n                <span>Markup</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Value</span><br>\n                <span class=\"card__attribute_value\">£</span>\n                <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Refund</span><br>\n                <span class=\"card__attribute_value\" ng-bind=\"item.subevent.date\"></span>\n            </div>\n            <div class=\"sale_card_list_atr_item\">\n                <span>Status</span><br>\n                <span class=\"card__attribute_status_green\" > In progress</span>\n            </div>\n        </div>\n\n    </div>\n</div>\n";
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52163,19 +52162,19 @@ var BidsCarouselComponent = {
     bindings: {
         bids: '<'
     },
-    template: __webpack_require__(125),
+    template: __webpack_require__(124),
     controller: BidsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.bids\">\n    <div class=\"blocks_header_title\">\n        <div class=\"blocks_header_title_name\">{%key%}</div>\n        <div><a ui-sref=\"bids-filter({filter: key})\">See All</a></div>\n    </div>\n\n\n    <div class=\"carousel_container\">\n        <bids class=\"card_row\" state=\"'row'\" bids=\"value\"></bids>\n    </div>\n\n</div>\n";
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52234,19 +52233,19 @@ var EventsComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(127),
+    template: __webpack_require__(126),
     controller: Events,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"event_card__row\" ng-if=\"$ctrl.state == 'row'\" ng-repeat=\"item in $ctrl.events\">\n\n\n        <a ui-sref=\"event({id:item.id})\">\n            <div class=\"event_card__row_img\">\n                <img src=\"/images/event.png\" alt=\"\">\n            </div>\n        </a>\n            <div class=\"event_card__row_info\">\n                <a class=\"event_card_title\" href=\"\" ng-bind=\"item.title\">\n                </a>\n                <div class=\"event_card_attr\">£{%item.fund%} GTD</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"item.date\"></div>\n            </div>\n\n\n</div>\n\n\n<div class=\"event_card_list\" ng-if=\"$ctrl.state == 'list'\" ng-repeat=\"item in $ctrl.events\">\n\n    <div class=\"event_card_list_img\">\n        <img src=\"/images/select_event_bg.png\" alt=\"\">\n        <!--<div class=\"event_card_list_back\"></div>-->\n        <!--<div class=\"event_card_list_open\"></div>-->\n    </div>\n    <div class=\"event_card_list_info col-md-12\">\n\n        <div class=\"event_card_list_wr\" ng-click=\"$ctrl.openDetail(item.id)\">\n\n\n            <div class=\"event_card_title\" ng-bind=\"item.title\"></div>\n            <div class=\"blocks_header_link event_card_details_link\">\n            <!--<a class=\"\" ui-sref=\"evet({id:item.id})\">See info</a>-->\n            </div>\n            <div class=\"event_card_fund\">£{%item.fund%} GTD</div>\n            <div class=\"event_card_date\" ng-bind=\"item.date\"></div>\n            <div class=\"blocks_header_title_name event_card_subevent_list_title\" ng-if=\"$ctrl.showDetail(item.id)\">Event list</div>\n        </div>\n\n\n        <div class=\"event_card_list_subevents\" ng-if=\"$ctrl.showDetail(item.id)\" ng-repeat=\"subevent in item.subevents\">\n\n            <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\n            <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\n            <div class=\"event_card_date\" ng-bind=\"item.date\"></div>\n\n            <div class=\"event_card__see_more\"></div>\n\n        </div>\n    </div>\n\n\n</div>\n";
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52273,19 +52272,19 @@ var EventsCarouselComponent = {
         events: '<',
         state: '<'
     },
-    template: __webpack_require__(129),
+    template: __webpack_require__(128),
     controller: EventsCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"carousel_container\">\n       <events class=\"component_carousel\" events=\"$ctrl.events\" state=\"$ctrl.state\"></events>\n</div>\n";
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52330,19 +52329,19 @@ var SalesComponent = {
         sales: '<',
         state: '<'
     },
-    template: __webpack_require__(131),
+    template: __webpack_require__(130),
     controller: Sales,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sale_card__list sale_card__list_sales\"\r\n     ng-if=\"$ctrl.state === 'list'\"\r\n     ng-repeat=\"(key,item) in $ctrl.sales\"\r\n     ng-class=\"{\r\n     'sale_card__list-last_child': $ctrl.sales.length == key+1,\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n>\r\n\r\n    <div class=\"event_card_text\">\r\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"blocks_header_link\" ng-if=\"item.status == 1\" ng-click=\"$ctrl.showModal(key, 'manage')\">edit</div>\r\n\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\r\n        </div>\r\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\r\n                ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n    <div class=\"card__attribute_sale_card\">\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Closes</span><br>\r\n            <span class=\"card__attribute_value\">21</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Markup</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Share sold</span><br>\r\n            <span class=\"card__attribute_value\">0% of 20%</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Amount raised</span><br>\r\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n<div class=\"sale_card__row\"\r\n\r\n     ng-if=\"$ctrl.state === 'row'\"\r\n     ng-class=\"{\r\n     'sale_active': item.status === 1,\r\n     'sale_canceled': item.status === 2,\r\n     }\"\r\n     ng-repeat=\"item in $ctrl.sales\">\r\n    <div class=\"event_card_text\">\r\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\r\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\r\n                ng-bind=\"item.subevent.buy_in\"></span></div>\r\n    </div>\r\n\r\n    <div class=\"card__attribute_sale_card\">\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Closes</span><br>\r\n            <span class=\"card__attribute_value\">21</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Markup</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Share sold</span><br>\r\n            <span class=\"card__attribute_value\">0% of 20%</span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Amount raised</span><br>\r\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<!--INVEST-->\r\n\r\n<div class=\"sale_card__list\"\r\n     ng-class=\"{'sale_card__list-last_child': $ctrl.sales.length == key+1}\"\r\n     ng-click=\"$ctrl.showModal(key, 'place')\"\r\n     ng-if=\"$ctrl.state === 'invest'\"\r\n     ng-repeat=\" (key, item) in $ctrl.sales\">\r\n\r\n\r\n    <div>\r\n        <div class=\"card__profile_info\">\r\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                <img src=\"/images/players.png\" alt=\"\">\r\n            </div>\r\n            <div class=\"profile_text\">\r\n                <div class=\"card__profile_name\" ng-bind=\"item.creator.name\">\r\n                </div>\r\n                <div class=\"card__event\" ng-bind=\"item.event.title\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"$ctrl.subevent\">\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"card__attribute\">\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Markup</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Value</span><br>\r\n            <span class=\"card__attribute_value\">£</span>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\r\n        </div>\r\n        <div class=\"sale_card_list_atr_item\">\r\n            <span>Date of Start</span><br>\r\n            <span class=\"card__attribute_value\" ng-bind=\"item.event.date_start\"></span>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n<sale-modal sale=\"$ctrl.item\" show=\"$ctrl.showPlace\"></sale-modal>\r\n<sale-manage sale=\"$ctrl.item\" show=\"$ctrl.showManage\"></sale-manage>";
+module.exports = "<div class=\"sale_card__list sale_card__list_sales\"\n     ng-if=\"$ctrl.state === 'list'\"\n     ng-repeat=\"(key,item) in $ctrl.sales\"\n     ng-class=\"{\n     'sale_card__list-last_child': $ctrl.sales.length == key+1,\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n>\n\n    <div class=\"event_card_text\">\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"blocks_header_link\" ng-if=\"item.status == 1\" ng-click=\"$ctrl.showModal(key, 'manage')\">edit</div>\n\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\">\n        </div>\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\n                ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n    <div class=\"card__attribute_sale_card\">\n        <div class=\"sale_card_list_atr_item\">\n            <span>Closes</span><br>\n            <span class=\"card__attribute_value\">21</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Markup</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Share sold</span><br>\n            <span class=\"card__attribute_value\">0% of 20%</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Amount raised</span><br>\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\n        </div>\n    </div>\n\n</div>\n\n\n<div class=\"sale_card__row\"\n\n     ng-if=\"$ctrl.state === 'row'\"\n     ng-class=\"{\n     'sale_active': item.status === 1,\n     'sale_canceled': item.status === 2,\n     }\"\n     ng-repeat=\"item in $ctrl.sales\">\n    <div class=\"event_card_text\">\n        <div class=\"event_card_title\" ng-bind=\"item.event.title\"></div>\n        <div class=\"card__sale_event_byin\">Buy in $<span ng-bind=\"item.event.buy_in\"></span> + $<span\n                ng-bind=\"item.subevent.buy_in\"></span></div>\n    </div>\n\n    <div class=\"card__attribute_sale_card\">\n        <div class=\"sale_card_list_atr_item\">\n            <span>Closes</span><br>\n            <span class=\"card__attribute_value\">21</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Markup</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Share sold</span><br>\n            <span class=\"card__attribute_value\">0% of 20%</span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Amount raised</span><br>\n            <span class=\"card__attribute_value\">$400 of $1,000</span>\n        </div>\n    </div>\n</div>\n\n<!--INVEST-->\n\n<div class=\"sale_card__list\"\n     ng-class=\"{'sale_card__list-last_child': $ctrl.sales.length == key+1}\"\n     ng-click=\"$ctrl.showModal(key, 'place')\"\n     ng-if=\"$ctrl.state === 'invest'\"\n     ng-repeat=\" (key, item) in $ctrl.sales\">\n\n\n    <div>\n        <div class=\"card__profile_info\">\n            <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                <img src=\"/images/players.png\" alt=\"\">\n            </div>\n            <div class=\"profile_text\">\n                <div class=\"card__profile_name\" ng-bind=\"item.creator.name\">\n                </div>\n                <div class=\"card__event\" ng-bind=\"item.event.title\">\n                </div>\n            </div>\n        </div>\n        <div class=\"card__subevent\" ng-bind=\"item.subevent.title\" ng-if=\"$ctrl.subevent\">\n        </div>\n    </div>\n\n    <div class=\"card__attribute\">\n        <div class=\"sale_card_list_atr_item\">\n            <span>Markup</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.markup\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Value</span><br>\n            <span class=\"card__attribute_value\">£</span>\n            <span class=\"card__attribute_value\" ng-bind=\"item.amount\"></span>\n        </div>\n        <div class=\"sale_card_list_atr_item\">\n            <span>Date of Start</span><br>\n            <span class=\"card__attribute_value\" ng-bind=\"item.event.date_start\"></span>\n        </div>\n    </div>\n</div>\n\n\n<sale-modal sale=\"$ctrl.item\" show=\"$ctrl.showPlace\"></sale-modal>\n<sale-manage sale=\"$ctrl.item\" show=\"$ctrl.showManage\"></sale-manage>";
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52369,19 +52368,19 @@ var SalesCarouselComponent = {
         sales: '<',
         state: '<'
     },
-    template: __webpack_require__(133),
+    template: __webpack_require__(132),
     controller: SalesCarousel,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"tabs-wr\" ng-repeat=\"(key, value) in $ctrl.sales\">\n    <div class=\"blocks_header_title\">\n        <div class=\"blocks_header_title_name\">{%key%}</div>\n        <div><a ui-sref=\"sale-filter({filter: key})\">See All</a></div>\n    </div>\n    <div class=\"carousel_container\">\n\n        <sales sales=\"value\" state=\"$ctrl.state\" style=\"display: inline-flex\"></sales>\n    \n    </div>\n</div>\n";
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52462,19 +52461,19 @@ var SaleModalComponent = {
         sale: '<',
         show: '='
     },
-    template: __webpack_require__(135),
+    template: __webpack_require__(134),
     controller: SaleModal,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\r\n\r\n    <div class=\"row col-md-12 modal_header_fixed\">\r\n        <div class=\"header\">\r\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\r\n            <div class=\"header_title\">Place a bid</div>\r\n            <div class=\"header_filter_empty\"></div>\r\n        </div>\r\n\r\n\r\n        <div>\r\n            <div class=\"card__profile_info\">\r\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\r\n                    <img src=\"/images/players.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_text\">\r\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\r\n                    </div>\r\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n\r\n\r\n        <div class=\"binds-item__game_info card__event_info\">\r\n            <div class=\"geme__text card__event_info_item\">\r\n                <div class=\"by_in card__event_info_attr\">\r\n                    Buy in £ <span>1,000,000</span>\r\n                </div>\r\n                <div class=\"gte card__event_info_attr\">\r\n                    £ <span>1,000,000</span> GTE\r\n                </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"card__attribute card__attribute_row ng-scope\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Markup</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Value</span><br>\r\n                    <span class=\"card__attribute_value\">£</span>\r\n                    <span class=\"card__attribute_value ng-binding\">300</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Date of Start</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"modal_bids_block_wr col-md-12\" ng-class=\"{'show_your_bid': $ctrl._opts.stateCreate == true}\">\r\n        <div class=\"modal_bids_block\">\r\n            <div class=\"modal_type_bids\">\r\n                <div class=\"blocks_header_title_name\">\r\n                    HIGHEST BIDS\r\n                </div>\r\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\r\n                </div>\r\n\r\n                <div class=\"blocks_header_title_name\">\r\n                    MATCHED BID\r\n                </div>\r\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\r\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\r\n                </div>\r\n            </div>\r\n            <div class=\"empty_block\"></div>\r\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\r\n                <div class=\"blocks_header_title_name\">\r\n                    your bid\r\n                </div>\r\n                <div class=\"bid_new__attribute_wraper\">\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Markup</span>\r\n                        <input class=\"bid_attribute_input\" type=\"number\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\r\n                    </div>\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Share</span>\r\n                        <input class=\"bid_attribute_input\" type=\"number\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\r\n                    </div>\r\n                    <div class=\"bid_new__attribute\">\r\n                        <span>Amount</span>\r\n                        <input class=\"bid_attribute_input\" type=\"number\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"hideempty\">\r\n\r\n                <div class=\"manage_button\">\r\n                    <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\r\n                        Cancel\r\n                    </div>\r\n                    <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\r\n                        Place\r\n                    </div>\r\n                </div>\r\n                <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\r\n                    Add new bid\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n";
+module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n\n    <div class=\"row col-md-12 modal_header_fixed\">\n        <div class=\"header\">\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n            <div class=\"header_title\">Place a bid</div>\n            <div class=\"header_filter_empty\"></div>\n        </div>\n\n\n        <div>\n            <div class=\"card__profile_info\">\n                <div class=\"sale_card__list_profile__photo card__profile_foto\">\n                    <img src=\"/images/players.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"card__profile_name\" ng-bind=\"$ctrl.sale.creator.name\">\n                    </div>\n                    <div class=\"card__event\" ng-bind=\"$ctrl.sale.event.title\">\n                    </div>\n                </div>\n            </div>\n\n        </div>\n\n\n        <div class=\"binds-item__game_info card__event_info\">\n            <div class=\"geme__text card__event_info_item\">\n                <div class=\"by_in card__event_info_attr\">\n                    Buy in £ <span>1,000,000</span>\n                </div>\n                <div class=\"gte card__event_info_attr\">\n                    £ <span>1,000,000</span> GTE\n                </div>\n            </div>\n\n\n            <div class=\"card__attribute card__attribute_row ng-scope\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <span class=\"card__attribute_value ng-binding\">1.2</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Value</span><br>\n                    <span class=\"card__attribute_value\">£</span>\n                    <span class=\"card__attribute_value ng-binding\">300</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Date of Start</span><br>\n                    <span class=\"card__attribute_value ng-binding\">31  October</span>\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <div class=\"modal_bids_block_wr col-md-12\" ng-class=\"{'show_your_bid': $ctrl._opts.stateCreate == true}\">\n        <div class=\"modal_bids_block\">\n            <div class=\"modal_type_bids\">\n                <div class=\"blocks_header_title_name\">\n                    HIGHEST BIDS\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"bid in  $ctrl.sale.bids | orderBy:'-share' | limitTo:3\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_highest\" ng-bind=\"bid.amount\"></div>\n                </div>\n\n                <div class=\"blocks_header_title_name\">\n                    MATCHED BID\n                </div>\n                <div class=\"modal_type_bids_type\" ng-repeat=\"  bid in  $ctrl.sale.bids | filter: {status:2}\">\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.markup\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.share\"></div>\n                    <div class=\"modal_type_bids__item modal_bids_item_color_matched\" ng-bind=\"bid.amount\"></div>\n                </div>\n            </div>\n            <div class=\"empty_block\"></div>\n            <div class=\"bid_new\" ng-if=\"$ctrl._opts.stateCreate\">\n                <div class=\"blocks_header_title_name\">\n                    your bid\n                </div>\n                <div class=\"bid_new__attribute_wraper\">\n                    <div class=\"bid_new__attribute\">\n                        <span>Markup</span>\n                        <input class=\"bid_attribute_input\" type=\"number\" placeholder=\"1.0\" ng-model=\"$ctrl.bid.markup\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Share</span>\n                        <input class=\"bid_attribute_input\" type=\"number\" placeholder=\"1.0%\" ng-model=\"$ctrl.bid.share\">\n                    </div>\n                    <div class=\"bid_new__attribute\">\n                        <span>Amount</span>\n                        <input class=\"bid_attribute_input\" type=\"number\" placeholder=\"$100\" ng-model=\"$ctrl.bid.amount\">\n                    </div>\n                </div>\n            </div>\n            <div class=\"hideempty\">\n\n                <div class=\"manage_button\">\n                    <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\n                        Cancel\n                    </div>\n                    <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\n                        Place\n                    </div>\n                </div>\n                <div class=\"modal_add_bid\" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\n                    Add new bid\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52531,15 +52530,15 @@ var SaleManage = function () {
         /*storeMyBid(){
             this.bid.sale_id = this.sale.id;
             this.bid.user_id = this.user.id;
-              this.$http.post(BIDS_MY_STORE, this.bid).then(response =>{
+             this.$http.post(BIDS_MY_STORE, this.bid).then(response =>{
                 console.log(response, 'response');
                 if (response.data.status == 1) this.sale.bids.push(response.data.bid);
-                  this.$timeout(() => {
+                 this.$timeout(() => {
                     this.$scope.$apply();
                 }, 10);
                 console.log(this.sale);
             });
-          }*/
+         }*/
 
     }]);
 
@@ -52553,24 +52552,24 @@ var SaleManageComponent = {
         sale: '<',
         show: '='
     },
-    template: __webpack_require__(137),
+    template: __webpack_require__(136),
     controller: SaleManage,
     controllerAs: '$ctrl'
 };
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\r\n\r\n    <div class=\"container\">\r\n\r\n        <div class=\"header\">\r\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\r\n            <div class=\"header_title\">My sale</div>\r\n            <div class=\"header_filter_empty\"></div>\r\n        </div>\r\n\r\n        <div class=\"event_card_title\">MILLIONS Russia, 1A</div>\r\n        <!--<span class=\"buyin_span\">Buy in $5,000 + $300</span>-->\r\n\r\n        <div class=\"binds-item__game_info card__event_info\">\r\n            <div class=\"geme__text card__event_info_item\">\r\n                <div class=\"card__event_info_attr\">\r\n                    Buy in $5,000 + $300\r\n                </div>\r\n            </div>\r\n\r\n\r\n            <div class=\"card__attribute manage_sale_atr\">\r\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                    <span>Closes in</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">73 days</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                    <span>Share sold</span><br>\r\n                    <span class=\"card__attribute_value\">5%</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                    <span>Amount raised</span><br>\r\n                    <span class=\"card__attribute_value ng-binding\">$1892</span>\r\n                </div>\r\n\r\n            </div>\r\n            <div class=\"card__attribute manage_sale_atr\">\r\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                    <span>Markup</span><br>\r\n\r\n                    <input type=\"number\" placeholder=\"1.00\">\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                    <span>Share</span><br>\r\n\r\n                    <input type=\"number\" placeholder=\"1.38%\">\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                    <span>Value</span><br>\r\n\r\n                    <input type=\"number\" placeholder=\"$1938\">\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <div class=\"modal_type_bids\">\r\n            <div class=\"blocks_header_title_name\">\r\n                HIGHEST BIDS\r\n            </div>\r\n\r\n            <div class=\"modal_type_bids_type\">\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\r\n                    <div>$1,182.22</div>\r\n                    <div></div>\r\n                </div>\r\n            </div>\r\n            <div class=\"modal_type_bids_type\">\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\r\n                    <div>$1,182.22</div>\r\n                    <div></div>\r\n                </div>\r\n            </div>\r\n            <div class=\"modal_type_bids_type\">\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\r\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\r\n                    <div>$1,182.22</div>\r\n                    <div class=\"modal_type_bids__item_confirm\"></div>\r\n                </div>\r\n            </div>\r\n\r\n\r\n        </div>\r\n\r\n        <hr>\r\n\r\n\r\n        <div class=\"my_sale_attention\">\r\n            Your sale is almost finished, top-up your sale if you want sell more\r\n        </div>\r\n\r\n        <div class=\"hideempty\">\r\n\r\n            <div class=\"manage_button\">\r\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\r\n                    Cancel\r\n                </div>\r\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\r\n                    Save\r\n                </div>\r\n            </div>\r\n            <div class=\"modal_add_bid modal_add_bid_blue \" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\r\n                Increase your share\r\n            </div>\r\n\r\n        </div>\r\n\r\n\r\n    </div>\r\n\r\n\r\n</div>\r\n\r\n";
+module.exports = "<div class=\"modal_wrapper\" ng-if=\"$ctrl.show \">\n\n    <div class=\"container\">\n\n        <div class=\"header\">\n            <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n            <div class=\"header_title\">My sale</div>\n            <div class=\"header_filter_empty\"></div>\n        </div>\n\n        <div class=\"event_card_title\">MILLIONS Russia, 1A</div>\n        <!--<span class=\"buyin_span\">Buy in $5,000 + $300</span>-->\n\n        <div class=\"binds-item__game_info card__event_info\">\n            <div class=\"geme__text card__event_info_item\">\n                <div class=\"card__event_info_attr\">\n                    Buy in $5,000 + $300\n                </div>\n            </div>\n\n\n            <div class=\"card__attribute manage_sale_atr\">\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                    <span>Closes in</span><br>\n                    <span class=\"card__attribute_value ng-binding\">73 days</span>\n                </div>\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                    <span>Share sold</span><br>\n                    <span class=\"card__attribute_value\">5%</span>\n                </div>\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                    <span>Amount raised</span><br>\n                    <span class=\"card__attribute_value ng-binding\">$1892</span>\n                </div>\n\n            </div>\n            <div class=\"card__attribute manage_sale_atr\">\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                    <span>Markup</span><br>\n\n                    <input type=\"number\" placeholder=\"1.00\">\n                </div>\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                    <span>Share</span><br>\n\n                    <input type=\"number\" placeholder=\"1.38%\">\n                </div>\n                <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                    <span>Value</span><br>\n\n                    <input type=\"number\" placeholder=\"$1938\">\n                </div>\n            </div>\n        </div>\n\n        <div class=\"modal_type_bids\">\n            <div class=\"blocks_header_title_name\">\n                HIGHEST BIDS\n            </div>\n\n            <div class=\"modal_type_bids_type\">\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\n                    <div>$1,182.22</div>\n                    <div></div>\n                </div>\n            </div>\n            <div class=\"modal_type_bids_type\">\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\n                    <div>$1,182.22</div>\n                    <div></div>\n                </div>\n            </div>\n            <div class=\"modal_type_bids_type\">\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\n                <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\n                    <div>$1,182.22</div>\n                    <div class=\"modal_type_bids__item_confirm\"></div>\n                </div>\n            </div>\n\n\n        </div>\n\n        <hr>\n\n\n        <div class=\"my_sale_attention\">\n            Your sale is almost finished, top-up your sale if you want sell more\n        </div>\n\n        <div class=\"hideempty\">\n\n            <div class=\"manage_button\">\n                <div class=\"button_half__white\" ng-click=\"$ctrl.setState()\">\n                    Cancel\n                </div>\n                <div class=\"button_half__blue\" ng-click=\"$ctrl.setState('store')\">\n                    Save\n                </div>\n            </div>\n            <div class=\"modal_add_bid modal_add_bid_blue \" ng-if=\"!$ctrl._opts.stateCreate\" ng-click=\"$ctrl.setState()\">\n                Increase your share\n            </div>\n\n        </div>\n\n\n    </div>\n\n\n</div>\n\n";
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_api_BidsResourceService__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_api_SalesResourceService__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_api_BidsResourceService__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_api_SalesResourceService__ = __webpack_require__(139);
 var angular = __webpack_require__(13);
 
 
@@ -52584,7 +52583,7 @@ module.service('SalesResourceService', __WEBPACK_IMPORTED_MODULE_1__common_api_S
 /* harmony default export */ __webpack_exports__["a"] = (module.name);
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52638,7 +52637,7 @@ BidsResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52682,12 +52681,12 @@ SalesResourceService.$inject = ['$http'];
 
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = routes;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_EventsListController__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Controllers_EventsListController__ = __webpack_require__(98);
 
 
 routes.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
@@ -52704,7 +52703,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     $stateProvider.state('index', {
         url: '/',
-        template: __webpack_require__(142),
+        template: __webpack_require__(141),
         data: {
             permissions: {
                 except: 'Auth',
@@ -52717,12 +52716,12 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('terms-and-conditions', {
         url: '/terms-and-conditions',
-        template: __webpack_require__(143)
+        template: __webpack_require__(142)
     }).state('privacy-policy', {
         url: '/privacy-policy',
-        template: __webpack_require__(144)
+        template: __webpack_require__(143)
     }).state('auth', {
-        template: __webpack_require__(145),
+        template: __webpack_require__(144),
         data: {
             permissions: {
                 except: 'Auth',
@@ -52736,44 +52735,44 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
     }).state('auth.login', {
         //ng-controller="LoginController as LgCtrl"
         url: '/login',
-        template: __webpack_require__(146),
+        template: __webpack_require__(145),
         controller: 'LoginController',
         controllerAs: 'LgCtrl'
     }).state('auth.registration', {
         url: '/register',
-        template: __webpack_require__(147),
+        template: __webpack_require__(146),
         //ng-controller="RegisterController as RgCtrl"
         controller: 'RegisterController',
         controllerAs: 'RgCtrl'
     }).state('invest', {
         url: '/invest',
-        template: __webpack_require__(148),
+        template: __webpack_require__(147),
         menu: 'invest',
         controller: 'InvestController',
         controllerAs: 'InvstCtrl'
     }).state('sale-all', {
         url: '/invest/sales',
-        template: __webpack_require__(149),
+        template: __webpack_require__(148),
         controller: 'SaleAllController',
         controllerAs: 'SaleAllCtrl'
     }).state('events', {
         url: '/events',
-        template: __webpack_require__(150),
+        template: __webpack_require__(149),
         controller: 'EventsListController',
         controllerAs: 'EvntsLstCtrl'
     }).state('event', {
         url: '/event/{id}',
-        template: __webpack_require__(151),
+        template: __webpack_require__(150),
         controller: 'EventInfoController',
         controllerAs: 'EventInfoCtrl'
     }).state('event-info', {
         url: '/event/info/{id}',
-        template: __webpack_require__(152),
+        template: __webpack_require__(151),
         controller: 'EventController',
         controllerAs: 'EventCtrl'
     }).state('bids', {
         url: '/bids',
-        template: __webpack_require__(153),
+        template: __webpack_require__(152),
         menu: 'bids',
         controller: 'BidsController',
         controllerAs: 'BidsCtrl',
@@ -52789,7 +52788,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('bids-filter', {
         url: '/bids/{filter}',
-        template: __webpack_require__(154),
+        template: __webpack_require__(153),
         controller: 'BidsFilterController',
         controllerAs: 'BidsCtrl',
         data: {
@@ -52804,7 +52803,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('sale', {
         url: '/sales',
-        template: __webpack_require__(155),
+        template: __webpack_require__(154),
         menu: 'sales',
         controller: 'SaleController',
         controllerAs: 'SaleCtrl',
@@ -52820,7 +52819,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('sale-create', {
         url: '/sale/create',
-        template: __webpack_require__(156),
+        template: __webpack_require__(155),
         controller: 'SaleFormController',
         controllerAs: 'SaleFrmCtrl',
         data: {
@@ -52835,7 +52834,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('sale-manage', {
         url: '/sale/manage/{id}',
-        template: __webpack_require__(157),
+        template: __webpack_require__(156),
         controller: 'SaleManageController',
         controllerAs: 'SaleMngCtrl',
         data: {
@@ -52851,7 +52850,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 
     }).state('sale-filter', {
         url: '/sales/{filter}',
-        template: __webpack_require__(158),
+        template: __webpack_require__(157),
         controller: 'SaleFilterController',
         controllerAs: 'SaleCtrl',
         data: {
@@ -52866,7 +52865,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('wallet', {
         url: '/wallet',
-        template: __webpack_require__(159),
+        template: __webpack_require__(158),
         menu: 'wallet',
         data: {
             permissions: {
@@ -52880,7 +52879,7 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
         }
     }).state('profile', {
         url: '/profile',
-        template: __webpack_require__(160)
+        template: __webpack_require__(159)
     });
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -52891,121 +52890,121 @@ function routes($locationProvider, $stateProvider, $urlRouterProvider) {
 }
 
 /***/ }),
+/* 141 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n    <div class=\"login_page-wr col-md-12\">\n        <div class=\"login_block\">\n            <div class=\"buy_stakes\">\n                Buy stakes in poker players in tournaments online and around the world\n            </div>\n            <div class=\"btn_block\">\n                <a ui-sref=\"auth.login\">\n                    <div class=\"login_btn login_in\">Log in</div>\n                </a>\n                <a ui-sref=\"auth.registration\">\n                    <div class=\"login_btn login_registration\" >Register</div>\n                </a>\n            </div>\n            <div class=\"contine_without_wr\">\n                <a class=\"contine_without\" ui-sref=\"invest\">\n                    Continue without registration\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
+
+/***/ }),
 /* 142 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"login_page-wr col-md-12\">\r\n        <div class=\"login_block\">\r\n            <div class=\"buy_stakes\">\r\n                Buy stakes in poker players in tournaments online and around the world\r\n            </div>\r\n            <div class=\"btn_block\">\r\n                <a ui-sref=\"auth.login\">\r\n                    <div class=\"login_btn login_in\">Log in</div>\r\n                </a>\r\n                <a ui-sref=\"auth.registration\">\r\n                    <div class=\"login_btn login_registration\" >Register</div>\r\n                </a>\r\n            </div>\r\n            <div class=\"contine_without_wr\">\r\n                <a class=\"contine_without\" ui-sref=\"invest\">\r\n                    Continue without registration\r\n                </a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n           <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\n\n\n            <div class=\"data-privacy\">\n            <span>Terms & Conditions</span>\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\n        </div>\n        <div class=\"check-box-wr\">\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"sms_new\" checked>\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\n\n            </div>\n            <div class=\"check-box__email\">\n                <input type=\"checkbox\" id=\"email_new\" checked>\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\n\n            </div>\n        </div>\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\n\n\n\n        <div class=\"see_policy\">\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\n        </div>\n\n\n    </div>\n</div>";
 
 /***/ }),
 /* 143 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n           <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\r\n\r\n\r\n            <div class=\"data-privacy\">\r\n            <span>Terms & Conditions</span>\r\n            To esure your expirience is personal and relevant, we’re changing the type of advert you see and giving your more control over your data\r\n        </div>\r\n        <div class=\"check-box-wr\">\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"sms_new\" checked>\r\n                <label for=\"sms_new\">Yes, I’d like to hear about the latest poker news and promotions by Email</label>\r\n\r\n            </div>\r\n            <div class=\"check-box__email\">\r\n                <input type=\"checkbox\" id=\"email_new\" checked>\r\n                <label for=\"email_new\">Yes, I’d like to hear about the latest poker news and promotions by SMS</label>\r\n\r\n            </div>\r\n        </div>\r\n        <input id='termconfirm' type=\"submit\" name=\"submit_confirm\" value=\"Confirm\" style=\"border-radius:10pt;\">\r\n\r\n\r\n\r\n        <div class=\"see_policy\">\r\n            <a ui-sref=\"privacy-policy\">See Privacy policy</a>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"personal_inform col-md-12\">\n        <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\n\n\n        <div class=\"data-privacy\">\n\n            Privacy Policy\n        </div>\n        <div>\n            What is Lorem Ipsum?\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\n\n        </div>\n        <div class=\"private_policy\">\n            By creating an account you agree to our\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 144 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"personal_inform col-md-12\">\r\n        <a ui-sref=\"auth.registration\" class=\"goback\" href=\"index\"></a>\r\n\r\n\r\n        <div class=\"data-privacy\">\r\n\r\n            Privacy Policy\r\n        </div>\r\n        <div>\r\n            What is Lorem Ipsum?\r\n            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.What is Lorem Ipsum?\r\n\r\n        </div>\r\n        <div class=\"private_policy\">\r\n            By creating an account you agree to our\r\n            <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and  <a ui-sref=\"privacy-policy\">Privacy Policy</a>\r\n        </div>\r\n    </div>\r\n</div>";
+module.exports = "<div>\n    <ui-view></ui-view>\n</div>";
 
 /***/ }),
 /* 145 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <ui-view></ui-view>\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"page_title col-md-12\">\n            Please Login\n            <a ui-sref=\"index\" class=\"goback\" href=\"index\">\n\n            </a>\n        </div>\n\n        <div class=\"col-md-12\">\n            <form ng-submit=\"LgCtrl.sendAuthData($event)\" style=\"width:100%\">\n                <md-input-container class=\"md-block login_input\">\n                    <label>Client Email</label>\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"LgCtrl.userEmail\"\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Your email must look like an e-mail address.\n                        </div>\n                    </div>\n                </md-input-container>\n\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your password</label>\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Password field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n\n                <button class=\"button button_login\" type=\"submit\" style=\"\"\n                        ng-click=\"LgCtrl.sendAuthData($event)\">Enter\n                </button>\n            </form>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 146 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"fullscreen\">\r\n\r\n        <div class=\"page_title col-md-12\">\r\n            Please Login\r\n            <a ui-sref=\"index\" class=\"goback\" href=\"index\">\r\n\r\n            </a>\r\n        </div>\r\n\r\n        <div class=\"col-md-12\">\r\n            <form ng-submit=\"LgCtrl.sendAuthData($event)\" style=\"width:100%\">\r\n                <md-input-container class=\"md-block login_input\">\r\n                    <label>Client Email</label>\r\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"LgCtrl.userEmail\"\r\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Your email must look like an e-mail address.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your password</label>\r\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Password field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n                <button class=\"button button_login\" type=\"submit\" style=\"\"\r\n                        ng-click=\"LgCtrl.sendAuthData($event)\">Enter\r\n                </button>\r\n            </form>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"page_title col-md-12\">\n            Registration\n            <a ui-sref=\"index\" class=\"goback\"></a>\n        </div>\n\n        <div class=\"col-md-12\">\n            <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"\">\n\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your Name</label>\n                    <input type=\"text\" ng-model=\"RgCtrl.userName\" name=\"clientName\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required']\">\n                            Name field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n\n\n                <md-input-container class=\"md-block login_input\">\n                    <label>Client Email</label>\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"RgCtrl.userEmail\"\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Your email must look like an e-mail address.\n                        </div>\n                    </div>\n                </md-input-container>\n\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your Name</label>\n                    <input type=\"number\" ng-model=\"RgCtrl.userAge\" name=\"clientAge\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required']\">\n                            Age field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your password</label>\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Password field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\n                    <label>Your password</label>\n                    <input type=\"password\" ng-model=\"RgCtrl.passwordConfirmation\" name=\"clientPasswordConfirmation\"\n                           required>\n\n                    <div ng-messages=\"\" role=\"alert\">\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\n                            Password field cannot be empty.\n                        </div>\n                    </div>\n                </md-input-container>\n                <button class=\"button\" type=\"submit button_login\" style=\"border-radius:10pt; width: 100%\"\n                        ng-click=\"RgCtrl.sendRegisterForm($event)\">continue\n                </button>\n            </form>\n            <div class=\"private_policy\">\n                By creating an account you agree to our\n                <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and <a ui-sref=\"privacy-policy\">Privacy\n                Policy</a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 147 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"fullscreen\">\r\n\r\n        <div class=\"page_title col-md-12\">\r\n            Registration\r\n            <a ui-sref=\"index\" class=\"goback\"></a>\r\n        </div>\r\n\r\n        <div class=\"col-md-12\">\r\n            <form ng-submit=\"RgCtrl.sendRegisterForm($event)\" class=\"\">\r\n\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your Name</label>\r\n                    <input type=\"text\" ng-model=\"RgCtrl.userName\" name=\"clientName\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required']\">\r\n                            Name field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n\r\n                <md-input-container class=\"md-block login_input\">\r\n                    <label>Client Email</label>\r\n                    <input required type=\"email\" name=\"clientEmail\" ng-model=\"RgCtrl.userEmail\"\r\n                           minlength=\"5\" maxlength=\"100\" ng-pattern=\"/^.+@.+\\..+$/\"/>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Your email must look like an e-mail address.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your Name</label>\r\n                    <input type=\"number\" ng-model=\"RgCtrl.userAge\" name=\"clientAge\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required']\">\r\n                            Age field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your password</label>\r\n                    <input type=\"password\" ng-model=\"LgCtrl.userPassword\" name=\"clientPassword\" required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Password field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n                <md-input-container class=\"md-block login_input\" flex-gt-sm style=\"margin-bottom: 20px\">\r\n                    <label>Your password</label>\r\n                    <input type=\"password\" ng-model=\"RgCtrl.passwordConfirmation\" name=\"clientPasswordConfirmation\"\r\n                           required>\r\n\r\n                    <div ng-messages=\"\" role=\"alert\">\r\n                        <div ng-message-exp=\"['required', 'minlength', 'maxlength', 'pattern']\">\r\n                            Password field cannot be empty.\r\n                        </div>\r\n                    </div>\r\n                </md-input-container>\r\n                <button class=\"button\" type=\"submit button_login\" style=\"border-radius:10pt; width: 100%\"\r\n                        ng-click=\"RgCtrl.sendRegisterForm($event)\">continue\r\n                </button>\r\n            </form>\r\n            <div class=\"private_policy\">\r\n                By creating an account you agree to our\r\n                <a ui-sref=\"terms-and-conditions\">Terms & Conditions</a> and <a ui-sref=\"privacy-policy\">Privacy\r\n                Policy</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\" ng-cloak>\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <a ui-sref=\"profile\">\n                <div class=\"header_profile\"></div>\n            </a>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter\"></div>\n        </div>\n        <div class=\"invest_events\">\n            <div class=\"blocks_header_title\">\n                <div class=\"blocks_header_title_name\">Events</div>\n                <div class=\"blocks_header_link\"><a ui-sref=\"events\">See All</a></div>\n            </div>\n\n\n            <events-carousel ng-if=\"InvstCtrl._opts.dataLoad\"\n                             events=\"InvstCtrl.events\" state=\"'row'\">\n            </events-carousel>\n\n            <div class=\"blocks_header_title\">\n                <div class=\"blocks_header_title_name\">Players</div>\n                <div class=\"blocks_header_link\"><a ui-sref=\"sale-all\">See All</a></div>\n            </div>\n        </div>\n    </div>\n    <div class=\"fullscreen\">\n        <div class=\"invest_sales\">\n            <div class=\"tabs_list tabs_list__single\">\n                <div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'closing'}\"\n                     ng-click=\"InvstCtrl.setFilter('closing')\">Closing\n                </div>\n            </div>\n        </div>\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\n        <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 148 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" ng-cloak>\r\n    <div class=\"col-md-12\">\r\n        <div class=\"header\">\r\n            <a ui-sref=\"profile\">\r\n                <div class=\"header_profile\"></div>\r\n            </a>\r\n            <div class=\"header_logo\">LOGO</div>\r\n            <div class=\"header_filter\"></div>\r\n        </div>\r\n        <div class=\"invest_events\">\r\n            <div class=\"blocks_header_title\">\r\n                <div class=\"blocks_header_title_name\">Events</div>\r\n                <div class=\"blocks_header_link\"><a ui-sref=\"events\">See All</a></div>\r\n            </div>\r\n\r\n\r\n            <events-carousel ng-if=\"InvstCtrl._opts.dataLoad\"\r\n                             events=\"InvstCtrl.events\" state=\"'row'\">\r\n            </events-carousel>\r\n\r\n            <div class=\"blocks_header_title\">\r\n                <div class=\"blocks_header_title_name\">Players</div>\r\n                <div class=\"blocks_header_link\"><a ui-sref=\"sale-all\">See All</a></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"fullscreen\">\r\n        <div class=\"invest_sales\">\r\n            <div class=\"tabs_list tabs_list__single\">\r\n                <div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': InvstCtrl.filter == 'closing'}\"\r\n                     ng-click=\"InvstCtrl.setFilter('closing')\">Closing\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\r\n        <sales sales=\"InvstCtrl.sales\" state=\"'invest'\"></sales>\r\n\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"container\">\n    <div class=\"header\">\n        <a ui-sref=\"invest\"><div class=\"header_back\"></div></a>\n        <div class=\"header_title\">Players</div>\n        <div class=\"header_empty\"></div>\n    </div>\n    </div>\n    <div class=\"fullscreen\">\n        <div class=\"invest_sales\">\n            <div class=\"tabs_list tabs_list__single\" >\n                <div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'closing'}\"\n                     ng-click=\"SaleAllCtrl.setFilter('closing')\">Closing\n                </div>\n                <!--<div class=\"tabs_item\"\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'markup'}\"\n                     ng-click=\"SaleAllCtrl.setFilter('markup')\">Lowest markup\n                </div>-->\n            </div>\n        </div>\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>";
 
 /***/ }),
 /* 149 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"container\">\r\n    <div class=\"header\">\r\n        <a ui-sref=\"invest\"><div class=\"header_back\"></div></a>\r\n        <div class=\"header_title\">Players</div>\r\n        <div class=\"header_empty\"></div>\r\n    </div>\r\n    </div>\r\n    <div class=\"fullscreen\">\r\n        <div class=\"invest_sales\">\r\n            <div class=\"tabs_list tabs_list__single\" >\r\n                <div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'closing'}\"\r\n                     ng-click=\"SaleAllCtrl.setFilter('closing')\">Closing\r\n                </div>\r\n                <!--<div class=\"tabs_item\"\r\n                     ng-class=\"{'tabs_item__active': SaleAllCtrl.filter == 'markup'}\"\r\n                     ng-click=\"SaleAllCtrl.setFilter('markup')\">Lowest markup\r\n                </div>-->\r\n            </div>\r\n        </div>\r\n        <!--<div class=\"swipe-wr full_sc events_player\"></div>-->\r\n        <sales sales=\"SaleAllCtrl.sales\" state=\"'invest'\"></sales>\r\n\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row\">\n\n    <div class=\"binds event-list-main-wr col-md-12\">\n        <div class=\"header\">\n            <a ui-sref=\"invest\"><div class=\"goback goback_unset\"></div></a>\n            <div class=\"header_logo\">Events</div>\n            <div class=\"header_filter\"></div>\n        </div>\n\n        <div class=\"all_events-wr\">\n\n\n            <events ng-if=\"EvntsLstCtrl._opts.dataLoad\"\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\n            </events>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
 
 /***/ }),
 /* 150 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n\r\n    <div class=\"binds event-list-main-wr col-md-12\">\r\n        <div class=\"header\">\r\n            <a ui-sref=\"invest\"><div class=\"goback goback_unset\"></div></a>\r\n            <div class=\"header_logo\">Events</div>\r\n            <div class=\"header_filter\"></div>\r\n        </div>\r\n\r\n        <div class=\"all_events-wr\">\r\n\r\n\r\n            <events ng-if=\"EvntsLstCtrl._opts.dataLoad\"\r\n                    events=\"EvntsLstCtrl.events\" state=\"'list'\">\r\n            </events>\r\n\r\n        </div>\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"binds event-list-main-wr\">\n\n        <div class=\"all_events-wr\">\n            <div class=\"event_card_list\">\n                <div class=\"selected_event event_card_list_img\" style=\"border-radius: 0px\">\n                    <img src=\"/images/select_event_bg.png\" alt=\"\">\n                    <a ui-sref=\"invest\"><div class=\"event_card_list_back\"></div></a>\n                    <div class=\"event_card_list_open\"></div>\n                </div>\n                <div class=\"event_card_list_info col-md-12\">\n                    <div class=\"event_card_list_wr\">\n                        <div class=\"event_card_title\" ng-bind=\"EventInfoCtrl.event.title\"></div>\n                        <div class=\"blocks_header_link event_card_details_link\">\n                            <a class=\"\" ui-sref=\"event-info({id:EventInfoCtrl.event.id})\">See info</a>\n                        </div>\n                        <div class=\"event_card_attr\">£{%EventInfoCtrl.event.fund%} GTD</div>\n                        <div class=\"event_card_attr\" ng-bind=\"EventInfoCtrl.event.date\"></div>\n                        <div class=\"blocks_header_title_name event_card_subevent_list_title\">Event\n                            list\n                        </div>\n                    </div>\n                    <div class=\"event_card_list_subevents\"\n                         ng-repeat=\"(key, subevent) in EventInfoCtrl.event.subevents\" ng-class=\"{' event_card_list_last_child':EventInfoCtrl.event.subevents.length == key+1 }\">\n                        <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\n                        <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\n                        <div class=\"event_card_date\" ng-bind=\"EventInfoCtrl.event.date\"></div>\n                        <div class=\"event_card__see_more\"></div>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
 
 /***/ }),
 /* 151 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"binds event-list-main-wr\">\r\n\r\n        <div class=\"all_events-wr\">\r\n            <div class=\"event_card_list\">\r\n                <div class=\"selected_event event_card_list_img\" style=\"border-radius: 0px\">\r\n                    <img src=\"/images/select_event_bg.png\" alt=\"\">\r\n                    <a ui-sref=\"invest\"><div class=\"event_card_list_back\"></div></a>\r\n                    <div class=\"event_card_list_open\"></div>\r\n                </div>\r\n                <div class=\"event_card_list_info col-md-12\">\r\n                    <div class=\"event_card_list_wr\">\r\n                        <div class=\"event_card_title\" ng-bind=\"EventInfoCtrl.event.title\"></div>\r\n                        <div class=\"blocks_header_link event_card_details_link\">\r\n                            <a class=\"\" ui-sref=\"event-info({id:EventInfoCtrl.event.id})\">See info</a>\r\n                        </div>\r\n                        <div class=\"event_card_attr\">£{%EventInfoCtrl.event.fund%} GTD</div>\r\n                        <div class=\"event_card_attr\" ng-bind=\"EventInfoCtrl.event.date\"></div>\r\n                        <div class=\"blocks_header_title_name event_card_subevent_list_title\">Event\r\n                            list\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"event_card_list_subevents\"\r\n                         ng-repeat=\"(key, subevent) in EventInfoCtrl.event.subevents\" ng-class=\"{' event_card_list_last_child':EventInfoCtrl.event.subevents.length == key+1 }\">\r\n                        <div class=\"event_card_title\" ng-bind=\"subevent.title\"></div>\r\n                        <div class=\"event_card_fund\">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>\r\n                        <div class=\"event_card_date\" ng-bind=\"EventInfoCtrl.event.date\"></div>\r\n                        <div class=\"event_card__see_more\"></div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n\r\n</div>\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"event_detail__header\">\n        <div class=\"event_detail__header_title\" ng-bind=\"EventCtrl.event.title\"></div>\n        <div class=\"event_detail__header_date\" ng-bind=\"EventCtrl.event.date\"></div>\n        <a ui-sref=\"invest\" class=\"goback\">\n\n        </a>\n    </div>\n\n    <div class=\"courusel_no_limit_wr\">\n\n        <div class=\"courusel_no_limit_content\">\n            <div class=\"courusel_no_limit_item_wr\">\n                <div class=\"courusel_no_limit_item\">\n\n                        <div class=\"courusel_item\"\n                             ng-repeat=\"item in EventCtrl.event.subevents\"\n                             ng-bind=\"item.title\"\n                             ng-click=\"EventCtrl.getSale(item.id)\"\n                             ng-class=\"{'main_event': EventCtrl.opened == item.id}\">\n                        </div>\n\n                </div>\n            </div>\n\n\n\n            <div class=\"event_detail_info\">\n\n                <div class=\"event_card_title\">Buy in £1,000,000 • £500,000 GTE</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"EventCtrl.event.date\"></div>\n                <div class=\"event_card_attr\">\n                    Casino Sochi, Sochi, Russia\n                </div>\n            </div>\n\n            <sales sales=\"EventCtrl.sales\" state=\"'invest'\" subevent=\"false\"></sales>\n\n        </div>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 152 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"event_detail__header\">\n        <div class=\"event_detail__header_title\" ng-bind=\"EventCtrl.event.title\"></div>\n        <div class=\"event_detail__header_date\" ng-bind=\"EventCtrl.event.date\"></div>\n        <a ui-sref=\"invest\" class=\"goback\">\n\n        </a>\n    </div>\n\n    <div class=\"courusel_no_limit_wr\">\n\n        <div class=\"courusel_no_limit_content\">\n            <div class=\"courusel_no_limit_item_wr\">\n                <div class=\"courusel_no_limit_item\">\n\n                        <div class=\"courusel_item\"\n                             ng-repeat=\"item in EventCtrl.event.subevents\"\n                             ng-bind=\"item.title\"\n                             ng-click=\"EventCtrl.getSale(item.id)\"\n                             ng-class=\"{'main_event': EventCtrl.opened == item.id}\">\n                        </div>\n\n                </div>\n            </div>\n\n\n\n            <div class=\"event_detail_info\">\n\n                <div class=\"event_card_title\">Buy in £1,000,000 • £500,000 GTE</div>\n\n                <div class=\"event_card_attr\" ng-bind=\"EventCtrl.event.date\"></div>\n                <div class=\"event_card_attr\">\n                    Casino Sochi, Sochi, Russia\n                </div>\n            </div>\n\n            <sales sales=\"EventCtrl.sales\" state=\"'invest'\" subevent=\"false\"></sales>\n\n        </div>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
+module.exports = "<div class=\"row\" ng-cloak>\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <div class=\"header_profile\"></div>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter_empty\" ></div>\n        </div>\n        <bids-carousel\n                       bids=\"BidsCtrl.bids\"\n        >\n        </bids-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>";
 
 /***/ }),
 /* 153 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\" ng-cloak>\r\n    <div class=\"col-md-12\">\r\n        <div class=\"header\">\r\n            <div class=\"header_profile\"></div>\r\n            <div class=\"header_logo\">LOGO</div>\r\n            <div class=\"header_filter_empty\" ></div>\r\n        </div>\r\n        <bids-carousel\r\n                       bids=\"BidsCtrl.bids\"\r\n        >\r\n        </bids-carousel>\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n\r\n</div>";
+module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"tabs-wr\">\n           <div class=\"page_title col-md-12\">\n                Bids\n                <a ui-sref=\"bids\" class=\"goback\" href=\"/bids/invest\">\n\n                </a>\n            </div>\n            <div class=\"tabs_list\">\n\n                <a class=\"tabs_item\"\n                   ui-sref=\"bids-filter({filter: menuItem.name})\"\n                   ng-repeat=\"menuItem in BidsCtrl.menu\"\n                   ng-bind=\"menuItem.name\"\n                   ng-class=\"{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}\"\n                ></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids state=\"'list'\" class=\"bids_row__fullscreen\" bids=\"BidsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>\n";
 
 /***/ }),
 /* 154 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n\n        <div class=\"tabs-wr\">\n           <div class=\"page_title col-md-12\">\n                Bids\n                <a ui-sref=\"bids\" class=\"goback\" href=\"/bids/invest\">\n\n                </a>\n            </div>\n            <div class=\"tabs_list\">\n\n                <a class=\"tabs_item\"\n                   ui-sref=\"bids-filter({filter: menuItem.name})\"\n                   ng-repeat=\"menuItem in BidsCtrl.menu\"\n                   ng-bind=\"menuItem.name\"\n                   ng-class=\"{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}\"\n                ></a>\n            </div>\n            <div class=\"slider_container slider_container__full\">\n                <div class=\"swipe-wr full_sc\">\n                    <bids state=\"'list'\" class=\"bids_row__fullscreen\" bids=\"BidsCtrl.bids\"></bids>\n                </div>\n            </div>\n        </div>\n\n\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n\n</div>\n";
+module.exports = "<div class=\"row\">\n    <div class=\"col-md-12\">\n        <div class=\"header\">\n            <div class=\"header_profile\"></div>\n            <div class=\"header_logo\">LOGO</div>\n            <div class=\"header_filter_empty\" ></div>\n        </div>\n        <a ui-sref=\"sale-create\">\n            <div class=\"creact_sale\">\n                Create a Sale\n            </div>\n        </a>\n\n        <sales-carousel sales=\"SaleCtrl.sales\" state=\"'row'\"></sales-carousel>\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 155 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"header\">\r\n            <div class=\"header_profile\"></div>\r\n            <div class=\"header_logo\">LOGO</div>\r\n            <div class=\"header_filter_empty\" ></div>\r\n        </div>\r\n        <a ui-sref=\"sale-create\">\r\n            <div class=\"creact_sale\">\r\n                Create a Sale\r\n            </div>\r\n        </a>\r\n\r\n        <sales-carousel sales=\"SaleCtrl.sales\" state=\"'row'\"></sales-carousel>\r\n        <span ng-include=\"'tpl/view/footer.template.html'\"></span>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"row sale_form_wr\">\n    <div class=\"sale_form col-md-12\">\n        <div class=\"page_title col-md-12\">\n            Create new sale\n            <a ui-sref=\"bids\" class=\"goback\" href=\"/sale/\" style=\"left: 0\">\n\n            </a>\n        </div>\n        <div class=\"sale_form_content\">\n            <div class=\"blocks_header_title_name sale_form_title\">\n                Event and buy-in\n            </div>\n\n\n            <label class=\"blocks_header_title_name\">Event</label>\n            <div layout=\"row\" layout-align=\"start_stretch\">\n                <md-select class=\"md-no-underline form-Select-theme\"\n                           ng-change=\"SaleFrmCtrl.getSubevents()\"\n                           ng-model=\"SaleFrmCtrl.sale.event_id\" placeholder=\"Choose an event\">\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.events\">{%item.title%}</md-option>\n                </md-select>\n            </div>\n\n\n            <label class=\"blocks_header_title_name\">Flight</label>\n            <div layout=\"row\" layout-align=\"start_stretch\">\n                <md-select class=\"md-no-underline form-Select-theme\"\n                           ng-model=\"SaleFrmCtrl.sale.sub_event_id\" placeholder=\"Choose an Flight\">\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.subevents\">{%item.title%}</md-option>\n                </md-select>\n            </div>\n\n\n\n\n\n            <div class=\"card__attribute card__attribute_static\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Buy-in</span><br>\n                    <span class=\"card__attribute_value\">$3000</span>\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Closing time</span><br>\n                    <span class=\"card__attribute_value\">10:44, 10 Apr 2018</span>\n                </div>\n\n            </div>\n            <div class=\"hr\"></div>\n            <div class=\"blocks_header_title_name sale_form_title\">Offer</div>\n            <div class=\"card__attribute\">\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Share</span><br>\n                    <input ng-model=\"SaleFrmCtrl.sale.share\" type=\"number\" placeholder=\"0\">\n\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Markup</span><br>\n                    <input ng-model=\"SaleFrmCtrl.sale.markup\" type=\"number\" placeholder=\"1.0\">\n\n                </div>\n                <div class=\"sale_card_list_atr_item\">\n                    <span>Amount $</span><br>\n                    <input ng-model=\"SaleFrmCtrl.sale.amount\" type=\"number\" placeholder=\"0\">\n                </div>\n\n            </div>\n\n        </div>\n        <div class=\"button creact_sale_btn\" ng-click=\"SaleFrmCtrl.createSale()\">Create a Sale</div>\n    </div>\n</div>\n";
 
 /***/ }),
 /* 156 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row sale_form_wr\">\r\n    <div class=\"sale_form col-md-12\">\r\n        <div class=\"page_title col-md-12\">\r\n            Create new sale\r\n            <a ui-sref=\"bids\" class=\"goback\" href=\"/sale/\" style=\"left: 0\">\r\n\r\n            </a>\r\n        </div>\r\n        <div class=\"sale_form_content\">\r\n            <div class=\"blocks_header_title_name sale_form_title\">\r\n                Event and buy-in\r\n            </div>\r\n\r\n\r\n            <label class=\"blocks_header_title_name\">Event</label>\r\n            <div layout=\"row\" layout-align=\"start_stretch\">\r\n                <md-select class=\"md-no-underline form-Select-theme\"\r\n                           ng-change=\"SaleFrmCtrl.getSubevents()\"\r\n                           ng-model=\"SaleFrmCtrl.sale.event_id\" placeholder=\"Choose an event\">\r\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.events\">{%item.title%}</md-option>\r\n                </md-select>\r\n            </div>\r\n\r\n\r\n            <label class=\"blocks_header_title_name\">Flight</label>\r\n            <div layout=\"row\" layout-align=\"start_stretch\">\r\n                <md-select class=\"md-no-underline form-Select-theme\"\r\n                           ng-model=\"SaleFrmCtrl.sale.sub_event_id\" placeholder=\"Choose an Flight\">\r\n                    <md-option value=\"{%item.id%}\" ng-repeat=\"item in SaleFrmCtrl.subevents\">{%item.title%}</md-option>\r\n                </md-select>\r\n            </div>\r\n\r\n\r\n\r\n\r\n\r\n            <div class=\"card__attribute card__attribute_static\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Buy-in</span><br>\r\n                    <span class=\"card__attribute_value\">$3000</span>\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Closing time</span><br>\r\n                    <span class=\"card__attribute_value\">10:44, 10 Apr 2018</span>\r\n                </div>\r\n\r\n            </div>\r\n            <div class=\"hr\"></div>\r\n            <div class=\"blocks_header_title_name sale_form_title\">Offer</div>\r\n            <div class=\"card__attribute\">\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Share</span><br>\r\n                    <input ng-model=\"SaleFrmCtrl.sale.share\" type=\"number\" placeholder=\"0\">\r\n\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Markup</span><br>\r\n                    <input ng-model=\"SaleFrmCtrl.sale.markup\" type=\"number\" placeholder=\"1.0\">\r\n\r\n                </div>\r\n                <div class=\"sale_card_list_atr_item\">\r\n                    <span>Amount $</span><br>\r\n                    <input ng-model=\"SaleFrmCtrl.sale.amount\" type=\"number\" placeholder=\"0\">\r\n                </div>\r\n\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"button creact_sale_btn\" ng-click=\"SaleFrmCtrl.createSale()\">Create a Sale</div>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div class=\"manage_sale_wr\">\n\n    <div class=\"header\">\n        <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\n        <div class=\"header_title\">My sale</div>\n        <div class=\"header_filter_empty\"></div>\n    </div>\n\n    <div class=\"event_card_title\">MILLIONS Russia, 1A</div>\n    <!--<span class=\"buyin_span\">Buy in $5,000 + $300</span>-->\n\n    <div class=\"binds-item__game_info card__event_info\">\n        <div class=\"geme__text card__event_info_item\">\n            <div class=\"card__event_info_attr\">\n                Buy in $5,000 + $300\n            </div>\n        </div>\n\n\n        <div class=\"card__attribute manage_sale_atr\">\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                <span>Closes in</span><br>\n                <span class=\"card__attribute_value ng-binding\">73 days</span>\n            </div>\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                <span>Share sold</span><br>\n                <span class=\"card__attribute_value\">5%</span>\n            </div>\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                <span>Amount raised</span><br>\n                <span class=\"card__attribute_value ng-binding\">$1892</span>\n            </div>\n\n        </div>\n        <div class=\"card__attribute manage_sale_atr\">\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                <span>Markup</span><br>\n\n                <input type=\"number\" placeholder=\"1.00\">\n            </div>\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                <span>Share</span><br>\n\n                <input type=\"number\" placeholder=\"1.38%\">\n            </div>\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\n                <span>Value</span><br>\n\n                <input type=\"number\" placeholder=\"$1938\">\n            </div>\n        </div>\n    </div>\n\n    <div class=\"modal_type_bids\">\n        <div class=\"blocks_header_title_name\">\n            HIGHEST BIDS\n        </div>\n\n        <div class=\"modal_type_bids_type\">\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\n                <div>$1,182.22</div>\n                <div></div>\n            </div>\n        </div>\n        <div class=\"modal_type_bids_type\">\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\n                <div>$1,182.22</div>\n                <div></div>\n            </div>\n        </div>\n        <div class=\"modal_type_bids_type\">\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\n                <div>$1,182.22</div>\n                <div class=\"modal_type_bids__item_confirm\"></div>\n            </div>\n        </div>\n\n\n    </div>\n\n    <hr>\n\n    <div class=\"my_sale_attention\">\n        Your sale is almost finished, top-up your sale if you want sell more\n    </div>\n\n    <div class=\"manage_sale_btn button\">\n        Increase your share\n    </div>\n\n</div>\n\n\n\n";
 
 /***/ }),
 /* 157 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"manage_sale_wr\">\r\n\r\n    <div class=\"header\">\r\n        <div class=\"header_close\" ng-click=\"$ctrl.close()\"></div>\r\n        <div class=\"header_title\">My sale</div>\r\n        <div class=\"header_filter_empty\"></div>\r\n    </div>\r\n\r\n    <div class=\"event_card_title\">MILLIONS Russia, 1A</div>\r\n    <!--<span class=\"buyin_span\">Buy in $5,000 + $300</span>-->\r\n\r\n    <div class=\"binds-item__game_info card__event_info\">\r\n        <div class=\"geme__text card__event_info_item\">\r\n            <div class=\"card__event_info_attr\">\r\n                Buy in $5,000 + $300\r\n            </div>\r\n        </div>\r\n\r\n\r\n        <div class=\"card__attribute manage_sale_atr\">\r\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                <span>Closes in</span><br>\r\n                <span class=\"card__attribute_value ng-binding\">73 days</span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                <span>Share sold</span><br>\r\n                <span class=\"card__attribute_value\">5%</span>\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                <span>Amount raised</span><br>\r\n                <span class=\"card__attribute_value ng-binding\">$1892</span>\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"card__attribute manage_sale_atr\">\r\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                <span>Markup</span><br>\r\n\r\n                <input type=\"number\" placeholder=\"1.00\">\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                <span>Share</span><br>\r\n\r\n                <input type=\"number\" placeholder=\"1.38%\">\r\n            </div>\r\n            <div class=\"sale_card_list_atr_item manage_sale_atr_item\">\r\n                <span>Value</span><br>\r\n\r\n                <input type=\"number\" placeholder=\"$1938\">\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"modal_type_bids\">\r\n        <div class=\"blocks_header_title_name\">\r\n            HIGHEST BIDS\r\n        </div>\r\n\r\n        <div class=\"modal_type_bids_type\">\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\r\n                <div>$1,182.22</div>\r\n                <div></div>\r\n            </div>\r\n        </div>\r\n        <div class=\"modal_type_bids_type\">\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\r\n                <div>$1,182.22</div>\r\n                <div></div>\r\n            </div>\r\n        </div>\r\n        <div class=\"modal_type_bids_type\">\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1</div>\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">1.53%</div>\r\n            <div class=\"modal_type_bids__item modal_bids_item_color_highest\">\r\n                <div>$1,182.22</div>\r\n                <div class=\"modal_type_bids__item_confirm\"></div>\r\n            </div>\r\n        </div>\r\n\r\n\r\n    </div>\r\n\r\n    <hr>\r\n\r\n    <div class=\"my_sale_attention\">\r\n        Your sale is almost finished, top-up your sale if you want sell more\r\n    </div>\r\n\r\n    <div class=\"manage_sale_btn button\">\r\n        Increase your share\r\n    </div>\r\n\r\n</div>\r\n\r\n\r\n\r\n";
+module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n    <div class=\"page_title col-md-12\">\n        Sales\n        <a ui-sref=\"sale\" class=\"goback\" href=\"/bids/invest\">\n\n        </a>\n\n    </div>\n        <div class=\"tabs_list\">\n\n            <a class=\"tabs_item\"\n               ui-sref=\"sale-filter({filter: menuItem.name})\"\n               ng-repeat=\"menuItem in SaleCtrl.menu\"\n               ng-bind=\"menuItem.name\"\n               ng-class=\"{'tabs_item__active_entity':SaleCtrl.$stateParams.filter === menuItem.name}\"\n            ></a>\n        </div>\n\n\n\n    <sales sales=\"SaleCtrl.sales\" state=\"'list'\" ></sales>\n\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
 
 /***/ }),
 /* 158 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"fullscreen\">\n    <div class=\"page_title col-md-12\">\n        Sales\n        <a ui-sref=\"sale\" class=\"goback\" href=\"/bids/invest\">\n\n        </a>\n\n    </div>\n        <div class=\"tabs_list\">\n\n            <a class=\"tabs_item\"\n               ui-sref=\"sale-filter({filter: menuItem.name})\"\n               ng-repeat=\"menuItem in SaleCtrl.menu\"\n               ng-bind=\"menuItem.name\"\n               ng-class=\"{'tabs_item__active_entity':SaleCtrl.$stateParams.filter === menuItem.name}\"\n            ></a>\n        </div>\n\n\n\n    <sales sales=\"SaleCtrl.sales\" state=\"'list'\" ></sales>\n\n    <span ng-include=\"'tpl/view/footer.template.html'\"></span>\n\n</div>\n";
+module.exports = "<div class=\"wallet-wr\">\n    <div class=\"balance col-md-12\">\n        <div class=\"wallet_header\">\n            <div class=\"w_to_profile\"></div>\n            <div class=\"w_to_setting\"></div>\n        </div>\n        <div class=\"balance_count\">\n            $ <span>500</span>.00\n        </div>\n        <div class=\"balance__title\">My balance</div>\n        <div class=\"make_deposit\">Make Deposit</div>\n    </div>\n    <div class=\"transaction_wr\">\n        <span>Transactions</span>\n        <div class=\"transaction_tabs_list-wr\">\n            <div class=\"transaction_tabs_list\">\n                <div>April 2018</div>\n                <div class=\"main_event\">May 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n    </div>\n</div>\n<span ng-include=\"'tpl/view/footer.template.html'\"></span>\n";
 
 /***/ }),
 /* 159 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wallet-wr\">\n    <div class=\"balance col-md-12\">\n        <div class=\"wallet_header\">\n            <div class=\"w_to_profile\"></div>\n            <div class=\"w_to_setting\"></div>\n        </div>\n        <div class=\"balance_count\">\n            $ <span>500</span>.00\n        </div>\n        <div class=\"balance__title\">My balance</div>\n        <div class=\"make_deposit\">Make Deposit</div>\n    </div>\n    <div class=\"transaction_wr\">\n        <span>Transactions</span>\n        <div class=\"transaction_tabs_list-wr\">\n            <div class=\"transaction_tabs_list\">\n                <div>April 2018</div>\n                <div class=\"main_event\">May 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n                <div>June 2018</div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n        <div class=\"transaction_details\">\n            <div class=\"transaction_details_header\">\n                <div class=\"details_header_date\">22 May</div>\n                <div class=\"details_header_delta\">+360,00</div>\n            </div>\n            <div class=\"pending\">\n                <div class=\"pending_img\"><img src=\"/images/pending_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">North Andreane<br><span>Pending</span></div>\n                <div class=\"transaction_delta transaction_delta_plus\">+560.34<br><span>20 240.00</span></div>\n            </div>\n            <div class=\"sent\">\n                <div class=\"sent_img\"><img src=\"/images/sent_arrow.png\" alt=\"\"></div>\n                <div class=\"transaction_to\">Corwinborough<br> <span>Sent</span></div>\n                <div class=\"transaction_delta transaction_delta_minus\">-200.12<br><span>20 240.00</span></div>\n            </div>\n        </div>\n    </div>\n</div>\n<span ng-include=\"'tpl/view/footer.template.html'\"></span>\n";
+module.exports = "<div class=\"header\">\n    <div class=\"header_close\"></div>\n    <div class=\"header_title\">Yor profile</div>\n    <div class=\"header_empty\"></div>\n</div>\n<div class=\"profile_info\">\n    <div class=\"profile_img\">\n        <img src=\"/images/user_logo.png\">\n    </div>\n    <div class=\"profile_hint\">Tap to replace photo</div>\n    <div class=\"profile_name\">Milton Jimenez</div>\n    <div class=\"profile_button\">Link Party Poker account</div>\n</div>\n<div class=\"profile_block_title\">settings</div>\n<div class=\"profile_menu\">\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_notification\"></div>\n            <div class=\"profile_menu_item__text\">Notifications and sounds</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_privacy\"></div>\n            <div class=\"profile_menu_item__text\">Privacy and security</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_account\"></div>\n            <div class=\"profile_menu_item__text\">Account info</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item \">\n        <div>\n            <div class=\"icon icon_support\"></div>\n            <div class=\"profile_menu_item__text\">Support</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_tell\"></div>\n            <div class=\"profile_menu_item__text\">Tell a friend</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n    <div class=\"profile_menu_item\">\n        <div>\n            <div class=\"icon icon_setting\"></div>\n            <div class=\"profile_menu_item__text\">Settings</div>\n        </div>\n        <div class=\"profile_menu_item__more\"></div>\n    </div>\n\n</div>\n\n";
 
 /***/ }),
 /* 160 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"header\">\r\n    <div class=\"header_close\"></div>\r\n    <div class=\"header_title\">Yor profile</div>\r\n    <div class=\"header_empty\"></div>\r\n</div>\r\n<div class=\"profile_info\">\r\n    <div class=\"profile_img\">\r\n        <img src=\"/images/user_logo.png\">\r\n    </div>\r\n    <div class=\"profile_hint\">Tap to replace photo</div>\r\n    <div class=\"profile_name\">Milton Jimenez</div>\r\n    <div class=\"profile_button\">Link Party Poker account</div>\r\n</div>\r\n<div class=\"profile_block_title\">settings</div>\r\n<div class=\"profile_menu\">\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_notification\"></div>\r\n            <div class=\"profile_menu_item__text\">Notifications and sounds</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_privacy\"></div>\r\n            <div class=\"profile_menu_item__text\">Privacy and security</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_account\"></div>\r\n            <div class=\"profile_menu_item__text\">Account info</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item \">\r\n        <div>\r\n            <div class=\"icon icon_support\"></div>\r\n            <div class=\"profile_menu_item__text\">Support</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_tell\"></div>\r\n            <div class=\"profile_menu_item__text\">Tell a friend</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n    <div class=\"profile_menu_item\">\r\n        <div>\r\n            <div class=\"icon icon_setting\"></div>\r\n            <div class=\"profile_menu_item__text\">Settings</div>\r\n        </div>\r\n        <div class=\"profile_menu_item__more\"></div>\r\n    </div>\r\n\r\n</div>\r\n\r\n";
-
-/***/ }),
-/* 161 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53023,51 +53022,51 @@ function middlewares(PermRoleStore) {
 }
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = hack;
 hack.$inject = ['$templateCache'];
-var menu_footer = __webpack_require__(163);
-var bid_place = __webpack_require__(164);
+var menu_footer = __webpack_require__(162);
+var bid_place = __webpack_require__(163);
 function hack($templateCache) {
     $templateCache.put('tpl/view/footer.template.html', menu_footer);
     $templateCache.put('tpl/view/bid-place.template.html', bid_place);
 }
 
 /***/ }),
+/* 162 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"footer\" ng-controller=\"MenuController as MenuCtrl\">\n    <a ui-sref=\"invest\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'invest'}\">\n            <div class=\"footer_img footer_img_invest\" ng-class=\"{'footer_img__active_invest': MenuCtrl.menuItem == 'invest'}\"></div>\n            invest\n        </div>\n    </a>\n    <a ui-sref=\"bids\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'bids'}\">\n            <div class=\"footer_img footer_img_bids\" ng-class=\"{'footer_img__active_bids': MenuCtrl.menuItem == 'bids'}\"></div>\n            bids\n        </div>\n    </a>\n    <a ui-sref=\"sale\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'sales'}\">\n            <div class=\"footer_img footer_img_sale\" ng-class=\"{'footer_img__active_sale': MenuCtrl.menuItem == 'sales'}\"></div>\n            sale\n        </div>\n    </a>\n    <a ui-sref=\"wallet\">\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'wallet'}\">\n            <div class=\"footer_img footer_img_wallet\" ng-class=\"{'footer_img__active_wallet': MenuCtrl.menuItem == 'wallet'}\"></div>\n            wallet\n        </div>\n    </a>\n</div>\n";
+
+/***/ }),
 /* 163 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"footer\" ng-controller=\"MenuController as MenuCtrl\">\r\n    <a ui-sref=\"invest\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'invest'}\">\r\n            <div class=\"footer_img footer_img_invest\" ng-class=\"{'footer_img__active_invest': MenuCtrl.menuItem == 'invest'}\"></div>\r\n            invest\r\n        </div>\r\n    </a>\r\n    <a ui-sref=\"bids\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'bids'}\">\r\n            <div class=\"footer_img footer_img_bids\" ng-class=\"{'footer_img__active_bids': MenuCtrl.menuItem == 'bids'}\"></div>\r\n            bids\r\n        </div>\r\n    </a>\r\n    <a ui-sref=\"sale\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'sales'}\">\r\n            <div class=\"footer_img footer_img_sale\" ng-class=\"{'footer_img__active_sale': MenuCtrl.menuItem == 'sales'}\"></div>\r\n            sale\r\n        </div>\r\n    </a>\r\n    <a ui-sref=\"wallet\">\r\n        <div class=\"footer_item\" ng-class=\"{'footer_item__active': MenuCtrl.menuItem == 'wallet'}\">\r\n            <div class=\"footer_img footer_img_wallet\" ng-class=\"{'footer_img__active_wallet': MenuCtrl.menuItem == 'wallet'}\"></div>\r\n            wallet\r\n        </div>\r\n    </a>\r\n</div>\r\n";
+module.exports = "    <div class=\"modal_wrapper\">\n    <div class=\"row col-md-12\">\n    <div class=\"place_a_bit\">\n        <div class=\"place_a_bit__title\">\n            Place a bid\n            <div class=\"pab__close\">\n                X\n            </div>\n        </div>\n        <div class=\"binds-item-wr\">\n            <div class=\"binds-item__profile_info\">\n                <div class=\"profile__photo\">\n                    <img src=\"/images/pl_5.png\" alt=\"\">\n                </div>\n                <div class=\"profile_text\">\n                    <div class=\"profile__name\">\n                        Louise Romero\n                    </div>\n                    <div class=\"profile__country\">\n                        MILLIONS Russia, 1A\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div class=\"binds-item__game_info\">\n                <div class=\"geme__text\">\n                    <div class=\"by_in\">\n                        Buy in £ <span>1,000,000</span>\n                    </div>\n                    <div class=\"gte\">\n                        £ <span>1,000,000</span> GTE\n                    </div>\n                </div>\n                <div class=\"game_atrs\">\n                    <div class=\"game_atrs__markup\">\n                        <span>Markup</span><br>\n                        1.20\n                    </div>\n                    <div class=\"game_atrs__value\">\n                        <span>Share</span><br>\n                        20%</div>\n                    <div class=\"game_atrs__date_start\">\n                        <span>Value</span><br>\n                        1.20</div>\n                </div>\n            </div>\n        </div>\n        <div class=\"highest_bids\">\n            <div class=\"highest_bids__title\">\n                HIGHEST BIDS\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n            <div class=\"block_2\">\n                <input type=\"text\" placeholder=\"1.09\" id=\"123\">\n                <input type=\"text\" placeholder=\"0.53%\">\n                <input type=\"text\" placeholder=\"$442\">\n            </div>\n        </div>\n        <div class=\"matched_bid\">\n            <div class=\"matched_bid__title\">\n                MATCHED BID\n            </div>\n            <div class=\"block_1\">\n                <input type=\"text\" placeholder=\"1\">\n                <input type=\"text\" placeholder=\"1.53%\">\n                <input type=\"text\" placeholder=\"$1,182.22\">\n            </div>\n\n        </div>\n        <div class=\"add_bid\">\n            Add new bid\n        </div>\n    </div>\n</div>\n</div>";
 
 /***/ }),
 /* 164 */
-/***/ (function(module, exports) {
-
-module.exports = "    <div class=\"modal_wrapper\">\r\n    <div class=\"row col-md-12\">\r\n    <div class=\"place_a_bit\">\r\n        <div class=\"place_a_bit__title\">\r\n            Place a bid\r\n            <div class=\"pab__close\">\r\n                X\r\n            </div>\r\n        </div>\r\n        <div class=\"binds-item-wr\">\r\n            <div class=\"binds-item__profile_info\">\r\n                <div class=\"profile__photo\">\r\n                    <img src=\"/images/pl_5.png\" alt=\"\">\r\n                </div>\r\n                <div class=\"profile_text\">\r\n                    <div class=\"profile__name\">\r\n                        Louise Romero\r\n                    </div>\r\n                    <div class=\"profile__country\">\r\n                        MILLIONS Russia, 1A\r\n                    </div>\r\n\r\n                </div>\r\n\r\n            </div>\r\n\r\n            <div class=\"binds-item__game_info\">\r\n                <div class=\"geme__text\">\r\n                    <div class=\"by_in\">\r\n                        Buy in £ <span>1,000,000</span>\r\n                    </div>\r\n                    <div class=\"gte\">\r\n                        £ <span>1,000,000</span> GTE\r\n                    </div>\r\n                </div>\r\n                <div class=\"game_atrs\">\r\n                    <div class=\"game_atrs__markup\">\r\n                        <span>Markup</span><br>\r\n                        1.20\r\n                    </div>\r\n                    <div class=\"game_atrs__value\">\r\n                        <span>Share</span><br>\r\n                        20%</div>\r\n                    <div class=\"game_atrs__date_start\">\r\n                        <span>Value</span><br>\r\n                        1.20</div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"highest_bids\">\r\n            <div class=\"highest_bids__title\">\r\n                HIGHEST BIDS\r\n            </div>\r\n            <div class=\"block_1\">\r\n                <input type=\"text\" placeholder=\"1\">\r\n                <input type=\"text\" placeholder=\"1.53%\">\r\n                <input type=\"text\" placeholder=\"$1,182.22\">\r\n            </div>\r\n            <div class=\"block_2\">\r\n                <input type=\"text\" placeholder=\"1.09\" id=\"123\">\r\n                <input type=\"text\" placeholder=\"0.53%\">\r\n                <input type=\"text\" placeholder=\"$442\">\r\n            </div>\r\n        </div>\r\n        <div class=\"matched_bid\">\r\n            <div class=\"matched_bid__title\">\r\n                MATCHED BID\r\n            </div>\r\n            <div class=\"block_1\">\r\n                <input type=\"text\" placeholder=\"1\">\r\n                <input type=\"text\" placeholder=\"1.53%\">\r\n                <input type=\"text\" placeholder=\"$1,182.22\">\r\n            </div>\r\n\r\n        </div>\r\n        <div class=\"add_bid\">\r\n            Add new bid\r\n        </div>\r\n    </div>\r\n</div>\r\n</div>";
-
-/***/ }),
-/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Should already be required, here for clarity
 __webpack_require__(13);
 
 // Load Angular and dependent libs
+__webpack_require__(99);
 __webpack_require__(100);
-__webpack_require__(101);
 
 // Now load Angular Material
-__webpack_require__(168);
+__webpack_require__(167);
 
 // Export namespace
 module.exports = 'ngMaterial';
 
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports) {
 
 /**
@@ -57342,7 +57341,7 @@ angular.module('ngAnimate', [], function initAngularHelpers() {
 
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports) {
 
 /**
@@ -57775,7 +57774,7 @@ ngAriaModule.directive('ngShow', ['$aria', function($aria) {
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports) {
 
 /*!
@@ -94891,13 +94890,13 @@ angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-TH
 })(window, window.angular);;window.ngMaterial={version:{full: "1.1.10"}};
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
