@@ -5,17 +5,18 @@
 @import "blocks/material";
 
 body, html {
-  background-color: #fff;
+  background-color: #fff !important;
   padding: 0;
   margin: 0;
+}
+
+body * {
+  font-family: "Open Sans", sans-serif;
 }
 
 
 ::-webkit-input-placeholder{
     color: #000000;
-}
-body * {
-  font-family: "Open Sans", sans-serif;
 }
 
 .your_profile_wr_display {
