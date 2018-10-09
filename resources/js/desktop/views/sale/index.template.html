@@ -1,18 +1,25 @@
 <div class="deskwr">
     <main-menu></main-menu>
     <div class="main_content">
-        <div class="sale_container">
+        <div class="sale_container" ng-repeat="(key,items) in SaleCtrl.sales">
             <div class="sale_title">
                 <div>
-                    <div class="sale_title__text">Active Sales</div>
-                    <!--<a ui-sref="sale-create">--><div class="sale_title__btn" ng-click="SaleCtrl.showAdvanced($event)">Create a Sale</div><!--</a>-->
+                    <div class="sale_title__text" ng-bind="key"></div>
+                    <div class="sale_title__text">sales</div>
+                    <div class="sale_title__btn"
+                         ng-if="items[0].status == 1"
+                         ng-click="SaleCtrl.showCreateForm($event)">Create a Sale
+                    </div>
                 </div>
-                <a ui-sref="sale-active" class="sale_title__link">See all</a>
+                <a ui-sref="sale-list({type:key})" class="sale_title__link">See all</a>
             </div>
             <div class="sale_row">
-                <div class="sale_card sale_card__yellow">
+                <div class="sale_card"
+                     ng-class="{'sale_card__yellow':item.status == 1,
+                                'sale_card__grey':item.status == 2, }"
+                     ng-repeat="item in items">
                     <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
+                        <span ng-bind="item.event.title"></span>
                     </div>
                     <div class="sale_card__price">
                         <span>Buy in $5,000 + $300</span>
@@ -20,162 +27,19 @@
                     <div class="sale_card__options">
                         <div class="sale_card__options_column">
                             <span>Closes</span><span>73 days</span>
-
                         </div>
                         <div class="sale_card__options_column">
-
                             <span>Bid</span><span>1.11</span>
                         </div>
                         <div class="sale_card__options_column">
                             <span>Value</span><span>£2,404</span>
-
                         </div>
                         <div class="sale_card__options_column">
                             <span>Start time</span><span>Closed</span>
                         </div>
                     </div>
                 </div>
-                <div class="sale_card sale_card__yellow">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale_card sale_card__yellow">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-        <div class="sale_container">
-            <div class="sale_title">
-                <div>
-                    <div class="sale_title__text">Closed Sales</div>
-                </div>
-                <a ui-sref="sale-closed" class="sale_title__link">See all</a>
-            </div>
-            <div class="sale_row">
-                <div class="sale_card sale_card__grey">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale_card sale_card__grey">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale_card sale_card__grey">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
     </div>
 </div>
-
-

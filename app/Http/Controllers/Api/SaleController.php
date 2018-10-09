@@ -21,8 +21,11 @@ class SaleController extends Controller
     {
         $user = Auth::user();
         if ($request->get('user_id') != $user->id) App::abort(401);
-        $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->get();
-        $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->get();
+
+        $limit=$request->get('limit');
+
+        $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit($limit)->get();
+        $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit($limit)->get();
         return response()->json([
             'data' => [
                 'active' => SaleResource::collection($saleActive),

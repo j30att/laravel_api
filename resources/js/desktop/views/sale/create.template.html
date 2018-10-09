@@ -1,238 +1,74 @@
-<div class="deskwr">
-    <main-menu></main-menu>
-    <div class="main_content">
-        <div class="sale_container">
-            <div class="sale_title">
-                <div>
-                    <div class="sale_title__text">Active Sales</div>
-                    <a ui-sref="sale-create"><div class="sale_title__btn">Create a Sale</div></a>
-                </div>
-                <a ui-sref="sale-active" class="sale_title__link">See all</a>
+<md-dialog>
+    <md-dialog-content>
+        <div class="modal_content">
+            <div class="modal_content__title">
+                <div>Create new sale</div>
+                <div class="close" ng-click="vm.cancel()"></div>
             </div>
-            <div class="sale_row">
-                <div class="sale_card sale_card__yellow">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
+            <div class="modal_content__sale">
 
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
+                <div class="modal_content__sale_title">
+                    Event and buy-in
                 </div>
-                <div class="sale_card sale_card__yellow">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
+                <label class="modal_content__sale_title modal_content__sale_title_select">Event</label>
+                <div class="modal_content__sale_select">
+                    <md-select class="md-no-underline"
+                               ng-change="vm.getSubevents()"
+                               ng-model="vm.sale.event_id" placeholder="Choose an event">
+                        <md-option value="{%item.id%}" ng-repeat="item in vm.events">{%item.title%}</md-option>
+                    </md-select>
                 </div>
-                <div class="sale_card sale_card__yellow">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
+
+                <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
+                <div class="modal_content__sale_select">
+                    <md-select class="md-no-underline form-Select-theme"
+                               ng-change="vm.getSubevents()"
+                               ng-model="vm.sale.event_id" placeholder="Choose an event">
+                        <md-option value="{%item.id%}" ng-repeat="item in vm.events">{%item.title%}</md-option>
+                    </md-select>
+                </div>
+
+                <div class="attributs_wrapper">
+                    <div class="attributs_item">
+                        <span>Buy-in</span>
+                        <input type="text" placeholder="$3,000">
                     </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
+                    <div class="attributs_item">
+                        <span>Closing time</span>
+                        <input type="text" placeholder="10:44, 10 Apr 2018">
                     </div>
                 </div>
 
+                <div class="modal_content__sale_title">Offer</div>
+
+                <div class="attributs_wrapper">
+                    <div class="attributs_item attributs_item__border">
+                        <span>Share</span>
+                        <input type="text" placeholder="0">
+                    </div>
+                    <div class="attributs_item attributs_item__border">
+                        <span>Share</span>
+                        <input type="text" placeholder="1">
+                    </div>
+                    <div class="attributs_item attributs_item__border">
+                        <span>Share</span>
+                        <input type="text" placeholder="0">
+                    </div>
+                </div>
             </div>
+
         </div>
-        <div class="sale_container">
-            <div class="sale_title">
-                <div>
-                    <div class="sale_title__text">Closed Sales</div>
-                </div>
-                <a ui-sref="sale-closed" class="sale_title__link">See all</a>
-            </div>
-            <div class="sale_row">
-                <div class="sale_card sale_card__grey">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
+    </md-dialog-content>
 
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale_card sale_card__grey">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="sale_card sale_card__grey">
-                    <div class="sale_card__title">
-                        <span>WSOP International Circuit - Rotterdam</span>
-                    </div>
-                    <div class="sale_card__price">
-                        <span>Buy in $5,000 + $300</span>
-                    </div>
-                    <div class="sale_card__options">
-                        <div class="sale_card__options_column">
-                            <span>Closes</span><span>73 days</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-
-                            <span>Bid</span><span>1.11</span>
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Value</span><span>£2,404</span>
-
-                        </div>
-                        <div class="sale_card__options_column">
-                            <span>Start time</span><span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="modal_wrapper">
-        <div class="modal_content_wrapper">
-            <div class="modal_content">
-                <div class="modal_content__title">
-                    <div>Create new sale</div>
-                    <div class="close"></div>
-                </div>
-                <div class="modal_content__sale">
-
-                    <div class="modal_content__sale_title">
-                        Event and buy-in
-                    </div>
-                    <label class="modal_content__sale_title modal_content__sale_title_select">Event</label>
-                    <div class="modal_content__sale_select">space for select</div>
-
-                    <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
-                    <div class="modal_content__sale_select">space for select</div>
-
-                    <div class="attributs_wrapper">
-                        <div class="attributs_item">
-                            <span>Buy-in</span>
-                            <input type="text" placeholder="$3,000">
-                        </div>
-                        <div class="attributs_item">
-                            <span>Closing time</span>
-                            <input type="text" placeholder="10:44, 10 Apr 2018">
-                        </div>
-                    </div>
-
-                    <div class="modal_content__sale_title">Offer</div>
-
-                    <div class="attributs_wrapper">
-                        <div class="attributs_item attributs_item__border">
-                            <span>Share</span>
-                            <input type="text" placeholder="0">
-                        </div>
-                        <div class="attributs_item attributs_item__border">
-                            <span>Share</span>
-                            <input type="text" placeholder="1">
-                        </div>
-                        <div class="attributs_item attributs_item__border">
-                            <span>Share</span>
-                            <input type="text" placeholder="0">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal_foter">
-                <div class="modal_foter__buttons">
-                    <div class="button_text">Cancel</div>
-                    <div class="button_blue">Create a sale</div>
-                </div>
-            </div>
+    <div class="modal_foter">
+        <div class="modal_foter__buttons">
+            <div class="button_text" ng-click="vm.cancel()">Cancel</div>
+            <div class="button_blue">Create a sale</div>
         </div>
     </div>
-</div>
+
+
+</md-dialog>
 
 
 
