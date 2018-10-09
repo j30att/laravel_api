@@ -1621,6 +1621,7 @@ a {
 }
 
 .event_item {
+  min-width: 24%;
   margin: 0 9px 24px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
