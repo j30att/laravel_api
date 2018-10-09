@@ -93216,11 +93216,11 @@ var ngAria = __webpack_require__(66);
 var ngAnimate = __webpack_require__(65);
 
 var app = angular.module('poker', [ngMaterial, ngAria, ngAnimate, ngRouter, __WEBPACK_IMPORTED_MODULE_0__Controllers__["a" /* default */], __WEBPACK_IMPORTED_MODULE_1__Components__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__Services__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5_angular_permission__["permission"], __WEBPACK_IMPORTED_MODULE_5_angular_permission__["uiPermission"]]);
-/*
-angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {
+
+angular.module('poker').config(['$mdThemingProvider', function ($mdThemingProvider) {
     $mdThemingProvider.theme('formSelect');
     $mdThemingProvider.setDefaultTheme('formSelect');
-}]);*/
+}]);
 
 app.config(['$interpolateProvider', function ($interpolateProvider) {
     $interpolateProvider.startSymbol('{%');
