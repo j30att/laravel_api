@@ -1115,6 +1115,10 @@ md-select {
   left: calc(50% - 8px);
 }
 
+.wallet_container {
+  width: 996px;
+}
+
 .wallet_title {
   width: 100%;
   display: -webkit-box;
@@ -1242,6 +1246,8 @@ md-select {
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 8px;
 }
 
 .wallet_table__content_row {
