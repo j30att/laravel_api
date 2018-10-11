@@ -17,19 +17,17 @@ class SaleManage {
 
     }
     $onInit(){
-        this.$scope.$on('sidenav-open', (event, data) => {
-            this.buildToggler('right');
+        this.$scope.$on('sidenavManage-open', (event, data) => {
+            console.log('sidenavManage-open');
+            this.buildToggler('right_manage');
         });
-
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            console.log(fixed);
             this.$state.modalOpened = fixed
         });
 
     }
 
     buildToggler(componentId) {
-        this.getEvents();
         this.$mdSidenav(componentId).toggle();
         if(this.$mdSidenav(componentId).isOpen()){
             this.$state.modalOpened = true;
@@ -47,7 +45,7 @@ SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', '
 
 export const SaleManageComponent = {
     bindings: {
-        func:     '&',
+
     },
     template: require('./sale-manage.template.html'),
     controller: SaleManage,

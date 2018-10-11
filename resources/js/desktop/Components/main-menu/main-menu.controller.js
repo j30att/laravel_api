@@ -1,6 +1,16 @@
 class MainMenuController {
-    constructor($state) {
+    constructor($state, $scope) {
+        this.$scope = $scope;
         this.url = $state.current.url;
+        console.log('main menu');
+    }
+
+
+    toggleSidenav() {
+        console.log('main menu 11111111111');
+        this.$scope.$broadcast('sidenav-profile-open', () =>{
+            console.log('open sidenav')
+        });
     }
 
     isActive(string) {
@@ -12,7 +22,7 @@ class MainMenuController {
 
 }
 
-MainMenuController.$inject = ['$state'];
+MainMenuController.$inject = ['$state', '$scope'];
 
 export const MainMenuComponent = {
     bindings: {

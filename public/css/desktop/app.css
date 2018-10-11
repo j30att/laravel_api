@@ -1029,7 +1029,7 @@ md-sidenav {
   border-radius: 4px;
   position: absolute;
   top: 0;
-  right: 87px;
+  right: 0;
   border-left: 2px solid #ffffff;
   background: url("/images/confirm.png") no-repeat center;
   background-color: #e7f7e5;

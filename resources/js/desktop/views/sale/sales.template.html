@@ -1,0 +1,46 @@
+<div class="deskwr">
+<main-menu></main-menu>
+    <div class="main_content">
+        <div class="events_tabs-wr">
+            <div class="events_tabs_nav">
+                <ul class="events_tabs_list">
+                    <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
+                </ul>
+                
+            </div>
+            <table class="table_events_list main_event_table">
+                <thead class="table_events_head">
+                <tr>
+                    <th>From</th>
+                    <th>Event</th>
+                    <th>Buy in</th>
+                    <th>GTE</th>
+                    <th>Markup</th>
+                    <th>Share</th>
+                    <th>Time</th>
+                </tr>
+                </thead>
+                <tbody class="table_events_body">
+                <tr ng-repeat="(index,sale) in SaleInvestCtrl.sales"
+                    ng-click="SaleInvestCtrl.toggleSidenav()">
+                    <td class="t_from t_from_event">
+                        <div class="t_from_img">
+                            <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
+                        </div>
+                        <span ng-bind="sale.creator.name"></span>
+                    </td>
+                    <td class="t_event" ng-bind="sale.event.title"></td>
+                    <td class="t_buy_in" ng-bind="sale.event.buy_in | currency:'£':0"></td>
+                    <td class="t_gte" ng-bind="sale.event.fund | currency:'£':0"></td>
+                    <td class="t_markup" ng-bind="sale.markup"></td>
+                    <td class="t_share">{% sale.share %}%</td>
+                    <!--<td class="t_time">{% sale.event.date_start %}</td>-->
+                    <td class="t_time">< {%10 + index%} hours</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<bid-place></bid-place>
