@@ -4,6 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 5%;
+    background-color: #ffffff;
+    z-index: 500;
 
     &_title {
         font-size: 16px;
@@ -32,6 +38,11 @@
         background-size: 80%;
     }
 }
+.header_empty_height{
+    width: 1px;
+    height: 45px;
+}
+
 
 
 
