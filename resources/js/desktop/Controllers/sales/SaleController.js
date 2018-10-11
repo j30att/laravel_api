@@ -1,6 +1,7 @@
 class SaleController {
-    constructor(SalesResourceService) {
+    constructor(SalesResourceService, $scope) {
         this.SalesResourceService = SalesResourceService;
+        this.$scope = $scope;
         this.user = window.__user;
         this._opts = {dataLoad: false, limit:3, openedForm:false};
 
@@ -10,13 +11,15 @@ class SaleController {
         });
     }
 
-    togglerCreateForm(){
-        this._opts.openedForm = !this._opts.openedForm;
+    toggleSidenav() {
+        this.$scope.$broadcast('sidenav-open', () =>{
+            console.log('open sidenav')
+        });
     }
 
 };
 
-SaleController.$inject = ['SalesResourceService'];
+SaleController.$inject = ['SalesResourceService', '$scope'];
 
 export {SaleController};
 

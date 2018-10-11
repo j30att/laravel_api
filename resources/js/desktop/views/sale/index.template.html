@@ -8,7 +8,7 @@
                     <div class="sale_title__text">sales</div>
                     <div class="sale_title__btn"
                          ng-if="items[0].status == 1"
-                         ng-click="SaleCtrl.togglerCreateForm()">
+                         ng-click="SaleCtrl.toggleSidenav()">
                          Create a Sale
                     </div>
                 </div>
@@ -44,4 +44,4 @@
         </div>
     </div>
 </div>
-<sale-create state="SaleCtrl._opts.openedForm"></sale-create>
+<sale-create></sale-create>

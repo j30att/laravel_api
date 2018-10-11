@@ -2,8 +2,9 @@ import {EVENTS_API, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constant
 
 
 class SaleCreate {
-    constructor(SalesResourceService, $mdSidenav, $http, SalesService, $timeout) {
-
+    constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state) {
+        this.$state = $state;
+        this.$scope = $scope;
         this.SalesResourceService = SalesResourceService;
         this.SalesService = SalesService;
         this.$mdSidenav = $mdSidenav;
@@ -23,28 +24,34 @@ class SaleCreate {
             markup: null,
             amount: null,
         };
+        this._opts = {fixed: false};
+        this.isSidenavOpen =false;
+
+
     }
     $onInit(){
-        this.state = false;
+        this.$scope.$on('sidenav-open', (event, data) => {
+            this.buildToggler('right');
+        });
+
+        this.$scope.$watch('isSidenavOpen', (fixed) => {
+            this.$state.modalOpened = fixed
+        });
+
     }
-
-
-    $onChanges(changes) {
-        if (changes.state.currentValue == true) this.buildToggler('right');
-    }
-
 
     buildToggler(componentId) {
         this.getEvents();
         this.$mdSidenav(componentId).toggle();
-
+        if(this.$mdSidenav(componentId).isOpen()){
+            this.$state.modalOpened = true;
+        } else {this.$state.modalOpened = false}
     }
 
     getEvents() {
         this.$http.get(EVENTS_API)
             .then(response => {
                 this.events = response.data.data;
-
             });
     }
 
@@ -104,11 +111,11 @@ class SaleCreate {
 
 };
 
-SaleCreate.$inject = ['SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout'];
+SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
 
 export const SaleCreateComponent = {
     bindings: {
-        state:     '<',
+        func:     '&',
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

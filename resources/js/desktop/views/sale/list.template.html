@@ -8,7 +8,7 @@
                     <a ui-sref="sale-list({type: 'closed'})" class="sale_title__text" ng-class="{'sale_title__text_disabled': SaleFltrCtrl.$stateParams.type !='closed' }">Closed Sales</a>
                 </div>
                 <div>
-                    <div class="sale_title__btn" ng-click="SaleFltrCtrl.togglerCreateForm()">Create a Sale</div>
+                    <div class="sale_title__btn" ng-click="SaleFltrCtrl.toggleSidenav()">Create a Sale</div>
                 </div>
             </div>
             <table class="sale_table" ng-if="SaleFltrCtrl.$stateParams.type == 'active' && SaleFltrCtrl._opts.dataLoad == true">
@@ -67,4 +67,4 @@
         </div>
     </div>
 </div>
-<sale-create state="SaleFltrCtrl._opts.openedForm"></sale-create>
+<sale-create></sale-create>

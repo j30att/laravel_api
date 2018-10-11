@@ -1,9 +1,11 @@
 import {SALE_ACTIVE, SALE_CLOSED} from "../../../common/Constants";
 
 class SaleFilterController {
-    constructor(SalesResourceService, $stateParams) {
+    constructor(SalesResourceService, $stateParams, $scope, $state) {
+        this.$state = $state;
         this.SalesResourceService = SalesResourceService;
         this.$stateParams = $stateParams;
+        this.$scope = $scope;
         this.user = window.__user;
         this.menu = [
             {status: SALE_ACTIVE, name: 'active'},
@@ -29,13 +31,14 @@ class SaleFilterController {
         }
     }
 
-    togglerCreateForm(){
-        this._opts.openedForm = !this._opts.openedForm;
+    toggleSidenav() {
+        this.$scope.$broadcast('sidenav-open', () =>{
+            console.log('open sidenav')
+        });
     }
-
 
 };
 
-SaleFilterController.$inject = ['SalesResourceService', '$stateParams'];
+SaleFilterController.$inject = ['SalesResourceService', '$stateParams', '$scope', '$state'];
 
 export {SaleFilterController};
