@@ -11448,6 +11448,15 @@ a.text-dark:focus {
   font-size: 16px;
 }
 
+.header_title .event_detail__header_title {
+  margin-top: -10px;
+  text-align: center;
+}
+
+.header_title .event_detail__header_date {
+  text-align: center;
+}
+
 .header_empty {
   width: 20px;
   height: 20px;
@@ -11477,6 +11486,22 @@ a.text-dark:focus {
 .header_empty_height {
   width: 1px;
   height: 45px;
+}
+
+.header_empty_height_min {
+  height: 33px;
+}
+
+.header_empty_height_max {
+  height: 60px;
+}
+
+.courusel_fixed {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  top: 44px;
+  z-index: 600;
 }
 
 .header {

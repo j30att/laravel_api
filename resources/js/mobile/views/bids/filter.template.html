@@ -8,15 +8,18 @@
                 <div class="header_empty"></div>
             </div>
             <div class="header_empty_height"></div>
-            <div class="tabs_list">
+            <div class="courusel_fixed">
+                <div class="tabs_list">
 
-                <a class="tabs_item"
-                   ui-sref="bids-filter({filter: menuItem.name})"
-                   ng-repeat="menuItem in BidsCtrl.menu"
-                   ng-bind="menuItem.name"
-                   ng-class="{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}"
-                ></a>
+                    <a class="tabs_item"
+                       ui-sref="bids-filter({filter: menuItem.name})"
+                       ng-repeat="menuItem in BidsCtrl.menu"
+                       ng-bind="menuItem.name"
+                       ng-class="{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}"
+                    ></a>
+                </div>
             </div>
+            <div class="header_empty_height header_empty_height_min"></div>
             <div class="slider_container slider_container__full">
                 <div class="swipe-wr full_sc">
                     <bids state="'list'" class="bids_row__fullscreen" bids="BidsCtrl.bids"></bids>

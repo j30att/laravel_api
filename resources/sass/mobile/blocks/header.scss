@@ -13,6 +13,13 @@
 
     &_title {
         font-size: 16px;
+        .event_detail__header_title{
+            margin-top: -10px;
+            text-align: center;
+        }
+        .event_detail__header_date{
+            text-align: center;
+        }
     }
     &_empty {
         width: 20px;
@@ -41,8 +48,20 @@
 .header_empty_height{
     width: 1px;
     height: 45px;
+    &_min{
+        height: 33px;
+    }
+    &_max{
+        height: 60px;
+    }
 }
-
+.courusel_fixed{
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+    top: 44px;
+    z-index: 600;
+}
 
 
 
