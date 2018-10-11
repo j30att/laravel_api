@@ -5,23 +5,30 @@
             <div class="event_content__title">
                 All Events
             </div>
-            <div class="event_content_filter-wr filter-wr">
-                <div ng-repeat="filter in EventsCtrl.filters"
-                     class="filter_item event_content_filter__">
-                    <md-select class="md-no-underline"
-                               ng-model="EventsCtrl.activeFilter[filter.name]"
-                               placeholder="{%filter.placeholder%}">
-                        <md-option ng-repeat="(value, name) in filter.options"
-                                   value="{%value%}">
-                            {%name%}
-                        </md-option>
-                    </md-select>
+            <div class="event_filters__wrapper">
+                <div class="event_filters">
+                    <div ng-repeat="filter in EventsCtrl.filters"
+                         class="event_filters__item">
+                        <md-select class="md-no-underline"
+                                   ng-model="EventsCtrl.activeFilter[filter.name]"
+                                   placeholder="{%filter.placeholder%}">
+                            <md-option ng-repeat="(value, name) in filter.options"
+                                       value="{%value%}">
+                                {%name%}
+                            </md-option>
+                        </md-select>
+                    </div>
                 </div>
+
+                <div class="event-filter_selected-filters">
+
+                </div>
+
             </div>
 
-            <div ng-if="EventsCtrl.events" class="events_item-wr">
+            <div ng-if="EventsCtrl.events" class="events_item-wr" ng-cloak>
                 <a ng-repeat="event in EventsCtrl.events"
-                    ui-sref="invest-events-detail({id:event.id})" class="event_item">
+                   ui-sref="invest-events-detail({id:event.id})" class="event_item">
                     <div class="event_item__pic">
                         <img src="/images/desk/event_pic_{%event.id%}.png" alt="event">
                     </div>
@@ -37,7 +44,6 @@
 
                 </a>
             </div>
-
         </div>
     </div>
 </div>
