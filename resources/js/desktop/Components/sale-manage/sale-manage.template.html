@@ -1,0 +1,70 @@
+<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right">
+    <md-content>
+        <div class="modal_content">
+            <div class="modal_content__title">
+                <div>Create new sale</div>
+                <div class="close" ng-click="$ctrl.close('right')"></div>
+            </div>
+            <div class="modal_content__sale">
+
+                <div class="modal_content__sale_title">
+                    Event and buy-in
+                </div>
+                <label class="modal_content__sale_title modal_content__sale_title_select">Event</label>
+                <div class="modal_content__sale_select">
+                    <md-select class="md-no-underline"
+                               ng-change="$ctrl.getSubevents()"
+                               ng-model="$ctrl.sale.event_id" placeholder="Choose an event">
+                        <md-option value="{%item.id%}" ng-repeat="item in $ctrl.events">{%item.title%}</md-option>
+                    </md-select>
+                </div>
+
+                <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
+                <div class="modal_content__sale_select">
+                    <md-select class="md-no-underline form-Select-theme"
+                               ng-model="$ctrl.sale.sub_event_id"
+                               ng-change="$ctrl.fillStatic()"
+                               placeholder="Choose an subevent">
+                        <md-option value="{%item.id%}" ng-repeat="item in $ctrl.subevents">{%item.title%}</md-option>
+                    </md-select>
+                </div>
+
+                <div class="attributs_wrapper">
+                    <div class="attributs_item">
+                        <span>Buy-in</span>
+                        <input class="input_disabled" type="text" placeholder="$3,000" disabled
+                               ng-model="$ctrl.static.buy_in">
+                    </div>
+                    <div class="attributs_item">
+                        <span>Closing time</span>
+                        <input class="input_disabled" type="text" placeholder="10:44, 10 Apr 2018" disabled
+                               ng-model="$ctrl.static.closing_time">
+                    </div>
+                </div>
+
+                <div class="modal_content__sale_title">Offer</div>
+
+                <div class="attributs_wrapper">
+                    <div class="attributs_item attributs_item__border">
+                        <span>Share</span>
+                        <input type="text" placeholder="10%" ng-model="$ctrl.sale.share" ng-change="$ctrl.calcAmount()">
+                    </div>
+                    <div class="attributs_item attributs_item__border">
+                        <span>Markup</span>
+                        <input type="text" placeholder="1.1" ng-model="$ctrl.sale.markup" ng-change="$ctrl.calcAmount()">
+                    </div>
+                    <div class="attributs_item attributs_item__border">
+                        <span>Amount</span>
+                        <input type="text" placeholder="100%" ng-model="$ctrl.sale.amount" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.close('right')">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.createSale()">Create a sale</div>
+            </div>
+        </div>
+    </md-content>
+</md-sidenav>

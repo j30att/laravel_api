@@ -18,6 +18,10 @@ body * {
   font-family: "Open Sans", sans-serif;
 }
 
+body * :focus{
+  outline: none;
+}
+
 .no_scroll{
   overflow: hidden;
 }
