@@ -1,0 +1,59 @@
+<div class="deskwr">
+    <main-menu></main-menu>
+    <div class="main_content"></div>
+    <div class="modal_content">
+        <div class="modal_content__title">
+            <div>My sale</div>
+            <div class="close" ng-click="vm.cancel()"> </div>
+        </div>
+        <div class="modal_content__bid">
+            <div class="profile_status">
+                <div>
+                    <div>
+                        <div class="profile_status__name">Millions Russia, 1A</div>
+                        <div class="profile_status__event">Buy in $3,234 + $2,004</div>
+                    </div>
+                    <div class="profile_status__gte_and_by">
+                        <div class="profile_status__buyin">£1,000</div>
+                        <div class="profile_status__gte">£500,000 GTE</div>
+                    </div>
+                </div>
+                <div class="profile_status__attributs d-flex">
+                    <div class="profile_status__markup"><span>Closes in</span><br>73 days</div>
+                    <div class="profile_status__share"><span>Share sold</span><br>5%</div>
+                    <div class="profile_status__value"><span>Amount raised</span><br>1.20</div>
+                </div>
+                <div class="profile_status__attributs d-flex">
+                    <div class="profile_status__markup"><span>Markup</span><br>1.20</div>
+                    <div class="profile_status__share"><span>Share</span><br>30%</div>
+                    <div class="profile_status__value"><span>Value</span><br>$1,938</div>
+                </div>
+            </div>
+            <div class="bids_group bids_group__highest_color">
+                <span class="bids_group__title">UNMATCHED BIDS</span>
+                <div class="bids_group__row">
+                    <input type="text" placeholder="1.20">
+                    <input type="text" placeholder="1.53%">
+                    <input type="text" placeholder="$1,182.22">
+                    <div class="bids_group__row_confirm"></div>
+                </div>
+                <div class="bids_group__row">
+                    <input type="text" placeholder="1.09">
+                    <input type="text" placeholder="0.38%">
+                    <input type="text" placeholder="$443">
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <div class="modal_foter">
+        <div class="modal_foter__buttons">
+            <div class="button_text" ng-click="vm.cancel()">Cancel sale</div>
+            <div class="button_blue button_grey" ng-click="vm.createSale()">Pay remaining <span>$3,245</span></div>
+        </div>
+    </div>
+</div>

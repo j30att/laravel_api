@@ -479,12 +479,6 @@
   border-radius: 6px;
   margin-bottom: 16px;
   margin-top: 4px;
-  /*!*delete after add select content*!
-                box-sizing: border-box;
-                padding: 4px;
-                text-transform: uppercase;
-                !*delete after add select content end*!
-*/
 }
 
 .modal_content__sale .attributs_wrapper {
@@ -577,6 +571,13 @@
   font-weight: 600;
   margin-left: 20px;
   cursor: pointer;
+}
+
+.modal_foter__buttons .button_grey {
+  width: auto;
+  padding: 0 27px;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: #000000;
 }
 
 .modal_foter__buttons .button_text {
@@ -944,8 +945,9 @@ md-sidenav {
 }
 
 .modal_content__bid .profile_status__attributs div {
-  margin-right: 68px;
+  margin-right: 0;
   font-size: 15px;
+  width: 25%;
 }
 
 .modal_content__bid .profile_status__attributs div span {
@@ -984,6 +986,7 @@ md-sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .modal_content__bid .bids_group__row input {
@@ -1017,8 +1020,21 @@ md-sidenav {
   color: #000000;
 }
 
-.modal_content__bid .bids_group__row input:last-child {
+.modal_content__bid .bids_group__row input:nth-child(3) {
   width: 220px;
+}
+
+.modal_content__bid .bids_group__row_confirm {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: 87px;
+  border-left: 2px solid #ffffff;
+  background: url("/images/confirm.png") no-repeat center;
+  background-color: #e7f7e5;
+  background-size: 100%;
 }
 
 .modal_content__bid .edit_status {
