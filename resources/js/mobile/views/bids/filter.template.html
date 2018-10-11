@@ -6,10 +6,10 @@
                 <div class="header_empty"><a ui-sref="sale" class="goback" href="/bids/invest"></a></div>
                 <div class="header_title">Bids</div>
                 <div class="header_empty"></div>
-
             </div>
             <div class="header_empty_height"></div>
-            <div class="tabs_list tabs_list_fixed">
+            <div class="tabs_list">
+
                 <a class="tabs_item"
                    ui-sref="bids-filter({filter: menuItem.name})"
                    ng-repeat="menuItem in BidsCtrl.menu"
@@ -17,7 +17,6 @@
                    ng-class="{'tabs_item__active_entity':BidsCtrl.$stateParams.filter === menuItem.name}"
                 ></a>
             </div>
-            <div class="header_empty_height header_empty_height_min"></div>
             <div class="slider_container slider_container__full">
                 <div class="swipe-wr full_sc">
                     <bids state="'list'" class="bids_row__fullscreen" bids="BidsCtrl.bids"></bids>

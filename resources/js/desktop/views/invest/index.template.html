@@ -47,7 +47,7 @@
                 </thead>
                 <tbody class="table_events_body">
                 <tr ng-repeat="(index,sale) in InvestCtrl.sales"
-                    ng-click="InvestCtrl.showCreateForm($event)">
+                    ng-click="InvestCtrl.toggleSidenav()">
                     <td class="t_from t_from_event">
                         <div class="t_from_img">
                             <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
@@ -68,3 +68,4 @@
         </div>
     </div>
 </div>
+<bid-place></bid-place>

@@ -13,12 +13,6 @@
 
     &_title {
         font-size: 16px;
-        .event_detail__header_title{
-            margin-top: -12px;
-        }
-        .event_detail__header_date{
-            text-align: center;
-        }
     }
     &_empty {
         width: 20px;
@@ -47,15 +41,8 @@
 .header_empty_height{
     width: 1px;
     height: 45px;
-    &_min{height: 32px;}
-    &_max{height: 55px;}
 }
-.tabs_list_fixed{
-    position: fixed;
-    background-color: white;
-    z-index: 600;
-    top: 44px;
-}
+
 
 
 
