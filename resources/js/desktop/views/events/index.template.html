@@ -5,19 +5,87 @@
             <div class="event_content__title">
                 All Events
             </div>
-            <div class="event_content_filter-wr filter-wr">
-                <div ng-repeat="filter in EventsCtrl.filters"
-                     class="filter_item event_content_filter__">
-                    <md-select class="md-no-underline"
-                               ng-model="EventsCtrl.activeFilter[filter.name]"
-                               placeholder="{%filter.placeholder%}">
-                        <md-option ng-repeat="(value, name) in filter.options"
-                                   value="{%value%}">
-                            {%name%}
-                        </md-option>
-                    </md-select>
+            <div class="event_filters__wrapper">
+                <div class="event_filters">
+                    <div class="event_filters__item">
+                        <md-select
+                            class="event_filters__item_select md-no-underline"
+                            ng-model="EventsCtrl.activeFilter['date']"
+                            placeholder="{%EventsCtrl.filters.date.placeholder%}">
+                            <md-option
+                                ng-repeat="(value, name) in EventsCtrl.filters.date.options"
+                                ng-value="value">
+                                {%name%}
+                            </md-option>
+                        </md-select>
+                    </div>
+                    <div class="event_filters__item">
+                        <md-select
+                            class="event_filters__item_select md-no-underline"
+                            md-selected-text="EventsCtrl.filters.country.placeholder"
+                            data-md-container-class="selectdemoSelectHeader"
+                            ng-model="EventsCtrl.activeFilter['country']"
+                            placeholder="{%EventsCtrl.filters.country.placeholder%}"
+                            multiple>
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="EventsCtrl.filters.search"
+                                       type="search"
+                                       placeholder="Search for a vegetable.."
+                                       class="demo-header-searchbox md-text">
+                            </md-select-header>
+                            <md-option
+                                ng-repeat="(value, name) in EventsCtrl.filters.country.options | filter:EventsCtrl.filters.search"
+                                ng-value="value">
+                                {%name%}
+                            </md-option>
+                        </md-select>
+                    </div>
+                    <div class="event_filters__item">
+                        <md-select
+                            class="event_filters__item_select md-no-underline"
+                            md-selected-text="EventsCtrl.filters.event.placeholder"
+                            ng-model="EventsCtrl.activeFilter['event']"
+                            placeholder="{%EventsCtrl.filters.event.placeholder%}"
+                            multiple>
+                            <md-option
+                                ng-repeat="(value, name) in EventsCtrl.filters.event.options"
+                                ng-value="value">
+                                {%name%}
+                            </md-option>
+                        </md-select>
+                    </div>
+                    <div class="event_filters__item">
+                        <md-select
+                            class="event_filters__item_select md-no-underline"
+                            ng-model="EventsCtrl.activeFilter['venue']"
+                            placeholder="{%EventsCtrl.filters.venue.placeholder%}">
+                            <md-option
+                                ng-repeat="(value, name) in EventsCtrl.filters.venue.options"
+                                ng-value="value">
+                                {%name%}
+                            </md-option>
+                        </md-select>
+                    </div>
+                    <!--<div ng-repeat="filter in EventsCtrl.filters"
+                         class="event_filters__item">
+                        <md-select class="event_filters__item_select md-no-underline"
+                                   ng-model="EventsCtrl.activeFilter[filter.name]"
+                                   placeholder="{%filter.placeholder%}"
+                                   data-md-container-class="selectdemoSelectHeader"
+                                   multiple>
+                            <md-select-header class="demo-select-header">
+                                <input ng-model="searchTerm"
+                                       type="search"
+                                       placeholder="Search for a vegetable.."
+                                       class="demo-header-searchbox md-text">
+                            </md-select-header>
+                            <md-option ng-repeat="(value, name) in filter.options"
+                                       ng-value="{%value%}">
+                                {%name%}
+                            </md-option>
+                        </md-select>
+                    </div>-->
                 </div>
-            </div>
 
             <div ng-if="EventsCtrl.events" class="events_item-wr">
                 <a ng-repeat="event in EventsCtrl.events"

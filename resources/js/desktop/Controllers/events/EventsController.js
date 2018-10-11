@@ -1,15 +1,23 @@
 class EventsController {
-    constructor(EventsResourceService) {
+    constructor($scope, $element, EventsResourceService) {
+        this.$scope = $scope;
+        this.$element = $element;
         this.EventsResourceService = EventsResourceService;
        
         this._opts = {dataLoad: false};
 
         this.events = [];
-        this.filters = [];
-        this.activeFilter = [];
+        this.filters = {};
+        this.activeFilter = {};
 
         this.getEvents();
         this.getFilters();
+    }
+
+    $onInit(){
+        this.$element.find('input').on('keydown', function(ev) {
+            ev.stopPropagation();
+        });
     }
 
     setFilter(param) {
@@ -35,6 +43,6 @@ class EventsController {
     
 }
 
-EventsController.$inject = ['EventsResourceService'];
+EventsController.$inject = ['$scope', '$element', 'EventsResourceService'];
 
 export {EventsController};

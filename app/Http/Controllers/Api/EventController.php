@@ -139,26 +139,22 @@ class EventController extends Controller
         $countries[0] = 'All regions';
 
         $filters = [
-            [
-                'name' => 'date',
+            'date' => [
                 'placeholder' => 'Last month',
                 'options' => [
                     0 => 'Last month',
                     $lastYear->toDateTimeString() => 'Last year',
                 ]
             ],
-            [
-                'name' => 'event',
+            'event' => [
                 'placeholder' => 'All events',
                 'options' => $events,
             ],
-            [
-                'name' => 'country',
+            'country' => [
                 'placeholder' => 'All regions',
                 'options' => $countries
             ],
-            [
-                'name' => 'venue',
+            'venue' =>  [
                 'placeholder' => 'All venues',
                 'options' => $countries
             ]
