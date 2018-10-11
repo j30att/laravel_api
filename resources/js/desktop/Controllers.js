@@ -19,6 +19,7 @@ import {DialogController} from "./Controllers/DialogController"
 import {SaleController} from "./Controllers/sales/SaleController";
 import {SaleInvestController} from "./Controllers/sales/SaleInvestController";
 import {SaleFilterController} from "./Controllers/sales/SaleFilterController";
+import {EventsDetailController} from "./Controllers/events/EventsDetailController";
 
 import {PopupController} from "./Controllers/PopupController"
 
@@ -46,6 +47,7 @@ module.controller('DialogController', DialogController);
 module.controller('SaleController', SaleController);
 module.controller('PopupController', PopupController);
 module.controller('SaleInvestController', SaleInvestController);
+module.controller('EventsDetailController', EventsDetailController);
 
 export default module.name;
 

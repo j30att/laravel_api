@@ -17,7 +17,6 @@ class SaleController {
     }
 
     toggleSidenavManage() {
-        console.log(111111);
         this.$scope.$broadcast('sidenavManage-open', () =>{
             console.log('open sidenav')
         });
