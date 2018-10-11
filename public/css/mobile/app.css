@@ -11448,14 +11448,6 @@ a.text-dark:focus {
   font-size: 16px;
 }
 
-.header_title .event_detail__header_title {
-  margin-top: -12px;
-}
-
-.header_title .event_detail__header_date {
-  text-align: center;
-}
-
 .header_empty {
   width: 20px;
   height: 20px;
@@ -11485,21 +11477,6 @@ a.text-dark:focus {
 .header_empty_height {
   width: 1px;
   height: 45px;
-}
-
-.header_empty_height_min {
-  height: 32px;
-}
-
-.header_empty_height_max {
-  height: 55px;
-}
-
-.tabs_list_fixed {
-  position: fixed;
-  background-color: white;
-  z-index: 600;
-  top: 44px;
 }
 
 .header {
