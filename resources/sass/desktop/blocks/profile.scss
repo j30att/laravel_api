@@ -1,0 +1,142 @@
+.your_profile{
+    &__title{width: 100%;
+        text-align: left;
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 24px;
+        position: relative;}
+    &_close{width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 7px);
+        font-weight: 200;
+        background: url("/images/desk/players_img/profile_close.png") no-repeat center;}
+    &_info{
+        width: 100%;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+    }
+    &__pic{width: 96px;
+        height: 96px;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-right: 16px;
+        img {
+            width: auto;
+            height: auto;
+        }
+    }
+    &__name{
+        font-size: 20px;
+        font-weight: 700;
+        color: #000000;
+        position: relative;
+    }
+    &_nav{
+        width: 100%;
+    }
+}
+.change_photo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    font-size: 15px;
+    color: #999999;
+    width: 150px;
+    font-weight: 100;
+}
+.link_party{
+    &__pk{
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 32px;
+    }
+    &_inf{
+        width: 100%;
+        background-color: rgba(252, 77, 2, 0.1);
+        padding: 16px 20px;
+        text-align: center;
+        color: #fc4d02;
+        font-size: 15px;
+        box-sizing: border-box;
+        font-weight: 500;
+        border-radius: 6px 6px 0 0;
+    }
+    &_btn{
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+        background-color: #fc4d02;
+        border-radius: 0 0 6px 6px;
+        cursor: pointer;
+    }
+}
+.pr{
+    &_nav{
+        &_list{
+            list-style: none;
+            padding-left: 0;
+        }
+        &_item{
+            height: 54px;
+            line-height: 54px;
+            position: relative;
+            padding-left: 30px;
+            overflow: hidden;
+            a {
+                color: #000;
+                font-size: 16px;
+            }
+        }
+        &_item::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+    &_show_more{
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        right: 0;
+        bottom: 16px;
+        background: url("/images/desk/pr_show_more.png") no-repeat center;
+        cursor: pointer;
+    }
+    &_setting{
+        background: url("/images/b@3x_setting.png") no-repeat left;
+        background-size: 20px;
+    }
+    &_notification {
+        background: url("/images/b@3x_notification.png") no-repeat left;
+        background-size: 20px;
+    }
+    &_privacy {
+        background: url("/images/b@3x_privacy.png") no-repeat left;
+        background-size: 20px;
+    }
+    &_acc_inf {
+        background: url("/images/b_3@3x.png") no-repeat left;
+        background-size: 20px;
+    }
+    &_support {
+        background: url("/images/b@3x_support.png") no-repeat left;
+        background-size: 20px;
+    }
+    &_tell {
+        background: url("/images/b@3x_tell.png") no-repeat left;
+        background-size: 20px;
+    }
+}
+

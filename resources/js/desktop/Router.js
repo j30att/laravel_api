@@ -80,6 +80,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             url: '/sales/manage',
             template: require('./views/sale/manage.template.html')
         })
+        .state ('profile', {
+            url: '/profile',
+            template: require('./views/profile/profile.trmplate.html')
+        })
         .state ('place-bit', {
             url: '/bids/place-a-bit',
             template: require('./views/bids/place.template.html')
