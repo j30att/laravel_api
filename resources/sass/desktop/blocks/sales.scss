@@ -52,16 +52,15 @@
 
     &_row {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
+        flex-wrap: wrap;
         margin: 16px -9px 0;
     }
     &_card {
-        width: 100%;
+        width: 33%;
         border-radius: 4px;
         padding: 12px 16px;
         margin: 0 6px;
-
-
 
         &__yellow {
             background-color: #fff9e8;
