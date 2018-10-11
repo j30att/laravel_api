@@ -37,6 +37,12 @@ class SaleFilterController {
         });
     }
 
+    toggleSidenavManage() {
+        this.$scope.$broadcast('sidenavManage-open', () =>{
+            console.log('open sidenav')
+        });
+    }
+
 };
 
 SaleFilterController.$inject = ['SalesResourceService', '$stateParams', '$scope', '$state'];
