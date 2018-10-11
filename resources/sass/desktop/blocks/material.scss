@@ -1,10 +1,22 @@
 .full_height {
+  width: 500px;
+  box-sizing: border-box;
+  max-height: 100vh;
+  height: 100vh;
   padding: 24px 40px 0 40px;
+}
+
+.md-sidenav-backdrop{
+  position: fixed !important;
+  top: 0 !important;
 }
 
 md-select {
   margin: 0px;
   padding: 4px 0px 0px 10px;
+}
+md-sidenav{
+  position: fixed;
 }
 .md-dialog-container{
   justify-content: flex-end;

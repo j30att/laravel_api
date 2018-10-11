@@ -1,0 +1,83 @@
+<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right">
+    <md-content>
+        <div class="modal_content">
+            <div class="modal_content__title">
+                <div>Place a bid</div>
+                <div class="close" ng-click="vm.cancel()"> </div>
+            </div>
+            <div class="modal_content__bid">
+                <div class="profile_status">
+                    <div>
+                        <div class="profile_status__photo"><img src="/images/desk/players_img/profile_img_8.png"
+                                                                alt="photo"></div>
+                        <div>
+                            <div class="profile_status__name">Louise Romero</div>
+                            <div class="profile_status__event">MILLIONS Russia, 1A</div>
+                        </div>
+                        <div class="profile_status__gte_and_by">
+                            <div class="profile_status__buyin">£1,000</div>
+                            <div class="profile_status__gte">£500,000 GTE</div>
+                        </div>
+                    </div>
+                    <div class="profile_status__attributs d-flex">
+                        <div class="profile_status__markup"><span>Markup</span><br>1.20</div>
+                        <div class="profile_status__share"><span>Share</span><br>30%</div>
+                        <div class="profile_status__value"><span>Value</span><br>1.20</div>
+                    </div>
+                </div>
+                <div class="bids_group bids_group__highest_color">
+                    <span class="bids_group__title">HIGHEST BIDS</span>
+                    <div class="bids_group__row">
+                        <input type="text" placeholder="1.20">
+                        <input type="text" placeholder="1.53%">
+                        <input type="text" placeholder="$1,182.22">
+                    </div>
+                    <div class="bids_group__row">
+                        <input type="text" placeholder="1.09">
+                        <input type="text" placeholder="0.38%">
+                        <input type="text" placeholder="$443">
+                    </div>
+                </div>
+                <div class="bids_group bids_group__matched_color">
+                    <span class="bids_group__title">MATCHED BID</span>
+                    <div class="bids_group__row">
+                        <input type="text" placeholder="1.20">
+                        <input type="text" placeholder="1.53%">
+                        <input type="text" placeholder="$1,182.22">
+                    </div>
+                </div>
+                <div class="bids_group edit_status">
+                    <span class="bids_group__title">MATCHED BID</span>
+                    <div class="bids_group__row">
+                        <input type="text" placeholder="1.20">
+                        <input type="text" placeholder="1.53%">
+                        <input type="text" placeholder="$1,182.22">
+                    </div>
+                    <div class="revocation_bid"></div>
+                    <div class="conf_bid"></div>
+                    <div class="del_bid"></div>
+                </div>
+                <div class="you_bids">
+                    <span class="bids_group__title">YOUR BID</span>
+                    <div class="you_bids__wrapper">
+                        <div class="you_bids__item">
+                            <label>Share</label>
+                            <input type="text" placeholder="1.20">
+                        </div>
+                        <div class="you_bids__item">
+                            <label>Share</label>
+                            <input type="text" placeholder="1.53%">
+                        </div>
+                        <div class="you_bids__item">
+                            <label>Share</label>
+                            <input type="text" placeholder="$1,182.22">
+                        </div>
+                        <div class="add_new"></div>
+                        <div class="you_bids__place_bid">Place a bid</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </md-content>
+</md-sidenav>

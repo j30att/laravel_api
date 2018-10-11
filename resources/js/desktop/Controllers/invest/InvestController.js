@@ -2,11 +2,12 @@ import {DialogController} from "../DialogController";
 import {SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
 
 class InvestController {
-    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService) {
-        this.$window = $window;
-        this.$mdDialog = $mdDialog;
+    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService, $scope) {
         this.EventsResourceService = EventsResourceService;
         this.SalesResourceService = SalesResourceService;
+        this.$mdDialog = $mdDialog;
+        this.$window = $window;
+        this.$scope = $scope;
         this.$http = $http;
 
         this._opts = {dataLoad: false};
@@ -46,30 +47,16 @@ class InvestController {
             });
     }
 
-    showCreateForm(ev) {
-        let vm = this;
-        let elementWrapper ={};
-        elementWrapper.target = document.getElementById('right');
 
-        this.$mdDialog.show({
-            controller: DialogController,
-            controllerAs: 'vm',
-            template: require('../../views/bids/place.template.html'),
-            parent: angular.element(document.body),
-            targetEvent: elementWrapper,
-
-            clickOutsideToClose: true,
-
-        })
-            .then(function (answer) {
-
-            }, function () {
-
-            });
-    };
+    toggleSidenav() {
+        console.log(1111111);
+        this.$scope.$broadcast('sidenav-open', () =>{
+            console.log('open sidenav')
+        });
+    }
 
 }
 
-InvestController.$inject = ['$window', '$http', '$mdDialog','EventsResourceService','SalesResourceService'];
+InvestController.$inject = ['$window', '$http', '$mdDialog','EventsResourceService','SalesResourceService', '$scope'];
 
 export {InvestController};
