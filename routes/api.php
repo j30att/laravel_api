@@ -23,7 +23,8 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::post('sales/lowest', 'Api\SaleController@lowestSales');
     Route::post('sales/closing', 'Api\SaleController@closingSales');
     Route::post('sales/subevent', 'Api\SaleController@subeventSales');
-    Route::post('sales/closing-soon', 'Api\SaleController@closingSoonSales');
+    Route::post('sales/closing-soon', 'Api\SaleController@closingSoonSalesAuth');
+
     Route::apiResource('sale', 'Api\SaleController');
 
     Route::post('events/filtered', 'Api\EventController@filteredEvents');

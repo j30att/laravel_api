@@ -10,42 +10,43 @@
                     <div>
                         <div class="profile_status__photo"><img src="/images/desk/players_img/profile_img_8.png" alt="photo"></div>
                         <div>
-                            <div class="profile_status__name">Louise Romero</div>
-                            <div class="profile_status__event">MILLIONS Russia, 1A</div>
+                            <div class="profile_status__name" ng-bind="$ctrl.sale.creator.name">Louise Romero</div>
+                            <div class="profile_status__event" ng-bind="$ctrl.sale.event.title">MILLIONS Russia, 1A</div>
                         </div>
                         <div class="profile_status__gte_and_by">
-                            <div class="profile_status__buyin">£1,000</div>
-                            <div class="profile_status__gte">£500,000 GTE</div>
+                            <div class="profile_status__buyin">£ <span>1,000</span></div>
+                            <div class="profile_status__gte">£<span>500,000</span> GTE</div>
                         </div>
                     </div>
                     <div class="profile_status__attributs d-flex">
-                        <div class="profile_status__markup"><span>Markup</span><br>1.20</div>
-                        <div class="profile_status__share"><span>Share</span><br>30%</div>
-                        <div class="profile_status__value"><span>Value</span><br>1.20</div>
+                        <div class="profile_status__markup"><span>Markup</span>
+                            <br>
+                            <span ng-bind="$ctrl.sale.markup" style="color: black; font-size: 15px"></span>
+                        </div>
+                        <div class="profile_status__share"><span>Share</span>
+                            <br>
+                            <span ng-bind="$ctrl.sale.share" style="color: black; font-size: 15px"></span>
+                        </div>
+                        <div class="profile_status__value"><span>Value</span>
+                            <br>
+                            <span ng-bind="$ctrl.sale.amount" style="color: black; font-size: 15px"></span>
+                        </div>
                     </div>
                 </div>
-                <div class="bids_group bids_group__highest_color">
-                    <span class="bids_group__title">HIGHEST BIDS</span>
-                    <div class="bids_group__row">
-                        <input type="text" placeholder="1.20">
-                        <input type="text" placeholder="1.53%">
-                        <input type="text" placeholder="$1,182.22">
-                    </div>
-                    <div class="bids_group__row">
-                        <input type="text" placeholder="1.09">
-                        <input type="text" placeholder="0.38%">
-                        <input type="text" placeholder="$443">
-                    </div>
-                </div>
-                <div class="bids_group bids_group__matched_color">
-                    <span class="bids_group__title">MATCHED BID</span>
-                    <div class="bids_group__row">
-                        <input type="text" placeholder="1.20">
-                        <input type="text" placeholder="1.53%">
-                        <input type="text" placeholder="$1,182.22">
+                <div class="bids_group"
+                     ng-class="{'bids_group__highest_color': index == 'highest',
+                                'bids_group__matched_color': index == 'matched',
+                                'bids_group__unmatched_color': index == 'unmatched'}"
+                     ng-repeat="(index,bids) in $ctrl.sale.bids">
+                    <span class="bids_group__title" ng-bind="index"></span>
+                    <div class="bids_group__row" ng-repeat="item in bids">
+
+                        <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
+                        <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
+                        <input type="text" placeholder="{%item.amount | currency%}" ng-disabled="index == 'matched' || index == 'highest'">
                     </div>
                 </div>
-                <div class="bids_group edit_status">
+                <!--<div class="bids_group edit_status">
                     <span class="bids_group__title">MATCHED BID</span>
                     <div class="bids_group__row">
                         <input type="text" placeholder="1.20">
@@ -55,7 +56,7 @@
                     <div class="revocation_bid"></div>
                     <div class="conf_bid"></div>
                     <div class="del_bid"></div>
-                </div>
+                </div>-->
                 <div class="you_bids">
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">

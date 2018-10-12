@@ -15,8 +15,8 @@ class SalesResourceService {
     getMySalesClosed(user_id) {
         return this.$http.post(SALE_MY_CLOSED, {status: SALE_CLOSED, user_id: user_id});
     };
-    getClosingSoonSales() {
-        return this.$http.post(SALE_CLOSING_SOON);
+    getClosingSoonSales(user_id = null) {
+        return this.$http.post(SALE_CLOSING_SOON, {userr_id:user_id});
     };
 
     createMySale(sale){

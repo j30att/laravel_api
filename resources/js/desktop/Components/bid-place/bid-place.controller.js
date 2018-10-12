@@ -44,7 +44,7 @@ BidPlace.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'Sa
 
 export const BidPlaceComponent = {
     bindings: {
-
+        sale: '='
     },
     template: require('./bid-place.template.html'),
     controller: BidPlace,

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+
+
+use App\Http\Resources\Sales\SaleInvestResource;
 use App\Http\Resources\SaleResource;
 use App\Models\Sale;
 use Carbon\Carbon;
@@ -12,15 +15,45 @@ use Illuminate\Support\Facades\Auth;
 
 class SaleController extends Controller
 {
+    public function closingSoonSalesAuth(Request $request)
+    {
+        $user = Auth::user();
+
+        if ($user == null){
+            return $this->closingSoonSales();
+        } else {
+            if ($user->id != $request->get('user_id')) $this->closingSoonSales();
+        }
+
+
+        $sales = Sale::query()
+            ->where('status', SALE::SALE_ACTIVE)
+            ->with('creator')
+            ->with('event')
+            ->with(['bids_matched' => function($query) use ($user){
+                $query->where('user_id', $user->id);
+            }])
+            ->with(['bids_unmatched' => function($query) use ($user){
+                $query->where('user_id', $user->id);
+            }])
+            ->with('bids_highest')
+            ->get()
+            ->sortBy('event.date_end');
+
+        return SaleInvestResource::collection($sales);
+    }
+
     public function closingSoonSales()
     {
         $sales = Sale::query()
             ->where('status', SALE::SALE_ACTIVE)
             ->with('creator')
             ->with('event')
+            ->with('bids_highest')
             ->get()
             ->sortBy('event.date_end');
-        return SaleResource::collection($sales);
+
+        return SaleInvestResource::collection($sales);
     }
 
     /**

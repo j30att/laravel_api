@@ -8,10 +8,9 @@ class SaleController {
         this.SalesResourceService.getMySales(this.user.id, this._opts.limit).then(response =>{
             this.sales = response.data.data;
         });
-
     }
 
-    toggleSidenav() {
+    toggleSidenav(index) {
         this.$scope.$broadcast('sidenav-open', () =>{
             console.log('open sidenav')
         });

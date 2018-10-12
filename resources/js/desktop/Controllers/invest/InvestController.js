@@ -5,6 +5,7 @@ class InvestController {
     constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService, $scope) {
         this.EventsResourceService = EventsResourceService;
         this.SalesResourceService = SalesResourceService;
+        this.user = window.__user;
         this.$mdDialog = $mdDialog;
         this.$window = $window;
         this.$scope = $scope;
@@ -17,7 +18,7 @@ class InvestController {
         this.filter = SALE_CLOSED;
 
         this.getEvents();
-        this.getSales();
+        this.user == null ? this.getSales() : this.getSales(this.user.id);
     }
 
     setFilter(param) {
@@ -48,8 +49,8 @@ class InvestController {
     }
 
 
-    toggleSidenav() {
-        console.log(1111111);
+    toggleSidenav(index) {
+        this.sale = this.sales[index];
         this.$scope.$broadcast('sidenav-open', () =>{
             console.log('open sidenav')
         });
