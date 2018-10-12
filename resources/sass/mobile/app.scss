@@ -464,13 +464,13 @@ main {
     color: #fff !important;
     background: url("/images/login_bg.png")  no-repeat center;
     background-size: 100%;
-    background-position-y: 26%;
+    background-position-y: 10%;
     background-color: black;
 }
 
 
 .login_block{
-    margin-top: 100%;
+    margin-top: 85%;
 }
 
 .buy_stakes{
@@ -483,14 +483,14 @@ main {
 .btn_block{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 24pt;
 
 }
 
 .login_btn,
 a .login_btn{
-    width: 166px;
+    width: 150px;
     height: 48pt;
     line-height: 48pt;
     text-align: center;
@@ -501,7 +501,9 @@ a .login_btn{
     cursor: pointer;
     color: #fff;
 }
-
+.login_btn{
+    margin-right: 10px;
+}
 a .login_in,
 .login_in{
     background-color: rgb(0, 127, 237);

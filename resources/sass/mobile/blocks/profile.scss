@@ -124,15 +124,24 @@ md-input-container{
     }
 
 }
+.md-input-message-animation{
+    background-color: #ffffff;
+}
 /*registration block end*/
-
+.input_wrapper{
+    position: relative;
+    background-color: #ffffff;
+    z-index: 10;
+    margin-bottom: 170px;
+}
 .private_policy{
-    width: 80%;
+    width: 90% !important;
     text-align: center;
     position: fixed;
     bottom: 10px;
-    left: 10%;
+    left: 5%;
     margin: 0 !important;
+    z-index: 5;
 }
 .button_login{
     bottom: 70px;
@@ -142,5 +151,6 @@ md-input-container{
     width: 90% !important;
     left: 5%;
     bottom: 70px;
+    z-index: 5;
 }
 

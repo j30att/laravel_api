@@ -11924,15 +11924,27 @@ md-input-container input::placeholder {
   padding-bottom: 10px;
 }
 
+.md-input-message-animation {
+  background-color: #ffffff;
+}
+
 /*registration block end*/
 
+.input_wrapper {
+  position: relative;
+  background-color: #ffffff;
+  z-index: 10;
+  margin-bottom: 170px;
+}
+
 .private_policy {
-  width: 80%;
+  width: 90% !important;
   text-align: center;
   position: fixed;
   bottom: 10px;
-  left: 10%;
+  left: 5%;
   margin: 0 !important;
+  z-index: 5;
 }
 
 .button_login {
@@ -11944,6 +11956,7 @@ md-input-container input::placeholder {
   width: 90% !important;
   left: 5%;
   bottom: 70px;
+  z-index: 5;
 }
 
 body,
@@ -12413,12 +12426,12 @@ main button {
   color: #fff !important;
   background: url("/images/login_bg.png") no-repeat center;
   background-size: 100%;
-  background-position-y: 26%;
+  background-position-y: 10%;
   background-color: black;
 }
 
 .login_block {
-  margin-top: 100%;
+  margin-top: 85%;
 }
 
 .buy_stakes {
@@ -12434,15 +12447,15 @@ main button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 24pt;
 }
 
 .login_btn,
 a .login_btn {
-  width: 166px;
+  width: 150px;
   height: 48pt;
   line-height: 48pt;
   text-align: center;
@@ -12452,6 +12465,10 @@ a .login_btn {
   border-radius: 10pt;
   cursor: pointer;
   color: #fff;
+}
+
+.login_btn {
+  margin-right: 10px;
 }
 
 a .login_in,
