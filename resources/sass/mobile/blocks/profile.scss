@@ -71,7 +71,33 @@
   }
 }
 
+/*registration block*/
+.md-datepicker-calendar-pane{
+    left:15px !important;
+    .md-datepicker-input-mask{
+        display: none;
+    }
+}
+.register{
+    &_age{
+        width: 100%;
+        margin: 60px auto 20px auto;
+        md-datepicker{
+            .md-datepicker-button{
+                opacity: 0;
+            }
+            .md-datepicker-input-container{
+                width: 100%;
+                input::placeholder{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
 
+        }
+    }
+}
+/*registration block end*/
 
 
 

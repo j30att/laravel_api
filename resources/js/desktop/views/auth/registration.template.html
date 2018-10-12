@@ -1,11 +1,8 @@
-<div class="row" >
-    <div class="personal_inform col-md-12">
-        <div class="personal_inform__title ">
+<div class="login_page_wrapper">
+    <div class="login_page__form_wrapper">
+        <div class="login_page__form_wrapper_title">Registration
             <a ui-sref="index"><div class="goback"></div></a>
-
-            Registration
         </div>
-
         <form ng-submit="RgCtrl.sendRegisterForm($event)" class="form_personal_inf">
             <input type="text"  placeholder="Your name" ng-model="RgCtrl.userName"  required>
             <input type="text"  placeholder="Your e-mail" ng-model="RgCtrl.userEmail" required>

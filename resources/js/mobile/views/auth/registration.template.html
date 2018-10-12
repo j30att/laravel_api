@@ -33,16 +33,23 @@
                     </div>
                 </md-input-container>
 
-                <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
-                    <label>Your Name</label>
-                    <input type="number" ng-model="RgCtrl.userAge" name="clientAge" required>
+                <!--<md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">-->
+                    <!--<label>Your Age</label>-->
+                    <!--<input type="number" ng-model="RgCtrl.userAge" name="clientAge" required>-->
 
-                    <div ng-messages="" role="alert">
-                        <div ng-message-exp="['required']">
-                            Age field cannot be empty.
-                        </div>
-                    </div>
-                </md-input-container>
+                    <!--<div ng-messages="" role="alert">-->
+                        <!--<div ng-message-exp="['required']">-->
+                            <!--Age field cannot be empty.-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</md-input-container>-->
+                <!--age-->
+
+
+               <div class="register_age">
+                    <md-datepicker ng-model="RgCtrl.userAge" md-placeholder="Date of birds" md-hide-icons="calendar"></md-datepicker>
+                </div>
+                <!--age end-->
                 <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
                     <label>Your password</label>
                     <input type="password" ng-model="LgCtrl.userPassword" name="clientPassword" required>

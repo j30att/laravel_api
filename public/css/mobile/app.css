@@ -11833,6 +11833,51 @@ a.text-dark:focus {
   border-radius: 4px;
 }
 
+/*registration block*/
+
+.md-datepicker-calendar-pane {
+  left: 15px !important;
+}
+
+.md-datepicker-calendar-pane .md-datepicker-input-mask {
+  display: none;
+}
+
+.register_age {
+  width: 100%;
+  margin: 60px auto 20px auto;
+}
+
+.register_age md-datepicker .md-datepicker-button {
+  opacity: 0;
+}
+
+.register_age md-datepicker .md-datepicker-input-container {
+  width: 100%;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.register_age md-datepicker .md-datepicker-input-container input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*registration block end*/
+
 body,
 html {
   background-color: #fff;

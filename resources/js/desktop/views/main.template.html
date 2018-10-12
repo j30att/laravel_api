@@ -1,22 +1,14 @@
-<div class="row">
-    <div class="login_page-wr col-md-12">
-        <div class="login_block">
-            <div class="buy_stakes">
-                Buy stakes in poker players in tournaments online and around the world
-            </div>
-            <div class="btn_block">
-                <a ui-sref="auth.login">
-                    <div class="login_btn login_in">Log in</div>
-                </a>
-                <a ui-sref="auth.registration">
-                    <div class="login_btn login_registration" >Register</div>
-                </a>
-            </div>
-            <div class="contine_without_wr">
-                <a class="contine_without" ui-sref="invest">
-                    Continue without registration
-                </a>
-            </div>
-        </div>
+<div class="login_page_wrapper">
+      <div class="login_page__info">Buy stakes in poker players in tournaments online and around the world</div>
+    <div class="login_page__buttons">
+        <a ui-sref="auth.login">
+            <div class="login_page__button login_page__button_login">Log in</div>
+        </a>
+        <a ui-sref="auth.registration">
+            <div class="login_page__button login_page__button_registration">Register</div>
+        </a>
     </div>
+    <a class="contine_without" ui-sref="invest">
+        <div class="without_registration">Continue without registration</div>
+    </a>
 </div>

@@ -1674,6 +1674,184 @@ md-sidenav {
   background-size: 20px;
 }
 
+.login_page {
+  /*login form*/
+  /*login form end*/
+}
+
+.login_page_wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("/images/login_bg.png") no-repeat center;
+  background-size: 60%;
+  background-color: #000000;
+  background-position-y: 10%;
+}
+
+.login_page_wrapper .without_registration {
+  width: 40%;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.login_page__info {
+  width: 60%;
+  margin: auto;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 45%;
+  margin-bottom: 50px;
+}
+
+.login_page__buttons {
+  width: 40%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login_page__buttons a {
+  color: #ffffff;
+}
+
+.login_page__button {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  width: 200px;
+}
+
+.login_page__button_login {
+  background-color: #007fed;
+  border-color: #007fed;
+}
+
+.login_page__button_registration {
+  background-color: inherit;
+  border: 2px solid #ffffff;
+}
+
+.login_page__form_wrapper {
+  width: 50%;
+  margin: auto;
+  margin-top: 38%;
+}
+
+.login_page__form_wrapper_title {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.login_page__form_wrapper form {
+  width: 300px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login_page__form_wrapper form input {
+  border: none;
+  outline: none;
+  height: 50px;
+  border-bottom: 1px solid grey;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login_page__form_wrapper form input::-webkit-input-placeholder {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login_page__form_wrapper form input:-ms-input-placeholder {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.login_page__form_wrapper form input::-ms-input-placeholder {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.login_page__form_wrapper form input::placeholder {
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.login_page__form_wrapper form button {
+  margin-top: 25px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #007fed;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login_page__form_wrapper .private_policy {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+
+.login_page__form_wrapper .private_policy a {
+  color: #ffffff;
+}
+
 body,
 html {
   background-color: #fff !important;

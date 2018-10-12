@@ -1,8 +1,7 @@
-<div class="row" >
-    <div class="personal_inform col-md-12">
-        <div class="personal_inform__title ">
+<div class="login_page_wrapper">
+    <div class="login_page__form_wrapper">
+        <div class="login_page__form_wrapper_title">Please Login
             <a ui-sref="index"><div class="goback"></div></a>
-            Please Login
         </div>
         <form ng-submit="LgCtrl.sendAuthData($event)" class="form_personal_inf">
 
@@ -12,6 +11,5 @@
 
             <button class="button" type="submit"  style="border-radius:10pt;" ng-click="LgCtrl.sendAuthData($event)">Enter</button>
         </form>
-
     </div>
 </div>
