@@ -1,3 +1,4 @@
+import {SALE_CLOSED} from "../../../common/Constants"
 class SaleController {
     constructor(SalesResourceService, $scope) {
         this.SalesResourceService = SalesResourceService;
@@ -16,13 +17,12 @@ class SaleController {
         });
     }
 
-    toggleSidenavManage() {
+    toggleSidenavManage(status) {
+        if(status === SALE_CLOSED) return false;
         this.$scope.$broadcast('sidenavManage-open', () =>{
             console.log('open sidenav')
         });
     }
-
-
 
 };
 
