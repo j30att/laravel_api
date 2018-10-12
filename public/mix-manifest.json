@@ -1,4 +1,6 @@
 {
-    "/js/desktop/app.js": "/js/desktop/app.js",
-    "/css/desktop/app.css": "/css/desktop/app.css"
+    "/js/mobile/app.js": "/js/mobile/app.js",
+    "/css/mobile/app.css": "/css/mobile/app.css",
+    "/css/desktop/app.css": "/css/desktop/app.css",
+    "/js/desktop/app.js": "/js/desktop/app.js"
 }

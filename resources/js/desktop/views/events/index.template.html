@@ -10,6 +10,7 @@
                     <div class="event_filters__item">
                         <md-select
                             class="event_filters__item_select md-no-underline"
+                            data-md-container-class="event_filter_select"
                             ng-model="EventsCtrl.activeFilter['date']"
                             placeholder="{%EventsCtrl.filters.date.placeholder%}">
                             <md-option
@@ -23,15 +24,15 @@
                         <md-select
                             class="event_filters__item_select md-no-underline"
                             md-selected-text="EventsCtrl.filters.event.placeholder"
-                            data-md-container-class="selectdemoSelectHeader"
+                            data-md-container-class="event_filter_select_multiple"
                             ng-model="EventsCtrl.activeFilter['event']"
                             placeholder="{%EventsCtrl.filters.event.placeholder%}"
                             multiple>
-                            <md-select-header class="demo-select-header">
+                            <md-select-header class="event_filter_select-header">
                                 <input ng-model="EventsCtrl.filters.event.search"
                                        type="search"
                                        placeholder="Search events"
-                                       class="demo-header-searchbox md-text">
+                                       class="event_filter_select-searchbox md-text">
                             </md-select-header>
                             <md-option
                                 ng-repeat="(value, name) in EventsCtrl.filters.event.options | optionFilter:EventsCtrl.filters.event.search"
@@ -44,15 +45,15 @@
                         <md-select
                             class="event_filters__item_select md-no-underline form-Select-theme"
                             md-selected-text="EventsCtrl.filters.country.placeholder"
-                            data-md-container-class="selectdemoSelectHeader"
+                            data-md-container-class="event_filter_select_multiple"
                             ng-model="EventsCtrl.activeFilter['country']"
                             placeholder="{%EventsCtrl.filters.country.placeholder%}"
                             multiple>
-                            <md-select-header class="demo-select-header">
+                            <md-select-header class="event_filter_select-header">
                                 <input ng-model="EventsCtrl.filters.country.search"
                                        type="search"
                                        placeholder="Search regions"
-                                       class="demo-header-searchbox md-text">
+                                       class="event_filter_select-searchbox md-text">
                             </md-select-header>
                             <md-option
                                 ng-repeat="(value, name) in EventsCtrl.filters.country.options | optionFilter:EventsCtrl.filters.country.search"
@@ -64,6 +65,7 @@
                     <div class="event_filters__item">
                         <md-select
                             class="event_filters__item_select md-no-underline"
+                            data-md-container-class="event_filter_select"
                             ng-model="EventsCtrl.activeFilter['venue']"
                             placeholder="{%EventsCtrl.filters.venue.placeholder%}">
                             <md-option
