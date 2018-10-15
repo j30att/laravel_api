@@ -1770,9 +1770,9 @@ md-sidenav {
   top: 0;
   left: 0;
   background: url("/images/login_bg.png") no-repeat center;
-  background-size: 60%;
+  background-size: 40%;
   background-color: #000000;
-  background-position-y: 10%;
+  background-position-y: 0;
 }
 
 .login_page_wrapper .without_registration {
@@ -1791,7 +1791,7 @@ md-sidenav {
   font-size: 20px;
   color: #ffffff;
   text-align: center;
-  margin-top: 45%;
+  margin-top: 35%;
   margin-bottom: 50px;
 }
 
@@ -1804,8 +1804,9 @@ md-sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .login_page__buttons a {
@@ -1825,6 +1826,7 @@ md-sidenav {
 .login_page__button_login {
   background-color: #007fed;
   border-color: #007fed;
+  margin-right: 10px;
 }
 
 .login_page__button_registration {
@@ -1835,7 +1837,7 @@ md-sidenav {
 .login_page__form_wrapper {
   width: 50%;
   margin: auto;
-  margin-top: 38%;
+  margin-top: 23%;
 }
 
 .login_page__form_wrapper_title {
@@ -1844,7 +1846,6 @@ md-sidenav {
   color: #ffffff;
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 25px;
   text-transform: uppercase;
 }
 

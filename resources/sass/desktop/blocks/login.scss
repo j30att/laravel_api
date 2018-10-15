@@ -6,9 +6,9 @@
         top: 0;
         left: 0;
         background: url("/images/login_bg.png") no-repeat center;
-        background-size: 50%;
+        background-size: 40%;
         background-color: #000000;
-        background-position-y: 5%;
+        background-position-y: 0;
         .without_registration{
             width: 40%;
             margin: auto;
@@ -62,14 +62,13 @@
     &__form_wrapper{
         width: 50%;
         margin: auto;
-        margin-top: 38%;
+        margin-top: 23%;
         &_title{
             width: 100%;
             text-align: center;
             color: #ffffff;
             font-weight: 700;
             font-size: 18px;
-            margin-bottom: 25px;
             text-transform: uppercase;
         }
         form{
