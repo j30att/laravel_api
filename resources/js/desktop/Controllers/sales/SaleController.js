@@ -16,14 +16,12 @@ class SaleController {
         });
     }
 
-    toggleSidenavManage(status) {
-        if(status === SALE_CLOSED) return false;
-        this.$scope.$broadcast('sidenavManage-open', () =>{
-            console.log('open sidenav')
-        });
+    toggleSidenavManage(item) {
+        if(item.status === SALE_CLOSED) return false;
+        this.$scope.$broadcast('sidenavManage-open', item);
     }
 
-};
+}
 
 SaleController.$inject = ['SalesResourceService', '$scope'];
 

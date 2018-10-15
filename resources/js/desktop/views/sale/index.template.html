@@ -17,7 +17,7 @@
             <div class="sale_row">
                 <div ng-repeat="item in items" class="sale_card_wrapper">
                     <div class="sale_card"
-                         ng-click="SaleCtrl.toggleSidenavManage(item.status)"
+                         ng-click="SaleCtrl.toggleSidenavManage(item)"
                          ng-class="{'sale_card__yellow':item.status == 1,
                                     'sale_card__grey':item.status == 2}">
                         <div class="sale_card__title">

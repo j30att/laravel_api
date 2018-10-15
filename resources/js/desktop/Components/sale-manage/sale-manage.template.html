@@ -10,12 +10,12 @@
                 <div class="profile_status">
                     <div>
                         <div>
-                            <div class="profile_status__name">Millions Russia, 1A</div>
-                            <div class="profile_status__event">Buy in $3,234 + $2,004</div>
+                            <div class="profile_status__name">{% $ctrl.sale.event.title %}</div>
+                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':0%}</div>
                         </div>
                         <div class="profile_status__gte_and_by">
-                            <div class="profile_status__buyin">£1,000</div>
-                            <div class="profile_status__gte">£500,000 GTE</div>
+                            <div class="profile_status__buyin">{% $ctrl.sale.event.buy_in | currency:'£':0%}</div>
+                            <div class="profile_status__gte">{% $ctrl.sale.event.fund | currency:'£':0%} GTE</div>
                         </div>
                     </div>
                     <div class="profile_status__attributs d-flex">
@@ -24,23 +24,19 @@
                         <div class="profile_status__value"><span>Amount raised</span><br>1.20</div>
                     </div>
                     <div class="profile_status__attributs d-flex">
-                        <div class="profile_status__markup"><span>Markup</span><br>1.20</div>
-                        <div class="profile_status__share"><span>Share</span><br>30%</div>
-                        <div class="profile_status__value"><span>Value</span><br>$1,938</div>
+                        <div class="profile_status__markup"><span>Markup</span><br>{% $ctrl.sale.markup %}</div>
+                        <div class="profile_status__share"><span>Share</span><br>{% $ctrl.sale.share %}%</div>
+                        <div class="profile_status__value"><span>Value</span><br>{% $ctrl.sale.amount | currency:'$':0%}</div>
                     </div>
                 </div>
                 <div class="bids_group bids_group__highest_color">
                     <span class="bids_group__title">UNMATCHED BIDS</span>
-                    <div class="bids_group__row">
-                        <input type="text" placeholder="1.20">
-                        <input type="text" placeholder="1.53%">
-                        <input type="text" placeholder="$1,182.22">
+
+                    <div ng-repeat="bids in $ctrl.sale.bids | filter:{status:3}" class="bids_group__row">
+                        <input type="text" value="{%bids.markup%}" disabled>
+                        <input type="text" value="{%bids.share%}%" disabled>
+                        <input type="text" value="{%bids.amount | currency:'$' %}" disabled>
                         <div class="bids_group__row_confirm"></div>
-                    </div>
-                    <div class="bids_group__row">
-                        <input type="text" placeholder="1.09">
-                        <input type="text" placeholder="0.38%">
-                        <input type="text" placeholder="$443">
                     </div>
                 </div>
             </div>
