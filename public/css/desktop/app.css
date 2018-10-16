@@ -1218,6 +1218,10 @@ md-dialog-actions .md-confirm-button {
   position: relative;
 }
 
+.modal_content__bid .bids_group__row:hover .not-confirm {
+  display: inherit;
+}
+
 .modal_content__bid .bids_group__row input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1253,6 +1257,10 @@ md-dialog-actions .md-confirm-button {
   width: 220px;
 }
 
+.modal_content__bid .bids_group__row .not-confirm {
+  display: none;
+}
+
 .modal_content__bid .bids_group__row_confirm {
   width: 40px;
   height: 40px;
@@ -1261,8 +1269,7 @@ md-dialog-actions .md-confirm-button {
   top: 0;
   right: 0;
   border-left: 2px solid #ffffff;
-  background: url("/images/confirm.png") no-repeat center;
-  background-color: #e7f7e5;
+  background: #e7f7e5 url("/images/confirm.png") no-repeat center;
   background-size: 100%;
 }
 
@@ -1405,6 +1412,35 @@ md-dialog-actions .md-confirm-button {
           transform: rotate(90deg);
   top: 50%;
   left: calc(50% - 8px);
+}
+
+.bids_group_blue {
+  width: 300px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  background-color: #edf8fd;
+  margin: 0 auto 24px auto;
+}
+
+.bids_group_blue span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 15px;
+  line-height: 20px;
+  border-left: solid 1px white;
+  padding: 10px 12px;
+}
+
+.bids_group_blue span:first-child {
+  border: none;
+  font-weight: 600;
 }
 
 .wallet_container {

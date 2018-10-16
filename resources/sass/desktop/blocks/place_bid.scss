@@ -78,6 +78,13 @@
                width: 100%;
                display: flex;
                position: relative;
+
+               &:hover{
+                   & .not-confirm{
+                       display: inherit;
+                   }
+               }
+
                input{
                    box-sizing: border-box;
                    width: 100px;
@@ -95,6 +102,11 @@
                input:nth-child(3) {
                    width: 220px;
                }
+
+               & .not-confirm{
+                   display: none;
+               }
+
                &_confirm{
                    width: 40px;
                    height: 40px;
@@ -103,8 +115,7 @@
                    top: 0;
                    right: 0;
                    border-left: 2px solid #ffffff;
-                   background: url("/images/confirm.png") no-repeat center;
-                   background-color: #e7f7e5;
+                   background: #e7f7e5 url("/images/confirm.png") no-repeat center;
                    background-size: 100%;
                }
 
@@ -217,6 +228,29 @@
            top: 50%;
            left: calc(50% - 8px);
        }
+    }
+}
+
+.bids_group_blue{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    border-radius: 4px;
+    background-color: #edf8fd;
+    margin: 0 auto 24px auto;
+
+    & span{
+        display: flex;
+        flex-grow: 1;
+        font-size: 15px;
+        line-height: 20px;
+        border-left: solid 1px white;
+        padding: 10px 12px;
+
+        &:first-child{
+            border:none;
+            font-weight: 600;
+        }
     }
 }
 
