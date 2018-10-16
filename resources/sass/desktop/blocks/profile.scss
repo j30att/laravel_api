@@ -5,7 +5,9 @@
         font-weight: 700;
         color: #000000;
         margin-bottom: 24px;
-        position: relative;}
+        position: relative;
+        min-height: 33px;
+    }
     &_close{width: 20px;
         height: 20px;
         cursor: pointer;
