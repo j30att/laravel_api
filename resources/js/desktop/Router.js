@@ -98,24 +98,26 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controllerAs: 'SaleFltrCtrl',
         })
 
-        .state ('sale-create', {
-            url: '/sales/create',
-            template: require('./views/sale/create.template.html')
-        })
 
         .state ('sale-empty', {
             url: '/sales',
-            template: require('./views/sale/empty.template.html')
+            template: require('./views/sale/empty.template.html'),
+            controller: 'MainController',
+            controllerAs: 'MainCtrl',
         })
 
         .state ('bids-empty', {
             url: '/bids/empty',
-            template: require('./views/bids/empty.template.html')
+            template: require('./views/bids/empty.template.html'),
+            controller: 'MainController',
+            controllerAs: 'MainCtrl',
         })
 
         .state ('wallet-empty', {
             url: '/wallet/empty',
-            template: require('./views/wallet/empty.template.html')
+            template: require('./views/wallet/empty.template.html'),
+            controller: 'MainController',
+            controllerAs: 'MainCtrl',
         })
 
         .state ('profile', {

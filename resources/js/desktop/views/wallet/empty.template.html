@@ -6,8 +6,10 @@
             <div class="main_content__empty_container__title">Your wallet</div>
             <div class="main_content__empty_container__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
             <div class="main_content__empty_container__buttons">
-                <div class="main_content__empty_container__button main_content__empty_container__button__blue">Log In</div>
-                <div class="main_content__empty_container__button">Register</div>
+                <div class="main_content__empty_container__button main_content__empty_container__button__blue"
+                     ng-click="MainCtrl.toggleSidenavLogin()">Log In</div>
+                <div class="main_content__empty_container__button"
+                     ng-click="MainCtrl.toggleSidenavRegistration()">Register</div>
             </div>
         </div>
     </div>
