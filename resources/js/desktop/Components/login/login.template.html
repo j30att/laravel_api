@@ -5,16 +5,13 @@
                 Log In
                 <div class="your_profile_close"></div>
             </div>
-            <form ng-submit=""
-
-                  class="login__form ng-pristine ng-valid-email ng-invalid
-                ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
-
+            <form ng-submit="LgCtrl.sendAuthData($event)"
+                  class="login__form">
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
                     <label for="input_5" class="login__input_label">Username</label>
                     <input md-no-float required="" type="email" placeholder="Enter your username"
                            name="clientEmail"
-                           ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
+                           ng-model="$ctrl.userEmail" minlength="5" maxlength="100"
                            ng-pattern="/^.+@.+\..+$/"
                            class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
                            ng-invalid-required ng-valid-pattern ng-valid-minlength
@@ -25,7 +22,7 @@
                                     style="margin-bottom: 20px;">
                     <label for="input_6" class="login__input_label">Your password</label>
                     <input type="password"
-                           ng-model="LgCtrl.userPassword" placeholder="Enter your password"
+                           ng-model="$ctrl.userPassword" placeholder="Enter your password"
                            name="clientPassword" required=""
                            class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
                            id="input_6" aria-invalid="true">
@@ -40,7 +37,7 @@
         <div class="modal_foter">
             <div class="modal_foter__buttons">
                 <div class="button_text">Cancel</div>
-                <div class="button_blue">Continue</div>
+                <div class="button_blue" ng-click="$ctrl.sendAuthData($event)">Continue</div>
             </div>
         </div>
     </md-content>
@@ -62,7 +59,7 @@
                     <label for="input_5" class="login__input_label">Email</label>
                     <input md-no-float required="" type="email" placeholder="Enter your Email"
                            name="clientEmail"
-                           ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
+                           ng-model="$ctrl.userEmail" minlength="5" maxlength="100"
                            ng-pattern="/^.+@.+\..+$/"
                            class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
                            ng-invalid-required ng-valid-pattern ng-valid-minlength

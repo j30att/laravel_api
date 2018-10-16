@@ -12,13 +12,13 @@
 */
 
 Route::group(['middleware' => 'guest'], function(){
-    Route::post('login', 'Auth\LoginController@login');
-    Route::post('register', 'Auth\RegisterController@register');
+    Route::post('/login', 'Auth\LoginController@login')->name('login');
+    Route::post('/register', 'Auth\RegisterController@register')->name('register');
 
 });
 
 Route::group(['middleware' => 'auth'], function(){
-    Route::any('logout', 'Auth\LoginController@logout')->name('logout');
+    Route::any('/logout', 'Auth\LoginController@logout')->name('logout');
 });
 
 
