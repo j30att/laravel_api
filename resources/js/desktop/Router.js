@@ -20,7 +20,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/main.template.html'),
             redirectTo : ()=>{
                 return {
-                state: 'invest'
+                    state: 'invest'
                 }
             }
         })
@@ -56,6 +56,16 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('bids', {
             url: '/bids',
             template: require('./views/bids/index.template.html'),
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'bids-empty'
+                        }
+                    }
+                }
+            },
             controller: 'BidsController',
             controllerAs: 'BidsCtrl'
         })
@@ -68,6 +78,16 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('sale', {
             url: '/sales',
             template: require('./views/sale/index.template.html'),
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'sale-empty'
+                        }
+                    }
+                }
+            },
             controller: 'SaleController',
             controllerAs: 'SaleCtrl',
         })
@@ -82,6 +102,22 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             url: '/sales/create',
             template: require('./views/sale/create.template.html')
         })
+
+        .state ('sale-empty', {
+            url: '/sales',
+            template: require('./views/sale/empty.template.html')
+        })
+
+        .state ('bids-empty', {
+            url: '/bids/empty',
+            template: require('./views/bids/empty.template.html')
+        })
+
+        .state ('wallet-empty', {
+            url: '/wallet/empty',
+            template: require('./views/wallet/empty.template.html')
+        })
+
         .state ('profile', {
             url: '/profile',
             template: require('./views/profile/profile.trmplate.html')
@@ -92,8 +128,19 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
         .state ('wallet', {
             url: '/wallet',
-            template: require('./views/wallet/index.temlate.html')
+            template: require('./views/wallet/index.temlate.html'),
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'wallet-empty'
+                        }
+                    }
+                }
+            }
         })
+
         .state('terms-and-conditions', {
             url: '/terms-and-conditions',
             template: require('./views/static/terms.template.html')
@@ -101,6 +148,33 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('privacy-policy', {
             url: '/privacy-policy',
             template: require('./views/static/privacy.template.html')
+        })
+        .state('auth', {
+            template: require('./views/auth/base.template.html'),
+            data: {
+                permissions: {
+                    except: 'Auth',
+                    redirectTo: () => {
+                        return {
+                            state: 'invest'
+                        }
+                    }
+                }
+            }
+        })
+        .state('auth.login', {
+            //ng-controller="LoginController as LgCtrl"
+            url: '/login',
+            template: require('./views/auth/login.template.html'),
+            controller: 'LoginController',
+            controllerAs: 'LgCtrl'
+        })
+        .state('auth.registration', {
+            url: '/register',
+            template: require('./views/auth/registration.template.html'),
+            //ng-controller="RegisterController as RgCtrl"
+            controller: 'RegisterController',
+            controllerAs: 'RgCtrl'
         })
         .state('event-detail', {
             url: '/event/detail',

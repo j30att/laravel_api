@@ -12,6 +12,11 @@ class SaleController {
 
     }
 
+    toggleSidenavLogin() {
+        this.$scope.$broadcast('sidenav-login-open', () =>{
+        });
+    }
+
 };
 
 SaleController.$inject = ['SalesResourceService'];

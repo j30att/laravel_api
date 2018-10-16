@@ -6,8 +6,6 @@ class MainMenuController {
         this.$state = $state;
         this.$mdDialog = $mdDialog;
         this.user = window.__user;
-        console.log(typeof(this.user));
-        console.log(this.user);
 
     }
 
