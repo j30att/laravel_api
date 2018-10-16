@@ -1704,6 +1704,7 @@ md-dialog-actions .md-confirm-button {
   color: #000000;
   margin-bottom: 24px;
   position: relative;
+  min-height: 33px;
 }
 
 .your_profile_close {
@@ -2217,6 +2218,93 @@ md-checkbox.md-checked .md-icon:after {
 
 .md-ripple-container {
   display: none;
+}
+
+.main_content__empty {
+  height: 100vh;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main_content__empty_container {
+  width: 420px;
+}
+
+.main_content__empty_container__img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px auto;
+}
+
+.main_content__empty_container__img_sale {
+  background: url("/images/desk/empty_user/empty_user_sale.png") no-repeat center;
+  background-size: 100%;
+}
+
+.main_content__empty_container__img_bids {
+  background: url("/images/desk/empty_user/empty_user_bids.png") no-repeat center 100%;
+  background-size: 100%;
+}
+
+.main_content__empty_container__img_wallet {
+  background: url("/images/desk/empty_user/empty_user_wallet.png") no-repeat center 100%;
+  background-size: 100%;
+}
+
+.main_content__empty_container__title {
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.main_content__empty_container__discription {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.main_content__empty_container__buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_content__empty_container__button {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.main_content__empty_container__button__blue {
+  background-color: #007fed;
+  color: #ffffff;
+  border-color: #007fed;
+  margin-right: 16px;
 }
 
 body,
