@@ -2045,6 +2045,8 @@ md-dialog-actions .md-confirm-button {
   font-size: 15px !important;
   color: rgba(0, 0, 0, 0.5) !important;
   margin-bottom: 4px !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
 }
 
 .login__input_valid_error {
@@ -2053,6 +2055,11 @@ md-dialog-actions .md-confirm-button {
 
 .login__label_valid_error {
   color: red !important;
+}
+
+.login__select {
+  border-bottom: none;
+  padding-top: 0 !important;
 }
 
 .reset_password {
@@ -2097,6 +2104,84 @@ md-dialog-actions .md-confirm-button {
   color: #007fed;
   text-align: center;
   cursor: pointer;
+}
+
+md-select-value {
+  border-bottom: none !important;
+}
+
+.location_select_wrapper {
+  margin-top: -20px;
+}
+
+::-webkit-inner-spin-button {
+  display: none;
+}
+
+.accords_wrapper {
+  position: fixed;
+  left: 0;
+  bottom: 110px;
+  text-align: center;
+  font-size: 15px;
+  color: #999;
+}
+
+.accords_wrapper a {
+  color: #007fed;
+}
+
+.registration_subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.34);
+}
+
+.data_privacy__discription {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.data_privacy__checkbox_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*checkbox*/
+
+md-checkbox {
+  font-size: 15px;
+  color: #666;
+}
+
+.md-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.md-checked {
+  color: #000;
+}
+
+.md-checked .md-icon {
+  background-color: #007fed !important;
+}
+
+md-checkbox.md-checked .md-icon:after {
+  width: 7px !important;
+  height: 10px !important;
+  top: calc(50% - 6px) !important;
+  left: calc(50% - 3px) !important;
+}
+
+.md-ripple-container {
+  display: none;
 }
 
 body,

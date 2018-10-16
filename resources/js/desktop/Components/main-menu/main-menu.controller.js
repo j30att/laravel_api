@@ -19,6 +19,12 @@ class MainMenuController {
         });
     }
 
+    toggleSidenavRegistration() {
+        console.log('reg_click');
+        this.$scope.$broadcast('sidenav-registration-open', () =>{
+        });
+    }
+
     isActive(string) {
         if (this.url.indexOf(string) === 1) {
             return {active: true}
