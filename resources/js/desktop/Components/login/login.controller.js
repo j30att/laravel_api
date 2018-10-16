@@ -9,7 +9,7 @@ class Login {
         this.user = window.__user;
         this._opts = {fixed: false};
         this.isSidenavOpen =false;
-        console.log('loginComponent');
+        this.state = 1;
 
 
     }
@@ -20,7 +20,6 @@ class Login {
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            console.log(fixed);
             this.$state.modalOpened = fixed
         });
 
@@ -33,6 +32,16 @@ class Login {
 
     close(componentId){
         this.$mdSidenav(componentId).close();
+    }
+
+    forgotPassword(){
+        this.state = 2;
+    }
+    resetMail(){
+        this.state = 3;
+    }
+    backToLogin(){
+        this.state = 1;
     }
 
 };

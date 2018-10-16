@@ -1,98 +1,90 @@
 <md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right_login">
-    <!--<md-content>-->
-        <!--<div class="modal_content">-->
-            <!--<div class="your_profile__title">-->
-                <!--Log In-->
-                <!--<div class="your_profile_close"></div>-->
-            <!--</div>-->
-            <!--<form ng-submit=""-->
+    <md-content ng-if="$ctrl.state == 1">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Log In
+                <div class="your_profile_close"></div>
+            </div>
+            <form ng-submit=""
 
-                  <!--class="login__form ng-pristine ng-valid-email ng-invalid-->
-                <!--ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">-->
+                  class="login__form ng-pristine ng-valid-email ng-invalid
+                ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
-                <!--<md-input-container class="login__input_container md-block login_input md-formSelect-theme">-->
-                    <!--<label for="input_5" class="login__input_label">Username</label>-->
-                    <!--<input md-no-float required="" type="email" placeholder="Enter your username"-->
-                           <!--name="clientEmail"-->
-                           <!--ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"-->
-                           <!--ng-pattern="/^.+@.+\..+$/"-->
-                           <!--class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid-->
-                           <!--ng-invalid-required ng-valid-pattern ng-valid-minlength-->
-                           <!--ng-valid-maxlength" id="input_5" aria-invalid="true">-->
-                <!--</md-input-container>-->
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_5" class="login__input_label">Username</label>
+                    <input md-no-float required="" type="email" placeholder="Enter your username"
+                           name="clientEmail"
+                           ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
+                           ng-pattern="/^.+@.+\..+$/"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
+                           ng-invalid-required ng-valid-pattern ng-valid-minlength
+                           ng-valid-maxlength" id="input_5" aria-invalid="true">
+                </md-input-container>
 
-                <!--<md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"-->
-                                    <!--style="margin-bottom: 20px;">-->
-                    <!--<label for="input_6" class="login__input_label">Your password</label>-->
-                    <!--<input type="password" ng-model="LgCtrl.userPassword" placeholder="Enter your password"-->
-                           <!--name="clientPassword" required=""-->
-                           <!--class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"-->
-                           <!--id="input_6" aria-invalid="true">-->
-                <!--</md-input-container>-->
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                                    style="margin-bottom: 20px;">
+                    <label for="input_6" class="login__input_label">Your password</label>
+                    <input type="password"
+                           ng-model="LgCtrl.userPassword" placeholder="Enter your password"
+                           name="clientPassword" required=""
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           id="input_6" aria-invalid="true">
+                </md-input-container>
 
-                <!--<div class="reset_password">-->
-                    <!--Forget your password?-->
-                <!--</div>-->
-            <!--</form>-->
+                <div class="reset_password" ng-click="$ctrl.forgotPassword()">
+                    Forget your password?
+                </div>
+            </form>
 
-        <!--</div>-->
-        <!--<div class="modal_foter">-->
-            <!--<div class="modal_foter__buttons">-->
-                <!--<div class="button_text">Cancel</div>-->
-                <!--<div class="button_blue">Continue</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</md-content>-->
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text">Cancel</div>
+                <div class="button_blue">Continue</div>
+            </div>
+        </div>
+    </md-content>
 
-    <!--<md-content>-->
-        <!--<div class="modal_content">-->
-            <!--<div class="your_profile__title">-->
-                <!--Reset password-->
-                <!--<div class="your_profile_close"></div>-->
-            <!--</div>-->
-            <!--<form ng-submit=""-->
+    <md-content ng-if="$ctrl.state == 2">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Reset password
+                <div class="your_profile_close"></div>
+            </div>
+            <form ng-submit=""
 
-                  <!--class="login__form ng-pristine ng-valid-email ng-invalid-->
-                <!--ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">-->
-                <!--<div class="reset_information">-->
-                    <!--Enter your email and we will send you instruction with the next steps-->
-                <!--</div>-->
-                <!--<md-input-container class="login__input_container md-block login_input md-formSelect-theme">-->
-                    <!--<label for="input_5" class="login__input_label">Email</label>-->
-                    <!--<input md-no-float required="" type="email" placeholder="Enter your Email"-->
-                           <!--name="clientEmail"-->
-                           <!--ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"-->
-                           <!--ng-pattern="/^.+@.+\..+$/"-->
-                           <!--class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid-->
-                           <!--ng-invalid-required ng-valid-pattern ng-valid-minlength-->
-                           <!--ng-valid-maxlength" id="input_5" aria-invalid="true">-->
-                    <!--&lt;!&ndash;<div class="md-errors-spacer"></div>&ndash;&gt;-->
+                  class="login__form ng-pristine ng-valid-email ng-invalid
+                ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+                <div class="reset_information">
+                    Enter your email and we will send you instruction with the next steps
+                </div>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_5" class="login__input_label">Email</label>
+                    <input md-no-float required="" type="email" placeholder="Enter your Email"
+                           name="clientEmail"
+                           ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
+                           ng-pattern="/^.+@.+\..+$/"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
+                           ng-invalid-required ng-valid-pattern ng-valid-minlength
+                           ng-valid-maxlength" id="input_5" aria-invalid="true">
+                </md-input-container>
 
-                    <!--&lt;!&ndash;<div ng-messages="" role="alert" class="md-input-messages-animation md-auto-hide"&ndash;&gt;-->
-                    <!--&lt;!&ndash;aria-live="assertive">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']"&ndash;&gt;-->
-                    <!--&lt;!&ndash;class="md-input-message-animation">&ndash;&gt;-->
-                    <!--&lt;!&ndash;Your email must look like an e-mail address.&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--</md-input-container>-->
+            </form>
 
-            <!--</form>-->
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.backToLogin()">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.resetMail()">Reset</div>
+            </div>
+        </div>
+    </md-content>
 
-        <!--</div>-->
-        <!--<div class="modal_foter">-->
-            <!--<div class="modal_foter__buttons">-->
-                <!--<div class="button_text">Cancel</div>-->
-                <!--<div class="button_blue">Reset</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</md-content>-->
-
-    <md-content>
+    <md-content ng-if="$ctrl.state == 3">
         <div class="check__img"></div>
         <div class="check__title">Check your inbox</div>
         <div class="check__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
-        <div class="check__back">Back to Login</div>
+        <div class="check__back" ng-click="$ctrl.backToLogin()">Back to Login</div>
     </md-content>
 </md-sidenav>
 
