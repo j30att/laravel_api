@@ -1991,6 +1991,100 @@ md-dialog-actions .md-confirm-button {
   color: #ffffff;
 }
 
+.login__form {
+  padding-top: 24px !important;
+}
+
+.login__input {
+  height: 38px !important;
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+  padding-left: 12px !important;
+  font-size: 15px !important;
+  color: #000000 !important;
+  border-bottom: none !important;
+  border-radius: 6px !important;
+}
+
+.login__input::-webkit-input-placeholder {
+  font-size: 15px !important;
+  color: #000000 !important;
+}
+
+.login__input:-ms-input-placeholder {
+  font-size: 15px !important;
+  color: #000000 !important;
+}
+
+.login__input::-ms-input-placeholder {
+  font-size: 15px !important;
+  color: #000000 !important;
+}
+
+.login__input::placeholder {
+  font-size: 15px !important;
+  color: #000000 !important;
+}
+
+.login__input_label {
+  font-size: 15px !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+  margin-bottom: 4px !important;
+}
+
+.login__input_valid_error {
+  border: 1px solid red !important;
+}
+
+.login__label_valid_error {
+  color: red !important;
+}
+
+.reset_password {
+  font-size: 15px;
+  color: #007fed;
+  cursor: pointer;
+  margin-top: -20px;
+}
+
+.reset_information {
+  font-size: 15px;
+  color: #000;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.check__img {
+  width: 70px;
+  height: 70px;
+  outline: 1px solid black;
+  margin: 274px auto 20px auto;
+}
+
+.check__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.check__discription {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+.check__back {
+  font-size: 15px;
+  color: #007fed;
+  text-align: center;
+  cursor: pointer;
+}
+
 body,
 html {
   background-color: #fff !important;

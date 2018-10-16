@@ -44,7 +44,7 @@
     </nav>
     
     <div class="last_up">
-        <div class="last_up__title">Last Updates</div>
+        <div class="last_up__title" ng-click="$ctrl.toggleSidenavLogin()">Last Updates</div>
         <div class="last_up__item last_up__item_blue">
             <div class="last_up_marker">
                 <img src="/images/desk/blue_circle.png" alt="">
@@ -77,7 +77,7 @@
     <div class="footer">
         <div class="profile">
             <div class="profile_info">
-                <div class="profile_left-side" style="cursor: pointer" ng-click="$ctrl.toggleSidenav()">
+                <div class="profile_left-side" style="cursor: pointer" ng-click="$ctrl.toggleSidenavProfile()">
                     <div class="profile_img">
                         <img src="/images/desk/players_img/profile_img_1.png" alt="">
                     </div>
@@ -144,4 +144,4 @@
 </div>
 
 <profile></profile>
-
+<login></login>

@@ -9,8 +9,13 @@ class MainMenuController {
     }
 
 
-    toggleSidenav() {
+    toggleSidenavProfile() {
         this.$scope.$broadcast('sidenav-profile-open', () =>{
+        });
+    }
+
+    toggleSidenavLogin() {
+        this.$scope.$broadcast('sidenav-login-open', () =>{
         });
     }
 
