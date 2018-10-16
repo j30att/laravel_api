@@ -6,6 +6,8 @@ class MainMenuController {
         this.$state = $state;
         this.$mdDialog = $mdDialog;
         this.user = window.__user;
+        console.log(typeof(this.user));
+        console.log(this.user);
 
     }
 
@@ -17,6 +19,12 @@ class MainMenuController {
 
     toggleSidenavLogin() {
         this.$scope.$broadcast('sidenav-login-open', () =>{
+        });
+    }
+
+    toggleSidenavRegistration() {
+        console.log('reg_click');
+        this.$scope.$broadcast('sidenav-registration-open', () =>{
         });
     }
 

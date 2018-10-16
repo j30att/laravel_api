@@ -13,8 +13,10 @@ let ngRouter = require('angular-ui-router').default;
 let ngMaterial = require('angular-material');
 let ngAria = require('angular-aria');
 let ngAnimate = require('angular-animate');
+let ngSanitize = require('angular-sanitize');
 
 let app = angular.module('poker', [
+    ngSanitize,
     ngMaterial,
     ngAria,
     ngAnimate,
