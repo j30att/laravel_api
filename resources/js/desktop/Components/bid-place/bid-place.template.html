@@ -61,19 +61,19 @@
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">
                         <div class="you_bids__item">
-                            <label>Share</label>
-                            <input type="text" placeholder="1.20">
+                            <label>Markup</label>
+                            <input type="text" placeholder="1.20" ng-model="$ctrl.bid.markup">
                         </div>
                         <div class="you_bids__item">
                             <label>Share</label>
-                            <input type="text" placeholder="1.53%">
+                            <input type="text" placeholder="1.53%" ng-model="$ctrl.bid.share">
                         </div>
                         <div class="you_bids__item">
-                            <label>Share</label>
-                            <input type="text" placeholder="$1,182.22">
+                            <label>Amount</label>
+                            <input type="text" placeholder="$1,182.22" ng-model="$ctrl.bid.amount">
                         </div>
                         <div class="add_new"></div>
-                        <div class="you_bids__place_bid">Place a bid</div>
+                        <div class="you_bids__place_bid" ng-click="$ctrl.saveMyBid()">Place a bid</div>
 
                     </div>
                 </div>
