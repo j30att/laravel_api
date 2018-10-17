@@ -65,6 +65,35 @@ class SaleManage {
         }, () => {});
     }
 
+    showSaleConfirm(sale) {
+        let confirm = this.$mdDialog.confirm()
+            .parent(angular.element(document.querySelector('[md-component-id="right_manage"]')))
+            .htmlContent(
+                `<div class="bids_group_blue">
+                    <span>${sale.markup}</span>
+                    <span>${sale.share}%</span>
+                    <span>$${sale.amount}</span>
+                </div>
+                <div>Are you sure?</div>`)
+            .ok('Accept')
+            .cancel('Cancel');
+
+        this.$mdDialog.show(confirm).then(() => {
+        }, () => {});
+    }
+
+    showPayConfirm(sale) {
+        let confirm = this.$mdDialog.confirm()
+            .parent(angular.element(document.querySelector('[md-component-id="right_manage"]')))
+            .textContent(`This changes will hold $3,234 in your account. Continue?`)
+            .ok('Accept')
+            .cancel('Cancel');
+
+        this.$mdDialog.show(confirm).then(() => {
+            this.$mdSidenav('right_manage').close();
+        }, () => {});
+    }
+
 }
 
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];

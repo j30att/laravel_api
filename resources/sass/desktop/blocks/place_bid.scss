@@ -97,6 +97,7 @@
                    padding-left: 12px;
                    padding-right: 12px;
                    color: #000;
+                   font-size: 15px;
                }
                input::placeholder{color: #000000}
                input:nth-child(3) {
@@ -228,6 +229,13 @@
            top: 50%;
            left: calc(50% - 8px);
        }
+    }
+
+    &__hr{
+        height: 1px;
+        background: #ebebeb;
+        width:100%;
+        margin: 24px 0;
     }
 }
 

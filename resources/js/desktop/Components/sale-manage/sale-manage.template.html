@@ -11,7 +11,8 @@
                     <div>
                         <div>
                             <div class="profile_status__name">{% $ctrl.sale.event.title %}</div>
-                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':0%}</div>
+                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':0%}
+                            </div>
                         </div>
                         <div class="profile_status__gte_and_by">
                             <div class="profile_status__buyin">{% $ctrl.sale.event.buy_in | currency:'£':0%}</div>
@@ -23,12 +24,26 @@
                         <div class="profile_status__share"><span>Share sold</span><br>5%</div>
                         <div class="profile_status__value"><span>Amount raised</span><br>1.20</div>
                     </div>
-                    <div class="profile_status__attributs d-flex">
-                        <div class="profile_status__markup"><span>Markup</span><br>{% $ctrl.sale.markup %}</div>
-                        <div class="profile_status__share"><span>Share</span><br>{% $ctrl.sale.share %}%</div>
-                        <div class="profile_status__value"><span>Value</span><br>{% $ctrl.sale.amount | currency:'$':0%}</div>
+                    <div class="sale-manage__attributs">
+                        <div class="sale-manage__attributes__markup">
+                            <span class="sale-manage__attributes__title">Markup</span>
+                            <input class="sale-manage__attributes__value" ng-model="$ctrl.sale.markup"/>
+                        </div>
+                        <div class="sale-manage__attributes__share">
+                            <span class="sale-manage__attributes__title">Share</span>
+                            <input class="sale-manage__attributes__value" ng-model="$ctrl.sale.share"/>
+                        </div>
+                        <div class="sale-manage__attributes__amount">
+                            <span class="sale-manage__attributes__title">Value</span>
+                            <input class="sale-manage__attributes__value" ng-model="$ctrl.sale.amount"/>
+                        </div>
+                        <div class="sale-manage__attributes__edit">
+                            <button ng-click="$ctrl.showSaleConfirm($ctrl.sale)"
+                                class="sale-manage__attributes__btn"></button>
+                        </div>
                     </div>
                 </div>
+                <div class="modal_content__hr"></div>
                 <div class="bids_group bids_group__highest_color">
                     <span class="bids_group__title">UNMATCHED BIDS</span>
 
@@ -52,7 +67,8 @@
         <div class="modal_foter">
             <div class="modal_foter__buttons">
                 <div class="button_text" ng-click="$ctrl.close('right_manage')">Cancel sale</div>
-                <div class="button_blue button_grey">Pay remaining <span>$3,245</span></div>
+                <div ng-click="$ctrl.showPayConfirm($ctrl.sale)"
+                    class="button_blue button_grey">Pay remaining <span>$3,245</span></div>
             </div>
         </div>
     </md-content>
