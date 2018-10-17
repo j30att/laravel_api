@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\BidResource;
+use App\Http\Resources\Bids\BidsInvestResource;
+use App\Http\Services\BetsManageService;
 use App\Models\Bid;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -57,9 +59,10 @@ class BidController extends Controller
      */
     public function myStoreBid(Request $request)
     {
-        $data = $request->all();
+        $data = $request->get('bid');
         $bid = Bid::create($data);
-        return json_encode([ 'status'=> 1, 'bid'=>$bid]);
+        $bid = BetsManageService::linkBidToSale($bid);
+        return json_encode([ 'status'=> 1, 'bid'=> new BidsInvestResource($bid)]);
     }
 
 

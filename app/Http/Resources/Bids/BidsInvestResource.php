@@ -17,7 +17,8 @@ class BidsInvestResource extends JsonResource
         return [
             'share'  => $this->share,
             'markup' => $this->markup,
-            'amount' => $this->amount
+            'amount' => $this->amount,
+            'status' => $this->status
         ];
     }
 }

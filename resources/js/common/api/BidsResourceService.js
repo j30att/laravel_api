@@ -28,7 +28,7 @@ class BidsResourceService {
         return this.$http.post(BIDS_MY_CANCELED, {status: BID_CANCELED, user_id: user_id});
     };
 
-    storeMyBids(bid){
+    storeMyBid(bid){
         return this.$http.post(BIDS_MY_STORE, {bid});
 
     }
