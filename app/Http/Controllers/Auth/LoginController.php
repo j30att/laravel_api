@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -31,23 +32,32 @@ class LoginController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
 
-    public function showSignin(Request $request){
+    public function showSignin(Request $request)
+    {
         $typeDevice = $request->get('_typeDevice');
-        return view($typeDevice.'.login.signin');
+
+        return view($typeDevice . '.login.signin');
     }
 
-    public function showLoginForm(Request $request){
-
+    public function showLoginForm(Request $request)
+    {
         $typeDevice = $request->get('_typeDevice');
-        return view($typeDevice.'.login.index');
+
+        return view($typeDevice . '.login.index');
     }
 
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->regenerate();
+
+        return redirect('/invest');
+    }
 
 }

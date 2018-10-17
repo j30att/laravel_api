@@ -1,0 +1,156 @@
+<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen"
+            md-component-id="right_registration">
+    <md-content ng-if="$ctrl.state == 1">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Registration
+                <div class="your_profile_close"></div>
+            </div>
+            <div class="registration_subtitle">
+                ADD PERSONAL INFROMATION
+            </div>
+            <form ng-submit=""
+
+                  class="login__form ng-pristine ng-valid-email ng-invalid
+                ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_first_name" class="login__input_label">First name</label>
+                    <input md-no-float required="" type="text" placeholder="Julia"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
+                           ng-invalid-required" id="input_first_name" aria-invalid="true">
+                </md-input-container>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_last_name" class="login__input_label">Last Name</label>
+                    <input md-no-float required="" type="text" placeholder="Norris"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
+                           ng-invalid-required" id="input_last_name" aria-invalid="true">
+                </md-input-container>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_date" class="login__input_label">Date of Birth</label>
+                    <input md-no-float required="" type="date" placeholder="12.03.1988"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
+                           ng-invalid-required" id="input_date" aria-invalid="true">
+                </md-input-container>
+
+                <div class="location_select_wrapper">
+                    <label class="login__input_label">Location</label>
+                    <md-select ng-model="$ctrl.selectedItem" md-selected-text="$ctrl.getSelectedText()"
+                               class="login__input login__select md-no-underline"
+                               placeholder="London, UK">
+                        <md-option>London, UK</md-option>
+                        <md-option>New York, USA</md-option>
+                        <md-option>Moscow, Russia</md-option>
+                    </md-select>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="accords_wrapper">
+            By creating an account you agree to our <a href="#">Terms & Conditions</a>
+            and <a href="#">Privacy Policy</a>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.secondStep()">Continue</div>
+            </div>
+        </div>
+    </md-content>
+    <md-content ng-if="$ctrl.state == 2">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Registration
+                <div class="your_profile_close"></div>
+            </div>
+            <div class="registration_subtitle">
+                Add account infromation
+            </div>
+            <form
+
+                  class="login__form ng-pristine ng-valid-email ng-invalid
+                ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_7" class="login__input_label">Username</label>
+                    <input md-no-float required="" type="email" placeholder="Enter your username"
+                           name="clientEmail"
+                           ng-model="LgCtrl.userEmail" minlength="5" maxlength="100"
+                           ng-pattern="/^.+@.+\..+$/"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
+                           ng-invalid-required ng-valid-pattern ng-valid-minlength
+                           ng-valid-maxlength" id="input_7" aria-invalid="true">
+                </md-input-container>
+
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                                    style="margin-bottom: 20px;">
+                    <label for="input_8" class="login__input_label">Your password</label>
+                    <input type="password"
+                           ng-model="LgCtrl.userPassword" placeholder="Enter your password"
+                           name="clientPassword" required=""
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           id="input_8" aria-invalid="true">
+                </md-input-container>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                                    style="margin-bottom: 20px;">
+                    <label for="input_9" class="login__input_label">Confirm password</label>
+                    <input type="password"
+                           ng-model="LgCtrl.userPassword" placeholder="Confirm password"
+                           name="clientPasswordConfirm" required=""
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           id="input_9" aria-invalid="true">
+                </md-input-container>
+
+
+            </form>
+
+        </div>
+        <div class="accords_wrapper">
+            By creating an account you agree to our <a href="#">Terms & Conditions</a>
+            and <a href="#">Privacy Policy</a>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.thirdStep()">Continue</div>
+            </div>
+        </div>
+    </md-content>
+    <md-content ng-if="$ctrl.state == 3">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Data & Privacy
+                <div class="your_profile_close"></div>
+            </div>
+        <div class="data_privacy__discription">
+            To esure your expirience is personal and relevant,
+            we’re changing the type of advert you see and giving your more control over your data
+        </div>
+        <div class="data_privacy__checkbox_wrapper">
+            <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+                Yes, I’d like to hear about the latest poker news and promotions by Email
+            </md-checkbox>
+
+            <md-checkbox ng-model="data.cb2" aria-label="Checkbox 2">
+                Yes, I’d like to hear about the latest poker news and promotions by SMS
+            </md-checkbox>
+        </div>
+
+
+        </div>
+        <div class="accords_wrapper">
+            By creating an account you agree to our <a href="#">Terms & Conditions</a>
+            and <a href="#">Privacy Policy</a>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text">Cancel</div>
+                <div class="button_blue">Continue</div>
+            </div>
+        </div>
+    </md-content>
+
+
+</md-sidenav>
+
