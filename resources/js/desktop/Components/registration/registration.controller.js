@@ -6,19 +6,15 @@ class Registration {
         this.$state = $state;
         this.$scope = $scope;
         this.$http = $http;
-        this.user = window.__user;
         this._opts = {fixed: false};
         this.isSidenavOpen =false;
-        this.state = 1;
-        this.selectedItem = undefined;
-        console.log('registration');
-
-
-
+        this.user = null;
+        this.prevState = null;
     }
+
     $onInit(){
         this.$scope.$on('sidenav-registration-open', (event, data) => {
-
+            this.state = data.state;
             this.buildToggler('right_registration');
         });
 
@@ -26,31 +22,33 @@ class Registration {
             this.$state.modalOpened = fixed
         });
 
+
+
+    }
+
+    changeState(state){
+        this.prevState = this.state;
+        this.state = state;
+    }
+
+    goBack(){
+        if (this.prevState == null) this.buildToggler('right_registration');
+        this.state = this.prevState;
     }
 
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
     }
 
-
     close(componentId){
         this.$mdSidenav(componentId).close();
     }
 
     secondStep(){
-        this.state = 2;
+        this.state = 'register_password';
     }
     thirdStep(){
-        this.state = 3;
-    }
-
-
-    getSelectedText(){
-        if (this.selectedItem !== undefined) {
-            return this.selectedItem;
-        } else {
-            return "Please select your location";
-        }
+        this.state = 'confirm_privacy';
     }
 
 };

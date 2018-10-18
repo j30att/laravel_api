@@ -2309,6 +2309,10 @@ md-checkbox {
   color: #666;
 }
 
+md-checkbox a {
+  color: #007fed;
+}
+
 .md-icon {
   width: 16px !important;
   height: 16px !important;

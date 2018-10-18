@@ -19,22 +19,10 @@ class MainMenuController {
         });
     }
 
-    toggleSidenavRegistration() {
-        this.$scope.$broadcast('sidenav-registration-open', () =>{
-        });
+    toggleSidenavRegistration(state) {
+        this.$scope.$broadcast('sidenav-registration-open', {state});
     }
 
-    toggleSidenavPolicy() {
-
-        this.$scope.$broadcast('sidenav-policy-open', () =>{
-        });
-    }
-
-    toggleSidenavTerms() {
-
-        this.$scope.$broadcast('sidenav-terms-open', () =>{
-        });
-    }
 
     isActive(string) {
         if (this.url.indexOf(string) === 1) {

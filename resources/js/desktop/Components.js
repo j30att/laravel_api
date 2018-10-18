@@ -5,8 +5,7 @@ import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controll
 import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
 import {LoginComponent} from "./Components/login/login.controller";
 import {RegistrationComponent} from "./Components/registration/registration.controller";
-import {PolicyComponent} from "./Components/policy/policy.controller";
-import {TermsComponent} from "./Components/terms/terms.controller";
+
 
 let angular = require('angular');
 
@@ -19,8 +18,7 @@ module.component('saleManage', SaleManageComponent);
 module.component('bidPlace', BidPlaceComponent);
 module.component('login', LoginComponent);
 module.component('registration', RegistrationComponent);
-module.component('policy', PolicyComponent);
-module.component('terms', TermsComponent);
+
 
 export default module.name;
 

@@ -88,8 +88,8 @@
             </div>
         </div>
         <div class="footer__links">
-            <a href="#" ng-click="$ctrl.toggleSidenavTerms()">Terms of Service</a>
-            <a href="#" ng-click="$ctrl.toggleSidenavPolicy()">Privacy Policy</a>
+            <a href="#" ng-click="$ctrl.toggleSidenavRegistration('terms')">Terms of Service</a>
+            <a href="#" ng-click="$ctrl.toggleSidenavRegistration('privacy')">Privacy Policy</a>
             <a href="#">Contact Us</a>
             <a href="#">English</a>
         </div>
@@ -146,7 +146,7 @@
                     Log In
                 </a>
             </li>
-            <li class="menu_item" ng-click="$ctrl.toggleSidenavRegistration()">
+            <li class="menu_item" ng-click="$ctrl.toggleSidenavRegistration('register')">
                 <a class="menu_item__link" href="#">
                     Register
                 </a>
@@ -159,8 +159,8 @@
     <div class="footer">
 
         <div class="footer__links">
-            <a href="#" ng-click="$ctrl.toggleSidenavTerms()">Terms of Service</a>
-            <a href="#" ng-click="$ctrl.toggleSidenavPolicy()">Privacy Policy</a>
+            <a href="#" ng-click="$ctrl.toggleSidenavRegistration('terms')">Terms of Service</a>
+            <a href="#" ng-click="$ctrl.toggleSidenavRegistration('privacy')">Privacy Policy</a>
             <a href="#">Contact Us</a>
             <a href="#">English</a>
         </div>
@@ -172,5 +172,4 @@
 <profile></profile>
 <login></login>
 <registration></registration>
-<policy></policy>
-<terms></terms>
+
