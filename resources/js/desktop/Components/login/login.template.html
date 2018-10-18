@@ -3,7 +3,7 @@
         <div class="modal_content">
             <div class="your_profile__title">
                 Log In
-                <div class="your_profile_close"></div>
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
             </div>
             <form ng-submit="LgCtrl.sendAuthData($event)"
                   class="login__form">
@@ -36,7 +36,7 @@
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
-                <div class="button_text">Cancel</div>
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_login')">Cancel</div>
                 <div class="button_blue" ng-click="$ctrl.sendAuthData($event)">Continue</div>
             </div>
         </div>
@@ -46,7 +46,7 @@
         <div class="modal_content">
             <div class="your_profile__title">
                 Reset password
-                <div class="your_profile_close"></div>
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
             </div>
             <form ng-submit=""
 
@@ -71,7 +71,7 @@
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
-                <div class="button_text" ng-click="$ctrl.backToLogin()">Cancel</div>
+                <div class="button_text" ng-click="$ctrl.backToLogin()">Back</div>
                 <div class="button_blue" ng-click="$ctrl.resetMail()">Reset</div>
             </div>
         </div>
@@ -81,7 +81,7 @@
         <div class="modal_content">
             <div class="your_profile__title">
 
-                <div class="your_profile_close"></div>
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
             </div>
         </div>
 

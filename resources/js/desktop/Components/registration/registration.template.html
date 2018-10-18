@@ -1,68 +1,68 @@
 <md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen"
             md-component-id="right_registration">
-    <md-content ng-if="$ctrl.state == 1">
+    <md-content ng-if="$ctrl.state == 'register'">
         <div class="modal_content">
-            <div class="your_profile__title">
-                Registration
-                <div class="your_profile_close"></div>
-            </div>
-            <div class="registration_subtitle">
-                ADD PERSONAL INFROMATION
-            </div>
-            <form ng-submit=""
+        <div class="your_profile__title">
+            Registration
+            <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+        </div>
+        <div class="registration_subtitle">
+            ADD PERSONAL INFROMATION
+        </div>
+        <form ng-submit=""
 
-                  class="login__form ng-pristine ng-valid-email ng-invalid
+              class="login__form ng-pristine ng-valid-email ng-invalid
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
-                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_first_name" class="login__input_label">First name</label>
-                    <input md-no-float required="" type="text" placeholder="Julia"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
+            <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                <label for="input_first_name" class="login__input_label">First name</label>
+                <input md-no-float required="" type="text" placeholder="Julia"
+                       class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_first_name" aria-invalid="true">
-                </md-input-container>
-                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_last_name" class="login__input_label">Last Name</label>
-                    <input md-no-float required="" type="text" placeholder="Norris"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
+            </md-input-container>
+            <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                <label for="input_last_name" class="login__input_label">Last Name</label>
+                <input md-no-float required="" type="text" placeholder="Norris"
+                       class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_last_name" aria-invalid="true">
-                </md-input-container>
-                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_date" class="login__input_label">Date of Birth</label>
-                    <input md-no-float required="" type="date" placeholder="12.03.1988"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
+            </md-input-container>
+            <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                <label for="input_date" class="login__input_label">Date of Birth</label>
+                <input md-no-float required="" type="date" placeholder="12.03.1988"
+                       class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
                            ng-invalid-required" id="input_date" aria-invalid="true">
-                </md-input-container>
+            </md-input-container>
 
-                <div class="location_select_wrapper">
-                    <label class="login__input_label">Location</label>
-                    <md-select ng-model="$ctrl.selectedItem" md-selected-text="$ctrl.getSelectedText()"
-                               class="login__input login__select md-no-underline"
-                               placeholder="London, UK">
-                        <md-option>London, UK</md-option>
-                        <md-option>New York, USA</md-option>
-                        <md-option>Moscow, Russia</md-option>
-                    </md-select>
-                </div>
+            <div class="location_select_wrapper">
+                <label class="login__input_label">Location</label>
+                <md-select ng-model="$ctrl.user.location"
+                           class="login__input login__select md-no-underline"
+                           placeholder="Select your location">
+                    <md-option value="1">London, UK</md-option>
+                    <md-option value="2">New York, USA</md-option>
+                    <md-option value="3">Moscow, Russia</md-option>
+                </md-select>
+            </div>
 
-            </form>
+        </form>
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#">Terms & Conditions</a>
-            and <a href="#">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
-                <div class="button_text">Cancel</div>
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
                 <div class="button_blue" ng-click="$ctrl.secondStep()">Continue</div>
             </div>
         </div>
     </md-content>
-    <md-content ng-if="$ctrl.state == 2">
+    <md-content ng-if="$ctrl.state == 'register_password'">
         <div class="modal_content">
             <div class="your_profile__title">
                 Registration
-                <div class="your_profile_close"></div>
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
             </div>
             <div class="registration_subtitle">
                 Add account infromation
@@ -107,21 +107,21 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#">Terms & Conditions</a>
-            and <a href="#">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
-                <div class="button_text">Cancel</div>
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
                 <div class="button_blue" ng-click="$ctrl.thirdStep()">Continue</div>
             </div>
         </div>
     </md-content>
-    <md-content ng-if="$ctrl.state == 3">
+    <md-content ng-if="$ctrl.state == 'confirm_privacy'">
         <div class="modal_content">
             <div class="your_profile__title">
                 Data & Privacy
-                <div class="your_profile_close"></div>
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
             </div>
         <div class="data_privacy__discription">
             To esure your expirience is personal and relevant,
@@ -140,15 +140,100 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#">Terms & Conditions</a>
-            and <a href="#">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
-                <div class="button_text">Cancel</div>
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.changeState('media_policy')">Continue</div>
+            </div>
+        </div>
+    </md-content>
+    <md-content ng-if="$ctrl.state == 'media_policy'">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Media Policy
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+            </div>
+            <div class="data_privacy__discription">
+                We've updated our Media Policy and we'll need you to agree to them in order to be able to play in
+                a partypoker LIVE event. Please tick the box to agree to the new Media Policy.
+                Thank you
+            </div>
+            <div class="data_privacy__checkbox_wrapper">
+                <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+                    I agree to the My partypoker LIVE<br>
+                    <a href="#"> Media Policy</a>
+                </md-checkbox>
+            </div>
+
+
+        </div>
+        <div class="accords_wrapper">
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
                 <div class="button_blue">Continue</div>
             </div>
         </div>
+    </md-content>
+    <md-content ng-if="$ctrl.state == 'privacy'">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Privacy Policy
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+            </div>
+            <div class="data_privacy__discription">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab at aut dolores, eius, eligendi harum illum ipsam maiores nisi nostrum
+                officiis perspiciatis qui quibusdam quos rem temporibus totam ut!
+            </div>
+
+
+
+        </div>
+        <div class="accords_wrapper">
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.goBack()">Back</div>
+            </div>
+        </div>
+
+    </md-content>
+    <md-content ng-if="$ctrl.state == 'terms'">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Terms of Service
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+            </div>
+            <div class="data_privacy__discription">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A ab at aut dolores, eius, eligendi harum illum ipsam maiores nisi nostrum
+                officiis perspiciatis qui quibusdam quos rem temporibus totam ut!
+            </div>
+
+
+
+        </div>
+        <div class="accords_wrapper">
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.buildToggler('right_registration')">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.goBack()">Back</div>
+            </div>
+        </div>
+
     </md-content>
 
 
