@@ -25,7 +25,6 @@ class SaleController extends Controller
             if ($user->id != $request->get('user_id')) $this->closingSoonSales();
         }
 
-
         $sales = Sale::query()
             ->where('status', SALE::SALE_ACTIVE)
             ->with('creator')
@@ -36,7 +35,6 @@ class SaleController extends Controller
             ->with(['bids_unmatched' => function($query) use ($user){
                 $query->where('user_id', $user->id);
             }])
-            ->with('bids_highest')
             ->get()
             ->sortBy('event.date_end');
 

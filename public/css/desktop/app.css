@@ -854,7 +854,8 @@
 .event_right-side {
   min-height: calc(100vh - 64px);
   width: 60%;
-  background: #f6f6f6;
+  border-left: 1px solid #e0e0e0;
+  /*background: #f6f6f6;*/
   padding: 32px 60px 32px 32px;
   margin: -32px -60px -32px 0;
 }
@@ -922,10 +923,12 @@
 }
 
 .event_right-side_table table tbody tr td {
-  padding: 10px 0;
-  height: 32px;
+  height: 52px;
   vertical-align: middle;
   font-size: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .event_right-side_table table tbody tr td span {
@@ -938,6 +941,44 @@
   float: left;
   width: 32px;
   height: 32px;
+}
+
+.event_right-side_table_bids-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.event_right-side_table_bids-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #edf8fd;
+  padding: 1px 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4px;
+}
+
+.event_right-side_table_bids-list div span {
+  line-height: 20px !important;
+  font-size: 15px !important;
+  margin: 0 !important;
+}
+
+.event_right-side_table_bids-list div span:first-child {
+  font-weight: 600;
+}
+
+.event_right-side_table_bids-list div span:last-child {
+  color: #999999;
 }
 
 .event_filters {

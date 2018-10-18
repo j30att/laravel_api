@@ -7,7 +7,7 @@ class BidPlace {
         this.BidsResourceService = BidsResourceService;
         this.SalesService = SalesService;
         this.$mdSidenav = $mdSidenav;
-        this.$timeout=$timeout;
+        this.$timeout = $timeout;
         this.$state = $state;
         this.$scope = $scope;
         this.$http = $http;
@@ -21,7 +21,6 @@ class BidPlace {
         this.$scope.$on('sidenav-open', (event, data) => {
             this.buildToggler('right');
         });
-
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.$state.modalOpened = fixed
         });
@@ -37,20 +36,9 @@ class BidPlace {
         this.bid.sale_id = this.sale.id;
         this.bid.status  = BID_NEW;
         this.BidsResourceService.storeMyBid(this.bid).then(response => {
-            console.log(this.sale);
-             switch (response.data.bid.status){
-                 case BID_MATCHED:
-                    this.sale.bids.matched.unshift(response.data.bid);
-                     break;
-                 case BID_UNMATCHED:
-                     this.sale.bids.unmatched.unshift(response.data.bid);
-                     break;
-                 default:
-                     break;
-             };
+            this.sale.bids = response.data.bids;
         })
     }
-
 
     close(componentId){
         this.$mdSidenav(componentId).close();

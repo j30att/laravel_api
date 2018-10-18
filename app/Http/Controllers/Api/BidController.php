@@ -62,7 +62,28 @@ class BidController extends Controller
         $data = $request->get('bid');
         $bid = Bid::create($data);
         $bid = BetsManageService::linkBidToSale($bid);
-        return json_encode([ 'status'=> 1, 'bid'=> new BidsInvestResource($bid)]);
+
+
+        $highest = Bid::query()
+            ->where('sale_id', $bid->sale_id)
+            ->where('status', Bid::BIDS_UNMATCHED)
+            ->orderBy('share', 'desc')->limit(3)->get();
+        $matched = Bid::query()
+            ->where('user_id', $bid->user_id)
+            ->where('sale_id', $bid->sale_id)
+            ->where('status', Bid::BIDS_MATCHED)->get();
+        $unmatched = Bid::query()
+            ->where('user_id', $bid->user_id)
+            ->where('sale_id', $bid->sale_id)
+            ->where('status', Bid::BIDS_UNMATCHED)->get();
+
+
+
+        return json_encode([ 'status'=> 1, 'bids'=> [
+            'highest'   => BidsInvestResource::collection($highest),
+            'matched'   => BidsInvestResource::collection($matched),
+            'unmatched' => BidsInvestResource::collection($unmatched)
+            ]]);
     }
 
 

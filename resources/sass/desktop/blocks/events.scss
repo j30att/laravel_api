@@ -125,7 +125,8 @@
   &_right-side {
     min-height: calc(100vh - 64px);
     width: 60%;
-    background: #f6f6f6;
+    border-left: 1px solid #e0e0e0;
+    /*background: #f6f6f6;*/
     padding: 32px 60px 32px 32px;
     margin: -32px -60px -32px 0;
 
@@ -183,10 +184,10 @@
             }
 
             td {
-              padding: 10px 0;
-              height: 32px;
+              height: 52px;
               vertical-align: middle;
               font-size: 15px;
+              align-items: center;
 
               span {
                 margin-left: 10px;
@@ -202,6 +203,35 @@
             }
           }
 
+        }
+      }
+
+      &_bids-list {
+        display: flex;
+
+        & div{
+          display: flex;
+          flex-direction: column;
+          height: 44px;
+          border-radius: 4px;
+          background-color: #edf8fd;
+          padding: 1px 14px;
+          align-items: center;
+          margin-right: 4px;
+
+          span{
+            line-height: 20px !important;
+            font-size: 15px !important;
+            margin: 0 !important;
+
+            &:first-child{
+              font-weight: 600;
+            }
+
+            &:last-child{
+              color: #999999;
+            }
+          }
         }
       }
     }

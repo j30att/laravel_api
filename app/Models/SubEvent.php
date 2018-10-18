@@ -29,9 +29,6 @@ class SubEvent extends Model
         return $this->hasMany(Sale::class, 'sub_event_id');
     }
 
-
-
-
     public function getFormattedDateAttribute(){
         $start_date = Carbon::parse($this->date_start);
 
@@ -50,6 +47,13 @@ class SubEvent extends Model
 
 
         return $start_day . '  ' . $start_monty;
+    }
+
+    public function getPeriodAttribute()
+    {
+        $date_start = Carbon::parse($this->date_start);
+        $date_end = Carbon::parse($this->date_end);
+        return $date_start->format('M d') . ' – ' . $date_end->format('M d');
     }
 }
 

@@ -4,60 +4,41 @@
         <div class="event_wrapper">
             <div class="event_left-side">
                 <div class="event_left-side_header">
-                    <a ui-sref="" class="event_left-side_header_link">
+                    <a ui-sref="invest-events" class="event_left-side_header_link">
                         Back to Events
                     </a>
                 </div>
                 <div class="event_left-side_description">
                     <div class="event_left-side_card">
                         <div class="event_left-side_card_img">
-                            <img src="/images/desk/event_pic_1.png" alt="event">
+                            <img src="/images/desk/event_pic_{%EventsDetailCtrl.event.id%}.png" alt="event">
                         </div>
                         <div class="event_left-side_card_title">
-                            WSOP International Circuit - Rotterdam
+                            {%EventsDetailCtrl.event.title%}
                         </div>
                         <div class="event_left-side_card_description">
-                            <span>Jul 20 – Aug 10</span>
+                            <span>{%EventsDetailCtrl.event.period%}</span>
                             <span class="grey_dot"></span>
-                            <span>£1,000,000 GTD</span>
-                            <a ui-sref="#">See info</a>
+                            <span>{%EventsDetailCtrl.event.fund | currency:'£':0%} GTD</span>
+                            <!--<a ui-sref="#">See info</a>-->
                         </div>
                     </div>
-                    <div class="event_left-side_list">
+                    <div class="event_left-side_list" ng-if="EventsDetailCtrl.event.subevents">
                         <div class="event_left-side_list_title">
                             Events list
                         </div>
-                        <div class="event_left-side_list_item active">
+                        <div ng-repeat="event in EventsDetailCtrl.event.subevents"
+                             ng-class="{active:EventsDetailCtrl.activeEvent.id === event.id}"
+                             ng-click="EventsDetailCtrl.toggleEvent(event)"
+                             class="event_left-side_list_item">
                             <div class="event_left-side_list_item_title">
-                                Main event
+                                {% event.title %}
                             </div>
                             <div class="event_left-side_list_item_description">
-                                <span>£1,000,000</span>
+                                <span>{% event.buy_in | currency:'£':0 %}</span>
                                 <span class="grey_dot"></span>
-                                <span>£1,000,000 GTD</span>
-                                <span>Jul 20 – Aug 10</span>
-                            </div>
-                        </div>
-                        <div class="event_left-side_list_item">
-                            <div class="event_left-side_list_item_title">
-                                Hyper-Turbo Deep Stack
-                            </div>
-                            <div class="event_left-side_list_item_description">
-                                <span>£1,000,000</span>
-                                <span class="grey_dot"></span>
-                                <span>£1,000,000 GTD</span>
-                                <span>3-15 Aug</span>
-                            </div>
-                        </div>
-                        <div class="event_left-side_list_item">
-                            <div class="event_left-side_list_item_title">
-                                Hyper-Turbo Deep Stack
-                            </div>
-                            <div class="event_left-side_list_item_description">
-                                <span>£1,000,000</span>
-                                <span class="grey_dot"></span>
-                                <span>£1,000,000 GTD</span>
-                                <span>3-15 Aug</span>
+                                <span>{% event.fund | currency:'£':0 %} GTD</span>
+                                <span>{% event.period %}</span>
                             </div>
                         </div>
                     </div>
@@ -66,72 +47,40 @@
             <div class="event_right-side">
                 <div class="event_right-side_header">
                     <div class="event_right-side_header_title">
-                        Main event
+                        {% EventsDetailCtrl.activeEvent.title %}
                     </div>
                     <div class="event_right-side_header_description">
-                        <span>£1,000,000</span>
+                        <span>{% EventsDetailCtrl.activeEvent.buy_in | currency:'£':0 %}</span>
                         <span class="grey_dot"></span>
-                        <span>£1,000,000 GTD</span>
-                        <span>Jul 20 – Aug 10</span>
+                        <span>{% EventsDetailCtrl.activeEvent.fund | currency:'£':0 %} GTD</span>
+                        <span>{% EventsDetailCtrl.activeEvent.period %}</span>
                     </div>
                 </div>
-                <div class="event_right-side_table">
+                <div ng-if="EventsDetailCtrl.activeEvent.sales"
+                     class="event_right-side_table">
                     <table>
                         <thead>
                         <tr>
                             <th>From</th>
                             <th>Markup</th>
-                            <th class="align-right">Share</th>
-                            <th class="align-right">Time</th>
+                            <th>Highest bids</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-click="EventsDetailCtrl.toggleSidenav()">
+                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales"
+                            ng-click="EventsDetailCtrl.toggleSidenav(sale)">
                             <td>
                                 <img src="/images/desk/players_img/profile_img_1.png" alt="">
-                                <span>Austin Vargas</span>
+                                <span>{% sale.creator.name %}</span>
                             </td>
-                            <td class="bold">1.2</td>
-                            <td class="bold align-right">20%</td>
-                            <td class="color-grey align-right">< 24hours</td>
-                        </tr>
-                        <tr ng-click="EventsDetailCtrl.toggleSidenav()">
-                            <td>
-                                <img src="/images/desk/players_img/profile_img_1.png" alt="">
-                                <span>Austin Vargas</span>
+                            <td class="bold">{% sale.markup %}</td>
+                            <td class="event_right-side_table_bids-list">
+                                <div ng-repeat="bid in sale.bids.highest">
+                                    <span>{% bid.markup %}</span>
+                                    <span>{% bid.amount|currency:'$':0 %}</span>
+                                </div>
                             </td>
-                            <td class="bold">1.2</td>
-                            <td class="bold align-right">20%</td>
-                            <td class="color-grey align-right">< 24hours</td>
                         </tr>
-                        <tr ng-click="EventsDetailCtrl.toggleSidenav()">
-                            <td>
-                                <img src="/images/desk/players_img/profile_img_1.png" alt="">
-                                <span>Austin Vargas</span>
-                            </td>
-                            <td class="bold">1.2</td>
-                            <td class="bold align-right">20%</td>
-                            <td class="color-grey align-right">< 24hours</td>
-                        </tr>
-                        <tr ng-click="EventsDetailCtrl.toggleSidenav()">
-                            <td>
-                                <img src="/images/desk/players_img/profile_img_1.png" alt="">
-                                <span>Austin Vargas</span>
-                            </td>
-                            <td class="bold">1.2</td>
-                            <td class="bold align-right">20%</td>
-                            <td class="color-grey align-right">< 24hours</td>
-                        </tr>
-                        <tr ng-click="EventsDetailCtrl.toggleSidenav()">
-                            <td>
-                                <img src="/images/desk/players_img/profile_img_1.png" alt="">
-                                <span>Austin Vargas</span>
-                            </td>
-                            <td class="bold">1.2</td>
-                            <td class="bold align-right">20%</td>
-                            <td class="color-grey align-right">< 24hours</td>
-                        </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -139,4 +88,4 @@
         </div>
     </div>
 </div>
-<bid-place></bid-place>
+<bid-place sale="EventsDetailCtrl.sale"></bid-place>
