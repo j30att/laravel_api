@@ -11236,6 +11236,40 @@ a.text-dark:focus {
   border-bottom: 1px solid #949494;
 }
 
+.manage_sale_atr__yellow {
+  position: relative;
+}
+
+.manage_sale_atr__yellow > div input {
+  width: 100%;
+  background: #fff9e8;
+  height: 40px;
+  border-bottom: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 15px;
+}
+
+.manage_sale_atr__yellow .sale-manage__attributes__edit {
+  height: 40px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.manage_sale_atr__yellow .sale-manage__attributes__edit .sale-manage__attributes__btn {
+  height: 40px;
+  width: 40px;
+  background-color: #fff9e8;
+  background-image: url(/images/edit.svg);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  border: none;
+  position: absolute;
+  right: 16px;
+  border-left: 1px solid #ffffff;
+}
+
 .tabs_list {
   width: 100%;
   display: -webkit-box;

@@ -123,5 +123,37 @@
     border-bottom: 1px solid #949494;
 }
 
+.manage_sale_atr__yellow{
+    position: relative;
+    > div {
+        input{
+            width: 100%;
+            background: #fff9e8;
+            height: 40px;
+            border-bottom: none;
+            box-sizing: border-box;
+            padding-left: 15px;
+        }
+    }
+    .sale-manage__attributes__edit{
+        height: 40px;
+        align-self: flex-end;
+        .sale-manage__attributes__btn{
+            height: 40px;
+            width: 40px;
+            background-color: #fff9e8;
+            background-image: url(/images/edit.svg);
+            background-repeat: no-repeat;
+            background-size: 24px;
+            background-position: center;
+            border: none;
+            position: absolute;
+            right: 16px;
+            border-left: 1px solid #ffffff;
+        }
+    }
+
+}
+
 
 
