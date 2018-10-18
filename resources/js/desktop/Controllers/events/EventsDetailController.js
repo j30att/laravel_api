@@ -4,6 +4,7 @@ class EventsDetailController {
         this.$state = $state;
         this.EventsResourceService = EventsResourceService;
         this.event = {};
+        this.sale = {};
         this.activeEvent = [];
 
         this._opts = {dataLoad: false};
@@ -13,7 +14,8 @@ class EventsDetailController {
         this.getEvent();
     }
 
-    toggleSidenav() {
+    toggleSidenav(sale) {
+        this.sale = sale;
         this.$scope.$broadcast('sidenav-open', () => {
             console.log('open sidenav')
         });
