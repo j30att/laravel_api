@@ -50,6 +50,7 @@ class SaleManage {
         });
 
     }*/
+
 }
 
 SaleManage.$inject = ['$window', '$http', '$state', '$timeout', '$scope'];

@@ -148,11 +148,34 @@
             background-position: center;
             border: none;
             position: absolute;
-            right: 16px;
-            border-left: 1px solid #ffffff;
+            right: 5px;
         }
     }
 
+}
+.my_sale{
+    &__header{
+        position: fixed;
+        top: 0;
+        left: 5%;
+        right: 5%;
+        background-color: #ffffff;
+        z-index: 100;
+        hr{
+            width: 150%;
+            position: relative;
+            left: -25%;
+            box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    &__content{
+        padding: 0 5px;
+        margin-top: 200px;
+        .my_sale_attention{
+            margin-bottom: 100px;
+        }
+    }
 }
 
 
