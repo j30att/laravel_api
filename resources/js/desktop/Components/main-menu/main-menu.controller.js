@@ -24,6 +24,18 @@ class MainMenuController {
         });
     }
 
+    toggleSidenavPolicy() {
+
+        this.$scope.$broadcast('sidenav-policy-open', () =>{
+        });
+    }
+
+    toggleSidenavTerms() {
+
+        this.$scope.$broadcast('sidenav-terms-open', () =>{
+        });
+    }
+
     isActive(string) {
         if (this.url.indexOf(string) === 1) {
             return {active: true}
