@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\EventDetailResource;
 use App\Http\Resources\EventResource;
 use App\Http\Resources\Events\EventsList;
 use App\Models\Country;
@@ -49,13 +50,16 @@ class EventController extends Controller
      * Display the specified resource.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return EventDetailResource
      */
     public function show($id)
     {
-        $event = Event::query()->where('id', $id)
-            ->with('subEvents.sales.creator')->first();
-        return new EventResource($event);
+        $event = Event::query()
+            ->where('id', $id)
+            ->with('subEvents')
+            ->with('sales')
+            ->first();
+        return new EventDetailResource($event);
     }
 
     /**

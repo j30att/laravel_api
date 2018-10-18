@@ -1,41 +1,47 @@
 class EventsDetailController {
-    constructor($scope, $element, EventsResourceService) {
+    constructor($scope, $state, EventsResourceService) {
         this.$scope = $scope;
-        this.$element = $element;
+        this.$state = $state;
         this.EventsResourceService = EventsResourceService;
-       
+        this.event = {};
+        this.activeEvent = [];
+
         this._opts = {dataLoad: false};
-
-        this.events = [];
-        this.filters = {};
-        this.activeFilter = {};
-
-        this.getEvents();
     }
 
-    $onInit(){
-        this.$element.find('input').on('keydown', function(ev) {
-            ev.stopPropagation();
-        });
+    $onInit() {
+        this.getEvent();
     }
 
     toggleSidenav() {
-        this.$scope.$broadcast('sidenav-open', () =>{
+        this.$scope.$broadcast('sidenav-open', () => {
             console.log('open sidenav')
         });
     }
 
-    getEvents() {
-        this.EventsResourceService.getFilteredEvents(this.activeFilter)
-            .then(response => {
-                this.events = response.data.data;
-                this._opts.dataLoad = true;
-            });
+    toggleEvent(event){
+        this.activeEvent = event;
     }
 
-    
+    getEvent() {
+        let {id} = this.$state.params;
+
+        if (id) {
+            this.EventsResourceService.getEventById(id)
+                .then(response => {
+                    this.event = response.data.data;
+                    if(this.event.subevents[0]){
+                        this.activeEvent = this.event.subevents[0];
+                    } else {
+                        this.activeEvent = this.event;
+                    }
+                    this._opts.dataLoad = true;
+                });
+        }
+    }
+
 }
 
-EventsDetailController.$inject = ['$scope', '$element', 'EventsResourceService'];
+EventsDetailController.$inject = ['$scope', '$state', 'EventsResourceService'];
 
 export {EventsDetailController};

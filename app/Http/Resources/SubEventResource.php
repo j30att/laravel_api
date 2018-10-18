@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\Sales\SaleInvestResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class SubEventResource extends JsonResource
@@ -21,9 +22,9 @@ class SubEventResource extends JsonResource
             'fund'          => $this->fund,
             'buy_in'        => $this->buy_in,
             'date'          => $this->formatted_date,
-            'short_date'    => $this->formatted_short_date
-
+            'short_date'    => $this->formatted_short_date,
+            'period'        => $this->period,
+            'sales'         => SaleInvestResource::collection($this->sales)
         ];
-        return parent::toArray($request);
     }
 }
