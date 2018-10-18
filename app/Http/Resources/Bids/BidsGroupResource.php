@@ -16,7 +16,7 @@ class BidsGroupResource extends JsonResource
     {
 
         return [
-            'highest'   => BidsInvestResource::collection($this->bids_highest),
+            'highest'   => BidsInvestResource::collection($this->bids_highest->take(3)),
             'matched'   => BidsInvestResource::collection($this->bids_matched),
             'unmatched' => BidsInvestResource::collection($this->bids_unmatched)
         ];

@@ -37,7 +37,7 @@
                      ng-class="{'bids_group__highest_color': index == 'highest',
                                 'bids_group__matched_color': index == 'matched',
                                 'bids_group__unmatched_color': index == 'unmatched'}"
-                     ng-repeat="(index,bids) in $ctrl.sale.bids">
+                     ng-repeat="(index,bids) in $ctrl.sale.bids" ng-if="bids.length > 0">
                     <span class="bids_group__title" ng-bind="index"></span>
                     <div class="bids_group__row" ng-repeat="item in bids">
 
@@ -46,18 +46,7 @@
                         <input type="text" placeholder="{%item.amount | currency%}" ng-disabled="index == 'matched' || index == 'highest'">
                     </div>
                 </div>
-                <!--<div class="bids_group edit_status">
-                    <span class="bids_group__title">MATCHED BID</span>
-                    <div class="bids_group__row">
-                        <input type="text" placeholder="1.20">
-                        <input type="text" placeholder="1.53%">
-                        <input type="text" placeholder="$1,182.22">
-                    </div>
-                    <div class="revocation_bid"></div>
-                    <div class="conf_bid"></div>
-                    <div class="del_bid"></div>
-                </div>-->
-                <div class="you_bids">
+               <div class="you_bids">
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">
                         <div class="you_bids__item">

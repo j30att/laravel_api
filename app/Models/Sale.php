@@ -39,8 +39,8 @@ class Sale extends Model
     public function bids_highest(){
         return $this->hasMany(Bid::class,'sale_id')
                     ->where('status', Bid::BIDS_UNMATCHED)
-                    ->orderBy('share', 'desc')
-                    ->limit(3);
+                    ->orderBy('share', 'desc')->limit(3);
+
     }
     public function subevent(){
         return $this->belongsTo(SubEvent::class,'sub_event_id');
