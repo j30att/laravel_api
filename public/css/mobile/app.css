@@ -11117,7 +11117,7 @@ a.text-dark:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .sale_card__list_item {
@@ -11127,8 +11127,8 @@ a.text-dark:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-top: 8px;
 }
 
@@ -11185,8 +11185,8 @@ a.text-dark:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding-left: 10px;
 }
 
@@ -11213,8 +11213,8 @@ a.text-dark:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 33%;
   padding-right: 8px;
 }
@@ -11235,8 +11235,8 @@ a.text-dark:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -11252,8 +11252,8 @@ a.text-dark:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-top: 8px;
 }
 
@@ -11287,8 +11287,8 @@ a.text-dark:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-size: 13px;
   color: #000000;
 }
@@ -11365,8 +11365,8 @@ a.text-dark:focus {
 .offer-wr > div {
   width: 30%;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-right: 10px;
 }
 
@@ -11386,14 +11386,14 @@ a.text-dark:focus {
   height: 40px;
   border-bottom: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding-left: 15px;
 }
 
 .manage_sale_atr__yellow .sale-manage__attributes__edit {
   height: 40px;
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
 
 .manage_sale_atr__yellow .sale-manage__attributes__edit .sale-manage__attributes__btn {
@@ -11430,7 +11430,7 @@ a.text-dark:focus {
   position: relative;
   left: -25%;
   -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   display: none;
 }
 
