@@ -1,0 +1,41 @@
+<div class="sale_card__list"
+     ng-class="{'sale_card__list-last_child': $ctrl.sales.length == key+1}"
+     ng-click="$ctrl.toggleSidenav()"
+     ng-repeat=" (key, item) in $ctrl.sales">
+
+    <div>
+        <div class="card__profile_info">
+            <div class="sale_card__list_profile__photo card__profile_foto">
+                <img src="/images/players.png" alt="">
+            </div>
+            <div class="profile_text">
+                <div class="card__profile_name" ng-bind="item.creator.name">
+                </div>
+                <div class="card__event" ng-bind="item.event.title">
+                </div>
+            </div>
+        </div>
+        <div class="card__subevent" ng-bind="item.subevent.title" ng-if="$ctrl.subevent">
+        </div>
+    </div>
+
+    <div class="card__attribute">
+        <div class="sale_card_list_atr_item">
+            <span>Markup</span><br>
+            <span class="card__attribute_value" ng-bind="item.markup"></span>
+        </div>
+        <div class="sale_card_list_atr_item">
+            <span>Value</span><br>
+            <span class="card__attribute_value">£</span>
+            <span class="card__attribute_value" ng-bind="item.amount"></span>
+        </div>
+        <div class="sale_card_list_atr_item">
+            <span>Date of Start</span><br>
+            <span class="card__attribute_value" ng-bind="item.event.date_start"></span>
+        </div>
+    </div>
+</div>
+
+<bid-place></bid-place>
+<sale-modal sale="$ctrl.item" show="$ctrl.showPlace"></sale-modal>
+<sale-manage sale="$ctrl.item" show="$ctrl.showManage"></sale-manage>

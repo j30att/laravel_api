@@ -7,10 +7,6 @@ class Sales {
         this.item = null;
     }
 
-
-    $onInit() {
-    }
-
     showModal(key, type){
         if(type == 'manage')  this.showManage = true;
         if(type == 'place')   this.showPlace = true;
@@ -36,14 +32,4 @@ class Sales {
 
 Sales.$inject = ['$state', '$scope'];
 
-
-export const SalesComponent = {
-    bindings: {
-        subevent: '<',
-        sales:    '<',
-        state:     '<',
-    },
-    template: require('./sales.template.html'),
-    controller: Sales,
-    controllerAs: '$ctrl'
-};
+export {Sales}
