@@ -41,15 +41,14 @@
 
 }
 
-/*.modal_wrapper{
+.modal_wrapper{
+    background-color: unset;
     position:fixed;
     top: 0;
     left: 0;
-    z-index: 10000;
-    background-color: #fff;
     width: 100vw;
     height: 100vh;
-}*/
+}
 .modal_bids_block_wr{
     width: 100%;
     //height: calc(100vh - 190px);
