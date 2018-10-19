@@ -14,9 +14,17 @@ class Sales {
         this.item = this.sales[key];
     }
 
-    toggleSidenav(index) {
+    togglePlace(index) {
         this.sale = this.sales[index];
-        this.$scope.$broadcast('sidenav-open', () =>{
+        this.$scope.$broadcast('sidenavPlace-open', () =>{
+            console.log('open sidenav')
+        });
+    }
+
+    toggleManage(index) {
+
+        this.sale = this.sales[index];
+        this.$scope.$broadcast('sidenavManage-open', () =>{
             console.log('open sidenav')
         });
     }

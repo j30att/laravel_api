@@ -18,7 +18,7 @@ class BidPlace {
     }
 
     $onInit(){
-        this.$scope.$on('sidenav-open', (event, data) => {
+        this.$scope.$on('sidenavPlace-open', (event, data) => {
             this.buildToggler('right');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {

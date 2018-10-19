@@ -9,9 +9,10 @@ import {SalesListComponent} from "./Components/sales/list/sales-list.component";
 import {SalesRowComponent} from "./Components/sales/row/sales-row.component";
 import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel.controller";
 import {SaleModalComponent} from "./Components/sale-modal/sale-modal.controller";
-import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
+
 
 import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
+import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
 
 
 let module = angular.module('Components', []);
@@ -24,9 +25,10 @@ module.component('salesList', SalesListComponent);
 module.component('salesRow', SalesRowComponent);
 module.component('salesCarousel', SalesCarouselComponent);
 module.component('saleModal', SaleModalComponent);
-module.component('saleManage', SaleManageComponent);
+
 
 module.component('bidPlace',BidPlaceComponent);
+module.component('saleManage', SaleManageComponent);
 
 export default module.name;
 
