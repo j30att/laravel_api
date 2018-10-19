@@ -9,7 +9,7 @@
     left: 0;
     padding: 0 5%;
     background-color: #ffffff;
-    z-index: 500;
+    z-index: 50;
 
     &_title {
         font-size: 16px;
@@ -39,10 +39,10 @@
     }
 
     &_close {
-        width: 22px;
-        height: 22px;
+        width: 44px;
+        height: 44px;
         background: url("/images/header/close.png") no-repeat center;
-        background-size: 80%;
+        background-size: 18px;
     }
 }
 .header_empty_height{

@@ -8,7 +8,7 @@ import {SalesInvestComponent} from "./Components/sales/invest/sales-invest.compo
 import {SalesListComponent} from "./Components/sales/list/sales-list.component";
 import {SalesRowComponent} from "./Components/sales/row/sales-row.component";
 import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel.controller";
-import {SaleModalComponent} from "./Components/sale-modal/sale-modal.controller";
+
 
 
 import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
@@ -24,7 +24,7 @@ module.component('salesInvest', SalesInvestComponent);
 module.component('salesList', SalesListComponent);
 module.component('salesRow', SalesRowComponent);
 module.component('salesCarousel', SalesCarouselComponent);
-module.component('saleModal', SaleModalComponent);
+
 
 
 module.component('bidPlace',BidPlaceComponent);
