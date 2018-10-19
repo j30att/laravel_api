@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 
-
 use App\Http\Resources\Sales\SaleInvestResource;
 use App\Http\Resources\SaleResource;
 use App\Models\Sale;
@@ -19,7 +18,7 @@ class SaleController extends Controller
     {
         $user = Auth::user();
 
-        if ($user == null){
+        if ($user == null) {
             return $this->closingSoonSales();
         } else {
             if ($user->id != $request->get('user_id')) $this->closingSoonSales();
@@ -29,10 +28,10 @@ class SaleController extends Controller
             ->where('status', SALE::SALE_ACTIVE)
             ->with('creator')
             ->with('event')
-            ->with(['bids_matched' => function($query) use ($user){
+            ->with(['bids_matched' => function ($query) use ($user) {
                 $query->where('user_id', $user->id);
             }])
-            ->with(['bids_unmatched' => function($query) use ($user){
+            ->with(['bids_unmatched' => function ($query) use ($user) {
                 $query->where('user_id', $user->id);
             }])
             ->get()
@@ -143,6 +142,24 @@ class SaleController extends Controller
 
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function filteredSales(Request $request)
+    {
+        $query = Sale::query();
+        $filter = $request->get('filter');
+
+        if ($filter) {
+            if (isset($filter['status'])) {
+                $query->where('status', $filter['status']);
+            }
+        }
+
+        return SaleResource::collection($query->get());
+    }
+
     public function index(Request $request)
     {
         dd('тут ничего нету');
@@ -168,7 +185,7 @@ class SaleController extends Controller
     {
         $data = $request->get('sale');
         $sale = Sale::create($data);
-        return response(json_encode(['status' => 1, 'data'=> $sale]));
+        return response(json_encode(['status' => 1, 'data' => $sale]));
     }
 
     /**

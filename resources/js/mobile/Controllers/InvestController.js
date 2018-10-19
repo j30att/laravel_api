@@ -1,50 +1,49 @@
-import {EVENTS_INDEX, SALE_CLOSED, SALE_INDEX, SALE_MARKUP, SALE_CLOSING, SALE_LOWEST} from "../Constants"
-import {LoginController} from "./LoginController";
-
-
 class InvestController {
-    constructor($window, $http){
+    constructor($window, $http, EventsResourceService, SalesResourceService) {
         this.$window = $window;
         this.$http = $http;
-        this.events =[];
-        this._opts = {dataLoad: false};
+        this.EventsResourceService = EventsResourceService;
+        this.SalesResourceService = SalesResourceService;
+
         this.filter = 'closing';
-        this.showList();
+        this.events = [];
+        this.sales = [];
+        this._opts = {
+            dataLoad: false
+        };
+    }
+
+    $onInit() {
+        this.getEventsList();
         this.setFilter(this.filter);
-
-
     }
 
-    setFilter(param){
-        if (param == 'closing') {this.filter = 'closing'; this.getSales(SALE_CLOSING)}
-        if (param == 'markup') {this.filter = 'markup'; this.getSales(SALE_LOWEST)}
+    setFilter(param) {
+        let possibles = ['closing','markup'];
+
+        if(possibles.includes(param)){
+            this.filter = param;
+            this.getSales();
+        }
     }
 
-    showList() {
-        this.$http.get(EVENTS_INDEX,
-        ).then(response => {
-            this.events = response.data.data;
-            this._opts.dataLoad = true;
-            console.log(this.events, 'console.log(this.events)');
-        });
+    getEventsList() {
+        this.EventsResourceService.getMainEvents()
+            .then(response => {
+                this.events = response.data.data;
+                this._opts.dataLoad = true;
+            });
     }
 
-
-    getSales(url){
-        this.$http.post(url)
-        .then(response => {
-            this.sales = response.data.data;
-            this._opts.dataLoad = true;
-            return true;
-        });
-
+    getSales() {
+        this.SalesResourceService.getClosingSoonSales()
+            .then(response => {
+                this.sales = response.data.data;
+                this._opts.dataLoad = true;
+            });
     }
+}
 
-
-
-
-};
-InvestController.$inject = ['$window', '$http',];
-
+InvestController.$inject = ['$window', '$http', 'EventsResourceService', 'SalesResourceService'];
 
 export {InvestController};

@@ -11,7 +11,6 @@ class EventsResourceService {
 
     getFilteredEvents(filter) {
         return this.$http.post(EVENTS_API + '/filtered', {filter: filter});
-
     };
 
     getEventById(id) {
