@@ -2800,7 +2800,7 @@ a {
 /*bids content*/
 
 .bids_content_wr {
-  width: 996px;
+  /*width: 996px;*/
 }
 
 .bids_nav {
@@ -2853,7 +2853,8 @@ a {
 
 .bids_table td {
   height: 53px;
-  line-height: 53px;
+  padding-right: 10px;
+  /*line-height: 53px;*/
 }
 
 .bids_table_body tr {
@@ -3069,7 +3070,7 @@ a {
 }
 
 .events_item-wr {
-  margin: 0 -6px;
+  margin: 0px -14px 0px -6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3081,7 +3082,7 @@ a {
 }
 
 .event_item {
-  width: 320px;
+  width: 33%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 6px 24px;
