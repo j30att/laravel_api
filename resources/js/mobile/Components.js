@@ -10,6 +10,8 @@ import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel
 import {SaleModalComponent} from "./Components/sale-modal/sale-modal.controller";
 import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
 
+import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
+
 
 let module = angular.module('Components', []);
 module.component('bids', BidsComponent);
@@ -20,6 +22,8 @@ module.component('sales', SalesComponent);
 module.component('salesCarousel', SalesCarouselComponent);
 module.component('saleModal', SaleModalComponent);
 module.component('saleManage', SaleManageComponent);
+
+module.component('bidPlace',BidPlaceComponent);
 
 export default module.name;
 

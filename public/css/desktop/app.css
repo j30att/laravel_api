@@ -1286,6 +1286,7 @@ md-dialog-actions .md-confirm-button {
 }
 
 .modal_content__bid .profile_status__gte_and_by {
+  width: 50%;
   font-size: 15px;
   color: #949494;
   display: -webkit-box;
