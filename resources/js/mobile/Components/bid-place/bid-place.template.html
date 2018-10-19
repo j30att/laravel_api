@@ -1,164 +1,162 @@
 <md-sidenav class="md-sidenav-right full_height full_height__sidnav" style="position: fixed !important;"
             md-is-open="isSidenavOpen" md-component-id="right">
-    <md-content>
-
-        <div class="place_wrapper" style="position: fixed">
-                <div class="my_sale__header">
-                    <div class="header">
-                        <div class="header_close" ng-click="$ctrl.close('right')"></div>
-                        <div class="header_title">Place a bid</div>
-                        <div class="header_filter_empty"></div>
+    <md-content class="place_wrapper">
+        <div class="my_sale__header">
+            <div class="header">
+                <div class="header_close" ng-click="$ctrl.close('right')"></div>
+                <div class="header_title">Place a bid</div>
+                <div class="header_filter_empty"></div>
+            </div>
+            <div class="binds-item__game_info card__event_info">
+                <div class="card__profile_info">
+                    <div class="sale_card__list_profile__photo card__profile_foto">
+                        <img src="/images/players.png" alt="">
                     </div>
-                    <div class="binds-item__game_info card__event_info">
-                        <div class="card__profile_info">
-                            <div class="sale_card__list_profile__photo card__profile_foto">
-                                <img src="/images/players.png" alt="">
-                            </div>
-                            <div class="profile_text">
-                                <div class="card__profile_name ng-binding">Louise Romero</div>
-                                <div class="card__event ng-binding">MILLIONS Russia, 1A</div>
-                            </div>
-                        </div>
-                        <div class="event_card_fund ng-binding">£ 1000000 GTD • £ 500000 GTD</div>
-
-
-                        <div class="card__attribute manage_sale_atr manage_sale_atr__yellow">
-                            <div class="sale_card_list_atr_item manage_sale_atr_item">
-                                <span>Markup</span>
-                                <input type="number" placeholder="1.00">
-                            </div>
-                            <div class="sale_card_list_atr_item manage_sale_atr_item">
-                                <span>Share</span>
-                                <input type="number" placeholder="1.38%">
-                            </div>
-                            <div class="sale_card_list_atr_item manage_sale_atr_item">
-                                <span>Value</span>
-                                <input type="number" placeholder="$1938">
-                            </div>
-                            <div class="sale-manage__attributes__edit">
-                                <button class="sale-manage__attributes__btn"></button>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                </div>
-                <div class="my_sale__content">
-                    <div class="modal_type_bids">
-                        <div class="blocks_header_title_name">
-                            HIGHEST BIDS
-                        </div>
-
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div class="modal_type_bids__item_confirm"></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="modal_type_bids">
-                        <div class="blocks_header_title_name">
-                            HIGHEST BIDS
-                        </div>
-
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div class="modal_type_bids__item_confirm"></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="modal_type_bids">
-                        <div class="blocks_header_title_name">
-                            HIGHEST BIDS
-                        </div>
-
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div></div>
-                            </div>
-                        </div>
-                        <div class="modal_type_bids_type">
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
-                            <div class="modal_type_bids__item modal_bids_item_color_highest">
-                                <div>$1,182.22</div>
-                                <div class="modal_type_bids__item_confirm"></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="my_sale_attention">
-
+                    <div class="profile_text">
+                        <div class="card__profile_name ng-binding">Louise Romero</div>
+                        <div class="card__event ng-binding">MILLIONS Russia, 1A</div>
                     </div>
                 </div>
-                <div class="hideempty">
-                    <div class="manage_button">
-                        <div class="button_half__white" ng-click="$ctrl.setState()">
-                            Cancel
-                        </div>
-                        <div class="button_half__blue" ng-click="$ctrl.setState('store')">
-                            Save
-                        </div>
+                <div class="event_card_fund ng-binding">£ 1000000 GTD • £ 500000 GTD</div>
+
+
+                <div class="card__attribute manage_sale_atr manage_sale_atr__yellow">
+                    <div class="sale_card_list_atr_item manage_sale_atr_item">
+                        <span>Markup</span>
+                        <input type="number" placeholder="1.00">
                     </div>
-                    <div class="modal_add_bid"
-                         ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
-                        Add new bid
+                    <div class="sale_card_list_atr_item manage_sale_atr_item">
+                        <span>Share</span>
+                        <input type="number" placeholder="1.38%">
+                    </div>
+                    <div class="sale_card_list_atr_item manage_sale_atr_item">
+                        <span>Value</span>
+                        <input type="number" placeholder="$1938">
+                    </div>
+                    <div class="sale-manage__attributes__edit">
+                        <button class="sale-manage__attributes__btn"></button>
                     </div>
                 </div>
+                <hr>
+            </div>
+
+        </div>
+        <div class="my_sale__content">
+            <div class="modal_type_bids">
+                <div class="blocks_header_title_name">
+                    HIGHEST BIDS
+                </div>
+
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div class="modal_type_bids__item_confirm"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal_type_bids">
+                <div class="blocks_header_title_name">
+                    HIGHEST BIDS
+                </div>
+
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div class="modal_type_bids__item_confirm"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal_type_bids">
+                <div class="blocks_header_title_name">
+                    HIGHEST BIDS
+                </div>
+
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal_type_bids_type">
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">1.53%</div>
+                    <div class="modal_type_bids__item modal_bids_item_color_highest">
+                        <div>$1,182.22</div>
+                        <div class="modal_type_bids__item_confirm"></div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="my_sale_attention">
+
+            </div>
+        </div>
+        <div class="hideempty">
+            <div class="manage_button">
+                <div class="button_half__white" ng-click="$ctrl.setState()">
+                    Cancel
+                </div>
+                <div class="button_half__blue" ng-click="$ctrl.setState('store')">
+                    Save
+                </div>
+            </div>
+            <div class="modal_add_bid"
+                 ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
+                Add new bid
+            </div>
+        </div>
         </div>
     </md-content>
 </md-sidenav>
