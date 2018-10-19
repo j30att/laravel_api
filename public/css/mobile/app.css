@@ -11412,7 +11412,7 @@ a.text-dark:focus {
 .container {
   width: 100vw;
   height: 100vh;
-  position: fixed;
+  /*position: fixed;*/
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
