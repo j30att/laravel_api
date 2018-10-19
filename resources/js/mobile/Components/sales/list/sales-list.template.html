@@ -9,7 +9,7 @@
 
     <div class="event_card_text">
         <div class="event_card_title" ng-bind="item.event.title"></div>
-        <div class="blocks_header_link" ng-if="item.status == 1" ng-click="$ctrl.toggleManage()">edit</div>
+        <div class="blocks_header_link" ng-if="item.status == 1" ng-click="$ctrl.togglePlace()">edit</div>
         <div class="card__subevent" ng-bind="item.subevent.title">
         </div>
         <div class="card__sale_event_byin">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
