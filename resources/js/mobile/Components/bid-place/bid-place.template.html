@@ -1,73 +1,6 @@
-<md-sidenav class="md-sidenav-right full_height" style="max-width: 100vw !important; min-width: 100vw !important;" md-is-open="isSidenavOpen" md-component-id="right">
+<md-sidenav class="md-sidenav-right full_height full_height__sidnav"
+            md-is-open="isSidenavOpen" md-component-id="right">
     <md-content>
-     <!-- <div class="modal_content">
-            <div class="modal_content__title">
-                <div>Place a bid</div>
-                <div class="close" ng-click="$ctrl.close('right')"> </div>
-            </div>
-            <div class="modal_content__bid">
-                <div class="profile_status">
-                    <div>
-                        <div class="profile_status__photo"><img src="/images/desk/players_img/profile_img_8.png" alt="photo"></div>
-                        <div>
-                            <div class="profile_status__name" ng-bind="$ctrl.sale.creator.name">Louise Romero</div>
-                            <div class="profile_status__event" ng-bind="$ctrl.sale.event.title">MILLIONS Russia, 1A</div>
-                        </div>
-                        <div class="profile_status__gte_and_by">
-                            <div class="profile_status__buyin">£ <span>1,000</span></div>
-                            <div class="profile_status__gte">£<span>500,000</span> GTE</div>
-                        </div>
-                    </div>
-                    <div class="profile_status__attributs d-flex">
-                        <div class="profile_status__markup"><span>Markup</span>
-                            <br>
-                            <span ng-bind="$ctrl.sale.markup" style="color: black; font-size: 15px"></span>
-                        </div>
-                        <div class="profile_status__share"><span>Share</span>
-                            <br>
-                            <span ng-bind="$ctrl.sale.share" style="color: black; font-size: 15px"></span>
-                        </div>
-                        <div class="profile_status__value"><span>Value</span>
-                            <br>
-                            <span ng-bind="$ctrl.sale.amount" style="color: black; font-size: 15px"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bids_group"
-                     ng-class="{'bids_group__highest_color': index == 'highest',
-                                'bids_group__matched_color': index == 'matched',
-                                'bids_group__unmatched_color': index == 'unmatched'}"
-                     ng-repeat="(index,bids) in $ctrl.sale.bids" ng-if="bids.length > 0">
-                    <span class="bids_group__title" ng-bind="index"></span>
-                    <div class="bids_group__row" ng-repeat="item in bids">
-
-                        <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
-                        <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
-                        <input type="text" placeholder="{%item.amount | currency%}" ng-disabled="index == 'matched' || index == 'highest'">
-                    </div>
-                </div>
-               <div class="you_bids">
-                    <span class="bids_group__title">YOUR BID</span>
-                    <div class="you_bids__wrapper">
-                        <div class="you_bids__item">
-                            <label>Markup</label>
-                            <input type="text" placeholder="1.20" ng-model="$ctrl.bid.markup">
-                        </div>
-                        <div class="you_bids__item">
-                            <label>Share</label>
-                            <input type="text" placeholder="1.53%" ng-model="$ctrl.bid.share">
-                        </div>
-                        <div class="you_bids__item">
-                            <label>Amount</label>
-                            <input type="text" placeholder="$1,182.22" ng-model="$ctrl.bid.amount">
-                        </div>
-                        <div class="add_new"></div>
-                        <div class="you_bids__place_bid" ng-click="$ctrl.saveMyBid()">Place a bid</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>-->
         <div class="modal_wrapper">
 
             <div class="container">
@@ -78,14 +11,17 @@
                         <div class="header_title">Place a bid</div>
                         <div class="header_filter_empty"></div>
                     </div>
-                    <!--<div class="binds-item__game_info card__event_info">
-                        <div class="event_card_title">MILLIONS Russia, 1A</div>
-                        <div class="geme__text card__event_info_item">
-                            <div class="card__event_info_attr">
-                                Buy in $5,000 + $300
+                    <div class="binds-item__game_info card__event_info">
+                        <div class="card__profile_info">
+                            <div class="sale_card__list_profile__photo card__profile_foto">
+                                <img src="/images/players.png" alt="">
+                            </div>
+                            <div class="profile_text">
+                                <div class="card__profile_name ng-binding">Louise Romero</div>
+                                <div class="card__event ng-binding">MILLIONS Russia, 1A</div>
                             </div>
                         </div>
-
+                        <div class="event_card_fund ng-binding">£ 1000000 GTD • £ 500000 GTD</div>
 
 
                         <div class="card__attribute manage_sale_atr manage_sale_atr__yellow">
@@ -106,16 +42,8 @@
                             </div>
                         </div>
                         <hr>
-                    </div>-->
-                    <div class="card__profile_info">
-                        <div class="sale_card__list_profile__photo card__profile_foto">
-                            <img src="/images/players.png" alt="">
-                        </div>
-                        <div class="profile_text">
-                            <div class="card__profile_name ng-binding" ng-bind="item.creator.name">jane</div>
-                            <div class="card__event ng-binding" ng-bind="item.event.title">Caribbean Poker Part...</div>
-                        </div>
                     </div>
+
                 </div>
 
 
@@ -220,7 +148,7 @@
                     </div>
 
                     <div class="my_sale_attention">
-                        Your sale is almost finished, top-up your sale if you want sell more
+
                     </div>
                 </div>
                 <div class="hideempty">
@@ -232,9 +160,9 @@
                             Save
                         </div>
                     </div>
-                    <div class="modal_add_bid modal_add_bid_blue "
+                    <div class="modal_add_bid"
                          ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
-                        Increase your share
+                        Add new bid
                     </div>
                 </div>
 

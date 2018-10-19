@@ -1,16 +1,15 @@
-<md-sidenav class="md-sidenav-right full_height" style="min-width: 100vw; max-width: 100vw" md-is-open="isSidenavOpen"
+<md-sidenav class="md-sidenav-right full_height full_height__sidnav"
+            md-is-open="isSidenavOpen"
             md-component-id="right_manage">
     <md-content>
         <div class="modal_wrapper">
         <div class="container">
-
-            <div class="header">
-                <div class="header_close" ng-click="$ctrl.close('right_manage')"></div>
-                <div class="header_title">My sale</div>
-                <div class="header_filter_empty"></div>
-            </div>
-
             <div class="my_sale__header">
+                <div class="header">
+                    <div class="header_close" ng-click="$ctrl.close('right_manage')"></div>
+                    <div class="header_title">My sale</div>
+                    <div class="header_filter_empty"></div>
+                </div>
                 <div class="binds-item__game_info card__event_info">
                     <div class="event_card_title">MILLIONS Russia, 1A</div>
                     <div class="geme__text card__event_info_item">
@@ -18,36 +17,37 @@
                             Buy in $5,000 + $300
                         </div>
                     </div>
+                    <div class="event_card_fund ng-binding">£ 1000000 GTD • £ 500000 GTD</div>
 
 
                     <div class="card__attribute manage_sale_atr">
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
-                            <span>Closes in</span><br>
+                            <span>Closes in</span>
                             <span class="card__attribute_value ng-binding">73 days</span>
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
-                            <span>Share sold</span><br>
+                            <span>Share sold</span>
                             <span class="card__attribute_value">5%</span>
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
-                            <span>Amount raised</span><br>
+                            <span>Amount raised</span>
                             <span class="card__attribute_value ng-binding">$1892</span>
                         </div>
 
                     </div>
                     <div class="card__attribute manage_sale_atr manage_sale_atr__yellow">
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
-                            <span>Markup</span><br>
+                            <span>Markup</span>
 
                             <input type="number" placeholder="1.00">
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
-                            <span>Share</span><br>
+                            <span>Share</span>
 
                             <input type="number" placeholder="1.38%">
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
-                            <span>Value</span><br>
+                            <span>Value</span>
 
                             <input type="number" placeholder="$1938">
                         </div>

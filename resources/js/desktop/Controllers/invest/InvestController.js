@@ -47,15 +47,6 @@ class InvestController {
                 this._opts.dataLoad = true;
             });
     }
-
-
-    toggleSidenav(index) {
-        this.sale = this.sales[index];
-        this.$scope.$broadcast('sidenav-open', () =>{
-            console.log('open sidenav')
-        });
-    }
-
 }
 
 InvestController.$inject = ['$window', '$http', '$mdDialog','EventsResourceService','SalesResourceService', '$scope'];

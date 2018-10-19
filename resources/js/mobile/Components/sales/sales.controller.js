@@ -7,14 +7,8 @@ class Sales {
         this.item = null;
     }
 
-    showModal(key, type){
-        if(type == 'manage')  this.showManage = true;
-        if(type == 'place')   this.showPlace = true;
-        this.$state.modalOpened = true;
-        this.item = this.sales[key];
-    }
-
     togglePlace(index) {
+        console.log(12312312312);
         this.sale = this.sales[index];
         this.$scope.$broadcast('sidenavPlace-open', () =>{
             console.log('open sidenav')
