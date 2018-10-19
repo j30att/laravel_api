@@ -24,6 +24,7 @@ export const BIDS_MY_STORE       = '/api/bids/my/store';
 
 //**EVENTS**//
 export const EVENTS_API = '/api/events';
+export const SUB_EVENTS_API = '/api/subevents';
 
 //**SALE**//
 
