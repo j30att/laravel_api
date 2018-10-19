@@ -1,11 +1,13 @@
 <md-sidenav class="md-sidenav-right full_height full_height__sidnav"
             md-is-open="isSidenavOpen" md-component-id="right">
     <md-content>
+        <div class="modal_wrapper">
 
             <div class="container">
+
                 <div class="my_sale__header">
                     <div class="header">
-                        <div class="header_close"></div>
+                        <div class="header_close" ng-click="$ctrl.close('right')"></div>
                         <div class="header_title">Place a bid</div>
                         <div class="header_filter_empty"></div>
                     </div>
@@ -141,11 +143,33 @@
                                 <div class="modal_type_bids__item_confirm"></div>
                             </div>
                         </div>
+
+
                     </div>
+
                     <div class="my_sale_attention">
+
                     </div>
                 </div>
+                <div class="hideempty">
+                    <div class="manage_button">
+                        <div class="button_half__white" ng-click="$ctrl.setState()">
+                            Cancel
+                        </div>
+                        <div class="button_half__blue" ng-click="$ctrl.setState('store')">
+                            Save
+                        </div>
+                    </div>
+                    <div class="modal_add_bid"
+                         ng-if="!$ctrl._opts.stateCreate" ng-click="$ctrl.setState()">
+                        Add new bid
+                    </div>
+                </div>
+
+
             </div>
-        
+
+
+        </div>
     </md-content>
 </md-sidenav>
