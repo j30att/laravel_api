@@ -5,13 +5,21 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
     &_wrapper{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
     }
 
     &_item{
       width: 33%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       margin-top: 8px;
 
@@ -45,6 +53,8 @@
     }
 
     &_profile {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       padding-bottom: 8px;
 
@@ -60,7 +70,12 @@
       }
 
       &__text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-left: 10px;
       }
@@ -78,10 +93,17 @@
     }
 
     &_attribute {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
 
       &__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width: 33%;
         padding-right: 8px;
@@ -102,7 +124,11 @@
 }
 
 .sale_card_list_atr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 10px;
   padding-left: 15px;
@@ -113,7 +139,12 @@
   }
 
   &_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 8px;
 
@@ -142,7 +173,12 @@
 }
 
 .sale_form_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-size: 13px;
   color: #000000;
@@ -213,11 +249,15 @@
 }
 
 .offer-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .offer-wr > div {
   width: 30%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-right: 10px;
 }
@@ -236,12 +276,14 @@
       background: #fff9e8;
       height: 40px;
       border-bottom: none;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding-left: 15px;
     }
   }
   .sale-manage__attributes__edit {
     height: 40px;
+    -ms-flex-item-align: end;
     align-self: flex-end;
     .sale-manage__attributes__btn {
       height: 40px;
@@ -259,6 +301,14 @@
 
 }
 
+.place_wrapper{
+  width: 100vw;
+  height: 100vh;
+  padding: 0 15px;
+}
+
+
+
 .my_sale {
   &__header {
     position: fixed;
@@ -267,11 +317,20 @@
     right: 5%;
     background-color: #ffffff;
     z-index: 100;
+    border-bottom: 1px solid black;
     hr {
       width: 150%;
       position: relative;
       left: -25%;
+      -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
       box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+    .card__profile_info{
+      margin: 0 0 12px 0;
+    }
+    .binds-item__game_info{
+      padding-left: 0;
     }
     .card__event_info {
       margin-top: 60px;
@@ -309,6 +368,5 @@
     }
   }
 }
-
 
 
