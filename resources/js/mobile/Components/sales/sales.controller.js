@@ -3,12 +3,11 @@ class Sales {
         this.$state = $state;
         this.$scope = $scope;
         this.showPlace = false;
-        this.showManage = false
+        this.showManage = false;
         this.item = null;
     }
 
     togglePlace(index) {
-        console.log(12312312312);
         this.sale = this.sales[index];
         this.$scope.$broadcast('sidenavPlace-open', () =>{
             console.log('open sidenav')

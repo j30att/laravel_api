@@ -27,6 +27,7 @@ export const EVENTS_API = '/api/events';
 
 //**SALE**//
 
+export const SALE_API       = '/api/sales';
 export const SALE_MY        = '/api/sales/my';
 export const SALE_MY_ACTIVE = '/api/sales/my/active';
 export const SALE_MY_CLOSED = '/api/sales/my/closed';
