@@ -1,7 +1,7 @@
 <div class="sale_card__row"
      ng-class="{'sale_active': item.status === 1, 'sale_canceled': item.status === 2}"
      ng-repeat="item in $ctrl.sales">
-    <div class="event_card_text">
+    <div class="sale_card__row_text">
         <div class="event_card_title" ng-bind="item.event.title"></div>
         <div class="card__sale_event_byin">Buy in $<span ng-bind="item.event.buy_in"></span> + $<span
             ng-bind="item.subevent.buy_in"></span></div>
