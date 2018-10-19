@@ -6,7 +6,8 @@ import {
     SALE_CLOSED,
     SALE_ACTIVE,
     SALE_CLOSING_SOON,
-    SALE_CREATE
+    SALE_CREATE,
+    SALE_INDEX
 } from "../Constants"
 
 
@@ -38,6 +39,10 @@ class SalesResourceService {
     createMySale(sale) {
         return this.$http.post(SALE_CREATE, {sale});
     }
+
+    getSaleById(id) {
+        return this.$http.get(SALE_INDEX + '/' + id);
+    };
 }
 
 SalesResourceService.$inject = ['$http'];
