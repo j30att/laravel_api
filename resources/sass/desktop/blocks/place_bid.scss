@@ -16,6 +16,7 @@
                font-weight: 700;
            }
            &__event{
+               width:100%;
                margin-right: 79px;
                font-size: 12px;
            }
@@ -162,16 +163,18 @@
                margin-top: 10px;
            }
            &__item{
+               font-size: 13px;
                display: flex;
                flex-direction: column;
                width: 90px;
                margin-right: 9px;
                overflow: hidden;
                label {
-                   font-size: 15px;
+                   font-size: 13px;
                    color: #949494;
                }
                input {
+                   font-size: 13px;
                    width: 90px;
                    height: 38px;
                    border-radius: 8px;

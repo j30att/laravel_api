@@ -191,6 +191,94 @@
   line-height: 20px;
 }
 
+.bids-common {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bids-common__title {
+  width: 100%;
+  font-size: 12px;
+  line-height: 17px;
+  color: #949494;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bids-common__title span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  padding-left: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bids-common__title span:first-child {
+  padding-left: 0;
+}
+
+.bids-common__title span:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.bids-common__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.bids-common__items-yellow span,
+.bids-common__items-yellow input {
+  background: #fff9e8;
+}
+
+.bids-common__items-blue span,
+.bids-common__items-blue input {
+  background: #edf8fd;
+}
+
+.bids-common__items span,
+.bids-common__items input {
+  height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  line-height: 40px;
+  border: none;
+  border-left: 1px solid white;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.bids-common__items span:first-child,
+.bids-common__items input:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.bids-common__items span:last-child,
+.bids-common__items input:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 0 4px 4px 0;
+}
+
 .sale {
   /*active sales table*/
   /*create sale*/
@@ -1281,6 +1369,7 @@ md-dialog-actions .md-confirm-button {
 }
 
 .modal_content__bid .profile_status__event {
+  width: 100%;
   margin-right: 79px;
   font-size: 12px;
 }
@@ -1461,6 +1550,7 @@ md-dialog-actions .md-confirm-button {
 }
 
 .modal_content__bid .you_bids__item {
+  font-size: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1474,11 +1564,12 @@ md-dialog-actions .md-confirm-button {
 }
 
 .modal_content__bid .you_bids__item label {
-  font-size: 15px;
+  font-size: 13px;
   color: #949494;
 }
 
 .modal_content__bid .you_bids__item input {
+  font-size: 13px;
   width: 90px;
   height: 38px;
   border-radius: 8px;

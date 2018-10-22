@@ -7,7 +7,7 @@
             </div>
             <div class="modal_content__bid">
                 <div class="profile_status">
-                    <div>
+                    <div style="margin-bottom: 8px">
                         <div class="profile_status__photo"><img src="/images/desk/players_img/profile_img_8.png" alt="photo"></div>
                         <div>
                             <div class="profile_status__name" ng-bind="$ctrl.sale.creator.name">Louise Romero</div>
@@ -18,34 +18,43 @@
                             <div class="profile_status__gte">£<span>500,000</span> GTE</div>
                         </div>
                     </div>
-                    <div class="profile_status__attributs d-flex">
-                        <div class="profile_status__markup"><span>Markup</span>
-                            <br>
-                            <span ng-bind="$ctrl.sale.markup" style="color: black; font-size: 15px"></span>
+                    <div class="bids-common">
+                        <div class="bids-common__title">
+                            <span>Markup</span>
+                            <span>Share</span>
+                            <span>Value</span>
                         </div>
-                        <div class="profile_status__share"><span>Share</span>
-                            <br>
-                            <span ng-bind="$ctrl.sale.share" style="color: black; font-size: 15px"></span>
-                        </div>
-                        <div class="profile_status__value"><span>Value</span>
-                            <br>
-                            <span ng-bind="$ctrl.sale.amount" style="color: black; font-size: 15px"></span>
+                        <div class="bids-common__items bids-common__items-yellow">
+                            <span ng-bind="$ctrl.sale.markup"></span>
+                            <span ng-bind="$ctrl.sale.share + '%'"></span>
+                            <span ng-bind="$ctrl.sale.amount|currency:'$':0"></span>
                         </div>
                     </div>
+
                 </div>
+                <div class="modal_content__hr"></div>
                 <div class="bids_group"
                      ng-class="{'bids_group__highest_color': index == 'highest',
                                 'bids_group__matched_color': index == 'matched',
                                 'bids_group__unmatched_color': index == 'unmatched'}"
                      ng-repeat="(index,bids) in $ctrl.sale.bids" ng-if="bids.length > 0">
                     <span class="bids_group__title" ng-bind="index"></span>
-                    <div class="bids_group__row" ng-repeat="item in bids">
 
-                        <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
-                        <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
-                        <input type="text" placeholder="{%item.amount | currency%}" ng-disabled="index == 'matched' || index == 'highest'">
+                    <div class="bids-common">
+                        <div class="bids-common__title" ng-if="index == 'highest'">
+                            <span>Markup</span>
+                            <span>Share</span>
+                            <span>Value</span>
+                        </div>
+                        <div class="bids-common__items" ng-repeat="item in bids">
+                            <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
+                            <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
+                            <input type="text" placeholder="{%item.amount | currency:'$':0%}" ng-disabled="index == 'matched' || index == 'highest'">
+                        </div>
                     </div>
+
                 </div>
+                <div class="modal_content__hr"></div>
                <div class="you_bids">
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">

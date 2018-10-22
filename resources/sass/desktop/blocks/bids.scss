@@ -36,7 +36,7 @@
     margin: 16px -16px 0 -6px;
   }
 
-  &_card_wrapper{
+  &_card_wrapper {
     width: 33%;
     box-sizing: border-box;
     padding: 0 6px;
@@ -156,6 +156,75 @@
       }
     }
 
+  }
+
+}
+
+.bids-common {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    width: 100%;
+    font-size: 12px;
+    line-height: 17px;
+    color: #949494;
+    margin-bottom: 4px;
+    display: flex;
+
+    span {
+      display: flex;
+      width: 25%;
+      padding-left: 10px;
+      box-sizing: border-box;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    width: 100%;
+
+    &-yellow{
+      span, input{
+        background: #fff9e8;
+      }
+    }
+
+    &-blue{
+      span, input {
+        background: #edf8fd;
+      }
+    }
+
+    span, input {
+      height: 40px;
+      box-sizing: border-box;
+      font-size: 15px;
+      line-height: 40px;
+      border: none;
+      border-left: 1px solid white;
+      margin: 0;
+      display: flex;
+      width: 25%;
+      padding: 0 10px;
+
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:last-child {
+        flex-grow: 1;
+        border-radius: 0 4px 4px 0;
+      }
+    }
   }
 
 }
