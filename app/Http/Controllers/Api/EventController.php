@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Resources\EventDetailResource;
+
+use App\Http\Resources\Events\EventDetailResource;
 use App\Http\Resources\EventResource;
 use App\Http\Resources\Events\EventsList;
 use App\Models\Country;

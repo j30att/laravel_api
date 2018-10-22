@@ -10,7 +10,7 @@ import {SalesRowComponent} from "./Components/sales/row/sales-row.component";
 import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel.controller";
 
 
-
+import {SaleCreateComponent} from "./Components/sale-create/sale-create.controller";
 import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
 import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
 
@@ -29,6 +29,6 @@ module.component('salesCarousel', SalesCarouselComponent);
 
 module.component('bidPlace',BidPlaceComponent);
 module.component('saleManage', SaleManageComponent);
-
+module.component('saleCreate', SaleCreateComponent);
 export default module.name;
 

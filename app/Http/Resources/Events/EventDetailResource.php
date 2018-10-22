@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\Events;
 
 use App\Http\Resources\Sales\SaleInvestResource;
+use App\Http\Resources\SubEventResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class EventDetailResource extends JsonResource
@@ -15,7 +16,6 @@ class EventDetailResource extends JsonResource
      */
     public function toArray($request)
     {
-
         return [
             'id'         => $this->resource->id,
             'title'      => str_limit($this->resource->title, 20),

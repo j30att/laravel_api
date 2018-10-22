@@ -7,9 +7,9 @@ routes.$inject = [
 ];
 
 export default function routes($locationProvider, $stateProvider, $urlRouterProvider) {
-    $locationProvider.html5Mode({enabled:true, requireBase: false});
+    $locationProvider.html5Mode({enabled: true, requireBase: false});
 
-    $urlRouterProvider.rule(function($injector, $location) {
+    $urlRouterProvider.rule(function ($injector, $location) {
         let path = $location.path();
         if (path !== '/' && path.slice(-1) === '/') {
             $location.replace().path(path.slice(0, -1));
@@ -41,7 +41,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/static/privacy.template.html')
         })
 
-        .state('auth',{
+        .state('auth', {
             template: require('./views/auth/base.template.html'),
             data: {
                 permissions: {
@@ -54,20 +54,20 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             }
         })
-            .state('auth.login', {
-                //ng-controller="LoginController as LgCtrl"
-                url: '/login',
-                template: require('./views/auth/login.template.html'),
-                controller: 'LoginController',
-                controllerAs: 'LgCtrl'
-            })
-            .state('auth.registration', {
-                url: '/register',
-                template: require('./views/auth/registration.template.html'),
-                //ng-controller="RegisterController as RgCtrl"
-                controller: 'RegisterController',
-                controllerAs: 'RgCtrl'
-            })
+        .state('auth.login', {
+            //ng-controller="LoginController as LgCtrl"
+            url: '/login',
+            template: require('./views/auth/login.template.html'),
+            controller: 'LoginController',
+            controllerAs: 'LgCtrl'
+        })
+        .state('auth.registration', {
+            url: '/register',
+            template: require('./views/auth/registration.template.html'),
+            //ng-controller="RegisterController as RgCtrl"
+            controller: 'RegisterController',
+            controllerAs: 'RgCtrl'
+        })
 
         .state('invest', {
             url: '/invest',
@@ -90,18 +90,18 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controllerAs: 'EvntsLstCtrl'
         })
 
-        .state('event',{
+        .state('event', {
             url: '/event/{id}',
             template: require('./views/events/detail.template.html'),
             controller: 'EventInfoController',
             controllerAs: 'EventInfoCtrl',
         })
-        .state('event-info',{
-                url: '/event/info/{id}',
-                template: require('./views/events/single.template.html'),
-                controller: 'EventController',
-                controllerAs: 'EventCtrl',
-            })
+        .state('event-info', {
+            url: '/event/info/{id}',
+            template: require('./views/events/single.template.html'),
+            controller: 'EventController',
+            controllerAs: 'EventCtrl',
+        })
 
         .state('bids', {
             url: '/bids',
@@ -121,49 +121,97 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             },
         })
 
-        .state ('bids-empty', {
-            url: '/bids/empty',
+        .state('bids-empty', {
+            url: '/bids',
             template: require('./views/bids/empty.template.html'),
-            controller: 'MainController',
-            controllerAs: 'MainCtrl',
+            menu: 'bids',
         })
 
-        .state ('sale-empty', {
+        .state('sale-empty', {
             url: '/sale/empty',
             template: require('./views/sale/empty.template.html'),
             controller: 'MainController',
             controllerAs: 'MainCtrl',
+            menu: 'sales',
         })
 
-        .state ('wallet-empty', {
+        .state('wallet-empty', {
             url: '/wallet/empty',
             template: require('./views/wallet/empty.template.html'),
-            controller: 'MainController',
-            controllerAs: 'MainCtrl',
+            menu: 'wallet',
         })
 
-            .state('bids-filter', {
-                url: '/bids/{filter}',
-                template: require('./views/bids/filter.template.html'),
-                controller: 'BidsFilterController',
-                controllerAs: 'BidsCtrl',
-                data: {
-                    permissions: {
-                        except: 'Guest',
-                        redirectTo: () => {
-                            return {
-                                state: 'index'
-                            }
+        .state('bids-filter', {
+            url: '/bids/{filter}',
+            template: require('./views/bids/filter.template.html'),
+            controller: 'BidsFilterController',
+            controllerAs: 'BidsCtrl',
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
                         }
                     }
-                },
-            })
+                }
+            },
+        })
 
-        .state('sale',{
+        .state('sale', {
             url: '/sales',
             template: require('./views/sale/index.template.html'),
             menu: 'sales',
             controller: 'SaleController',
+            controllerAs: 'SaleCtrl',
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'sale-empty'
+                        }
+                    }
+                }
+            },
+        })
+        .state('sale-create', {
+            url: '/sale/create',
+            template: require('./views/sale/form.template.html'),
+            controller: 'SaleFormController',
+            controllerAs: 'SaleFrmCtrl',
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
+        })
+        .state('sale-manage', {
+            url: '/sale/manage/{id}',
+            template: require('./views/sale/manage.template.html'),
+            controller: 'SaleManageController',
+            controllerAs: 'SaleMngCtrl',
+            data: {
+                permissions: {
+                    except: 'Guest',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
+
+        })
+        .state('sale-filter', {
+            url: '/sales/{filter}',
+            template: require('./views/sale/filter.template.html'),
+            controller: 'SaleFilterController',
             controllerAs: 'SaleCtrl',
             data: {
                 permissions: {
@@ -176,55 +224,6 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             },
         })
-            .state('sale-create', {
-                url: '/sale/create',
-                template: require('./views/sale/form.template.html'),
-                controller: 'SaleFormController',
-                controllerAs: 'SaleFrmCtrl',
-                data: {
-                    permissions: {
-                        except: 'Guest',
-                        redirectTo: () => {
-                            return {
-                                state: 'index'
-                            }
-                        }
-                    }
-                },
-            })
-            .state('sale-manage',{
-                url:'/sale/manage/{id}',
-                template: require('./views/sale/manage.template.html'),
-                controller: 'SaleManageController',
-                controllerAs: 'SaleMngCtrl',
-                data: {
-                    permissions: {
-                        except: 'Guest',
-                        redirectTo: () => {
-                            return {
-                                state: 'index'
-                            }
-                        }
-                    }
-                },
-
-            })
-            .state('sale-filter', {
-                url: '/sales/{filter}',
-                template: require('./views/sale/filter.template.html'),
-                controller: 'SaleFilterController',
-                controllerAs: 'SaleCtrl',
-                data: {
-                    permissions: {
-                        except: 'Guest',
-                        redirectTo: () => {
-                            return {
-                                state: 'index'
-                            }
-                        }
-                    }
-                },
-            })
 
         .state('wallet', {
             url: '/wallet',
@@ -235,7 +234,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                     except: 'Guest',
                     redirectTo: () => {
                         return {
-                            state: 'index'
+                            state: 'wallet-empty'
                         }
                     }
                 }
@@ -250,7 +249,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
     ;
 
 
-    $urlRouterProvider.otherwise(function($injector, $location){
+    $urlRouterProvider.otherwise(function ($injector, $location) {
         let state = $injector.get('$state');
         state.go('404');
         return $location.path();
