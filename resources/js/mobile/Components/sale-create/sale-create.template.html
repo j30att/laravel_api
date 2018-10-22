@@ -1,0 +1,144 @@
+<md-sidenav class="md-sidenav-right full_height full_height__sidnav" style="position: fixed !important;"
+            md-is-open="isSidenavOpen" md-component-id="right">
+    <md-content class="place_wrapper">
+        <div class="row sale_form_wr">
+            <div class="sale_form col-md-12">
+                <div class="page_title col-md-12">
+                    Create new sale
+                    <a ui-sref="bids" class="goback" href="/sale/" style="left: 0">
+
+                    </a>
+                </div>
+                <div class="sale_form_content">
+                    <div class="blocks_header_title_name sale_form_title">
+                        Event and buy-in
+                    </div>
+
+
+                    <label class="blocks_header_title_name">Event</label>
+                    <div layout="row" layout-align="start_stretch">
+                        <md-select class="md-no-underline form-Select-theme"
+                                   ng-change="SaleFrmCtrl.getSubevents()"
+                                   ng-model="SaleFrmCtrl.sale.event_id" placeholder="Choose an event">
+                            <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.events">{%item.title%}</md-option>
+                        </md-select>
+                    </div>
+
+
+                    <label class="blocks_header_title_name">Flight</label>
+                    <div layout="row" layout-align="start_stretch">
+                        <md-select class="md-no-underline form-Select-theme"
+                                   ng-model="SaleFrmCtrl.sale.sub_event_id" placeholder="Choose an Flight">
+                            <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.subevents">{%item.title%}</md-option>
+                        </md-select>
+                    </div>
+
+
+
+
+
+                    <div class="card__attribute card__attribute_static">
+                        <div class="sale_card_list_atr_item">
+                            <span>Buy-in</span><br>
+                            <span class="card__attribute_value">$3000</span>
+                        </div>
+                        <div class="sale_card_list_atr_item">
+                            <span>Closing time</span><br>
+                            <span class="card__attribute_value">10:44, 10 Apr 2018</span>
+                        </div>
+
+                    </div>
+                    <div class="hr"></div>
+                    <div class="blocks_header_title_name sale_form_title">Offer</div>
+                    <div class="card__attribute">
+                        <div class="sale_card_list_atr_item">
+                            <span>Share</span><br>
+                            <input ng-model="SaleFrmCtrl.sale.share" type="number" placeholder="0">
+
+                        </div>
+                        <div class="sale_card_list_atr_item">
+                            <span>Markup</span><br>
+                            <input ng-model="SaleFrmCtrl.sale.markup" type="number" placeholder="1.0">
+
+                        </div>
+                        <div class="sale_card_list_atr_item">
+                            <span>Amount $</span><br>
+                            <input ng-model="SaleFrmCtrl.sale.amount" type="number" placeholder="0">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="button creact_sale_btn" ng-click="SaleFrmCtrl.createSale()">Create a Sale</div>
+            </div>
+        </div>
+
+
+        <!--<div class="modal_content">
+            <div class="modal_content__title">
+                <div>Create new sale</div>
+                <div class="close" ng-click="$ctrl.close('right')"></div>
+            </div>
+            <div class="modal_content__sale">
+
+                <div class="modal_content__sale_title">
+                    Event and buy-in
+                </div>
+                <label class="modal_content__sale_title modal_content__sale_title_select">Event</label>
+                <div class="modal_content__sale_select">
+                    <md-select class="md-no-underline"
+                               ng-change="$ctrl.getSubevents()"
+                               ng-model="$ctrl.sale.event_id" placeholder="Choose an event">
+                        <md-option value="{%item.id%}" ng-repeat="item in $ctrl.events">{%item.title%}</md-option>
+                    </md-select>
+                </div>
+
+                <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
+                <div class="modal_content__sale_select">
+                    <md-select class="md-no-underline form-Select-theme"
+                               ng-model="$ctrl.sale.sub_event_id"
+                               ng-change="$ctrl.fillStatic()"
+                               placeholder="Choose an subevent">
+                        <md-option value="{%item.id%}" ng-repeat="item in $ctrl.subevents">{%item.title%}</md-option>
+                    </md-select>
+                </div>
+
+                <div class="attributs_wrapper">
+                    <div class="attributs_item">
+                        <span>Buy-in</span>
+                        <input class="input_disabled" type="text" placeholder="$3,000" disabled
+                               ng-model="$ctrl.static.buy_in">
+                    </div>
+                    <div class="attributs_item">
+                        <span>Closing time</span>
+                        <input class="input_disabled" type="text" placeholder="10:44, 10 Apr 2018" disabled
+                               ng-model="$ctrl.static.closing_time">
+                    </div>
+                </div>
+
+                <div class="modal_content__sale_title">Offer</div>
+
+                <div class="attributs_wrapper">
+                    <div class="attributs_item attributs_item__border">
+                        <span>Share</span>
+                        <input type="text" placeholder="10%" ng-model="$ctrl.sale.share" ng-change="$ctrl.calcAmount()">
+                    </div>
+                    <div class="attributs_item attributs_item__border">
+                        <span>Markup</span>
+                        <input type="text" placeholder="1.1" ng-model="$ctrl.sale.markup" ng-change="$ctrl.calcAmount()">
+                    </div>
+                    <div class="attributs_item attributs_item__border">
+                        <span>Amount</span>
+                        <input type="text" placeholder="100%" ng-model="$ctrl.sale.amount" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.close('right')">Cancel</div>
+                <div class="button_blue" ng-click="$ctrl.createSale()">Create a sale</div>
+            </div>
+        </div>-->
+    </md-content>
+</md-sidenav>

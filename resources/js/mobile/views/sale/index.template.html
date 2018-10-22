@@ -6,13 +6,13 @@
             <div class="header_filter_empty" ></div>
         </div>
         <div class="header_empty_height"></div>
-        <a ui-sref="sale-create">
-            <div class="creact_sale">
+        <div class="creact_sale" ng-click="SaleCtrl.toggleSidenav()">
                 Create a Sale
-            </div>
-        </a>
+        </div>
 
         <sales-carousel sales="SaleCtrl.sales" state="'row'"></sales-carousel>
         <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
 </div>
+
+<sale-create></sale-create>
