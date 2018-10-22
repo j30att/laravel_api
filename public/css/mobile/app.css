@@ -11750,7 +11750,7 @@ a.text-dark:focus {
   width: 100%;
   background-color: #ffffff;
   top: 44px;
-  z-index: 600;
+  z-index: 20;
 }
 
 .header {

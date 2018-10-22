@@ -47,29 +47,28 @@ class BidPlace {
         this._opts.stateCreate = !this._opts.stateCreate;
     }
 
-    calcAmount(){
-        if (this.bid.amount != null && this.bid.markup != null){
-            this.bid.share = this.BidsService.calcShare(this.bid.amount, this.sale.event.buy_in);
+    changeAmount(){
+        if (this.bid.share != null){
+            this.bid.markup = this.BidsService.calcMarkup(this.bid.share, this.bid.amount, this.sale.event.buy_in);
+        } else {
+            this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
         }
-
-        if (this.bid.share !=  null && this.bid.markup != null &&  this.bid.share !=0){
-            this.bid.amount = this.BidsService.calcAmount(this.bid.share, this.bid.markup, this.sale.event.buy_in);
-        }
-
-        if (this.bid.amount != null && this.bid.share !=  null){
-
-        }
+    }
+    changeShare(){
+        if (this.bid.markup = null){
+           this.bid.amount = this.BidsService.calcAmount(this.bid.markup, this.bid.share, this.sale.event.buy_in);
+       } else {
+           this.bid.markup = this.BidsService.calcMarkup(this.bid.share, this.bid.amount, this.sale.event.buy_in);
+       }
 
     }
-
-    calcMarkup(){
-
+    changeMarkup(){
+        if(this.bid.share != null){
+            this.bid.amount = this.BidsService.calcAmount(this.bid.markup, this.bid.share, this.sale.event.buy_in);
+        } else {
+            this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
+        }
     }
-
-    calcShare(){
-
-    }
-
 
 
 };

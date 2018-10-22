@@ -72,15 +72,15 @@
                 <div class="card__attribute manage_sale_atr">
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <label class="warm_grey">Markup</label>
-                        <input type="text" placeholder="1.20" ng-model="$ctrl.bid.markup" ng-change="$ctrl.calcAmount()">
+                        <input type="number" placeholder="" ng-model="$ctrl.bid.markup" ng-change="$ctrl.changeMarkup()">
                     </div>
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <label class="warm_grey">Share</label>
-                        <input type="text" placeholder="10%" ng-model="$ctrl.bid.share" ng-change="$ctrl.calcAmount()">
+                        <input type="number" placeholder="" ng-model="$ctrl.bid.share" ng-change="$ctrl.changeShare()">
                     </div>
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <label class="warm_grey">Amount</label>
-                        <input type="text" placeholder="$1" ng-model="$ctrl.bid.amount" ng-change="$ctrl.calcAmount()">
+                        <input type="number" placeholder="" ng-model="$ctrl.bid.amount" ng-change="$ctrl.changeAmount()">
                     </div>
                 </div>
             </div>

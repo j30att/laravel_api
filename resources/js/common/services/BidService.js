@@ -13,20 +13,22 @@ class BidsService {
         return Math.round(amount*10)/10;
     }
 
-    calcMarkup(amount, buyin, share){
+    calcMarkup(share, amount, buyin){
         let markup = null;
+        let shareValue = buyin * (share / 100);
 
-        markup = amount / (buyin*share);
+        markup = amount / shareValue;
 
-        return Math.round(markup*10)/10;
+        return Math.round(markup);
     }
 
-    calcShare(amount, buyin, markup){
+    calcShare(markup, amount, buyin){
         let share = null;
 
-        share = amount / (buyin*markup);
+        share = amount / (buyin * markup);
 
-        return Math.round(share*10)/10;
+        return Math.round(share*10);
+
     }
 
 
