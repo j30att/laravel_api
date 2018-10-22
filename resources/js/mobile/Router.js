@@ -122,10 +122,9 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
 
         .state ('bids-empty', {
-            url: '/bids/empty',
+            url: '/bids',
             template: require('./views/bids/empty.template.html'),
-            controller: 'MainController',
-            controllerAs: 'MainCtrl',
+            menu: 'bids',
         })
 
         .state ('sale-empty', {
@@ -133,13 +132,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/sale/empty.template.html'),
             controller: 'MainController',
             controllerAs: 'MainCtrl',
+            menu: 'sales',
         })
 
         .state ('wallet-empty', {
             url: '/wallet/empty',
             template: require('./views/wallet/empty.template.html'),
-            controller: 'MainController',
-            controllerAs: 'MainCtrl',
+            menu: 'wallet',
         })
 
             .state('bids-filter', {
@@ -170,7 +169,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                     except: 'Guest',
                     redirectTo: () => {
                         return {
-                            state: 'index'
+                            state: 'sale-empty'
                         }
                     }
                 }
@@ -235,7 +234,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                     except: 'Guest',
                     redirectTo: () => {
                         return {
-                            state: 'index'
+                            state: 'wallet-empty'
                         }
                     }
                 }
