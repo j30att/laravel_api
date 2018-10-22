@@ -3,18 +3,18 @@ import {BID_MATCHED, BID_NEW, BID_UNMATCHED} from "../../../common/Constants";
 
 
 class BidPlace {
-    constructor($scope, BidsResourceService, $mdSidenav, $http, SalesService, $timeout, $state) {
+    constructor($scope, BidsResourceService, $mdSidenav, $http, SalesService, $timeout, $state, BidsService) {
         this.BidsResourceService = BidsResourceService;
         this.SalesService = SalesService;
         this.$mdSidenav = $mdSidenav;
         this.$timeout = $timeout;
         this.$state = $state;
+        this.BidsService = BidsService;
         this.$scope = $scope;
         this.$http = $http;
         this.user = window.__user;
         this._opts = {stateCreate: false};
         this.isSidenavOpen =false;
-        this.bid={};
     }
 
     $onInit(){
@@ -47,9 +47,34 @@ class BidPlace {
         this._opts.stateCreate = !this._opts.stateCreate;
     }
 
+    calcAmount(){
+        if (this.bid.amount != null && this.bid.markup != null){
+            this.bid.share = this.BidsService.calcShare(this.bid.amount, this.sale.event.buy_in);
+        }
+
+        if (this.bid.share !=  null && this.bid.markup != null &&  this.bid.share !=0){
+            this.bid.amount = this.BidsService.calcAmount(this.bid.share, this.bid.markup, this.sale.event.buy_in);
+        }
+
+        if (this.bid.amount != null && this.bid.share !=  null){
+
+        }
+
+    }
+
+    calcMarkup(){
+
+    }
+
+    calcShare(){
+
+    }
+
+
+
 };
 
-BidPlace.$inject = ['$scope', 'BidsResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
+BidPlace.$inject = ['$scope', 'BidsResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', 'BidsService'];
 
 export const BidPlaceComponent = {
     bindings: {
