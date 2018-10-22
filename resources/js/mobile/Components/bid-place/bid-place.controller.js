@@ -12,7 +12,7 @@ class BidPlace {
         this.$scope = $scope;
         this.$http = $http;
         this.user = window.__user;
-        this._opts = {fixed: false};
+        this._opts = {stateCreate: false};
         this.isSidenavOpen =false;
         this.bid={};
     }
@@ -42,6 +42,9 @@ class BidPlace {
 
     close(componentId){
         this.$mdSidenav(componentId).close();
+    }
+    setState(){
+        this._opts.stateCreate = !this._opts.stateCreate;
     }
 
 };

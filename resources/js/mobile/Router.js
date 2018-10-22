@@ -114,12 +114,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                     except: 'Guest',
                     redirectTo: () => {
                         return {
-                            state: 'index'
+                            state: 'bids-empty'
                         }
                     }
                 }
             },
         })
+
         .state ('bids-empty', {
             url: '/bids/empty',
             template: require('./views/bids/empty.template.html'),

@@ -1,6 +1,6 @@
 <div class="sale_card__list"
      ng-class="{'sale_card__list-last_child': $ctrl.sales.length == key+1}"
-     ng-click="$ctrl.togglePlace()"
+     ng-click="$ctrl.togglePlace(key)"
      ng-repeat=" (key, item) in $ctrl.sales">
 
     <div class="sale_card__list_profile">
@@ -31,5 +31,5 @@
     </div>
 </div>
 
-<bid-place></bid-place>
+<bid-place sale="$ctrl.sale"></bid-place>
 <sale-manage></sale-manage>
