@@ -35,7 +35,7 @@ class SaleCreate {
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-            console.log(fixed);
+
             this.$state.modalOpened = fixed
         });
 

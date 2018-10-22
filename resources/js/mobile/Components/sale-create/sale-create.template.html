@@ -1,6 +1,6 @@
 <md-sidenav class="md-sidenav-right full_height full_height__sidnav" style="position: fixed !important;"
             md-is-open="isSidenavOpen" md-component-id="right">
-    <md-content class="place_wrapper">
+    <md-content class="col-md-12">
         <div class="row sale_form_wr">
             <div class="sale_form col-md-12">
                 <div class="page_title col-md-12">
@@ -18,9 +18,9 @@
                     <label class="blocks_header_title_name">Event</label>
                     <div layout="row" layout-align="start_stretch">
                         <md-select class="md-no-underline form-Select-theme"
-                                   ng-change="SaleFrmCtrl.getSubevents()"
-                                   ng-model="SaleFrmCtrl.sale.event_id" placeholder="Choose an event">
-                            <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.events">{%item.title%}</md-option>
+                                   ng-change="$ctrl.getSubevents()"
+                                   ng-model="$ctrl.sale.event_id" placeholder="Choose an event">
+                            <md-option value="{%item.id%}" ng-repeat="item in $ctrl.events">{%item.title%}</md-option>
                         </md-select>
                     </div>
 
@@ -28,8 +28,10 @@
                     <label class="blocks_header_title_name">Flight</label>
                     <div layout="row" layout-align="start_stretch">
                         <md-select class="md-no-underline form-Select-theme"
-                                   ng-model="SaleFrmCtrl.sale.sub_event_id" placeholder="Choose an Flight">
-                            <md-option value="{%item.id%}" ng-repeat="item in SaleFrmCtrl.subevents">{%item.title%}</md-option>
+                                   ng-model="$ctrl.sale.sub_event_id"
+                                   ng-change="$ctrl.fillStatic()"
+                                   placeholder="Choose an subevent">
+                            <md-option value="{%item.id%}" ng-repeat="item in $ctrl.subevents">{%item.title%}</md-option>
                         </md-select>
                     </div>
 
@@ -53,23 +55,23 @@
                     <div class="card__attribute">
                         <div class="sale_card_list_atr_item">
                             <span>Share</span><br>
-                            <input ng-model="SaleFrmCtrl.sale.share" type="number" placeholder="0">
+                            <input ng-model="$ctrl.sale.share" type="number" placeholder="0">
 
                         </div>
                         <div class="sale_card_list_atr_item">
                             <span>Markup</span><br>
-                            <input ng-model="SaleFrmCtrl.sale.markup" type="number" placeholder="1.0">
+                            <input ng-model="$ctrl.sale.markup" type="number" placeholder="1.0">
 
                         </div>
                         <div class="sale_card_list_atr_item">
                             <span>Amount $</span><br>
-                            <input ng-model="SaleFrmCtrl.sale.amount" type="number" placeholder="0">
+                            <input ng-model="$ctrl.sale.amount" type="number" placeholder="0">
                         </div>
 
                     </div>
 
                 </div>
-                <div class="button creact_sale_btn" ng-click="SaleFrmCtrl.createSale()">Create a Sale</div>
+                <div class="button creact_sale_btn" ng-click="$ctrl.createSale()">Create a Sale</div>
             </div>
         </div>
 
