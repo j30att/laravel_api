@@ -48,28 +48,8 @@ class BidPlace {
     }
 
     calcAmount(){
-        if (this.bid.amount != null && this.bid.markup != null){
-            this.bid.share = this.BidsService.calcShare(this.bid.amount, this.sale.event.buy_in);
-        }
-
-        if (this.bid.share !=  null && this.bid.markup != null &&  this.bid.share !=0){
-            this.bid.amount = this.BidsService.calcAmount(this.bid.share, this.bid.markup, this.sale.event.buy_in);
-        }
-
-        if (this.bid.amount != null && this.bid.share !=  null){
-
-        }
-
+        this.bid.amount = this.BidsService.calcAmount(this.bid.share, this.bid.markup, this.sale.event.buy_in);
     }
-
-    calcMarkup(){
-
-    }
-
-    calcShare(){
-
-    }
-
 
 
 };
