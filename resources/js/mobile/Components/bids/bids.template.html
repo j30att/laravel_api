@@ -38,82 +38,76 @@
 
 
 
-        <div class="card__attribute card__attribute_row" ng-if="item.status ==1 ">
+        <div class="card__attribute card__attribute_row" ng-if="item.status ==2 ">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span>
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
-                <span class="card__attribute_value">£</span>
-                <span class="card__attribute_value" ng-bind="item.amount"></span>
+                <span>Value</span>
+                <span class="card__attribute_value" ng-bind="item.amount | currency:'£':0"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Date of Start</span><br>
+                <span>Date of Start</span>
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
         </div>
 
-        <div class="card__attribute card__attribute_row" ng-if="item.status == 2">
+        <div class="card__attribute card__attribute_row" ng-if="item.status == 3">
             <div class="sale_card_list_atr_item">
-                <span>Sale</span><br>
+                <span>Sale</span>
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Bid</span><br>
-                <span class="card__attribute_value">£<span class="card__attribute_value" ng-bind="item.amount"></span></span>
+                <span>Bid</span>
+                <span class="card__attribute_value" ng-bind="item.amount | currency:'£':0"></span>
 
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
+                <span>Value</span>
                 <span class="card__attribute_value">20</span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Time</span><br>
+                <span>Time</span>
                 <span class="card__attribute_value" ng-bind="item.subevent.short_date"></span>
             </div>
         </div>
 
-        <div class="card__attribute card__attribute_row" ng-if="item.status ===3">
+        <div class="card__attribute card__attribute_row" ng-if="item.status === 4">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span>
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
-                <span class="card__attribute_value">£</span>
-                <span class="card__attribute_value" ng-bind="item.amount"></span>
+                <span>Value</span>
+                <span class="card__attribute_value" ng-bind="item.amount | currency:'£':0"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Refund</span><br>
+                <span>Refund</span>
                 <span class="card__attribute_value" ng-bind="item.subevent.short_date"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Outcome</span><br>
-                <span class="card__attribute_status_red" >-£<span class="card__attribute_status_red">256</span>
-
-
-                </span>
+                <span>Outcome</span>
+                <span class="card__attribute_status_red" >-£256</span>
             </div>
         </div>
 
-        <div class="card__attribute card__attribute_row" ng-if="item.status ===4">
+        <div class="card__attribute card__attribute_row" ng-if="item.status === 5">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span>
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
-                <span class="card__attribute_value">£</span>
-                <span class="card__attribute_value" ng-bind="item.amount"></span>
+                <span>Value</span>
+                <span class="card__attribute_value" ng-bind="item.amount | currency:'£':0"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Refund</span><br>
+                <span>Refund</span>
                 <span class="card__attribute_value">12 days</span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Status</span><br>
-                <span class="card__attribute_status_green" > In progress</span>
+                <span>Status</span>
+                <span class="card__attribute_status_green">In progress</span>
             </div>
         </div>
 
@@ -165,56 +159,56 @@
 
         <div class="card__attribute card__attribute_row" ng-if="item.status ===1">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span> 
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
+                <span>Value</span> 
                 <span class="card__attribute_value">£</span>
                 <span class="card__attribute_value" ng-bind="item.amount"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Date of Start</span><br>
+                <span>Date of Start</span> 
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
         </div>
 
         <div class="card__attribute card__attribute_row" ng-if="item.status ===2">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span> 
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
+                <span>Value</span> 
                 <span class="card__attribute_value">£</span>
                 <span class="card__attribute_value" ng-bind="item.amount"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Date of Start</span><br>
+                <span>Date of Start</span> 
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
             <div class="sale_card_list_atr_item" >
-                <span>T. until close</span><br>
+                <span>T. until close</span> 
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
         </div>
 
         <div class="card__attribute card__attribute_row" ng-if="item.status ===3">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span> 
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
+                <span>Value</span> 
                 <span class="card__attribute_value">£</span>
                 <span class="card__attribute_value" ng-bind="item.amount"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Refund</span><br>
+                <span>Refund</span> 
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Outcome</span><br>
+                <span>Outcome</span> 
                 <span class="card__attribute_status_red" >-£<span class="card__attribute_status_red">1,000,000</span>
 
 
@@ -224,20 +218,20 @@
 
         <div class="card__attribute card__attribute_row" ng-if="item.status ===4">
             <div class="sale_card_list_atr_item">
-                <span>Markup</span><br>
+                <span>Markup</span> 
                 <span class="card__attribute_value" ng-bind="item.markup"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Value</span><br>
+                <span>Value</span> 
                 <span class="card__attribute_value">£</span>
                 <span class="card__attribute_value" ng-bind="item.amount"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Refund</span><br>
+                <span>Refund</span> 
                 <span class="card__attribute_value" ng-bind="item.subevent.date"></span>
             </div>
             <div class="sale_card_list_atr_item">
-                <span>Status</span><br>
+                <span>Status</span> 
                 <span class="card__attribute_status_green" > In progress</span>
             </div>
         </div>

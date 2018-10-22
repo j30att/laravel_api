@@ -10860,7 +10860,7 @@ a.text-dark:focus {
 }
 
 .card__event_info {
-  margin-top: 16px;
+  margin-top: 0px;
 }
 
 .card__sale_event_byin {
@@ -11465,6 +11465,10 @@ a.text-dark:focus {
   height: auto;
   padding: 10px 15px 0 15px;
   overflow-y: scroll;
+}
+
+.warm_grey {
+  color: #949494;
 }
 
 .header_modal {
