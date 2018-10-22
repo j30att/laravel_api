@@ -16,8 +16,7 @@ mix.js('resources/js/mobile/app.js', 'public/js/mobile')
    .sass('resources/sass/mobile/app.scss', 'public/css/mobile')
    .sourceMaps();
 
-/*
+
 mix.js('resources/js/desktop/app.js', 'public/js/desktop')
    .sass('resources/sass/desktop/app.scss', 'public/css/desktop')
    .sourceMaps();
-*/

@@ -2,9 +2,11 @@ import {EVENTS_API, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constant
 
 
 class SaleCreate {
-    constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state) {
+    constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state, $mdDialog) {
         this.$state = $state;
         this.$scope = $scope;
+        this.$mdDialog = $mdDialog;
+
         this.SalesResourceService = SalesResourceService;
         this.SalesService = SalesService;
         this.$mdSidenav = $mdSidenav;
@@ -26,16 +28,14 @@ class SaleCreate {
         };
         this._opts = {fixed: false};
         this.isSidenavOpen =false;
-
-
     }
+
     $onInit(){
         this.$scope.$on('sidenav-open', (event, data) => {
             this.buildToggler('right');
         });
 
         this.$scope.$watch('isSidenavOpen', (fixed) => {
-
             this.$state.modalOpened = fixed
         });
 
@@ -92,12 +92,24 @@ class SaleCreate {
         return true;
     }
 
-    createSale(){
+    /*showSaleConfirm(sale) {
+        let confirm = this.$mdDialog.confirm()
+            .parent(angular.element(document.querySelector('[md-component-id="right"]')))
+            .htmlContent(
+                `
+                <div>Are you sure?</div>`)
+            .ok('Accept')
+            .cancel('Cancel');
 
+        this.$mdDialog.show(confirm).then(() => {
+        }, () => {});
+    }*/
+
+    createSale(){
         if(!this.validate()) return false;
         this.SalesResourceService.createMySale(this.sale).then(response => {
             if (response.data.status == 1){
-                this.close('right');
+             //   this.showErorModal('right');
             } else {
 
             }
@@ -112,7 +124,7 @@ class SaleCreate {
 
 };
 
-SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
+SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];
 
 export const SaleCreateComponent = {
     bindings: {

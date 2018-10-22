@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div class="you_bids">
+            <div class="you_bids" ng-if="$ctrl._opts.stateCreate">
                 <span class="blocks_header_title_name">YOUR BID</span>
                 <div class="card__attribute manage_sale_atr">
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
@@ -90,7 +90,7 @@
                 <div class="button_half__white" ng-click="$ctrl.setState()">
                     Cancel
                 </div>
-                <div class="button_half__blue" ng-click="$ctrl.setState('store')">
+                <div class="button_half__blue" ng-click="$ctrl.saveMyBid()">
                     Place
                 </div>
             </div>

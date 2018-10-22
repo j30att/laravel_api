@@ -11333,9 +11333,9 @@ a.text-dark:focus {
 }
 
 .sale_form_content .sale_card_list_atr_item input {
-  width: 80%;
+  width: 90%;
   padding-bottom: 10px;
-  border-bottom-color: #949494;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .card__attribute_static .sale_card_list_atr_item:first-child {
