@@ -10485,7 +10485,6 @@ a.text-dark:focus {
 
 .no_scroll {
   overflow: hidden;
-  position: fixed;
 }
 
 .show_your_bid {
@@ -10692,6 +10691,7 @@ a.text-dark:focus {
   max-width: 100vw !important;
   min-width: 100vw !important;
   position: fixed;
+  position: -webkit-sticky;
 }
 
 .card__bids {
