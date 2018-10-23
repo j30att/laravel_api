@@ -22,7 +22,7 @@
                 <td class="sale_table_head_td">time</td>
                 </thead>
                 <tbody class="sale_table_body sale_table_body__yellow">
-                <tr class="sale_table_row" ng-repeat="(key,item) in SaleFltrCtrl.sales" ng-click="SaleFltrCtrl.toggleSidenavManage(key)">
+                <tr class="sale_table_row" ng-repeat="item in SaleFltrCtrl.sales" ng-click="SaleFltrCtrl.toggleSidenavManage(item)">
                     <td class="sale_table_row__title">
                         <span ng-bind="item.event.title"></span><br>
                         <span ng-bind="item.subevent.title"></span>

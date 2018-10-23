@@ -37,11 +37,8 @@ class SaleFilterController {
         });
     }
 
-    toggleSidenavManage(key) {
-        this.sale = this.sales[key];
-        this.$scope.$broadcast('sidenavManage-open', () =>{
-            console.log('open sidenav')
-        });
+    toggleSidenavManage(item) {
+        this.$scope.$broadcast('sidenavManage-open', item);
     }
 
 };

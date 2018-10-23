@@ -99,7 +99,7 @@ class SaleManage {
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];
 
 export const SaleManageComponent = {
-    bindings: {sale: '='},
+    bindings: {},
     template: require('./sale-manage.template.html'),
     controller: SaleManage,
     controllerAs: '$ctrl'
