@@ -1271,12 +1271,13 @@ input:checked + label::after{
     width: 200px;
     height: 48px;
     line-height: 48px;
-    text-align: center;
     font-size: 16px;
     border: 1px solid #fff;
     border-radius: 10px;
     margin: 0 auto;
     position: relative;
+    box-sizing: border-box;
+    padding-left: 61.5px;
 
 }
 .make_deposit::before{
@@ -1288,7 +1289,7 @@ input:checked + label::after{
     background-size: 100%;
     position: absolute;
     top: calc(50% - 11px);
-    left: 23px;
+    left: 33px;
 }
 .transaction_wr{
     width: 100%;

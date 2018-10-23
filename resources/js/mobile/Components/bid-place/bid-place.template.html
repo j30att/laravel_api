@@ -21,15 +21,15 @@
                 <div class="card__attribute manage_sale_atr manage_sale_atr__yellow">
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <span>Markup</span>
-                        <input type="number" placeholder="1.00" ng-model="$ctrl.sale.markup">
+                        <input type="number" placeholder="1.00" ng-model="$ctrl.sale.markup" ng-disabled="true">
                     </div>
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <span>Share</span>
-                        <input type="number" placeholder="1.38%" ng-model="$ctrl.sale.share">
+                        <input type="number" placeholder="1.38%" ng-model="$ctrl.sale.share" ng-disabled="true">
                     </div>
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <span>Value</span>
-                        <input type="number" placeholder="$1938" ng-model="$ctrl.sale.amount">
+                        <input type="number" placeholder="$1938" ng-model="$ctrl.sale.amount" ng-disabled="true">
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                 <div class="card__attribute manage_sale_atr">
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <label class="warm_grey">Markup</label>
-                        <input type="number" placeholder="" ng-model="$ctrl.bid.markup" ng-change="$ctrl.changeMarkup()">
+                        <input type="number" placeholder="" ng-model="$ctrl.bid.markup" ng-change="$ctrl.changeMarkup()" autofocus>
                     </div>
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
                         <label class="warm_grey">Share</label>
