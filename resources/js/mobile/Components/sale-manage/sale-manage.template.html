@@ -58,33 +58,20 @@
             </div>
 
             <div class="my_sale__content">
-                <div class="modal_type_bids" ng-repeat="(key, items) in $ctrl.sale.bids" ng-if="items.length > 0">
+                <div class="modal_type_bids" ng-if="$ctrl.sale.bids.length > 0">
                     <div class="blocks_header_title_name">
-                        {%key%} BIDS
+                        HIGHEST BIDS
                     </div>
 
-                    <div class="modal_type_bids_type" ng-repeat="bid in items">
-                        <div class="modal_type_bids__item"
-                             ng-bind="bid.markup"
-                             ng-class="{
-                               'modal_bids_item_color_highest' : key == 'highest',
-                               'modal_bids_item_color_matched' : key == 'matched',
-                               'modal_bids_item_color_unmatched' : key == 'unmatched'}"></div>
-                        <div class="modal_type_bids__item"
-                             ng-bind="bid.share"
-                             ng-class="{
-                               'modal_bids_item_color_highest' : key == 'highest',
-                               'modal_bids_item_color_matched' : key == 'matched',
-                               'modal_bids_item_color_unmatched' : key == 'unmatched'}"></div>
-                        <div class="modal_type_bids__item"
-                             ng-class="{
-                               'modal_bids_item_color_highest' : key == 'highest',
-                               'modal_bids_item_color_matched' : key == 'matched',
-                               'modal_bids_item_color_unmatched' : key == 'unmatched'}">
+                    <div class="modal_type_bids_type" ng-repeat="bid in $ctrl.sale.bids | filter:{status:3} | orderBy:'-markup'">
+                        <div class="modal_type_bids__item modal_bids_item_color_highest"
+                             ng-bind="bid.markup"></div>
+                        <div class="modal_type_bids__item modal_bids_item_color_highest"
+                             ng-bind="bid.share"></div>
+                        <div class="modal_type_bids__item modal_bids_item_color_highest">
                             <div ng-bind="bid.amount">$1,182.22</div>
                             <div></div>
                         </div>
-                    </div>
                 </div>
 
                 <!--<div class="modal_type_bids">

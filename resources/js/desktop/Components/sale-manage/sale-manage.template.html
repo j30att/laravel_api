@@ -67,7 +67,7 @@
                 <div class="bids_group bids_group__highest_color">
                     <span class="bids_group__title">UNMATCHED BIDS</span>
 
-                    <div ng-repeat="bid in $ctrl.sale.bids | filter:{status:3}"
+                    <div ng-repeat="bid in $ctrl.sale.bids | filter:{status:3} | orderBy:'-markup'"
                          ng-click="$ctrl.showBidsConfirm(bid)"
                          class="bids_group__row">
                         <input type="text" value="{%bid.markup%}" disabled>
@@ -79,7 +79,7 @@
                         <input type="text" value="{%bid.markup%}" disabled>
                         <input type="text" value="{%bid.share%}%" disabled>
                         <input type="text" value="{%bid.amount | currency:'$' %}" disabled>
-                        <div class="bids_group__row_confirm"></div>
+                        <div class="bids_group__row_confirm not-confirm"></div>
                     </div>
                 </div>
             </div>
