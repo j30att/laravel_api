@@ -86,14 +86,21 @@ class SaleController extends Controller
         $user = Auth::user();
         if ($request->get('user_id') != $user->id) App::abort(401);
         $filter = $request->all();
-        $sale = Sale::query()
+        $sales = Sale::query()
             ->where($filter)
             ->with('creator')
             ->with('subevent')
             ->with('event')
+            ->with(['bids_matched' => function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            }])
+            ->with(['bids_unmatched' => function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            }])
+
             ->get();
 
-        return SaleResource::collection($sale);
+        return SaleInvestResource::collection($sales);
     }
 
     /**

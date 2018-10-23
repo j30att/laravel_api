@@ -34,7 +34,10 @@ class SaleManage {
             this.$state.modalOpened = false
         }
     }
-
+    setState(action = null){
+        this._opts.stateCreate = !this._opts.stateCreate;
+        if(action == 'store') this.storeMyBid();
+    }
 
     close(componentId) {
         this.$mdSidenav(componentId).close();
@@ -96,7 +99,7 @@ class SaleManage {
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];
 
 export const SaleManageComponent = {
-    bindings: {},
+    bindings: {sale: '='},
     template: require('./sale-manage.template.html'),
     controller: SaleManage,
     controllerAs: '$ctrl'

@@ -43,11 +43,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal_content__hr"></div>
-                <div class="bids_group bids_group__highest_color">
-                    <span class="bids_group__title">UNMATCHED BIDS</span>
 
-                    <div ng-repeat="bid in $ctrl.sale.bids | filter:{status:3}"
+                <div class="modal_content__hr"></div>
+                <div class="bids_group"
+                     ng-repeat="(key, items) in $ctrl.sale.bids" ng-if="items.length > 0"
+                     ng-class="{
+                               'bids_group__highest_color'   : key == 'highest',
+                               'bids_group__matched_color'   : key == 'matched',
+                               'bids_group__unmatched_color' : key == 'unmatched'}">
+                    <span class="bids_group__title">{%key%} BIDS</span>
+
+                    <div ng-repeat="bid in items"
                          ng-click="$ctrl.showBidsConfirm(bid)"
                          class="bids_group__row">
                         <input type="text" value="{%bid.markup%}" disabled>
@@ -55,12 +61,7 @@
                         <input type="text" value="{%bid.amount | currency:'$' %}" disabled>
                         <div class="bids_group__row_confirm not-confirm"></div>
                     </div>
-                    <div ng-repeat="bid in $ctrl.sale.bids | filter:{status:2}" class="bids_group__row">
-                        <input type="text" value="{%bid.markup%}" disabled>
-                        <input type="text" value="{%bid.share%}%" disabled>
-                        <input type="text" value="{%bid.amount | currency:'$' %}" disabled>
-                        <div class="bids_group__row_confirm"></div>
-                    </div>
+
                 </div>
             </div>
         </div>
