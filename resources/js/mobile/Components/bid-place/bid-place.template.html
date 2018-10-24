@@ -66,37 +66,7 @@
 
                     </div>
                 </div>
-                <div class="modal_type_bids"
-                     ng-if="items.length > 0"
-                     ng-repeat="(key, items) in $ctrl.sale.bids">
-                    <div class="blocks_header_title_name" ng-bind="key">
-                    </div>
 
-                    <div class="modal_type_bids_type" ng-repeat="bid in items">
-                        <div class="modal_type_bids__item"
-                             ng-class="{
-                            'modal_bids_item_color_highest':key == 'highest',
-                            'modal_bids_item_color_matched': key == 'matched',
-                            'modal_bids_item_color_unmatched': key == 'unmatched'
-                          }"
-                             ng-bind="bid.markup"></div>
-                        <div class="modal_type_bids__item"
-                             ng-class="{
-                            'modal_bids_item_color_highest':key == 'highest',
-                            'modal_bids_item_color_matched': key == 'matched',
-                            'modal_bids_item_color_unmatched': key == 'unmatched'
-                          }"
-                             ng-bind="bid.share"></div>
-                        <div class="modal_type_bids__item"
-                             ng-class="{
-                            'modal_bids_item_color_highest':key == 'highest',
-                            'modal_bids_item_color_matched': key == 'matched',
-                            'modal_bids_item_color_unmatched': key == 'unmatched'
-                          }">
-                            <div ng-bind="bid.amount"></div>
-
-                        </div>
-                    </div>
             </div>
             <div class="you_bids" ng-if="$ctrl._opts.stateCreate">
                 <span class="blocks_header_title_name">YOUR BID</span>

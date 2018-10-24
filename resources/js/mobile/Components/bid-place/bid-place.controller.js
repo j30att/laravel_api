@@ -95,9 +95,8 @@ class BidPlace {
                 if (document.querySelector(".container") !== event.target) return;
                 event.preventDefault();
             });
-            /*document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);*/
         } else {
-            document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, false);
+            document.getElementsByClassName('container')[0].removeEventListener("touchmove", this.freezeVp, false);
         }
     };
 
