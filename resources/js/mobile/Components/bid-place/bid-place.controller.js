@@ -76,7 +76,11 @@ class BidPlace {
     stopBodyScrolling (bool) {
         if (bool === true) {
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
-            document.getElementsByClassName('my_sale__content')[0].addEventListener("touchmove", this.scroll);
+
+//            document.getElementsByClassName('my_sale__content')[0].addEventListener("touchmove", this.scroll);
+            $('.my_sale__content').on('touchmove', function (e) {
+                e.stopPropagation();
+            });
 
 
         } else {
