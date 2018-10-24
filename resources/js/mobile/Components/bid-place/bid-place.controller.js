@@ -76,13 +76,7 @@ class BidPlace {
     stopBodyScrolling (bool) {
         if (bool === true) {
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
-
-//            document.getElementsByClassName('my_sale__content')[0].addEventListener("touchmove", this.scroll);
-            document.getElementById('scroll_content').addEventListener('touchmove', function (e) {
-                e.stopPropagation();
-            });
-
-
+            document.getElementById('scroll_content').removeEventListener("touchmove", this.freezeVp);
         } else {
             document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, true);
         }
