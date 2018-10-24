@@ -34,13 +34,15 @@ class BidPlace {
             if (!fixed){
                 document.body.style.top = 0 + 'px';
                 document.body.style.position = 'relative';
-                document.querySelector('html').scrollTop = this.scroll;
+                // document.querySelector('html').scrollTop = this.scroll;
 
             }
 
         });
 
     }
+
+
 
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
