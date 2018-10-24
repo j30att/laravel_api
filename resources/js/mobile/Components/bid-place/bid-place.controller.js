@@ -76,7 +76,8 @@ class BidPlace {
     stopBodyScrolling (bool) {
         if (bool === true) {
             document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, true);
-            document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);
+            document.getElementsByClassName('my_sale__content')[0].addEventListener("touchmove", this.scroll);
+
 
         } else {
             document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, true);
@@ -89,6 +90,9 @@ class BidPlace {
         $event.preventDefault();
     }
 
+    scroll ($event) {
+        $event.stopPropagation();
+    }
 
 };
 
