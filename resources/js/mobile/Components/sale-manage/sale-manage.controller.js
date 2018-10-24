@@ -101,7 +101,6 @@ class SaleManage {
 
 
     stopBodyScrolling (bool) {
-        console.log(bool);
         if (bool === true) {
             document.body.addEventListener("touchmove", this.freezeVp, false);
         } else {
