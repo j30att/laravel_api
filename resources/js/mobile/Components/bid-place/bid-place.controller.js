@@ -22,6 +22,7 @@ class BidPlace {
             this.buildToggler('right');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
+            this.stopBodyScrolling(fixed);
             this.$state.modalOpened = fixed
         });
 
@@ -68,6 +69,22 @@ class BidPlace {
         } else {
             this.bid.share = this.BidsService.calcShare(this.bid.markup, this.bid.amount, this.sale.event.buy_in);
         }
+    }
+
+
+
+    stopBodyScrolling (bool) {
+        if (bool === true) {
+            document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);
+        } else {
+            document.body.removeEventListener("touchmove", this.freezeVp, false);
+        }
+    };
+
+
+    freezeVp ($event) {
+        console.log($event);
+        $event.preventDefault();
     }
 
 
