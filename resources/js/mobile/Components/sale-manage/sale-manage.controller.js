@@ -102,7 +102,7 @@ class SaleManage {
 
     stopBodyScrolling (bool) {
         if (bool === true) {
-            angular.element(document.querySelector('[md-component-id="right_manage"]')).addEventListener("ontouchend", this.freezeVp, false);
+            angular.element(document.querySelector('[md-component-id="right_manage"]')).addEventListener("touchmove", this.freezeVp, false);
         } else {
             document.body.removeEventListener("touchmove", this.freezeVp, false);
         }
@@ -110,9 +110,8 @@ class SaleManage {
 
 
     freezeVp ($event) {
-        $event.preventDefault();
-        
-
+        console.log($event);
+        $event.stopPropagation();
     }
 
 }
