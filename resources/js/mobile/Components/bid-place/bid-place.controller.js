@@ -86,7 +86,7 @@ class BidPlace {
     freezeVp ($event) {
         console.log($event);
         $event.preventDefault();
-        $event.stopPropagation();
+        
     }
 
 
