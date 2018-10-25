@@ -486,30 +486,31 @@ main {
 .buy_stakes{
     width: 100%;
     text-align: center;
-    font-size: 14pt;
-    line-height: 20pt;
-    margin-bottom: 24pt;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 24px;
 }
 .btn_block{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 24pt;
+    margin-bottom: 24px;
 
 }
 
 .login_btn,
 a .login_btn{
     width: 150px;
-    height: 48pt;
-    line-height: 48pt;
+    height: 48px;
+    line-height: 48px;
     text-align: center;
-    font-size: 16pt;
+    font-size: 16px;
     font-weight: 700;
     border: 1px solid #fff;
-    border-radius: 10pt;
+    border-radius: 10px;
     cursor: pointer;
     color: #fff;
+
 }
 .login_btn{
     margin-right: 10px;
@@ -524,27 +525,19 @@ a .login_in,
     color: #fff;
     width: 100%;
     text-align: center;
-    font-size: 16pt;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+    a, a:visited{
+        color: #fff !important;
+    }
 }
+
 .contine_without_wr{
     width: 100%;
     text-align: center;
 }
 
-a.contine_without{
-
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    font-size: 16pt;
-    font-weight: 700;
-    cursor: pointer;
-}
-.contine_without_wr > a:visited{
-    color: #949494;
-}
 @media screen and (max-width: 320px){
     .login_btn{
         width: 140px !important;

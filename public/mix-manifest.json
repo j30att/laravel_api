@@ -1,7 +1,10 @@
 {
     "/js/mobile/app.js": "/js/mobile/app.js",
     "/css/mobile/app.css": "/css/mobile/app.css",
-    "/css/mobile/ios/ios.css": "/css/mobile/ios/ios.css",
     "/css/desktop/app.css": "/css/desktop/app.css",
-    "/js/desktop/app.js": "/js/desktop/app.js"
+    "/js/mobile/app.js.map": "/js/mobile/app.js.map",
+    "/css/mobile/app.css.map": "/css/mobile/app.css.map",
+    "/css/desktop/app.css.map": "/css/desktop/app.css.map",
+    "/js/desktop/app.js": "/js/desktop/app.js",
+    "/js/desktop/app.js.map": "/js/desktop/app.js.map"
 }

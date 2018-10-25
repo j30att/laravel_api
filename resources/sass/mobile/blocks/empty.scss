@@ -37,9 +37,10 @@
                 justify-content: center;
             }
             &__button{
-                width: 120px;
-                height: 38px;
-                line-height: 38px;
+                //width: 120px;
+                width: 162.5px;
+                height: 48px;
+                line-height: 48px;
                 text-align: center;
                 font-size: 15px;
                 font-weight: 700;
@@ -48,6 +49,11 @@
                 border: 1px solid #e0e0e0;
                 cursor: pointer;
             }
+            @media screen and (max-width: 320px){
+                &__button{
+                    width: 140px;
+                }
+        }
             &__button__blue{
                 background-color: #007fed;
                 color: #ffffff;
