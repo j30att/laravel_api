@@ -337,7 +337,7 @@ main {
 /*binds.index*/
 .binds{
     font-family: 'OpenSans', sans-serif;
-    height: 100vh;
+    height: 100%;
 }
 .logo_img{
     width: 100%;
@@ -469,7 +469,7 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    min-height: 100vh;
+    min-height: 100%;
     font-family: 'OpenSans', sans-serif;
     color: #fff !important;
     background: url("/images/login_bg.png")  no-repeat center;
@@ -548,7 +548,7 @@ a .login_in,
 .personal_inform{
     font-family: 'OpenSans', sans-serif;
     background-color: #fff;
-    main-height: 100vh;
+    main-height: 100%;
 }
 .personal_inform__title{
     width: 100%;
@@ -1574,7 +1574,7 @@ input:checked + label::after{
 
 .accept-wr{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
