@@ -306,10 +306,11 @@
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-rows: 210px auto 80px;
+  //grid-template-rows: 210px auto 80px;
+  grid-template-rows: 210px auto 110px;
   flex-direction: column;
     &__sale{
-        grid-template-rows: 265px auto 80px;
+        grid-template-rows: 265px auto 110px;
     }
 }
 
