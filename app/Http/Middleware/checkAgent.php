@@ -34,6 +34,7 @@ class checkAgent
 
 
         View::share('_typeDevice', $typeDevice);
+        View::share('_platform', $platform);
 
         return $next($request);
     }
