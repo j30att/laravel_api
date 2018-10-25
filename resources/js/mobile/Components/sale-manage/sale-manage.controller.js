@@ -18,7 +18,7 @@ class SaleManage {
 
     $onInit() {
         this.$scope.$on('sidenavManage-open', (event, data) => {
-                this.buildToggler('right_manage');
+            this.buildToggler('right_manage');
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.stopBodyScrolling(fixed);
@@ -35,9 +35,10 @@ class SaleManage {
             this.$state.modalOpened = false
         }
     }
-    setState(action = null){
+
+    setState(action = null) {
         this._opts.stateCreate = !this._opts.stateCreate;
-        if(action == 'store') this.storeMyBid();
+        if (action == 'store') this.storeMyBid();
     }
 
     close(componentId) {
@@ -59,11 +60,12 @@ class SaleManage {
 
         this.$mdDialog.show(confirm).then(() => {
             this.sale.bids.forEach((item) => {
-                if(item.id === bid.id){
+                if (item.id === bid.id) {
                     item.status = 2;
                 }
             });
-        }, () => {});
+        }, () => {
+        });
     }
 
     showSaleConfirm(sale) {
@@ -80,7 +82,8 @@ class SaleManage {
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(() => {
-        }, () => {});
+        }, () => {
+        });
     }
 
     showPayConfirm(sale) {
@@ -92,24 +95,22 @@ class SaleManage {
 
         this.$mdDialog.show(confirm).then(() => {
             this.$mdSidenav('right_manage').close();
-        }, () => {});
+        }, () => {
+        });
     }
 
 
-    stopBodyScrolling (bool) {
+    stopBodyScrolling(bool) {
         if (bool === true) {
-            document.getElementsByClassName('fullscreen')[0].addEventListener("touchmove", this.freezeVp, false);
-        } else {
-            document.getElementsByClassName('fullscreen')[0].removeEventListener("touchmove", this.freezeVp, false);
+            document.querySelector(".container").addEventListener('touchmove', function (event) {
+                if (document.querySelector(".container") !== event.target) return;
+                event.preventDefault();
+            });
         }
-    };
+        ;
 
 
-    freezeVp ($event) {
-        console.log($event);
-        $event.preventDefault();
     }
-
 }
 
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];
