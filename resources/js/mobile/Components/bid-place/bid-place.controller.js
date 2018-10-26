@@ -24,21 +24,7 @@ class BidPlace {
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.stopBodyScrolling(fixed);
-
-            /*if (fixed){
-                this.scroll = window.pageYOffset;
-                document.body.style.position = 'fixed';
-                document.body.style.top = -(this.scroll)+ 'px';
-            }
-            */this.$state.modalOpened = fixed;
-/*
-            if (!fixed){
-                document.body.style.top = 0 + 'px';
-                document.body.style.position = 'relative';
-                document.querySelector('html').scrollTop = this.scroll;
-
-            }*/
-
+            this.$state.modalOpened = fixed;
         });
 
     }

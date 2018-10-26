@@ -25,7 +25,7 @@
         <!--<div class="event_card_list_back"></div>-->
         <!--<div class="event_card_list_open"></div>-->
     </div>
-    <div class="event_card_list_info col-md-12">
+    <div class="event_card_list_info no-padding">
 
         <div class="event_card_list_wr" ng-click="$ctrl.openDetail(item.id)">
 
@@ -39,14 +39,12 @@
             <div class="blocks_header_title_name event_card_subevent_list_title" ng-if="$ctrl.showDetail(item.id)">Event list</div>
         </div>
 
-
         <div class="event_card_list_subevents" ng-if="$ctrl.showDetail(item.id)" ng-repeat="subevent in item.subevents">
 
             <div class="event_card_title" ng-bind="subevent.title"></div>
             <div class="event_card_fund">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>
             <div class="event_card_date" ng-bind="item.date"></div>
-
-            <div class="event_card__see_more"></div>
+            <div class="event_card__see_more" ng-click="$ctrl.showSubEventInfo(item.id, subevent.id)"></div>
 
         </div>
     </div>

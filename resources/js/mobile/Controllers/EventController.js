@@ -1,12 +1,17 @@
 import {EVENTS_INDEX, SALE_SUBEVENT} from "../Constants";
 
 class EventController {
-    constructor($window, $http, $stateParams){
+    constructor($window, $http, $stateParams, $state){
         this.$window = $window;
         this.$http = $http;
+        this.$state = $state;
         this.$stateParams = $stateParams;
         this._opts = {dataLoad: false};
         this.showList();
+        if (this.$state.subevent_id != undefined){
+            this.getSale(this.$state.subevent_id);
+        }
+
     }
 
 
@@ -14,7 +19,11 @@ class EventController {
         this.$http.get(EVENTS_INDEX+'/'+this.$stateParams.id,
         ).then(response => {
             this.event = response.data.data;
-            this.getSale(this.event.subevents[0].id);
+            console.log(this.$state.subevent_id);
+            if (this.$state.subevent_id == undefined){
+                console.log(111);
+                this.getSale(this.event.subevents[0].id);
+            }
         });
 
     }
@@ -30,6 +39,6 @@ class EventController {
 
 };
 
-EventController.$inject = ['$window', '$http', '$stateParams'];
+EventController.$inject = ['$window', '$http', '$stateParams', '$state'];
 
 export {EventController};

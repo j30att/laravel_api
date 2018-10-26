@@ -1,8 +1,12 @@
+import {SaleFormController} from "../../../desktop/Controllers/SaleFormController";
+
 class Events {
 
-    constructor() {
+    constructor($window, $state) {
         this.opened = [] ;
-        console.log(this.events);
+        this.$window = $window;
+        this.$state = $state;
+
     }
 
     $onInit() {
@@ -10,7 +14,7 @@ class Events {
     }
 
     openDetail (event_id){
-        console.log(event_id);
+        // console.log(event_id, 'event_id');
         let rInd = this.opened.indexOf(event_id);
         if (rInd === -1){
             this.opened.push(event_id);
@@ -35,9 +39,13 @@ class Events {
         }
 
     }
+    showSubEventInfo(event_id, subevent_id){
+        this.$state.subevent_id = subevent_id;
+        this.$state.go('event-info', {id:event_id});
+    }
 
 }
-
+Events.$inject = ['$window', '$state'];
 export const EventsComponent = {
     bindings: {
         events:    '<',
