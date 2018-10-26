@@ -22,6 +22,13 @@ Route::group(['middleware' => 'auth'], function(){
 });
 
 
+Route::get('/dealer/login', 'PageController@app');
+Route::get('/dealer/logout', 'PageController@app');
+Route::get('/dealer', 'PageController@dealer')->name('dealer');
+Route::group(['middleware' => 'admin'], function() {
+
+});
+
 Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
 
 
