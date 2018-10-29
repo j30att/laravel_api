@@ -1,3 +1,5 @@
+import {BID_MATCHED} from "./../../../common/Constants"
+
 class SaleManage {
     constructor($scope, SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state, $mdDialog) {
         this.SalesResourceService = SalesResourceService;
@@ -12,13 +14,16 @@ class SaleManage {
         this.user = window.__user;
         this._opts = {fixed: false};
         this.isSidenavOpen = false;
-
-        this.sale = {};
+        this.sale = null;
     }
 
     $onInit() {
         this.$scope.$on('sidenavManage-open', (event, data) => {
-            this.buildToggler('right_manage');
+            if (data) {
+                this.sale = data;
+                this.buildToggler('right_manage');
+            }
+
         });
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.stopBodyScrolling(fixed);
@@ -37,8 +42,10 @@ class SaleManage {
     }
 
     setState(action = null) {
+
+        console.log(this.sale, 'this.salethis.salethis.salethis.salethis.sale');
         this._opts.stateCreate = !this._opts.stateCreate;
-        if (action == 'store') this.storeMyBid();
+        if (action == 'store') this.updateSale(this.sale);
     }
 
     close(componentId) {
@@ -111,12 +118,44 @@ class SaleManage {
 
 
     }
+
+    updateSale() {
+        let sale = {
+            id: this.sale.id,
+            share: this.sale.share,
+            markup: this.sale.markup,
+            amount: this.sale.amount
+
+        };
+        this.SalesResourceService.updateMySale(sale).then(response => {
+            console.log('hui');
+        })
+    }
+
+    apllyBid(bid) {
+        let data = {
+            sale_id: this.sale.id,
+            bid: bid
+        };
+        this.SalesResourceService.apllyMyBid(data).then(response => {
+            this.sale = response.data.data;
+        })
+
+    }
+
+    showAmountRaised() {
+        return this.SalesService.calcAmountRaised(this.sale);
+    };
+
+    showShareSold() {
+        return this.SalesService.calcShareSold(this.sale);
+    }
+
 }
 
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];
 
 export const SaleManageComponent = {
-    bindings: {sale: '='},
     template: require('./sale-manage.template.html'),
     controller: SaleManage,
     controllerAs: '$ctrl'

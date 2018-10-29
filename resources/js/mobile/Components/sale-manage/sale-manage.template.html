@@ -16,7 +16,6 @@
                         </div>
                     </div>
                     <div class="event_card_fund ng-binding">£ 1000000 GTD • £ 500000 GTD</div>
-
                     <div class="card__attribute manage_sale_atr">
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Closes in</span>
@@ -24,11 +23,11 @@
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Share sold</span>
-                            <span class="card__attribute_value">5%</span>
+                            <span class="card__attribute_value" ng-bind="$ctrl.showShareSold()">5%</span>
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Amount raised</span>
-                            <span class="card__attribute_value ng-binding">$1892</span>
+                            <span class="card__attribute_value" ng-bind="$ctrl.showAmountRaised()">$1892</span>
                         </div>
 
                     </div>
@@ -36,17 +35,17 @@
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Markup</span>
 
-                            <input type="number" placeholder="1.00">
+                            <input type="number" ng-model="$ctrl.sale.markup">
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Share</span>
 
-                            <input type="number" placeholder="1.38%">
+                            <input type="number" ng-model="$ctrl.sale.share">
                         </div>
                         <div class="sale_card_list_atr_item manage_sale_atr_item">
                             <span>Value</span>
 
-                            <input type="number" placeholder="$1938">
+                            <input type="number" ng-model="$ctrl.sale.amount">
                         </div>
                         <div class="sale-manage__attributes__edit"
                              ng-if="!$ctrl._opts.stateCreate"
@@ -70,53 +69,9 @@
                              ng-bind="bid.share"></div>
                         <div class="modal_type_bids__item modal_bids_item_color_highest">
                             <div ng-bind="bid.amount">$1,182.22</div>
-                            <div></div>
+                            <div class="confirm" ng-click="$ctrl.apllyBid(bid)"></div>
                         </div>
                 </div>
-
-                <!--<div class="modal_type_bids">
-                    <div class="blocks_header_title_name" ng-if="$ctrl.sale.bids.lengh > 0">
-                        HIGHEST BIDS
-                    </div>
-
-                    <div class="modal_type_bids_type" ng-repeat="bid in $ctrl.sale.bids | filter:{status:3} | orderBy:'-markup' | limitTo:3">
-                        <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.markup"></div>
-                        <div class="modal_type_bids__item modal_bids_item_color_highest" ng-bind="bid.share"></div>
-                        <div class="modal_type_bids__item modal_bids_item_color_highest">
-                            <div ng-bind="bid.amount">$1,182.22</div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="blocks_header_title_name" ng-if="$ctrl.sale.bids.lengh > 0">
-                        MATCHED BIDS
-                    </div>
-
-                    <div class="modal_type_bids_type" ng-repeat="bid in $ctrl.sale.bids | filter:{status:2}">
-                        <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.markup"></div>
-                        <div class="modal_type_bids__item modal_bids_item_color_matched" ng-bind="bid.share"></div>
-                        <div class="modal_type_bids__item modal_bids_item_color_matched">
-                            <div ng-bind="bid.amount">$1,182.22</div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                    <div class="blocks_header_title_name" ng-if="$ctrl.sale.bids.lengh > 0">
-                        UNMATCHED BIDS
-                    </div>
-
-                    <div class="modal_type_bids_type" ng-repeat="bid in $ctrl.sale.bids | filter:{status:3}">
-                        <div class="modal_type_bids__item modal_bids_item_color_unmatched" ng-bind="bid.markup"></div>
-                        <div class="modal_type_bids__item modal_bids_item_color_unmatched" ng-bind="bid.share"></div>
-                        <div class="modal_type_bids__item modal_bids_item_color_unmatched">
-                            <div ng-bind="bid.amount">$1,182.22</div>
-                            <div></div>
-                        </div>
-                    </div>
-
-                </div>-->
-
-
                 <div class="my_sale_attention">
                     Your sale is almost finished, top-up your sale if you want sell more
                 </div>
@@ -128,7 +83,7 @@
                     <div class="button_half__white" ng-click="$ctrl.setState()">
                         Cancel
                     </div>
-                    <div class="button_half__blue" ng-click="$ctrl.setState('store')">
+                    <div class="button_half__blue" ng-click="$ctrl.setState('store', '235')">
                         Save
                     </div>
                 </div>

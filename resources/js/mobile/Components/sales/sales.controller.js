@@ -17,9 +17,7 @@ class Sales {
     toggleManage(index) {
 
         this.sale = this.sales[index];
-        this.$scope.$broadcast('sidenavManage-open', () =>{
-            console.log('open sidenav')
-        });
+        this.$scope.$broadcast('sidenavManage-open', this.sale);
     }
 }
 

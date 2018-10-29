@@ -3,6 +3,16 @@
     overflow-y: hidden;
     margin-right: -15px;
     margin-left: -15px;
+    .card_row{
+        .card__bids:first-child{
+            margin-left: 15px;
+        }
+    }
+    sales-row{
+        .sale_card__row:first-child{
+            margin-left: 15px;
+        }
+    }
 }
 /*.carousel_wr{
     display: inline-flex;

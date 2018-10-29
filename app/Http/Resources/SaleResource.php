@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use function Couchbase\defaultDecoder;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class SaleResource extends JsonResource
@@ -14,7 +15,6 @@ class SaleResource extends JsonResource
      */
     public function toArray($request)
     {
-
         return [
             'id'        => $this->id,
             'title'     => $this->title,

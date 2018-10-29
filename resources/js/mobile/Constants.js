@@ -38,6 +38,9 @@ export const SALE_SUBEVENT  ='/api/sales/subevent';
 
 export const SALE_INDEX     = '/api/sale';
 export const SALE_CREATE    = '/api/sale';
+export const SALE_UPDATE    = '/api/sales/my/update';
+export const SALE_APLLY_BID    = '/api/sales/my/aplly';
+
 
 //**SUBEVENTS**//
 export const SUBEVENTS_INDEX = '/api/subevents';

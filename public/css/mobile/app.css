@@ -10928,6 +10928,14 @@ a.text-dark:focus {
   margin-left: -15px;
 }
 
+.carousel_container .card_row .card__bids:first-child {
+  margin-left: 15px;
+}
+
+.carousel_container sales-row .sale_card__row:first-child {
+  margin-left: 15px;
+}
+
 /*.carousel_wr{
     display: inline-flex;
 }*/
@@ -11513,6 +11521,18 @@ a.text-dark:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.confirm {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 2px solid #ffffff;
+  background: #e7f7e5 url(/images/confirm.png) no-repeat center;
+  background-size: 100%;
 }
 
 .tabs_list {

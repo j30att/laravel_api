@@ -40,6 +40,9 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/sales/my/active', 'Api\SaleController@myFilterSales');
     Route::post('/sales/my/closed', 'Api\SaleController@myFilterSales');
 
+    Route::post('/sales/my/update/', 'Api\SaleController@myUpdateSales');
+    Route::post('/sales/my/aplly/', 'Api\SaleController@applayBidToMySale');
+
     Route::post('/bids/my',             'Api\BidController@myBids');
     Route::post('/bids/my/matched',     'Api\BidController@myFilterBids');
     Route::post('/bids/my/unmatched',   'Api\BidController@myFilterBids');

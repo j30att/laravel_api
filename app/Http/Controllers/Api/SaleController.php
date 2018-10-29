@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\Sales\SaleInvestResource;
 use App\Http\Resources\SaleResource;
+use App\Models\Bid;
 use App\Models\Sale;
 use Carbon\Carbon;
+use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -160,6 +162,54 @@ class SaleController extends Controller
         return SaleResource::collection($query->get());
     }
 
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function myUpdateSales(Request $request)
+    {
+        $data = $request->get('sale');
+        $sale = Sale::query()->find($data['id']);
+        $sale->share = $data['share'];
+        $sale->markup = $data['markup'];
+        $sale->amount = $data['amount'];
+        $sale->save();
+    }
+
+    public function applayBidToMySale (Request $request){
+
+        $data = $request->get('bid');
+
+        $bid = Bid::query()->find($data['bid']['id']);
+
+        $bid->markup = $data['bid']['markup'];
+        $bid->share = $data['bid']['share'];
+        $bid->amount = $data['bid']['amount'];
+        $bid->status = Bid::BIDS_MATCHED;
+        $bid->save();
+
+
+        $sale = Sale::query()
+            ->with('creator')
+            ->with('subevent')
+            ->with('event')
+            ->find($data['sale_id']);
+
+        $sale->markup = $data['bid']['markup'];
+        $sale->share = $data['bid']['share'];
+        $sale->amount = $data['bid']['amount'];
+        $sale->save();
+
+
+        return  new SaleResource($sale);
+
+    }
+
+
     public function index(Request $request)
     {
         dd('тут ничего нету');
@@ -210,17 +260,6 @@ class SaleController extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        Sale::query()->where('id', $id)->update($request->all());
-    }
 
     /**
      * Remove the specified resource from storage.

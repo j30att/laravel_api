@@ -6,14 +6,10 @@ class SaleController {
         this.user = window.__user;
         this._opts = {dataLoad: false};
         this.$scope = $scope;
+
         this.SalesResourceService.getMySales(this.user.id).then(response =>{
             this.sales = response.data.data;
-        });
-    }
-
-    toggleSidenav(index) {
-        this.$scope.$broadcast('sidenav-open', () =>{
-            console.log('open sidenav')
+            this._opts.dataLoad = true;
         });
     }
 };
