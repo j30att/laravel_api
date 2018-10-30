@@ -151,6 +151,9 @@ class SaleManage {
         return this.SalesService.calcShareSold(this.sale);
     }
 
+
+
+
 }
 
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];

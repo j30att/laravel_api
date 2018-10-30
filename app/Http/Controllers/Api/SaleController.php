@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Resources\Sales\SaleInvestResource;
 use App\Http\Resources\SaleResource;
 use App\Models\Bid;
+use App\Models\Event;
 use App\Models\Sale;
 use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
@@ -208,6 +209,8 @@ class SaleController extends Controller
         return  new SaleResource($sale);
 
     }
+
+
 
 
     public function index(Request $request)

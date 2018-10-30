@@ -15,9 +15,10 @@ class EventsInvestResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'title'    => $this->title,
-            'buy_in'   => $this->buy_in,
-            'fund'     => $this->fund,
+            'title'         => $this->title,
+            'buy_in'        => $this->buy_in,
+            'fund'          => $this->fund,
+            'date_start'    => $this->formatted_start_date
         ];
 
     }

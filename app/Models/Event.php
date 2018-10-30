@@ -67,4 +67,17 @@ class Event extends Model
         $date_end = Carbon::parse($this->date_end);
         return $date_start->format('M d') . ' – ' . $date_end->format('M d');
     }
+
+    public function getCloseInAttribute()
+    {
+        $date_end = Carbon::parse($this->date_end);
+        $dateCurrent = Carbon::now();
+        if ($date_end->gt($dateCurrent)){
+            return date_diff($date_end, $dateCurrent)->days . ' ' . 'days';
+        } else {
+            return 'Close';
+        }
+    }
+
+
 }

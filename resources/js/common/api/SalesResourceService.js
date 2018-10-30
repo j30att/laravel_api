@@ -52,6 +52,8 @@ class SalesResourceService {
     getSaleById(id) {
         return this.$http.get(SALE_INDEX + '/' + id);
     };
+
+
 }
 
 SalesResourceService.$inject = ['$http'];
