@@ -8,7 +8,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Resources\EventResource;
+use App\Http\Resources\Dealer\EventResource;
 use App\Models\Event;
 use Illuminate\Http\Request;
 
@@ -19,7 +19,8 @@ class DealerController
     }
 
     public function eventsList(){
-
+        $event = Event::query()->get();
+        return EventResource::collection($event);
     }
 
     public function eventDetail(Request $request){

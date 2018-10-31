@@ -52,9 +52,9 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/store', 'Api\BidController@myStoreBid');
 
 
-    Route::get('/dealer/users', 'Api\UserController@usersList');
-    Route::get('/dealer/events', 'Api\DealerController@eventsList');
-    Route::get('/dealer/event/detail', 'Api\DealerController@eventDetail');
+    Route::post('/dealer/users', 'Api\UserController@usersList');
+    Route::post('/dealer/events', 'Api\DealerController@eventsList');
+    Route::post('/dealer/event/detail', 'Api\DealerController@eventDetail');
 
 });
 

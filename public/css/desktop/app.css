@@ -1230,11 +1230,6 @@
   opacity: 1;
 }
 
-.event_filter_select_multiple .event_filter_select-header input:-ms-input-placeholder {
-  color: #acacac;
-  opacity: 1;
-}
-
 .event_filter_select_multiple .event_filter_select-header input::-ms-input-placeholder {
   color: #acacac;
   opacity: 1;
@@ -1474,10 +1469,6 @@ md-dialog-actions .md-confirm-button {
   color: #000000;
 }
 
-.modal_content__bid .bids_group__row input:-ms-input-placeholder {
-  color: #000000;
-}
-
 .modal_content__bid .bids_group__row input::-ms-input-placeholder {
   color: #000000;
 }
@@ -1583,10 +1574,6 @@ md-dialog-actions .md-confirm-button {
 }
 
 .modal_content__bid .you_bids__item input::-webkit-input-placeholder {
-  color: #000;
-}
-
-.modal_content__bid .you_bids__item input:-ms-input-placeholder {
   color: #000;
 }
 
@@ -2231,14 +2218,6 @@ md-dialog-actions .md-confirm-button {
           box-sizing: border-box;
 }
 
-.login_page__form_wrapper form input:-ms-input-placeholder {
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  box-sizing: border-box;
-}
-
 .login_page__form_wrapper form input::-ms-input-placeholder {
   color: #ffffff;
   text-align: center;
@@ -2304,11 +2283,6 @@ md-dialog-actions .md-confirm-button {
 }
 
 .login__input::-webkit-input-placeholder {
-  font-size: 15px !important;
-  color: #000000 !important;
-}
-
-.login__input:-ms-input-placeholder {
   font-size: 15px !important;
   color: #000000 !important;
 }

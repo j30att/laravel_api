@@ -1,1 +1,24 @@
-dealer
+<div class="deskwr">
+    <main-menu></main-menu>
+    <div class="main_content">
+
+            <div>Events list</div>
+        <table>
+            <thead>
+            <tr>
+                <th>Event</th>
+                <th>Dates</th>
+                <th>Payout</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="event in dEventsCtrl.events">
+                    <td ng-bind="event.title"></td>
+                    <td>Lorem ipsum dole</td>
+                    <td>Lorem ipsum dole</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
