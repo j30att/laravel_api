@@ -1,4 +1,4 @@
-import {BIDS_MY, DEALER_EVENTS_URL, DEALER_USERS_URL} from "../Constants"
+import {DEALER_EVENTS_DETAIL_URL, DEALER_EVENTS_URL, DEALER_USERS_URL} from "../Constants"
 
 
 class DealerResourceService {
@@ -7,8 +7,11 @@ class DealerResourceService {
      }
 
     getEvents(){
-        console.log(1111);
         return this.$http.post(DEALER_EVENTS_URL,{})
+    }
+
+    getEvent(id){
+        return this.$http.post(DEALER_EVENTS_DETAIL_URL,{id:id})
     }
 
     getUsers(){

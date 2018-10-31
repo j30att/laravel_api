@@ -22,6 +22,7 @@ import {EventsDetailController} from "./Controllers/events/EventsDetailControlle
 import {PopupController} from "./Controllers/PopupController"
 
 import {DealerEventsController} from "./Controllers/dealer/DealerEventsController";
+import {DealerEventDetailController} from "./Controllers/dealer/DealerEventDetailController";
 import {DealerUsersController} from "./Controllers/dealer/DealerUsersController";
 
 
@@ -49,7 +50,9 @@ module.controller('SaleInvestController', SaleInvestController);
 module.controller('EventsDetailController', EventsDetailController);
 
 module.controller('DealerEventsController', DealerEventsController);
+module.controller('DealerEventDetailController',DealerEventDetailController);
 module.controller('DealerUsersController', DealerUsersController);
+
 
 export default module.name;
 

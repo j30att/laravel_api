@@ -1,0 +1,91 @@
+<div class="deskwr">
+    <main-menu></main-menu>
+    <div class="main_content">
+        <div class="event_wrapper">
+            <div class="event_left-side">
+                <div class="event_left-side_header">
+                    <a ui-sref="invest-events" class="event_left-side_header_link">
+                        Back to Events
+                    </a>
+                </div>
+                <div class="event_left-side_description">
+                    <div class="event_left-side_card">
+                        <div class="event_left-side_card_img">
+                            <img src="/images/desk/event_pic_{%DEventDetailCtrl.event.id%}.png" alt="event">
+                        </div>
+                        <div class="event_left-side_card_title">
+                            {%DEventDetailCtrl.event.title%}
+                        </div>
+                        <div class="event_left-side_card_description">
+                            <span>{%DEventDetailCtrl.event.period%}</span>
+                            <span class="grey_dot"></span>
+                            <span>{%DEventDetailCtrl.event.fund | currency:'£':0%} GTD</span>
+                            <!--<a ui-sref="#">See info</a>-->
+                        </div>
+                    </div>
+                    <div class="event_left-side_list" ng-if="DEventDetailCtrl.event.subevents">
+                        <div class="event_left-side_list_title">
+                            Events list
+                        </div>
+                        <div ng-repeat="event in DEventDetailCtrl.event.subevents"
+                             ng-class="{active:DEventDetailCtrl.activeEvent.id === event.id}"
+                             ng-click="DEventDetailCtrl.toggleEvent(event)"
+                             class="event_left-side_list_item">
+                            <div class="event_left-side_list_item_title">
+                                {% event.title %}
+                            </div>
+                            <div class="event_left-side_list_item_description">
+                                <span>{% event.buy_in | currency:'£':0 %}</span>
+                                <span class="grey_dot"></span>
+                                <span>{% event.fund | currency:'£':0 %} GTD</span>
+                                <span>{% event.period %}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event_right-side">
+                <div class="event_right-side_header">
+                    <div class="event_right-side_header_title">
+                        {% DEventDetailCtrl.activeEvent.title %}
+                    </div>
+                    <div class="event_right-side_header_description">
+                        <span>{% DEventDetailCtrl.activeEvent.buy_in | currency:'£':0 %}</span>
+                        <span class="grey_dot"></span>
+                        <span>{% DEventDetailCtrl.activeEvent.fund | currency:'£':0 %} GTD</span>
+                        <span>{% DEventDetailCtrl.activeEvent.period %}</span>
+                    </div>
+                </div>
+                <div ng-if="DEventDetailCtrl.activeEvent.sales"
+                     class="event_right-side_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>From</th>
+                            <th>Markup</th>
+                            <th>Highest bids</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="sale in DEventDetailCtrl.activeEvent.sales"
+                            ng-click="DEventDetailCtrl.toggleSidenav(sale)">
+                            <td>
+                                <img src="/images/desk/players_img/profile_img_1.png" alt="">
+                                <span>{% sale.creator.name %}</span>
+                            </td>
+                            <td class="bold">{% sale.markup %}</td>
+                            <td class="event_right-side_table_bids-list">
+                                <div ng-repeat="bid in sale.bids.highest">
+                                    <span>{% bid.markup %}</span>
+                                    <span>{% bid.amount|currency:'$':0 %}</span>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<bid-place sale="DEventDetailCtrl.sale"></bid-place>

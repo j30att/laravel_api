@@ -24,6 +24,8 @@ class DealerController
     }
 
     public function eventDetail(Request $request){
-
+        $id = $request->get('id');
+        $event = Event::query()->find($id);
+        return  new EventResource($event);
     }
 }

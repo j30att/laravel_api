@@ -188,14 +188,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controller: 'DealerEventsController',
             controllerAs: 'dEventsCtrl'
         })
-        .state('dealer-users', {
-            url: '/dealer/users'
-        });
-        /*.state('dealer-events-detail', {
+
+        .state('dealer-events-detail', {
             url: '/dealer/events/detail/{id}',
-            template: require('./views/dealer/events_detail.template.html')
+            template: require('./views/dealer/event-detail.template.html'),
+            controller: 'DealerEventDetailController',
+            controllerAs: 'DEventDetailCtrl'
         })
-        */
 
         .state('dealer-users', {
             url: '/dealer/users',
