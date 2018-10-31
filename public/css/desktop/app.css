@@ -2557,6 +2557,47 @@ md-checkbox.md-checked .md-icon:after {
   cursor: pointer;
 }
 
+.events_admin {
+  width: 100%;
+}
+
+.events_admin__title {
+  width: 100%;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.events_admin__table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.events_admin__table_header th {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 8px;
+  width: 33%;
+}
+
+.events_admin__table_body td {
+  height: 52px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+}
+
+.events_admin__table_dates {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.events_admin__table_payout {
+  font-weight: 600;
+}
+
 body,
 html {
   background-color: #fff !important;

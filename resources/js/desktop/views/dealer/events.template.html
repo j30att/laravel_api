@@ -1,24 +1,26 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content">
-
-            <div>Events list</div>
-        <table>
-            <thead>
-            <tr>
-                <th>Event</th>
-                <th>Dates</th>
-                <th>Payout</th>
-            </tr>
-            </thead>
-            <tbody>
+        <div class="main_content">
+        <div class="events_admin">
+            <div class="events_admin__title">Events list</div>
+            <table class="events_admin__table">
+                <thead class="events_admin__table_header">
+                    <tr>
+                        <th>Event</th>
+                        <th>Dates</th>
+                        <th>Payout</th>
+                    </tr>
+                </thead>
+                <tbody class="events_admin__table_body">
                 <tr ng-repeat="event in dEventsCtrl.events">
-                    <td ng-bind="event.title"></td>
-                    <td>Lorem ipsum dole</td>
-                    <td>Lorem ipsum dole</td>
+                    <td ng-bind="event.title" class="events_admin__table_event"></td>
+                    <td class="events_admin__table_dates" ng-bind="event.period"> 25th Nov - 5th Dec</td>
+                    <td class="events_admin__table_payout">0/3</td>
                 </tr>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+
 
     </div>
 </div>

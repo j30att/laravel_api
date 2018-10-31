@@ -36,10 +36,10 @@ class User extends Authenticatable
     ];
 
     public function bids(){
-        return $this->hasMany(Bid::class,'creator_id');
+        return $this->hasMany(Bid::class,'user_id');
     }
 
-    public function bidResponse(){
-        return $this->hasMany(BidResponse::class,'investor_id');
+    public function sales(){
+        return $this->hasMany(Sale::class,'user_id');
     }
 }

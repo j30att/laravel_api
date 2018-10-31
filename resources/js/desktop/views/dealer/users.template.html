@@ -8,7 +8,7 @@
                 <div class="user__filter">All locations</div>
                 <div class="user__filter">All events</div>
             </div>-->
-            <div class="event_filters user__filters">
+            <!--<div class="event_filters user__filters">
                 <div class="event_filters__item">
                     <md-select class="event_filters__item_select
                     md-no-underline ng-pristine ng-untouched
@@ -38,7 +38,7 @@
                     </md-select-menu></div></md-select>
                 </div>
 
-            </div>
+            </div>-->
             <div class="user__table">
                 <table class="table_events_list main_event_table">
                     <thead class="table_events_head">
@@ -52,125 +52,19 @@
                     </tr>
                     </thead>
                     <tbody class="table_events_body">
-                        <tr>
+                        <tr ng-repeat="user in dUsersCtrl.users">
                             <td class="t_from t_from_event">
                                 <div class="t_from_img">
                                     <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
                                 </div>
-                                <span class="ng-binding">jane</span>
+                                <span ng-bind="user.name">jane</span>
                             </td>
                             <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
+                            <td class="t_buy_in" ng-bind="user.sales">2</td>
+                            <td class="t_gte" ng-bind="user.bids">2</td>
                             <td class="t_markup ng-binding">London, UK</td>
                             <td class="t_time ng-binding">Open</td>
                         </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-                        <tr>
-                            <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
-                                </div>
-                                <span class="ng-binding">jane</span>
-                            </td>
-                            <td class="t_event ng-binding">£500,000</td>
-                            <td class="t_buy_in ng-binding">2</td>
-                            <td class="t_gte ng-binding">2</td>
-                            <td class="t_markup ng-binding">London, UK</td>
-                            <td class="t_time ng-binding">Open</td>
-                        </tr>
-
-
                     </tbody>
                 </table>
             </div>

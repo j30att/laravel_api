@@ -188,9 +188,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controller: 'DealerEventsController',
             controllerAs: 'dEventsCtrl'
         })
-        .state('dealer-users', {
-            url: '/dealer/users'
-        });
+
         /*.state('dealer-events-detail', {
             url: '/dealer/events/detail/{id}',
             template: require('./views/dealer/events_detail.template.html')
@@ -199,7 +197,9 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
 
         .state('dealer-users', {
             url: '/dealer/users',
-            template: require('./views/dealer/users.template.html')
+            template: require('./views/dealer/users.template.html'),
+            controller: 'DealerUsersController',
+            controllerAs: 'dUsersCtrl'
         });
 
 
