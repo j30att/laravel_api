@@ -8,12 +8,10 @@ import {SalesInvestComponent} from "./Components/sales/invest/sales-invest.compo
 import {SalesListComponent} from "./Components/sales/list/sales-list.component";
 import {SalesRowComponent} from "./Components/sales/row/sales-row.component";
 import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel.controller";
-
-
 import {SaleCreateComponent} from "./Components/sale-create/sale-create.controller";
 import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
 import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
-
+import {InputMarkupComponent} from "../common/components/input/input-markup/input-markup.controller";
 
 let module = angular.module('Components', []);
 module.component('bids', BidsComponent);
@@ -24,10 +22,9 @@ module.component('salesInvest', SalesInvestComponent);
 module.component('salesList', SalesListComponent);
 module.component('salesRow', SalesRowComponent);
 module.component('salesCarousel', SalesCarouselComponent);
+module.component('inputMarkup', InputMarkupComponent);
 
-
-
-module.component('bidPlace',BidPlaceComponent);
+module.component('bidPlace', BidPlaceComponent);
 module.component('saleManage', SaleManageComponent);
 module.component('saleCreate', SaleCreateComponent);
 export default module.name;

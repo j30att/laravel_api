@@ -1,0 +1,6 @@
+<input type="{% InputCtrl.type ? InputCtrl.type : 'text'"
+       class="{% InputCtrl.className %}"
+       placeholder="{% InputCtrl.placeholder %}"
+       ng-model="InputCtrl.bid.markup"
+       ng-change="InputCtrl.onChange($event)"
+>

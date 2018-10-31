@@ -1583,19 +1583,23 @@ md-dialog-actions .md-confirm-button {
 }
 
 .modal_content__bid .you_bids__item input::-webkit-input-placeholder {
-  color: #000;
+  color: #999999 !important;
+  opacity: 1 !important;
 }
 
 .modal_content__bid .you_bids__item input:-ms-input-placeholder {
-  color: #000;
+  color: #999999 !important;
+  opacity: 1 !important;
 }
 
 .modal_content__bid .you_bids__item input::-ms-input-placeholder {
-  color: #000;
+  color: #999999 !important;
+  opacity: 1 !important;
 }
 
 .modal_content__bid .you_bids__item input::placeholder {
-  color: #000;
+  color: #999999 !important;
+  opacity: 1 !important;
 }
 
 .modal_content__bid .you_bids__place_bid {
