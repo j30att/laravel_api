@@ -31,13 +31,8 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::get('/events/get-filters', 'Api\EventController@getFilters');
     Route::get('/events/main', 'Api\EventController@mainEvents');
     Route::apiResource('/events', 'Api\EventController');
-
     Route::apiResource('subevents', 'Api\SubEventController');
 
-
-    Route::get('/dealer/users', 'Api\UserController@usersList');
-
-    Route::get('/dealer/event/detail', 'Api\DealerController@show');
 });
 
 Route::group(['middleware' => 'auth'], function (){
@@ -57,6 +52,9 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/store', 'Api\BidController@myStoreBid');
 
 
+    Route::get('/dealer/users', 'Api\UserController@usersList');
+    Route::get('/dealer/events', 'Api\DealerController@eventsList');
+    Route::get('/dealer/event/detail', 'Api\DealerController@eventDetail');
 
 });
 

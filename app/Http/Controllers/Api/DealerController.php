@@ -14,9 +14,15 @@ use Illuminate\Http\Request;
 
 class DealerController
 {
-    public function show(Request $request){
-        $data = $request->get('id');
-        $event =Event::query()->find($data);
-        return new EventResource($event);
+    public function usersList(){
+
+    }
+
+    public function eventsList(){
+
+    }
+
+    public function eventDetail(Request $request){
+
     }
 }
