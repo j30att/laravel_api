@@ -1,0 +1,22 @@
+.user{
+    &__title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        &_button{
+            width: 170px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 6px;
+            background-color: #007fed;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+        }
+    }
+}

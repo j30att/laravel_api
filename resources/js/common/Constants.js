@@ -43,3 +43,7 @@ export const SALE_CREATE    = '/api/sale';
 
 //**SUBEVENTS**//
 export const SUBEVENTS_INDEX = '/api/subevents';
+
+//**DEALER**//
+export const DEALER_EVENTS_URL = '/api/dealer/events';
+export const DEALER_USERS_URL = 'api/dealer/users';

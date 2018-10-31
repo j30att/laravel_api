@@ -31,8 +31,8 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::get('/events/get-filters', 'Api\EventController@getFilters');
     Route::get('/events/main', 'Api\EventController@mainEvents');
     Route::apiResource('/events', 'Api\EventController');
-
     Route::apiResource('subevents', 'Api\SubEventController');
+
 });
 
 Route::group(['middleware' => 'auth'], function (){
@@ -50,6 +50,12 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/canceled',    'Api\BidController@myFilterBids');
 
     Route::post('/bids/my/store', 'Api\BidController@myStoreBid');
+
+
+    Route::post('/dealer/users', 'Api\UserController@usersList');
+    Route::post('/dealer/events', 'Api\DealerController@eventsList');
+    Route::post('/dealer/event/detail', 'Api\DealerController@eventDetail');
+
 });
 
 
