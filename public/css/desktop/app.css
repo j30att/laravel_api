@@ -2531,6 +2531,32 @@ md-checkbox.md-checked .md-icon:after {
   margin-right: 16px;
 }
 
+.user__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.user__title_button {
+  width: 170px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 6px;
+  background-color: #007fed;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 body,
 html {
   background-color: #fff !important;
