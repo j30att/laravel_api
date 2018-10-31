@@ -41,6 +41,26 @@
                 <span class="menu_item__wallet">$ 20,240.98</span>
             </li>
         </ul>
+        <hr>
+        <ul class="menu_list">
+            <li class="menu_item">
+                <a class="menu_item__link"
+                   ng-class="$ctrl.isActive('invest')"
+                   ui-sref="invest"
+                >
+                    Events
+                </a>
+                <div class="menu_item__count">2</div>
+            </li>
+            <li class="menu_item">
+                <a class="menu_item__link"
+                   ng-class="$ctrl.isActive('bids')"
+                   ui-sref="bids"
+                >
+                    Uesers
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <div class="last_up">
