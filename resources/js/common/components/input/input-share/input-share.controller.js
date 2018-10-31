@@ -1,16 +1,17 @@
 class InputShareController {
     onChange() {
         let {bid, buyIn} = this;
-        console.log(buyIn);
-        if (bid.markup) {
-            bid.markup = bid.markup.replace(/,|\.+/, '.').replace(/[^0-9.]/, '');
+
+        if (bid.share) {
+            bid.share = bid.share.replace(/,|\.+/, '.').replace(/[^0-9.]/, '');
             buyIn = parseFloat(buyIn);
-            console.log(buyIn);
-            if (bid.share) {
-                bid.amount = (bid.share / 100) * bid.markup * buyIn;
+
+            if (bid.markup) {
+                bid.amount = Math.round(((bid.share / 100) * bid.markup * buyIn) * 100) / 100;
             } else if (bid.amount) {
-                bid.share = bid.amount / (buyIn * bid.markup * 100);
+                bid.markup = Math.round((((bid.share / 100) * buyIn) / bid.amount) * 100) / 100;
             }
+            /*bid.share += '%';*/
         }
     }
 }

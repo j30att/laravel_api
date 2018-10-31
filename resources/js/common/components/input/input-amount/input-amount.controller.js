@@ -1,15 +1,15 @@
 class InputAmountController {
     onChange() {
         let {bid, buyIn} = this;
-        console.log(buyIn);
-        if (bid.markup) {
-            bid.markup = bid.markup.replace(/,|\.+/, '.').replace(/[^0-9.]/, '');
+
+        if (bid.amount) {
+            bid.amount = bid.amount.replace(/,|\.+/, '.').replace(/[^0-9.]/, '');
             buyIn = parseFloat(buyIn);
-            console.log(buyIn);
-            if (bid.share) {
-                bid.amount = (bid.share / 100) * bid.markup * buyIn;
-            } else if (bid.amount) {
-                bid.share = bid.amount / (buyIn * bid.markup * 100);
+
+            if (bid.share && !bid.markup) {
+                bid.markup = Math.round((((bid.share / 100) * buyIn) / bid.amount) * 100) / 100;
+            } else if (bid.markup) {
+                bid.share = Math.round((bid.amount / buyIn * bid.markup * 100) * 100) / 100;
             }
         }
     }
