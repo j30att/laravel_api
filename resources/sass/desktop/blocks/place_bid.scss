@@ -184,9 +184,12 @@
                    outline: none;
                    margin-top: 5px;
                    box-sizing: border-box;
+
+                   &::placeholder {
+                       color: #999999 !important;
+                       opacity: 1 !important;
+                   }
                }
-               input::placeholder {
-                   color: #000;}
            }
            &__place_bid{
                width: 118px;
