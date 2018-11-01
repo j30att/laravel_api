@@ -52,7 +52,8 @@
                     </tr>
                     </thead>
                     <tbody class="table_events_body">
-                        <tr ng-repeat="user in dUsersCtrl.users">
+                        <tr ng-repeat="user in dUsersCtrl.users"
+                            ng-click="dUsersCtrl.toggleSidenav()">
                             <td class="t_from t_from_event">
                                 <div class="t_from_img">
                                     <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">

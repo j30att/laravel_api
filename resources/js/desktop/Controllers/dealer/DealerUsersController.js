@@ -1,7 +1,8 @@
 class DealerUsersController{
-    constructor(DealerResourceService){
+    constructor(DealerResourceService,$scope){
         this.DealerResourceService = DealerResourceService;
         this.getUsers();
+        this.$scope = $scope;
     }
 
 
@@ -12,8 +13,13 @@ class DealerUsersController{
         });
     }
 
+    toggleSidenav(){
+        this.$scope.$broadcast('sidenav-saleDetails-open', () =>{
+        });
+    }
+
 }
 
-DealerUsersController.$inject = ['DealerResourceService'];
+DealerUsersController.$inject = ['DealerResourceService', '$scope'];
 
 export {DealerUsersController};
