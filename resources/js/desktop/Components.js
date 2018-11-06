@@ -10,6 +10,7 @@ import {InputAmountComponent} from "../common/components/input/input-amount/inpu
 import {InputShareComponent} from "../common/components/input/input-share/input-share.controller";
 import {SaleDetailsComponent} from "./Components/sale_details/sale_details.controller";
 import {UserDetailsComponent} from "./Components/user_details/user_details.controller";
+import {LogDetailsComponent} from "./Components/log_details/log_details.controller";
 
 let angular = require('angular');
 
@@ -27,6 +28,7 @@ module.component('inputAmount', InputAmountComponent);
 module.component('inputShare', InputShareComponent);
 module.component('saleDetails', SaleDetailsComponent);
 module.component('userDetails', UserDetailsComponent);
+module.component('logDetails', LogDetailsComponent);
 
 export default module.name;
 

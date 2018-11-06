@@ -2613,6 +2613,15 @@ md-checkbox.md-checked .md-icon:after {
   color: #42aada;
 }
 
+.detailed_log_table_header th {
+  width: auto;
+}
+
+.detailed_log_table_body td {
+  font-size: 13px !important;
+  color: #000;
+}
+
 .modal_sale_details .your_profile__title {
   display: -webkit-box;
   display: -ms-flexbox;

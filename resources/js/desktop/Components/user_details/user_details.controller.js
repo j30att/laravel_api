@@ -54,66 +54,7 @@ class UserDetails {
         let eventTitle = this.events[this.key].title;
         return eventTitle;
     }
-    showLosePopUp(){
-        let confirm = this.$mdDialog.confirm()
-            .parent(angular.element(document.querySelector('[md-component-id="right_user_details"]')))
-            .title('Confirm your action')
-            .textContent('Are you sure that ' + this.user.name +' lose this game?\n' +
-                'You can’t be able to change this action later!')
-            .ok('Confirm')
-            .cancel('Cancel');
-        this.$mdDialog.show(confirm).then(() => {
 
-        }, () => {
-        });
-
-        setTimeout(function () {
-            let buttonConf = document.getElementsByClassName('md-confirm-button')[0];
-            buttonConf.setAttribute('style', 'background-color:#ff3700 !important');
-        }, 10);
-
-
-    }
-
-
-    showLeftPopUp(){
-        let confirm = this.$mdDialog.confirm()
-            .parent(angular.element(document.querySelector('[md-component-id="right_user_details"]')))
-            .title('Confirm your action')
-            .textContent('Are you sure that ' + this.user.name +' left this game?\n' +
-                'You can’t be able to change this action later!')
-            .ok('Confirm')
-            .cancel('Cancel');
-
-        this.$mdDialog.show(confirm).then(() => {
-
-        }, () => {
-        });
-
-        setTimeout(function () {
-            let buttonConf = document.getElementsByClassName('md-confirm-button')[0];
-            buttonConf.setAttribute('style', 'background-color:#999999 !important');
-        }, 10);
-    }
-    showWonPopUp(){
-        let confirm = this.$mdDialog.confirm()
-            .parent(angular.element(document.querySelector('[md-component-id="right_user_details"]')))
-            .title('Confirm your action')
-            .textContent('Are you sure that ' + this.user.name +' Won this game?\n' +
-                'You can’t be able to change this action later!')
-            .ok('Confirm')
-            .cancel('Cancel');
-
-        this.$mdDialog.show(confirm).then(() => {
-
-        }, () => {
-        });
-
-        setTimeout(function () {
-            let buttonConf = document.getElementsByClassName('md-confirm-button')[0];
-            buttonConf.setAttribute('style', 'background-color:#00c811 !important');
-        }, 10);
-    }
 
 
 };
