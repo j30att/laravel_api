@@ -34,8 +34,15 @@
         .sale_details_matched{
             div{
                 background-color: #e7f7e4;
-
             }
+        }
+        .sale_details_unmatched{
+            div{
+                background-color: #fff2ec;
+            }
+        }
+        .sale_details_unmatched:last-child{
+            margin-bottom: 50px;
         }
         &__footer{
             width: 620px;

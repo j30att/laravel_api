@@ -44,6 +44,9 @@ class MainMenuController {
         }, () => {
         });
     }
+    testUser(){
+        console.log(this);
+    }
 
 }
 

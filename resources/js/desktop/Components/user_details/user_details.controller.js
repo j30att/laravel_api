@@ -21,15 +21,18 @@ class UserDetails {
 
     getSales(id){
         this.DealerResourceService.getSales(id).then(response => {
-            this.events = response.data.data;
+            this.user = response.data.data[0];
+
             this.key = 0;
-            this.sales = this.events[this.key].sales;
+            this.bids = this.user.sales[this.key].bids;
         })
     }
+
 
     $onInit(){
         this.$scope.$on('sidenav-userDetails-open', (event, data) => {
             this.getSales(data);
+
             this.buildToggler('right_user_details');
         });
 
@@ -46,12 +49,14 @@ class UserDetails {
         this.$mdSidenav(componentId).close();
     }
 
-    showSales(key){
+    showBids(key){
         this.key = key;
-        this.sales = this.events[this.key].sales;
+        this.bids = this.user.sales[this.key].bids;
+
     }
-    eventTitle(){
-        let eventTitle = this.events[this.key].title;
+    eventTitle(key){
+
+        let eventTitle = this.user.sales[this.key].event.title;
         return eventTitle;
     }
 

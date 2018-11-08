@@ -39,7 +39,9 @@ class DealerController
     }
 
     public function eventDetail(Request $request){
+
         $id = $request->get('id');
+
         $event = Event::query()
             ->with('subEvents')
             ->with(['sales'=>function($query){
@@ -50,7 +52,6 @@ class DealerController
                 }]);
             }])
             ->find($id);
-
         return  new EventResource($event);
     }
 
@@ -58,11 +59,16 @@ class DealerController
 
         $user_id = $request->get('id');
 
-
-        $sales = Event::query()
-            ->with('sales')
+        $user = User::query()
+            ->with('country')
+            ->where('id', $user_id)
+            ->with(['sales'=>function($query){
+                $query->with('bids');
+                $query->with('event');
+            }])
             ->get();
 
-        return ProfileResource::collection($sales);
+
+        return ProfileResource::collection($user);
     }
 }

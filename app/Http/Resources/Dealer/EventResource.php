@@ -4,6 +4,7 @@ namespace App\Http\Resources\Dealer;
 
 use App\Http\Resources\SubEventResource;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Carbon\Carbon;
 
 class EventResource extends JsonResource
 {
@@ -15,6 +16,8 @@ class EventResource extends JsonResource
      */
     public function toArray($request)
     {
+
+
         return [
             'id'            => $this->id,
             'title'         => str_limit($this->resource->title, 20),
@@ -25,7 +28,7 @@ class EventResource extends JsonResource
             'date_start'    => $this->formatted_start_date,
             'date_end'      => $this->formatted_end_date,
             'date_close_in' => $this->close_in,
-            'sales'         => $this->sales,
+            'sales'         => SaleResource::collection($this->sales),
             'subevents'     => $this->subevents,
 
         ];

@@ -31,7 +31,7 @@
                     <div ng-bind="$ctrl.sale.markup">1.20</div>
                     <div ng-bind="$ctrl.sale.share + '%'">1.53%</div>
                     <div ng-bind="'$'+$ctrl.sale.amount">$49,292</div>
-                    <div>July 13, 10:11</div>
+                    <div ng-bind="$ctrl.sale.placed">July 13, 10:11</div>
                 </div>
 
             </div>
@@ -58,6 +58,10 @@
                     <div>July 13, 10:11</div>
                 </div>
 
+                <div class="not_found" ng-if="($ctrl.sale.bids | filter:{status:2}).length < 1">
+                    No matched bids for this sale.
+                </div>
+
 
             </div>
 
@@ -74,7 +78,7 @@
                     <div>Value</div>
                     <div>Placed</div>
                 </div>
-                <div class="modal_sale__user_details_info__content sale_details_matched"
+                <div class="modal_sale__user_details_info__content sale_details_matched sale_details_unmatched"
                      ng-repeat="bid in $ctrl.sale.bids | filter:{status:3}">
                     <div ng-bind="bid.investor.name"></div>
                     <div ng-bind="bid.markup">1.20</div>
@@ -82,7 +86,7 @@
                     <div ng-bind="'$' + bid.amount">$49,292</div>
                     <div>July 13, 10:11</div>
                 </div>
-               <div class="not_found">
+               <div class="not_found" ng-if="($ctrl.sale.bids | filter:{status:3}).length < 1">
                    No matched bids for this sale.
                </div>
 

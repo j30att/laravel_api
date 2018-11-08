@@ -2675,6 +2675,14 @@ md-checkbox.md-checked .md-icon:after {
   background-color: #e7f7e4;
 }
 
+.modal_sale_details .sale_details_unmatched div {
+  background-color: #fff2ec;
+}
+
+.modal_sale_details .sale_details_unmatched:last-child {
+  margin-bottom: 50px;
+}
+
 .modal_sale_details__footer {
   width: 620px;
   display: -webkit-box;

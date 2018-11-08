@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Sale extends Model
 {
@@ -19,6 +20,7 @@ class Sale extends Model
         'markup',
         'amount',
         'share',
+        'created_at'
 
     ];
 
@@ -47,5 +49,16 @@ class Sale extends Model
     }
     public function event(){
         return $this->belongsTo(Event::class,'event_id');
+    }
+
+    public function getPlacedAttribute(){
+        $date_placed = Carbon::parse($this->created_at);
+        $day = $date_placed->day;
+        $month = $date_placed->shortEnglishMonth;
+        $hour = $date_placed->hour;
+        $minute = $date_placed->minute;
+
+        return $month . ' ' . $day . ' , ' . $hour . ':' . $minute;
+
     }
 }

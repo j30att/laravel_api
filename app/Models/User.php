@@ -49,4 +49,8 @@ class User extends Authenticatable
     public function sales(){
         return $this->hasMany(Sale::class,'user_id');
     }
+
+    public function  country(){
+        return $this->belongsTo(Country::class, 'country_id');
+    }
 }
