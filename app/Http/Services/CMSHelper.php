@@ -108,26 +108,26 @@ class CMSHelper
 
         //todo куда идти  за странами по коду
 
-        $countryUri = 'https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json';
-        $countryUri = 'https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json';
-        $countryUri = 'https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json';
-        $apiResource = $this->guzzle->get($countryUri);
-
-        if ('200' == $apiResource->getStatusCode()) {
-            $countryData = json_decode($apiResource->getBody());
-
-
-            $country = Country::query()->where('code', $countryData->country)->first();
-            if (is_null($country)) {
-                $country = new Country();
-            }
-            $country->name = $countryData->country_name;
-            $country->code = $countryData->country;
-            $country->slug = str_slug($countryData->country_name, '_');
-            $country = $country->save();
-
-            return $country->id;
-        }
+        //$countryUri = 'https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json';
+        //$countryUri = 'https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json';
+        //$countryUri = 'https://dev.cms.mypartypokerlive.com/en/api/mobile/events/current-and-upcoming/countries?_format=json';
+//        $apiResource = $this->guzzle->get($countryUri);
+//
+//        if ('200' == $apiResource->getStatusCode()) {
+//            $countryData = json_decode($apiResource->getBody());
+//
+//
+//            $country = Country::query()->where('code', $countryData->country)->first();
+//            if (is_null($country)) {
+//                $country = new Country();
+//            }
+//            $country->name = $countryData->country_name;
+//            $country->code = $countryData->country;
+//            $country->slug = str_slug($countryData->country_name, '_');
+//            $country = $country->save();
+//
+//            return $country->id;
+//        }
 
     }
 }

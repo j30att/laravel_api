@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         Commands\update::class,
         Commands\Request::class,
         Commands\GetCountry::class,
+        Commands\Connect::class,
     ];
 
     /**
