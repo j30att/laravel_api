@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Log;
 class PageController extends Controller
 {
     public function app(Request $request){
-        Log::info('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'. $request->all());
+        Log::info($request->all());
         return view('layouts.main');
     }
     public function dealer(Request $request){
