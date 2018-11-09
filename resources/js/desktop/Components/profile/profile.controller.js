@@ -42,9 +42,6 @@ class Profile {
         this._opts.avatar_error = false;
         this._opts.avatar_msg = '';
 
-        console.log(this.uploadedAvatar);
-
-
 
         this.Upload.upload({
             url: '/profile/avatar',

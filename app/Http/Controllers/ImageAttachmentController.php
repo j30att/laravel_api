@@ -48,7 +48,10 @@ class ImageAttachmentController
             $user = Auth::user();
             $user->avatar()->associate($newImage->id);
             $user->save();
+
+
             return response()->json(['status' => 1, 'avatar' => $user->profile_avatar_url]);
+
         }catch(\Exception $e){
             Log::error($e->getMessage());
             return response()->json(['status' => 0, 'msg' => 'Ошибка при сохранении файла']);

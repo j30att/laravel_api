@@ -154,7 +154,6 @@ return [
          * Package Service Providers...
          */
         Jenssegers\Agent\AgentServiceProvider::class,
-        JD\Cloudder\CloudderServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -216,7 +215,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
-        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+
 
     ],
 

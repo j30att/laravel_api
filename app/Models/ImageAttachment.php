@@ -57,5 +57,7 @@ class ImageAttachment extends Model
         return  self::generatePublicFileFolder($this->code, $type) . $this->code;
     }
 
-    public function getUrlAttribute () {return $this->getUrl();}
+    public function getUrlAttribute () {
+        return $this->getUrl();
+    }
 }
