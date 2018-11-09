@@ -24,6 +24,7 @@ import {PopupController} from "./Controllers/PopupController"
 import {DealerEventsController} from "./Controllers/dealer/DealerEventsController";
 import {DealerEventDetailController} from "./Controllers/dealer/DealerEventDetailController";
 import {DealerUsersController} from "./Controllers/dealer/DealerUsersController";
+import {DealerWinController} from "./Controllers/dealer/DealerWinController";
 
 
 let module = angular.module('Controllers', []);
@@ -52,6 +53,7 @@ module.controller('EventsDetailController', EventsDetailController);
 module.controller('DealerEventsController', DealerEventsController);
 module.controller('DealerEventDetailController',DealerEventDetailController);
 module.controller('DealerUsersController', DealerUsersController);
+module.controller('DealerWinController', DealerWinController);
 
 
 export default module.name;

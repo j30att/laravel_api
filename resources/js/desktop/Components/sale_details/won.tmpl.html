@@ -1,0 +1,35 @@
+<div class="won">
+    <div class="won_confirm">
+        Confirm your action
+    </div>
+    <div class="won_description">
+        Selected the placement and enter winning amount
+    </div>
+    <div class="won_selects">
+        <div class="won_select">
+            <md-select placeholder="Not placed" ng-model="user"
+                       class="select_placed">
+                <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
+                    <md-option>1</md-option>
+                    <md-option>2</md-option>
+                    <md-option>3</md-option>
+            </md-select>
+        </div>
+        <div class="won_select">
+            <input type="text" class="select_input" placeholder="Amount">
+        </div>
+        <div class="won_select">
+            <md-select placeholder="$" ng-model="user" class="select_currency">
+                <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
+                <md-option>$</md-option>
+                <md-option>£</md-option>
+                <md-option>€</md-option>
+                <md-option>¥</md-option>
+            </md-select>
+        </div>
+    </div>
+    <div class="won_buttons">
+        <div class="won_button won_button__cancel">Cancel</div>
+        <div class="won_button won_button__confirm" ng-click="$ctrl.hui()">Confirm</div>
+    </div>
+</div>

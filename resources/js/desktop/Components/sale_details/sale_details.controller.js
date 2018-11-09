@@ -1,8 +1,9 @@
 
 class SaleDetails {
-    constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state, $mdDialog) {
+    constructor($scope,SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state, $mdDialog, DealerWinController) {
         this.SalesResourceService = SalesResourceService;
         this.SalesService = SalesService;
+        this.DealerWinController = DealerWinController;
         this.$mdSidenav = $mdSidenav;
         this.$mdDialog = $mdDialog;
         this.$timeout=$timeout;
@@ -91,25 +92,27 @@ class SaleDetails {
             buttonConf.setAttribute('style', 'background-color:#999999 !important');
         }, 10);
     }
-    showWonPopUp(){
-        let confirm = this.$mdDialog.confirm()
-            .parent(angular.element(document.querySelector('[md-component-id="right_sale_details"]')))
-            .title('Confirm your action')
-            .textContent('Are you sure that ' + this.user.name +' Won this game?\n' +
-                'You can’t be able to change this action later!')
-            .ok('Confirm')
-            .cancel('Cancel');
 
-        this.$mdDialog.show(confirm).then(() => {
+    showWonPopUp (ev){
+        console.log('hui');
+        this.$mdDialog.show({
+            controller: this.DealerWinController,
+            template: require('./won.tmpl.html'),
+            parent: angular.element(document.querySelector('[md-component-id="right_sale_details"]')),
+            targetEvent: ev,
+            clickOutsideToClose:true,
+        })
 
-        }, () => {
-        });
+            .then(function() {
+                this.$scope.status = 'You said the information was "' + 'answer' + '".';
+            }, function() {
+                this.$scope.status = 'You cancelled the dialog.';
+            });
 
-        setTimeout(function () {
-            let buttonConf = document.getElementsByClassName('md-confirm-button')[0];
-            buttonConf.setAttribute('style', 'background-color:#00c811 !important');
-        }, 10);
+
     }
+
+
 
 
 };
