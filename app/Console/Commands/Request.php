@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Http\Services\CMSHelper;
+use App\Http\Services\PPValidate;
 use Illuminate\Console\Command;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
@@ -40,12 +41,16 @@ class Request extends Command
      */
     public function handle()
     {
+        $pp = new PPValidate();
+        $pp->authentication();
 
+
+        /*
         $helper = new CMSHelper();
 
-        $msg = 'a:3:{s:10:"entityName";s:22:"AppBundle\Entity\Event";s:6:"action";s:6:"create";s:8:"entityId";i:106;}';
-        //$msg = 'a:3:{s:10:"entityName";s:25:"AppBundle\Entity\Schedule";s:6:"action";s:6:"create";s:8:"entityId";i:105;}';
-        $helper->execute($msg);
+        $msg = 'a:3:{s:10:"entityName";s:22:"AppBundle\Entity\Event";s:6:"action";s:6:"create";s:8:"entityId";i:104;}';
+        $msg = 'a:3:{s:10:"entityName";s:25:"AppBundle\Entity\Schedule";s:6:"action";s:6:"create";s:8:"entityId";i:105;}';
+        $helper->execute($msg);*/
 
 
         /*$uri =  'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/event_only/105';

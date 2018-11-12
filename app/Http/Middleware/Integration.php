@@ -25,7 +25,6 @@ class Integration
             $user->pp_account_id = $accountId;
             $user->save();
         }
-
         return $next($request);
     }
 }
