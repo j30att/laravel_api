@@ -30,8 +30,6 @@ class CMSHelper
     public function execute($msg)
     {
 
-        
-
 
         Log::info('[x] Message received', [$msg]);
         try {
@@ -40,7 +38,6 @@ class CMSHelper
                 $msgDetails["entityName"],
                 $msgDetails["entityId"],
             );
-
 
             switch ($msgDetails["entityName"]) {
                 case 'AppBundle\Entity\Event':
@@ -101,6 +98,10 @@ class CMSHelper
             }
         }
 
+    }
+
+    public function updateSchedule(){
+        https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/schedules/105
     }
 
     public function updateCountries()
