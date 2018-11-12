@@ -76,7 +76,6 @@ class CMSHelper
             $event = Event::query()->find($eventId);
 
             $eventData = json_decode($apiResource->getBody());
-            dd($eventData);
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
                     $event = new Event();
@@ -101,7 +100,17 @@ class CMSHelper
     }
 
     public function updateSchedule(){
-        https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/schedules/105
+
+        $scheduleUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/schedules/105';
+        $apiResource = $this->guzzle->get($scheduleUri);
+        $event = json_decode($apiResource->getBody());
+
+
+        foreach ($event->event->days as $day){
+
+        }
+
+
     }
 
     public function updateCountries()

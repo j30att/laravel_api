@@ -9,7 +9,6 @@ class SubEvent extends Model
 {
     protected $fillable =[
         'event_id',
-        'image_id',
         'title',
         'fund',
         'buy_in',
