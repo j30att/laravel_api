@@ -35,7 +35,10 @@ class PPValidate
             'headers' => [
                 'Content-Type' => 'application/json'
             ],
-            'form_params' => $data
+            'form_params' => \GuzzleHttp\json_decode('{
+    "partnerToken": "9285bf4c-46c0-4c78-8ead-18930742a500",
+    "accountId": "116186665"
+}')
         ]);
 
         dd($request->getBody());
