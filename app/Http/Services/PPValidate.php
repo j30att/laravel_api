@@ -31,13 +31,12 @@ class PPValidate
             'partnerToken' => $user->pp_partner_token,
             'accountId' => $user->pp_account_id
         ];
-        dd($data);
+
         $request = $this->guzzle->request('POST', $this->uri, [
             'headers' => [
                 'Content-Type' => 'application/json'
             ],
-            'form_data'=> ['partnerToken' => $user->pp_partner_token,
-                'accountId' => $user->pp_account_id]
+            $data
         ]);
 
         dd($request->getBody());
