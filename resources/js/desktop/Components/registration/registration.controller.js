@@ -194,7 +194,7 @@ class Registration {
 
          this.RegistrationService.createUser(user).then((response)=>{
              if (response.status === 200) {
-                 window.location.href = '/'
+                 this.changeState('link_pp_account');
              }
          });
     }

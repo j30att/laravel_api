@@ -18,7 +18,7 @@ class AddAvatarAndImageIdFildeToUsersTable extends Migration
            $table ->integer('image_id')->unsigned()->nullable();
            $table ->foreign('image_id')->references('id')->on('image_attachments')->onDelete('set null');
 
-           $table -> string('avatar');
+           $table -> string('avatar')->nullable();
 
 
         });
