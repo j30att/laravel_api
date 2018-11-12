@@ -20,14 +20,11 @@ class Integration
         $accountId = $request->get('accountId');
 
         if ($partnerToken && $accountId){
-            dd($partnerToken, $accountId);
             $user = Auth::user();
             $user->pp_partner_token = $partnerToken;
             $user->pp_account_id = $accountId;
             $user->save();
-
         }
-
         return $next($request);
     }
 }
