@@ -2828,7 +2828,8 @@ md-checkbox.md-checked .md-icon:after {
 }
 
 .modal_sale__user_details_info__content div {
-  height: 40px;
+  min-height: 40px;
+  padding: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

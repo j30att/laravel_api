@@ -29,7 +29,7 @@
                 <div class="modal_sale__user_details_info__content"
                     ng-repeat="(key, sale) in $ctrl.user.sales"
                     ng-click="$ctrl.showBids(key)">
-                    <div ng-bind="(sale.event.title | limitTo:13)  + '...'"></div>
+                    <div ng-bind="sale.event.title"></div>
                     <div ng-bind="sale.markup"></div>
                     <div ng-bind="(sale.share) + '%'"></div>
                     <div ng-bind="'$' + (sale.amount)"></div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="modal_sale__user_details_info__content sale_details_matched"
                 ng-repeat="bid in $ctrl.bids | filter:{status:2}">
-                    <div ng-bind="($ctrl.eventTitle() | limitTo:13) + '...'"></div>
+                    <div ng-bind="$ctrl.eventTitle()"></div>
                     <div ng-bind="bid.markup">1.20</div>
                     <div ng-bind="(bid.share) + '%'">1.53%</div>
                     <div ng-bind="'$' + (bid.amount)">$49,292</div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="modal_sale__user_details_info__content sale_details_matched sale_details_unmatched"
                      ng-repeat="bid in $ctrl.bids | filter:{status:3}">
-                    <div ng-bind="($ctrl.eventTitle() | limitTo:13) + '...'"></div>
+                    <div ng-bind="$ctrl.eventTitle()"></div>
                     <div ng-bind="bid.markup">1.20</div>
                     <div ng-bind="(bid.share) + '%'">1.53%</div>
                     <div ng-bind="'$' + (bid.amount)">$49,292</div>

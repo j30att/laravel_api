@@ -20,7 +20,8 @@ class EventResource extends JsonResource
 
         return [
             'id'            => $this->id,
-            'title'         => str_limit($this->resource->title, 20),
+            //'title'         => str_limit($this->resource->title, 20),
+            'title'         => $this->resource->title,
             'date'          => $this->formatted_date,
             'fund'          => $this->fund,
             'period'        => $this->period,
