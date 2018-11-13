@@ -180,23 +180,25 @@ class Registration {
     }
 
     createUser(){
-        this.changeState('link_pp_account');
-        // let user = {
-        //     name                    : this.user.firstName + ' ' +this.user.lastName,
-        //     birth_date              : this.user.dateOfBirth,
-        //     email                   : this.user.email,
-        //     password                : this.user.password,
-        //     password_confirmation   : this.user.confirmPassword,
-        //     country_id              : this.user.country_id,
-        //     sms_subscribe           : this.user.checkBoxSms,
-        //     email_subscribe         : this.user.checkBoxEmail
-        // };
-        //
-        //  this.RegistrationService.createUser(user).then((response)=>{
-        //      if (response.status === 200) {
-        //          this.changeState('link_pp_account');
-        //      }
-        //  });
+
+        let user = {
+            name                    : this.user.firstName + ' ' +this.user.lastName,
+            birth_date              : this.user.dateOfBirth,
+            email                   : this.user.email,
+            password                : this.user.password,
+            password_confirmation   : this.user.confirmPassword,
+            country_id              : this.user.country_id,
+            sms_subscribe           : this.user.checkBoxSms,
+            email_subscribe         : this.user.checkBoxEmail
+        };
+
+         this.RegistrationService.createUser(user).then((response)=>{
+             if (response.status === 200) {
+                 this.changeState('link_pp_account');
+             } else {
+                 console.log(response);
+             }
+         });
     }
 
 };

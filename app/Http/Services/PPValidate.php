@@ -8,56 +8,62 @@
 
 namespace App\Http\Services;
 
+use App\Models\PPUser;
 use App\Models\User;
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PPValidate
 {
 
-    protected $uri = '/api?partner=staking&partnerAccountId=staking';
-
-    public function __construct()
+    public static function authentication(User $user)
     {
-        $this->guzzle = new Client(['base_uri'=>'http://re-partnerservices.ivycomptech.co.in']);
+        try {
+            $response = PPValidate::getPPSession($user);
+            PPValidate::savePPUser($user, $response);
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+        }
+
     }
 
-    public function authentication()
-    {
-        $user = User::query()->find(5);
-     //   $user = Auth::user();
-        $data = [
-            'partnerToken' => $user->pp_partner_token,
-            'accountId' => $user->pp_account_id
-        ];
+    public static function getPPSession(User $user):array {
 
-        $request = $this->guzzle->request('POST', $this->uri, [
-            'headers' => [
-                'Content-Type' => 'application/json'
-            ],
-            'form_params' => '{
-    "partnerToken": "9285bf4c-46c0-4c78-8ead-18930742a500",
-    "accountId": "116186665"
-}'
-        ]);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, config('app.pp.pp_validate'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"partnerToken\": $user->pp_partner_token,\n    \"accountId\": \"$user->pp_account_id\"}");
+        curl_setopt($ch, CURLOPT_POST, 1);
 
-        dd($request->getBody());
+        $headers = array();
+        $headers[] = "Content-Type: application/json";
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
+        $result = curl_exec($ch);
+        $result = json_decode($result, 1);
+
+        return $result;
     }
+
+    public static function savePPUser(User $user, $response){
+        $ppUser = $user->ppUser;
+        if ($response['result']) {
+            if ($response['result'] == 'SUCCESS') {
+                if (is_null($ppUser)) {
+                    $ppUser = new PPUser();
+                    $ppUser->user_id = $user->id;
+                }
+                $ppUser->result = $response['result'];
+                $ppUser->first_name = $response['firstName'];
+                $ppUser->last_name = $response['lastName'];
+                $ppUser->account_id = $response['accountId'];
+                $ppUser->screen_name = $response['screenName'];
+                $ppUser->funded = $response['funded'];
+                $ppUser->session = $response['partnerPlayerSession'];
+                $ppUser->save();
+            }
+        }
+    }
+
 
 }
-/*
-18d4acc2-926a-4ebf-a642-c2d2297d2c79
-
-curl -v -X POST \
- 'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking' \
--H 'Content-Type: application/json' \
---data '{"partnerToken":"9285bf4c-46c0-4c78-8ead-18930742a500","accountId":"116186665"}'
-
-curl -X POST \
-'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking' \
--H 'Content-Type: application/json' \
--d '{
-    "partnerToken": "9285bf4c-46c0-4c78-8ead-18930742a500",
-    "accountId": "116186665"
-}'*/

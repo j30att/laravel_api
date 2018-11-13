@@ -219,4 +219,8 @@ return [
 
     ],
 
+    'pp'=>[
+        'pp_validate' => 'http://re-partnerservices.ivycomptech.co.in/api?partner=staking&partnerAccountId=staking'
+    ]
+
 ];

@@ -59,4 +59,8 @@ class User extends Authenticatable
     public function  avatar(){
         return $this->belongsTo(ImageAttachment::class, 'image_id');
     }
+
+    public function ppUser(){
+        return $this->hasOne(PPUser::class, 'user_id');
+    }
 }
