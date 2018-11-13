@@ -1,9 +1,11 @@
 class InvestController {
-    constructor($window, $http, EventsResourceService, SalesResourceService) {
+    constructor($window, $http, EventsResourceService, SalesResourceService, $scope, CountriesResourceService) {
         this.$window = $window;
         this.$http = $http;
+        this.$scope = $scope;
         this.EventsResourceService = EventsResourceService;
         this.SalesResourceService = SalesResourceService;
+        this.CountriesResourceService = CountriesResourceService;
 
         this.filter = 'closing';
         this.events = [];
@@ -11,6 +13,10 @@ class InvestController {
         this._opts = {
             dataLoad: false
         };
+        this.state = 'filters_close';
+        this.selectedEvents = [];
+        this.selectedCountries = [];
+        this.getCountries();
     }
 
     $onInit() {
@@ -42,8 +48,72 @@ class InvestController {
                 this._opts.dataLoad = true;
             });
     }
+
+    getCountries() {
+        this.CountriesResourceService.getCountries()
+            .then(response => {
+                this.countries = response.data.data;
+                console.log(this.countries);
+
+            });
+    }
+
+
+    selectedEvent(item, list) {
+        var idx = list.indexOf(item);
+        if (idx > -1) {
+            list.splice(idx, 1);
+        }
+        else {
+            list.push(item);
+        }
+
+    };
+
+    exists(item, list) {
+        return list.indexOf(item) > -1;
+
+    };
+
+    selectedCountry(item, list) {
+        var idx = list.indexOf(item);
+        if (idx > -1) {
+            list.splice(idx, 1);
+        }
+        else {
+            list.push(item);
+        }
+        console.log(this.selectedCountries);
+
+    };
+
+    existsCountry(item, list) {
+        return list.indexOf(item) > -1;
+
+    };
+    clearAllFilters(){
+        this.selectedEvents = [];
+        this.selectedCountries = [];
+    }
+
+    saveFilters(){
+        let filter = {
+            events      : this.selectedEvents,
+            countries   : this.selectedCountries
+        };
+        this.EventsResourceService.getFilteredEvents(filter)
+        .then(response => {
+            this.events = response.data.data;
+        });
+        this.state = 'filters_close';
+
+    }
+
+
+
 }
 
-InvestController.$inject = ['$window', '$http', 'EventsResourceService', 'SalesResourceService'];
+InvestController.$inject = ['$window', '$http', 'EventsResourceService', 'SalesResourceService',
+'$scope', 'CountriesResourceService'];
 
 export {InvestController};

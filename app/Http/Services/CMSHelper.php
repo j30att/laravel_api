@@ -80,12 +80,11 @@ class CMSHelper
             $eventData = json_decode($apiResource->getBody());
 
 
-
             $country_code = $eventData->event->eventCountry;
             $country = json_decode(Country::query()->where('code', $country_code)->get());
             $country_id = $country[0]->id;
 
-            //dd($eventData->event);
+            dd($eventData->event);
 
             //dd($eventData->event->eventCountry);
             if (is_null($eventData->event->deletedAt)) {
@@ -97,19 +96,32 @@ class CMSHelper
                 $event->title = $eventData->event->eventName;
                 $event->date_start = $eventData->event->eventStartDate;
                 $event->date_end = $eventData->event->eventEndDate;
-                $event->country = $eventData->event->eventCountry;
                 $event->buy_in = $eventData->event->eventBuyIn;
-                $event->currency = $eventData->event->eventCurrency;
+
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogo;
-                //$event->country_id = $this->updateCountries();
+
                 $event->country_id = $country_id;
+
+                $event->event_time_zone = $eventData->event->eventTimeZone;
+                $event->event_venue_address_str = $eventData->event->eventVenueAddressStr;
+
+                $event->first_live_day = Carbon::parse($eventData->event->firstLiveDayDate);
+                $event->last_live_day = Carbon::parse($eventData->event->lastLiveDayDate);
+                $event->first_day_date = Carbon::parse($eventData->event->firstDayDate);
+                $event->last_day_date = Carbon::parse($eventData->event->lastDayDate);
+                $event->start_date_time = Carbon::parse($eventData->event->startDateTime);
+                $event->late_reg = Carbon::parse($eventData->event->lateReg);
+
+                $event->time_zone = $eventData->event->eventTimeZone;
+                $event->currency = $eventData->event->eventCurrency;
+
 
 
 
                 $event->save();
 
-                dd($event);
+                //dd($event);
 
                 $this->updateSchedule();
 

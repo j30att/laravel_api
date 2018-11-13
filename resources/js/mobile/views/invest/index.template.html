@@ -1,11 +1,11 @@
-<div class="row" ng-cloak>
+<div class="row" ng-cloak ng-if="InvstCtrl.state == 'filters_close'">
     <div class="col-md-12">
         <div class="header">
             <a ui-sref="profile">
                 <div class="header_profile"></div>
             </a>
             <div class="header_logo"></div>
-            <div class="header_filter"></div>
+            <div class="header_filter" ng-click="InvstCtrl.state = 'filters_open'"></div>
         </div>
         <div class="header_empty_height"></div>
 
@@ -39,4 +39,96 @@
         <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
 </div>
+
+<div class="row" ng-if="InvstCtrl.state == 'filters_open'">
+    <div class="events_filters_wrapper col-md-12">
+        <div class="header_modal">
+            <div class="header_filter_empty"></div>
+            <div class="header_title">Filter</div>
+            <div class="header_close" ng-click="InvstCtrl.state = 'filters_close'"></div>
+        </div>
+
+        <div class="filter_wrapper">
+            <div class="filter_label">Events</div>
+            <div class="filter_box" ng-click="InvstCtrl.state = 'filter_events'">
+                <span ng-if="InvstCtrl.selectedEvents.length == 0">Choose events</span>
+                <span ng-repeat="title in InvstCtrl.selectedEvents">{%(title.title) + ' , '%}</span>
+            </div>
+        </div>
+
+        <div class="filter_wrapper">
+            <div class="filter_label">Regions</div>
+            <div class="filter_box" ng-click="InvstCtrl.state = 'filter_region'">
+                <span ng-if="InvstCtrl.selectedCountries.length == 0">Choose regions</span>
+                <span ng-repeat="country in InvstCtrl.selectedCountries">{%(country.name) + ' , '%}</span>
+
+            </div>
+        </div>
+
+        <div class="events_filters__buttons">
+            <div class="events_filters__button events_filters__button_save" ng-click="InvstCtrl.saveFilters()">Save filter</div>
+            <div class="events_filters__button events_filters__button_clear" ng-click="InvstCtrl.clearAllFilters()">Clear all</div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row" ng-if="InvstCtrl.state == 'filter_events'">
+    <div class="events_filters_wrapper col-md-12">
+        <div class="header_modal">
+            <div class="header_back" ng-click="InvstCtrl.state = 'filters_open'"></div>
+            <div class="header_title">Choose events</div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+        <div class="events_list_wrapper">
+            <div class="events_list_search">
+                <input type="search" placeholder="Search region" ng-model="InvstCtrl.searchEvent">
+            </div>
+            <div class="events_list_items">
+
+                <div class="events_list_item" ng-repeat="event in InvstCtrl.events | filter:InvstCtrl.searchEvent">
+                    <md-checkbox ng-checked="InvstCtrl.exists(event, InvstCtrl.selectedEvents)"
+                                 ng-click="InvstCtrl.selectedEvent(event, InvstCtrl.selectedEvents)">
+                        {%event.title%}
+                    </md-checkbox>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="row" ng-if="InvstCtrl.state == 'filter_region'">
+    <div class="events_filters_wrapper col-md-12">
+        <div class="header_modal">
+            <div class="header_back" ng-click="InvstCtrl.state = 'filters_open'"></div>
+            <div class="header_title">Choose regions</div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+        <div class="events_list_wrapper">
+            <div class="events_list_search">
+                <input type="search" placeholder="Search region" ng-model="InvstCtrl.searchRegion">
+            </div>
+            <div class="events_list_items">
+
+                <div class="events_list_item" ng-repeat="country in InvstCtrl.countries | filter:InvstCtrl.searchRegion">
+                    <md-checkbox ng-checked="InvstCtrl.existsCountry(country, InvstCtrl.selectedCountries)"
+                                 ng-click="InvstCtrl.selectedCountry(country, InvstCtrl.selectedCountries)">
+                        {%country.name%}
+                    </md-checkbox>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
 

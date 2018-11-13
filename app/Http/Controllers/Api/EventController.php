@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
-
 use App\Http\Resources\Events\EventDetailResource;
 use App\Http\Resources\EventResource;
 use App\Http\Resources\Events\EventsList;
 use App\Models\Country;
 use App\Models\Event;
 use Carbon\Carbon;
+use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -102,7 +102,11 @@ class EventController extends Controller
      */
     public function mainEvents()
     {
-        $events = Event::query()->take(6)->get();
+        //$events = Event::query()->take(6)->get();
+        $events = Event::query()
+            ->with('country')
+            ->take(Event::LIMIT_EVENT_MAIN_PAGE)
+            ->get();
         return EventsList::collection($events);
     }
 
@@ -114,12 +118,36 @@ class EventController extends Controller
     {
         $query = Event::query();
         $filter = $request->get('filter');
-
+        $eventIds = [];
+        $countryIds = [];
         if ($filter) {
+            if(count($filter['events']) > 0){
+                foreach ($filter['events'] as $event){
+                    $eventIds[] = $event['id'];
+                }
+                $eventsFiltredEvent = Event::query()->whereIn('id', $eventIds)->get();
 
+            }
+            if(count($filter['countries']) > 0){
+                foreach ($filter['countries'] as $country){
+                    $countryIds[] = $country['id'];
+                }
+                $eventsFiltredCountry = Event::query()->whereIn('country_id', $countryIds)->get();
+            }
+
+            if (isset($eventsFiltredEvent) && isset($eventsFiltredCountry)){
+                $events = $eventsFiltredCountry->merge($eventsFiltredEvent);
+                return EventsList::collection($events);
+            }
+            if (isset($eventsFiltredEvent)){
+                return EventsList::collection($eventsFiltredEvent);
+            }
+            if (isset($eventsFiltredCountry)){
+                return EventsList::collection($eventsFiltredCountry);
+            }
         }
-
-        return EventsList::collection($query->get());
+        return $this-> mainEvents();
+            //EventsList::collection($query->get());
     }
 
     /**

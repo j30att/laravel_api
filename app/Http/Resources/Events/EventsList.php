@@ -22,7 +22,11 @@ class EventsList extends JsonResource
             //'title' => str_limit($this->title, 20),
             'title' => $this->title,
             'fund' => $this->fund,
-            'period' => $this->period
+            'period' => $this->period,
+            'country_id' => $this->country->id,
+            'country_name' => $this->country->name,
+
         ];
+        //return parent::toArray($request);
     }
 }
