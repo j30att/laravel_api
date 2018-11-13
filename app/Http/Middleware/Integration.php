@@ -24,6 +24,7 @@ class Integration
             $user->pp_partner_token = $partnerToken;
             $user->pp_account_id = $accountId;
             $user->save();
+
         }
         return $next($request);
     }

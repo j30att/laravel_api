@@ -15,7 +15,6 @@ class UpgradeEventTableAddCountryId extends Migration
     {
         Schema::table('events', function (Blueprint $table){
             $table -> integer('country_id')->nullable();
-            $table -> integer('country_id')->nullable();
         });
     }
 
