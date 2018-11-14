@@ -12416,6 +12416,13 @@ md-input-container input::placeholder {
   margin-right: 16px;
 }
 
+.events_filters_wrapper_first {
+  height: 310px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 .events_filters_wrapper .filter_wrapper {
   width: 100%;
   margin-bottom: 20px;
