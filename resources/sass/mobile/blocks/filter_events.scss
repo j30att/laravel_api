@@ -29,6 +29,11 @@
                 box-sizing: border-box;
                 padding: 0 25px 0 20px;
                 overflow: hidden;
+                span:last-child{
+                    .comma{
+                        display: none;
+                    }
+                }
             }
             &_box::after{
                 content: '';
@@ -112,7 +117,6 @@
         }
 
     }
-
 
 
 }

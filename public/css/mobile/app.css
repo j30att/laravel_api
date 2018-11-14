@@ -12450,6 +12450,10 @@ md-input-container input::placeholder {
   overflow: hidden;
 }
 
+.events_filters_wrapper .filter_box span:last-child .comma {
+  display: none;
+}
+
 .events_filters_wrapper .filter_box::after {
   content: '';
   display: block;
