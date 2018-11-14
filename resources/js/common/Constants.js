@@ -41,6 +41,9 @@ export const SALE_SUBEVENT  ='/api/sales/subevent';
 export const SALE_INDEX     = '/api/sale';
 export const SALE_CREATE    = '/api/sale';
 
+//**RESULT**//
+export const RESULT    = '/api/dealer/result';
+
 //**SUBEVENTS**//
 export const SUBEVENTS_INDEX = '/api/subevents';
 
@@ -49,6 +52,9 @@ export const DEALER_EVENTS_URL = '/api/dealer/events';
 export const DEALER_USERS_URL = '/api/dealer/users';
 export const DEALER_PROFILE_URL = '/api/dealer/profile';
 export const DEALER_EVENTS_DETAIL_URL = '/api/dealer/event/detail';
+
+//**CURRENCY**//
+export const DEALER_CURRENCY_URL = '/api/dealer/currency';
 
 //**COUNTRY**//
 export const COUNTRIES_URL = '/api/countries';

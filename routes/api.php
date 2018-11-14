@@ -60,7 +60,11 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/dealer/events', 'Api\DealerController@eventsList');
     Route::post('/dealer/profile', 'Api\DealerController@profileDetail');
     Route::post('/dealer/event/detail', 'Api\DealerController@eventDetail');
-                
+
+    Route::post('/dealer/currency', 'Api\DealerController@currencyList');
+
+    Route::post('/dealer/result', 'Api\DealerController@resultSale');
+
 });
 
 

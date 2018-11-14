@@ -15,7 +15,7 @@ class SaleResource extends JsonResource
     public function toArray($request)
     {
         return [
-
+            'id'            => $this->id,
             'placed'        => $this->placed,
             'amount'        => $this->amount,
             'markup'        => $this->markup,

@@ -249,7 +249,7 @@
         border: none;
         outline: none;
         text-align: center;
-        color: rgba(0,0,0,0.5);
+        color: #000000;
     }
     &_input::placeholder{
         text-align: center;
@@ -262,6 +262,9 @@
         box-sizing: border-box !important;
         padding: 0 !important;
         text-align: center !important;
+    }
+    .not_be_empty{
+        border-bottom: 1px solid red !important;
     }
 }
 

@@ -2,8 +2,9 @@ import {DealerWinController} from "../../Controllers/dealer/DealerWinController"
 
 class SaleDetails {
     constructor($scope,SalesResourceService, $mdSidenav, $http,
-                SalesService, $timeout, $state, $mdDialog) {
+                SalesService, $timeout, $state, $mdDialog, DealerResourceService) {
         this.SalesResourceService = SalesResourceService;
+        this.DealerResourceService = DealerResourceService;
         this.SalesService = SalesService;
         this.$mdSidenav = $mdSidenav;
         this.$mdDialog = $mdDialog;
@@ -95,20 +96,24 @@ class SaleDetails {
     }
 
     showWonPopUp (ev){
-        console.log('hui');
+        console.log(this.sale.id);
         this.$mdDialog.show({
             controller: DealerWinController,
             controllerAs: 'DealerWinCtrl',
             template: require('./won.tmpl.html'),
             parent: angular.element(document.querySelector('[md-component-id="right_sale_details"]')),
-            targetEvent: ev,
             clickOutsideToClose:true,
         })
 
-            .then(function() {
-                this.$scope.status = 'You said the information was "' + 'answer' + '".';
+            .then( (result) => {
+                result.sale_id = this.sale.id;
+                console.log(result, 'result');
+                this.DealerResourceService.sendResult(result).then((responce) => {
+                    this.data = responce;
+                });
+
             }, function() {
-                this.$scope.status = 'You cancelled the dialog.';
+
             });
 
 
@@ -122,7 +127,7 @@ class SaleDetails {
 };
 
 SaleDetails.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http',
-    'SalesService', '$timeout', '$state', '$mdDialog'];
+    'SalesService', '$timeout', '$state', '$mdDialog', 'DealerResourceService'];
 
 export const SaleDetailsComponent = {
     bindings: {

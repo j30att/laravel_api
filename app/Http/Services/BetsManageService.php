@@ -10,7 +10,9 @@ namespace App\Http\Services;
 
 
 use App\Models\Bid;
+use App\Models\Result;
 use App\Models\Sale;
+use function Couchbase\defaultDecoder;
 
 class BetsManageService
 {
@@ -35,6 +37,22 @@ class BetsManageService
         return false;
     }
 
+
+    public static function manageWins(Result $result){
+        $sale = Sale::query()->with('bids')->find($result->sale_id);
+        $money = $result->prize * ($sale->share/100);
+        BetsManageService::calculateWinners($sale->bids, $money);
+    }
+
+
+    private static function calculateWinners($bids, $money){
+        foreach ($bids as $bid){
+            $bisPrize = $money * ($bid->share)/100;
+            $bid->outcome = $bisPrize;
+            $bid->status = Bid::BIDS_SETTLED;
+            $bid->save();
+        }
+    }
 
 
 

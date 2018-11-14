@@ -2998,7 +2998,7 @@ md-checkbox.md-checked .md-icon:after {
   border: none;
   outline: none;
   text-align: center;
-  color: rgba(0, 0, 0, 0.5);
+  color: #000000;
 }
 
 .select_input::-webkit-input-placeholder {
@@ -3024,6 +3024,10 @@ md-checkbox.md-checked .md-icon:after {
           box-sizing: border-box !important;
   padding: 0 !important;
   text-align: center !important;
+}
+
+.select .not_be_empty {
+  border-bottom: 1px solid red !important;
 }
 
 md-select-menu md-content {

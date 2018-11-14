@@ -4,6 +4,9 @@ import {BidsResourceService} from "./api/BidsResourceService";
 import {SalesResourceService} from "./api/SalesResourceService";
 import {EventsResourceService} from "./api/EventsResourceService";
 import {SubEventsResourceService} from "./api/SubEventsResourceService";
+
+import {CurrencyResourceService} from "./api/CurrencyResourceService";
+
 import {BidsService} from "./services/BidService";
 import {SalesService} from "./services/SaleService";
 import {DealerResourceService} from "./api/DealerResourceService";
@@ -21,5 +24,6 @@ module.service('SalesService', SalesService);
 module.service('DealerResourceService', DealerResourceService);
 module.service('CountriesResourceService', CountriesResourceService);
 module.service('RegistrationService', RegistrationService);
+module.service('CurrencyResourceService', CurrencyResourceService);
 
 export default module.name;
