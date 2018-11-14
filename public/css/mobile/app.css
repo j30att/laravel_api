@@ -12505,15 +12505,14 @@ md-input-container input::placeholder {
 }
 
 .events_filters__buttons {
-  width: 90%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: fixed;
-  bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .events_filters__button {

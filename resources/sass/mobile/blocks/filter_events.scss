@@ -79,12 +79,13 @@
         }
     }
     &__buttons{
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
+        margin-bottom: 16px;
 
-        position: fixed;
-        bottom: 15px;
+        //position: fixed;
+        //bottom: 15px;
 
     }
     &__button{
