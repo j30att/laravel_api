@@ -33,27 +33,22 @@ class CMSHelper
     public function execute($msg)
     {
 
-        Log::info('ORIGINAL', $msg);
-
         Log::info('[x] Message received', [$msg]);
         try {
-            $msgDetails = unserialize($msg);
-            Log::info($msgDetails);
 
-            $msgDetails = json_decode($msg);
-            Log::info($msgDetails);
+            $msgDetails = json_decode(stripcslashes($msg), 1);
 
             switch ($msgDetails["entityName"]) {
-                case 'AppBundle\\Entity\\Event':
-                    $status = $this->updateEvent($msgDetails["entityId"]);
+                case 'AppBundleEntityEvent':
+                    $this->updateEvent($msgDetails["entityId"]);
                     break;
 
-                case 'AppBundle\\Entity\\Schedule':
-                    $status = $this->updateSchedule($msgDetails["entityId"]);
+                case 'AppBundleEntitySchedule':
+                    $this->updateSchedule($msgDetails["entityId"]);
                     break;
 
-                case 'AppBundle\\Entity\\Day':
-                    $status = $this->updateDay($msgDetails["entityId"]);
+                case 'AppBundleEntityDay':
+                    $this->updateDay($msgDetails["entityId"]);
                     break;
 
                 default:
