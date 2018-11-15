@@ -37,7 +37,7 @@
                     <td class="t_buy_in" ng-bind="bid.sale.subevent.event.buy_in | currency:'£':0"></td>
                     <td class="t_gte" ng-bind="bid.sale.subevent.event.fund | currency:'£':0"></td>
                     <td class="t_markup" ng-bind="bid.markup"></td>
-                    <td class="t_value" ng-bind="bid.sale.subevent.event.reg_fee | currency:'$':0">$100</td>
+                    <td class="t_value" ng-bind="bid.amount | currency:'$':0"></td>
                     <td class="t_close">
                         <ng-pluralize count="index +2"
                                       when="{'0': 'Now','1': '1 day','other': '{} days'}">
