@@ -11,8 +11,7 @@
             <div class="events_item-wr">
                 <a ng-repeat="event in InvestCtrl.events"
                     ui-sref="invest-events-detail({id:event.id})" class="event_item">
-                    <div class="event_item__pic">
-                        <img src="{%event.image%}" alt="event">
+                    <div class="event_item__pic" style="background-image: url({%event.image%})">
                     </div>
                     <div class="event_info">
                         <div class="event_info_name" ng-bind="event.title"></div>

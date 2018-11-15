@@ -3707,9 +3707,12 @@ a {
 
 .event_item__pic {
   width: 100%;
-  height: auto;
+  height: 160px;
   overflow: hidden;
   margin-bottom: 12px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .event_item__pic img {

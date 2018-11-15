@@ -1,21 +1,21 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content">
+    <div class="main_content" ng-if="BidsCtrl.state != 'empty'">
         <div class="bids_container">
             <div class="bids_title">
                 <div class="bids_title__text">Matched Bids</div>
                 <a class="bids_title__link" ui-sref="bids-list({type:'matched'})">See all</a>
             </div>
             <div class="bids_row">
-                <div class="bids_card_wrapper">
+                <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.matched">
                     <div class="bids_card bids_card__green">
                     <div class="bids_card__title">
                         <div class="bids_card__title_img">
                             <img src="/images/pl_4.png" alt=""/>
                         </div>
                         <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
+                            <span ng-bind="bid.investor.name">Louise Romero</span>
+                            <span ng-bind="bid.sale.subevent.event.title">MILLIONS Russia, 1A</span>
                         </div>
                     </div>
                     <div class="bids_card__price">
@@ -26,75 +26,11 @@
                     <div class="bids_card__options">
                         <div class="bids_card__options_column">
                             <span>Markup</span>
-                            <span>1.20</span>
+                            <span ng-bind="bid.markup">1.20</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__green">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_4.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__green">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_4.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>
@@ -111,15 +47,15 @@
                 <a class="bids_title__link" ui-sref="bids-list({type:'unmatched'})">See all</a>
             </div>
             <div class="bids_row">
-                <div class="bids_card_wrapper">
+                <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.unmatched">
                     <div class="bids_card bids_card__red">
                     <div class="bids_card__title">
                         <div class="bids_card__title_img">
                             <img src="/images/pl_2.png" alt=""/>
                         </div>
                         <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
+                            <span ng-bind="bid.investor.name">Louise Romero</span>
+                            <span ng-bind="bid.sale.subevent.event.title">MILLIONS Russia, 1A</span>
                         </div>
                     </div>
                     <div class="bids_card__price">
@@ -130,75 +66,11 @@
                     <div class="bids_card__options">
                         <div class="bids_card__options_column">
                             <span>Markup</span>
-                            <span>1.20</span>
+                            <span ng-bind="bid.markup">1.20</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__red">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_2.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__red">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_2.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>
@@ -214,16 +86,56 @@
                 <div class="bids_title__text">Settled Bids</div>
                 <a class="bids_title__link" ui-sref="bids-list({type:'settled'})">See all</a>
             </div>
+            <div class="bids_row" >
+                <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.settled">
+                    <div class="bids_card bids_card__blue">
+                        <div class="bids_card__title">
+                            <div class="bids_card__title_img">
+                                <img src="/images/pl_5.png" alt=""/>
+                            </div>
+                            <div class="bids_card__title_text">
+                                <span ng-bind="bid.investor.name">Louise Romero</span>
+                                <span ng-bind="bid.sale.subevent.event.title">MILLIONS Russia, 1A</span>
+                            </div>
+                        </div>
+                        <div class="bids_card__price">
+                            <span>£1,000</span>
+                            <div class="bids_card__price_dot"></div>
+                            <span>£500,000 GTE</span>
+                        </div>
+                        <div class="bids_card__options">
+                        <div class="bids_card__options_column">
+                            <span>Markup</span>
+                            <span ng-bind="bid.markup">1.20</span>
+                        </div>
+                        <div class="bids_card__options_column">
+                            <span>Value</span>
+                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
+                        </div>
+                        <div class="bids_card__options_column">
+                            <span>Start time</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bids_container">
+            <div class="bids_title">
+                <div class="bids_title__text">Canceled Bids</div>
+                <a class="bids_title__link" ui-sref="bids-list({type:'canceled'})">See all</a>
+            </div>
             <div class="bids_row">
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__blue">
+                <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.canceled">
+                    <div class="bids_card bids_card__grey">
                     <div class="bids_card__title">
                         <div class="bids_card__title_img">
-                            <img src="/images/pl_5.png" alt=""/>
+                            <img src="/images/players.png" alt=""/>
                         </div>
                         <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
+                            <span ng-bind="bid.investor.name">Louise Romero</span>
+                            <span ng-bind="bid.sale.subevent.event.title">MILLIONS Russia, 1A</span>
                         </div>
                     </div>
                     <div class="bids_card__price">
@@ -234,75 +146,11 @@
                     <div class="bids_card__options">
                         <div class="bids_card__options_column">
                             <span>Markup</span>
-                            <span>1.20</span>
+                            <span ng-bind="bid.markup">1.20</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__blue">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_5.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__blue">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_5.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>
@@ -313,76 +161,15 @@
                 </div>
             </div>
         </div>
-        <div class="bids_container">
-            <div class="bids_title">
-                <div class="bids_title__text">Canceled Bids</div>
-                <a class="bids_title__link" ui-sref="bids-list({type:'canceled'})">See all</a>
-            </div>
-            <div class="bids_row">
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__grey">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/players.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="bids_card_wrapper">
-                    <div class="bids_card bids_card__grey">
-                    <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/players.png" alt=""/>
-                        </div>
-                        <div class="bids_card__title_text">
-                            <span>Louise Romero</span>
-                            <span>MILLIONS Russia, 1A</span>
-                        </div>
-                    </div>
-                    <div class="bids_card__price">
-                        <span>£1,000</span>
-                        <div class="bids_card__price_dot"></div>
-                        <span>£500,000 GTE</span>
-                    </div>
-                    <div class="bids_card__options">
-                        <div class="bids_card__options_column">
-                            <span>Markup</span>
-                            <span>1.20</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Value</span>
-                            <span>£2,404.08</span>
-                        </div>
-                        <div class="bids_card__options_column">
-                            <span>Start time</span>
-                            <span>Closed</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
+    </div>
+    <div class="main_content main_content__empty" ng-if="BidsCtrl.state == 'empty'">
+        <div class="main_content__empty_container">
+            <div class="main_content__empty_container__img main_content__empty_container__img_bids"></div>
+            <div class="main_content__empty_container__title">Bids not found</div>
+            <div class="main_content__empty_container__discription">You can create new bid</div>
+            <div class="main_content__empty_container__buttons">
+                <div class="main_content__empty_container__button
+                main_content__empty_container__button__blue" role="button" tabindex="0">Create bid</div>
             </div>
         </div>
     </div>

@@ -6,7 +6,6 @@ class BidsController {
     constructor(BidsResourceService) {
         this.BidsResourceService = BidsResourceService;
         this.user = window.__user;
-
         this.menu = [
             {status: BID_MATCHED, name: 'matched'},
             {status: BID_UNMATCHED, name: 'unmatched'},
@@ -18,6 +17,7 @@ class BidsController {
             .then(response =>{
                 this.bids = response.data.data;
             });
+
 
     }
 
