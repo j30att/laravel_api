@@ -7,7 +7,8 @@ import {
     SALE_ACTIVE,
     SALE_CLOSING_SOON,
     SALE_CREATE,
-    SALE_INDEX
+    SALE_INDEX,
+
 } from "../Constants"
 import {SALE_APLLY_BID, SALE_UPDATE} from "../../mobile/Constants";
 
@@ -52,6 +53,7 @@ class SalesResourceService {
     getSaleById(id) {
         return this.$http.get(SALE_INDEX + '/' + id);
     };
+
 
 
 }

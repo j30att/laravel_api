@@ -40,8 +40,8 @@
     </div>
 </div>
 
-<div class="row" ng-if="InvstCtrl.state == 'filters_open'">
-    <div class="events_filters_wrapper col-md-12">
+<div class="row" ng-if="InvstCtrl.state == 'filters_open'" style="height: 100vh; background-color: #949494;">
+    <div class="events_filters_wrapper events_filters_wrapper_first col-md-12">
         <div class="header_modal">
             <div class="header_filter_empty"></div>
             <div class="header_title">Filter</div>
@@ -52,7 +52,9 @@
             <div class="filter_label">Events</div>
             <div class="filter_box" ng-click="InvstCtrl.state = 'filter_events'">
                 <span ng-if="InvstCtrl.selectedEvents.length == 0">Choose events</span>
-                <span ng-repeat="title in InvstCtrl.selectedEvents">{%(title.title) + ' , '%}</span>
+                <span ng-repeat="title in InvstCtrl.selectedEvents">{%(title.title)%}
+                <span class="comma">, </span>
+                </span>
             </div>
         </div>
 
@@ -60,7 +62,9 @@
             <div class="filter_label">Regions</div>
             <div class="filter_box" ng-click="InvstCtrl.state = 'filter_region'">
                 <span ng-if="InvstCtrl.selectedCountries.length == 0">Choose regions</span>
-                <span ng-repeat="country in InvstCtrl.selectedCountries">{%(country.name) + ' , '%}</span>
+                <span ng-repeat="country in InvstCtrl.selectedCountries">{%(country.name)%}
+                    <span class="comma">, </span>
+                </span>
 
             </div>
         </div>

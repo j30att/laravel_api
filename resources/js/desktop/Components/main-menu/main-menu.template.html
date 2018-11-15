@@ -41,7 +41,7 @@
                 <span class="menu_item__wallet">$ 20,240.98</span>
             </li>
         </ul>
-        <hr>
+        <hr ng-if="$ctrl.user.role == 2;" style="opacity: 0.4">
         <ul class="menu_list" ng-if="$ctrl.user.role == 2;">
             <li class="menu_item">
                 <a class="menu_item__link"

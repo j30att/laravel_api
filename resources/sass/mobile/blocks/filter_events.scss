@@ -1,5 +1,11 @@
 .events_filters{
     &_wrapper{
+        &_first{
+            height: 310px;
+            background-color: #ffffff;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
         .filter{
             &_wrapper{
                 width: 100%;
@@ -23,6 +29,11 @@
                 box-sizing: border-box;
                 padding: 0 25px 0 20px;
                 overflow: hidden;
+                span:last-child{
+                    .comma{
+                        display: none;
+                    }
+                }
             }
             &_box::after{
                 content: '';
@@ -79,12 +90,13 @@
         }
     }
     &__buttons{
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
+        margin-bottom: 16px;
 
-        position: fixed;
-        bottom: 15px;
+        //position: fixed;
+        //bottom: 15px;
 
     }
     &__button{
@@ -105,7 +117,6 @@
         }
 
     }
-
 
 
 }

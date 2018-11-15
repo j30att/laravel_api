@@ -53,7 +53,7 @@ class InvestController {
         this.CountriesResourceService.getCountries()
             .then(response => {
                 this.countries = response.data.data;
-                console.log(this.countries);
+
 
             });
     }

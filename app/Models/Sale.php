@@ -10,6 +10,9 @@ class Sale extends Model
     const SALE_ACTIVE  = 1;
     const SALE_CLOSED  = 2;
 
+    const TYPE_FULL = 1;
+    const TYPE_IN_PROGRESS = 2;
+
     protected $fillable=[
         'user_id',
         'event_id',
@@ -20,7 +23,8 @@ class Sale extends Model
         'markup',
         'amount',
         'share',
-        'created_at'
+        'created_at',
+        'fill'
 
     ];
 
@@ -61,4 +65,7 @@ class Sale extends Model
         return $month . ' ' . $day . ' , ' . $hour . ':' . $minute;
 
     }
+
+
+
 }

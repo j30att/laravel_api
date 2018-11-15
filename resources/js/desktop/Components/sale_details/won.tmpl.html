@@ -7,28 +7,22 @@
     </div>
     <div class="won_selects">
         <div class="won_select">
-            <md-select placeholder="Not placed" ng-model="DealerWinCtrl.currency"
+            <md-select placeholder="Not placed" ng-model="DealerWinCtrl.result.placed" ng-click="DealerWinCtrl.placedArr()"
                        class="select_placed">
-                    <md-option value="1">1</md-option>
-                    <md-option value="2">2</md-option>
-                    <md-option value="3">3</md-option>
+                    <md-option value="{%place%}" ng-repeat="place in DealerWinCtrl.placeArr" ng-bind="place"></md-option>
             </md-select>
         </div>
         <div class="won_select">
-            <input type="text" class="select_input" placeholder="Amount">
+            <input type="text" class="select_input" placeholder="Amount" ng-model="DealerWinCtrl.result.amount">
         </div>
         <div class="won_select">
-            <md-select placeholder="$" ng-model="DealerWinCtrl.currency" class="select_currency">
-                <!--<md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>-->
-                <md-option value="1">$</md-option>
-                <md-option value="2">£</md-option>
-                <md-option value="3">€</md-option>
-                <md-option value="4">¥</md-option>
+            <md-select placeholder="$" ng-model="DealerWinCtrl.result.currency_id" class="select_currency">
+                <md-option value="{%currency.id%}" ng-repeat="currency in DealerWinCtrl.currencyArr" ng-bind="currency.symbol"></md-option>
             </md-select>
         </div>
     </div>
     <div class="won_buttons">
-        <div class="won_button won_button__cancel">Cancel</div>
-        <div class="won_button won_button__confirm" ng-click="DealerWinCtrl.hui()">Confirm</div>
+        <div class="won_button won_button__cancel" ng-click="DealerWinCtrl.closeModal()">Cancel</div>
+        <div class="won_button won_button__confirm" ng-click="DealerWinCtrl.confirmSale()">Confirm</div>
     </div>
 </div>
