@@ -212,7 +212,7 @@ class PPInteraction
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
-            $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
+            $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->save();
         }catch (\Exception $e){
