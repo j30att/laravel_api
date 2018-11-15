@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Bid extends Model
 {
@@ -11,6 +13,8 @@ class Bid extends Model
     const BIDS_UNMATCHED  = 3;
     const BIDS_SETTLED    = 4;
     const BIDS_CANCELED   = 5;
+
+    const BID_PLACE = 'BID_PLACE';
 
     protected $fillable=[
         'user_id',
@@ -27,6 +31,14 @@ class Bid extends Model
 
     public function sale(){
         return $this->belongsTo(Sale::class,'sale_id');
+    }
+
+    public function geTransactionCodeAttribute (){
+        return ((string)Str::uuid() . '-VERSION');
+    }
+
+    public function getTransactionInitiatedDateAttribute(){
+        return Carbon::now()->timestamp;
     }
 
 }

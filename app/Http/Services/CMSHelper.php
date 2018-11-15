@@ -35,8 +35,7 @@ class CMSHelper
 
         Log::info('[x] Message received', [$msg]);
         try {
-
-            $msgDetails = json_decode(stripcslashes($msg), 1);
+            $msgDetails = json_decode(stripslashes($msg), true );
 
             switch ($msgDetails["entityName"]) {
                 case 'AppBundleEntityEvent':
@@ -180,4 +179,5 @@ class CMSHelper
         $flight->save();
 
     }
+
 }

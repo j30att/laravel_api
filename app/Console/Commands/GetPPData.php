@@ -7,6 +7,7 @@ use App\Http\Services\PPValidate;
 use Illuminate\Console\Command;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 
 class GetPPData extends Command
 {
