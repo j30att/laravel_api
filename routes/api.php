@@ -65,6 +65,8 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::post('/dealer/result', 'Api\DealerController@resultSale');
 
+    Route::post('/flights', 'Api\FlightController@filterFlight');
+
 });
 
 

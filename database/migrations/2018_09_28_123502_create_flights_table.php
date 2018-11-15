@@ -18,6 +18,7 @@ class CreateFlightsTable extends Migration
 
             $table->integer('event_id')->unsigned()->nullable();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('set null');
+
             $table->integer('sub_event_id')->unsigned()->nullable();
             $table->foreign('sub_event_id')->references('id')->on('sub_events')->onDelete('set null');
 

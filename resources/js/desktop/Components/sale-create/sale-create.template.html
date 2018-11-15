@@ -22,10 +22,10 @@
                 <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
                 <div class="modal_content__sale_select">
                     <md-select class="md-no-underline form-Select-theme"
-                               ng-model="$ctrl.sale.sub_event_id"
+                               ng-model="$ctrl.sale.flight_id"
                                ng-change="$ctrl.fillStatic()"
                                placeholder="Choose an subevent">
-                        <md-option value="{%item.id%}" ng-repeat="item in $ctrl.subevents">{%item.title%}</md-option>
+                        <md-option value="{%item.id%}" ng-repeat="(key, item) in $ctrl.flights">{%item.title%}</md-option>
                     </md-select>
                 </div>
 

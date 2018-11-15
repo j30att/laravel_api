@@ -1,4 +1,4 @@
-import {EVENTS_API, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constants";
+import {EVENTS_API, SALE_ACTIVE, FLIGH_FILTER} from "../../../common/Constants";
 
 
 class SaleCreate {
@@ -46,7 +46,9 @@ class SaleCreate {
         this.$mdSidenav(componentId).toggle();
         if(this.$mdSidenav(componentId).isOpen()){
             this.$state.modalOpened = true;
-        } else {this.$state.modalOpened = false}
+        } else {
+            this.$state.modalOpened = false
+        }
     }
 
     getEvents() {
@@ -58,15 +60,27 @@ class SaleCreate {
 
     getSubevents() {
         this.fillStatic();
-        this.$http.get(SUBEVENTS_INDEX, {params: {event_id: this.sale.event_id}})
+        this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
             .then(response => {
-                this.subevents = response.data.data;
+                this.flights = response.data.data;
             });
     }
 
     fillStatic() {
+
         let self;
         self = this;
+        if (this.flights){
+        this.flights.forEach(function (value, key) {
+           if (value.id == self.sale.flight_id){
+
+               console.log(value);
+               self.sale.sub_event_id = value.subevent_id;
+           }
+        });
+        }
+
+        console.log(this.sale);
         this.events.forEach(function (value, key) {
             if (value.id == self.sale.event_id) {
                 self.static.buy_in = value.buy_in;
@@ -81,11 +95,13 @@ class SaleCreate {
     validate(){
         if(this.sale.event_id == null
             || this.sale.sub_event_id == null
+            || this.sale.flight_id == null
             || this.sale.share == null
             || this.sale.markup == null
             || this.sale.amount == null
             || this.sale.user_id == null
         ){
+            console.log(this.sale.event_id, this.sale.sub_event_id, this.sale.flight_id);
             console.log('validate faild');
             return false
         }
