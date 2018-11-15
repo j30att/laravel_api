@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Sale;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -16,17 +17,22 @@ class SaleResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'        => $this->id,
-            'title'     => $this->title,
-            'status'    => $this->status,
-            'markup'    => $this->markup,
-            'share'     => $this->share,
-            'amount'    => $this->amount,
-            'event'     => new EventResource($this->event),
-            'subevent'  => new SubEventResource($this->subevent),
-            'bids'      => $this->bids,
-            'creator'   => $this->creator,
+            'id'            => $this->id,
+            'title'         => $this->title,
+            'status'        => $this->status,
+            'markup'        => $this->markup,
+            'share'         => $this->share,
+            'amount'        => $this->amount,
+            'event'         => new EventResource($this->event),
+            'subevent'      => new SubEventResource($this->subevent),
+            'bids'          => $this->bids,
+            'bids_share'    => $this->calculateBidsShare(),
+            'amount_raised' => $this->calculateAmountRaise(),
+            'average_murkup' => $this->calculateAvarageMarkup(),
+            'creator'       => $this->creator,
         ];
+
+
         //return parent::toArray($request);
     }
 }

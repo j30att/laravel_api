@@ -67,5 +67,64 @@ class Sale extends Model
     }
 
 
+    public function calculateBidsShare(){
+        $shares = $this->bids;
+        $shareSumm = 0;
+        foreach ($shares as $share){
+
+            $shareSumm += $share->share;
+
+        }
+        return $shareSumm;
+
+    }
+
+    public function  fillStatus(){
+        $shareSumm = $this->calculateBidsShare;
+
+        $self = Event::query()->get();
+        if($shareSumm >=100){
+            $self->fill = TYPE_FULL;
+            $self->fill->save();
+        } else{
+            $self->fill = TYPE_IN_PROGRESS;
+            $self->fill->save();
+        }
+    }
+
+    public function calculateAmountRaise(){
+        $raiseds = $this->bids;
+        $raisedSumm = 0;
+        foreach ($raiseds as $raised){
+
+            $raisedSumm += $raised->amount;
+
+        }
+        return number_format($raisedSumm);
+
+    }
+
+    public function calculateAvarageMarkup(){
+        $markups = $this->bids;
+
+        $markupsSumm = 0;
+        $markupsCount = $this->bids->count();
+        //dd($markupsCount);
+
+        foreach ($markups as $markup){
+            $markupsSumm += $markup->markup;
+        }
+        if($markupsCount !=0){
+            $averageMarkup = $markupsSumm / $markupsCount;
+            return round($averageMarkup, 2) ;
+        } else{
+            return '0';
+        }
+
+
+
+    }
+
+
 
 }

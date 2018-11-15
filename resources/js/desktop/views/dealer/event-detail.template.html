@@ -83,7 +83,8 @@
                         </thead>
                         <tbody>
 
-                        <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:event.id}"
+                        <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:event.id} | orderBy:'status'"
+
                             ng-click="DEventDetailCtrl.toggleSidenav(sale)">
                             <td>
                                 <img src="/images/desk/players_img/profile_img_1.png">

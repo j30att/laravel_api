@@ -29,9 +29,9 @@
                     </td>
                     <td class="sale_table_row__data">£1,000</td>
                     <td class="sale_table_row__data">£500,000</td>
-                    <td class="sale_table_row__data">0</td>
-                    <td class="sale_table_row__data sale_table_row__data_bold">1% of 10%</td>
-                    <td class="sale_table_row__data sale_table_row__data_bold">£2,404</td>
+                    <td class="sale_table_row__data" ng-bind="item.average_murkup">0</td>
+                    <td class="sale_table_row__data sale_table_row__data_bold"><span ng-bind="item.bids_share + '%'">1%</span> of <span ng-bind="item.share + '%'">10%</span></td>
+                    <td class="sale_table_row__data sale_table_row__data_bold"><span>£</span><span ng-bind="item.amount_raised"></span></td>
                     <td class="sale_table_row__data">2 days</td>
                 </tr>
 

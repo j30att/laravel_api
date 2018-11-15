@@ -20,6 +20,7 @@ class SaleFilterController {
         if(this.$stateParams.type === 'active'){
             this.SalesResourceService.getMySalesActive(this.user.id, this._opts.limit).then(response => {
                 this.sales = response.data.data;
+                console.log(this.sales);
                 this._opts.dataLoad = true;
             })
         }
