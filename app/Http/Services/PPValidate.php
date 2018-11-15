@@ -20,6 +20,7 @@ class PPValidate
     {
         try {
             $response = PPValidate::getPPSession($user);
+
             PPValidate::savePPUser($user, $response);
         } catch (\Exception $e) {
             Log::error($e->getMessage());
@@ -28,7 +29,6 @@ class PPValidate
     }
 
     public static function getPPSession(User $user):array {
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, config('app.pp.pp_validate'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -41,7 +41,6 @@ class PPValidate
 
         $result = curl_exec($ch);
         $result = json_decode($result, 1);
-
         return $result;
     }
 
@@ -60,6 +59,7 @@ class PPValidate
                 $ppUser->screen_name = $response['screenName'];
                 $ppUser->funded = $response['funded'];
                 $ppUser->session = $response['partnerPlayerSession'];
+                dd($ppUser);
                 $ppUser->save();
             }
         }

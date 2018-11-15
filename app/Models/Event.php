@@ -12,33 +12,20 @@ class Event extends Model
     const LIMIT_EVENT_MAIN_PAGE         = 6;
 
     protected $fillable = [
+        'id',
+        'country_id',
         'title',
-        'image_id',
-        'fund',
+        'description',
         'buy_in',
         'reg_free',
-        'date_start',
-        'date_end',
-
-
+        'fund',
         'slug',
         'logo',
-
-        'country_id',
-
-        'event_time_zone',
-        'event_venue_address_str',
-        'first_live_day',
-        'last_live_day',
-        'first_day_date',
-        'last_day_date',
-        'start_date_time',
-        'late_reg',
-        'time_zone',
         'currency',
-
-
-
+        'venue_id',
+        'venue_name',
+        'date_start',
+        'date_end',
     ];
 
     public function subEvents()
@@ -107,6 +94,9 @@ class Event extends Model
         }
     }
 
+    public function getMainImageAttribute(){
+        return 'https://res.cloudinary.com/partypoker-live/image/upload/'.$this->logo;
+    }
 
 
 

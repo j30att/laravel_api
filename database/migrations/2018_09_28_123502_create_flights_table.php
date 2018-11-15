@@ -15,15 +15,17 @@ class CreateFlightsTable extends Migration
     {
         Schema::create('flights', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-
-            $table->integer('sub_event_id')->unsigned()->nullable();
-            $table->foreign('sub_event_id')->references('id')->on('sub_events')->onDelete('set null');
 
             $table->integer('event_id')->unsigned()->nullable();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('set null');
+            $table->integer('sub_event_id')->unsigned()->nullable();
+            $table->foreign('sub_event_id')->references('id')->on('sub_events')->onDelete('set null');
 
-
+            $table->string('title')->nullable();
+            $table->integer('type')->nullable();
+            $table->dateTime('date')->nullable();
+            $table->string('flight')->nullable();
+            $table->integer('day')->nullable();
             $table->timestamps();
         });
     }

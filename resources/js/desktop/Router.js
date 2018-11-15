@@ -178,29 +178,56 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controller: 'RegisterController',
             controllerAs: 'RgCtrl'
         })
-        .state('event-detail', {
-            url: '/event/detail',
-            //template: require('./views/events/singl.template.html'),
-        })
+
         .state('dealer-events', {
             url: '/dealer/events',
             template: require('./views/dealer/events.template.html'),
             controller: 'DealerEventsController',
-            controllerAs: 'dEventsCtrl'
+            controllerAs: 'dEventsCtrl',
+            data: {
+                permissions: {
+                    only: 'Admin',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
         })
 
         .state('dealer-events-detail', {
             url: '/dealer/events/detail/{id}',
             template: require('./views/dealer/event-detail.template.html'),
             controller: 'DealerEventDetailController',
-            controllerAs: 'DEventDetailCtrl'
+            controllerAs: 'DEventDetailCtrl',
+            data: {
+                permissions: {
+                    only: 'Admin',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
         })
 
         .state('dealer-users', {
             url: '/dealer/users',
             template: require('./views/dealer/users.template.html'),
             controller: 'DealerUsersController',
-            controllerAs: 'dUsersCtrl'
+            controllerAs: 'dUsersCtrl',
+            data: {
+                permissions: {
+                    only: 'Admin',
+                    redirectTo: () => {
+                        return {
+                            state: 'index'
+                        }
+                    }
+                }
+            },
         });
 
 

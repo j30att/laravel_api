@@ -41,17 +41,12 @@ class GetPPData extends Command
      */
     public function handle()
     {
-
         $helper = new CMSHelper();
+        $msg = 'a:3:{s:10:"entityName";s:25:"AppBundle\Entity\Schedule";s:6:"action";s:6:"create";s:8:"entityId";i:1325;}';
+        $msg = 'a:3:{s:10:"entityName";s:20:"AppBundle\Entity\Day";s:6:"action";s:6:"create";s:8:"entityId";i:53;}';
 
-        $msg = 'a:3:{s:10:"entityName";s:25:"AppBundle\Entity\Schedule";s:6:"action";s:6:"create";s:8:"entityId";i:105;}';
-        $msg = 'a:3:{s:10:"entityName";s:22:"AppBundle\Entity\Event";s:6:"action";s:6:"create";s:8:"entityId";i:104;}';
+        $msg = 'a:3:{s:10:"entityName";s:22:"AppBundle\Entity\Event";s:6:"action";s:6:"create";s:8:"entityId";i:53;}';
+
         $helper->execute($msg);
-
-
-        /*$uri =  'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/event_only/105';
-        $request = $client->get($uri);
-        $response = json_decode($request->getBody()->getContents());*/
-        //dd($response);
     }
 }

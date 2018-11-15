@@ -7,5 +7,9 @@ export default function middlewares(PermRoleStore) {
 
     PermRoleStore.defineRole('Guest', function(){
         return window.__user === null;
-    })
+    });
+
+    PermRoleStore.defineRole('Admin', function () {
+       return (window.__user !== null && window.__user.role == 2)
+    });
 }

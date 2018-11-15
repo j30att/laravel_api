@@ -18,8 +18,7 @@ class EventsList extends JsonResource
         /** @var Event $this */
         return [
             'id' => $this->id,
-            'image' => $this->image,
-            //'title' => str_limit($this->title, 20),
+            'image' => $this->main_image,
             'title' => $this->title,
             'fund' => $this->fund,
             'period' => $this->period,
