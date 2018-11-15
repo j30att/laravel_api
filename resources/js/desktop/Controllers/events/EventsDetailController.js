@@ -32,6 +32,7 @@ class EventsDetailController {
             this.EventsResourceService.getEventById(id)
                 .then(response => {
                     this.event = response.data.data;
+
                     if(this.event.subevents[0]){
                         this.activeEvent = this.event.subevents[0];
                     } else {
