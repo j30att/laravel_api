@@ -14,7 +14,8 @@ class PPResponse extends Model
     protected $fillable = [
         'type',
         'bid_id',
-        'response'
+        'response',
+        'wallet_references_id'
     ];
 
     public function bid(){

@@ -69,6 +69,7 @@ class PPInteraction
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_PLACE_BID;
             $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->wallet_references_id = 123;//TODO
             $PPResponse->save();
         }catch (\Exception $e){
             Log::error($e->getMessage());
@@ -185,9 +186,39 @@ class PPInteraction
         }
     }
 
-    public function bidClosure()
+    public function bidClosure(Bid $bid)
     {
+        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
+        $guzzleClient = new Client();
+
+
+        $header = [
+            'Content-Type'   =>'application/json',
+            'auth-token'     => 'staking:pg:Test:ReleaseB',
+            'partner-name'   => 'stakingapp'
+        ];
+
+        $body = [
+            'transactionIds' => []
+        ];
+
+        try{
+            $response = $guzzleClient->request('post', $uri, [
+                'headers'   => $header,
+                'json'      => $body
+            ]);
+
+
+            $PPResponse = new PPResponse();
+            $PPResponse->bid_id = $bid->id;
+            $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
+            $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->save();
+        }catch (\Exception $e){
+            Log::error($e->getMessage());
+            Log::info(serialize($body));
+        }
     }
 
     public function bidPayRemaining()

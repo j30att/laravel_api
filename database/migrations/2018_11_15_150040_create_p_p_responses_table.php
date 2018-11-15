@@ -24,6 +24,7 @@ class CreatePPResponsesTable extends Migration
                 ->onDelete('set null');
 
             $table->text('response')->nullable();
+            $table->unsignedInteger('wallet_references_id')->nullable();
 
             $table->timestamps();
         });
