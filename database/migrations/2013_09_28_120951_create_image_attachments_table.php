@@ -15,16 +15,12 @@ class CreateImageAttachmentsTable extends Migration
     {
         Schema::create('image_attachments', function (Blueprint $table) {
             $table->increments('id');
-
             $table->string('type')->nullable();
             $table->index('type', 'images_type_index');
-
             $table->string('title')->nullable();
             $table->text('description')->nullable();
-
             $table->string('code')->nullable();
             $table->index('code', 'images_code_index');
-
             $table->string('original_name')->nullable();
             $table->timestamps();
         });

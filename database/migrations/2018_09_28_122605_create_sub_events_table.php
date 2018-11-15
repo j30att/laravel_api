@@ -19,13 +19,9 @@ class CreateSubEventsTable extends Migration
             $table->integer('event_id')->unsigned()->nullable();
             $table->foreign('event_id')->references('id')->on('events')->onDelete('set null');
 
-            $table->string('title');
-
-            $table->integer('image_id')->unsigned()->nullable();
-            $table->foreign('image_id')->references('id')->on('image_attachments')->onDelete('set null');
-
-            $table->double('fund');
-            $table->double('buy_in');
+            $table->string('title')->nullable();
+            $table->double('fund')->nullable();
+            $table->double('buy_in')->nullable();
             $table->timestamp('date_start')->nullable();
             $table->timestamp('date_end')->nullable();
             $table->timestamps();

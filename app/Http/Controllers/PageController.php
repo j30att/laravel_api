@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Log;
 class PageController extends Controller
 {
     public function app(Request $request){
+        /*PPInteraction::bidPlace();*/
+        /*PPInteraction::bidPlace();*/
         return view('layouts.main');
     }
 
