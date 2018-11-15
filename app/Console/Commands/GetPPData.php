@@ -7,6 +7,7 @@ use App\Http\Services\PPValidate;
 use Illuminate\Console\Command;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class GetPPData extends Command
@@ -44,7 +45,8 @@ class GetPPData extends Command
     {
         $helper = new CMSHelper();
 
-        $msg = '{"entityName":"AppBundle\\Entity\\Event","entityId":53,"action":"update"}';
+        $msg = "a:3:{s:10:\"entityName\";s:25:\"AppBundle\\Entity\\Schedule\";s:8:\"entityId\";i:14;s:6:\"action\";s:6:\"update\";}";
+
         $helper->execute($msg);
     }
 }
