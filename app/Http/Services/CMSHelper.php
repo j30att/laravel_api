@@ -43,15 +43,15 @@ class CMSHelper
             );
 
             switch ($msgDetails["entityName"]) {
-                case 'AppBundle\Entity\Event':
+                case 'AppBundle\\Entity\\Event':
                     $status = $this->updateEvent($msgDetails["entityId"]);
                     break;
 
-                case 'AppBundle\Entity\Schedule':
+                case 'AppBundle\\Entity\\Schedule':
                     $status = $this->updateSchedule($msgDetails["entityId"]);
                     break;
 
-                case 'AppBundle\Entity\Day':
+                case 'AppBundle\\Entity\\Day':
                     $status = $this->updateDay($msgDetails["entityId"]);
                     break;
 

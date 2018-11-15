@@ -59,7 +59,6 @@ class PPValidate
                 $ppUser->screen_name = $response['screenName'];
                 $ppUser->funded = $response['funded'];
                 $ppUser->session = $response['partnerPlayerSession'];
-                dd($ppUser);
                 $ppUser->save();
             }
         }
