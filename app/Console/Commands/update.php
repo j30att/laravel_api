@@ -50,7 +50,7 @@ class update extends Command
         Log::info(' [*] Waiting for messages.');
         $callback = function ($msg) {
             $helper = new CMSHelper();
-            $helper->execute(unserialize($msg->body));
+            $helper->execute($msg->body);
         };
         $channel->basic_consume($queuName, '', false, true, false, false, $callback);
         while (count($channel->callbacks)) {

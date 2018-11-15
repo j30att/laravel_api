@@ -33,26 +33,21 @@ class CMSHelper
     public function execute($msg)
     {
 
-
         Log::info('[x] Message received', [$msg]);
         try {
-            $msgDetails = unserialize($msg);
-            $logContext = array(
-                $msgDetails["entityName"],
-                $msgDetails["entityId"],
-            );
 
+            $msgDetails = unserialize($msg);
             switch ($msgDetails["entityName"]) {
                 case 'AppBundle\Entity\Event':
-                    $status = $this->updateEvent($msgDetails["entityId"]);
+                    $this->updateEvent($msgDetails["entityId"]);
                     break;
 
                 case 'AppBundle\Entity\Schedule':
-                    $status = $this->updateSchedule($msgDetails["entityId"]);
+                    $this->updateSchedule($msgDetails["entityId"]);
                     break;
 
                 case 'AppBundle\Entity\Day':
-                    $status = $this->updateDay($msgDetails["entityId"]);
+                    $this->updateDay($msgDetails["entityId"]);
                     break;
 
                 default:
@@ -121,6 +116,7 @@ class CMSHelper
 
     public function updateSchedule($scheduleId)
     {
+        Log::info("Update schedule ${scheduleId}");
         $scheduleUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/schedule/schedule/' . $scheduleId;
 
         $apiResource = $this->guzzle->get($scheduleUri);
@@ -184,4 +180,5 @@ class CMSHelper
         $flight->save();
 
     }
+
 }
