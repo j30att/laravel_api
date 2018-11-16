@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class Sale extends Model
 {
@@ -67,8 +68,21 @@ class Sale extends Model
         return $month . ' ' . $day . ' , ' . $hour . ':' . $minute;
 
     }
+    public function getTransactionCodeAttribute (){
+        return (string)Str::uuid() . '-VERSION';
+    }
+
+    public function getTransactionInitiatedDateAttribute(){
+        return Carbon::now()->timestamp;
+    }
+
+}
 
 
+
+
+
+/*
     public function calculateBidsShare(){
         $shares = $this->bids;
         $shareSumm = 0;
@@ -128,8 +142,6 @@ class Sale extends Model
 
 
 
-    }
+    }$bid->amount*/
 
 
-
-}

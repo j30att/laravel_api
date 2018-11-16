@@ -42,6 +42,9 @@ export const SALE_SUBEVENT  ='/api/sales/subevent';
 export const SALE_INDEX     = '/api/sale';
 export const SALE_CREATE    = '/api/sale';
 
+export const SALE_PAY_REMAING = '/api/sale/my/pay-remainig';
+export const SALE_BID_CONFIRM = '/api/sale/my/bid-apply';
+
 //**RESULT**//
 export const RESULT    = '/api/dealer/result';
 

@@ -60,12 +60,6 @@ class ManageService
         }
     }
 
-
-    public static function manageSale(Sale $sale){
-
-
-    }
-
     private static function calcAmountRaised(Sale $sale){
         $bidsMatched = $sale->bids_matched;
         $event = $sale->event;
@@ -103,5 +97,8 @@ class ManageService
         $sale->save();
     }
 
+    public static function calcRemaining(Sale $sale){
+        return ((integer)($sale->event->buy_in * 100) - (integer)($sale->amount_raised*100))/100;
+    }
 
 }

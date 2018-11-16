@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\Sales\SaleInvestResource;
 use App\Http\Resources\SaleResource;
+use App\Http\Services\ManageService;
+use App\Http\Services\PPInteraction;
 use App\Models\Bid;
 use App\Models\Event;
 use App\Models\Sale;
@@ -14,6 +16,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SaleController extends Controller
 {
@@ -68,7 +71,6 @@ class SaleController extends Controller
         if ($request->get('user_id') != $user->id) App::abort(401);
 
         $limit = $request->get('limit');
-
 
 
         $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit($limit)->latest()->get();
@@ -185,7 +187,8 @@ class SaleController extends Controller
         $sale->save();
     }
 
-    public function applayBidToMySale (Request $request){
+    public function applayBidToMySale(Request $request)
+    {
 
         $data = $request->get('bid');
 
@@ -210,11 +213,9 @@ class SaleController extends Controller
         $sale->save();
 
 
-        return  new SaleResource($sale);
+        return new SaleResource($sale);
 
     }
-
-
 
 
     public function index(Request $request)
@@ -245,18 +246,48 @@ class SaleController extends Controller
         $data = $request->get('sale');
         $type = $request->get('type');
 
-        if ($user->id != $data['user_id']){
+        if ($user->id != $data['user_id']) {
             return response(json_encode(['status' => 0, 'data' => 'unauthorized user']));
         }
         $sale = Sale::create($data);
 
-        if ($type == 'row'){
+        if ($type == 'row') {
             $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
         }
-        if ($type == 'list'){
+        if ($type == 'list') {
             $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->orderByDesc('id')->get();
         }
         return response(json_encode(['status' => 1, 'data' => SaleResource::collection($saleActive)]));
+    }
+
+    public function payRemaining(Request $request){
+        $sale = $request->get('sale');
+        $remaining = $request->get('remaining');
+        $sale = Sale::query()->where('id', $sale['id'])->first();
+        $calcRemaining = ManageService::calcRemaining($sale);
+        if ($calcRemaining != $remaining){
+            $remaining = $calcRemaining;
+        }
+        try{
+            DB::beginTransaction();
+
+            $sale->fill_status = Sale::TYPE_FULL;
+            $sale->save();
+            PPInteraction::payRemaining($sale, $remaining);
+            DB::commit();
+
+            //todo правильный респонс
+            return response()->json(['status'=>1]);
+
+        } catch (\Exception $e){
+            DB::rollBack();
+            Log::error($e->getMessage());
+        }
+
+    }
+
+    public function bidApplay(Request $request){
+        dd($request);
     }
 
     /**

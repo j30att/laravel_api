@@ -42,10 +42,8 @@ class BidPlace {
             })
         } else {
             this.BidsResourceService.changeMyBid(this.bid).then((response) =>{
-
+                this.sale.bids = response.data.bids;
             });
-
-
         }
     }
 

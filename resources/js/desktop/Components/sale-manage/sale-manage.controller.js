@@ -1,3 +1,5 @@
+import {SalesResourceService} from "../../../common/api/SalesResourceService";
+
 class SaleManage {
     constructor($scope, SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state, $mdDialog) {
         this.SalesResourceService = SalesResourceService;
@@ -14,12 +16,15 @@ class SaleManage {
         this.isSidenavOpen = false;
 
         this.sale = {};
+
     }
 
     $onInit() {
         this.$scope.$on('sidenavManage-open', (event, data) => {
             if (data) {
                 this.sale = data;
+                console.log(data, 'data');
+                this.calcPayRemaining();
                 this.buildToggler('right_manage');
             }
         });
@@ -37,7 +42,6 @@ class SaleManage {
             this.$state.modalOpened = false
         }
     }
-
 
     close(componentId) {
         this.$mdSidenav(componentId).close();
@@ -57,11 +61,12 @@ class SaleManage {
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(() => {
-            this.sale.bids.forEach((item) => {
+
+            /*this.sale.bids.forEach((item) => {
                 if(item.id === bid.id){
                     item.status = 2;
                 }
-            });
+            });*/
         }, () => {});
     }
 
@@ -78,22 +83,34 @@ class SaleManage {
             .ok('Accept')
             .cancel('Cancel');
 
-        this.$mdDialog.show(confirm).then(() => {
-        }, () => {});
+        this.$mdDialog.show(confirm).then(
+            () => {
+                this.SalesResourceService.payRemainig().then((response)=>{
+                    console.log(response)
+                })
+            },
+            () => {});
     }
 
     showPayConfirm(sale) {
         let confirm = this.$mdDialog.confirm()
             .parent(angular.element(document.querySelector('[md-component-id="right_manage"]')))
-            .textContent(`This changes will hold $3,234 in your account. Continue?`)
+            .htmlContent(`<div><span>This changes will hold</span> $ ${this.payRemainig} <span>in your account. Continue?</span></div>`)
+            //.textContent(`This changes will hold $3,234 in your account. Continue?`)
             .ok('Accept')
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(() => {
-            this.$mdSidenav('right_manage').close();
+            this.SalesResourceService.payRemaining(this.sale, this.payRemainig).then((response)=>{
+                console.log(response)
+            })
+            //this.$mdSidenav('right_manage').close();
         }, () => {});
     }
 
+    calcPayRemaining(){
+        this.payRemainig = ((parseFloat(this.sale.event.buy_in)*100) - (parseFloat(this.sale.amount_raised) * 100))/100;
+    }
 }
 
 SaleManage.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state', '$mdDialog'];

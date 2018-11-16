@@ -45,25 +45,6 @@
                 </div>
 
                 <div class="modal_content__hr"></div>
-                <!--<div class="bids_group"
-                     ng-repeat="(key, items) in $ctrl.sale.bids" ng-if="items.length > 0"
-                     ng-class="{
-                               'bids_group__highest_color'   : key == 'highest',
-                               'bids_group__matched_color'   : key == 'matched',
-                               'bids_group__unmatched_color' : key == 'unmatched'}">
-                    <span class="bids_group__title">{%key%} BIDS</span>
-
-                    <div ng-repeat="bid in items"
-                         ng-click="$ctrl.showBidsConfirm(bid)"
-                         class="bids_group__row">
-                        <input type="text" value="{%bid.markup%}" disabled>
-                        <input type="text" value="{%bid.share%}%" disabled>
-                        <input type="text" value="{%bid.amount | currency:'$' %}" disabled>
-                        <div class="bids_group__row_confirm not-confirm"></div>
-                    </div>
-
-                </div>-->
-
                 <div class="bids_group bids_group__highest_color">
                     <span class="bids_group__title">UNMATCHED BIDS</span>
 
@@ -88,7 +69,7 @@
             <div class="modal_foter__buttons">
                 <div class="button_text" ng-click="$ctrl.close('right_manage')">Cancel sale</div>
                 <div ng-click="$ctrl.showPayConfirm($ctrl.sale)"
-                    class="button_blue button_grey">Pay remaining <span>$3,245</span></div>
+                    class="button_blue button_grey">Pay remaining <span>$ {%$ctrl.payRemainig%} </span></div>
             </div>
         </div>
     </md-content>

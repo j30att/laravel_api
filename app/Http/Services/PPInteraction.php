@@ -10,7 +10,9 @@ namespace App\Http\Services;
 
 
 use App\Models\Bid;
+use App\Models\PPRequest;
 use App\Models\PPResponse;
+use App\Models\Sale;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -59,19 +61,28 @@ class PPInteraction
             ]
         ];
 
-        dd($header, $body);
+
+
         try {
+            $ppRequest = new PPRequest();
+            $ppRequest->bid_id = $bid->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->amount = $bid->amount;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+            $ppRequest->save();
+
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
             ]);
-
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_PLACE_BID;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->wallet_references_id = 123;//TODO
+            $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
@@ -81,13 +92,16 @@ class PPInteraction
 
     }
 
-    public static function bidChange(Bid $bid)
+    public static function bidChange(Bid $bid, $oldAmount)
     {
-        $user = Auth::user();
         $sale = $bid->sale;
-        $ppUser = $user->ppUser;
         $event = $sale->event;
-        $salerUser = $sale->creator;
+
+        $user = Auth::user();
+        $ppUser = $user->ppUser;
+        $creator = $bid->sale->creator;
+        $ppCreator = $creator->ppUser;
+
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidamendedinfo/';
 
 
@@ -96,17 +110,17 @@ class PPInteraction
 
         $header = [
             'Content-Type' => 'application/json',
-            'player-session' => $user->pp_partner_player_session,
+            'player-session' => $ppUser->session,
             'auth-token' => 'staking:pg:Test:ReleaseB',
             'partner-name' => 'stakingapp'
         ];
 
         $body = [
-            'accountName' => 'pp_' . $ppUser->screen_name,
-            'newBidAmount' => $bid->ammount * 2,
-            'oldBidAmount' => $bid->ammount,
+            'accountName' => $ppUser->party_poker_login,
+            'newBidAmount' => (integer)($bid->amount * 100),
+            'oldBidAmount' => (integer)($oldAmount*100),
             "tournamentDetails" => [
-                "sellerAccountId" => 'pp_' . $salerUser->ppUser->screen_name,
+                "sellerAccountId" => $ppCreator->party_poker_login,
                 "mainEvent" => $event->title,
                 "tournamentId" => $event->id,
                 "venuId" => $event->venue_id,
@@ -122,10 +136,21 @@ class PPInteraction
             ]);
 
 
+            $ppRequest = new PPRequest();
+            $ppRequest->bid_id = $bid->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->amount = $bid->amount;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+
+            $ppRequest->save();
+
+
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CHANGE;
             $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
@@ -223,35 +248,33 @@ class PPInteraction
         }
     }
 
-    public function bidPayRemaining(Bid $bid)
+    public static function payRemaining(Sale $sale, $remaining)
     {
-        $user = Auth::user();
-        $sale = $bid->sale;
-        $ppUser = $user->ppUser;
+
         $event = $sale->event;
-        $salerUser = $sale->creator;
+
+        $user = Auth::user();
+        $ppUser = $user->ppUser;
+
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
-
-
         $guzzleClient = new Client();
-
 
         $header = [
             'Content-Type' => 'application/json',
-            'player-session' => $user->pp_partner_player_session,
+            'player-session' => $ppUser->session,
             'auth-token' => 'staking:pg:Test:ReleaseB',
             'partner-name' => 'stakingapp'
         ];
 
         $body = [
-            'accountId' => 'pp_' . $ppUser->screen_name,
-            'amount' => $bid->amount * 100,
+            'accountId' => $ppUser->party_poker_login,
+            'amount' => (integer)($remaining * 100),
             'transactionType' => Bid::BID_PAY_REMAINING,
-            'requestorReferenceId' => $bid->transaction_code,
-            'transactionInitiatedDate' => $bid->transaction_initiated_date,
+            'requestorReferenceId' => $sale->transaction_code,
+            'transactionInitiatedDate' => $sale->transaction_initiated_date,
             'brand' => 'PARTYPOKER',
             "tournamentDetails" => [
-                "sellerAccountId" => 'pp_' . $salerUser->ppUser->screen_name,
+                "sellerAccountId" => $ppUser->party_poker_login,
                 "mainEvent" => $event->title,
                 "tournamentId" => $event->id,
                 "venuId" => $event->venue_id,
@@ -261,6 +284,16 @@ class PPInteraction
         ];
 
         try {
+
+            $ppRequest = new PPRequest();
+            $ppRequest->sale_id = $sale->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->amount = $remaining;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+            $ppRequest->save();
+
+
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
@@ -268,7 +301,7 @@ class PPInteraction
 
 
             $PPResponse = new PPResponse();
-            $PPResponse->bid_id = $bid->id;
+            $PPResponse->sale_id = $sale->id;
             $PPResponse->type = PPResponse::TYPE_BID_REMAINING;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->wallet_references_id = 123;//TODO
@@ -278,6 +311,7 @@ class PPInteraction
             Log::info(serialize($body));
         }
     }
+
 
     public static function fxRates()
     {
