@@ -19,16 +19,23 @@ class ManageService
 
     public static function linkBidToSale(Bid $bid)
     {
-        $sale = $bid->sale;
+        try {
+            $sale = $bid->sale;
 
-        if (self::equationLinkBids($bid, $sale)) {
-            $bid->status = Bid::BIDS_MATCHED;
-        } else {
-            $bid->status = Bid::BIDS_UNMATCHED;
-        };
+            if (self::equationLinkBids($bid, $sale)) {
+                $bid->status = Bid::BIDS_MATCHED;
+                self::calcAmountRaised($sale);
+                self::calcShareSold($sale);
+                self::calcAvgMarkup($sale);
+            } else {
+                $bid->status = Bid::BIDS_UNMATCHED;
+            };
 
-        $bid->save();
-        return $bid;
+            $bid->save();
+            return $bid;
+        } catch (\Exception $e){
+            return response()->json(['status'=>1, 'msg'=>'link bid to sale failure']);
+        }
     }
 
     private static function equationLinkBids(Bid $bid, Sale $sale)
@@ -57,10 +64,44 @@ class ManageService
 
     public static function manageSale(Sale $sale){
 
+
     }
 
-    private static function completeSale (Sale $sale){
+    private static function calcAmountRaised(Sale $sale){
+        $bidsMatched = $sale->bids_matched;
+        $event = $sale->event;
 
+        $amount_raised = 0;
+        foreach ($bidsMatched as $bid){
+            $amount_raised += ($bid->amount / $bid->markup);
+
+        }
+        $sale->amount_raised = $amount_raised;
+        if ($amount_raised < $event->buy_in){
+            $sale->save();
+        }
+
+    }
+
+
+    private static function calcAvgMarkup(Sale $sale){
+        $bids = $sale->bids;
+        $count = count($bids);
+        $avgMarkup = 0;
+        foreach ($bids as $bid){
+            $avgMarkup = $bid->markup;
+        }
+        $avgMarkup = $avgMarkup / $count;
+        $sale->average_markup = $avgMarkup;
+        $sale->save();
+    }
+
+    private static function calcShareSold (Sale $sale){
+        $event = $sale->event;
+        $percent = $event->buy_in / 100;
+        $percentage = $sale->amount_raised / $percent;
+        $sale->share_sold = $percentage;
+        $sale->save();
     }
 
 

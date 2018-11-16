@@ -24,8 +24,10 @@ class Sale extends Model
         'amount',
         'share',
         'created_at',
-        'fill'
-
+        'fill',
+        'amount_raised',
+        'share_sold',
+        'average_markup',
     ];
 
     public function creator(){

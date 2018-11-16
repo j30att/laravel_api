@@ -59,6 +59,7 @@ class PPInteraction
             ]
         ];
 
+        dd($header, $body);
         try {
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
