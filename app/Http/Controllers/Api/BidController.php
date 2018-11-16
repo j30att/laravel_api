@@ -86,6 +86,16 @@ class BidController extends Controller
             ]]);
     }
 
+    public function myChangeBid(Request $request){
+        $data =  $request->get('bid');
+        $bidId = $data['id'];
+        unset($data['id']);
+        $bid = Bid::query()->where('id', $bidId)->first();
+
+        $bid->update($data);
+        $bid->save();
+    }
+
 
 
 

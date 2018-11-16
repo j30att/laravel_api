@@ -54,6 +54,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/bids/my/canceled',    'Api\BidController@myFilterBids');
 
     Route::post('/bids/my/store', 'Api\BidController@myStoreBid');
+    Route::post('/bids/my/change', 'Api\BidController@myChangeBid');
 
 
     Route::post('/dealer/users', 'Api\DealerController@usersList');

@@ -15,6 +15,7 @@ class BidsInvestResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id'     => $this->id,
             'share'  => $this->share,
             'markup' => $this->markup,
             'amount' => $this->amount,

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\PPInteraction;
 use App\Http\Services\PPValidate;
+use App\Models\Bid;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 

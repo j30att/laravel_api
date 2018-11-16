@@ -40,6 +40,7 @@ class SaleController extends Controller
             ->get()
             ->sortBy('event.date_end');
 
+
         return SaleInvestResource::collection($sales);
     }
 

@@ -35,9 +35,18 @@ class BidPlace {
         this.bid.user_id = this.user.id;
         this.bid.sale_id = this.sale.id;
         this.bid.status  = BID_NEW;
-        this.BidsResourceService.storeMyBid(this.bid).then(response => {
-            this.sale.bids = response.data.bids;
-        })
+
+        if(this.bid.id == undefined){
+            this.BidsResourceService.storeMyBid(this.bid).then(response => {
+                this.sale.bids = response.data.bids;
+            })
+        } else {
+            this.BidsResourceService.changeMyBid(this.bid).then((response) =>{
+
+            });
+
+
+        }
     }
 
     close(componentId){
@@ -45,8 +54,8 @@ class BidPlace {
     }
 
     changeYourBid(bid){
+        console.log(bid);
         this.bid = bid
-
     }
 
 

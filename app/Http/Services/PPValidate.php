@@ -45,6 +45,7 @@ class PPValidate
     }
 
     public static function savePPUser(User $user, $response){
+        dd($response);
         $ppUser = $user->ppUser;
         if ($response['result']) {
             if ($response['result'] == 'SUCCESS') {

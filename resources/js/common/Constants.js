@@ -20,6 +20,7 @@ export const BIDS_MY_UNMATCHED   = '/api/bids/my/unmatched';
 export const BIDS_MY_SETTLED     = '/api/bids/my/settled';
 export const BIDS_MY_CANCELED    = '/api/bids/my/canceled';
 export const BIDS_MY_STORE       = '/api/bids/my/store';
+export const BIDS_MY_CHANGE       = '/api/bids/my/change';
 
 
 //**EVENTS**//
