@@ -17,7 +17,7 @@
                         <div class="event_info_name" ng-bind="event.title"></div>
                         <div class="event_info_date-gtd">
                             <div class="event_info_date" ng-bind="event.period"></div>
-                            <div class="event_info_gtd">{% event.fund | currency:'£':0%} GTD</div>
+                            <div class="event_info_gtd">{% event.fund | currency:'£':2%} GTD</div>
                         </div>
 
                     </div>
@@ -48,14 +48,14 @@
                 <tr ng-repeat="(index,sale) in InvestCtrl.sales"
                     ng-click="InvestCtrl.toggleSidenav(index)">
                     <td class="t_from t_from_event">
-                        <div class="t_from_img">
-                            <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
+                        <div class="t_from_img" style="background-image: url({%sale.creator.avatar%})">
+
                         </div>
                         <span ng-bind="sale.creator.name"></span>
                     </td>
                     <td class="t_event" ng-bind="sale.event.title"></td>
-                    <td class="t_buy_in" ng-bind="sale.event.buy_in | currency:'£':0"></td>
-                    <td class="t_gte" ng-bind="sale.event.fund | currency:'£':0"></td>
+                    <td class="t_buy_in" ng-bind="sale.event.buy_in | currency:'£':2"></td>
+                    <td class="t_gte" ng-bind="sale.event.fund | currency:'£':2"></td>
                     <td class="t_markup" ng-bind="sale.markup"></td>
                     <td class="t_share">{% sale.share %}%</td>
                     <!--<td class="t_time">{% sale.event.date_start %}</td>-->

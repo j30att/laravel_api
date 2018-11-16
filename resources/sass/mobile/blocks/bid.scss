@@ -43,3 +43,21 @@
 
 }
 
+.bids_edit_pen{
+    height: 40px;
+
+    &__btn{
+        height: 40px;
+        width: 40px;
+        background-color: #fff4ec;
+        background-image: url(/images/edit.svg);
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: center;
+        border: none;
+        position: absolute;
+        right: 5px;
+        border-left: 1px solid #ffffff;
+    }
+}
+

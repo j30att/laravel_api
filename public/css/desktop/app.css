@@ -97,6 +97,10 @@
   margin-top: 4px;
   width: 32px;
   height: 32px;
+  border-radius: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .bids_card__title_img img {
@@ -1064,11 +1068,15 @@
   line-height: 32px;
 }
 
-.event_right-side_table table tbody tr td img {
+.event_right-side_table table tbody tr td .dealer_user_avatar {
   display: block;
   float: left;
   width: 32px;
   height: 32px;
+  border-radius: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .event_right-side_table_bids-list {
@@ -1601,6 +1609,14 @@ md-dialog-actions .md-confirm-button {
   width: 90px;
   margin-right: 9px;
   overflow: hidden;
+}
+
+.modal_content__bid .you_bids__item input-amount {
+  width: 100%;
+}
+
+.modal_content__bid .you_bids__item input-amount input {
+  width: 100%;
 }
 
 .modal_content__bid .you_bids__item label {
@@ -3536,8 +3552,12 @@ a {
 .t_from_img {
   width: 32px;
   height: 32px;
+  border-radius: 6px;
   overflow: hidden;
   margin: 0 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .t_from_img img {

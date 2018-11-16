@@ -18,7 +18,7 @@
                         <div class="event_left-side_card_description">
                             <span>{%EventsDetailCtrl.event.period%}</span>
                             <span class="grey_dot"></span>
-                            <span>{%EventsDetailCtrl.event.fund | currency:'£':0%} GTD</span>
+                            <span>{%EventsDetailCtrl.event.fund | currency:'£':2%} GTD</span>
                             <!--<a ui-sref="#">See info</a>-->
                         </div>
                     </div>
@@ -34,9 +34,9 @@
                                 {% event.title %}
                             </div>
                             <div class="event_left-side_list_item_description">
-                                <span>{% event.buy_in | currency:'£':0 %}</span>
+                                <span>{% event.buy_in | currency:'£':2 %}</span>
                                 <span class="grey_dot"></span>
-                                <span>{% event.fund | currency:'£':0 %} GTD</span>
+                                <span>{% event.fund | currency:'£':2 %} GTD</span>
                                 <span>{% event.period %}</span>
                             </div>
                         </div>
@@ -49,9 +49,9 @@
                         {% EventsDetailCtrl.activeEvent.title %}
                     </div>
                     <div class="event_right-side_header_description">
-                        <span>{% EventsDetailCtrl.activeEvent.buy_in | currency:'£':0 %}</span>
+                        <span>{% EventsDetailCtrl.activeEvent.buy_in | currency:'£':2 %}</span>
                         <span class="grey_dot"></span>
-                        <span>{% EventsDetailCtrl.activeEvent.fund | currency:'£':0 %} GTD</span>
+                        <span>{% EventsDetailCtrl.activeEvent.fund | currency:'£':2 %} GTD</span>
                         <span>{% EventsDetailCtrl.activeEvent.period %}</span>
                     </div>
                 </div>

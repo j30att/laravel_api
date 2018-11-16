@@ -19,8 +19,7 @@
                     <tbody class="table_events_body">
                         <tr ng-repeat="user in dUsersCtrl.users">
                             <td class="t_from t_from_event">
-                                <div class="t_from_img">
-                                    <img src="/images/desk/players_img/profile_img_1.png" alt="profile photo">
+                                <div class="t_from_img" style="background-image: url({%user.avatar%})">
                                 </div>
                                 <span ng-bind="user.name">jane</span>
                             </td>

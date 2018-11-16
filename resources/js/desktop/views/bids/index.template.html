@@ -10,8 +10,8 @@
                 <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.matched">
                     <div class="bids_card bids_card__green">
                     <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_4.png" alt=""/>
+                        <div class="bids_card__title_img" style="background-image: url({%bid.investor.avatar%})">
+
                         </div>
                         <div class="bids_card__title_text">
                             <span ng-bind="bid.investor.name">Louise Romero</span>
@@ -30,7 +30,7 @@
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£':2">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>
@@ -50,8 +50,8 @@
                 <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.unmatched">
                     <div class="bids_card bids_card__red">
                     <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/pl_2.png" alt=""/>
+                        <div class="bids_card__title_img" style="background-image: url({%bid.investor.avatar%})">
+
                         </div>
                         <div class="bids_card__title_text">
                             <span ng-bind="bid.investor.name">Louise Romero</span>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£':2">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>
@@ -90,8 +90,8 @@
                 <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.settled">
                     <div class="bids_card bids_card__blue">
                         <div class="bids_card__title">
-                            <div class="bids_card__title_img">
-                                <img src="/images/pl_5.png" alt=""/>
+                            <div class="bids_card__title_img" style="background-image: url({%bid.investor.avatar%})">
+
                             </div>
                             <div class="bids_card__title_text">
                                 <span ng-bind="bid.investor.name">Louise Romero</span>
@@ -110,7 +110,7 @@
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£':2">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>
@@ -130,8 +130,8 @@
                 <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.canceled">
                     <div class="bids_card bids_card__grey">
                     <div class="bids_card__title">
-                        <div class="bids_card__title_img">
-                            <img src="/images/players.png" alt=""/>
+                        <div class="bids_card__title_img" style="background-image: url({%bid.investor.avatar%})">
+
                         </div>
                         <div class="bids_card__title_text">
                             <span ng-bind="bid.investor.name">Louise Romero</span>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="bids_card__options_column">
                             <span>Value</span>
-                            <span ng-bind="bid.amount | currency:'£'">£2,404.08</span>
+                            <span ng-bind="bid.amount | currency:'£':2">£2,404.08</span>
                         </div>
                         <div class="bids_card__options_column">
                             <span>Start time</span>

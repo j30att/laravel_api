@@ -19,6 +19,7 @@ class UserResource extends JsonResource
         return [
             'id'   => $this->id,
             'name' => $this->name,
+            'avatar'=>$this->avatar,
             'sales'=> $this->sales->count(),
             'bids' => $this->bids->count()
 

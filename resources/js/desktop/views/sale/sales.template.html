@@ -30,8 +30,8 @@
                         <span ng-bind="sale.creator.name"></span>
                     </td>
                     <td class="t_event" ng-bind="sale.event.title"></td>
-                    <td class="t_buy_in" ng-bind="sale.event.buy_in | currency:'£':0"></td>
-                    <td class="t_gte" ng-bind="sale.event.fund | currency:'£':0"></td>
+                    <td class="t_buy_in" ng-bind="sale.event.buy_in | currency:'£':2"></td>
+                    <td class="t_gte" ng-bind="sale.event.fund | currency:'£':2"></td>
                     <td class="t_markup" ng-bind="sale.markup"></td>
                     <td class="t_share">{% sale.share %}%</td>
                     <!--<td class="t_time">{% sale.event.date_start %}</td>-->

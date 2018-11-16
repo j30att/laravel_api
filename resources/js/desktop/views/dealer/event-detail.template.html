@@ -19,7 +19,7 @@
                         <div class="event_left-side_card_description">
                             <span>{%DEventDetailCtrl.event.period%}</span>
                             <span class="grey_dot"></span>
-                            <span>{%DEventDetailCtrl.event.fund | currency:'£':0%} GTD</span>
+                            <span>{%DEventDetailCtrl.event.fund | currency:'£':2%} GTD</span>
                             <!--<a ui-sref="#">See info</a>-->
                         </div>
                     </div>
@@ -48,9 +48,9 @@
                                 {% event.title %}
                             </div>
                             <div class="event_left-side_list_item_description">
-                                <span>{% event.buy_in | currency:'£':0 %}</span>
+                                <span>{% event.buy_in | currency:'£':2 %}</span>
                                 <span class="grey_dot"></span>
-                                <span>{% event.fund | currency:'£':0 %} GTD</span>
+                                <span>{% event.fund | currency:'£':2 %} GTD</span>
                                 <span>{% event.period %}</span>
                             </div>
                         </div>
@@ -64,10 +64,10 @@
                              ng-bind="event.title | uppercase">
                         </div>
                         <div class="event_right-side_header_description">
-                            <span ng-bind="event.buy_in | currency:'£':0"></span>
+                            <span ng-bind="event.buy_in | currency:'£':2"></span>
                             <span class="grey_dot"></span>
-                            <span ng-bind="(event.fund | currency:'£':0) + ' GTD'"></span>
-                            <span ng-bind="event.period | currency:'£':0"></span>
+                            <span ng-bind="(event.fund | currency:'£':2) + ' GTD'"></span>
+                            <span ng-bind="event.period | currency:'£':2"></span>
                         </div>
                     </div>
                     <div class="event_right-side_table">
@@ -87,7 +87,8 @@
 
                             ng-click="DEventDetailCtrl.toggleSidenav(sale)">
                             <td>
-                                <img src="/images/desk/players_img/profile_img_1.png">
+                                <div class="dealer_user_avatar" style="background-image: url({%sale.creator.avatar%})"></div>
+
                                 <span ng-bind="sale.creator.name"></span>
                             </td>
                             <td

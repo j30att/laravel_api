@@ -169,6 +169,12 @@
                width: 90px;
                margin-right: 9px;
                overflow: hidden;
+               input-amount{
+                   width: 100%;
+                   input{
+                       width: 100%;
+                   }
+               }
                label {
                    font-size: 13px;
                    color: #949494;

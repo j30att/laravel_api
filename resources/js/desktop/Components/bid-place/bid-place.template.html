@@ -49,7 +49,7 @@
                         <div class="bids-common__items" ng-repeat="item in bids">
                             <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
                             <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
-                            <input type="text" placeholder="{%item.amount | currency:'$':0%}" ng-disabled="index == 'matched' || index == 'highest'">
+                            <input type="text" placeholder="{%item.amount | currency:'$':2%}" ng-disabled="index == 'matched' || index == 'highest'">
                             <div class="sale-manage__attributes__edit" style="position: absolute; right: 0;" ng-if="index == 'unmatched'">
                                 <button class="sale-manage__attributes__btn" style="background-color: #fff2ec;" ng-click="$ctrl.changeYourBid(item)"></button>
                             </div>
@@ -71,14 +71,20 @@
                             <label>Share</label>
                             <input-share bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="10%"></input-share>
                         </div>
-                        <div class="you_bids__item">
+                        <div class="you_bids__item" style="flex-grow: 1;">
                             <label>Amount</label>
                             <input-amount bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="$1000"></input-amount>
                         </div>
                         <div class="add_new"></div>
-                        <div class="you_bids__place_bid" ng-click="$ctrl.saveMyBid()">Place a bid</div>
+                        <!--<div class="you_bids__place_bid" ng-click="$ctrl.saveMyBid()">Place a bid</div>-->
 
                     </div>
+                </div>
+            </div>
+            <div class="modal_foter">
+                <div class="modal_foter__buttons">
+                    <div class="button_text" role="button" tabindex="0" ng-click="$ctrl.close('right')">Cancel</div>
+                    <div class="button_blue" role="button" tabindex="0" ng-click="$ctrl.saveMyBid()">Place a bid</div>
                 </div>
             </div>
         </div>

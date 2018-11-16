@@ -4,8 +4,8 @@
      ng-repeat=" (key, item) in $ctrl.sales">
 
     <div class="sale_card__list_profile">
-        <div class="sale_card__list_profile__photo">
-            <img src="/images/players.png" alt="{% item.creator.name%}">
+        <div class="sale_card__list_profile__photo" style="background-image: url({%item.creator.avatar%});">
+            <!--<img src="/images/players.png" alt="{% item.creator.name%}">-->
         </div>
         <div class="sale_card__list_profile__text">
             <div class="sale_card__list_profile__name" ng-bind="item.creator.name"></div>
@@ -22,7 +22,7 @@
         </div>
         <div class="sale_card__list_attribute__item">
             <span>Value</span>
-            <span class="sale_card__list_attribute__item_value" ng-bind="item.amount | currency:'$':0"></span>
+            <span class="sale_card__list_attribute__item_value" ng-bind="item.amount | currency:'$':2"></span>
         </div>
         <div class="sale_card__list_attribute__item">
             <span>Date of Start</span>

@@ -11,12 +11,12 @@
                     <div style="justify-content: space-between">
                         <div>
                             <div class="profile_status__name">{% $ctrl.sale.event.title %}</div>
-                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':0%}
+                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':2%}
                             </div>
                         </div>
                         <div class="profile_status__gte_and_by">
-                            <div class="profile_status__buyin">{% $ctrl.sale.event.buy_in | currency:'£':0%}</div>
-                            <div class="profile_status__gte">{% $ctrl.sale.event.fund | currency:'£':0%} GTE</div>
+                            <div class="profile_status__buyin">{% $ctrl.sale.event.buy_in | currency:'£':2%}</div>
+                            <div class="profile_status__gte">{% $ctrl.sale.event.fund | currency:'£':2%} GTE</div>
                         </div>
                     </div>
                     <div class="profile_status__attributs d-flex">
@@ -72,13 +72,13 @@
                          class="bids_group__row">
                         <input type="text" value="{%bid.markup%}" disabled>
                         <input type="text" value="{%bid.share%}%" disabled>
-                        <input type="text" value="{%bid.amount | currency:'$' %}" disabled>
+                        <input type="text" value="{%bid.amount | currency:'$':2 %}" disabled>
                         <div class="bids_group__row_confirm not-confirm"></div>
                     </div>
                     <div ng-repeat="bid in $ctrl.sale.bids | filter:{status:2}" class="bids_group__row">
                         <input type="text" value="{%bid.markup%}" disabled>
                         <input type="text" value="{%bid.share%}%" disabled>
-                        <input type="text" value="{%bid.amount | currency:'$' %}" disabled>
+                        <input type="text" value="{%bid.amount | currency:'$':2 %}" disabled>
                         <div class="bids_group__row_confirm not-confirm"></div>
                     </div>
                 </div>

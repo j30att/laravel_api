@@ -11192,6 +11192,10 @@ a.text-dark:focus {
 .sale_card__list_profile__photo {
   width: 36px;
   height: 36px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
 }
 
 .sale_card__list_profile__photo img {
@@ -12042,6 +12046,24 @@ a.text-dark:focus {
 .bid_new__attribute:last-child {
   width: 100%;
   margin-right: 60px;
+}
+
+.bids_edit_pen {
+  height: 40px;
+}
+
+.bids_edit_pen__btn {
+  height: 40px;
+  width: 40px;
+  background-color: #fff4ec;
+  background-image: url(/images/edit.svg);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  border: none;
+  position: absolute;
+  right: 5px;
+  border-left: 1px solid #ffffff;
 }
 
 .profile_info {

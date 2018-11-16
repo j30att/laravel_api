@@ -28,16 +28,16 @@
 
                 <tr ng-repeat="(index, bid) in BidsCtrl.bids">
                     <td class="t_from">
-                        <div class="t_from_img">
-                            <img src="/images/desk/players_img/profile_img_1.png" alt="">
+                        <div class="t_from_img" style="background-image: url({%bid.investor.avatar%})">
+
                         </div>
                         <span ng-bind="bid.investor.name"></span>
                     </td>
                     <td class="t_event" ng-bind="bid.sale.subevent.event.title"></td>
-                    <td class="t_buy_in" ng-bind="bid.sale.subevent.event.buy_in | currency:'£':0"></td>
-                    <td class="t_gte" ng-bind="bid.sale.subevent.event.fund | currency:'£':0"></td>
+                    <td class="t_buy_in" ng-bind="bid.sale.subevent.event.buy_in | currency:'£':2"></td>
+                    <td class="t_gte" ng-bind="bid.sale.subevent.event.fund | currency:'£':2"></td>
                     <td class="t_markup" ng-bind="bid.markup"></td>
-                    <td class="t_value" ng-bind="bid.amount | currency:'$':0"></td>
+                    <td class="t_value" ng-bind="bid.amount | currency:'$':2"></td>
                     <td class="t_close">
                         <ng-pluralize count="index +2"
                                       when="{'0': 'Now','1': '1 day','other': '{} days'}">
