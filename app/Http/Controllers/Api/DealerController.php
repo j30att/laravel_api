@@ -11,7 +11,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Resources\Dealer\EventResource;
 use App\Http\Resources\Dealer\UserResource;
 use App\Http\Resources\Dealer\ProfileResource;
-use App\Http\Services\BetsManageService;
+use App\Http\Services\ManageService;
 use App\Models\Event;
 use App\Models\Result;
 use App\Models\Sale;
@@ -99,7 +99,7 @@ class DealerController
         $result->save();
 
 
-        BetsManageService::manageWins($result);
+        ManageService::manageWins($result);
 
 
     }

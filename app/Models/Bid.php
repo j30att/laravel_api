@@ -35,8 +35,8 @@ class Bid extends Model
         return $this->belongsTo(Sale::class,'sale_id');
     }
 
-    public function geTransactionCodeAttribute (){
-        return ((string)Str::uuid() . '-VERSION');
+    public function getTransactionCodeAttribute (){
+        return (string)Str::uuid() . '-VERSION';
     }
 
     public function getTransactionInitiatedDateAttribute(){

@@ -10,10 +10,7 @@ namespace App\Http\Services;
 
 
 use App\Models\Bid;
-use App\Models\Event;
 use App\Models\PPResponse;
-use App\Models\Sale;
-use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -23,45 +20,50 @@ class PPInteraction
 
     public static function bidPlace(Bid $bid)
     {
-        $user = Auth::user();
+
         $sale = $bid->sale;
-        $ppUser = $user->ppUser;
         $event = $sale->event;
-        $salerUser = $sale->creator;
+
+        $user = Auth::user();
+        $ppUser = $user->ppUser;
+        $creator = $bid->sale->creator;
+        $ppCreator = $creator->ppUser;
+
+
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
 
 
         $guzzleClient = new Client();
 
-
         $header = [
-            'Content-Type'   =>'application/json',
-            'player-session' => $user->pp_partner_player_session,
-            'auth-token'     => 'staking:pg:Test:ReleaseB',
-            'partner-name'   => 'stakingapp'
+            'Content-Type' => 'application/json',
+            'player-session' => $ppUser->session,
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
         ];
 
         $body = [
-            'accountId'                 => 'pp_' . $ppUser->screen_name,
-            'amount'                    => $bid->amount * 100,
-            'transactionType'           => Bid::BID_PLACE,
-            'requestorReferenceId'      => $bid->transaction_code,
-            'transactionInitiatedDate'  => $bid->transaction_initiated_date,
-            'brand'                     => 'PARTYPOKER',
-            "tournamentDetails"=>[
-                        "sellerAccountId"   =>'pp_' . $salerUser->ppUser->screen_name,
-                        "mainEvent"         =>$event->title,
-                        "tournamentId"      =>$event->id,
-                        "venuId"            =>$event->venue_id,
-                        "venuName"          =>$event->venue_name,
-                        "currency"          =>$event->currency
+            'accountId' => $ppUser->party_poker_login,
+            'amount' => (integer)($bid->amount * 100),
+            'transactionType' => Bid::BID_PLACE,
+            'requestorReferenceId' => $bid->transaction_code,
+            'transactionInitiatedDate' => $bid->transaction_initiated_date,
+            'brand' => 'PARTYPOKER',
+            "tournamentDetails" => [
+                "sellerAccountId" => $ppCreator->party_poker_login,
+                "mainEvent" => $event->title,
+                "tournamentId" => $event->id,
+                "venuId" => $event->venue_id,
+                "venuName" => $event->venue_name,
+                "currency" => $event->currency
             ]
         ];
 
-        try{
+        dd($header, $body);
+        try {
             $response = $guzzleClient->request('post', $uri, [
-                'headers'   => $header,
-                'json'      => $body
+                'headers' => $header,
+                'json' => $body
             ]);
 
 
@@ -71,16 +73,16 @@ class PPInteraction
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->wallet_references_id = 123;//TODO
             $PPResponse->save();
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
 
 
-
     }
 
-    public function bidChange(Bid $bid){
+    public static function bidChange(Bid $bid)
+    {
         $user = Auth::user();
         $sale = $bid->sale;
         $ppUser = $user->ppUser;
@@ -93,30 +95,30 @@ class PPInteraction
 
 
         $header = [
-            'Content-Type'   =>'application/json',
+            'Content-Type' => 'application/json',
             'player-session' => $user->pp_partner_player_session,
-            'auth-token'     => 'staking:pg:Test:ReleaseB',
-            'partner-name'   => 'stakingapp'
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
         ];
 
         $body = [
-            'accountName'   =>  'pp_' . $ppUser->screen_name,
-            'newBidAmount'  =>  $bid->ammount * 2,
-            'oldBidAmount'  =>  $bid->ammount,
-            "tournamentDetails"=>[
-                "sellerAccountId"   =>'pp_' . $salerUser->ppUser->screen_name,
-                "mainEvent"         =>$event->title,
-                "tournamentId"      =>$event->id,
-                "venuId"            =>$event->venue_id,
-                "venuName"          =>$event->venue_name,
-                "currency"          =>$event->currency
+            'accountName' => 'pp_' . $ppUser->screen_name,
+            'newBidAmount' => $bid->ammount * 2,
+            'oldBidAmount' => $bid->ammount,
+            "tournamentDetails" => [
+                "sellerAccountId" => 'pp_' . $salerUser->ppUser->screen_name,
+                "mainEvent" => $event->title,
+                "tournamentId" => $event->id,
+                "venuId" => $event->venue_id,
+                "venuName" => $event->venue_name,
+                "currency" => $event->currency
             ]
         ];
 
-        try{
+        try {
             $response = $guzzleClient->request('post', $uri, [
-                'headers'   => $header,
-                'json'      => $body
+                'headers' => $header,
+                'json' => $body
             ]);
 
 
@@ -125,13 +127,13 @@ class PPInteraction
             $PPResponse->type = PPResponse::TYPE_BID_CHANGE;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->save();
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
     }
 
-    public function bidCancel(Bid $bid)
+    public static function bidCancel(Bid $bid)
     {
         $user = Auth::user();
         $sale = $bid->sale;
@@ -145,33 +147,33 @@ class PPInteraction
 
 
         $header = [
-            'Content-Type'   =>'application/json',
+            'Content-Type' => 'application/json',
             'player-session' => $user->pp_partner_player_session,
-            'auth-token'     => 'staking:pg:Test:ReleaseB',
-            'partner-name'   => 'stakingapp'
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
         ];
 
         $body = [
-            'accountId'                 => 'pp_' . $ppUser->screen_name,
-            'amount'                    => $bid->amount * 100,
-            'transactionType'           => Bid::BID_CANCEL,
-            'requestorReferenceId'      => $bid->transaction_code,
-            'transactionInitiatedDate'  => $bid->transaction_initiated_date,
-            'brand'                     => 'PARTYPOKER',
-            "tournamentDetails"=>[
-                "sellerAccountId"   =>'pp_' . $salerUser->ppUser->screen_name,
-                "mainEvent"         =>$event->title,
-                "tournamentId"      =>$event->id,
-                "venuId"            =>$event->venue_id,
-                "venuName"          =>$event->venue_name,
-                "currency"          =>$event->currency
+            'accountId' => 'pp_' . $ppUser->screen_name,
+            'amount' => $bid->amount * 100,
+            'transactionType' => Bid::BID_CANCEL,
+            'requestorReferenceId' => $bid->transaction_code,
+            'transactionInitiatedDate' => $bid->transaction_initiated_date,
+            'brand' => 'PARTYPOKER',
+            "tournamentDetails" => [
+                "sellerAccountId" => 'pp_' . $salerUser->ppUser->screen_name,
+                "mainEvent" => $event->title,
+                "tournamentId" => $event->id,
+                "venuId" => $event->venue_id,
+                "venuName" => $event->venue_name,
+                "currency" => $event->currency
             ]
         ];
 
-        try{
+        try {
             $response = $guzzleClient->request('post', $uri, [
-                'headers'   => $header,
-                'json'      => $body
+                'headers' => $header,
+                'json' => $body
             ]);
 
 
@@ -180,13 +182,13 @@ class PPInteraction
             $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->save();
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
     }
 
-    public function bidClosure(Bid $bid)
+    public static function bidClosure(Bid $bid)
     {
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
@@ -194,19 +196,19 @@ class PPInteraction
 
 
         $header = [
-            'Content-Type'   =>'application/json',
-            'auth-token'     => 'staking:pg:Test:ReleaseB',
-            'partner-name'   => 'stakingapp'
+            'Content-Type' => 'application/json',
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
         ];
 
         $body = [
             'transactionIds' => []
         ];
 
-        try{
+        try {
             $response = $guzzleClient->request('post', $uri, [
-                'headers'   => $header,
-                'json'      => $body
+                'headers' => $header,
+                'json' => $body
             ]);
 
 
@@ -215,7 +217,7 @@ class PPInteraction
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->save();
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
@@ -235,33 +237,33 @@ class PPInteraction
 
 
         $header = [
-            'Content-Type'   =>'application/json',
+            'Content-Type' => 'application/json',
             'player-session' => $user->pp_partner_player_session,
-            'auth-token'     => 'staking:pg:Test:ReleaseB',
-            'partner-name'   => 'stakingapp'
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
         ];
 
         $body = [
-            'accountId'                 => 'pp_' . $ppUser->screen_name,
-            'amount'                    => $bid->amount * 100,
-            'transactionType'           => Bid::BID_PAY_REMAINING,
-            'requestorReferenceId'      => $bid->transaction_code,
-            'transactionInitiatedDate'  => $bid->transaction_initiated_date,
-            'brand'                     => 'PARTYPOKER',
-            "tournamentDetails"=>[
-                "sellerAccountId"   =>'pp_' . $salerUser->ppUser->screen_name,
-                "mainEvent"         =>$event->title,
-                "tournamentId"      =>$event->id,
-                "venuId"            =>$event->venue_id,
-                "venuName"          =>$event->venue_name,
-                "currency"          =>$event->currency
+            'accountId' => 'pp_' . $ppUser->screen_name,
+            'amount' => $bid->amount * 100,
+            'transactionType' => Bid::BID_PAY_REMAINING,
+            'requestorReferenceId' => $bid->transaction_code,
+            'transactionInitiatedDate' => $bid->transaction_initiated_date,
+            'brand' => 'PARTYPOKER',
+            "tournamentDetails" => [
+                "sellerAccountId" => 'pp_' . $salerUser->ppUser->screen_name,
+                "mainEvent" => $event->title,
+                "tournamentId" => $event->id,
+                "venuId" => $event->venue_id,
+                "venuName" => $event->venue_name,
+                "currency" => $event->currency
             ]
         ];
 
-        try{
+        try {
             $response = $guzzleClient->request('post', $uri, [
-                'headers'   => $header,
-                'json'      => $body
+                'headers' => $header,
+                'json' => $body
             ]);
 
 
@@ -271,9 +273,35 @@ class PPInteraction
             $PPResponse->response = $response->getBody()->getContents();
             $PPResponse->wallet_references_id = 123;//TODO
             $PPResponse->save();
-        }catch (\Exception $e){
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
+    }
+
+    public static function fxRates()
+    {
+
+        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/fxRates/';
+        $guzzleClient = new Client();
+
+        $header = [
+            'Content-Type' => 'application/json',
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
+        ];
+
+        try {
+        $response = $guzzleClient->request('POST', $uri, [
+            'headers' => $header,
+            'json' => ['date'=> "01-11-2018"]
+        ]);
+
+        dd($response->getBody()->getContents());
+        } catch (\Exception $e) {
+            Log::error($e->getMessage());
+
+        }
+
     }
 }

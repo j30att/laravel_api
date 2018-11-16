@@ -48,7 +48,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -63,33 +63,33 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array $data
      * @return \App\User
      */
 
     protected function create(array $data)
     {
         try {
-
-        $birthDate = Carbon::parse($data['birth_date']);
-          return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'avatar' => 'null',
-            'birth_date' => $birthDate,
-            'country_id'=> $data['country_id'],
-            'sms_subscribe' => $data['sms_subscribe'],
-            'email_subscribe' => $data['email_subscribe'],
-            'password' => Hash::make($data['password']),
-        ]);
-        } catch (\Exception $e){
+            $birthDate = Carbon::parse($data['birth_date']);
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'avatar' => 'null',
+                'birth_date' => $birthDate,
+                'country_id' => $data['country_id'],
+                'sms_subscribe' => $data['sms_subscribe'],
+                'email_subscribe' => $data['email_subscribe'],
+                'password' => Hash::make($data['password']),
+            ]);
+        } catch (\Exception $e) {
             Log::error($e->getMessage());
         }
     }
 
     public function showRegistrationForm(Request $request)
-    {   $typeDevice = $request->get('typeDevice');
-        return view($typeDevice.'.login.register');
+    {
+        $typeDevice = $request->get('typeDevice');
+        return view($typeDevice . '.login.register');
     }
 
 

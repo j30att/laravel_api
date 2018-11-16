@@ -35,7 +35,6 @@ class CreateUsersTable extends Migration
 
             $table->string('pp_partner_token')->nullable();
             $table->string('pp_account_id')->nullable();
-            $table->string('pp_partner_player_session')->nullable();
 
             $table->rememberToken();
             $table->timestamps();

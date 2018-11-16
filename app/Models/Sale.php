@@ -24,8 +24,10 @@ class Sale extends Model
         'amount',
         'share',
         'created_at',
-        'fill'
-
+        'fill',
+        'amount_raised',
+        'share_sold',
+        'average_markup',
     ];
 
     public function creator(){
@@ -94,14 +96,16 @@ class Sale extends Model
 
 
     public function calculateAmountRaise(){
-        $raiseds = $this->bids;
+        $raiseds = $this->bids_matched;
         $raisedSumm = 0;
         foreach ($raiseds as $raised){
 
             $raisedSumm += $raised->amount;
 
         }
-        return number_format($raisedSumm);
+        $this->amount_raised = $raisedSumm;
+        $this->save();
+        return number_format($this->amount_raised);
 
     }
 

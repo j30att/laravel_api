@@ -13,7 +13,7 @@ class MakePpUserDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('pp_users', function (Blueprint $table) {
+        Schema::create('p_p_users', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->nullable()->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
@@ -35,6 +35,6 @@ class MakePpUserDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pp_users');
+        Schema::dropIfExists('p_p_users');
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PPUser extends Model
 {
-    protected $table = 'pp_users';
+    protected $table = 'p_p_users';
 
     protected $fillable=[
         'user_id',
@@ -18,6 +18,10 @@ class PPUser extends Model
         'funded',
         'session',
     ];
+
+    public function getPartyPokerLoginAttribute(){
+        return 'pp_' . $this->screen_name;
+    }
 
 
 }
