@@ -58,7 +58,7 @@ class PPInteraction
                 "currency" => $event->currency
             ]
         ];
-        dd($header, $body);
+
         try {
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,

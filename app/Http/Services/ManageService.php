@@ -14,7 +14,7 @@ use App\Models\Result;
 use App\Models\Sale;
 use function Couchbase\defaultDecoder;
 
-class BetsManageService
+class ManageService
 {
 
     public static function linkBidToSale(Bid $bid)
@@ -41,7 +41,7 @@ class BetsManageService
     public static function manageWins(Result $result){
         $sale = Sale::query()->with('bids')->find($result->sale_id);
         $money = $result->prize * ($sale->share/100);
-        BetsManageService::calculateWinners($sale->bids, $money);
+        ManageService::calculateWinners($sale->bids, $money);
     }
 
 
@@ -54,6 +54,14 @@ class BetsManageService
         }
     }
 
+
+    public static function manageSale(Sale $sale){
+
+    }
+
+    private static function completeSale (Sale $sale){
+
+    }
 
 
 }

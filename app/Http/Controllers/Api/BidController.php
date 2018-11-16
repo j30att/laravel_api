@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\BidResource;
 use App\Http\Resources\Bids\BidsInvestResource;
-use App\Http\Services\BetsManageService;
+use App\Http\Services\ManageService;
 use App\Http\Services\PPInteraction;
 use App\Models\Bid;
 use Illuminate\Http\Request;
@@ -71,8 +71,7 @@ class BidController extends Controller
 
             DB::beginTransaction();
             $bid = Bid::create($data);
-            $bid = BetsManageService::linkBidToSale($bid);
-
+            $bid = ManageService::linkBidToSale($bid);
             PPInteraction::bidPlace($bid);
 
             DB::commit();
