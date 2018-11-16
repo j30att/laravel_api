@@ -66,12 +66,12 @@
 
                     </div>
                     <div class="bids_edit_pen" role="button" tabindex="0" ng-if="key == 'unmatched'">
-                        <button class="bids_edit_pen__btn"></button>
+                        <button class="bids_edit_pen__btn" ng-click="$ctrl.changeYourBid(key)"></button>
                     </div>
                 </div>
 
             </div>
-            <div class="you_bids" ng-if="$ctrl._opts.stateCreate">
+            <!--<div class="you_bids" ng-if="$ctrl._opts.stateCreate">
                 <span class="blocks_header_title_name">YOUR BID</span>
                 <div class="card__attribute manage_sale_atr">
                     <div class="sale_card_list_atr_item manage_sale_atr_item">
@@ -87,7 +87,26 @@
                         <input type="number" placeholder="" ng-model="$ctrl.bid.amount" ng-change="$ctrl.changeAmount()">
                     </div>
                 </div>
+            </div>-->
+
+            <div class="you_bids">
+                <span class="blocks_header_title_name">YOUR BID</span>
+                <div class="card__attribute manage_sale_atr">
+                    <div class="sale_card_list_atr_item manage_sale_atr_item">
+                        <label class="warm_grey">Markup</label>
+                        <input-markup bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="1.20"></input-markup>
+                    </div>
+                    <div class="sale_card_list_atr_item manage_sale_atr_item">
+                        <label class="warm_grey">Share</label>
+                        <input-share bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="10%"></input-share>
+                    </div>
+                    <div class="sale_card_list_atr_item manage_sale_atr_item">
+                        <label class="warm_grey">Amount</label>
+                        <input-amount bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="$1000"></input-amount>
+                    </div>
+                </div>
             </div>
+
         </div>
         <div class="hideempty">
             <div class="manage_button" ng-if="$ctrl._opts.stateCreate">

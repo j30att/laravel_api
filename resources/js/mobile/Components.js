@@ -1,3 +1,4 @@
+
 let angular = require('angular');
 
 import {BidsComponent} from "./Components/bids/bids.controller";
@@ -11,7 +12,10 @@ import {SalesCarouselComponent} from "./Components/sales-carousel/sales-carousel
 import {SaleCreateComponent} from "./Components/sale-create/sale-create.controller";
 import {BidPlaceComponent} from "./Components/bid-place/bid-place.controller";
 import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controller";
+
 import {InputMarkupComponent} from "../common/components/input/input-markup/input-markup.controller";
+import {InputAmountComponent} from "../common/components/input/input-amount/input-amount.controller";
+import {InputShareComponent} from "../common/components/input/input-share/input-share.controller";
 
 let module = angular.module('Components', []);
 module.component('bids', BidsComponent);
@@ -22,10 +26,17 @@ module.component('salesInvest', SalesInvestComponent);
 module.component('salesList', SalesListComponent);
 module.component('salesRow', SalesRowComponent);
 module.component('salesCarousel', SalesCarouselComponent);
-module.component('inputMarkup', InputMarkupComponent);
+
 
 module.component('bidPlace', BidPlaceComponent);
 module.component('saleManage', SaleManageComponent);
 module.component('saleCreate', SaleCreateComponent);
+
+
+module.component('inputMarkup', InputMarkupComponent);
+module.component('inputAmount', InputAmountComponent);
+module.component('inputShare', InputShareComponent);
+
+
 export default module.name;
 

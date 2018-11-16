@@ -54,7 +54,6 @@ class BidPlace {
     }
 
     changeYourBid(bid){
-        console.log(bid);
         this.bid = bid
     }
 
