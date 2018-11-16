@@ -51,7 +51,6 @@ class ManageService
         ManageService::calculateWinners($sale->bids, $money);
     }
 
-
     private static function calculateWinners($bids, $money){
         foreach ($bids as $bid){
             $bisPrize = $money * ($bid->share)/100;
