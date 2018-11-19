@@ -48,7 +48,7 @@ class CheckEvent extends Command
                 $event->status = Event::STATUS_CLOSED;
                 $event->save();
 
-                
+
             }
         }
     }
