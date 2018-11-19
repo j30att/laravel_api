@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\PPInteraction;
 use App\Models\Event;
+use App\Models\PPRequest;
 use App\Models\PPResponse;
 use App\Models\Sale;
 use Carbon\Carbon;
@@ -68,6 +69,7 @@ class CheckEvent extends Command
 
                         PPInteraction::bidClosure($walletReferenceIds);
                     } else {
+                        PPRequest::query()->where('sale_id', $sale->id)->
                         PPInteraction::bidCancel(null, $sale);
                         foreach ($sale->bids as $bid) {
                             PPInteraction::bidCancel($bid, null);

@@ -101,4 +101,11 @@ class ManageService
         return ((integer)($sale->event->buy_in * 100) - (integer)($sale->amount_raised*100))/100;
     }
 
+
+    public static function createTransaction(){
+
+    }
+    public static function createPPbid(){
+
+    }
 }
