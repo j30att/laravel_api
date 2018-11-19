@@ -169,6 +169,7 @@ class CMSHelper
             $flight->id = $ppDay->day->id;
         }
 
+        $subEvent = SubEvent::query()->where('id', $ppDay->day->schedule_id)->with('event')->first();
 
         $flight->sub_event_id = $ppDay->day->schedule_id;
         $flight->title = $ppDay->day->day . $ppDay->day->flight;
@@ -176,7 +177,7 @@ class CMSHelper
         $flight->date = Carbon::parse($ppDay->day->date);
         $flight->flight = $ppDay->day->flight;
         $flight->day = $ppDay->day->day;
-        $flight->event_id=$ppDay->day->event_id;
+        $flight->event_id= $subEvent->event->id;
         $flight->save();
 
     }

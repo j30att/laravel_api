@@ -77,13 +77,20 @@ class PPInteraction
                 'json' => $body
             ]);
 
+            $responseContent = json_decode($response->getBody()->getContents(),1);
+
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_PLACE_BID;
             $PPResponse->response = $response->getBody()->getContents();
-            $PPResponse->wallet_references_id = 123;//TODO
+
+            $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
+            $PPResponse->status = $responseContent['status'];
+            $PPResponse->error_code = $responseContent['errorCode'];
+            $PPResponse->error_description = $responseContent['errorDescription'];
+
             $PPResponse->p_p_request = $ppRequest->id;
-            $PPResponse->save();
+            //$PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
@@ -130,26 +137,32 @@ class PPInteraction
         ];
 
         try {
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
-
-
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
             $ppRequest->amount = $bid->amount;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
-
             $ppRequest->save();
 
+
+            $response = $guzzleClient->request('post', $uri, [
+                'headers' => $header,
+                'json' => $body
+            ]);
+
+            $responseContent = json_decode($response->getBody()->getContents(),1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CHANGE;
             $PPResponse->response = $response->getBody()->getContents();
+
+            $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
+            $PPResponse->status = $responseContent['status'];
+            $PPResponse->error_code = $responseContent['errorCode'];
+            $PPResponse->error_description = $responseContent['errorDescription'];
+
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
         } catch (\Exception $e) {
@@ -196,16 +209,34 @@ class PPInteraction
         ];
 
         try {
+            $ppRequest = new PPRequest();
+            $ppRequest->bid_id = $bid->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->amount = $bid->amount;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+            $ppRequest->save();
+
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
             ]);
+
+            $responseContent = json_decode($response->getBody()->getContents(),1);
 
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
             $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
+
+            $PPResponse->status = $responseContent['status'];
+            $PPResponse->error_code = $responseContent['errorCode'];
+            $PPResponse->error_description = $responseContent['errorDescription'];
+
+            $PPResponse->p_p_request = $ppRequest->id;
+
             $PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
@@ -231,16 +262,32 @@ class PPInteraction
         ];
 
         try {
+            $ppRequest = new PPRequest();
+            $ppRequest->bid_id = $bid->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->amount = $bid->amount;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+            $ppRequest->save();
+
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
             ]);
 
+            $responseContent = json_decode($response->getBody()->getContents(),1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $response->getBody()->getContents();
+
+
+            $PPResponse->status = $responseContent['status'];
+            $PPResponse->error_code = $responseContent['errorCode'];
+            $PPResponse->error_description = $responseContent['errorDescription'];
+
+            $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
@@ -298,13 +345,18 @@ class PPInteraction
                 'headers' => $header,
                 'json' => $body
             ]);
-
+            $responseContent = json_decode($response->getBody()->getContents(),1);
 
             $PPResponse = new PPResponse();
             $PPResponse->sale_id = $sale->id;
             $PPResponse->type = PPResponse::TYPE_BID_REMAINING;
             $PPResponse->response = $response->getBody()->getContents();
-            $PPResponse->wallet_references_id = 123;//TODO
+
+            $PPResponse->status = $responseContent['status'];
+            $PPResponse->error_code = $responseContent['errorCode'];
+            $PPResponse->error_description = $responseContent['errorDescription'];
+
+            $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
         } catch (\Exception $e) {
             Log::error($e->getMessage());
