@@ -10,6 +10,7 @@ namespace App\Http\Services;
 
 
 use App\Models\Bid;
+use App\Models\PPBid;
 use App\Models\PPRequest;
 use App\Models\PPResponse;
 use App\Models\Sale;
@@ -91,6 +92,19 @@ class PPInteraction
 
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
+
+            $PPBid = false;
+            if ($responseContent['status'] == 'SUCCESS'){
+                $PPBid = new PPBid();
+                $PPBid->pp_bid_id = $responseContent['walletReferenceId'];
+                $PPBid->sale_id = $sale->id;
+                $PPBid->amount = $bid->amount;
+                $PPBid->status = PPResponse::TYPE_PLACE_BID;
+                $PPBid->save();
+            }
+            return $PPBid;
+
+
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
@@ -99,7 +113,7 @@ class PPInteraction
 
     }
 
-    public static function bidChange(Bid $bid, $oldAmount)
+    public static function bidChange(Bid $bid, PPBid $PPBid)
     {
         $sale = $bid->sale;
         $event = $sale->event;
@@ -114,6 +128,7 @@ class PPInteraction
 
         $guzzleClient = new Client();
 
+        $newAmount = $PPBid->amount + $bid->amount;
 
         $header = [
             'Content-Type' => 'application/json',
@@ -124,8 +139,8 @@ class PPInteraction
 
         $body = [
             'accountName' => $ppUser->party_poker_login,
-            'newBidAmount' => (integer)($bid->amount * 100),
-            'oldBidAmount' => (integer)($oldAmount * 100),
+            'newBidAmount' => (integer)($newAmount * 100),
+            'oldBidAmount' => (integer)($PPBid->amount * 100),
             "tournamentDetails" => [
                 "sellerAccountId" => $ppCreator->party_poker_login,
                 "mainEvent" => $event->title,
@@ -165,6 +180,17 @@ class PPInteraction
 
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
+
+
+            if ($responseContent['status'] == 'SUCCESS'){
+
+                $PPBid->amount = $newAmount;
+                $PPBid->status = PPResponse::TYPE_BID_CHANGE;
+                $PPBid->save();
+                return $PPBid;
+            }
+            return false;
+
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));

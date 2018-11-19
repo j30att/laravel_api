@@ -47,4 +47,6 @@ class Bid extends Model
         return Carbon::now()->timestamp;
     }
 
+
+
 }

@@ -65,36 +65,16 @@ class BidController extends Controller
     public function myStoreBid(Request $request)
     {
         try {
-
-
             $user = Auth::user();
             $data = $request->get('bid');
             if ($user->id != $data['user_id']) App::abort(401);
 
-            $bid = Bid::query()
-                ->where('sale_id', $data['sale_id'])
-                ->where('p_p_bid_id', '!=', null)
-                ->where('user_id', $data['user_id'])->first();
-
-
-            if ($bid->p_p_bid_id != null){
-
-            }
-
-
-            DB::beginTransaction();
             $bid = Bid::create($data);
-
             $bid = ManageService::linkBidToSale($bid);
 
-
-            if ($bid){
-                PPInteraction::bidPlace($bid);
-                ManageService::createPPbid($bid);
-                ManageService::createTransaction($bid);
+            if ($bid->status == Bid::BIDS_MATCHED) {
+                ManageService::manageTransaction($bid);
             }
-
-            DB::commit();
 
             $highest = Bid::query()
                 ->where('sale_id', $bid->sale_id)
