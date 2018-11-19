@@ -1,6 +1,6 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content" ng-if="SaleCtrl.state != 'empty'">
+    <div class="main_content" >
         <div class="sale_container" ng-repeat="(key,items) in SaleCtrl.sales" >
             <div class="sale_title" >
                 <div>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="main_content main_content__empty" ng-if="SaleCtrl.state == 'empty'">
+    <!--<div class="main_content main_content__empty" ng-if="SaleCtrl.state == 'empty'">
         <div class="main_content__empty_container">
             <div class="main_content__empty_container__img main_content__empty_container__img_sale"></div>
             <div class="main_content__empty_container__title">Sales not found</div>
@@ -55,7 +55,7 @@
                 <div class="main_content__empty_container__button main_content__empty_container__button__blue" ng-click="SaleCtrl.toggleSidenav()" role="button" tabindex="0">Create a Sale</div>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
 <sale-create sales="SaleCtrl.sales" type="'row'"></sale-create>
 <sale-manage sales="SaleCtrl.sales" type="'row'"></sale-manage>

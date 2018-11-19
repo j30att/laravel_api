@@ -128,18 +128,23 @@ class SaleManage {
 
         };
         this.SalesResourceService.updateMySale(sale).then(response => {
-            console.log('hui');
+
         })
     }
 
     apllyBid(bid) {
+
         let data = {
             sale_id: this.sale.id,
             bid: bid
         };
-        this.SalesResourceService.apllyMyBid(data).then(response => {
-            this.sale = response.data.data;
-        })
+        this.SalesResourceService.bidConfirm(bid).then(response => {
+            this.sales = response.data.data;
+            this.sales['active'].forEach((item)=>{
+                if (item.id == bid.sale_id)
+                    this.sale = item;
+            })
+        });
 
     }
 

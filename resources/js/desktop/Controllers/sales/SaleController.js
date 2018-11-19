@@ -11,9 +11,6 @@ class SaleController {
                 this.state = 'empty';
             }
         });
-
-
-
     }
 
     toggleSidenav(index) {

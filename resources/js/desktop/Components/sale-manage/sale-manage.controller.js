@@ -48,6 +48,7 @@ class SaleManage {
     }
 
     showBidsConfirm(bid) {
+        console.log(bid);
         let confirm = this.$mdDialog.confirm()
             .parent(angular.element(document.querySelector('[md-component-id="right_manage"]')))
             .htmlContent(
@@ -56,14 +57,14 @@ class SaleManage {
                     <span>${bid.share}%</span>
                     <span>$${bid.amount}</span>
                 </div>
-                <div>Accept bid. Your markup will be decreased to 1.1 to accept all bids</div>`)
+                <div>Accept bid. Your markup will be decreased to ${bid.markup} to accept all bids</div>`)
             .ok('Accept')
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(() => {
 
             this.SalesResourceService.bidConfirm(bid).then((response)=>{
-                console.log(response.data.data);
+
                 this.sales = response.data.data;
                 this.sales['active'].forEach((item)=>{
                     if (item.id == bid.sale_id)
@@ -104,7 +105,7 @@ class SaleManage {
 
         this.$mdDialog.show(confirm).then(() => {
             this.SalesResourceService.payRemaining(this.sale, this.payRemainig).then((response)=>{
-                console.log(response)
+                this.sales = response.data.data;
             });
             this.$mdSidenav('right_manage').close();
         }, () => {});

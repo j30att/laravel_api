@@ -263,6 +263,7 @@ class SaleController extends Controller
 
     public function payRemaining(Request $request)
     {
+        $user = Auth::user();
         $sale = $request->get('sale');
         $remaining = $request->get('remaining');
         $sale = Sale::query()->where('id', $sale['id'])->first();
@@ -275,11 +276,21 @@ class SaleController extends Controller
 
             $sale->fill_status = Sale::TYPE_FULL;
             $sale->save();
+            ManageService::calcAmountRaised($sale);
+            ManageService::calcAvgMarkup($sale);
+            ManageService::calcShareSold($sale);
             PPInteraction::payRemaining($sale, $remaining);
             DB::commit();
 
-            //todo правильный респонс
-            return response()->json(['status' => 1]);
+            $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
+            $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit(3)->latest()->get();
+
+            return response()->json([
+                'data' => [
+                    'active' => SaleResource::collection($saleActive),
+                    'closed' => SaleResource::collection($saleCanceled)
+                ]
+            ]);
 
         } catch (\Exception $e) {
             DB::rollBack();
