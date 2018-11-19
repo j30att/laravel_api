@@ -11,8 +11,8 @@ class Sale extends Model
     const SALE_ACTIVE  = 1;
     const SALE_CLOSED  = 2;
 
-    const TYPE_FULL = 1;
-    const TYPE_IN_PROGRESS = 2;
+    const TYPE_IN_PROGRESS = 1;
+    const TYPE_FULL = 2;
 
     protected $fillable=[
         'user_id',
@@ -56,6 +56,10 @@ class Sale extends Model
     }
     public function event(){
         return $this->belongsTo(Event::class,'event_id');
+    }
+
+    public function response(){
+        return $this->hasMany(PPResponse::class, 'sale_id');
     }
 
     public function getPlacedAttribute(){

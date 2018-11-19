@@ -9,7 +9,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    const LIMIT_EVENT_MAIN_PAGE         = 6;
+    const LIMIT_EVENT_MAIN_PAGE     = 6;
+
+    const STATUS_ACTIVE             = 1;
+    const STATUS_CLOSED             = 2;
 
     protected $fillable = [
         'id',

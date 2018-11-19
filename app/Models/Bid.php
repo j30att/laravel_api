@@ -32,7 +32,11 @@ class Bid extends Model
     }
 
     public function sale(){
-        return $this->belongsTo(Sale::class,'sale_id');
+        return $this->belongsTo(Sale::class, 'sale_id');
+    }
+
+    public function response(){
+        return $this->hasMany(PPRequest::class, 'bid_id');
     }
 
     public function getTransactionCodeAttribute (){

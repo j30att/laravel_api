@@ -20,4 +20,8 @@ class PPRequest extends Model
         'headers',
         'body',
     ];
+
+    public function response (){
+        return $this->hasOne(PPResponse::class,'p_p_request');
+    }
 }
