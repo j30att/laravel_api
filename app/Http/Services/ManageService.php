@@ -51,7 +51,6 @@ class ManageService
         ManageService::calculateWinners($sale->bids, $money);
     }
 
-
     private static function calculateWinners($bids, $money){
         foreach ($bids as $bid){
             $bisPrize = $money * ($bid->share)/100;
@@ -61,13 +60,7 @@ class ManageService
         }
     }
 
-
-    public static function manageSale(Sale $sale){
-
-
-    }
-
-    private static function calcAmountRaised(Sale $sale){
+    public static function calcAmountRaised(Sale $sale){
         $bidsMatched = $sale->bids_matched;
         $event = $sale->event;
 
@@ -84,7 +77,7 @@ class ManageService
     }
 
 
-    private static function calcAvgMarkup(Sale $sale){
+    public static function calcAvgMarkup(Sale $sale){
         $bids = $sale->bids;
         $count = count($bids);
         $avgMarkup = 0;
@@ -96,7 +89,7 @@ class ManageService
         $sale->save();
     }
 
-    private static function calcShareSold (Sale $sale){
+    public static function calcShareSold (Sale $sale){
         $event = $sale->event;
         $percent = $event->buy_in / 100;
         $percentage = $sale->amount_raised / $percent;
@@ -104,5 +97,8 @@ class ManageService
         $sale->save();
     }
 
+    public static function calcRemaining(Sale $sale){
+        return ((integer)($sale->event->buy_in * 100) - (integer)($sale->amount_raised*100))/100;
+    }
 
 }

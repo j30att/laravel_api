@@ -16,7 +16,7 @@ class Bid extends Model
 
     const BID_PLACE             = 'BID_PLACE';
     const BID_CANCEL            = 'BID_CANCEL';
-    const BID_PAY_REMAINING     = 'BID_PAY_REMAINING';
+    const BID_PAY_REMAINING     = 'PAY_REMAINING';
 
     protected $fillable=[
         'user_id',

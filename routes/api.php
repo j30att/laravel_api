@@ -40,12 +40,15 @@ Route::group([/*'middleware' => 'auth'*/], function(){
 });
 
 Route::group(['middleware' => 'auth'], function (){
+    Route::post('/sale/my/pay-remainig', 'Api\SaleController@payRemaining');
+    Route::post('/sale/my/bid-apply', 'Api\SaleController@bidApplay');
+
     Route::post('/sales/my',        'Api\SaleController@mySales');
     Route::post('/sales/my/active', 'Api\SaleController@myFilterSales');
     Route::post('/sales/my/closed', 'Api\SaleController@myFilterSales');
 
     Route::post('/sales/my/update/', 'Api\SaleController@myUpdateSales');
-    Route::post('/sales/my/aplly/', 'Api\SaleController@applayBidToMySale');
+
 
     Route::post('/bids/my',             'Api\BidController@myBids');
     Route::post('/bids/my/matched',     'Api\BidController@myFilterBids');
@@ -61,9 +64,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::post('/dealer/events', 'Api\DealerController@eventsList');
     Route::post('/dealer/profile', 'Api\DealerController@profileDetail');
     Route::post('/dealer/event/detail', 'Api\DealerController@eventDetail');
-
     Route::post('/dealer/currency', 'Api\DealerController@currencyList');
-
     Route::post('/dealer/result', 'Api\DealerController@resultSale');
 
     Route::post('/flights', 'Api\FlightController@filterFlight');

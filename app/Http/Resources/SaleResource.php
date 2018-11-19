@@ -26,9 +26,9 @@ class SaleResource extends JsonResource
             'event'         => new EventResource($this->event),
             'subevent'      => new SubEventResource($this->subevent),
             'bids'          => $this->bids,
-            'bids_share'    => $this->calculateBidsShare(),
-            'amount_raised' => $this->calculateAmountRaise(),
-            'average_murkup' => $this->calculateAvarageMarkup(),
+            'bids_share'    => $this->share_sold,
+            'amount_raised' => $this->amount_raised,
+            'average_murkup' => $this->average_markup,
             'creator'       => $this->creator,
         ];
 

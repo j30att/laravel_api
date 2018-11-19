@@ -16,11 +16,21 @@ class PPResponse extends Model
     protected $fillable = [
         'type',
         'bid_id',
+        'sale_id',
         'response',
-        'wallet_references_id'
+        'wallet_references_id',
+        'p_p_request',
+        'status',
+        'error_code',
+        'error_description',
+
     ];
 
     public function bid(){
         return $this->belongsTo(Bid::class);
+    }
+
+    public function request(){
+        return $this->belongsTo(PPRequest::class);
     }
 }
