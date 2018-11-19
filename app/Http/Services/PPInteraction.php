@@ -180,9 +180,7 @@ class PPInteraction
         $salerUser = $sale->creator;
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
 
-
         $guzzleClient = new Client();
-
 
         $header = [
             'Content-Type' => 'application/json',
@@ -363,7 +361,6 @@ class PPInteraction
             Log::info(serialize($body));
         }
     }
-
 
     public static function fxRates()
     {

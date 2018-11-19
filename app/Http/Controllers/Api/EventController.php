@@ -118,43 +118,44 @@ class EventController extends Controller
     {
         $query = Event::query();
         $filter = $request->get('filter');
-        $eventIds = [];
-        $countryIds = [];
+
         if ($filter) {
-            if(count($filter['events']) > 0){
-                foreach ($filter['events'] as $event){
-                    $eventIds[] = $event['id'];
-                }
-                $eventsFiltredEvent = Event::query()->whereIn('id', $eventIds)->get();
-
-            }
-            if(count($filter['countries']) > 0){
-                foreach ($filter['countries'] as $country){
-                    $countryIds[] = $country['id'];
-                }
-                $eventsFiltredCountry = Event::query()->whereIn('country_id', $countryIds)->get();
+            if (!empty($filter['event']) && is_array($filter['event'])) {
+                $query->whereIn('id', $filter['event']);
             }
 
-            if (isset($eventsFiltredEvent) && isset($eventsFiltredCountry)){
-                $events = $eventsFiltredCountry->merge($eventsFiltredEvent);
-                return EventsList::collection($events);
+            if (!empty($filter['country']) && is_array($filter['country'])) {
+                $query->whereIn('country_id', $filter['country']);
             }
-            if (isset($eventsFiltredEvent)){
-                return EventsList::collection($eventsFiltredEvent);
+
+            if (!empty($filter['date'])) {
+                $to = Carbon::now();
+
+                if ($filter['date'] == 1) {
+                    $from = $to->copy()->subMonth();
+                } elseif ($filter['date'] == 2) {
+                    $from = $to->copy()->subYear();
+                }
+
+                if (isset($from)) {
+                    $query->where(function ($query) use ($from, $to) {
+                        $query->WhereBetween('date_end', [$from, $to])
+                            ->orWhereBetween('date_start', [$from, $to]);
+                    });
+                }
             }
-            if (isset($eventsFiltredCountry)){
-                return EventsList::collection($eventsFiltredCountry);
-            }
+
         }
-        return $this-> mainEvents();
-            //EventsList::collection($query->get());
+
+        return EventsList::collection($query->get());
     }
 
     /**
      * @param Request $request
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function getFilters(Request $request)
+    public
+    function getFilters(Request $request)
     {
         //$lastMonth = Carbon::now()->subMonth();
         $lastYear = Carbon::now()->subYear();
@@ -166,6 +167,7 @@ class EventController extends Controller
         //$events[0] = 'All events';
 
         $countries = Country::query()
+            ->whereHas('events')
             ->orderBy('name')
             ->pluck('name', 'id')
             ->toArray();
@@ -175,8 +177,8 @@ class EventController extends Controller
             'date' => [
                 'placeholder' => 'Last month',
                 'options' => [
-                    0 => 'Last month',
-                    $lastYear->toDateTimeString() => 'Last year',
+                    1 => 'Last month',
+                    2 => 'Last year',
                 ]
             ],
             'event' => [
@@ -187,7 +189,7 @@ class EventController extends Controller
                 'placeholder' => 'All regions',
                 'options' => $countries
             ],
-            'venue' =>  [
+            'venue' => [
                 'placeholder' => 'All venues',
                 'options' => $countries
             ]

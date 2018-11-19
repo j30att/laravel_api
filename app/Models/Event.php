@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    const LIMIT_EVENT_MAIN_PAGE         = 6;
+    const LIMIT_EVENT_MAIN_PAGE = 6;
 
     protected $fillable = [
         'id',
@@ -43,7 +43,8 @@ class Event extends Model
         return $this->hasMany(Sale::class, 'event_id');
     }
 
-    public function  country(){
+    public function country()
+    {
         return $this->belongsTo(Country::class, 'country_id');
     }
 
