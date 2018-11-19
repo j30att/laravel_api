@@ -34,9 +34,4 @@ Route::group(['middleware' => 'admin'], function() {
 Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
 
 
-
-Route::get('desktop/all', function (){
-    return view('desktop.bids.index');
-});
-
-
+Route::get('desktop/all', 'PageController@desktop');
