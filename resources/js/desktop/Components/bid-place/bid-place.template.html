@@ -60,7 +60,7 @@
 
                 </div>
                 <div class="modal_content__hr"></div>
-               <div class="you_bids">
+               <div class="you_bids" ng-hide="$ctrl.status == 2">
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">
                         <div class="you_bids__item">
@@ -82,7 +82,7 @@
             <div class="modal_foter">
                 <div class="modal_foter__buttons">
                     <div class="button_text" role="button" tabindex="0" ng-click="$ctrl.close('right')">Cancel</div>
-                    <div class="button_blue" role="button" tabindex="0" ng-click="$ctrl.saveMyBid()" ng-if="$ctrl.user != null">Place a bid</div>
+                    <div ng-hide="$ctrl.status == 2" class="button_blue" role="button" tabindex="0" ng-click="$ctrl.saveMyBid()" ng-if="$ctrl.user != null">Place a bid</div>
 
                 </div>
             </div>

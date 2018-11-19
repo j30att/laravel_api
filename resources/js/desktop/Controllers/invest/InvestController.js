@@ -21,6 +21,14 @@ class InvestController {
         this.user == null ? this.getSales() : this.getSales(this.user.id);
     }
 
+    $onInit(){
+        this.$scope.$on('place-a-bid', (event, data) => {
+            if(data.status === 2){
+                this.sales = this.sales.filter(item => item.id !== data.id);
+            }
+        });
+    }
+
     setFilter(param) {
         if (param === 'closed') {
             this.filter = SALE_CLOSED;

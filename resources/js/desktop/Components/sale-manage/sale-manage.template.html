@@ -11,12 +11,12 @@
                     <div style="justify-content: space-between">
                         <div>
                             <div class="profile_status__name">{% $ctrl.sale.event.title %}</div>
-                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':2%}
+                            <div class="profile_status__event">Buy in {% $ctrl.sale.event.buy_in | currency:'$':0%}
                             </div>
                         </div>
                         <div class="profile_status__gte_and_by">
-                            <div class="profile_status__buyin">{% $ctrl.sale.event.buy_in | currency:'£':2%}</div>
-                            <div class="profile_status__gte">{% $ctrl.sale.event.fund | currency:'£':2%} GTE</div>
+                            <div class="profile_status__buyin">{% $ctrl.sale.event.buy_in | currency:'$':0%}</div>
+                            <div class="profile_status__gte">{% $ctrl.sale.event.fund | currency:'$':0%} GTE</div>
                         </div>
                     </div>
                     <div class="profile_status__attributs d-flex">

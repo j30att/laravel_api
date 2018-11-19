@@ -7,6 +7,7 @@ use App\Http\Resources\Bids\BidsInvestResource;
 use App\Http\Services\ManageService;
 use App\Http\Services\PPInteraction;
 use App\Models\Bid;
+use App\Models\Sale;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -89,11 +90,19 @@ class BidController extends Controller
                 ->where('sale_id', $bid->sale_id)
                 ->where('status', Bid::BIDS_UNMATCHED)->get();
 
-            return json_encode(['status' => 1, 'bids' => [
-                'highest' => BidsInvestResource::collection($highest),
-                'matched' => BidsInvestResource::collection($matched),
-                'unmatched' => BidsInvestResource::collection($unmatched)
-            ]]);
+            $sale = Sale::query()
+                ->where('id', $bid->sale_id)
+                ->first();
+
+            return json_encode([
+                'status' => 1,
+                'bids' => [
+                    'highest' => BidsInvestResource::collection($highest),
+                    'matched' => BidsInvestResource::collection($matched),
+                    'unmatched' => BidsInvestResource::collection($unmatched)
+                ],
+                'sale' => $sale
+            ]);
 
         } catch (\Exception $e) {
             DB::rollBack();
