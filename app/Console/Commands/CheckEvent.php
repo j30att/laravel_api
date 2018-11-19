@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Services\PPInteraction;
 use App\Models\Event;
+use App\Models\PPBid;
 use App\Models\PPRequest;
 use App\Models\PPResponse;
 use App\Models\Sale;
@@ -46,37 +47,25 @@ class CheckEvent extends Command
         $now = Carbon::now();
 
         $events = Event::query()->where('status', Event::STATUS_ACTIVE)->with('sales')->get();
+
         foreach ($events as $event) {
             $startDate = Carbon::parse($event->date_start);
             if ($now->gte($startDate)) {
-                $event->status = Event::STATUS_CLOSED;
-                //$event->save();
+                $event->update(['status' => Event::STATUS_CLOSED]);
                 foreach ($event->sales as $sale) {
-                    if ($sale->fill_status == Sale::TYPE_FULL) {
-                        $walletReferenceIds = [];
-                        $saleResponse = PPResponse::query()
-                            ->where('sale_id', $sale->id)
-                            ->where('type', PPResponse::TYPE_BID_REMAINING)
-                            ->where('status', 'SUCCESS')->first();
-
-                        if (!is_null($saleResponse)) $walletReferenceIds[] = $saleResponse->wallet_references_id;
-                        foreach ($sale->bids as $bid) {
-                            $bidResponse = PPResponse::query()
-                                ->where('bid_id', $bid->id)
-                                ->where('status', 'SUCCESS')->first();
-                            $walletReferenceIds = $bidResponse->wallet_references_id;
-                        }
-
-                        PPInteraction::bidClosure($walletReferenceIds);
+                    if ($sale->status == Sale::SALE_CLOSED) {
+                        $ppBidsIds = PPBid::query()->where('sale_id', $sale->id)->get()->pluck('id')->toArray();
+                        PPInteraction::bidClosure($ppBidsIds);
                     } else {
-                        PPRequest::query()->where('sale_id', $sale->id)->
-                        PPInteraction::bidCancel(null, $sale);
-                        foreach ($sale->bids as $bid) {
-                            PPInteraction::bidCancel($bid, null);
-                        }
+                        $ppBids = PPBid::query()->where('sale_id', $sale->id)->get();
+                            foreach ($ppBids as $ppBid){
+                                //PPInteraction::bidCancel($ppBid);
+                            }
+                        $sale->update(['status'=>Sale::SALE_CLOSED]);
                     }
                 }
             }
         }
     }
+
 }

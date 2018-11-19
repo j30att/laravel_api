@@ -64,6 +64,8 @@ class PPInteraction
 
 
         try {
+
+            //$ppRequest = self::createRequest(null,$bid,$body,$header,null);
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
@@ -197,7 +199,7 @@ class PPInteraction
         }
     }
 
-    public static function bidCancel(Bid $bid = null, Sale $sale = null)
+    public static function bidCancel(PPBid $PPBid)
     {
         $body =[];
         $header =[];
@@ -304,12 +306,12 @@ class PPInteraction
         }
     }
 
-    public static function bidClosure(array $transactions)
+    public static function bidClosure($transactions)
     {
+
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
         $guzzleClient = new Client();
-
 
         $header = [
             'Content-Type' => 'application/json',
@@ -443,6 +445,31 @@ class PPInteraction
             Log::error($e->getMessage());
 
         }
+
+    }
+
+    private static function createRequest(Sale $sale = null, Bid $bid = null, $body, $header, $remaining){
+        if ($sale == null){
+            $ppRequest = new PPRequest();
+            $ppRequest->bid_id = $bid->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
+            $ppRequest->amount = $bid->amount;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+            $ppRequest->save();
+        } else {
+            $ppRequest = new PPRequest();
+            $ppRequest->sale_id = $sale->id;
+            $ppRequest->transaction_type = PPRequest::TYPE_BID_REMAINING;
+            $ppRequest->amount = $remaining;
+            $ppRequest->headers = json_encode($header);
+            $ppRequest->body = json_encode($body);
+            $ppRequest->save();
+        }
+        return $ppRequest;
+
+    }
+    private static function createResponse(Sale $sale = null, Bid $bid = null, PPRequest $request){
 
     }
 }
