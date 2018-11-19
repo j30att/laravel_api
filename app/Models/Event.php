@@ -46,7 +46,8 @@ class Event extends Model
         return $this->hasMany(Sale::class, 'event_id');
     }
 
-    public function  country(){
+    public function country()
+    {
         return $this->belongsTo(Country::class, 'country_id');
     }
 

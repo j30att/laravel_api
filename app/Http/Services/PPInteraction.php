@@ -421,7 +421,6 @@ class PPInteraction
         }
     }
 
-
     public static function fxRates()
     {
 

@@ -12,6 +12,7 @@
                             class="event_filters__item_select md-no-underline"
                             data-md-container-class="event_filter_select"
                             ng-model="EventsCtrl.activeFilter['date']"
+                            ng-change="EventsCtrl.setFilter()"
                             placeholder="{%EventsCtrl.filters.date.placeholder%}">
                             <md-option
                                 ng-repeat="(value, name) in EventsCtrl.filters.date.options"
@@ -26,6 +27,7 @@
                             md-selected-text="EventsCtrl.filters.event.placeholder"
                             data-md-container-class="event_filter_select_multiple"
                             ng-model="EventsCtrl.activeFilter['event']"
+                            ng-change="EventsCtrl.setFilter()"
                             placeholder="{%EventsCtrl.filters.event.placeholder%}"
                             multiple>
                             <md-select-header class="event_filter_select-header">
@@ -47,6 +49,7 @@
                             md-selected-text="EventsCtrl.filters.country.placeholder"
                             data-md-container-class="event_filter_select_multiple"
                             ng-model="EventsCtrl.activeFilter['country']"
+                            ng-change="EventsCtrl.setFilter()"
                             placeholder="{%EventsCtrl.filters.country.placeholder%}"
                             multiple>
                             <md-select-header class="event_filter_select-header">
@@ -67,6 +70,7 @@
                             class="event_filters__item_select md-no-underline"
                             data-md-container-class="event_filter_select"
                             ng-model="EventsCtrl.activeFilter['venue']"
+                            ng-change="EventsCtrl.setFilter()"
                             placeholder="{%EventsCtrl.filters.venue.placeholder%}">
                             <md-option
                                 ng-repeat="(value, name) in EventsCtrl.filters.venue.options"

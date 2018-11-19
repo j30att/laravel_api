@@ -36,7 +36,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controllerAs: 'InvestCtrl'
         })
         .state('invest-events', {
-            url: '/invest/events',
+            url: '/invest/events?date&event&country&venue',
             template: require('./views/events/index.template.html'),
             controller: 'EventsController',
             controllerAs: 'EventsCtrl',

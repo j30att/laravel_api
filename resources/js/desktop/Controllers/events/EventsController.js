@@ -1,16 +1,16 @@
 class EventsController {
-    constructor($scope, $element, EventsResourceService) {
+    constructor($state, $scope, $element, $location, EventsResourceService) {
+        this.$state = $state;
         this.$scope = $scope;
         this.$element = $element;
+        this.$location = $location;
         this.EventsResourceService = EventsResourceService;
 
         this._opts = {dataLoad: false};
 
         this.events = [];
         this.filters = {};
-        this.activeFilter = [];
-
-        this.getEvents();
+        this.activeFilter = {};
         this.getFilters();
     }
 
@@ -20,17 +20,28 @@ class EventsController {
         });
     }
 
-    setFilter(param) {
-
-    }
+    setFilter(clear = false) {
+        if (!clear) {
+            this.$state.go('invest-events', this.activeFilter)
+        } else {
+            this.$state.go('invest-events', {
+                date: null,
+                event: null,
+                country: null,
+                venue: null
+            })
+        }
+    };
 
     disableFilter(type, index) {
         if (type) {
             if (this.activeFilter[type][index]) {
                 this.activeFilter[type].splice(index, 1);
+                this.setFilter();
             }
         } else {
-            this.activeFilter = [];
+            this.activeFilter = {};
+            this.setFilter(true);
         }
     }
 
@@ -56,11 +67,34 @@ class EventsController {
         return date || event || country || venue;
     }
 
+    applyFilters() {
+        let {date, event, country, venue} = this.$state.params;
+
+        if (typeof date !== 'undefined') {
+            this.activeFilter.date = date;
+        }
+
+        if (typeof event !== 'undefined') {
+            this.activeFilter.event = typeof event === 'string' ? [event] : event;
+        }
+
+        if (typeof country !== 'undefined') {
+            this.activeFilter.country = typeof country === 'string' ? [country] : country;
+        }
+
+        if (typeof venue !== 'undefined') {
+            this.activeFilter.venue = venue;
+        }
+
+        this.getEvents();
+    }
+
     getFilters() {
         this.EventsResourceService.getFilters(this.activeFilter)
             .then(response => {
                 this.filters = response.data.data;
                 this._opts.dataLoad = true;
+                this.applyFilters();
             });
     }
 
@@ -75,6 +109,6 @@ class EventsController {
 
 }
 
-EventsController.$inject = ['$scope', '$element', 'EventsResourceService'];
+EventsController.$inject = ['$state', '$scope', '$element', '$location', 'EventsResourceService'];
 
 export {EventsController};
