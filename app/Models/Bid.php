@@ -17,6 +17,7 @@ use Illuminate\Support\Str;
  * @property float $amount
  * @property int $currency_id
  * @property int $outcome
+ * @property int $p_p_bid_id
  * @property string $created_at
  * @property string $updated_at
  *

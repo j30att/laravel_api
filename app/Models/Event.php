@@ -26,6 +26,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $currency_id
  * @property int $status
  *
+ * @property Sale[] $sales
+ * @property SubEvent[] $sub_events
+ *
  * @package App\Models
  */
 class Event extends Model

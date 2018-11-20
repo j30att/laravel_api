@@ -44,9 +44,14 @@ class ManageService
         }
     }
 
-    private static function equationLinkBids(Bid $bid, Sale $sale)
+    public static function equationLinkBids(Bid $bid, Sale $sale)
     {
-        if ($sale->share == $bid->share && $sale->markup == $bid->markup && $sale->amount == $bid->amount) return true;
+        if ($sale->share == $bid->share
+            && $sale->markup == $bid->markup
+            && $sale->amount == $bid->amount) {
+            return true;
+        }
+
         return false;
     }
 
@@ -97,6 +102,7 @@ class ManageService
 
         if ($amount_raised >= $event->buy_in) {
             $sale->status = Sale::SALE_CLOSED;
+            $sale->fill_status = 1;
             $sale->save();
         }
 
@@ -170,60 +176,74 @@ class ManageService
 
     }
 
-    public static function manageTransaction(Bid $bid)
+    public static function sendBidToAPI(Bid $bid)
     {
+        /** @var Transaction $transactionExist */
         $transactionExist = Transaction::query()
             ->where('sale_id', $bid->sale_id)
             ->where('user_id', $bid->user_id)
             ->where('status', Transaction::STATUS_SUCCESS)
+            ->whereHas('ppBid')
             ->first();
 
-        if ($transactionExist) {
-            $ppbid = PPBid::query()->where('pp_bid_id', $transactionExist->pp_bid_id)->first();
-        }
-
-        if (isset($ppbid) && $ppbid) {
+        if ($transactionExist && $transactionExist->ppBid) {
             $transaction = self::createTransaction($bid, Transaction::TYPE_BID_CHANGED);
-            $ppbid = PPInteraction::bidChange($bid, $ppbid);
-            self::updateTransaction($bid, $transaction, $ppbid);
+            $ppBid = PPInteraction::bidChange($bid, $transactionExist->ppBid);
         } else {
             $transaction = self::createTransaction($bid, Transaction::TYPE_BID_CREATED);
-            $ppbid = PPInteraction::bidPlace($bid);
-            self::updateTransaction($bid, $transaction, $ppbid);
+            $ppBid = PPInteraction::bidPlace($bid);
         }
 
-        /*if($ppbid){
+        if($ppBid){
+            self::updateTransaction($transaction, $ppBid);
+
             $bid->status = Bid::BIDS_MATCHED;
+            $bid->p_p_bid_id = $ppBid->pp_bid_id;
             $bid->save();
+
+            /** @var Sale $sale */
             $sale = Sale::query()->find($bid->sale_id);
+            $sale->markup = $bid->markup;
+            $sale->share = $bid->share;
+            $sale->amount= $bid->amount;
+            $sale->save();
+
             self::calcAmountRaised($sale);
             self::calcShareSold($sale);
             self::calcAvgMarkup($sale);
             self::calcClose($sale);
-        }*/
+        }
 
     }
 
-    private static function createTransaction(Bid $bid, $type)
+    public static function createTransaction(Bid $bid, $type)
     {
         $transaction = new Transaction();
+
         $transaction->bid_id = $bid->id;
         $transaction->sale_id = $bid->sale_id;
         $transaction->user_id = $bid->user_id;
         $transaction->amount = $bid->amount;
         $transaction->type = $type;
-        if ($transaction->save()) return $transaction;
+
+        if ($bid->p_p_bid_id) {
+            $transaction->pp_bid_id = $bid->p_p_bid_id;
+        }
+
+        if ($transaction->save()) {
+            return $transaction;
+        }
+
         return false;
     }
 
-    private static function updateTransaction(Bid $bid, Transaction $transaction, $ppbid)
+    private static function updateTransaction(Transaction $transaction, $ppBid)
     {
-        if ($ppbid) {
+        if ($ppBid) {
             $transaction->update([
-                'pp_bid_id' => $ppbid->pp_bid_id,
+                'pp_bid_id' => $ppBid->pp_bid_id,
                 'status' => Transaction::STATUS_SUCCESS
             ]);
-            $bid->update(['pp_bid_id' => $ppbid->id]);
         } else {
             $transaction->update(['status' => Transaction::STATUS_FAILED]);
         }

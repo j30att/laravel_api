@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
  * @property int $event_id
  * @property int $sub_event_id
  * @property int $flight_id
- * @property int $status_id
+ * @property int $status
  * @property float $markup
  * @property float $share
  * @property float $amount
@@ -41,11 +41,9 @@ use Illuminate\Support\Str;
  */
 class Sale extends Model
 {
-    const SALE_ACTIVE  = 1;
-    const SALE_CLOSED  = 2;
-
-    const TYPE_IN_PROGRESS = 1;
-    const TYPE_FULL = 2;
+    const SALE_ACTIVE      = 1;
+    const SALE_CLOSED      = 2;
+    const SALE_COMPLETED   = 3;
 
     protected $fillable=[
         'user_id',

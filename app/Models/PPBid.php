@@ -14,19 +14,27 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  *
+ * @property Bid[] $bids
+ * @property Transaction[] $transactions
+ *
  * @package App\Models
  */
 class PPBid extends Model
 {
-    protected $fillable =[
+    protected $fillable = [
         'pp_bid_id',
         'sale_id',
         'status',
         'amount',
     ];
 
+    public function bids()
+    {
+        return $this->hasMany(Bid::class, 'p_p_bid_id', 'pp_bid_id');
+    }
 
-    public function bids (){
-        return $this->belongsTo(Bid::class, 'pp_bid_id', 'p_p_bid_id');
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'pp_bid_id', 'pp_bid_id');
     }
 }

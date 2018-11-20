@@ -45,7 +45,7 @@ class GetPPData extends Command
     {
         $helper = new CMSHelper();
 
-        $msg = "a:3:{s:10:\"entityName\";s:22:\"AppBundle\\Entity\\Event\";s:8:\"entityId\";i:88;s:6:\"action\";s:6:\"update\";}";
+        $msg = "a:3:{s:10:\"entityName\";s:22:\"AppBundle\\Entity\\Event\";s:8:\"entityId\";i:72;s:6:\"action\";s:6:\"update\";}";
 
         $helper->execute($msg);
     }

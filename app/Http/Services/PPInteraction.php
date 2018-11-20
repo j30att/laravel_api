@@ -26,8 +26,7 @@ class PPInteraction
         $sale = $bid->sale;
         $event = $sale->event;
 
-        /** @var User $user */
-        $user = Auth::user();
+        $user = $bid->investor;
         $ppUser = $user->ppUser;
         $creator = $bid->sale->creator;
         $ppCreator = $creator->ppUser;
@@ -101,7 +100,7 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
 
@@ -110,20 +109,18 @@ class PPInteraction
 
     public static function bidChange(Bid $bid, PPBid $PPBid)
     {
+        /** @var User $user */
+        $user = $bid->investor;
         $sale = $bid->sale;
         $event = $sale->event;
-        /** @var User $user */
-        $user = Auth::user();
         $ppUser = $user->ppUser;
         $creator = $bid->sale->creator;
         $ppCreator = $creator->ppUser;
+        $newAmount = $PPBid->amount + $bid->amount;
 
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidamendedinfo/';
 
-
         $guzzleClient = new Client();
-
-        $newAmount = $PPBid->amount + $bid->amount;
 
         $header = [
             'Content-Type' => 'application/json',
@@ -155,7 +152,6 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
@@ -168,32 +164,29 @@ class PPInteraction
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CHANGE;
             $PPResponse->response = $json;
-            //$PPResponse->wallet_references_id = $responseContent['amountChange'];
-            //$PPResponse->status = $responseContent['status'];
-            //$PPResponse->error_code = $responseContent['errorCode'];
-            //$PPResponse->error_description = $responseContent['errorDescription'];
+            $PPResponse->status = $responseContent['status'];
+            $PPResponse->error_code = $responseContent['errorCode'];
+            $PPResponse->error_description = $responseContent['errorDescription'];
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
 
-
             if ($responseContent['status'] == 'SUCCESS') {
-
                 $PPBid->amount = $newAmount;
                 $PPBid->status = PPResponse::TYPE_BID_CHANGE;
                 $PPBid->save();
                 return $PPBid;
             }
-            return false;
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
+
+        return false;
     }
 
     public static function bidCancel(PPBid $PPBid)
     {
-
         $sale = Sale::query()->where('id', $PPBid->sale_id)->first();
         $bid = Bid::query()->where('p_p_bid', $PPBid->id)->first();
 
@@ -242,31 +235,32 @@ class PPInteraction
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+            $json = $response->getBody()->getContents();
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
-            $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->response = $json;
             $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
-
             $PPResponse->p_p_request = $ppRequest->id;
 
-            $PPResponse->save();
+            if ($PPResponse->save() && $PPResponse->status === "SUCCESS") {
+                return true;
+            }
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
+
+        return false;
     }
 
     public static function bidClosure($transactions)
     {
-
-        //todo
-
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
         $guzzleClient = new Client();
@@ -293,21 +287,35 @@ class PPInteraction
                 'headers' => $header,
                 'json' => $body
             ]);
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+
+            $json = $response->getBody()->getContents();
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
-
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
-            $PPResponse->response = $response->getBody()->getContents();
-            $PPResponse->status = $responseContent['status'];
+            $PPResponse->response = $json;
+
+            foreach ($responseContent['errorCode'] as $status) {
+                $PPResponse->status = $status;
+                if ($status == 'FAILED') {
+                    break;
+                }
+            }
+
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
             $PPResponse->p_p_request = $ppRequest->id;
-            $PPResponse->save();
+
+            if ($PPResponse->save()) {
+                return $responseContent['errorCode'];
+            }
+
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             Log::info(serialize($body));
         }
+
+        return false;
     }
 
     public static function payRemaining(Sale $sale, $remaining)
@@ -371,7 +379,7 @@ class PPInteraction
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
 
-            if($responseContent['status'] == 'SUCCESS'){
+            if ($responseContent['status'] == 'SUCCESS') {
                 return $responseContent['walletReferenceId'];
             }
 

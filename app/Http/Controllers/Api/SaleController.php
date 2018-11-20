@@ -10,8 +10,10 @@ use App\Http\Services\PPInteraction;
 use App\Models\Bid;
 use App\Models\Event;
 use App\Models\Sale;
+use App\Models\User;
 use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -23,6 +25,7 @@ class SaleController extends Controller
 {
     public function closingSoonSalesAuth(Request $request)
     {
+        /** @var User $user */
         $user = Auth::user();
 
         if ($user == null) {
@@ -35,14 +38,14 @@ class SaleController extends Controller
             ->where('status', SALE::SALE_ACTIVE)
             ->with('creator')
             ->with('event')
-            ->with(['bids_matched' => function ($query) use ($user) {
+            ->with(['bids_matched' => function (HasMany $query) use ($user) {
                 $query->where('user_id', $user->id);
             }])
-            ->with(['bids_unmatched' => function ($query) use ($user) {
+            ->with(['bids_unmatched' => function (HasMany $query) use ($user) {
                 $query->where('user_id', $user->id);
             }])
             ->get()
-            ->sortBy('event.date_end');
+            ->sortBy('event.date_start');
 
 
         return SaleInvestResource::collection($sales);
@@ -56,7 +59,7 @@ class SaleController extends Controller
             ->with('event')
             ->with('bids_highest')
             ->get()
-            ->sortBy('event.date_end');
+            ->sortBy('event.date_start');
 
         return SaleInvestResource::collection($sales);
     }
@@ -295,20 +298,11 @@ class SaleController extends Controller
     {
         try {
             $user = Auth::user();
-            DB::beginTransaction();
             $bid = $request->get('bid');
+
+            /** @var Bid $bid */
             $bid = Bid::query()->find($bid['id']);
-            $sale = $bid->sale;
-            $sale->markup = $bid->markup;
-            $sale->share = $bid->share;
-            $sale->amount= $bid->amount;
-            $sale->save();
-            ManageService::calcAmountRaised($sale);
-            ManageService::calcAvgMarkup($sale);
-            ManageService::calcShareSold($sale);
-            $bid->status = Bid::BIDS_MATCHED;
-            $bid->save();
-            DB::commit();
+            ManageService::sendBidToAPI($bid);
 
             $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
             $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit(3)->latest()->get();
@@ -321,7 +315,6 @@ class SaleController extends Controller
             ]);
 
         } catch (\Exception $e) {
-            DB::rollBack();
             Log::error($e->getMessage());
         }
     }
