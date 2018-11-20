@@ -12,4 +12,9 @@ class PPBid extends Model
         'status',
         'amount',
     ];
+
+
+    public function bids (){
+        return $this->belongsTo(Bid::class, 'pp_bid_id', 'p_p_bid_id');
+    }
 }

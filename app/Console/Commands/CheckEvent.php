@@ -3,11 +3,13 @@
 namespace App\Console\Commands;
 
 use App\Http\Services\PPInteraction;
+use App\Models\Bid;
 use App\Models\Event;
 use App\Models\PPBid;
 use App\Models\PPRequest;
 use App\Models\PPResponse;
 use App\Models\Sale;
+use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 
@@ -54,12 +56,15 @@ class CheckEvent extends Command
                 $event->update(['status' => Event::STATUS_CLOSED]);
                 foreach ($event->sales as $sale) {
                     if ($sale->status == Sale::SALE_CLOSED) {
-                        $ppBidsIds = PPBid::query()->where('sale_id', $sale->id)->get()->pluck('id')->toArray();
+                        $ppBids = PPBid::query()->where('sale_id', $sale->id)->get();
+                        $ppBidsIds = $ppBids->pluck('id')->toArray();
+                        $transaction = new Transaction();
+
                         PPInteraction::bidClosure($ppBidsIds);
                     } else {
                         $ppBids = PPBid::query()->where('sale_id', $sale->id)->get();
                             foreach ($ppBids as $ppBid){
-                                //PPInteraction::bidCancel($ppBid);
+                                PPInteraction::bidCancel($ppBid);
                             }
                         $sale->update(['status'=>Sale::SALE_CLOSED]);
                     }

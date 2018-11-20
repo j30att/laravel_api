@@ -96,7 +96,7 @@ class PPInteraction
             $PPResponse->save();
 
             $PPBid = false;
-            if ($responseContent['status'] == 'SUCCESS'){
+            if ($responseContent['status'] == 'SUCCESS') {
                 $PPBid = new PPBid();
                 $PPBid->pp_bid_id = $responseContent['walletReferenceId'];
                 $PPBid->sale_id = $sale->id;
@@ -184,7 +184,7 @@ class PPInteraction
             $PPResponse->save();
 
 
-            if ($responseContent['status'] == 'SUCCESS'){
+            if ($responseContent['status'] == 'SUCCESS') {
 
                 $PPBid->amount = $newAmount;
                 $PPBid->status = PPResponse::TYPE_BID_CHANGE;
@@ -201,74 +201,38 @@ class PPInteraction
 
     public static function bidCancel(PPBid $PPBid)
     {
-        $body =[];
-        $header =[];
-        if (!is_null($bid)) {
-            $investor = $bid->investor;
-            $sale = $bid->sale;
-            $ppUser = $investor->ppUser;
-            $event = $sale->event;
-            $salerUser = $sale->creator;
 
-            $header = [
-                'Content-Type' => 'application/json',
-                'player-session' => $ppUser->session,
-                'auth-token' => 'staking:pg:Test:ReleaseB',
-                'partner-name' => 'stakingapp'
-            ];
+        $sale = Sale::query()->where('id', $PPBid->sale_id)->first();
+        $bid = Bid::query()->where('p_p_bid', $PPBid->id)->first();
 
-            $body = [
-                'accountId' => $ppUser->party_poker_login,
-                'amount' => (integer)$bid->amount * 100,
-                'transactionType' => Bid::BID_CANCEL,
-                'requestorReferenceId' => $bid->transaction_code,
-                'transactionInitiatedDate' => $bid->transaction_initiated_date,
-                'brand' => 'PARTYPOKER',
-                "tournamentDetails" => [
-                    "sellerAccountId" => $salerUser->ppUser->party_poker_login,
-                    "mainEvent" => $event->title,
-                    "tournamentId" => $event->id,
-                    "venuId" => $event->venue_id,
-                    "venuName" => $event->venue_name,
-                    "currency" => $event->currency
-                ]
-            ];
+        $event = $sale->event;
+        $investor = $bid->investor;
+        $salerUser = $sale->creator;
 
-        } else {
-            $saleRequest = PPRequest::query()
-                ->where('sale_id', $sale->id)
-                ->where('transaction_type', PPRequest::TYPE_BID_REMAINING)
-                ->with(['response'=>function($query){
-                   $query->where('status', 'SUCCESS');
-                }])->first();
+        $header = [
+            'Content-Type' => 'application/json',
+            'player-session' => $investor->ppUser->session,
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
+        ];
 
-            $event= $sale->event;
-            $salerUser = $sale->creator;
-            $ppUser = $salerUser->ppUser;
-            $header = [
-                'Content-Type' => 'application/json',
-                'player-session' => $ppUser->session,
-                'auth-token' => 'staking:pg:Test:ReleaseB',
-                'partner-name' => 'stakingapp'
-            ];
-            $body = [
-                'accountId' => $ppUser->party_poker_login,
-                'amount' => $saleRequest->amount,
-                'transactionType' => Bid::BID_CANCEL,
-                'requestorReferenceId' => $sale->transaction_code,
-                'transactionInitiatedDate' => $sale->transaction_initiated_date,
-                'brand' => 'PARTYPOKER',
-                "tournamentDetails" => [
-                    "sellerAccountId" => $salerUser->ppUser->party_poker_login,
-                    "mainEvent" => $event->title,
-                    "tournamentId" => $event->id,
-                    "venuId" => $event->venue_id,
-                    "venuName" => $event->venue_name,
-                    "currency" => $event->currency
-                ]
-            ];
+        $body = [
+            'accountId' => $investor->ppUser->party_poker_login,
+            'amount' => (integer)$bid->amount * 100,
+            'transactionType' => Bid::BID_CANCEL,
+            'requestorReferenceId' => $bid->transaction_code,
+            'transactionInitiatedDate' => $bid->transaction_initiated_date,
+            'brand' => 'PARTYPOKER',
+            "tournamentDetails" => [
+                "sellerAccountId" => $salerUser->ppUser->party_poker_login,
+                "mainEvent" => $event->title,
+                "tournamentId" => $event->id,
+                "venuId" => $event->venue_id,
+                "venuName" => $event->venue_name,
+                "currency" => $event->currency
+            ]
+        ];
 
-        }
 
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
         $guzzleClient = new Client();
@@ -308,6 +272,8 @@ class PPInteraction
 
     public static function bidClosure($transactions)
     {
+
+        //todo
 
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
@@ -447,8 +413,9 @@ class PPInteraction
 
     }
 
-    private static function createRequest(Sale $sale = null, Bid $bid = null, $body, $header, $remaining){
-        if ($sale == null){
+    private static function createRequest(Sale $sale = null, Bid $bid = null, $body, $header, $remaining)
+    {
+        if ($sale == null) {
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
@@ -468,7 +435,9 @@ class PPInteraction
         return $ppRequest;
 
     }
-    private static function createResponse(Sale $sale = null, Bid $bid = null, PPRequest $request){
+
+    private static function createResponse(Sale $sale = null, Bid $bid = null, PPRequest $request)
+    {
 
     }
 }
