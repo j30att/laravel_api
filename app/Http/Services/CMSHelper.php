@@ -71,6 +71,10 @@ class CMSHelper
 
             $eventData = json_decode($apiResource->getBody());
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
+            if (!$country) {
+                Log::info('[x] Unprocessable entity');
+                return false;
+            }
 
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
@@ -123,12 +127,21 @@ class CMSHelper
         $ppSubEvent = json_decode($apiResource->getBody());
 
 
+
         $subEvent = SubEvent::query()->find($ppSubEvent->schedule->id);
+
+        $event = Event::query()->find($ppSubEvent->schedule->event_id);
+
+        if (!$event){
+            Log::info('[x] Unprocessable entity');
+            return false;
+        }
 
         if (is_null($subEvent)) {
             $subEvent = new SubEvent();
             $subEvent->id = $ppSubEvent->schedule->id;
         }
+
 
         $subEvent->event_id = $ppSubEvent->schedule->event_id;
         $subEvent->title = $ppSubEvent->schedule->scheduleTitle;
