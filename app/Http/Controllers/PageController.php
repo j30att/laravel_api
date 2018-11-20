@@ -17,4 +17,8 @@ class PageController extends Controller
     public function dealer(Request $request){
         return view('layouts.static');
     }
+
+    public function desktop(Request $request) {
+        return view('desktop.bids.index');
+    }
 }
