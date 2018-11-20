@@ -64,7 +64,6 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('auth.registration', {
             url: '/register',
             template: require('./views/auth/registration.template.html'),
-            //ng-controller="RegisterController as RgCtrl"
             controller: 'RegisterController',
             controllerAs: 'RgCtrl'
         })

@@ -1,17 +1,17 @@
 <div class="row">
-    <!--<div class="fullscreen">
+    <div class="fullscreen" ng-if="RgCtrl.state.status == 'register'">
 
         <div class="page_title col-md-12">
             Registration
             <a ui-sref="index" class="goback"></a>
         </div>
 
-        <div class="col-md-12">
-            <form ng-submit="RgCtrl.sendRegisterForm($event)" class="">
+        <div class="col-md-12" ng-if="RgCtrl.state.step == 1">
+
                 <div class="input_wrapper">
                     <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
                         <label>Your Name</label>
-                        <input type="text" ng-model="RgCtrl.userName" name="clientName" required>
+                        <input type="text" ng-model="RgCtrl.user.firstName" name="clientName" required>
 
                         <div ng-messages="" role="alert">
                             <div ng-message-exp="['required']">
@@ -20,10 +20,56 @@
                         </div>
                     </md-input-container>
 
+                    <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
+                        <label>Your Last Name</label>
+                        <input type="text" ng-model="RgCtrl.user.lastName" name="clientName" required>
 
+                        <div ng-messages="" role="alert">
+                            <div ng-message-exp="['required']">
+                                Name field cannot be empty.
+                            </div>
+                        </div>
+                    </md-input-container>
+
+                    <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
+                        <label>Date of Birth</label>
+                        <input type="date" ng-model="RgCtrl.user.dateOfBirth" name="clientAge" required>
+
+                        <div ng-messages="" role="alert">
+                            <div ng-message-exp="['required']">
+                                Age field cannot be empty.
+                            </div>
+                        </div>
+                    </md-input-container>
+
+                    <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
+                        <label>Location</label>
+                        <md-select ng-model="RgCtrl.user.country_id">
+
+                            <md-option ng-repeat="country in RgCtrl.countries" ng-value="country.id">
+                                {%country.name%}, {%country.code%}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+
+                </div>
+                <div class="button button_registr_fixed" type="submit"
+                        style="border-radius:10pt; width: 100%" ng-click="RgCtrl.nextState(2)">continue
+                </div>
+
+            <div class="private_policy">
+                By creating an account you agree to our
+                <a ui-sref="terms-and-conditions">Terms & Conditions</a> and <a ui-sref="privacy-policy">Privacy
+                Policy</a>
+            </div>
+        </div>
+
+        <div class="col-md-12" ng-if="RgCtrl.state.step == 2">
+
+                <div class="input_wrapper">
                     <md-input-container class="md-block login_input">
                         <label>Client Email</label>
-                        <input required type="email" name="clientEmail" ng-model="RgCtrl.userEmail"
+                        <input required type="email" name="clientEmail" ng-model="RgCtrl.user.email"
                                minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
 
                         <div ng-messages="" role="alert">
@@ -32,27 +78,9 @@
                             </div>
                         </div>
                     </md-input-container>
-
-                    <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
-                        <label>Your Age</label>
-                        <input type="date" ng-model="RgCtrl.userAge" name="clientAge" required>
-
-                        <div ng-messages="" role="alert">
-                            <div ng-message-exp="['required']">
-                                Age field cannot be empty.
-                            </div>
-                        </div>
-                    </md-input-container>
-                    &lt;!&ndash;age&ndash;&gt;
-
-
-                   &lt;!&ndash;<div class="register_age">&ndash;&gt;
-                        &lt;!&ndash;<md-datepicker ng-model="RgCtrl.userAge" md-placeholder="Date of birds" md-hide-icons="calendar"></md-datepicker>&ndash;&gt;
-                    &lt;!&ndash;</div>&ndash;&gt;
-                    &lt;!&ndash;age end&ndash;&gt;
                     <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
                         <label>Your password</label>
-                        <input type="password" ng-model="LgCtrl.userPassword" name="clientPassword" required>
+                        <input type="password" ng-model="RgCtrl.user.password" name="clientPassword" required>
 
                         <div ng-messages="" role="alert">
                             <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
@@ -61,31 +89,30 @@
                         </div>
                     </md-input-container>
                     <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
-                    <label>Repeat password</label>
-                    <input type="password" ng-model="RgCtrl.passwordConfirmation" name="clientPasswordConfirmation"
-                           required>
+                        <label>Repeat password</label>
+                        <input type="password" ng-model="RgCtrl.user.confirmPassword" name="clientPasswordConfirmation"
+                               required>
 
-                    <div ng-messages="" role="alert">
-                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                            Password field cannot be empty.
+                        <div ng-messages="" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                Password field cannot be empty.
+                            </div>
                         </div>
-                    </div>
-                </md-input-container>
+                    </md-input-container>
                 </div>
-                <button class="button button_registr_fixed" type="submit button_login" style="border-radius:10pt; width: 100%"
-                        ng-click="RgCtrl.sendRegisterForm($event)">continue
-                </button>
-            </form>
+                <div class="button button_registr_fixed" type="submit"
+                        style="border-radius:10pt; width: 100%" ng-click="RgCtrl.sendRegisterForm()">
+                    continue
+                </div>
+
             <div class="private_policy">
                 By creating an account you agree to our
                 <a ui-sref="terms-and-conditions">Terms & Conditions</a> and <a ui-sref="privacy-policy">Privacy
                 Policy</a>
             </div>
         </div>
-    </div>-->
-
-    <div class="fullscreen">
-
+    </div>
+    <div class="fullscreen" ng-if="RgCtrl.state.status == 'link'">
         <div class="page_title col-md-12">
             Link your account
             <a ui-sref="index" class="goback"></a>
@@ -94,21 +121,13 @@
         <div class="col-md-12">
             <div class="dollar_content">
                 <div class="dollar_content__img"></div>
-                <div class="dollar_content__title">
-                    In order to receive your a free $22 partypoker LIVE Satellite ticket
-                </div>
+
                 <div class="dollar_content__description">
                     Your My partypoker LIVE username should be the same as your partypoker username.
                 </div>
-
-
-                <div class="dollar_content__button button">Link my partypoker account</div>
-
-
-
-
-
+                <a href="https://releaseb-ciwic.ivycomptech.co.in/en_US/VC/login-staking.html?redirect_URI=http://devpoker.itsumma.ru"><div class="dollar_content__button button">Link my partypoker account</div></a>
             </div>
         </div>
     </div>
 </div>
+
