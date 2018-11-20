@@ -1,7 +1,5 @@
 import {BID_MATCHED, BID_NEW, BID_UNMATCHED} from "../../../common/Constants";
 
-
-
 class BidPlace {
     constructor($scope, BidsResourceService, $mdSidenav, $http, SalesService, $timeout, $state) {
         this.BidsResourceService = BidsResourceService;
@@ -13,11 +11,12 @@ class BidPlace {
         this.$http = $http;
         this.user = window.__user;
         this._opts = {fixed: false};
-        this.isSidenavOpen =false;
-        this.bid={};
+        this.isSidenavOpen = false;
+        this.bid = {};
+        this.status = 1;
     }
 
-    $onInit(){
+    $onInit() {
         this.$scope.$on('sidenav-open', (event, data) => {
             this.buildToggler('right');
         });
@@ -31,27 +30,31 @@ class BidPlace {
         this.$mdSidenav(componentId).toggle();
     }
 
-    saveMyBid(){
+    saveMyBid() {
         this.bid.user_id = this.user.id;
         this.bid.sale_id = this.sale.id;
-        this.bid.status  = BID_NEW;
+        this.bid.status = BID_NEW;
 
-        if(this.bid.id == undefined){
+        if (this.bid.id == undefined) {
             this.BidsResourceService.storeMyBid(this.bid).then(response => {
                 this.sale.bids = response.data.bids;
+                this.status = response.data.sale.status;
+                this.$scope.$emit('place-a-bid', response.data.sale);
             })
         } else {
-            this.BidsResourceService.changeMyBid(this.bid).then((response) =>{
+            this.BidsResourceService.changeMyBid(this.bid).then((response) => {
                 this.sale.bids = response.data.bids;
+                this.status = response.data.sale.status;
+                this.$scope.$emit('place-a-bid', response.data.sale);
             });
         }
     }
 
-    close(componentId){
+    close(componentId) {
         this.$mdSidenav(componentId).close();
     }
 
-    changeYourBid(bid){
+    changeYourBid(bid) {
         this.bid = bid
     }
 

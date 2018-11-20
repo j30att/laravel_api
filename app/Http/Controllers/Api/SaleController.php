@@ -272,15 +272,8 @@ class SaleController extends Controller
             $remaining = $calcRemaining;
         }
         try {
-            DB::beginTransaction();
 
-            $sale->fill_status = Sale::TYPE_FULL;
-            $sale->save();
-            ManageService::calcAmountRaised($sale);
-            ManageService::calcAvgMarkup($sale);
-            ManageService::calcShareSold($sale);
-            PPInteraction::payRemaining($sale, $remaining);
-            DB::commit();
+            ManageService::payRemaining($sale);
 
             $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
             $saleCanceled = Sale::query()->where(['status' => Sale::SALE_CLOSED, 'user_id' => $user->id])->limit(3)->latest()->get();
@@ -293,8 +286,7 @@ class SaleController extends Controller
             ]);
 
         } catch (\Exception $e) {
-            DB::rollBack();
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine());
         }
 
     }

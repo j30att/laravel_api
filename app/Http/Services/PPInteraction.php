@@ -354,7 +354,6 @@ class PPInteraction
         ];
 
         try {
-
             $ppRequest = new PPRequest();
             $ppRequest->sale_id = $sale->id;
             $ppRequest->transaction_type = PPRequest::TYPE_BID_REMAINING;
@@ -363,28 +362,34 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
             ]);
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+            $json = $response->getBody()->getContents();
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->sale_id = $sale->id;
             $PPResponse->type = PPResponse::TYPE_BID_REMAINING;
-            $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->response = $json;
 
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
-
+            $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
+
+            if($responseContent['status'] == 'SUCCESS'){
+                return $responseContent['walletReferenceId'];
+            }
+
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine());
             Log::info(serialize($body));
         }
+        return false;
     }
 
     public static function fxRates()

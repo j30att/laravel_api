@@ -104,9 +104,10 @@ class SaleManage {
             .cancel('Cancel');
 
         this.$mdDialog.show(confirm).then(() => {
-            this.SalesResourceService.payRemaining(this.sale, this.payRemainig).then((response)=>{
-                this.sales = response.data.data;
-            });
+            this.SalesResourceService.payRemaining(this.sale, this.payRemainig)
+                .then((response) => {
+                    this.sales = response.data.data;
+                });
             this.$mdSidenav('right_manage').close();
         }, () => {});
     }

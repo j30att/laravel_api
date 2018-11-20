@@ -40,10 +40,12 @@ class Sale extends Model
     }
 
     public function bids_matched(){
-        return $this->hasMany(Bid::class,'sale_id')->where('status', Bid::BIDS_MATCHED);
+        return $this->hasMany(Bid::class,'sale_id')
+            ->where('status', Bid::BIDS_MATCHED);
     }
     public function bids_unmatched(){
-        return $this->hasMany(Bid::class,'sale_id')->where('status', Bid::BIDS_UNMATCHED);
+        return $this->hasMany(Bid::class,'sale_id')
+            ->where('status', Bid::BIDS_UNMATCHED);
     }
     public function bids_highest(){
         return $this->hasMany(Bid::class,'sale_id')
