@@ -12244,6 +12244,15 @@ md-input-container input::placeholder {
   background-color: #ffffff;
 }
 
+#select_value_label_0 span:first-child {
+  font-size: 16px !important;
+  color: #949494 !important;
+  -webkit-transform-origin: top !important;
+          transform-origin: top !important;
+  margin-bottom: 8px !important;
+  padding-left: 42px !important;
+}
+
 /*registration block end*/
 
 .input_wrapper {
@@ -12264,8 +12273,52 @@ md-input-container input::placeholder {
 }
 
 .button_login {
-  bottom: 70px;
+  bottom: 95px;
 }
+
+.forgot_password {
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #949494;
+  margin-left: -15px;
+}
+
+/*forgot password*/
+
+.check__img {
+  width: 70px;
+  height: 70px;
+  background: url(/images/check_inbox.png) no-repeat center;
+  background-size: 100%;
+  margin: 86px auto 20px auto;
+}
+
+.check__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.check__discription {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #000000;
+}
+
+.check__back {
+  font-size: 15px;
+  color: #007fed;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*forgot password end*/
 
 .button_registr_fixed {
   position: fixed;

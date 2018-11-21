@@ -52,8 +52,6 @@ class Login {
         //console.log(this.forgotPasswordEmail);
         let email = this.forgotPasswordEmail;
             this.$http.post(FORGOT_URL, {email:email}).then((response) => {
-                console.log(response);
-                console.log(response.data.status);
                 if(response.data.status == 1){
                     this.state = 3;
                 }
@@ -68,8 +66,6 @@ class Login {
             let password_confirmation = this.createNewPasswordConfirm;
 
             this.$http.post(RESET_URL, {token:token, email:email, password:password, password_confirmation:password_confirmation}).then((response) =>{
-               console.log('good');
-               console.log(response.data.status, 'status on good');
                if(response.data.status == 1){
                    this.state = 5;
                }

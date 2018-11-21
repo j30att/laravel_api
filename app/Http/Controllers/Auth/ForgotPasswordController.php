@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use function Couchbase\defaultDecoder;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Password;
 
 
@@ -45,8 +47,8 @@ class ForgotPasswordController extends Controller
      */
     public function sendResetLinkEmail(Request $request)
     {
-        $this->validateEmail($request);
 
+        $this->validateEmail($request);
         //$this->validateEmail($request);
         // We will send the password reset link to this user. Once we have attempted
         // to send the link, we will examine the response then see the message we
