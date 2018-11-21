@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-if="LgCtrl.state == 'login'">
     <div class="fullscreen">
 
         <div class="page_title col-md-12">
@@ -35,14 +35,147 @@
                     </md-input-container>
 
                 <button class="button button_login" type="submit" style=""
-                        ng-click="LgCtrl.sendAuthData($event)">Enter
+                        ng-click="LgCtrl.sendAuthData($event)">Log in
                 </button>
             </form>
+            <div class="forgot_password" ng-click="LgCtrl.forgotPassword()">
+                Forgot your Password?
+            </div>
             <div class="private_policy">
                 By creating an account you agree to our
                 <a ui-sref="terms-and-conditions">Terms & Conditions</a> and <a ui-sref="privacy-policy">Privacy
                 Policy</a>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row" ng-if="LgCtrl.state == 'forgot'">
+    <div class="fullscreen">
+
+        <div class="page_title col-md-12">
+            Reset password
+            <a class="goback" ng-click="LgCtrl.state = 'login'">
+
+        </a>
+        </div>
+
+        <div class="col-md-12">
+            <md-input-container  class="md-block login_input">
+                <label>Email</label>
+                <input required type="email" name="clientEmail" ng-model="LgCtrl.userEmailForgot"
+                       minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+
+                <div ng-messages="" role="alert">
+                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                        Your email must look like an e-mail address.
+                    </div>
+                </div>
+            </md-input-container>
+            <button class="button button_login" type="submit" ng-click="LgCtrl.resetMail()">
+                Reset
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-if="LgCtrl.state == 'check_inbox'">
+    <div class="fullscreen">
+
+
+        <div class="header_modal col-md-12">
+            <div class="header_close" role="button" tabindex="0" ng-click="LgCtrl.state = 'login'"></div>
+            <div class="header_title"></div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="check__img"></div>
+            <div class="check__title">Check your inbox</div>
+            <div class="check__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
+
+            <div class="check__back" role="button" tabindex="0" ng-click="LgCtrl.state = 'create_password'">Create new password</div>
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-if="LgCtrl.state == 'create_password'">
+    <div class="fullscreen">
+
+
+        <div class="header_modal col-md-12">
+            <div class="header_close" role="button" tabindex="0" ng-click="LgCtrl.state = 'login'"></div>
+            <div class="header_title"></div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+        <div class="col-md-12">
+            <md-input-container  class="md-block login_input">
+                <label>Code of email</label>
+                <input required type="text" name="clientEmail" ng-model="LgCtrl.codeOfEmail"/>
+            </md-input-container>
+
+            <md-input-container  class="md-block login_input">
+                <label>New password</label>
+                <input required type="password" name="clientEmail" ng-model="LgCtrl.createNewPassword"/>
+            </md-input-container>
+
+            <md-input-container  class="md-block login_input">
+                <label>Confirm password</label>
+                <input required type="password" name="clientEmail" ng-model="LgCtrl.createNewPasswordConfirm"/>
+            </md-input-container>
+
+            <button class="button button_login" type="submit" ng-click="LgCtrl.resetPassword()">
+                Reset
+            </button>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="row" ng-if="LgCtrl.state == 'ok_login'">
+    <div class="fullscreen">
+
+
+        <div class="header_modal col-md-12">
+            <div class="header_close" role="button" tabindex="0"></div>
+            <div class="header_title"></div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="check__img" style="background: none;"></div>
+            <div class="check__title"></div>
+            <div class="check__discription">Password was succsessfull changed</div>
+
+            <div class="check__back" role="button" tabindex="0" ng-click="LgCtrl.state = 'login'">Please login</div>
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-if="LgCtrl.state == 'try_again'">
+    <div class="fullscreen">
+
+
+        <div class="header_modal col-md-12">
+            <div class="header_close" role="button" tabindex="0"></div>
+            <div class="header_title"></div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="check__img" style="background: none;"></div>
+            <div class="check__title"></div>
+            <div class="check__discription">Error</div>
+
+            <div class="check__back" role="button" tabindex="0" ng-click="LgCtrl.state = 'forgot'">Try again</div>
         </div>
     </div>
 </div>

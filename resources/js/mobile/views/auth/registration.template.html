@@ -43,7 +43,7 @@
                     </md-input-container>
 
                     <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px">
-                        <label>Location</label>
+                        <label>Location*</label>
                         <md-select ng-model="RgCtrl.user.country_id">
 
                             <md-option ng-repeat="country in RgCtrl.countries" ng-value="country.id">
@@ -53,9 +53,9 @@
                     </md-input-container>
 
                 </div>
-                <div class="button button_registr_fixed" type="submit"
-                        style="border-radius:10pt; width: 100%" ng-click="RgCtrl.nextState(2)">continue
-                </div>
+                <button class="button button_login button_registr_fixed" type="submit"
+                        ng-click="RgCtrl.nextState(2)">Continue
+                </button>
 
             <div class="private_policy">
                 By creating an account you agree to our
