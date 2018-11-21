@@ -6,13 +6,44 @@ use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 
+/**
+ * Class Sale
+ * @property int $id
+ * @property int $user_id
+ * @property int $event_id
+ * @property int $sub_event_id
+ * @property int $flight_id
+ * @property int $status
+ * @property float $markup
+ * @property float $share
+ * @property float $amount
+ * @property int $currency_id
+ * @property int $fill_status
+ * @property float $amount_raised
+ * @property int $share_sold
+ * @property int $average_markup
+ * @property string $created_at
+ * @property string $updated_at
+ *
+ * @property Bid[] $bids
+ * @property Bid[] $bids_matched
+ * @property Bid[] $bids_unmatched
+ * @property Bid[] $bids_highest
+ * @property SubEvent $subevent
+ * @property Event $event
+ * @property PPResponse $response
+ * @property string $placed
+ * @property string $transaction_code
+ * @property string $transaction_initiated_date
+ * @property User $creator
+ *
+ * @package App\Models
+ */
 class Sale extends Model
 {
-    const SALE_ACTIVE  = 1;
-    const SALE_CLOSED  = 2;
-
-    const TYPE_IN_PROGRESS = 1;
-    const TYPE_FULL = 2;
+    const SALE_ACTIVE      = 1;
+    const SALE_CLOSED      = 2;
+    const SALE_COMPLETED   = 3;
 
     protected $fillable=[
         'user_id',

@@ -33,21 +33,29 @@ class BidPlace {
     saveMyBid() {
         this.bid.user_id = this.user.id;
         this.bid.sale_id = this.sale.id;
-        this.bid.status = BID_NEW;
 
-        if (this.bid.id == undefined) {
-            this.BidsResourceService.storeMyBid(this.bid).then(response => {
-                this.sale.bids = response.data.bids;
-                this.status = response.data.sale.status;
-                this.$scope.$emit('place-a-bid', response.data.sale);
-            })
+        if (this.bid.markup && this.bid.share && this.bid.amount) {
+            if (typeof this.bid.id === 'undefined') {
+                this.BidsResourceService.storeMyBid(this.bid)
+                    .then(response => {
+                        this.sale.bids = response.data.bids;
+                        this.status = response.data.sale.status;
+                        this.$scope.$emit('place-a-bid', response.data.sale);
+                    })
+            } else {
+                this.BidsResourceService.changeMyBid(this.bid)
+                    .then((response) => {
+                        this.sale.bids = response.data.bids;
+                        this.status = response.data.sale.status;
+                        this.$scope.$emit('place-a-bid', response.data.sale);
+                    });
+            }
+            this.bid = {};
         } else {
-            this.BidsResourceService.changeMyBid(this.bid).then((response) => {
-                this.sale.bids = response.data.bids;
-                this.status = response.data.sale.status;
-                this.$scope.$emit('place-a-bid', response.data.sale);
-            });
+            console.log('Empty fields');
         }
+
+
     }
 
     close(componentId) {
@@ -58,8 +66,7 @@ class BidPlace {
         this.bid = bid
     }
 
-
-};
+}
 
 BidPlace.$inject = ['$scope', 'BidsResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
 

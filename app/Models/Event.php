@@ -5,8 +5,32 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
-
-
+/**
+ * Class Event
+ * @property int $id
+ * @property int $country_id
+ * @property string $title
+ * @property string $description
+ * @property float $buy_in
+ * @property float $reg_free
+ * @property float $fund
+ * @property string $slug
+ * @property string $logo
+ * @property string $currency
+ * @property int $venue_id
+ * @property string $venue_name
+ * @property string $date_start
+ * @property string $date_end
+ * @property string $created_at
+ * @property string $updated_at
+ * @property int $currency_id
+ * @property int $status
+ *
+ * @property Sale[] $sales
+ * @property SubEvent[] $sub_events
+ *
+ * @package App\Models
+ */
 class Event extends Model
 {
     const LIMIT_EVENT_MAIN_PAGE     = 6;

@@ -8,12 +8,12 @@
 
 namespace App\Http\Services;
 
-
 use App\Models\Bid;
 use App\Models\PPBid;
 use App\Models\PPRequest;
 use App\Models\PPResponse;
 use App\Models\Sale;
+use App\Models\User;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -23,18 +23,15 @@ class PPInteraction
 
     public static function bidPlace(Bid $bid)
     {
-
         $sale = $bid->sale;
         $event = $sale->event;
 
-        $user = Auth::user();
+        $user = $bid->investor;
         $ppUser = $user->ppUser;
         $creator = $bid->sale->creator;
         $ppCreator = $creator->ppUser;
 
-
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
-
 
         $guzzleClient = new Client();
 
@@ -62,9 +59,7 @@ class PPInteraction
             ]
         ];
 
-
         try {
-
             //$ppRequest = self::createRequest(null,$bid,$body,$header,null);
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
@@ -79,58 +74,53 @@ class PPInteraction
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+            $json = $response->getBody()->getContents();
 
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_PLACE_BID;
-            $PPResponse->response = $response->getBody()->getContents();
-
+            $PPResponse->response = $json;
             $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
-
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
 
-            $PPBid = false;
-            if ($responseContent['status'] == 'SUCCESS'){
+            if ($responseContent['status'] == 'SUCCESS') {
                 $PPBid = new PPBid();
                 $PPBid->pp_bid_id = $responseContent['walletReferenceId'];
                 $PPBid->sale_id = $sale->id;
                 $PPBid->amount = $bid->amount;
                 $PPBid->status = PPResponse::TYPE_PLACE_BID;
                 $PPBid->save();
+                return $PPBid;
             }
-            return $PPBid;
-
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
 
-
+        return false;
     }
 
     public static function bidChange(Bid $bid, PPBid $PPBid)
     {
+        /** @var User $user */
+        $user = $bid->investor;
         $sale = $bid->sale;
         $event = $sale->event;
-
-        $user = Auth::user();
         $ppUser = $user->ppUser;
         $creator = $bid->sale->creator;
         $ppCreator = $creator->ppUser;
+        $newAmount = $PPBid->amount + $bid->amount;
 
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidamendedinfo/';
 
-
         $guzzleClient = new Client();
-
-        $newAmount = $PPBid->amount + $bid->amount;
 
         $header = [
             'Content-Type' => 'application/json',
@@ -162,113 +152,72 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-
             $response = $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+            $json = $response->getBody()->getContents();
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CHANGE;
-            $PPResponse->response = $response->getBody()->getContents();
-
-            $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
+            $PPResponse->response = $json;
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
-
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
 
-
-            if ($responseContent['status'] == 'SUCCESS'){
-
+            if ($responseContent['status'] == 'SUCCESS') {
                 $PPBid->amount = $newAmount;
                 $PPBid->status = PPResponse::TYPE_BID_CHANGE;
                 $PPBid->save();
                 return $PPBid;
             }
-            return false;
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
+
+        return false;
     }
 
     public static function bidCancel(PPBid $PPBid)
     {
-        $body =[];
-        $header =[];
-        if (!is_null($bid)) {
-            $investor = $bid->investor;
-            $sale = $bid->sale;
-            $ppUser = $investor->ppUser;
-            $event = $sale->event;
-            $salerUser = $sale->creator;
+        $sale = Sale::query()->where('id', $PPBid->sale_id)->first();
+        $bid = Bid::query()->where('p_p_bid_id', $PPBid->pp_bid_id)->first();
 
-            $header = [
-                'Content-Type' => 'application/json',
-                'player-session' => $ppUser->session,
-                'auth-token' => 'staking:pg:Test:ReleaseB',
-                'partner-name' => 'stakingapp'
-            ];
+        $event = $sale->event;
+        $investor = $bid->investor;
+        $salerUser = $sale->creator;
 
-            $body = [
-                'accountId' => $ppUser->party_poker_login,
-                'amount' => (integer)$bid->amount * 100,
-                'transactionType' => Bid::BID_CANCEL,
-                'requestorReferenceId' => $bid->transaction_code,
-                'transactionInitiatedDate' => $bid->transaction_initiated_date,
-                'brand' => 'PARTYPOKER',
-                "tournamentDetails" => [
-                    "sellerAccountId" => $salerUser->ppUser->party_poker_login,
-                    "mainEvent" => $event->title,
-                    "tournamentId" => $event->id,
-                    "venuId" => $event->venue_id,
-                    "venuName" => $event->venue_name,
-                    "currency" => $event->currency
-                ]
-            ];
+        $header = [
+            'Content-Type' => 'application/json',
+            'player-session' => $investor->ppUser->session,
+            'auth-token' => 'staking:pg:Test:ReleaseB',
+            'partner-name' => 'stakingapp'
+        ];
 
-        } else {
-            $saleRequest = PPRequest::query()
-                ->where('sale_id', $sale->id)
-                ->where('transaction_type', PPRequest::TYPE_BID_REMAINING)
-                ->with(['response'=>function($query){
-                   $query->where('status', 'SUCCESS');
-                }])->first();
+        $body = [
+            'accountId' => $investor->ppUser->party_poker_login,
+            'amount' => (integer)$PPBid->amount * 100,
+            'transactionType' => Bid::BID_CANCEL,
+            'requestorReferenceId' => $bid->transaction_code,
+            'transactionInitiatedDate' => $bid->transaction_initiated_date,
+            'brand' => 'PARTYPOKER',
+            "tournamentDetails" => [
+                "sellerAccountId" => $salerUser->ppUser->party_poker_login,
+                "mainEvent" => $event->title,
+                "tournamentId" => $event->id,
+                "venuId" => $event->venue_id,
+                "venuName" => $event->venue_name,
+                "currency" => $event->currency
+            ]
+        ];
 
-            $event= $sale->event;
-            $salerUser = $sale->creator;
-            $ppUser = $salerUser->ppUser;
-            $header = [
-                'Content-Type' => 'application/json',
-                'player-session' => $ppUser->session,
-                'auth-token' => 'staking:pg:Test:ReleaseB',
-                'partner-name' => 'stakingapp'
-            ];
-            $body = [
-                'accountId' => $ppUser->party_poker_login,
-                'amount' => $saleRequest->amount,
-                'transactionType' => Bid::BID_CANCEL,
-                'requestorReferenceId' => $sale->transaction_code,
-                'transactionInitiatedDate' => $sale->transaction_initiated_date,
-                'brand' => 'PARTYPOKER',
-                "tournamentDetails" => [
-                    "sellerAccountId" => $salerUser->ppUser->party_poker_login,
-                    "mainEvent" => $event->title,
-                    "tournamentId" => $event->id,
-                    "venuId" => $event->venue_id,
-                    "venuName" => $event->venue_name,
-                    "currency" => $event->currency
-                ]
-            ];
-
-        }
 
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
         $guzzleClient = new Client();
@@ -276,7 +225,7 @@ class PPInteraction
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_BID_CANCEL;
-            $ppRequest->amount = $bid->amount;
+            $ppRequest->amount = $PPBid->amount;
             $ppRequest->headers = json_encode($header);
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
@@ -286,29 +235,32 @@ class PPInteraction
                 'json' => $body
             ]);
 
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+            $json = $response->getBody()->getContents();
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
             $PPResponse->bid_id = $bid->id;
             $PPResponse->type = PPResponse::TYPE_BID_CANCEL;
-            $PPResponse->response = $response->getBody()->getContents();
+            $PPResponse->response = $json;
             $PPResponse->wallet_references_id = $responseContent['walletReferenceId'];
             $PPResponse->status = $responseContent['status'];
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
-
             $PPResponse->p_p_request = $ppRequest->id;
 
-            $PPResponse->save();
+            if ($PPResponse->save() && $PPResponse->status === "SUCCESS") {
+                return true;
+            }
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
+
+        return false;
     }
 
     public static function bidClosure($transactions)
     {
-
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
 
         $guzzleClient = new Client();
@@ -335,31 +287,45 @@ class PPInteraction
                 'headers' => $header,
                 'json' => $body
             ]);
-            $responseContent = json_decode($response->getBody()->getContents(), 1);
+
+            $json = $response->getBody()->getContents();
+            $responseContent = json_decode($json, 1);
 
             $PPResponse = new PPResponse();
-
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
-            $PPResponse->response = $response->getBody()->getContents();
-            $PPResponse->status = $responseContent['status'];
+            $PPResponse->response = $json;
+
+            if(is_array($responseContent['status'])) {
+                foreach ($responseContent['status'] as $status) {
+                    $PPResponse->status = $status;
+                    if ($status == 'FAILED') {
+                        break;
+                    }
+                }
+            }
+
             $PPResponse->error_code = $responseContent['errorCode'];
             $PPResponse->error_description = $responseContent['errorDescription'];
             $PPResponse->p_p_request = $ppRequest->id;
-            $PPResponse->save();
+
+            if ($PPResponse->save()) {
+                return $responseContent['status'];
+            }
+
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
             Log::info(serialize($body));
         }
+
+        return false;
     }
 
     public static function payRemaining(Sale $sale, $remaining)
     {
-
-        $event = $sale->event;
-
+        /** @var User $user */
         $user = Auth::user();
         $ppUser = $user->ppUser;
-
+        $event = $sale->event;
         $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
         $guzzleClient = new Client();
 
@@ -415,7 +381,7 @@ class PPInteraction
             $PPResponse->p_p_request = $ppRequest->id;
             $PPResponse->save();
 
-            if($responseContent['status'] == 'SUCCESS'){
+            if ($responseContent['status'] == 'SUCCESS') {
                 return $responseContent['walletReferenceId'];
             }
 
@@ -452,8 +418,9 @@ class PPInteraction
 
     }
 
-    private static function createRequest(Sale $sale = null, Bid $bid = null, $body, $header, $remaining){
-        if ($sale == null){
+    private static function createRequest(Sale $sale = null, Bid $bid = null, $body, $header, $remaining)
+    {
+        if ($sale == null) {
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
             $ppRequest->transaction_type = PPRequest::TYPE_PLACE_BID;
@@ -473,7 +440,9 @@ class PPInteraction
         return $ppRequest;
 
     }
-    private static function createResponse(Sale $sale = null, Bid $bid = null, PPRequest $request){
+
+    private static function createResponse(Sale $sale = null, Bid $bid = null, PPRequest $request)
+    {
 
     }
 }

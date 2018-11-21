@@ -8,6 +8,7 @@ use App\Http\Services\ManageService;
 use App\Http\Services\PPInteraction;
 use App\Models\Bid;
 use App\Models\Sale;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
@@ -66,15 +67,21 @@ class BidController extends Controller
     public function myStoreBid(Request $request)
     {
         try {
+            /** @var User $user */
             $user = Auth::user();
             $data = $request->get('bid');
-            if ($user->id != $data['user_id']) App::abort(401);
+            if ($user->id != $data['user_id']) {
+                App::abort(401);
+            }
 
-            $bid = Bid::create($data);
-            $bid = ManageService::linkBidToSale($bid);
+            /** @var Bid $bid */
+            $bid = new Bid();
+            $bid->fill($data);
+            $bid->status = Bid::BIDS_UNMATCHED;
+            $bid->save();
 
-            if ($bid->status == Bid::BIDS_MATCHED) {
-                ManageService::manageTransaction($bid);
+            if (ManageService::equationLinkBids($bid, $bid->sale)) {
+                ManageService::sendBidToAPI($bid);
             }
 
             $highest = Bid::query()
@@ -94,7 +101,7 @@ class BidController extends Controller
                 ->where('id', $bid->sale_id)
                 ->first();
 
-            return json_encode([
+            return response()->json([
                 'status' => 1,
                 'bids' => [
                     'highest' => BidsInvestResource::collection($highest),
@@ -102,35 +109,31 @@ class BidController extends Controller
                     'unmatched' => BidsInvestResource::collection($unmatched)
                 ],
                 'sale' => $sale
-            ]);
+            ], 201);
 
         } catch (\Exception $e) {
-            DB::rollBack();
-            Log::error($e->getMessage());
-
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
         }
 
+        return response()->json([
+            'status' => 0,
+            'error' => "Unhandled"
+        ], 400);
     }
 
     public function myChangeBid(Request $request)
     {
         try {
             $data = $request->get('bid');
-            $bidId = $data['id'];
-            unset($data['id']);
 
-            $bid = Bid::query()->where('id', $bidId)->first();
+            /** @var Bid $bid */
+            $bid = Bid::query()->find($data['id']);
 
-            $oldAmount = $bid->amount;
-
-            DB::beginTransaction();
             $bid->update($data);
-            $bid->save();
 
-            $bid = ManageService::linkBidToSale($bid);
-            PPInteraction::bidChange($bid, $oldAmount);
-
-            DB::commit();
+            if (ManageService::equationLinkBids($bid, $bid->sale)) {
+                ManageService::sendBidToAPI($bid);
+            }
 
             $highest = Bid::query()
                 ->where('sale_id', $bid->sale_id)
@@ -144,18 +147,29 @@ class BidController extends Controller
                 ->where('user_id', $bid->user_id)
                 ->where('sale_id', $bid->sale_id)
                 ->where('status', Bid::BIDS_UNMATCHED)->get();
+            $sale = Sale::query()
+                ->where('id', $bid->sale_id)
+                ->first();
 
-            return json_encode(['status' => 1, 'bids' => [
-                'highest' => BidsInvestResource::collection($highest),
-                'matched' => BidsInvestResource::collection($matched),
-                'unmatched' => BidsInvestResource::collection($unmatched)
-            ]]);
+            return response()->json([
+                'status' => 1,
+                'bids' => [
+                    'highest' => BidsInvestResource::collection($highest),
+                    'matched' => BidsInvestResource::collection($matched),
+                    'unmatched' => BidsInvestResource::collection($unmatched)
+                ],
+                'sale' => $sale
+            ], 200);
 
         } catch (\Exception $e) {
-            DB::rollBack();
-            Log::error($e->getMessage());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
 
         }
+
+        return response()->json([
+            'status' => 0,
+            'error' => "Unhandled"
+        ], 400);
     }
 
 

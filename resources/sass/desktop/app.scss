@@ -567,9 +567,9 @@ a {
   height: 160px;
   overflow: hidden;
   margin-bottom: 12px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .event_item__pic img {

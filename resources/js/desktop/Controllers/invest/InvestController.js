@@ -18,7 +18,12 @@ class InvestController {
         this.filter = SALE_CLOSED;
 
         this.getEvents();
-        this.user == null ? this.getSales() : this.getSales(this.user.id);
+
+        if(this.user){
+            this.getSales(this.user.id);
+        } else {
+            this.getSales()
+        }
     }
 
     $onInit(){
@@ -48,8 +53,8 @@ class InvestController {
             });
     }
 
-    getSales() {
-        this.SalesResourceService.getClosingSoonSales()
+    getSales(user_id) {
+        this.SalesResourceService.getClosingSoonSales(user_id)
             .then(response => {
                 this.sales = response.data.data;
                 this._opts.dataLoad = true;

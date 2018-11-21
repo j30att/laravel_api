@@ -8,6 +8,13 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 
 
+/**
+ * Class User
+ *
+ * @property PPUser ppUser
+ *
+ * @package App\Models
+ */
 class User extends Authenticatable
 {
     use Notifiable;

@@ -4,6 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class PPRequest
+ * @property int $id
+ * @property int $bid_id
+ * @property int $transaction_type
+ * @property float $amount
+ * @property string $headers
+ * @property string $body
+ * @property int $sale_id
+ * @property string $created_at
+ * @property string $updated_at
+ *
+ * @package App\Models
+ */
 class PPRequest extends Model
 {
     const TYPE_PLACE_BID        = 1;

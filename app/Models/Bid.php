@@ -6,6 +6,30 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+/**
+ * Class Bid
+ * @property int $id
+ * @property int $user_id
+ * @property int $sale_id
+ * @property int $status
+ * @property float $markup
+ * @property float $share
+ * @property float $amount
+ * @property int $currency_id
+ * @property int $outcome
+ * @property int $p_p_bid_id
+ * @property string $created_at
+ * @property string $updated_at
+ *
+ * @property User $investor
+ * @property Sale $sale
+ * @property PPResponse $response
+ * @property string $transaction_code
+ * @property string $transaction_initiated_date
+
+ *
+ * @package App\Models
+ */
 class Bid extends Model
 {
     const BID_NEW         = 1;
