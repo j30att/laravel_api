@@ -31,15 +31,13 @@ class PPInteraction
         $creator = $bid->sale->creator;
         $ppCreator = $creator->ppUser;
 
-        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
-
-        $guzzleClient = new Client();
+        $uri = config('api.host') . '/api/rest/staking/wallet/transaction/';
 
         $header = [
             'Content-Type' => 'application/json',
             'player-session' => $ppUser->session,
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
+            'auth-token' => config('api.authToken'),
+            'partner-name' => config('api.partnerName')
         ];
 
         $body = [
@@ -69,10 +67,7 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
+            $response = self::request($uri, $header, $body);
 
             $json = $response->getBody()->getContents();
 
@@ -118,15 +113,15 @@ class PPInteraction
         $ppCreator = $creator->ppUser;
         $newAmount = $PPBid->amount + $bid->amount;
 
-        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidamendedinfo/';
+        $uri = config('api.host') . '/api/rest/staking/wallet/bidamendedinfo/';
 
         $guzzleClient = new Client();
 
         $header = [
             'Content-Type' => 'application/json',
             'player-session' => $ppUser->session,
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
+            'auth-token' => config('api.authToken'),
+            'partner-name' => config('api.partnerName')
         ];
 
         $body = [
@@ -194,11 +189,13 @@ class PPInteraction
         $investor = $bid->investor;
         $salerUser = $sale->creator;
 
+        $uri = config('api.host') . '/api/rest/staking/wallet/transaction/';
+
         $header = [
             'Content-Type' => 'application/json',
             'player-session' => $investor->ppUser->session,
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
+            'auth-token' => config('api.authToken'),
+            'partner-name' => config('api.partnerName')
         ];
 
         $body = [
@@ -219,8 +216,6 @@ class PPInteraction
         ];
 
 
-        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
-        $guzzleClient = new Client();
         try {
             $ppRequest = new PPRequest();
             $ppRequest->bid_id = $bid->id;
@@ -230,10 +225,7 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
+            $response = self::request($uri, $header, $body);
 
             $json = $response->getBody()->getContents();
             $responseContent = json_decode($json, 1);
@@ -261,14 +253,12 @@ class PPInteraction
 
     public static function bidClosure($transactions)
     {
-        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/bidClosure/';
-
-        $guzzleClient = new Client();
+        $uri = config('api.host') . '/api/rest/staking/wallet/bidClosure/';
 
         $header = [
             'Content-Type' => 'application/json',
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
+            'auth-token' => config('api.authToken'),
+            'partner-name' => config('api.partnerName')
         ];
 
         $body = [
@@ -283,10 +273,7 @@ class PPInteraction
             $ppRequest->save();
 
 
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
+            $response = self::request($uri, $header, $body);
 
             $json = $response->getBody()->getContents();
             $responseContent = json_decode($json, 1);
@@ -295,7 +282,7 @@ class PPInteraction
             $PPResponse->type = PPResponse::TYPE_BID_CLOSURE;
             $PPResponse->response = $json;
 
-            if(is_array($responseContent['status'])) {
+            if (is_array($responseContent['status'])) {
                 foreach ($responseContent['status'] as $status) {
                     $PPResponse->status = $status;
                     if ($status == 'FAILED') {
@@ -326,14 +313,14 @@ class PPInteraction
         $user = Auth::user();
         $ppUser = $user->ppUser;
         $event = $sale->event;
-        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/transaction/';
-        $guzzleClient = new Client();
+
+        $uri = config('api.host') . '/api/rest/staking/wallet/transaction/';
 
         $header = [
             'Content-Type' => 'application/json',
             'player-session' => $ppUser->session,
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
+            'auth-token' => config('api.authToken'),
+            'partner-name' => config('api.partnerName')
         ];
 
         $body = [
@@ -362,10 +349,8 @@ class PPInteraction
             $ppRequest->body = json_encode($body);
             $ppRequest->save();
 
-            $response = $guzzleClient->request('post', $uri, [
-                'headers' => $header,
-                'json' => $body
-            ]);
+            $response = self::request($uri, $header, $body);
+
             $json = $response->getBody()->getContents();
             $responseContent = json_decode($json, 1);
 
@@ -444,5 +429,24 @@ class PPInteraction
     private static function createResponse(Sale $sale = null, Bid $bid = null, PPRequest $request)
     {
 
+    }
+
+    private static function request($uri, $header, $body)
+    {
+        $guzzleClient = new Client();
+
+        if (config('api.useProxy') && config('api.proxyIP')) {
+
+            return $guzzleClient->request('post', $uri, [
+                'headers' => $header,
+                'json' => $body,
+                'proxy' => config('api.proxyIP')
+            ]);
+        }
+
+        return $guzzleClient->request('post', $uri, [
+            'headers' => $header,
+            'json' => $body
+        ]);
     }
 }

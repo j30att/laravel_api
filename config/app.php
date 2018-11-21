@@ -2,6 +2,12 @@
 
 return [
 
+    'API_HOST' => env('PP_API_HOST',''),
+    'API_HOST' => env('PP_PARTNER_NAME',''),
+    'API_HOST' => env('PP_AUTH_TOKEN',''),
+    'API_HOST' => env('USE_PROXY',''),
+    'API_HOST' => env('PROXY_IP',''),
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
