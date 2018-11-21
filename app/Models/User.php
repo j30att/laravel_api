@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
+
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Notifications\Notifiable;
+
 
 /**
  * Class User
@@ -13,6 +17,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  */
 class User extends Authenticatable
 {
+    use Notifiable;
 
     const ROLE_USER         = 1;
     const ROLE_ADMIN        = 2;
@@ -66,4 +71,10 @@ class User extends Authenticatable
     public function ppUser(){
         return $this->hasOne(PPUser::class, 'user_id');
     }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new \App\Notifications\MailResetPasswordNotification($token));
+    }
+
 }

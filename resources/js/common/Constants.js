@@ -10,6 +10,10 @@ export const BID_CANCELED   = 5;
 
 export const LOGIN_URL = '/login';
 export const REGISTER_URL = '/register';
+
+export const FORGOT_URL = '/password/forgot';
+
+export const RESET_URL = '/password/reset';
 export const PROFILE_URL = '/login/userproftest';
 
 //**BIDS**//

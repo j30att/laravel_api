@@ -1,4 +1,4 @@
-import {LOGIN_URL} from "../../../common/Constants";
+import {LOGIN_URL, FORGOT_URL, RESET_URL} from "../../../common/Constants";
 
 class Login {
     constructor($scope, SalesResourceService, $mdSidenav, $http, SalesService, $timeout, $state) {
@@ -49,8 +49,41 @@ class Login {
     }
 
     resetMail() {
-        this.state = 3;
+        //console.log(this.forgotPasswordEmail);
+        let email = this.forgotPasswordEmail;
+            this.$http.post(FORGOT_URL, {email:email}).then((response) => {
+                console.log(response);
+                console.log(response.data.status);
+                if(response.data.status == 1){
+                    this.state = 3;
+                }
+            });
     }
+
+    resetPassword(){
+        if (this.codeOfEmail.length > 10 && this.createNewPassword === this.createNewPasswordConfirm){
+            let password =  this.createNewPassword;
+            let token    = this.codeOfEmail;
+            let email    = this.forgotPasswordEmail;
+            let password_confirmation = this.createNewPasswordConfirm;
+
+            this.$http.post(RESET_URL, {token:token, email:email, password:password, password_confirmation:password_confirmation}).then((response) =>{
+               console.log('good');
+               console.log(response.data.status, 'status on good');
+               if(response.data.status == 1){
+                   this.state = 5;
+               }
+                if(response.data.status == 0){
+                    this.state = 6;
+                }
+            });
+        }
+    }
+
+    createNewPass(){
+        this.state = 4;
+    }
+
 
     backToLogin() {
         this.state = 1;

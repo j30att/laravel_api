@@ -57,14 +57,12 @@
                     Enter your email and we will send you instruction with the next steps
                 </div>
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_5" class="login__input_label">Email</label>
+                    <label class="login__input_label">Email</label>
                     <input md-no-float required="" type="email" placeholder="Enter your Email"
                            name="clientEmail"
-                           ng-model="$ctrl.userEmail" minlength="5" maxlength="100"
+                           ng-model="$ctrl.forgotPasswordEmail"
                            ng-pattern="/^.+@.+\..+$/"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
-                           ng-invalid-required ng-valid-pattern ng-valid-minlength
-                           ng-valid-maxlength" id="input_5" aria-invalid="true">
+                           class="login__input" aria-invalid="true">
                 </md-input-container>
 
             </form>
@@ -89,7 +87,89 @@
         <div class="check__img"></div>
         <div class="check__title">Check your inbox</div>
         <div class="check__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
-        <div class="check__back" ng-click="$ctrl.backToLogin()">Back to Login</div>
+
+        <div class="check__back" ng-click="$ctrl.createNewPass()">Create new password</div>
+    </md-content>
+
+    <md-content ng-if="$ctrl.state == 4">
+        <div class="modal_content">
+            <div class="your_profile__title">
+                Create new password
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
+            </div>
+            <form ng-submit=""
+
+                  class="login__form ng-pristine ng-valid-email ng-invalid
+                ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
+                <div class="reset_information">
+                    Enter your code of email & create new password
+                </div>
+
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                                    style="margin-bottom: 20px;">
+                    <label for="input_6" class="login__input_label">Code of Email</label>
+                    <input type="text"
+                           ng-model="$ctrl.codeOfEmail" placeholder="Code of Email"
+                           required=""
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           aria-invalid="true">
+                </md-input-container>
+
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                                    style="margin-bottom: 20px;">
+                    <label for="input_6" class="login__input_label">Your password</label>
+                    <input type="password"
+                           ng-model="$ctrl.createNewPassword" placeholder="Enter your password"
+                           name="clientPassword" required=""
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           aria-invalid="true">
+                </md-input-container>
+
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                                    style="margin-bottom: 20px;">
+                    <label for="input_6" class="login__input_label">Confirm password</label>
+                    <input type="password"
+                           ng-model="$ctrl.createNewPasswordConfirm" placeholder="Confirm your password"
+                           name="clientPassword" required=""
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           aria-invalid="true">
+                </md-input-container>
+
+            </form>
+
+        </div>
+        <div class="modal_foter">
+            <div class="modal_foter__buttons">
+                <div class="button_text" ng-click="$ctrl.backToLogin()">Back</div>
+                <div class="button_blue" ng-click="$ctrl.resetPassword()">Create</div>
+            </div>
+        </div>
+
+
+    </md-content>
+
+    <md-content ng-if="$ctrl.state == 5">
+    <div class="modal_content">
+        <div class="check__discription">Password was succsessfull changed</div>
+
+        <div class="check__back" ng-click="$ctrl.state=1">Please login</div>
+
+    </div>
+
+
+
+</md-content>
+
+    <md-content ng-if="$ctrl.state == 6">
+        <div class="modal_content">
+            <div class="check__discription">Error</div>
+
+            <div class="check__back" ng-click="$ctrl.state=2">Please try again</div>
+
+        </div>
+
+
+
     </md-content>
 </md-sidenav>
 
