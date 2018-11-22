@@ -19,4 +19,11 @@ class Venue extends Model
         'venue_longitude',
         'venue_latitude',
     ];
+
+
+    public function events()
+    {
+        return $this->hasMany(Event::class, 'venue_id');
+    }
+
 }

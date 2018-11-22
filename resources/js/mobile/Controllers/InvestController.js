@@ -7,7 +7,8 @@ class InvestController {
         this.SalesResourceService = SalesResourceService;
         this.CountriesResourceService = CountriesResourceService;
 
-        this.filter = 'closing';
+
+        this.showFilter = false;
         this.events = [];
         this.sales = [];
         this._opts = {
@@ -63,8 +64,6 @@ class InvestController {
         this.CountriesResourceService.getCountries()
             .then(response => {
                 this.countries = response.data.data;
-
-
             });
     }
 

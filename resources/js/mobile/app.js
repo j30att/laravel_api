@@ -3,6 +3,7 @@ let angular = require('angular');
 import Controllers from './Controllers';
 import Components from './Components';
 import Services from "../common/Services";
+import Filters from './Filters';
 import routes from './Router';
 import middlewares from './Middlewares';
 import {permission, uiPermission} from 'angular-permission';
@@ -21,6 +22,7 @@ let app = angular.module('poker', [
     Controllers,
     Components,
     Services,
+    Filters,
     permission,
     uiPermission
 ]);

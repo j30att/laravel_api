@@ -1,0 +1,108 @@
+<div class="row events_filters" ng-if="$ctrl.show" ng-cloak>
+    <div class="events_filters_wrapper events_filters_wrapper_first col-md-12">
+        <div class="header_modal">
+            <div class="header_filter_empty" ng-if="$ctrl.state == 'none'"></div>
+            <div class="header_back" ng-click="$ctrl.state = 'none'" ng-if="$ctrl.state != 'none'"></div>
+            <div class="header_title">{% $ctrl.titles[$ctrl.state] %}</div>
+            <div class="header_close" ng-click="$ctrl.show = false" ng-if="$ctrl.state == 'none'"></div>
+            <div class="header_filter_empty" ng-if="$ctrl.state != 'none'"></div>
+        </div>
+
+        <div ng-if="$ctrl.state == 'none'">
+            <div class="filter_wrapper">
+                <div class="filter_label">Events</div>
+                <div class="filter_box" ng-click="$ctrl.state = 'events'">
+                    <span ng-if="!$ctrl.activeFilter.event">Choose events</span>
+                    <span ng-repeat="event in $ctrl.activeFilter.event">
+                        {% event %}<span class="comma">, </span>
+                    </span>
+                </div>
+            </div>
+            <div class="filter_wrapper">
+                <div class="filter_label">Regions</div>
+                <div class="filter_box" ng-click="$ctrl.state = 'regions'">
+                    <span ng-if="!$ctrl.activeFilter.country">Choose regions</span>
+                    <span ng-repeat="country in $ctrl.activeFilter.country">
+                        {% country %} <span class="comma">, </span>
+                    </span>
+
+                </div>
+            </div>
+            <div class="filter_wrapper">
+                <div class="filter_label">Venues</div>
+                <div class="filter_box" ng-click="$ctrl.state = 'venues'">
+                    <span ng-if="!$ctrl.activeFilter.venue">Choose venues</span>
+                    <span ng-repeat="venue in $ctrl.activeFilter.venue">
+                        {% venue %}<span class="comma">, </span>
+                    </span>
+
+                </div>
+            </div>
+            <div class="events_filters__buttons">
+            <div class="events_filters__button events_filters__button_save"
+                 ng-click="$ctrl.saveFilters()">
+                Save filter
+            </div>
+            <div class="events_filters__button events_filters__button_clear"
+                 ng-click="$ctrl.clearAllFilters()">
+                Clear all
+            </div>
+        </div>
+        </div>
+
+        <div ng-if="$ctrl.state == 'events'">
+            <div class="events_list_wrapper">
+                <div class="events_list_search">
+                    <input type="search" placeholder="Search event" ng-model="$ctrl.searchEvent">
+                </div>
+                <div class="events_list_items">
+                    <div class="events_list_item"
+                         ng-repeat="event in $ctrl.filters.event.options | optionFilter:$ctrl.searchEvent">
+                        <md-checkbox ng-checked="InvstCtrl.exists(event, InvstCtrl.selectedEvents)"
+                                     ng-click="InvstCtrl.selectedEvent(event, InvstCtrl.selectedEvents)">
+                            {%event%}
+                        </md-checkbox>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="$ctrl.state == 'regions'">
+            <div class="events_list_wrapper">
+                <div class="events_list_search">
+                    <input type="search" placeholder="Search region" ng-model="InvstCtrl.searchRegion">
+                </div>
+                <div class="events_list_items">
+
+                    <div class="events_list_item" ng-repeat="country in InvstCtrl.countries | filter:InvstCtrl.searchRegion">
+                        <md-checkbox ng-checked="InvstCtrl.existsCountry(country, InvstCtrl.selectedCountries)"
+                                     ng-click="InvstCtrl.selectedCountry(country, InvstCtrl.selectedCountries)">
+                            {%country.name%}
+                        </md-checkbox>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="$ctrl.state == 'venues'">
+            <div class="events_list_wrapper">
+                <div class="events_list_search">
+                    <input type="search" placeholder="Search venue" ng-model="InvstCtrl.searchVenue">
+                </div>
+                <div class="events_list_items">
+
+                    <div class="events_list_item" ng-repeat="venue in InvstCtrl.venues | filter:InvstCtrl.searchVenue">
+                        <md-checkbox ng-checked="InvstCtrl.existsVenue(venue, InvstCtrl.selectedVenues)"
+                                     ng-click="InvstCtrl.selectedVenue(venue, InvstCtrl.selectedVenues)">
+                            {%venue.title%}
+                        </md-checkbox>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

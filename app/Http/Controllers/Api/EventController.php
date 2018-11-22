@@ -7,6 +7,7 @@ use App\Http\Resources\EventResource;
 use App\Http\Resources\Events\EventsList;
 use App\Models\Country;
 use App\Models\Event;
+use App\Models\Venue;
 use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
@@ -17,11 +18,14 @@ class EventController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        $events = Event::query()->where('status',Event::STATUS_ACTIVE)->with('subEvents')->get();
+        $events = Event::query()
+            ->where('status',Event::STATUS_ACTIVE)
+            ->with('subEvents')
+            ->get();
 
         return EventResource::collection($events);
     }
@@ -111,7 +115,6 @@ class EventController extends Controller
         return EventsList::collection($events);
     }
 
-
     /*public function allEvents()
     {
         //$events = Event::query()->take(6)->get();
@@ -120,8 +123,6 @@ class EventController extends Controller
             ->get();
         return EventsList::collection($events);
     }*/
-
-
 
     /**
      * @param Request $request
@@ -152,10 +153,14 @@ class EventController extends Controller
 
                 if (isset($from)) {
                     $query->where(function ($query) use ($from, $to) {
-                        $query->WhereBetween('date_end', [$from, $to])
+                        $query->whereBetween('date_end', [$from, $to])
                             ->orWhereBetween('date_start', [$from, $to]);
                     });
                 }
+            }
+
+            if (!empty($filter['venue'])) {
+                $query->where(['venue_id' => $filter['venue']]);
             }
 
         }
@@ -167,11 +172,10 @@ class EventController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public
-    function getFilters(Request $request)
+    public function getFilters(Request $request)
     {
         //$lastMonth = Carbon::now()->subMonth();
-        $lastYear = Carbon::now()->subYear();
+        //$lastYear = Carbon::now()->subYear();
 
         $events = Event::query()
             ->orderBy('title')
@@ -185,6 +189,12 @@ class EventController extends Controller
             ->pluck('name', 'id')
             ->toArray();
         //$countries[0] = 'All regions';
+
+        $venues = Venue::query()
+            ->whereHas('events')
+            ->orderBy('title')
+            ->pluck('title', 'id')
+            ->toArray();
 
         $filters = [
             'date' => [
@@ -204,7 +214,7 @@ class EventController extends Controller
             ],
             'venue' => [
                 'placeholder' => 'All venues',
-                'options' => $countries
+                'options' => $venues
             ]
         ];
 

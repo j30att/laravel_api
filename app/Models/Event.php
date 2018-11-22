@@ -75,6 +75,11 @@ class Event extends Model
         return $this->belongsTo(Country::class, 'country_id');
     }
 
+    public function venue()
+    {
+        return $this->belongsTo(Venue::class, 'venue_id');
+    }
+
 
     public function getFormattedDateAttribute()
     {

@@ -5,6 +5,7 @@ import {BidsComponent} from "./Components/bids/bids.controller";
 import {BidsCarouselComponent} from "./Components/bids-carousel/bids-carousel.controller";
 import {EventsComponent} from "./Components/events/events.controller";
 import {EventsCarouselComponent} from "./Components/events-carousel/events-carousel.controller";
+import {EventsFilterComponent} from "./Components/events-filter/events-filter.controller";
 import {SalesInvestComponent} from "./Components/sales/invest/sales-invest.component";
 import {SalesListComponent} from "./Components/sales/list/sales-list.component";
 import {SalesRowComponent} from "./Components/sales/row/sales-row.component";
@@ -22,16 +23,15 @@ module.component('bids', BidsComponent);
 module.component('bidsCarousel', BidsCarouselComponent);
 module.component('events', EventsComponent);
 module.component('eventsCarousel', EventsCarouselComponent);
+module.component('eventsFilter', EventsFilterComponent);
 module.component('salesInvest', SalesInvestComponent);
 module.component('salesList', SalesListComponent);
 module.component('salesRow', SalesRowComponent);
 module.component('salesCarousel', SalesCarouselComponent);
 
-
 module.component('bidPlace', BidPlaceComponent);
 module.component('saleManage', SaleManageComponent);
 module.component('saleCreate', SaleCreateComponent);
-
 
 module.component('inputMarkup', InputMarkupComponent);
 module.component('inputAmount', InputAmountComponent);
