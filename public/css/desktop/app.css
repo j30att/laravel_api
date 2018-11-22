@@ -2355,6 +2355,16 @@ md-dialog-actions .md-confirm-button {
   border-radius: 6px !important;
 }
 
+.login__input__error {
+  display: none;
+  color: #fc4d02;
+  font-size: 15px;
+}
+
+.login__input__error.active {
+  display: initial;
+}
+
 .login__input::-webkit-input-placeholder {
   font-size: 15px !important;
   color: rgba(0, 0, 0, 0.3) !important;
