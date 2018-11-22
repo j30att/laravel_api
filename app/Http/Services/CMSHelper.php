@@ -13,6 +13,7 @@ use App\Models\Country;
 use App\Models\Event;
 use App\Models\Flight;
 use App\Models\SubEvent;
+use App\Models\Venue;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use http\Exception;
@@ -66,6 +67,8 @@ class CMSHelper
         $eventUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/event_only/' . $eventId;//.'?softdeleteable=0';
         $apiResource = $this->guzzle->get($eventUri);
 
+        $now = Carbon::now();
+
         if ('200' == $apiResource->getStatusCode()) {
             $event = Event::query()->find($eventId);
 
@@ -87,35 +90,52 @@ class CMSHelper
                 $event->reg_free = $eventData->event->eventRegFee;
                 $event->fund = $eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
-                $event->logo = $eventData->event->eventLogo;
+                $event->logo = $eventData->event->eventLogoBg;
                 $event->country_id = $country->id;
                 $event->currency = $eventData->event->eventCurrency;
                 $event->venue_id = $eventData->event->eventVenueId;
                 $event->venue_name = $eventData->event->eventVenueName;
                 $event->date_end = Carbon::parse($eventData->event->eventEndDate);
                 $event->date_start = Carbon::parse($eventData->event->eventStartDate);
+                $event->status = $now->gte(Carbon::parse($eventData->event->eventStartDate))? Event::STATUS_CLOSED : Event::STATUS_ACTIVE;
 
                 $event->save();
+
+                $this->updateVenue($eventData->event);
 
                 if (count($eventData->event->schedules) > 0) {
                     foreach ($eventData->event->schedules as $schedule) {
                         $this->updateSchedule($schedule->id);
-                        /*$subEvent = SubEvent::query()->find($schedule->id);
 
-                        if (is_null($subEvent)) {
-                            $subEvent = new SubEvent();
-                            $subEvent->id = $schedule->id;
-                        }
-
-                        $subEvent->event_id = $schedule->event_id;
-                        $subEvent->title = $schedule->scheduleTitle;
-                        $subEvent->fund = $schedule->schedulePrizePool;
-                        $subEvent->buy_in = $schedule->scheduleBuyIn;
-                        $subEvent->save();*/
                     }
                 }
             }
         }
+    }
+
+    public function updateVenue($event){
+        $key = '@type'; // костыль для ключа @type
+
+        $venue = Venue::query()->where('id', $event->eventVenueId)->first();
+        $country = Country::query()->where('code', $event->eventVenueAddressArray->addressCountry)->first();
+
+        if (is_null($venue)) {
+            $venue = new Venue();
+            $venue->id = $event->eventVenueId;
+        }
+        $venue->event_id            = $event->id;
+        $venue->country_id          = $country->id;
+        $venue->title               = $event->eventVenueName;
+        $venue->adress_type         = $event->eventVenueAddressArray->$key;
+        $venue->street              = $event->eventVenueAddressArray->streetAddress;
+        $venue->locality            = $event->eventVenueAddressArray->addressLocality;
+        $venue->postal_code         = $event->eventVenueAddressArray->postalCode;
+        $venue->address_region      = $event->eventVenueAddressArray->addressRegion;
+        $venue->venue_address       = $event->eventVenueAddressStr;
+        $venue->venue_longitude     = $event->eventVenueLongitude;
+        $venue->venue_latitude      = $event->eventVenueLatitude;
+
+        $venue->save();
     }
 
     public function updateSchedule($scheduleId)
