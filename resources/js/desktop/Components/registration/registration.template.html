@@ -1,79 +1,93 @@
-<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen"
+<md-sidenav class="md-sidenav-right full_height"
+            style="min-width: 500px"
+            md-is-open="isSidenavOpen"
             md-component-id="right_registration">
+
     <md-content ng-if="$ctrl.state == 'register'">
         <div class="modal_content">
-        <div class="your_profile__title">
-            Registration
-            <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
-        </div>
-        <div class="registration_subtitle">
-            ADD PERSONAL INFROMATION
-        </div>
-        <div
-              class="login__form ng-pristine ng-valid-email ng-invalid
+
+            <div class="your_profile__title">
+                Registration
+                <div class="your_profile_close"
+                     ng-click="$ctrl.buildToggler('right_registration')">
+                </div>
+            </div>
+
+            <div class="registration_subtitle">
+                ADD PERSONAL INFROMATION
+            </div>
+
+            <div
+                class="login__form ng-pristine ng-valid-email ng-invalid
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
-            <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                <label for="input_first_name"
-                       class="login__input_label"
-                       ng-class="{'validate_error_label': $ctrl._opts.validateFirstName}"
-                       >First name</label>
-                <input md-no-float
-                       type="text"
-                       placeholder="Enter your First name"
-                       ng-model="$ctrl.user.firstName"
-                       ng-class="{'validate_error': $ctrl._opts.validateFirstName}"
-                       class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
-                           ng-invalid-required" id="input_first_name" aria-invalid="true">
-            </md-input-container>
-            <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                <label for="input_last_name"
-                       class="login__input_label"
-                       ng-class="{'validate_error_label': $ctrl._opts.validateLastName}"
-                       >Last Name</label>
-                <input md-no-float
-                       type="text" placeholder="Enter your Last name"
-                       ng-model="$ctrl.user.lastName"
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_first_name"
+                           class="login__input_label"
+                           ng-class="{'validate_error_label': $ctrl._opts.validateFirstName}">
+                        First name
+                    </label>
+                    <input md-no-float
+                           type="text"
+                           placeholder="Enter your First name"
+                           ng-model="$ctrl.user.firstName"
+                           ng-class="{'validate_error': $ctrl._opts.validateFirstName}"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           id="input_first_name"
+                           aria-invalid="true">
+                </md-input-container>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_last_name"
+                           class="login__input_label"
+                           ng-class="{'validate_error_label': $ctrl._opts.validateLastName}">
+                        Last Name
+                    </label>
+                    <input md-no-float
+                           type="text" placeholder="Enter your Last name"
+                           ng-model="$ctrl.user.lastName"
+                           ng-class="{'validate_error': $ctrl._opts.validateLastName}"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           id="input_last_name"
+                           aria-invalid="true">
+                </md-input-container>
+                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
+                    <label for="input_date"
+                           class="login__input_label"
+                           ng-class="{'validate_error_label': $ctrl._opts.validateBirthDate}">
+                        Date of Birth
+                    </label>
+                    <input md-no-float
+                           type="date" placeholder="12.03.1988"
+                           ng-model="$ctrl.user.dateOfBirth"
+                           ng-class="{'validate_error':$ctrl._opts.validateBirthDate}"
+                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           id="input_date"
+                           aria-invalid="true">
+                </md-input-container>
 
-                       ng-class="{'validate_error': $ctrl._opts.validateLastName}"
-                       class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
-                           ng-invalid-required" id="input_last_name" aria-invalid="true">
-            </md-input-container>
-            <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                <label for="input_date" class="login__input_label"
-                ng-class="{'validate_error_label': $ctrl._opts.validateBirthDate}"
-                >Date of Birth</label>
-                <input md-no-float
-                       type="date" placeholder="12.03.1988"
-                       ng-model="$ctrl.user.dateOfBirth"
-                       ng-class="{'validate_error':$ctrl._opts.validateBirthDate}"
-                       class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid
-                           ng-invalid-required" id="input_date" aria-invalid="true">
-            </md-input-container>
+                <div class="location_select_wrapper">
+                    <label class="login__input_label"
+                           ng-class="{'validate_error_label': $ctrl._opts.validateLocation}">
+                        Location
+                    </label>
+                    <md-select ng-model="$ctrl.user.country_id"
+                               ng-class="{'validate_error': $ctrl._opts.validateLocation}"
+                               class="login__input login__select md-no-underline"
+                               placeholder="Select your location">
+                        <md-option
+                            value="{%item.id%}"
+                            ng-repeat="item in $ctrl.countries | orderBy:'name'">
+                            {%item.name%}, {%item.code%}
+                        </md-option>
+                    </md-select>
+                </div>
 
-            <div class="location_select_wrapper">
-                <label class="login__input_label"
-                ng-class="{'validate_error_label': $ctrl._opts.validateLocation}"
-                >Location</label>
-                <md-select ng-model="$ctrl.user.country_id"
-                           ng-class="{'validate_error': $ctrl._opts.validateLocation}"
-                           class="login__input login__select md-no-underline"
-                           placeholder="Select your location">
-
-                    <md-option
-                        value="{%item.id%}"
-                        ng-repeat="item in $ctrl.countries | orderBy:'name'">
-                        {%item.name%}, {%item.code%}
-                    </md-option>
-                </md-select>
             </div>
 
         </div>
-
-        </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('register')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('register')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -82,6 +96,7 @@
             </div>
         </div>
     </md-content>
+
     <md-content ng-if="$ctrl.state == 'register_password'">
         <div class="modal_content">
             <div class="your_profile__title">
@@ -93,7 +108,7 @@
             </div>
             <form
 
-                  class="login__form ng-pristine ng-valid-email ng-invalid
+                class="login__form ng-pristine ng-valid-email ng-invalid
                 ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength">
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
@@ -102,38 +117,47 @@
                     <input md-no-float required="" type="email" placeholder="Enter your Email"
                            name="clientEmail"
                            ng-model="$ctrl.user.email"
-
                            ng-class="{'validate_error': $ctrl._opts.validateEmail}"
                            class="login__input ng-pristine ng-untouched md-input" id="input_7" aria-invalid="true">
+                    <span class="login__input__error"
+                          ng-class="{'active': $ctrl._opts.validateEmail}">
+                        {% $ctrl._opts.validateEmail %}
+                    </span>
                 </md-input-container>
 
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
                     <label for="input_8" class="login__input_label"
-                    ng-class="{'validate_error_label': $ctrl._opts.validatePassword()}"
+                           ng-class="{'validate_error_label': $ctrl._opts.validatePassword}"
                     >Your password</label>
                     <input type="password"
                            placeholder="Enter your password"
                            ng-model="$ctrl.user.password"
-
-                           ng-class="{'validate_error': $ctrl._opts.validatePassword()}"
+                           ng-class="{'validate_error': $ctrl._opts.validatePassword}"
                            name="clientPassword" required=""
                            class="login__input"
                            id="input_8" aria-invalid="true">
+                    <span class="login__input__error"
+                          ng-class="{'active': $ctrl._opts.validatePassword}">
+                        {% $ctrl._opts.validatePassword %}
+                    </span>
                 </md-input-container>
                 <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
                                     style="margin-bottom: 20px;">
                     <label for="input_9" class="login__input_label"
-                    ng-class="{'validate_error_label': $ctrl._opts.validateConfirmPassword()}"
+                           ng-class="{'validate_error_label': $ctrl._opts.validateConfirmPassword}"
                     >Confirm password</label>
                     <input type="password"
                            placeholder="Confirm password"
                            ng-model="$ctrl.user.confirmPassword"
-
-                           ng-class="{'validate_error_label': $ctrl._opts.validateConfirmPassword()}"
+                           ng-class="{'validate_error': $ctrl._opts.validateConfirmPassword}"
                            name="clientPasswordConfirm"
                            class="login__input"
                            id="input_9" aria-invalid="true">
+                    <span class="login__input__error"
+                          ng-class="{'active': $ctrl._opts.validateConfirmPassword}">
+                        {% $ctrl._opts.validateConfirmPassword %}
+                    </span>
                 </md-input-container>
 
 
@@ -141,8 +165,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('register_password')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('register_password')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -157,25 +181,25 @@
                 Data & Privacy
                 <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
             </div>
-        <div class="data_privacy__discription">
-            To esure your expirience is personal and relevant,
-            we’re changing the type of advert you see and giving your more control over your data
-        </div>
-        <div class="data_privacy__checkbox_wrapper">
-            <md-checkbox ng-model="$ctrl.user.checkBoxEmail" aria-label="Checkbox 1">
-                Yes, I’d like to hear about the latest poker news and promotions by Email
-            </md-checkbox>
+            <div class="data_privacy__discription">
+                To esure your expirience is personal and relevant,
+                we’re changing the type of advert you see and giving your more control over your data
+            </div>
+            <div class="data_privacy__checkbox_wrapper">
+                <md-checkbox ng-model="$ctrl.user.checkBoxEmail" aria-label="Checkbox 1">
+                    Yes, I’d like to hear about the latest poker news and promotions by Email
+                </md-checkbox>
 
-            <md-checkbox ng-model="$ctrl.user.checkBoxSms" aria-label="Checkbox 2">
-                Yes, I’d like to hear about the latest poker news and promotions by SMS
-            </md-checkbox>
-        </div>
+                <md-checkbox ng-model="$ctrl.user.checkBoxSms" aria-label="Checkbox 2">
+                    Yes, I’d like to hear about the latest poker news and promotions by SMS
+                </md-checkbox>
+            </div>
 
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('confirm_privacy')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('confirm_privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -201,7 +225,9 @@
                 </div>
 
 
-                <a href="https://releaseb-ciwic.ivycomptech.co.in/en_US/VC/login-staking.html?redirect_URI=https://mppl-staking2-dev.herokuapp.com/"><div class="dollar_content__button button">Link my partypoker account</div></a>
+                <a href="https://releaseb-ciwic.ivycomptech.co.in/en_US/VC/login-staking.html?redirect_URI=https://mppl-staking2-dev.herokuapp.com/">
+                    <div class="dollar_content__button button">Link my partypoker account</div>
+                </a>
 
 
             </div>
@@ -230,8 +256,8 @@
 
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('media_policy')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('media_policy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -253,11 +279,10 @@
             </div>
 
 
-
         </div>
         <div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
+            By creating an account you agree to our <a href="#" ng-click="$ctrl.showTerms('privacy')">Terms & Conditions</a>
+            and <a href="#" ng-click="$ctrl.showPrivacy('privacy')">Privacy Policy</a>
         </div>
         <div class="modal_foter">
             <div class="modal_foter__buttons">
@@ -271,7 +296,7 @@
         <div class="modal_content" style="height: 90vh">
             <div class="your_profile__title" style="position: fixed; width: 80%">
                 Terms of Service
-                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+                <div class="your_profile_close" ng-click="$ctrl.hideTerms()"></div>
             </div>
             <div class="data_privacy__discription">
 
@@ -280,186 +305,397 @@
                 <p style="text-align: center;color: #007fed;">partypoker Staking Terms and Conditions</p>
                 <p style="text-align: center;">&nbsp;</p>
                 <p><strong>29. STAKING FACILITIES -</strong></p>
-                <p><br /><strong>29.1 General</strong></p>
-                <p><br /><strong>29.1.1</strong> The terms set out in this Section 29 apply to Your use of the Staking Facilities as defined below. Please note that in the event of any conflict between this, Section 29 and the other Sections of these Terms and Conditions, the other Sections of these Terms and Conditions shall prevail. </p>
+                <p><br/><strong>29.1 General</strong></p>
+                <p><br/><strong>29.1.1</strong> The terms set out in this Section 29 apply to Your use of the Staking
+                    Facilities as defined below. Please note that in the event of any conflict between this, Section 29
+                    and the other Sections of these Terms and Conditions, the other Sections of these Terms and
+                    Conditions shall prevail. </p>
                 <p>&nbsp;</p>
-                <p><strong>29.1.2</strong> For the purposes of this Section 29 the "Staking Facilities" means the facilities provided by Us on the partypoker staking.com online site to allow You either to buy or sell the right to receive a proportion (a "Stake Share" as defined further below) of any Winnings (as defined below) that the Player may have in a specified poker tournament or competition conducted using the Gaming Facilities in accordance with Our terms and conditions (an "Event"), such sale to be made in accordance with the terms set out in this Section.</p>
+                <p><strong>29.1.2</strong> For the purposes of this Section 29 the "Staking Facilities" means the
+                    facilities provided by Us on the partypoker staking.com online site to allow You either to buy or
+                    sell the right to receive a proportion (a "Stake Share" as defined further below) of any Winnings
+                    (as defined below) that the Player may have in a specified poker tournament or competition conducted
+                    using the Gaming Facilities in accordance with Our terms and conditions (an "Event"), such sale to
+                    be made in accordance with the terms set out in this Section.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.1.3</strong> In this Section 29&nbsp;<strong>"Funder"</strong> refers to a person who has purchased a Stake Share and <strong>"Player"</strong> refers to a person who has sold a Share.</p>
+                <p><strong>29.1.3</strong> In this Section 29&nbsp;<strong>"Funder"</strong> refers to a person who has
+                    purchased a Stake Share and <strong>"Player"</strong> refers to a person who has sold a Share.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.2 Relevant Terms and Conditions</strong><br />Your use of the Staking Facilities shall be governed by and conducted in accordance with the generally accepted staking rules set out in this Section. Capitalised terms defined elsewhere in these Terms and Conditions bear the same meaning in this Section 29 unless the term has been defined differently in this section 29 and/or the context otherwise requires.</p>
+                <p><strong>29.2 Relevant Terms and Conditions</strong><br/>Your use of the Staking Facilities shall be
+                    governed by and conducted in accordance with the generally accepted staking rules set out in this
+                    Section. Capitalised terms defined elsewhere in these Terms and Conditions bear the same meaning in
+                    this Section 29 unless the term has been defined differently in this section 29 and/or the context
+                    otherwise requires.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.3 Definition of Stake Shares</strong></p>
                 <p>&nbsp;</p>
-                <p><strong>29.3.1</strong> A Stake Share shall constitute the sale, on the terms and subject to the conditions outlined in this Section 29 by a Player to the Funder holding such Stake Share of a right to receive an amount equal to a specified percentage (which may be expressed up to 4 decimal places) of that Player's Winnings of a specified Event.</p>
+                <p><strong>29.3.1</strong> A Stake Share shall constitute the sale, on the terms and subject to the
+                    conditions outlined in this Section 29 by a Player to the Funder holding such Stake Share of a right
+                    to receive an amount equal to a specified percentage (which may be expressed up to 4 decimal places)
+                    of that Player's Winnings of a specified Event.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.3.2</strong> Stake Share purchases must be made via the Staking Facilities.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.4 Calculation of winnings</strong><br />Winnings are defined as the amount that the Player cashes out for at the end of the Event. Winnings do not include; any physical material goods added or included in a prize pool i.e. a car or a bracelet; a trophy, any future Event seats or packages added or included into a prizepool; any promotional bonuses or rebates for taking part in specific Events; any Golden Chip or Last Longer prizes. </p>
-                <p>We reserve the right to edit or change what is to be included in the calculation of winnings at our discretion with a view to reach a fair decision to protect the interest of both Player and Funder. Such variation shall take effect in respect of Events held after the date that such variation has been reflected in a variation to this Section&nbsp;29.</p>
+                <p><strong>29.4 Calculation of winnings</strong><br/>Winnings are defined as the amount that the Player
+                    cashes out for at the end of the Event. Winnings do not include; any physical material goods added
+                    or included in a prize pool i.e. a car or a bracelet; a trophy, any future Event seats or packages
+                    added or included into a prizepool; any promotional bonuses or rebates for taking part in specific
+                    Events; any Golden Chip or Last Longer prizes. </p>
+                <p>We reserve the right to edit or change what is to be included in the calculation of winnings at our
+                    discretion with a view to reach a fair decision to protect the interest of both Player and Funder.
+                    Such variation shall take effect in respect of Events held after the date that such variation has
+                    been reflected in a variation to this Section&nbsp;29.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.5 Example of the amount due to Funder in respect of his Stake Share</strong></p>
-                <p>A Funder's share of the Winnings are calculated by multiplying the percentage Stake Share purchased by the amount of the Player's Winnings in the relevant Event. For example, if A Funder has bought a 10% Stake Share from a Player who has won $20,000 the Funder would be due 0.1*$20,000 = $2,000.</p>
+                <p>A Funder's share of the Winnings are calculated by multiplying the percentage Stake Share purchased
+                    by the amount of the Player's Winnings in the relevant Event. For example, if A Funder has bought a
+                    10% Stake Share from a Player who has won $20,000 the Funder would be due 0.1*$20,000 = $2,000.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.6 Pricing of Stake Shares.&nbsp;</strong>Stake Shares are offered, in accordance with the procedures set in section 29.10 at a price that is expressed as a percentage of the cost of the Stake payable by the Player as his or her entry price to the relevant Event. For example a Player could offer to sell a sell Stake Shares at a 20% uplift. If the cost of the Stake payable by the Player as his or her entry price to the Event is $10,000 and a Funder were to purchase a 10% Stake Share at the price offered, the agreed price for this would be &pound;1,200 ($100,000*0.1*1.2)</p>
+                <p><strong>29.6 Pricing of Stake Shares.&nbsp;</strong>Stake Shares are offered, in accordance with the
+                    procedures set in section 29.10 at a price that is expressed as a percentage of the cost of the
+                    Stake payable by the Player as his or her entry price to the relevant Event. For example a Player
+                    could offer to sell a sell Stake Shares at a 20% uplift. If the cost of the Stake payable by the
+                    Player as his or her entry price to the Event is $10,000 and a Funder were to purchase a 10% Stake
+                    Share at the price offered, the agreed price for this would be &pound;1,200 ($100,000*0.1*1.2)</p>
                 <p>&nbsp;</p>
                 <p>We normally place limits on both:</p>
                 <ol style="list-style-type: lower-roman;">
-                    <li>the maximum percentage Stake Shares that a Player may sell: We normally limit this to [80%]% to ensure that a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Player retains an incentive to play to the best of his or her skill but may impose a lower maximum for a particular&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Event or for a particular Player;</li>
-                    <li>the maximum amount that a Player may receive in relation to the sale of Stake Shares in respect of a particular&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Event: We normally limit this to 100% of the cost of the Stake payable by the Player as his or her entry price to the&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Event but may impose a lower maximum for a particular Event or for a particular Player.</li>
+                    <li>the maximum percentage Stake Shares that a Player may sell: We normally limit this to [80%]% to
+                        ensure that a&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Player retains an incentive to play to
+                        the best of his or her skill but may impose a lower maximum for a particular&nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; Event or for a particular Player;
+                    </li>
+                    <li>the maximum amount that a Player may receive in relation to the sale of Stake Shares in respect
+                        of a particular&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Event: We normally limit
+                        this to 100% of the cost of the Stake payable by the Player as his or her entry price to the&nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp;Event but may impose a lower maximum for a particular Event or for a
+                        particular Player.
+                    </li>
                 </ol>
-                <p>We will always set these rules so that a Player may not sell Stake Shares at a mark-up that would lead to the Player receiving more than the cost of the Stake payable by the Player as his or her entry price to the Event.</p>
+                <p>We will always set these rules so that a Player may not sell Stake Shares at a mark-up that would
+                    lead to the Player receiving more than the cost of the Stake payable by the Player as his or her
+                    entry price to the Event.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.7 Accuracy of Purchases and Results</strong><br />To ensure the highest accuracy all purchases and results, we calculate Your Account funds using four decimal points. For technical reasons, Your Account balance can only be displayed to two decimal points, which may from time to time lead to discrepancies when a value with four decimal points is rounded off to a value with two decimal points.</p>
+                <p><strong>29.7 Accuracy of Purchases and Results</strong><br/>To ensure the highest accuracy all
+                    purchases and results, we calculate Your Account funds using four decimal points. For technical
+                    reasons, Your Account balance can only be displayed to two decimal points, which may from time to
+                    time lead to discrepancies when a value with four decimal points is rounded off to a value with two
+                    decimal points.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.8 Limits on the Purchase of Stake Shares</strong></p>
                 <p>&nbsp;</p>
-                <p><strong>29.8.1</strong> We reserve the right to limit the maximum aggregate percentage sold in any Stake Sale by any Player in relation to any Event.</p>
+                <p><strong>29.8.1</strong> We reserve the right to limit the maximum aggregate percentage sold in any
+                    Stake Sale by any Player in relation to any Event.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.8.2</strong> We reserve the right (and You accept these reservations as being necessary to protect the integrity of the site and to protect potential Funders) without explanation:</p>
+                <p><strong>29.8.2</strong> We reserve the right (and You accept these reservations as being necessary to
+                    protect the integrity of the site and to protect potential Funders) without explanation:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>to exclude or limit the ability of any customer to act as a Player in offering Stake Shares; and</li>
-                    <li>to limit Events, and the maximum total percentages available in respect of any Player or any Event; and</li>
-                    <li>to change the maximum percentage Stake Shares that a Player may sell from our normal maximum of [80%]; and</li>
-                    <li>to change the maximum amount that a Player may receive in relation to the sale of Stake Shares in respect of a particular Event from our normal maximum of 100% of the cost of the Stake payable by the Player as his or her entry price to the relevant Event; and</li>
-                    <li>to change the minimum amount of time before the commencement of Event at which a sale of a Stake Share may be sold from our normal rule of 24 hours prior to the commencement of the Event but in the absence of other provisions being notified via the Staking Facility the requirements set out in paragraph 3.3.3 shall apply:</li>
+                    <li>to exclude or limit the ability of any customer to act as a Player in offering Stake Shares;
+                        and
+                    </li>
+                    <li>to limit Events, and the maximum total percentages available in respect of any Player or any
+                        Event; and
+                    </li>
+                    <li>to change the maximum percentage Stake Shares that a Player may sell from our normal maximum of
+                        [80%]; and
+                    </li>
+                    <li>to change the maximum amount that a Player may receive in relation to the sale of Stake Shares
+                        in respect of a particular Event from our normal maximum of 100% of the cost of the Stake
+                        payable by the Player as his or her entry price to the relevant Event; and
+                    </li>
+                    <li>to change the minimum amount of time before the commencement of Event at which a sale of a Stake
+                        Share may be sold from our normal rule of 24 hours prior to the commencement of the Event but in
+                        the absence of other provisions being notified via the Staking Facility the requirements set out
+                        in paragraph 3.3.3 shall apply:
+                    </li>
                 </ol>
-                <p><strong>29.8.3</strong> Subject to Our making different another determination under paragraph 29.8.2 above:</p>
+                <p><strong>29.8.3</strong> Subject to Our making different another determination under paragraph 29.8.2
+                    above:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>a Player may not sell Stake Shares for aggregate amount greater than 100% of the cost of the Stake payable by the Player as his or her entry price to the Event (so as to avoid a position where the Player would have turned a profit before sitting down to play the Event;</li>
-                    <li>no Player may sell or offer to sell (via the Staking Facilities or otherwise) Stake Shares comprising in total more than 100% of the cost of the Stake payable by the Player as his or her entry price to the Event.</li>
-                    <li>any sale of a Stake Share shall be concluded no later than one hour before the start of the relevant Event, or if later the commencement of the Player's participation in the Event].</li>
+                    <li>a Player may not sell Stake Shares for aggregate amount greater than 100% of the cost of the
+                        Stake payable by the Player as his or her entry price to the Event (so as to avoid a position
+                        where the Player would have turned a profit before sitting down to play the Event;
+                    </li>
+                    <li>no Player may sell or offer to sell (via the Staking Facilities or otherwise) Stake Shares
+                        comprising in total more than 100% of the cost of the Stake payable by the Player as his or her
+                        entry price to the Event.
+                    </li>
+                    <li>any sale of a Stake Share shall be concluded no later than one hour before the start of the
+                        relevant Event, or if later the commencement of the Player's participation in the Event].
+                    </li>
                 </ol>
                 <p>&nbsp;</p>
-                <p><strong>29.8.4</strong> Upon a Player selling or offering to sell Stake Shares comprising more than [80%] of an Event, prospective Funders will be warned that the Player's motivation to perform to his or her best may be reduced.</p>
+                <p><strong>29.8.4</strong> Upon a Player selling or offering to sell Stake Shares comprising more than
+                    [80%] of an Event, prospective Funders will be warned that the Player's motivation to perform to his
+                    or her best may be reduced.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.8.5</strong> As terms of the sale of a Stake Share, the Player makes a commitment to Us and to the relevant Funder(s) to:</p>
+                <p><strong>29.8.5</strong> As terms of the sale of a Stake Share, the Player makes a commitment to Us
+                    and to the relevant Funder(s) to:</p>
                 <ul>
-                    <li>pay the remaining balance not covered by Funders for the relevant Event staking platform from their partypoker wallet (subject to paragraph 29.8.6).</li>
+                    <li>pay the remaining balance not covered by Funders for the relevant Event staking platform from
+                        their partypoker wallet (subject to paragraph 29.8.6).
+                    </li>
                     <li>unless prevented by illness or other reasonable excuse, play the relevant Event;</li>
                     <li>will play in such Event to the best of his or her ability;</li>
-                    <li>will observe all the requirements of a player under the Rules and under the partypoker terms and conditions;</li>
+                    <li>will observe all the requirements of a player under the Rules and under the partypoker terms and
+                        conditions;
+                    </li>
                     <li>will not collude with anybody to minimise or divert any Winning;</li>
-                    <li>not to sell any share of Winnings or enter into any equivalent arrangements otherwise that through the Staking Facilities in any Event where the Player is offering or has agreed a Stke Share Sale using the Staking Facilities; and</li>
-                    <li>will use reasonable endeavours to provide reliable updates to Funders on the" My Rail" section.</li>
+                    <li>not to sell any share of Winnings or enter into any equivalent arrangements otherwise that
+                        through the Staking Facilities in any Event where the Player is offering or has agreed a Stke
+                        Share Sale using the Staking Facilities; and
+                    </li>
+                    <li>will use reasonable endeavours to provide reliable updates to Funders on the" My Rail"
+                        section.
+                    </li>
                 </ul>
-                <p>Failure to comply with any of the above commitments could lead to Our excluding the Player from the Staking Facilities.</p>
+                <p>Failure to comply with any of the above commitments could lead to Our excluding the Player from the
+                    Staking Facilities.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.8.6</strong> Players who win or are otherwise provided with a promotional package for a partypoker Live event on partypoker or in a live satellite Event (thereby providing them with all or part of the relevant Stake) are allowed to sell a Stake Share. They shall receive the Funders&rsquo; funds into their partypoker account at the event having confirmed their attendance with the partypoker staking representative present at the relevant Event. The Funds will be transferred to their account within 24 hours of their first hand of play at [the relevant] Event.</p>
+                <p><strong>29.8.6</strong> Players who win or are otherwise provided with a promotional package for a
+                    partypoker Live event on partypoker or in a live satellite Event (thereby providing them with all or
+                    part of the relevant Stake) are allowed to sell a Stake Share. They shall receive the Funders&rsquo;
+                    funds into their partypoker account at the event having confirmed their attendance with the
+                    partypoker staking representative present at the relevant Event. The Funds will be transferred to
+                    their account within 24 hours of their first hand of play at [the relevant] Event.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.8.7</strong> As terms of the purchase of a Stake Share, the Funder makes a commitment to Us and to the relevant Player to:</p>
+                <p><strong>29.8.7</strong> As terms of the purchase of a Stake Share, the Funder makes a commitment to
+                    Us and to the relevant Player to:</p>
                 <ul>
-                    <li>pay the amount agreed as the price for the Share Stake from his or her partypoker wallet, and confirms his or her irrevocable instruction to Us to effect any payment becoming due as a result from the Player's Account to the Funder's Account. </li>
+                    <li>pay the amount agreed as the price for the Share Stake from his or her partypoker wallet, and
+                        confirms his or her irrevocable instruction to Us to effect any payment becoming due as a result
+                        from the Player's Account to the Funder's Account.
+                    </li>
                     <li>not himself or herself play the relevant Event; and</li>
                     <li>will not collude with anybody to minimise or divert any Winning.</li>
                 </ul>
-                <p>and warrants to us and to the relevant Player that the Funder is able to make such payment without causing himself any financial difficulty, has not registered with partypoker.com as being a problem gambler and is not subject to any banktruptcy or insolvency proceedings or any like proceedings in any jurisdiction.</p>
+                <p>and warrants to us and to the relevant Player that the Funder is able to make such payment without
+                    causing himself any financial difficulty, has not registered with partypoker.com as being a problem
+                    gambler and is not subject to any banktruptcy or insolvency proceedings or any like proceedings in
+                    any jurisdiction.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.8.8</strong> By selling a Stake Share to any Funder in relation to any Event, a Player agrees to offer to that Funder (and to authorises Us to communicate to any such Funders) the option to acquire up to the same percentage Stake Share of that Player's subsequent re-entries into that Event at the same percentage uplift to the value of the Stake. Players will be informed of any Funder's taking up such option prior to the point that the Player buys in to the relevant Event, and should a Player choose to go ahead with such entry a sale will be deemed to be concluded between the Player and each such Funder of the relevant Stake Shares in respect of which such Funders have exercised such option.</p>
+                <p><strong>29.8.8</strong> By selling a Stake Share to any Funder in relation to any Event, a Player
+                    agrees to offer to that Funder (and to authorises Us to communicate to any such Funders) the option
+                    to acquire up to the same percentage Stake Share of that Player's subsequent re-entries into that
+                    Event at the same percentage uplift to the value of the Stake. Players will be informed of any
+                    Funder's taking up such option prior to the point that the Player buys in to the relevant Event, and
+                    should a Player choose to go ahead with such entry a sale will be deemed to be concluded between the
+                    Player and each such Funder of the relevant Stake Shares in respect of which such Funders have
+                    exercised such option.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.9 Sale Procedures</strong></p>
                 <p>&nbsp;</p>
                 <p><strong>29.9.1 Offers of Stake Shares </strong></p>
                 <p>Players who wish to use the Staking Facilities to sell Stake Shares must :</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>ensure that they have accurately completed the minimum required information fields relative to their Account;</li>
-                    <li>complete truthfully the required information fields to be displayed on partypoker.co.uk for an offer to sell a Stake Share in relation to a particular Event including ticking the boxes to confirm the warranties given by the Player. If You are unable to give any of these warranties You should not offer to sell a Stake Share.</li>
+                    <li>ensure that they have accurately completed the minimum required information fields relative to
+                        their Account;
+                    </li>
+                    <li>complete truthfully the required information fields to be displayed on partypoker.co.uk for an
+                        offer to sell a Stake Share in relation to a particular Event including ticking the boxes to
+                        confirm the warranties given by the Player. If You are unable to give any of these warranties
+                        You should not offer to sell a Stake Share.
+                    </li>
                 </ol>
                 <p><strong>29.9.2 Editing and Cancelling of Offers</strong></p>
-                <p>A Player has the ability to edit or cancel any offer of Stake Shares that has not already been accepted in respect of an Event at any point after submitting their offer of Stake Shares up to the last time for time before the commencement of Event at which a sale of a Stake Share may be concluded and in particular may amend:</p>
+                <p>A Player has the ability to edit or cancel any offer of Stake Shares that has not already been
+                    accepted in respect of an Event at any point after submitting their offer of Stake Shares up to the
+                    last time for time before the commencement of Event at which a sale of a Stake Share may be
+                    concluded and in particular may amend:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>the pricing of percentage Stake Shares (which will be expressed as a percentage uplift [or discount?] to the same percentage of the cost of the Stake payable by the Player as his or her entry price to the relevant Event; and/or</li>
-                    <li>the minimum (if any) amount percentage of Stake Shares that must be sold in aggregate for any of the sales to become unconditional (the "Minimum Sale Condition") stipulated by the Player, however such change shall not affect the terms of any sale already concluded; and/or</li>
-                    <li>the total percentage Stake Shares available for sale, however such change may not be made which would cause the total percentage Stake Shares available for sale and/or sold to be less than the Minimum Sale Condition applicable in relation to any sale already concluded.</li>
+                    <li>the pricing of percentage Stake Shares (which will be expressed as a percentage uplift [or
+                        discount?] to the same percentage of the cost of the Stake payable by the Player as his or her
+                        entry price to the relevant Event; and/or
+                    </li>
+                    <li>the minimum (if any) amount percentage of Stake Shares that must be sold in aggregate for any of
+                        the sales to become unconditional (the "Minimum Sale Condition") stipulated by the Player,
+                        however such change shall not affect the terms of any sale already concluded; and/or
+                    </li>
+                    <li>the total percentage Stake Shares available for sale, however such change may not be made which
+                        would cause the total percentage Stake Shares available for sale and/or sold to be less than the
+                        Minimum Sale Condition applicable in relation to any sale already concluded.
+                    </li>
                 </ol>
-                <p><strong>Funders who purchase a Stake Share accept any such changes in the Stake Share available occurring after the conclusion of their sale.<br /></strong></p>
+                <p><strong>Funders who purchase a Stake Share accept any such changes in the Stake Share available
+                    occurring after the conclusion of their sale.<br/></strong></p>
                 <p><strong>29.9.3 Acceptances of Offers of Stake Shares </strong></p>
                 <p>&nbsp;</p>
                 <p><strong>29.9.3.1</strong> Potential Funders may respond to offers to sell Stake Shares:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>by accepting such offer at the price advertised for of Sale Shares for any percentage (that is a whole number) up to the maximum percentage offered and not yet sold; or</li>
-                    <li>by bidding to purchase at a price stipulated by the Funder that is lower than the price advertised for of Stake Shares for any percentage (that is a whole number) up to the maximum percentage offered and not yet sold.</li>
+                    <li>by accepting such offer at the price advertised for of Sale Shares for any percentage (that is a
+                        whole number) up to the maximum percentage offered and not yet sold; or
+                    </li>
+                    <li>by bidding to purchase at a price stipulated by the Funder that is lower than the price
+                        advertised for of Stake Shares for any percentage (that is a whole number) up to the maximum
+                        percentage offered and not yet sold.
+                    </li>
                 </ol>
-                <p><strong>29.9.3.2</strong> Where a potential Funder has accepted an offer in accordance with paragraph 29.11.3.1, such acceptance creates a binding contract for the sale of that Stake Share subject to the Minimum Sale Condition (if any) stipulated by the Player the time of the conclusion of such contract.</p>
+                <p><strong>29.9.3.2</strong> Where a potential Funder has accepted an offer in accordance with paragraph
+                    29.11.3.1, such acceptance creates a binding contract for the sale of that Stake Share subject to
+                    the Minimum Sale Condition (if any) stipulated by the Player the time of the conclusion of such
+                    contract.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.9.3.3</strong> Where one or more Funders has bid to purchase at Stake Shares a price stipulated by the Funder that is lower than the price advertised for of Stake Shares in accordance with paragraph 29.9.3.1(b), the Player may at any time up to the last time for time before the commencement of Event at which a sale of a Stake Share may be concluded respond to offers by lowering the price of any remaining Stake Shares at which point:</p>
+                <p><strong>29.9.3.3</strong> Where one or more Funders has bid to purchase at Stake Shares a price
+                    stipulated by the Funder that is lower than the price advertised for of Stake Shares in accordance
+                    with paragraph 29.9.3.1(b), the Player may at any time up to the last time for time before the
+                    commencement of Event at which a sale of a Stake Share may be concluded respond to offers by
+                    lowering the price of any remaining Stake Shares at which point:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>any Funders who have bid at a price that is equal to or above the lowered price offered by the Funder will (subject to paragraph 29.9.3.4) have such bids accepted and such acceptance creates a binding contract for the sale of that Stake Share (subject to the Minimum Sale Condition stipulated by the Player the time of the conclusion of such contract).</li>
+                    <li>any Funders who have bid at a price that is equal to or above the lowered price offered by the
+                        Funder will (subject to paragraph 29.9.3.4) have such bids accepted and such acceptance creates
+                        a binding contract for the sale of that Stake Share (subject to the Minimum Sale Condition
+                        stipulated by the Player the time of the conclusion of such contract).
+                    </li>
                     <li>any remaining percentage of Stake Share will then be offered at the new reduced price.</li>
                 </ol>
                 <p>&nbsp;</p>
-                <p><strong>29.9.3.4</strong> Where the operation of paragraph 29.9.3.3 would (except for the operation of this paragraph 29.9.3.4) cause Stake Shares to be sold that are in excess of the maximum percentage Stake Shares offered by the Player remaining for sale, then the remaining percentage Stake Shares offered shall be allocated among the bidding Funders on the following basis:</p>
+                <p><strong>29.9.3.4</strong> Where the operation of paragraph 29.9.3.3 would (except for the operation
+                    of this paragraph 29.9.3.4) cause Stake Shares to be sold that are in excess of the maximum
+                    percentage Stake Shares offered by the Player remaining for sale, then the remaining percentage
+                    Stake Shares offered shall be allocated among the bidding Funders on the following basis:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>first according to the price bid by such Funders, on the basis that a higher bid will be accepted in preference to a lower bid; and</li>
-                    <li>where bids are equal, then preference will be given to the Funder or Funders who bid earlier (on the timestamp associated with each bid).</li>
-                    <li>a bid or bid qualifying for acceptance under paragraph 29.9.3.3 that is not fully satisfied after the application of such allocations shall be part completed up to the remaining value of the Stake Share offered. Accordingly Funders bidding at lower than the Players stipulated price accept the possibility that should a player lower their price that their bid may be part completed for a fraction of the value of their bid.</li>
+                    <li>first according to the price bid by such Funders, on the basis that a higher bid will be
+                        accepted in preference to a lower bid; and
+                    </li>
+                    <li>where bids are equal, then preference will be given to the Funder or Funders who bid earlier (on
+                        the timestamp associated with each bid).
+                    </li>
+                    <li>a bid or bid qualifying for acceptance under paragraph 29.9.3.3 that is not fully satisfied
+                        after the application of such allocations shall be part completed up to the remaining value of
+                        the Stake Share offered. Accordingly Funders bidding at lower than the Players stipulated price
+                        accept the possibility that should a player lower their price that their bid may be part
+                        completed for a fraction of the value of their bid.
+                    </li>
                 </ol>
                 <p>&nbsp;</p>
                 <p><strong>29.9.4 Editing and Cancelling of Funder bids</strong></p>
                 <p>&nbsp;</p>
-                <p><strong>29.9.4.1</strong> A Funder may edit or cancel his or her pending bids at any point after submitting the bid, providing the time limit on the sale has not been reached and the Player has not lowered his or her stipulated price, leading to the acceptance of the bid.</p>
+                <p><strong>29.9.4.1</strong> A Funder may edit or cancel his or her pending bids at any point after
+                    submitting the bid, providing the time limit on the sale has not been reached and the Player has not
+                    lowered his or her stipulated price, leading to the acceptance of the bid.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.9.4.2</strong> Should a Funder edit the price on a bid to the point where it exceeds the price the Player is currently stipulating, a sale will be completed at the price that the Player has stipulated, not at the higher price bid by the Funder.</p>
+                <p><strong>29.9.4.2</strong> Should a Funder edit the price on a bid to the point where it exceeds the
+                    price the Player is currently stipulating, a sale will be completed at the price that the Player has
+                    stipulated, not at the higher price bid by the Funder.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.9.4.3</strong> Should a Funder edit the price or percentage Stake Share they wish to purchase, the moment at which they edit this bid will be the new time stamp on the bid. Therefore, if there are other bids at the same price as the Funders new bid, the new bid will go to the bottom of the queue in that pool of bids.</p>
+                <p><strong>29.9.4.3</strong> Should a Funder edit the price or percentage Stake Share they wish to
+                    purchase, the moment at which they edit this bid will be the new time stamp on the bid. Therefore,
+                    if there are other bids at the same price as the Funders new bid, the new bid will go to the bottom
+                    of the queue in that pool of bids.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.10 Completion of a Sale</strong></p>
                 <p>&nbsp;</p>
-                <p><strong>29.10.1</strong> A sale of Share Stake is considered completed when the full share of the Event offered by the Player (taking account of any editing effected by the Player in accordance with paragraph 29.9.2 in the percentage Sale Share offered) is completely sold out, or where the time limit relative to the Event share expires and the Minimum Sale Condition is satisfied in relation to such sale.</p>
+                <p><strong>29.10.1</strong> A sale of Share Stake is considered completed when the full share of the
+                    Event offered by the Player (taking account of any editing effected by the Player in accordance with
+                    paragraph 29.9.2 in the percentage Sale Share offered) is completely sold out, or where the time
+                    limit relative to the Event share expires and the Minimum Sale Condition is satisfied in relation to
+                    such sale.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.10.2</strong> When a sale is completed it is the Player's responsibility to pay the remaining balance of the Event to buy in applicable to the Event after taking account of the amounts collected from Funders before they may play the Event and the Player authorises Us to effect any payment becoming due from the Player's Account.</p>
+                <p><strong>29.10.2</strong> When a sale is completed it is the Player's responsibility to pay the
+                    remaining balance of the Event to buy in applicable to the Event after taking account of the amounts
+                    collected from Funders before they may play the Event and the Player authorises Us to effect any
+                    payment becoming due from the Player's Account.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.11 Acceptance and Validation of Terms</strong></p>
                 <p>&nbsp;</p>
-                <p><strong>29.11.1</strong> &nbsp;A Stake Share sale is deemed to be valid [and unconditional] following confirmation of acceptance from Our remote servers. A Stake Share purchase is confirmed when it appears in the Funders&rsquo; account under "My Investments" under the &ldquo;Matched Bids&rdquo; heading and in the Player&rsquo;s account under &ldquo;My Sales&rdquo;. When a stake is purchased and accepted, the corresponding amount is charged against Your Account. Once accepted, Stake Share Purchases cannot be cancelled, refunded or amended in any way except where the Minimum Sale Condition is not met or where the Player fails to play the Event (in which case all payments for shall be returned to the relevant Funders and the Player confirms his or her irrevocable instruction to Us to effect any payment becoming due as a result from the Player's Account to the Funder's Account.</p>
+                <p><strong>29.11.1</strong> &nbsp;A Stake Share sale is deemed to be valid [and unconditional] following
+                    confirmation of acceptance from Our remote servers. A Stake Share purchase is confirmed when it
+                    appears in the Funders&rsquo; account under "My Investments" under the &ldquo;Matched Bids&rdquo;
+                    heading and in the Player&rsquo;s account under &ldquo;My Sales&rdquo;. When a stake is purchased
+                    and accepted, the corresponding amount is charged against Your Account. Once accepted, Stake Share
+                    Purchases cannot be cancelled, refunded or amended in any way except where the Minimum Sale
+                    Condition is not met or where the Player fails to play the Event (in which case all payments for
+                    shall be returned to the relevant Funders and the Player confirms his or her irrevocable instruction
+                    to Us to effect any payment becoming due as a result from the Player's Account to the Funder's
+                    Account.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.11.2</strong>&nbsp; We reserve the right to void prior to the Event taking place any Stake Share purchase, including but not limited to:</p>
+                <p><strong>29.11.2</strong>&nbsp; We reserve the right to void prior to the Event taking place any Stake
+                    Share purchase, including but not limited to:</p>
                 <ol style="list-style-type: lower-alpha;">
-                    <li>any Stake Share Purchase which a Player may inadvertently have accepted when his or her account does not have sufficient funds to cover the amount of the Stake not to be covered by Funders (assuming that the relevant Minimum Sale Condition is met); and</li>
-                    <li>any Stake Share Purchase which a Funder may inadvertently have entered into accepted when his or her account does not have sufficient funds to cover the cost of such purchase.</li>
+                    <li>any Stake Share Purchase which a Player may inadvertently have accepted when his or her account
+                        does not have sufficient funds to cover the amount of the Stake not to be covered by Funders
+                        (assuming that the relevant Minimum Sale Condition is met); and
+                    </li>
+                    <li>any Stake Share Purchase which a Funder may inadvertently have entered into accepted when his or
+                        her account does not have sufficient funds to cover the cost of such purchase.
+                    </li>
                 </ol>
-                <p>If a Funder's Account balance partly covers a purchase of a stake, We reserve the right to accept vary the Stake Sale so that it will apply to a percentage Stake Share that has a value (at the sale price agreed) equal to the sum of the Funder's Account balance.</p>
+                <p>If a Funder's Account balance partly covers a purchase of a stake, We reserve the right to accept
+                    vary the Stake Sale so that it will apply to a percentage Stake Share that has a value (at the sale
+                    price agreed) equal to the sum of the Funder's Account balance.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.11.3</strong> &nbsp;If an Event is cancelled and deemed void, all purchases of Stake Shares will be voided and any amounts collected from Funders will be refunded directly to the accounts of the Funders.</p>
+                <p><strong>29.11.3</strong> &nbsp;If an Event is cancelled and deemed void, all purchases of Stake
+                    Shares will be voided and any amounts collected from Funders will be refunded directly to the
+                    accounts of the Funders.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.11.4</strong> &nbsp;We reserve the right to suspend, modify, remove and/or add any partypoker staking facilities afforded to You as Player or Funder at our discretion with immediate effect by notifying You by email. To the extent permitted by law, We will not be liable for any such action.</p>
+                <p><strong>29.11.4</strong> &nbsp;We reserve the right to suspend, modify, remove and/or add any
+                    partypoker staking facilities afforded to You as Player or Funder at our discretion with immediate
+                    effect by notifying You by email. To the extent permitted by law, We will not be liable for any such
+                    action.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.12 Partypoker's role</strong></p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.1</strong> As providers of the Staking Facilities, We take full responsibility to collect funds from the relevant Funder's Account upon a completed purchase of a Stake Share and guarantee the contribution of these Funds towards the Player's Stake for the relevant Event.</p>
+                <p><strong>29.12.1</strong> As providers of the Staking Facilities, We take full responsibility to
+                    collect funds from the relevant Funder's Account upon a completed purchase of a Stake Share and
+                    guarantee the contribution of these Funds towards the Player's Stake for the relevant Event.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.2</strong> By providing the Staking Facilities, We do not guarantee or take any responsibility that the Player takes part in the relevant Event. </p>
+                <p><strong>29.12.2</strong> By providing the Staking Facilities, We do not guarantee or take any
+                    responsibility that the Player takes part in the relevant Event. </p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.3</strong> If a Player does not play the Event he or she has sold Stake Shares for, partypoker staking takes full responsibility for refunding the full value of &lsquo;Funders&rsquo; money to their partypoker accounts and You confirm your irrevocable instruction to Us to effect any payment becoming due as a result from your being a Player in such circumstances.</p>
+                <p><strong>29.12.3</strong> If a Player does not play the Event he or she has sold Stake Shares for,
+                    partypoker staking takes full responsibility for refunding the full value of &lsquo;Funders&rsquo;
+                    money to their partypoker accounts and You confirm your irrevocable instruction to Us to effect any
+                    payment becoming due as a result from your being a Player in such circumstances.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.4</strong> We do not take any responsibility for any information a Player may or may not provide on Rail sections, Forum sections, Profile sections and any external platform, or for any 3rd party information.</p>
+                <p><strong>29.12.4</strong> We do not take any responsibility for any information a Player may or may
+                    not provide on Rail sections, Forum sections, Profile sections and any external platform, or for any
+                    3rd party information.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.5.</strong> We do not take any responsibility that the Player plays to a standard that would make Funders happy and our affording a Player the use of the Staking Facilities does not imply that we have made any investigation of or provide any warranty in relation to that Player's level of skill or any other characteristic of the Player or that the pricing of Stake Shares a Player offers fairly reflects that Player's track record or ability.</p>
+                <p><strong>29.12.5.</strong> We do not take any responsibility that the Player plays to a standard that
+                    would make Funders happy and our affording a Player the use of the Staking Facilities does not imply
+                    that we have made any investigation of or provide any warranty in relation to that Player's level of
+                    skill or any other characteristic of the Player or that the pricing of Stake Shares a Player offers
+                    fairly reflects that Player's track record or ability.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.6</strong> We strongly encourage Players to provide regular and accurate updates to Funders through the Rail sections, Forum sections, Profile sections and any external platforms but take no responsibility for a Player failing to do so or for the content or accuracy of such communications.</p>
+                <p><strong>29.12.6</strong> We strongly encourage Players to provide regular and accurate updates to
+                    Funders through the Rail sections, Forum sections, Profile sections and any external platforms but
+                    take no responsibility for a Player failing to do so or for the content or accuracy of such
+                    communications.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.7</strong> We do not guarantee (and may not take active steps to verify) that Players have not sold or otherwise parted with a percentage or swapped action of their Events externally away from the Staking Facilities. However, partypoker staking does guarantee partypoker staking Funders funds should these players cash by withholding players winnings.</p>
+                <p><strong>29.12.7</strong> We do not guarantee (and may not take active steps to verify) that Players
+                    have not sold or otherwise parted with a percentage or swapped action of their Events externally
+                    away from the Staking Facilities. However, partypoker staking does guarantee partypoker staking
+                    Funders funds should these players cash by withholding players winnings.</p>
                 <p>&nbsp;</p>
-                <p><strong>29.12.8</strong> By providing shares of player&rsquo;s Events, partypoker staking does not take responsibility to oversee, negotiate or police any final table deals that may take place involving players that have sold using the partypoker staking facilities. However, partypoker staking will strive to provide accurate details of any deal made at the final table to protect the Funders interests.</p>
+                <p><strong>29.12.8</strong> By providing shares of player&rsquo;s Events, partypoker staking does not
+                    take responsibility to oversee, negotiate or police any final table deals that may take place
+                    involving players that have sold using the partypoker staking facilities. However, partypoker
+                    staking will strive to provide accurate details of any deal made at the final table to protect the
+                    Funders interests.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.13&nbsp; Account Currency Changes</strong></p>
-                <p>For the avoidance of doubt, in the event that you change Your Account Currency during the life of a stake, any amount due to you as a Funder will be converted into your new Account Currency at the&nbsp;<span style="text-decoration: underline; color: #3366ff;"><span>Exchange Rates</span></span>&nbsp;at the time of payout.</p>
+                <p>For the avoidance of doubt, in the event that you change Your Account Currency during the life of a
+                    stake, any amount due to you as a Funder will be converted into your new Account Currency at the&nbsp;<span
+                        style="text-decoration: underline; color: #3366ff;"><span>Exchange Rates</span></span>&nbsp;at
+                    the time of payout.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.14 Live Event Attendance</strong></p>
-                <p>All Players that sell a Stake Share must confirm their attendance at the relevant Event by checking in at the partypoker Staking Desk at every such Event (using the same username and account as was used in relation to the relevant Stake Share sale). The partypoker Staking Representative will check the Player's ID, confirm the Player's attendance, make sure the balance is completely paid on the sale, and via the partypoker platform inform Funders of investments made in their re-entries and approve the usage of the Funders' Accounts to enter the player into the Event.</p>
+                <p>All Players that sell a Stake Share must confirm their attendance at the relevant Event by checking
+                    in at the partypoker Staking Desk at every such Event (using the same username and account as was
+                    used in relation to the relevant Stake Share sale). The partypoker Staking Representative will check
+                    the Player's ID, confirm the Player's attendance, make sure the balance is completely paid on the
+                    sale, and via the partypoker platform inform Funders of investments made in their re-entries and
+                    approve the usage of the Funders' Accounts to enter the player into the Event.</p>
                 <p>&nbsp;</p>
                 <p><strong>29.15 Taxation Responsibilities</strong></p>
-                <p>Funders and Players should take advice on or any liability that might arise to them in relation to any gains profits or gains that they make from their use of the Staking Facilities in any relevant jurisdiction. We take no responsibility for the potential tax liabilities that may come from any potential winnings, these responsibilities lie solely with the Player and Funder.</p>
+                <p>Funders and Players should take advice on or any liability that might arise to them in relation to
+                    any gains profits or gains that they make from their use of the Staking Facilities in any relevant
+                    jurisdiction. We take no responsibility for the potential tax liabilities that may come from any
+                    potential winnings, these responsibilities lie solely with the Player and Funder.</p>
 
             </div>
 
         </div>
-        <!--<div class="accords_wrapper">
-            By creating an account you agree to our <a href="#" ng-click="$ctrl.changeState('terms')">Terms & Conditions</a>
-            and <a href="#" ng-click="$ctrl.changeState('privacy')">Privacy Policy</a>
-        </div>-->
-
-
     </md-content>
 
 

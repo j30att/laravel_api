@@ -30,6 +30,7 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::post('/events/filtered', 'Api\EventController@filteredEvents');
     Route::get('/events/get-filters', 'Api\EventController@getFilters');
     Route::get('/events/main', 'Api\EventController@mainEvents');
+//    Route::get('/events/all', 'Api\EventController@allEvents');
     Route::apiResource('/events', 'Api\EventController');
     Route::apiResource('subevents', 'Api\SubEventController');
 

@@ -33,34 +33,36 @@
 
                 </div>
                 <div class="modal_content__hr"></div>
-                <div class="bids_group"
-                     ng-class="{'bids_group__highest_color': index == 'highest',
-                                'bids_group__matched_color': index == 'matched',
-                                'bids_group__unmatched_color': index == 'unmatched'}"
-                     ng-repeat="(index,bids) in $ctrl.sale.bids" ng-if="bids.length > 0">
-                    <span class="bids_group__title" ng-bind="index"></span>
+                <div style="height: 50vh; overflow-y: scroll; width: 437px;">
+                    <div class="bids_group"
+                         ng-class="{'bids_group__highest_color': index == 'highest',
+                                    'bids_group__matched_color': index == 'matched',
+                                    'bids_group__unmatched_color': index == 'unmatched'}"
+                         ng-repeat="(index,bids) in $ctrl.sale.bids" ng-if="bids.length > 0">
+                        <span class="bids_group__title" ng-bind="index"></span>
 
-                    <div class="bids-common">
-                        <div class="bids-common__title" ng-if="index == 'highest'">
-                            <span>Markup</span>
-                            <span>Share</span>
-                            <span>Value</span>
-                        </div>
-                        <div class="bids-common__items" ng-repeat="item in bids">
-                            <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
-                            <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
-                            <input type="text" placeholder="{%item.amount | currency:'$':2%}" ng-disabled="index == 'matched' || index == 'highest'">
-                            <div class="sale-manage__attributes__edit" style="position: absolute; right: 0;" ng-if="index == 'unmatched'">
-                                <button class="sale-manage__attributes__btn" style="background-color: #fff2ec;" ng-click="$ctrl.changeYourBid(item)"></button>
+                        <div class="bids-common">
+                            <div class="bids-common__title" ng-if="index == 'highest'">
+                                <span>Markup</span>
+                                <span>Share</span>
+                                <span>Value</span>
                             </div>
-                        </div>
+                            <div class="bids-common__items" ng-repeat="item in bids" style="position: relative">
+                                <input type="text" placeholder="{%item.markup%}" ng-disabled="index == 'matched' || index == 'highest'">
+                                <input type="text" placeholder="{%item.share  | percent %}" ng-disabled="index == 'matched' || index == 'highest'">
+                                <input type="text" placeholder="{%item.amount | currency:'$':2%}" ng-disabled="index == 'matched' || index == 'highest'">
+                                <div class="sale-manage__attributes__edit" style="position: absolute; right: 0;" ng-if="index == 'unmatched'">
+                                    <button class="sale-manage__attributes__btn" style="background-color: #fff2ec;" ng-click="$ctrl.changeYourBid(item)"></button>
+                                </div>
+                            </div>
 
+
+                        </div>
 
                     </div>
-
                 </div>
                 <div class="modal_content__hr"></div>
-               <div class="you_bids" ng-hide="$ctrl.status == 2">
+                <div class="you_bids" ng-hide="$ctrl.status == 2">
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">
                         <div class="you_bids__item">
@@ -78,6 +80,7 @@
                         <div class="add_new"></div>
                     </div>
                 </div>
+
             </div>
             <div class="modal_foter">
                 <div class="modal_foter__buttons">

@@ -2,8 +2,8 @@
 
 
         <a ui-sref="event({id:item.id})">
-            <div class="event_card__row_img">
-                <img src="/images/event.png" alt="">
+            <div class="event_card__row_img" style="background: url({%item.image%})">
+
             </div>
         </a>
             <div class="event_card__row_info">
@@ -20,8 +20,8 @@
 
 <div class="event_card_list" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
 
-    <div class="event_card_list_img">
-        <img src="/images/select_event_bg.png" alt="">
+    <div class="event_card_list_img" style="background: url({%item.image%})">
+        <!--<img src="/images/select_event_bg.png" alt="">-->
         <!--<div class="event_card_list_back"></div>-->
         <!--<div class="event_card_list_open"></div>-->
     </div>

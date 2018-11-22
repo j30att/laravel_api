@@ -70,5 +70,6 @@ export const COUNTRIES_URL = '/api/countries';
 
 //**LOGIN**//
 export const REGISTRATION_URL = '/register';
+export const CHECK_EMAIL_URL = '/check-email';
 
 

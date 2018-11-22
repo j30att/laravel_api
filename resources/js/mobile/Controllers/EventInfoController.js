@@ -14,7 +14,7 @@ class EventInfoController {
         this.$http.get(EVENTS_INDEX+'/'+this.$stateParams.id,
         ).then(response => {
             this.event = response.data.data;
-            console.log(this.event);
+
         });
 
     }

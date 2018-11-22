@@ -1,9 +1,12 @@
 <div class="row" ng-cloak ng-if="InvstCtrl.state == 'filters_close'">
     <div class="col-md-12">
         <div class="header">
-            <a ui-sref="profile">
+            <a ui-sref="profile" ng-if="InvstCtrl.user != null">
                 <div class="header_profile"></div>
             </a>
+
+                <div class="header_profile" ng-if="InvstCtrl.user == null"></div>
+
             <div class="header_logo"></div>
             <div class="header_filter" ng-click="InvstCtrl.state = 'filters_open'"></div>
         </div>
@@ -39,6 +42,7 @@
         <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
 </div>
+
 
 <div class="row" ng-if="InvstCtrl.state == 'filters_open'" style="height: 100vh; background-color: #949494;">
     <div class="events_filters_wrapper events_filters_wrapper_first col-md-12">
@@ -76,7 +80,6 @@
 
     </div>
 </div>
-
 
 <div class="row" ng-if="InvstCtrl.state == 'filter_events'">
     <div class="events_filters_wrapper col-md-12">

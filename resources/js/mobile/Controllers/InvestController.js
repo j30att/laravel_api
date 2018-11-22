@@ -17,6 +17,8 @@ class InvestController {
         this.selectedEvents = [];
         this.selectedCountries = [];
         this.getCountries();
+
+        this.user = window.__user;
     }
 
     $onInit() {
@@ -40,6 +42,14 @@ class InvestController {
                 this._opts.dataLoad = true;
             });
     }
+
+    // getFullEventList(){
+    //     this.EventsResourceService.getAllEvents()
+    //         .then(response => {
+    //             this.events = response.data.data;
+    //             this._opts.dataLoad = true;
+    //         });
+    // }
 
     getSales() {
         this.SalesResourceService.getClosingSoonSales()

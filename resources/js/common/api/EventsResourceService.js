@@ -9,6 +9,10 @@ class EventsResourceService {
         return this.$http.get(EVENTS_API);
     }
 
+    // getAllEvents(){
+    //     return this.$http.get(EVENTS_API + '/all');
+    // }
+
     getMainEvents() {
         return this.$http.get(EVENTS_API + '/main');
     }

@@ -74,7 +74,6 @@ class RegisterController extends Controller
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'avatar' => 'null',
                 'birth_date' => $birthDate,
                 'country_id' => $data['country_id'],
                 'sms_subscribe' => $data['sms_subscribe'],
@@ -92,5 +91,20 @@ class RegisterController extends Controller
         return view($typeDevice . '.login.register');
     }
 
+    public function checkEmail(Request $request)
+    {
+        if ($request->has('email')) {
+            $email = $request->get('email');
+
+            $emailExist = User::query()
+                ->where('email', $email)
+                ->count();
+
+            if (!$emailExist) {
+                return response()->json(['status' => 1]);
+            }
+        }
+        return response()->json(['status' => 0]);
+    }
 
 }
