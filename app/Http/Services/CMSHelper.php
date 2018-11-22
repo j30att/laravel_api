@@ -51,7 +51,7 @@ class CMSHelper
                     break;
 
                 default:
-                    Log::info('[x] Unprocessable entity');
+                    Log::info('[x] Unprocessable entity. ' . print_r($msgDetails, 1));
                     break;
 
             }
@@ -133,7 +133,7 @@ class CMSHelper
         $event = Event::query()->find($ppSubEvent->schedule->event_id);
 
         if (!$event){
-            Log::info('[x] Unprocessable entity');
+            Log::info('[x] Unprocessable entity. Do no found event: ' . $ppSubEvent->schedule->event_id);
             return false;
         }
 
