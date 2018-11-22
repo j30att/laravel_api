@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Http\Services\PPValidate;
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Torann\GeoIP\GeoIP;
 
 class Integration
 {
