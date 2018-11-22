@@ -55,7 +55,6 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             }
         })
         .state('auth.login', {
-            //ng-controller="LoginController as LgCtrl"
             url: '/login',
             template: require('./views/auth/login.template.html'),
             controller: 'LoginController',
