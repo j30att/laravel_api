@@ -251,3 +251,22 @@
     background-position: center;
 }
 
+.event_detail_table_avatar{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.t_from_img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.t_from span{
+    vertical-align: middle;
+}
+
