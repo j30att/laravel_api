@@ -21,7 +21,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::query()->with('subEvents')->get();
+        $events = Event::query()->where(['status'=>Event::STATUS_ACTIVE])->with('subEvents')->get();
 
         return EventResource::collection($events);
     }

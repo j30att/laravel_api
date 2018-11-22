@@ -28,6 +28,7 @@ class SaleCreate {
         this.isSidenavOpen =false;
 
 
+
     }
     $onInit(){
         this.$scope.$on('sidenav-open', (event, data) => {
@@ -37,7 +38,6 @@ class SaleCreate {
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.$state.modalOpened = fixed;
         });
-
     }
 
     buildToggler(componentId) {

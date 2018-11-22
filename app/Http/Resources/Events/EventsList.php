@@ -24,7 +24,6 @@ class EventsList extends JsonResource
             'period' => $this->period,
             'country_id' => $this->country->id,
             'country_name' => $this->country->name,
-
         ];
         //return parent::toArray($request);
     }
