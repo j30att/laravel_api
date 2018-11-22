@@ -3546,6 +3546,12 @@ a {
 }
 
 .t_from {
+  /*box-sizing: border-box;
+  display: flex;
+  align-items: center;*/
+}
+
+.t_from_fix_height {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -3857,6 +3863,7 @@ a {
 }
 
 .table_events_head th {
+  min-width: 60px;
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
@@ -4402,6 +4409,10 @@ a {
 
 .main_event_table .t_from_img {
   margin-left: 0;
+}
+
+.main_event_table td {
+  padding: 0 5px;
 }
 
 .event_details {
