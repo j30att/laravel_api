@@ -18,8 +18,6 @@ class Integration
      */
     public function handle($request, Closure $next)
     {
-        dd(geoip()->getLocation($request->getClientIp()));
-
         $partnerToken = $request->get('partnerToken');
         $accountId = $request->get('accountId');
         $user = Auth::user();
