@@ -119,12 +119,13 @@ class CMSHelper
         $venue = Venue::query()->where('id', $event->eventVenueId)->first();
         $country = Country::query()->where('code', $event->eventVenueAddressArray->addressCountry)->first();
 
+        Log::info($event->eventVenueAddressArray->addressCountry);
         if (is_null($venue)) {
             $venue = new Venue();
             $venue->id = $event->eventVenueId;
         }
         $venue->event_id            = $event->id;
-        $venue->country_id          = $country->id;
+        $venue->country_id          = $country ? $country->id: null;
         $venue->title               = $event->eventVenueName;
         $venue->adress_type         = $event->eventVenueAddressArray->$key;
         $venue->street              = $event->eventVenueAddressArray->streetAddress;
