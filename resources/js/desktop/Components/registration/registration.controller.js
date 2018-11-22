@@ -24,8 +24,6 @@ class Registration {
         this.CountriesResourceService = CountriesResourceService;
         this.RegistrationService = RegistrationService;
         this.getCountries();
-
-
     }
 
     $onInit() {
