@@ -8,6 +8,7 @@ class Registration {
         this.$http = $http;
         this._opts = {fixed: false};
         this.isSidenavOpen = false;
+
         this.user = {
             firstName       : null,
             lastName        : null,
@@ -15,7 +16,7 @@ class Registration {
             email           : null,
             password        : null,
             confirmPassword : null,
-            country_id      : null,
+            country_id      : window.__location,
             checkBoxSms     : true,
             checkBoxEmail   : true
         };
@@ -23,7 +24,7 @@ class Registration {
         this.CountriesResourceService = CountriesResourceService;
         this.RegistrationService = RegistrationService;
         this.getCountries();
-        //this.createUser();
+
 
     }
 
