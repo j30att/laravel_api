@@ -83,7 +83,7 @@ class CMSHelper
                 }
                 $event->title = $eventData->event->eventName;
                 $event->description = $eventData->event->eventUpcomingAbout;
-                $event->buy_in = $eventData->event->eventBuyIn;
+                $event->buy_in = str_replace(",", ".", $eventData->event->eventBuyIn);
                 $event->reg_free = $eventData->event->eventRegFee;
                 $event->fund = $eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
@@ -146,7 +146,7 @@ class CMSHelper
         $subEvent->event_id = $ppSubEvent->schedule->event_id;
         $subEvent->title = $ppSubEvent->schedule->scheduleTitle;
         $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool)?$ppSubEvent->schedule->schedulePrizePool: null;
-        $subEvent->buy_in = $ppSubEvent->schedule->scheduleBuyIn;
+        $subEvent->buy_in = str_replace(",", ".", $ppSubEvent->schedule->scheduleBuyIn);
         $subEvent->date_start = isset($ppSubEvent->schedule->firstDayDate)?$ppSubEvent->schedule->firstDayDate:null;
         $subEvent->date_end = isset($ppSubEvent->schedule->lastDayDate)?$ppSubEvent->schedule->lastDayDate:null;
         $subEvent->save();
