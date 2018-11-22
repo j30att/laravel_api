@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Country;
 use Closure;
 use Illuminate\Support\Facades\View;
 
@@ -18,7 +19,9 @@ class GetLocation
     {
         $locationGeo = geoip()->getLocation($request->getClientIp());
         $location = $locationGeo->iso_code;
-        View::share('_location', $location);
+        $countryId = Country::query()->where('code', $location)->pluck('id')->first();
+
+        View::share('_location', $countryId);
 
         return $next($request);
     }

@@ -5,16 +5,17 @@ class Registration {
         this.$state = $state;
         this._opts = {fixed: false};
         this.isSidenavOpen = false;
+
         this.user = {
-            firstName: null,
-            lastName: null,
-            dateOfBirth: null,
-            email: null,
-            password: null,
-            confirmPassword: null,
-            country_id: null,
-            checkBoxSms: true,
-            checkBoxEmail: true
+            firstName       : null,
+            lastName        : null,
+            dateOfBirth     : undefined,
+            email           : null,
+            password        : null,
+            confirmPassword : null,
+            country_id      : window.__location,
+            checkBoxSms     : true,
+            checkBoxEmail   : true
         };
         this.prevState = null;
         this.CountriesResourceService = CountriesResourceService;
