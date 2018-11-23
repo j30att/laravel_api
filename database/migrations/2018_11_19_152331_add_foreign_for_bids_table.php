@@ -14,7 +14,7 @@ class AddForeignForBidsTable extends Migration
     public function up()
     {
         Schema::table('p_p_bids', function (Blueprint $table) {
-            $table->index('pp_bid_id');
+            $table->unique('pp_bid_id');
         });
 
         Schema::table('bids', function (Blueprint $table) {
