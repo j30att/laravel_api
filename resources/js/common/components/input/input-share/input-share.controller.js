@@ -1,7 +1,6 @@
 class InputShareController {
     onChange() {
         let {bid, buyIn} = this;
-
         if (bid.share) {
             bid.share = bid.share.replace(/,|\.+/, '.').replace(/[^0-9.]/, '');
             buyIn = parseFloat(buyIn);

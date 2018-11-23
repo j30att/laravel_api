@@ -14,7 +14,10 @@ class BidPlace {
         this.isSidenavOpen = false;
         this.bid = {};
         this.status = 1;
-    }
+        this.show = false;
+
+       }
+
 
     $onInit() {
         this.$scope.$on('sidenav-open', (event, data) => {
@@ -64,7 +67,9 @@ class BidPlace {
     }
 
     changeYourBid(bid) {
-        this.bid = bid
+        this.bid = bid;
+        this.show = true;
+
     }
 
 }
