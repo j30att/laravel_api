@@ -233,7 +233,6 @@ class CMSHelper
         $client = new Client();
         $request = $client->get($url);
         $response = $request->getBody()->getContents();
-        //Hello_world
         $fileName = ImageAttachment::generateFileName('png');
         $filePath = ImageAttachment::generateFileFolder($fileName);
         if (!file_exists($filePath)) {
