@@ -71,11 +71,14 @@
                         </div>
                         <div class="you_bids__item">
                             <label>Share</label>
-                            <input-share bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="10%"></input-share>
+                            <input-share bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="10%"
+                                         ng-class="{'add_persent': $ctrl.show == true}"></input-share>
                         </div>
                         <div class="you_bids__item" style="flex-grow: 1;">
                             <label>Amount</label>
-                            <input-amount bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="$1000"></input-amount>
+                            <input-amount bid="$ctrl.bid" buy-in="$ctrl.sale.event.buy_in" placeholder="$1000" id="add_money"
+                                          ng-class="{'add_money': $ctrl.show == true}"
+                                          ></input-amount>
                         </div>
                         <div class="add_new"></div>
                     </div>
