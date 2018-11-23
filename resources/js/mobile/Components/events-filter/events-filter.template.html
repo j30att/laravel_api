@@ -11,56 +11,65 @@
         <div ng-if="$ctrl.state == 'none'">
             <div class="filter_wrapper">
                 <div class="filter_label">Events</div>
-                <div class="filter_box" ng-click="$ctrl.state = 'events'">
-                    <span ng-if="!$ctrl.activeFilter.event">Choose events</span>
-                    <span ng-repeat="event in $ctrl.activeFilter.event">
+                <div class="filter_box"
+                     ng-click="$ctrl.state = 'event'">
+                    <span ng-if="!$ctrl.isSetFilter('event')">
+                        Choose events
+                    </span>
+                    <span ng-repeat="event in $ctrl.isSetFilter('event')">
                         {% event %}<span class="comma">, </span>
                     </span>
                 </div>
             </div>
             <div class="filter_wrapper">
                 <div class="filter_label">Regions</div>
-                <div class="filter_box" ng-click="$ctrl.state = 'regions'">
-                    <span ng-if="!$ctrl.activeFilter.country">Choose regions</span>
-                    <span ng-repeat="country in $ctrl.activeFilter.country">
-                        {% country %} <span class="comma">, </span>
+                <div class="filter_box"
+                     ng-click="$ctrl.state = 'country'">
+                    <span ng-if="!$ctrl.isSetFilter('country')">
+                        Choose regions
+                    </span>
+                    <span ng-repeat="country in $ctrl.isSetFilter('country')">
+                        {% country %}<span class="comma">, </span>
                     </span>
 
                 </div>
             </div>
             <div class="filter_wrapper">
                 <div class="filter_label">Venues</div>
-                <div class="filter_box" ng-click="$ctrl.state = 'venues'">
-                    <span ng-if="!$ctrl.activeFilter.venue">Choose venues</span>
-                    <span ng-repeat="venue in $ctrl.activeFilter.venue">
+                <div class="filter_box"
+                     ng-click="$ctrl.state = 'venue'">
+                    <span ng-if="!$ctrl.isSetFilter('venue')">
+                        Choose venues
+                    </span>
+                    <span ng-repeat="venue in $ctrl.isSetFilter('venue')">
                         {% venue %}<span class="comma">, </span>
                     </span>
 
                 </div>
             </div>
             <div class="events_filters__buttons">
-            <div class="events_filters__button events_filters__button_save"
-                 ng-click="$ctrl.saveFilters()">
-                Save filter
+                <div class="events_filters__button events_filters__button_save"
+                     ng-click="$ctrl.applyFilters()">
+                    Save filter
+                </div>
+                <div class="events_filters__button events_filters__button_clear"
+                     ng-click="$ctrl.clearFilters()">
+                    Clear all
+                </div>
             </div>
-            <div class="events_filters__button events_filters__button_clear"
-                 ng-click="$ctrl.clearAllFilters()">
-                Clear all
-            </div>
-        </div>
         </div>
 
-        <div ng-if="$ctrl.state == 'events'">
+        <div ng-if="$ctrl.state == 'event'">
             <div class="events_list_wrapper">
                 <div class="events_list_search">
                     <input type="search" placeholder="Search event" ng-model="$ctrl.searchEvent">
                 </div>
                 <div class="events_list_items">
                     <div class="events_list_item"
-                         ng-repeat="event in $ctrl.filters.event.options | optionFilter:$ctrl.searchEvent">
-                        <md-checkbox ng-checked="InvstCtrl.exists(event, InvstCtrl.selectedEvents)"
-                                     ng-click="InvstCtrl.selectedEvent(event, InvstCtrl.selectedEvents)">
-                            {%event%}
+                         ng-repeat="(id, event) in $ctrl.filters.event.options | optionFilter:$ctrl.searchEvent">
+                        <md-checkbox ng-checked="$ctrl.activeFilters.event.indexOf(id) >= 0"
+                                     ng-click="$ctrl.setFilter('event', id)">
+                            {% event %}
                         </md-checkbox>
                     </div>
 
@@ -68,17 +77,18 @@
             </div>
         </div>
 
-        <div ng-if="$ctrl.state == 'regions'">
+        <div ng-if="$ctrl.state == 'country'">
             <div class="events_list_wrapper">
                 <div class="events_list_search">
-                    <input type="search" placeholder="Search region" ng-model="InvstCtrl.searchRegion">
+                    <input type="search" placeholder="Search region" ng-model="$ctrl.searchCountry">
                 </div>
                 <div class="events_list_items">
 
-                    <div class="events_list_item" ng-repeat="country in InvstCtrl.countries | filter:InvstCtrl.searchRegion">
-                        <md-checkbox ng-checked="InvstCtrl.existsCountry(country, InvstCtrl.selectedCountries)"
-                                     ng-click="InvstCtrl.selectedCountry(country, InvstCtrl.selectedCountries)">
-                            {%country.name%}
+                    <div class="events_list_item"
+                         ng-repeat="(id, country) in $ctrl.filters.country.options | optionFilter:$ctrl.searchCountry">
+                        <md-checkbox ng-checked="$ctrl.activeFilters.country.indexOf(id) >= 0"
+                                     ng-click="$ctrl.setFilter('country', id)">
+                            {% country %}
                         </md-checkbox>
                     </div>
 
@@ -86,17 +96,18 @@
             </div>
         </div>
 
-        <div ng-if="$ctrl.state == 'venues'">
+        <div ng-if="$ctrl.state == 'venue'">
             <div class="events_list_wrapper">
                 <div class="events_list_search">
-                    <input type="search" placeholder="Search venue" ng-model="InvstCtrl.searchVenue">
+                    <input type="search" placeholder="Search venue" ng-model="$ctrl.searchVenue">
                 </div>
                 <div class="events_list_items">
 
-                    <div class="events_list_item" ng-repeat="venue in InvstCtrl.venues | filter:InvstCtrl.searchVenue">
-                        <md-checkbox ng-checked="InvstCtrl.existsVenue(venue, InvstCtrl.selectedVenues)"
-                                     ng-click="InvstCtrl.selectedVenue(venue, InvstCtrl.selectedVenues)">
-                            {%venue.title%}
+                    <div class="events_list_item"
+                         ng-repeat="(id, venue) in $ctrl.filters.venue.options | optionFilter:$ctrl.searchVenue">
+                        <md-checkbox ng-checked="$ctrl.activeFilters.venue.indexOf(id) >= 0"
+                                     ng-click="$ctrl.setFilter('venue', id)">
+                            {% venue %}
                         </md-checkbox>
                     </div>
 

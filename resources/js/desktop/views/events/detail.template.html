@@ -66,8 +66,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales"
-                            ng-click="EventsDetailCtrl.toggleSidenav(sale)">
+                        <tr ng-repeat="sale in EventsDetailCtrl.activeEvent.sales">
                             <td>
                                 <!--<img src="/images/desk/players_img/profile_img_1.png" alt="" style="vertical-align: middle">-->
                                 <div class="event_detail_table_avatar" style="background: url({%sale.creator.avatar%})"></div>
@@ -75,7 +74,9 @@
                             </td>
                             <td class="bold">{% sale.markup %}</td>
                             <td class="event_right-side_table_bids-list">
-                                <div ng-repeat="bid in sale.bids.highest">
+                                <div ng-repeat="bid in sale.bids.highest"
+                                     ng-click="EventsDetailCtrl.toggleSidenav(sale,bid)"
+                                     style="cursor:pointer">
                                     <span>{% bid.markup %}</span>
                                     <span>{% bid.amount|currency:'$':0 %}</span>
                                 </div>
@@ -103,5 +104,5 @@
         </div>
     </div>
 </div>
-<bid-place sale="EventsDetailCtrl.sale"></bid-place>
+<bid-place sale="EventsDetailCtrl.sale" bid="EventsDetailCtrl.bid"></bid-place>
 <sale-create></sale-create>

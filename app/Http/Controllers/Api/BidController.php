@@ -75,6 +75,10 @@ class BidController extends Controller
             }
 
             /** @var Bid $bid */
+
+            $data['share'] = str_replace('%', '', $data['share']);
+            $data['amount'] = str_replace('$', '', $data['amount']);
+
             $bid = new Bid();
             $bid->fill($data);
             $bid->status = Bid::BIDS_UNMATCHED;
@@ -125,6 +129,8 @@ class BidController extends Controller
     {
         try {
             $data = $request->get('bid');
+            $data['share'] = str_replace('%', '', $data['share']);
+            $data['amount'] = str_replace('$', '', $data['amount']);
 
             /** @var Bid $bid */
             $bid = Bid::query()->find($data['id']);

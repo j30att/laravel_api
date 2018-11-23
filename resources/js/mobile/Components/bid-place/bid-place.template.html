@@ -40,7 +40,8 @@
                 <div class="blocks_header_title_name" ng-bind="key">
                 </div>
 
-                <div class="modal_type_bids_type" ng-repeat="bid in items">
+                <div class="modal_type_bids_type" ng-repeat="bid in items"
+                     ng-click="$ctrl.setBid(bid, key == 'highest')">
                     <div class="modal_type_bids__item"
                          ng-class="{
                             'modal_bids_item_color_highest':key == 'highest',

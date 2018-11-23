@@ -2,5 +2,6 @@
        class="{% InputCtrl.className %}"
        placeholder="{% InputCtrl.placeholder %}"
        ng-model="InputCtrl.bid.share"
-       ng-change="InputCtrl.onChange($event)"
+       ng-change="InputCtrl.onChange()"
+       ng-keydown="InputCtrl.onKeyDown($event)"
 >

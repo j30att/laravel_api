@@ -25,7 +25,7 @@ class EventDetailResource extends JsonResource
             'period'     => $this->period,
             'subevents'  => SubEventResource::collection($this->subEvents),
             'sales'      => SaleInvestResource::collection($this->sales),
-             'image'        => $this->main_image
+            'image'        => $this->main_image
         ];
     }
 }

@@ -4,7 +4,7 @@
         <div class="header">
             <a ui-sref="invest"><div class="goback goback_unset"></div></a>
             <div class="header_logo"></div>
-            <div class="header_filter"></div>
+            <div class="header_filter" ng-click="EvntsLstCtrl.showFilter = true"></div>
         </div>
         <div class="header_empty_height"></div>
         <div class="all_events-wr">
@@ -19,3 +19,5 @@
     <span ng-include="'tpl/view/footer.template.html'"></span>
 
 </div>
+
+<events-filter events="EvntsLstCtrl.events" show="EvntsLstCtrl.showFilter"></events-filter>

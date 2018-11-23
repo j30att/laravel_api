@@ -77,6 +77,15 @@ class BidPlace {
         this.bid = bid;
     }
 
+    setBid(bid, iCan){
+        if(iCan) {
+            this._opts.stateCreate = true;
+            this.bid.markup = bid.markup;
+            this.bid.share = bid.share;
+            this.bid.amount = bid.amount;
+        }
+    }
+
     stopBodyScrolling (bool) {
         if (bool === true) {
             document.querySelector(".container").addEventListener('touchmove', function(event) {

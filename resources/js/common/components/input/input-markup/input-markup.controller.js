@@ -7,9 +7,11 @@ class InputMarkupController {
             buyIn = parseFloat(buyIn);
 
             if (bid.share) {
-                bid.amount = Math.round(((bid.share / 100) * bid.markup * buyIn) * 100) / 100;
+                let share = parseFloat(bid.share);
+                bid.amount = '$' + Math.round(((share / 100) * bid.markup * buyIn) * 100) / 100;
             } else if (bid.amount) {
-                bid.share = Math.round((bid.amount / buyIn * bid.markup * 100) * 100) / 100;
+                let amount = bid.amount.indexOf('$') > -1 ? bid.amount.replace('$', '') : bid.amount;
+                bid.share = Math.round((amount / buyIn * bid.markup * 100) * 100) / 100 + '%';
             }
         }
     }

@@ -1,6 +1,10 @@
 export function percent() {
     return function (input) {
-        return (input) + '%';
+        if (input && input.toString().indexOf('%') < 0) {
+            return (input) + '%';
+        }
+
+        return input
     };
 }
 
