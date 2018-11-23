@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Notifications\UserRegisteredNotification;
 use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -85,10 +87,15 @@ class RegisterController extends Controller
         }
     }
 
-    public function showRegistrationForm(Request $request)
+    public function register(Request $request)
     {
-        $typeDevice = $request->get('typeDevice');
-        return view($typeDevice . '.login.register');
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        $user->sendRegisterConfirmationNotification();
+
+        return response(json_encode(['status' => 1]));
     }
 
     public function checkEmail(Request $request)
@@ -106,5 +113,6 @@ class RegisterController extends Controller
         }
         return response()->json(['status' => 0]);
     }
+
 
 }

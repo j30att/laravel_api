@@ -69,13 +69,15 @@ class CMSHelper
 
         $now = Carbon::now();
 
+        Log::info($eventId . ' EVENT ID');
         if ('200' == $apiResource->getStatusCode()) {
             $event = Event::query()->find($eventId);
 
             $eventData = json_decode($apiResource->getBody());
+
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
-                Log::info('[x] Unprocessable entity');
+                Log::info('[x] Unprocessable COUNTRY');
                 return false;
             }
 
@@ -86,9 +88,9 @@ class CMSHelper
                 }
                 $event->title = $eventData->event->eventName;
                 $event->description = $eventData->event->eventUpcomingAbout;
-                $event->buy_in = $eventData->event->eventBuyIn;
+                $event->buy_in = (float)$eventData->event->eventBuyIn;
                 $event->reg_free = $eventData->event->eventRegFee;
-                $event->fund = $eventData->event->eventUpcomingPrizepool;
+                $event->fund = (float)$eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogoBg;
                 $event->country_id = $country->id;
@@ -98,6 +100,10 @@ class CMSHelper
                 $event->date_end = Carbon::parse($eventData->event->eventEndDate);
                 $event->date_start = Carbon::parse($eventData->event->eventStartDate);
                 $event->status = $now->gte(Carbon::parse($eventData->event->eventStartDate))? Event::STATUS_CLOSED : Event::STATUS_ACTIVE;
+
+                Log::info($now->gte(Carbon::parse($eventData->event->eventStartDate)) . 'status event');
+                Log::info($now . 'NOW');
+                Log::info(Carbon::parse($eventData->event->eventStartDate) . 'START DAY');
 
                 $event->save();
 
@@ -154,7 +160,7 @@ class CMSHelper
         $event = Event::query()->find($ppSubEvent->schedule->event_id);
 
         if (!$event){
-            Log::info('[x] Unprocessable entity');
+            Log::info('[x] Unprocessable entity not event');
             return false;
         }
 
@@ -166,8 +172,8 @@ class CMSHelper
 
         $subEvent->event_id = $ppSubEvent->schedule->event_id;
         $subEvent->title = $ppSubEvent->schedule->scheduleTitle;
-        $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool)?$ppSubEvent->schedule->schedulePrizePool: null;
-        $subEvent->buy_in = $ppSubEvent->schedule->scheduleBuyIn;
+        $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool)? (float)$ppSubEvent->schedule->schedulePrizePool: null;
+        $subEvent->buy_in = (float)$ppSubEvent->schedule->scheduleBuyIn;
         $subEvent->date_start = isset($ppSubEvent->schedule->firstDayDate)?$ppSubEvent->schedule->firstDayDate:null;
         $subEvent->date_end = isset($ppSubEvent->schedule->lastDayDate)?$ppSubEvent->schedule->lastDayDate:null;
         $subEvent->save();
@@ -176,17 +182,7 @@ class CMSHelper
             foreach ($ppSubEvent->schedule->days as $ppDay){
 
                 $this->updateDay($ppDay->id);
-                /*$flight = Flight::query()->find($ppDay->day);
-                if (is_null($flight)) {
-                    $flight = new Flight();
-                    $flight->id = $ppDay->id;
-                }
-                $flight->title = $ppDay->day . $ppDay->flight;
-                $flight->type = $ppDay->type == 'live' ? Flight::TYPE_LIVE : Flight::TYPE_ONLINE;
-                $flight->date = Carbon::parse($ppDay->date);
-                $flight->flight = $ppDay->flight;
-                $flight->day = $ppDay->day;
-                $flight->save();*/
+
             }
         }
     }
@@ -205,6 +201,14 @@ class CMSHelper
 
 
         $subEvent = SubEvent::query()->where('id', $ppDay->day->schedule_id)->with('event')->first();
+        $event = Event::query()->where('id', $ppDay->day->event_id)->first();
+
+        if ($subEvent && $event){
+            Log::info('[x] Unprocessable entity. DayId: ' . $ppDay->day->schedule_id
+                . '. Do no found sub_event: ' . $subEvent->id
+                . '. Do no found event: ' . $ppDay->day->event_id);
+            return false;
+        }
 
         $flight->sub_event_id = $ppDay->day->schedule_id;
         $flight->title = $ppDay->day->day . $ppDay->day->flight;

@@ -92,14 +92,14 @@ class Login {
             email: this.userEmail,
             password: this.userPassword
         };
-
-        this.$http.post(LOGIN_URL, data)
-            .then(function (response) {
-                if (response.status === 200) {
-                    window.location.href = '/'
-                }
-            })
-
+        this.$http.get('/').finally(() => {
+            this.$http.post(LOGIN_URL, data)
+                .then(function (response) {
+                    if (response.status === 200) {
+                        window.location.href = '/'
+                    }
+                })
+        })
     }
 }
 
