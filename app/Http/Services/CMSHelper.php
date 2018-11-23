@@ -14,6 +14,7 @@ use App\Models\Event;
 use App\Models\Flight;
 use App\Models\SubEvent;
 use App\Models\Venue;
+use App\Models\ImageAttachment;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use http\Exception;
@@ -80,7 +81,6 @@ class CMSHelper
                 Log::info('[x] Unprocessable COUNTRY');
                 return false;
             }
-
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
                     $event = new Event();
@@ -104,8 +104,10 @@ class CMSHelper
                 Log::info($now->gte(Carbon::parse($eventData->event->eventStartDate)) . 'status event');
                 Log::info($now . 'NOW');
                 Log::info(Carbon::parse($eventData->event->eventStartDate) . 'START DAY');
-
+                $this->updateImage($event);
                 $event->save();
+
+
 
                 $this->updateVenue($eventData->event);
 
@@ -221,4 +223,31 @@ class CMSHelper
 
     }
 
+    public function updateImage(Event $event){
+        \Cloudinary::config([
+            "cloud_name" => config('cloudinary.cloudName'),
+            "api_key" => config('cloudinary.apiKey'),
+            "api_secret" => config('cloudinary.apiSecret')
+        ]);
+        $url = $event->main_image;
+        $client = new Client();
+        $request = $client->get($url);
+        $response = $request->getBody()->getContents();
+        $fileName = ImageAttachment::generateFileName('png');
+        $filePath = ImageAttachment::generateFileFolder($fileName);
+        if (!file_exists($filePath)) {
+            mkdir($filePath, 0777, true);
+        }
+        file_put_contents($filePath.$fileName, $response);
+        $data = [
+            'original_name' => $fileName,
+            'code' => $fileName,
+            'type' => ImageAttachment::TYPE_USER_AVATAR
+        ];
+        $newImage = new ImageAttachment($data);
+        echo $filePath.$fileName;
+        $newImage->save();
+        $event->image_id = $newImage->id;
+
+    }
 }

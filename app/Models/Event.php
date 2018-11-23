@@ -53,8 +53,12 @@ class Event extends Model
         'venue_name',
         'date_start',
         'date_end',
+        'image_id'
     ];
 
+    public function image(){
+        return $this->belongsTo(ImageAttachment::class,'image_id');
+    }
     public function subEvents()
     {
         return $this->hasMany(SubEvent::class, 'event_id');

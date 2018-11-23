@@ -25,6 +25,7 @@ class EventController extends Controller
         $events = Event::query()
             ->where('status', Event::STATUS_ACTIVE)
             ->with('subEvents')
+            ->with('image')
             ->get();
 
         return EventResource::collection($events);
@@ -110,6 +111,7 @@ class EventController extends Controller
         //$events = Event::query()->take(6)->get();
         $events = Event::query()
             ->with('country')
+            ->with('image')
             ->take(Event::LIMIT_EVENT_MAIN_PAGE)
             ->get();
         return EventsList::collection($events);
