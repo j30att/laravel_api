@@ -38,6 +38,13 @@ class CreatePPRequestsTable extends Migration
      */
     public function down()
     {
+        Schema::table(
+            'p_p_responses',
+            function (Blueprint $table) {
+                $table->dropForeign('p_p_responses_p_p_request_foreign');
+            }
+        );
+
         Schema::dropIfExists('p_p_requests');
     }
 }
