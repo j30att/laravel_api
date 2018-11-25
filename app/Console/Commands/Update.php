@@ -10,7 +10,7 @@ use League\Flysystem\Config;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 
-class update extends Command
+class Update extends Command
 {
     /**
      * The name and signature of the console command.
@@ -39,12 +39,21 @@ class update extends Command
     /**
      * Execute the console command.
      *
+     * @throws \Exception
+     *
      * @return mixed
      */
     public function handle()
-    {   $connection = new AMQPStreamConnection('duckbill-01.rmq.cloudamqp.com', 5672, 'pvyiqfal', 'juIMSQ5RKmA9mbrCAglR2Zyt74yQktQW', 'pvyiqfal');
+    {
+        $connection = new AMQPStreamConnection(
+            env('MPPL-CMS_AMQP_HOST'),
+            env('MPPL-CMS_AMQP_PORT'),
+            env('MPPL-CMS_AMQP_USER'),
+            env('MPPL-CMS_AMQP_PASSWORD'),
+            env('MPPL-CMS_AMQP_VHOST')
+        );
         $channel = $connection->channel();
-        $queuName = 'staking';
+        $queueName = env('MPPL-CMS_AMQP_QUEUE');
 
 
         Log::info(' [*] Waiting for messages.');
@@ -52,10 +61,9 @@ class update extends Command
             $helper = new CMSHelper();
             $helper->execute($msg->body);
         };
-        $channel->basic_consume($queuName, '', false, true, false, false, $callback);
+        $channel->basic_consume($queueName, '', false, true, false, false, $callback);
         while (count($channel->callbacks)) {
             $channel->wait();
         }
-
     }
 }

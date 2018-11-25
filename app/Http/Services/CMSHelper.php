@@ -56,7 +56,7 @@ class CMSHelper
                     break;
 
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->error($e->getMessage());
             Log::error($msgDetails["entityName"] . ' ' . $e->getMessage());
         }
