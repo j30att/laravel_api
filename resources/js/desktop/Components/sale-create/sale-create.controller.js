@@ -16,7 +16,7 @@ class SaleCreate {
             closing_time: null
         };
         this.sale = {
-            user_id: this.user.id,
+            user_id: this.user?  this.user.id : null,
             event_id: null,
             sub_event_id: null,
             status: SALE_ACTIVE,
@@ -33,6 +33,9 @@ class SaleCreate {
     $onInit(){
         this.$scope.$on('sidenav-open-create_sale', (event, data) => {
 
+            if (this.user == null){
+                return false
+            }
             if(data != null){
                 this.sale.event_id = data;
             }

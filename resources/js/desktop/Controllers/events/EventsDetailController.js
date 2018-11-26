@@ -7,7 +7,7 @@ class EventsDetailController {
         this.sale = {};
         this.bid = {};
         this.activeEvent = [];
-
+        this.user = window.__user;
         this._opts = {dataLoad: false};
     }
 
