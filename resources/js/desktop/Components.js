@@ -11,6 +11,7 @@ import {InputShareComponent} from "../common/components/input/input-share/input-
 import {SaleDetailsComponent} from "./Components/sale_details/sale_details.controller";
 import {UserDetailsComponent} from "./Components/user_details/user_details.controller";
 import {LogDetailsComponent} from "./Components/log_details/log_details.controller";
+import {StubComponent} from "./Components/stub/stub.controller";
 
 let angular = require('angular');
 
@@ -29,6 +30,7 @@ module.component('inputShare', InputShareComponent);
 module.component('saleDetails', SaleDetailsComponent);
 module.component('userDetails', UserDetailsComponent);
 module.component('logDetails', LogDetailsComponent);
+module.component('stub', StubComponent);
 
 export default module.name;
 

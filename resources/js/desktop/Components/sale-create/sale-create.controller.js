@@ -115,35 +115,34 @@ class SaleCreate {
     createSale(){
 
         if(!this.validate()) return false;
-        this.SalesResourceService.createMySale(this.sale, this.type).then(response => {
-            if (response.data.status == 1){
-                if (this.type == 'row'){
-                    this.sales.active = response.data.data;
+        this.SalesResourceService.createMySale(this.sale, this.type)
+            .then(response => {
+                if (response.data.status == 1){
+                    if (this.type == 'row'){
+                        this.sales.active = response.data.data;
+                        this.showStub = false;
+                    }
+                    if (this.type == 'list'){
+                        this.sales = response.data.data;
+                    }
+                    this.close('right_create_sale');
                 }
-                if (this.type == 'list'){
-                    this.sales = response.data.data;
-                }
-                this.close('right_create_sale');
-            } else {
-
-            }
-
-        });
-
+            });
     }
 
     close(componentId){
         this.$mdSidenav(componentId).close();
     }
 
-};
+}
 
 SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', 'SalesService', '$timeout', '$state'];
 
 export const SaleCreateComponent = {
     bindings: {
-        sales:     '=',
-        type:      '='
+        sales: '=',
+        type: '=',
+        showStub: '='
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

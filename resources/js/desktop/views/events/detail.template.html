@@ -57,6 +57,7 @@
                 </div>
                 <div ng-if="EventsDetailCtrl.activeEvent.sales"
                      class="event_right-side_table">
+
                     <table ng-if="EventsDetailCtrl.activeEvent.sales.length > 0">
                         <thead>
                         <tr>
@@ -85,18 +86,24 @@
                         </tbody>
                     </table>
 
-
-                    <div class="main_content main_content__empty" ng-if="EventsDetailCtrl.activeEvent.sales.length == 0">
-                        <div class="main_content__empty_container">
-                        <div class="main_content__empty_container__img main_content__empty_container__img_sale"></div>
-                        <div class="main_content__empty_container__title">No sales yet</div>
-                        <div class="main_content__empty_container__discription">
-                            Be the first who will create sale in this event and rise money</div>
+                    <stub ng-if="EventsDetailCtrl.activeEvent.sales.length === 0"
+                          title="No sales yet"
+                          description="Be the first who will create sale in this event and rise money"
+                          image="/images/desk/empty_user/empty_user_sale.png"
+                          class="stub"
+                          style="position: absolute;top: 0;width: auto;">
                         <div class="main_content__empty_container__buttons">
-                        <div class="main_content__empty_container__button main_content__empty_container__button__blue" ng-click="EventsDetailCtrl.toggleSaleSidenav()" role="button" tabindex="0">Create a Sale</div>
-                    </div>
+                            <div class="main_content__empty_container__button main_content__empty_container__button__blue"
+                                 ng-click="EventsDetailCtrl.toggleSaleSidenav()"
+                                 role="button"
+                                 tabindex="0">
+                                Create a Sale
+                            </div>
+                        </div>
+                    </stub>
+
+            </div>
         </div>
-    </div>
 
 
                 </div>
@@ -105,4 +112,4 @@
     </div>
 </div>
 <bid-place sale="EventsDetailCtrl.sale" bid="EventsDetailCtrl.bid"></bid-place>
-<sale-create></sale-create>
+<sale-create sales="EventsDetailCtrl.activeEvent.sales" type="'list'"></sale-create>

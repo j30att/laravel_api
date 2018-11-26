@@ -7,19 +7,18 @@ class BidsController {
         this.$scope = $scope;
         this.filter = null;
         this.$state = $state;
+        this.showStub = false;
         this.user = window.__user;
         this.BidsResourceService = BidsResourceService;
         this.bids = [];
         this.bidsTypes = BIDS_TYPES;
         this.bidsActive = this.$state.params.type;
-        this.getBids();
-
     }
 
     $onInit(){
-        let allBids = require('../../../common/api/bids-lists.json');
-        this.bids = allBids.data[this.bidsActive];
+        this.getBids();
     }
+
     togglePlaceBid(){
         console.log('open place bid');
         this.$scope.$broadcast('sidenav-open', () => {
@@ -31,11 +30,11 @@ class BidsController {
         this.BidsResourceService.getMyBids(this.user.id).then((response) => {
            this.bids =  response.data.data;
 
-           if(this.bids.matched.length == 0
-               && this.bids.unmatched.length ==0
-               && this.bids.settled.length == 0
-               && this.bids.canceled.length){
-               this.state = 'empty';
+           if(this.bids.matched.length === 0
+               && this.bids.unmatched.length === 0
+               && this.bids.settled.length === 0
+               && this.bids.canceled.length === 0){
+               this.showStub = true;
            }
 
         });

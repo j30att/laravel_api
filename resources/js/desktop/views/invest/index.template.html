@@ -1,6 +1,7 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content">
+    <div class="main_content"
+         style="display: flex; flex-direction: column;">
         <div class="event_content-wr">
             <div class="event_content__title">
                 Events
@@ -25,7 +26,8 @@
                 </a>
             </div>
         </div>
-        <div class="events_tabs-wr">
+        <div ng-if="InvestCtrl.sales && InvestCtrl.sales.length > 0"
+            class="events_tabs-wr">
             <div class="events_tabs_nav">
                 <ul class="events_tabs_list">
                     <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
@@ -62,9 +64,14 @@
                 </tr>
                 </tbody>
             </table>
-            <div ng-if="InvestCtrl.sales.length == 0" style="text-align: center; padding-top: 50px">There are no closing sales yet</div>
-
         </div>
+
+        <stub ng-if="InvestCtrl.sales.length == 0"
+              style="height: auto"
+              title="Closing sales"
+              description="There are no closing sales yet"
+              class="stub">
+        </stub>
     </div>
 </div>
 <bid-place sale ="InvestCtrl.sale"></bid-place>
