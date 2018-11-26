@@ -348,3 +348,29 @@ md-checkbox.md-checked .md-icon:after{
         }
     }
 }
+
+.md-toast-content{
+
+    background-color: #007fed !important;
+}
+md-toast{
+    .md-toast-content{
+        .md-toast-text{
+            font-size: 16px !important;
+        }
+    }
+}
+.md-toast-content{
+    min-height: 38px !important;
+    max-height: 38px !important;
+    height: 38px !important;
+    border-radius: 6px !important;
+
+}
+md-toast{
+    bottom: 75px !important;
+}
+
+md-toast.md-right{
+    right: 30px !important;
+}

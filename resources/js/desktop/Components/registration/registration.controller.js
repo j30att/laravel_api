@@ -249,7 +249,7 @@ class Registration {
         this.RegistrationService.createUser(user)
             .then((response) => {
                 if (response.status === 200) {
-                    this.changeState('link_pp_account');
+                    this.changeState('confirm_email');
                 } else {
                     console.log(response);
                 }
