@@ -4486,29 +4486,3 @@ a {
   background-position: center;
 }
 
-.add_money {
-  position: relative;
-}
-
-.add_money input {
-  padding-left: 20px !important;
-}
-
-.add_money::after {
-  content: '$';
-  position: absolute;
-  top: 15px;
-  left: 12px;
-}
-
-.add_persent {
-  position: relative;
-}
-
-.add_persent::after {
-  content: '%';
-  position: absolute;
-  top: 15px;
-  left: 36px;
-}
-

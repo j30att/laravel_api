@@ -6,12 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 </head>
 <body>
-    <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto; padding:0; width: 1020px; background: #f6f6f6; font-family: Arial, Helvetica, sans-serif;">
+    <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto; padding:0; width: 1020px; background: #f6f6f6; font-family: 'Open Sans', sans-serif;">
         <tr>
             <td style="text-align: center">
-                <img src="/images/email/logo.jpg" alt="logo" style="width: 209px; height: 29.2px; margin: 30px auto">
+                <img src="/images/email/logo.png" alt="logo" style="width: 209px; height: 29.2px; margin: 30px auto">
             </td>
         </tr>
         <tr>
