@@ -43,8 +43,8 @@
                 </tr>
                 <tr>
                     <td height="84">
-                        <span style="width: 50%; text-align: center;font-weight: 700; display: block; float: right"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/google_play.png" alt="google_play" width="19" height="21"><p style="display: inline-table; vertical-align: super; padding-left: 5px">Google Play</p></span>
-                        <span style="width: 50%; text-align: center;font-weight:700; display: block;"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/app_store.png" alt="appstore" width="19" height="24"><p style="display: inline-table; vertical-align: super; padding-left: 5px">AppStore</p></span>
+                        <span style="width: 38%; text-align: left;font-weight: 700; display: block; float: right"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/google_play.png" alt="google_play" width="19" height="21" style="margin-bottom: 2px"><p style="display: inline-table; vertical-align: super; padding-left: 5px; font-size: 20px">Google Play</p></span>
+                        <span style="width: 38%; text-align: right;font-weight:700; display: block;"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/app_store.png" alt="appstore" width="19" height="24" style="margin-bottom: 2px"><p style="display: inline-table; vertical-align: super; padding-left: 5px; font-size: 20px">AppStore</p></span>
                     </td>
 
                 </tr>
