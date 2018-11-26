@@ -34,6 +34,10 @@ Route::group(['middleware' => 'admin'], function() {
 
 });
 
+Route::get('email', function (){
+    return view('email.verification');
+});
+
 Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index');
 
 

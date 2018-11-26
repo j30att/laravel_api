@@ -123,7 +123,7 @@ class SaleCreate {
                 if (this.type == 'list'){
                     this.sales = response.data.data;
                 }
-                this.close('right');
+                this.close('right_create_sale');
             } else {
 
             }
