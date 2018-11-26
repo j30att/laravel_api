@@ -56,11 +56,11 @@
                            ng-class="{'validate_error_label': $ctrl._opts.validateBirthDate}">
                         Date of Birth
                     </label>
-                    <input md-no-float
-                           type="date" placeholder="12.03.1988"
+
+                    <input type="date" placeholder="12.03.1988"
                            ng-model="$ctrl.user.dateOfBirth"
                            ng-class="{'validate_error':$ctrl._opts.validateBirthDate}"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
+                           class="login__input ng-pristine"
                            id="input_date"
                            aria-invalid="true">
                 </md-input-container>
@@ -70,16 +70,17 @@
                            ng-class="{'validate_error_label': $ctrl._opts.validateLocation}">
                         Location
                     </label>
-                    <md-select ng-model="$ctrl.user.country_id"
+
+                    <select ng-model="$ctrl.user.country_id"
                                ng-class="{'validate_error': $ctrl._opts.validateLocation}"
                                class="login__input login__select md-no-underline"
                                placeholder="Select your location">
-                        <md-option
-                            value="{%item.id%}"
+                        <option
+                            ng-value="item.id"
                             ng-repeat="item in $ctrl.countries | orderBy:'name'">
                             {%item.name%}, {%item.code%}
-                        </md-option>
-                    </md-select>
+                        </option>
+                    </select>
                 </div>
 
             </div>
