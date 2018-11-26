@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12" ng-if="SaleCtrl.state != 'empty'">
+    <div class="col-md-12" ng-if="!SaleCtrl.showStub">
         <div class="header">
             <a ui-sref="profile">
                 <div class="header_profile"></div>
@@ -16,7 +16,7 @@
         <span ng-include="'tpl/view/footer.template.html'"></span>
     </div>
 
-    <div class="col-md-12" ng-if="SaleCtrl.state == 'empty'">
+    <div class="col-md-12" ng-if="SaleCtrl.showStub">
         <div class="header">
             <a ui-sref="profile">
                 <div class="header_profile"></div>
@@ -37,4 +37,4 @@
     </div>
 </div>
 
-<sale-create></sale-create>
+<sale-create sales="SaleCtrl.sales" type="'row'" show-stub="SaleCtrl.showStub"></sale-create>

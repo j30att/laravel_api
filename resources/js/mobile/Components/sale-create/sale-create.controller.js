@@ -107,7 +107,16 @@ class SaleCreate {
 
         if(!this.validate()) return false;
         this.SalesResourceService.createMySale(this.sale, 'row').then(response => {
-            this.close('right');
+            if (response.data.status == 1){
+                if (this.type == 'row'){
+                    this.sales.active = response.data.data;
+                    this.showStub = false;
+                }
+                if (this.type == 'list'){
+                    this.sales = response.data.data;
+                }
+                this.close('right');
+            }
         });
 
     }
@@ -122,7 +131,10 @@ SaleCreate.$inject = ['$scope', 'SalesResourceService', '$mdSidenav', '$http', '
 
 export const SaleCreateComponent = {
     bindings: {
-        func:     '&',
+        func: '&',
+        sales: '=',
+        type: '=',
+        showStub: '='
     },
     template: require('./sale-create.template.html'),
     controller: SaleCreate,

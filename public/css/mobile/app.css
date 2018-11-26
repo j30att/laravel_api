@@ -12454,6 +12454,7 @@ md-input-container input::placeholder {
 
 .main_content__empty_container__discription {
   width: 100%;
+  padding: 20px;
   text-align: center;
   font-size: 15px;
   color: #000000;
