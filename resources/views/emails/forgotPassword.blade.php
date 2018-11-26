@@ -22,13 +22,13 @@
                     <td style="padding-top: 50px; padding-bottom: 10px; font-size: 22px; font-weight: normal; color: #000000; width: 100%; text-align: center;">You’re nearly there...</td>
                 </tr>
                 <tr>
-                    <td style="padding-bottom: 20px; font-size: 16px; font-weight: normal; color: #000000; width: 100%; text-align: center; opacity: 0.5;">To complete your registration, please click this link:</td>
+                    <td style="padding-bottom: 20px; font-size: 16px; font-weight: normal; color: #000000; width: 100%; text-align: center; opacity: 0.5;">To reset your password, please copy this code and paste form in site:</td>
                 </tr>
                 <tr>
 
                     <td colspan="0">
                         <a href="" style="text-decoration: none;">
-                            <span style="display:block; width: 260px; margin:auto; height: 44px; line-height:44px; border-radius: 8px; background-color: #007fed; font-size: 16px; text-align: center; color: #ffffff; cursor: pointer">{{$token}}</span>
+                            <span style="display:block; width: 80%; margin:auto; height: 44px; line-height:44px; border-radius: 8px; background-color: #007fed; font-size: 14px; text-align: center; color: #ffffff; cursor: pointer">{{$token}}</span>
                         </a>
                     </td>
 
@@ -36,7 +36,7 @@
 
                 </tr>
                 <tr>
-                    <td style="width: 100%; padding: 30px 75px; text-align: center; font-size: 13px; color: #949494; line-height: 1.38;">This email is part of our sign-up process. If you didn't want to sign up with MyPartyPokerLive, please ignore it, and after a short period the request will be removed from our system.</td>
+                    <td style="width: 100%; padding: 30px 75px; text-align: center; font-size: 13px; color: #949494; line-height: 1.38;">This email is part of our reset password process. If you didn't want to sign up with PartyPokerStacking, please ignore it, and after a short period the request will be removed from our system.</td>
                 </tr>
                 <tr>
                     <td style="width: 100%; height: 1px; background-color: #ededed;"></td>
