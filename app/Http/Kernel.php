@@ -38,7 +38,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\checkAgent::class,
             \App\Http\Middleware\Integration::class,
             \App\Http\Middleware\GetLocation::class,
-           // \App\Http\Middleware\ConfirmRegistration::class,
+            \App\Http\Middleware\ConfirmRegistration::class,
 
         ],
 
@@ -68,7 +68,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'typeDevice' => \App\Http\Middleware\checkAgent::class,
         'getLocation' => \App\Http\Middleware\GetLocation::class,
-        //'confirmReg'=> \App\Http\Middleware\ConfirmRegistration::class,
+        'confirmReg'=> \App\Http\Middleware\ConfirmRegistration::class,
 
     ];
 }

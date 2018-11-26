@@ -39,12 +39,7 @@ class MailResetPasswordNotification extends Notification
      */
     public function toMail($notifiable)
     {
-
-
-        return (new MailMessage)
-                    ->line('For reset email copy line below')
-                    ->line($this->token)
-                    ->line('Thank you for using our application!');
+        return (new MailMessage)->view('emails.forgotPassword', ['token'=>$this->token]);
     }
 
     /**
