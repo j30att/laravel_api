@@ -1,0 +1,10 @@
+<div class="main_content main_content__empty">
+    <div class="main_content__empty_container">
+        <div ng-if="$ctrl.image"
+             class="main_content__empty_container__img"
+             ng-style="{'background-image': 'url('+$ctrl.image+')'}"></div>
+        <div class="main_content__empty_container__title">{% $ctrl.title %}</div>
+        <div class="main_content__empty_container__discription">{% $ctrl.description %}</div>
+        <div class="main_content__empty_container__buttons" ng-transclude></div>
+    </div>
+</div>

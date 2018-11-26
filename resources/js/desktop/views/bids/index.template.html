@@ -1,6 +1,6 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content" ng-if="BidsCtrl.state != 'empty'">
+    <div class="main_content" ng-if="!BidsCtrl.showStub">
         <div class="bids_container">
             <div class="bids_title">
                 <div class="bids_title__text">Matched Bids</div>
@@ -162,16 +162,14 @@
             </div>
         </div>
     </div>
-    <div class="main_content main_content__empty" ng-if="BidsCtrl.state == 'empty'">
-        <div class="main_content__empty_container">
-            <div class="main_content__empty_container__img main_content__empty_container__img_bids"></div>
-            <div class="main_content__empty_container__title">No bids yet</div>
-            <div class="main_content__empty_container__discription">There are no bids yet. Discover sales and make a bid</div>
-            <div class="main_content__empty_container__buttons">
-                <div class="main_content__empty_container__button
-                main_content__empty_container__button__blue" role="button" tabindex="0" ng-click="BidsCtrl.togglePlaceBid()">Discover sales</div>
-            </div>
-            <bid-place></bid-place>
+    <stub ng-if="BidsCtrl.showStub"
+          title="No bids yet"
+          description="There are no bids yet. Discover sales and make a bid"
+          image="/images/desk/empty_user/empty_user_bids.png"
+          class="stub">
+        <div class="main_content__empty_container__buttons">
+            <a ui-sref="invest" class="main_content__empty_container__button
+                main_content__empty_container__button__blue">Discover sales</a>
         </div>
-    </div>
+    </stub>
 </div>

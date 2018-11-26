@@ -1,16 +1,15 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content" ng-if="SaleCtrl.state != 'empty'">
-        <div class="sale_container" ng-repeat="(key,items) in SaleCtrl.sales" >
-            <div class="sale_title" >
+    <div class="main_content" ng-if="!SaleCtrl.showStub">
+        <div class="sale_container" ng-repeat="(key,items) in SaleCtrl.sales">
+            <div class="sale_title">
                 <div>
-
                     <div class="sale_title__text" ng-bind="key"></div>
                     <div class="sale_title__text">sales</div>
                     <div class="sale_title__btn"
                          ng-if="key == 'active'"
                          ng-click="SaleCtrl.toggleSidenav()">
-                         Create a Sale
+                        Create a Sale
                     </div>
                 </div>
                 <a ui-sref="sale-list({type:key})" class="sale_title__link">See all</a>
@@ -46,16 +45,18 @@
             </div>
         </div>
     </div>
-    <div class="main_content main_content__empty" ng-if="SaleCtrl.state == 'empty'">
-        <div class="main_content__empty_container">
-            <div class="main_content__empty_container__img main_content__empty_container__img_sale"></div>
-            <div class="main_content__empty_container__title">No sales yet</div>
-            <div class="main_content__empty_container__discription">Be the first who will create sale in this event and rise money</div>
-            <div class="main_content__empty_container__buttons">
-                <div class="main_content__empty_container__button main_content__empty_container__button__blue" ng-click="SaleCtrl.toggleSidenav()" role="button" tabindex="0">Create a Sale</div>
-            </div>
+    <stub ng-if="SaleCtrl.showStub"
+          title="No sales yet"
+          description="Be the first who will create sale in this event and rise money"
+          image="/images/desk/empty_user/empty_user_sale.png"
+          class="stub">
+        <div class="main_content__empty_container__button main_content__empty_container__button__blue"
+             ng-click="SaleCtrl.toggleSidenav()"
+             role="button"
+             tabindex="0">
+            Create a Sale
         </div>
-    </div>
+    </stub>
 </div>
-<sale-create sales="SaleCtrl.sales" type="'row'"></sale-create>
+<sale-create sales="SaleCtrl.sales" type="'row'" show-stub="SaleCtrl.showStub"></sale-create>
 <sale-manage sales="SaleCtrl.sales" type="'row'"></sale-manage>

@@ -1,6 +1,6 @@
 .main_content{
     &__empty{
-        height: 100vh;
+        height: 100%;
         padding: 0!important;
         display: flex;
         justify-content: center;
@@ -11,9 +11,13 @@
                 width: 120px;
                 height: 120px;
                 margin: 0 auto 24px auto;
-                &_sale{background: url("/images/desk/empty_user/empty_user_sale.png") no-repeat center; background-size: 100%;}
-                &_bids{background: url("/images/desk/empty_user/empty_user_bids.png") no-repeat center 100%; background-size: 100%;}
-                &_wallet{background: url("/images/desk/empty_user/empty_user_wallet.png") no-repeat center 100%; background-size: 100%;}
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+
+                &_sale{background-image: url("/images/desk/empty_user/empty_user_sale.png");}
+                &_bids{background-image: url("/images/desk/empty_user/empty_user_bids.png");}
+                &_wallet{background-image: url("/images/desk/empty_user/empty_user_wallet.png");}
             }
             &__title{
                 width: 100%;

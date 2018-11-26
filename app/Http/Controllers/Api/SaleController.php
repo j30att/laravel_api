@@ -258,6 +258,7 @@ class SaleController extends Controller
         if ($type == 'row') {
             $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->limit(3)->latest()->get();
         }
+
         if ($type == 'list') {
             $saleActive = Sale::query()->where(['status' => Sale::SALE_ACTIVE, 'user_id' => $user->id])->orderByDesc('id')->get();
         }
