@@ -2647,6 +2647,10 @@ md-toast.md-right {
   right: 30px !important;
 }
 
+.main_content__unregistered {
+  height: 100vh !important;
+}
+
 .main_content__empty {
   height: 100%;
   padding: 0 !important;
