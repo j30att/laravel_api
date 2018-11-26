@@ -6,13 +6,14 @@ class SaleController {
         this.user = window.__user;
         this._opts = {dataLoad: false};
         this.$scope = $scope;
+        this.showStub = false;
 
         this.SalesResourceService.getMySales(this.user.id).then(response =>{
             this.sales = response.data.data;
             this._opts.dataLoad = true;
             console.log(this.sales);
             if (this.sales.active.length == 0 && this.sales.closed.length == 0){
-                this.state = 'empty';
+                this.showStub = true;
             }
         });
     }

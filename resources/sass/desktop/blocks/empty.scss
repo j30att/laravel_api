@@ -1,4 +1,7 @@
 .main_content{
+    &__unregistered {
+        height: 100vh !important;
+    }
     &__empty{
         height: 100%;
         padding: 0!important;
