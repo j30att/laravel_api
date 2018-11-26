@@ -16,6 +16,7 @@ let ngAnimate = require('angular-animate');
 let ngSanitize = require('angular-sanitize');
 let ngFileUpload = require('ng-file-upload');
 
+
 let app = angular.module('poker', [
     ngSanitize,
     ngMaterial,
@@ -28,7 +29,8 @@ let app = angular.module('poker', [
     Services,
     permission,
     uiPermission,
-    ngFileUpload
+    ngFileUpload,
+
 ]);
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {

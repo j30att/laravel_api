@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\UserConfirmations;
 use App\Notifications\UserRegisteredNotification;
 use Carbon\Carbon;
 use function Couchbase\defaultDecoder;
@@ -93,7 +94,10 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($request->all())));
 
-        $user->sendRegisterConfirmationNotification();
+        $token = new UserConfirmations();
+        $token->email = $user->email;
+        $token->save();
+        $user->sendRegisterConfirmationNotification($token);
 
         return response(json_encode(['status' => 1]));
     }

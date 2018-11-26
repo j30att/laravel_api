@@ -2624,6 +2624,29 @@ md-checkbox.md-checked .md-icon:after {
   font-size: 15px;
 }
 
+.md-toast-content {
+  background-color: #007fed !important;
+}
+
+md-toast .md-toast-content .md-toast-text {
+  font-size: 16px !important;
+}
+
+.md-toast-content {
+  min-height: 38px !important;
+  max-height: 38px !important;
+  height: 38px !important;
+  border-radius: 6px !important;
+}
+
+md-toast {
+  bottom: 75px !important;
+}
+
+md-toast.md-right {
+  right: 30px !important;
+}
+
 .main_content__empty {
   height: 100vh;
   padding: 0 !important;
@@ -4461,5 +4484,31 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.add_money {
+  position: relative;
+}
+
+.add_money input {
+  padding-left: 20px !important;
+}
+
+.add_money::after {
+  content: '$';
+  position: absolute;
+  top: 15px;
+  left: 12px;
+}
+
+.add_persent {
+  position: relative;
+}
+
+.add_persent::after {
+  content: '%';
+  position: absolute;
+  top: 15px;
+  left: 36px;
 }
 

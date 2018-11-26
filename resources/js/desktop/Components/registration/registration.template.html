@@ -209,6 +209,23 @@
         </div>
     </md-content>
 
+    <md-content ng-if="$ctrl.state == 'confirm_email'">
+        <div class="modal_content">
+            <div class="your_profile__title">
+
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
+            </div>
+        </div>
+
+        <div class="check__img"></div>
+        <div class="check__title">Check your inbox</div>
+        <div class="check__discription">An email has been sent. It contains a link you must click to confirm your
+            email. Link link will be valid 2 hours
+        </div>
+
+        <div class="check__back" ng-click="$ctrl.changeState('link_pp_account')">Continue</div>
+    </md-content>
+
     <md-content ng-if="$ctrl.state == 'link_pp_account'">
         <div class="your_profile__title">
             <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
@@ -218,7 +235,7 @@
             <div class="dollar_content">
                 <div class="dollar_content__img"></div>
                 <div class="dollar_content__title">
-                    In order to receive your a free $22 partypoker LIVE Satellite ticket
+                    Link your partypoker account!
                 </div>
                 <div class="dollar_content__description">
                     Your My partypoker LIVE username should be the same as your partypoker username.

@@ -1,37 +1,54 @@
-<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right_login" ng-keydown="$ctrl.down($event)">
+<md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen"
+            md-component-id="right_login" ng-keydown="$ctrl.down($event)">
 
-    <md-content ng-if="$ctrl.state == 1" >
+    <md-content ng-if="$ctrl.state == 1">
         <div class="modal_content">
             <div class="your_profile__title">
                 Log In
                 <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
             </div>
-            <form ng-submit="LgCtrl.sendAuthData($event)"
+            <form ng-submit="" name="login_form"
                   class="login__form">
-                <md-input-container class="login__input_container md-block login_input md-formSelect-theme">
-                    <label for="input_5" class="login__input_label">Username</label>
-                    <input md-no-float required="" type="email" placeholder="Enter your username"
-                           name="clientEmail"
-                           ng-model="$ctrl.userEmail" minlength="5" maxlength="100"
-                           ng-pattern="/^.+@.+\..+$/"
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-valid-email ng-invalid
-                           ng-invalid-required ng-valid-pattern ng-valid-minlength
-                           ng-valid-maxlength" id="input_5" aria-invalid="true">
+
+
+                <md-input-container class="md-block login__input_container">
+                    <label class="login__input_label" ng-class="{'validate_error_label': $ctrl.errorEmail}">Client Email</label>
+                    <input required type="email"
+                           ng-model="$ctrl.userEmail"
+                           ng-class="{'validate_error':$ctrl.errorEmail}"
+                           class="login__input"
+                           placeholder="Enter your e-mail"
+                    />
+                    <div style="font-size: 12px; color: rgb(221,44,0)"
+                         ng-if="$ctrl.errorEmail"
+                         ng-bind="$ctrl.msgErrorr.email"></div>
+
                 </md-input-container>
 
-                <md-input-container class="login__input_container md-block login_input md-formSelect-theme flex-gt-sm"
+                <md-input-container class="login__input_container md-block "
                                     style="margin-bottom: 20px;">
-                    <label for="input_6" class="login__input_label">Your password</label>
+                    <label class="login__input_label" ng-class="{'validate_error_label': $ctrl.errorPassword}">Your password</label>
                     <input type="password"
-                           ng-model="$ctrl.userPassword" placeholder="Enter your password"
-                           name="clientPassword" required=""
-                           class="login__input ng-pristine ng-untouched md-input ng-empty ng-invalid ng-invalid-required"
-                           id="input_6" aria-invalid="true">
+                           ng-model="$ctrl.userPassword"
+                           ng-class="{'validate_error':$ctrl.errorPassword}"
+                           placeholder="Enter your password"
+                           required
+                           class="login__input"
+                    />
+                    <div style="font-size: 12px; color: rgb(221,44,0)" ng-if="$ctrl.errorPassword"
+                         ng-bind="$ctrl.msgErrorr.password">
+                    </div>
                 </md-input-container>
 
                 <div class="reset_password" ng-click="$ctrl.forgotPassword()">
                     Forget your password?
                 </div>
+
+                <div class="reset_password" style="margin-top: 20px" ng-if="$ctrl.notConfirmed.status">
+                    <span style="color: rgb(221,44,0)" ng-bind="$ctrl.notConfirmed.text"></span><br>
+                    <span ng-click="$ctrl.resendConfirm()">Resend confirmation email</span>
+                </div>
+
             </form>
 
         </div>
@@ -86,7 +103,9 @@
 
         <div class="check__img"></div>
         <div class="check__title">Check your inbox</div>
-        <div class="check__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
+        <div class="check__discription">An email has been sent. It contains a link you must click to reset your
+            password. You can only request 1 new password within 2 hours
+        </div>
 
         <div class="check__back" ng-click="$ctrl.createNewPass()">Create new password</div>
     </md-content>
@@ -149,17 +168,16 @@
     </md-content>
 
     <md-content ng-if="$ctrl.state == 5">
-    <div class="modal_content">
-        <div class="check__img" style="background: none;"></div>
-        <div class="check__discription">Password was succsessfull changed</div>
+        <div class="modal_content">
+            <div class="check__img" style="background: none;"></div>
+            <div class="check__discription">Password was succsessfull changed</div>
 
-        <div class="check__back" ng-click="$ctrl.state=1">Please login</div>
+            <div class="check__back" ng-click="$ctrl.state=1">Please login</div>
 
-    </div>
+        </div>
 
 
-
-</md-content>
+    </md-content>
 
     <md-content ng-if="$ctrl.state == 6">
         <div class="modal_content">
@@ -169,7 +187,6 @@
             <div class="check__back" ng-click="$ctrl.state=2">Please try again</div>
 
         </div>
-
 
 
     </md-content>

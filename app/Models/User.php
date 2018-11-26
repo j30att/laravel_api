@@ -21,6 +21,8 @@ class User extends Authenticatable
 
     const ROLE_USER         = 1;
     const ROLE_ADMIN        = 2;
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -77,9 +79,9 @@ class User extends Authenticatable
         $this->notify(new \App\Notifications\MailResetPasswordNotification($token));
     }
 
-    public function sendRegisterConfirmationNotification(){
+    public function sendRegisterConfirmationNotification($token){
 
-        $this->notify(new \App\Notifications\UserRegisteredNotification($this));
+        $this->notify(new \App\Notifications\UserRegisteredNotification($this, $token));
     }
 
 

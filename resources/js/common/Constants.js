@@ -72,4 +72,4 @@ export const COUNTRIES_URL = '/api/countries';
 export const REGISTRATION_URL = '/register';
 export const CHECK_EMAIL_URL = '/check-email';
 
-
+export const RESEND_CONFIRM_URL = '/confirm-email';
