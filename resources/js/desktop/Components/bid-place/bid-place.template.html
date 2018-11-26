@@ -67,8 +67,8 @@
 
                     </div>
                 </div>
-                <div class="modal_content__hr"></div>
-                <div class="you_bids" ng-hide="$ctrl.status == 2">
+                <div class="modal_content__hr" ng-if="$ctrl.user != null"></div>
+                <div class="you_bids" ng-hide="$ctrl.status == 2" ng-if="$ctrl.user != null">
                     <span class="bids_group__title">YOUR BID</span>
                     <div class="you_bids__wrapper">
                         <div class="you_bids__item">
