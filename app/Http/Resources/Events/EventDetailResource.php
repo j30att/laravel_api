@@ -16,6 +16,7 @@ class EventDetailResource extends JsonResource
      */
     public function toArray($request)
     {
+
         return [
             'id'         => $this->id,
             'title'      => str_limit($this->resource->title, 20),
