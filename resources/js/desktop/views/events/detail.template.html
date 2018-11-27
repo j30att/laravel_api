@@ -4,7 +4,7 @@
         <div class="event_wrapper">
             <div class="event_left-side">
                 <div class="event_left-side_header">
-                    <a ui-sref="invest-events" class="event_left-side_header_link">
+                    <a ui-sref="invest" class="event_left-side_header_link">
                         Back to Events
                     </a>
                 </div>
@@ -92,13 +92,19 @@
                           image="/images/desk/empty_user/empty_user_sale.png"
                           class="stub"
                           style="position: absolute;top: 0;width: auto;">
-                        <div class="main_content__empty_container__buttons">
+                        <div class="main_content__empty_container__buttons" ng-if="EventsDetailCtrl.user != null">
                             <div class="main_content__empty_container__button main_content__empty_container__button__blue"
                                  ng-click="EventsDetailCtrl.toggleSaleSidenav()"
                                  role="button"
                                  tabindex="0">
                                 Create a Sale
                             </div>
+                        </div>
+                        <div class="main_content__empty_container__buttons" ng-if="EventsDetailCtrl.user == null">
+                            <div class="main_content__empty_container__button main_content__empty_container__button__blue"
+                                 ng-click="MainCtrl.toggleSidenavLogin()">Log In</div>
+                            <div class="main_content__empty_container__button"
+                                 ng-click="MainCtrl.toggleSidenavRegistration('register')">Register</div>
                         </div>
                     </stub>
 

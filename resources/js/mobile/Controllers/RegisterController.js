@@ -32,6 +32,22 @@ class RegisterController {
         });
     }
 
+    validateAge() {
+        if (this.user.dateOfBirth) {
+            let today = new Date(),
+                userDateBirth = this.user.dateOfBirth;
+
+            const dayDiff = today.getDate() - userDateBirth.getDate(),
+                monthDiff = today.getMonth() - userDateBirth.getMonth(),
+                yearDiff = today.getFullYear() - userDateBirth.getFullYear();
+
+            if (yearDiff > 18 || (yearDiff === 18 && (monthDiff > 0 || (monthDiff === 0 && dayDiff >= 0)))) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     sendRegisterForm(){
         let user = {

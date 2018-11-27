@@ -61,11 +61,11 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::query()
-            ->where('status', Event::STATUS_ACTIVE)
             ->where('id', $id)
             ->with('subEvents')
             ->with('sales')
             ->first();
+
         return new EventDetailResource($event);
     }
 

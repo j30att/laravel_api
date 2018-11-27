@@ -12,7 +12,7 @@
     <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto; padding:0; width: 1020px; background: #f6f6f6; font-family: 'Open Sans', sans-serif;">
         <tr>
             <td style="text-align: center">
-                <img src="/images/email/logo.png" alt="logo" style="width: 209px; height: 29.2px; margin: 30px auto">
+                <img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/logo.png" alt="logo" style="width: 209px; height: 29.2px; margin: 30px auto">
             </td>
         </tr>
         <tr>
@@ -42,9 +42,10 @@
                     <td style="width: 100%; height: 1px; background-color: #ededed;"></td>
                 </tr>
                 <tr>
+
                     <td height="84">
-                        <span style="width: 50%; text-align: center;font-weight: 700; display: block; float: right"><img src="/images/email/google_play.png" alt="google_play" width="19" height="21"><p style="display: inline-table; vertical-align: super; padding-left: 5px">Google Play</p></span>
-                        <span style="width: 50%; text-align: center;font-weight:700; display: block;"><img src="/images/email/app_store.png" alt="appstore" width="19" height="24"><p style="display: inline-table; vertical-align: super; padding-left: 5px">AppStore</p></span>
+                        <span style="width: 38%; text-align: left;font-weight: 700; display: block; float: right"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/google_play.png" alt="google_play" width="19" height="21" style="margin-bottom: 2px"><p style="display: inline-table; vertical-align: super; padding-left: 5px; font-size: 20px">Google Play</p></span>
+                        <span style="width: 38%; text-align: right;font-weight:700; display: block;"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/app_store.png" alt="appstore" width="19" height="24" style="margin-bottom: 2px"><p style="display: inline-table; vertical-align: super; padding-left: 5px; font-size: 20px">AppStore</p></span>
                     </td>
 
                 </tr>
@@ -60,13 +61,13 @@
                             <span>
                                 <p style="font-size: 14px; line-height: 1.29; padding-bottom: 8px">Connect with us on:</p>
                                 <span style="display: block; width: 40px; height: 40px; text-align: center; cursor: pointer; border: 1px solid #e6e6e6;border-radius: 8px; float: left; box-sizing: border-box; padding-top: 11px; margin-right: 8px"><a
-                                        href="#"><img src="/images/email/twitter.png" alt="twitter" style="width: 18px; height: 15px"></a></span>
+                                        href="#"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/twitter.png" alt="twitter" style="width: 18px; height: 15px"></a></span>
                                 <span style="display: block; width: 40px; height: 40px; text-align: center; cursor: pointer; border: 1px solid #e6e6e6;border-radius: 8px; float: left; box-sizing: border-box; padding-top: 10px; margin-right: 8px"><a
-                                        href="#"><img src="/images/email/facebook.png" alt="twitter" style="width: 10px; height: 17px"></a></span>
+                                        href="#"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/facebook.png" alt="twitter" style="width: 10px; height: 17px"></a></span>
                                 <span style="display: block; width: 40px; height: 40px; text-align: center; cursor: pointer; border: 1px solid #e6e6e6;border-radius: 8px; float: left; box-sizing: border-box; padding-top: 9px; margin-right: 8px"><a
-                                        href="#"><img src="/images/email/instagram.png" alt="twitter" style="width: 22px; height: 22px"></a></span>
+                                        href="#"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/instagram.png" alt="twitter" style="width: 22px; height: 22px"></a></span>
                                 <span style="display: block; width: 40px; height: 40px; text-align: center; cursor: pointer; border: 1px solid #e6e6e6;border-radius: 8px; float: left; box-sizing: border-box; padding-top: 9px"><a
-                                        href="#"><img src="/images/email/twitter.png" alt="twitter" style="width: 22px; height: 16px"></a></span>
+                                        href="#"><img src="{{\Illuminate\Support\Facades\URL::to('/')}}/images/email/twitter.png" alt="twitter" style="width: 22px; height: 16px"></a></span>
                             </span>
                         </td>
                     </tr>
