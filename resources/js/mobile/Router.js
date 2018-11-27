@@ -77,6 +77,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('sale-all', {
             url: '/invest/sales',
             template: require('./views/sale/all.template.html'),
+            menu: 'invest',
             controller: 'SaleAllController',
             controllerAs: 'SaleAllCtrl'
         })
