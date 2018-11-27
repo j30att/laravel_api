@@ -868,6 +868,7 @@
   color: #999999;
   font-size: 15px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .event_left-side_header_link:before {
