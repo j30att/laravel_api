@@ -27,8 +27,8 @@
                 <tr>
 
                     <td colspan="0">
-                        <a href="" style="text-decoration: none;">
-                            <span style="display:block; width: 80%; margin:auto; height: 44px; line-height:44px; border-radius: 8px; background-color: #007fed; font-size: 14px; text-align: center; color: #ffffff; cursor: pointer">{{$token}}</span>
+                        <a href="{{ route('password.reset-form', ['token' => $token]) }}" style="text-decoration: none;">
+                            <span style="display:block; width: 80%; margin:auto; height: 44px; line-height:44px; border-radius: 8px; background-color: #007fed; font-size: 14px; text-align: center; color: #ffffff; cursor: pointer">Reset password</span>
                         </a>
                     </td>
 

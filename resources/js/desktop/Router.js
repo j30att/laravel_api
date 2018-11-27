@@ -29,11 +29,27 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             url: '/logout',
             template: require('./views/main.template.html'),
         })*/
+
+        .state('restorePass', {
+            url: '/restore',
+            redirectTo: () => {
+                return {
+                    state: 'invest',
+                    params: {
+                        restore: true
+                    }
+                }
+            }
+        })
+
         .state('invest', {
-            url: '/invest',
+            url: '/invest?restore',
             template: require('./views/invest/index.template.html'),
             controller: 'InvestController',
-            controllerAs: 'InvestCtrl'
+            controllerAs: 'InvestCtrl',
+            params: {
+                restore: null
+            }
         })
         .state('invest-events', {
             url: '/invest/events?date&event&country&venue',

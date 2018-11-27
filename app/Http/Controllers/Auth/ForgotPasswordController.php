@@ -54,6 +54,7 @@ class ForgotPasswordController extends Controller
             $request->only('email')
         );
 
+
         return $response == Password::RESET_LINK_SENT? json_encode(['status'=>1]) : json_encode(['status'=>0]);
 
     }
