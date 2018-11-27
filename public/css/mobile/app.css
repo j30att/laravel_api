@@ -10748,7 +10748,6 @@ a.text-dark:focus {
 .card__profile_foto {
   width: 36px;
   height: 36px;
-  border: 1px solid grey;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -12083,7 +12082,7 @@ a.text-dark:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10px;
+  margin-top: -164px;
 }
 
 .profile_hint {
@@ -12161,7 +12160,6 @@ a.text-dark:focus {
 .profile_img img {
   width: 100px;
   height: 100px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 4px;
 }
 
@@ -12403,6 +12401,12 @@ md-input-container input::placeholder {
 .dollar_content__terms a {
   color: #007fed;
   font-size: 15px;
+}
+
+/*avatar for creator*/
+
+.sale_card__list_profile__photo {
+  background-image: url("/images/avatar_placeholder.png");
 }
 
 .main_content__empty {

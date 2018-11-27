@@ -13,6 +13,7 @@
                 <a ng-repeat="event in InvestCtrl.events"
                     ui-sref="invest-events-detail({id:event.id})" class="event_item">
                     <div class="event_item__pic" style="background-image: url({%event.image%})">
+
                     </div>
                     <div class="event_info">
                         <div class="event_info_name" ng-bind="event.title"></div>
@@ -52,6 +53,7 @@
                     <td class="t_from">
                         <div class="t_from_fix_height">
                             <div class="t_from_img" style="background-image: url({%sale.creator.avatar%})"></div>
+
                             <span ng-bind="sale.creator.name"></span>
                         </div>
                     </td>

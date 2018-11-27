@@ -59,6 +59,7 @@ class Profile {
                 if (res.data.status == 1) {
                     this.user.profile_avatar_url = res.data.avatar;
                     this._opts.avatar_loading = false;
+                    this.user.avatar = res.data.avatar;
                 }
             })
             .catch((e) => {

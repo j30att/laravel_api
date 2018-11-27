@@ -1,0 +1,78 @@
+<md-sidenav class="md-sidenav-right full_height full_height__sidnav" style="position: fixed !important;"
+            md-is-open="isSidenavOpen" md-component-id="profile_mobile">
+    <md-content class="place_wrapper col-md-12">
+        <div class="header">
+            <div class="header_close" ng-click="$ctrl.close('profile_mobile')"></div>
+            <div class="header_title">Yor profile</div>
+            <div class="header_empty"></div>
+        </div>
+        <div class="header_empty_height"></div>
+        <div class="profile_info">
+            <div class="profile_img">
+                <img src="{%$ctrl.user.avatar%}">
+            </div>
+            <div class="profile_hint"
+                 ngf-select
+                 ng-model="$ctrl.uploadedAvatar"
+                 ngf-change="$ctrl.uploadAvatar()"
+                 ngf-multiple="false"
+                 ngf-pattern="'image/*'"
+                 ngf-accept="'image/*'"
+                 ngf-keep="false"
+                 ngf-allow-dir="true"
+            >
+                Replace photo
+            </div>
+            <div class="profile_name">Milton Jimenez</div>
+            <div class="profile_button">Link Party Poker account</div>
+        </div>
+        <div class="profile_block_title">settings</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item">
+                <div>
+                    <div class="icon icon_notification"></div>
+                    <div class="profile_menu_item__text">Notifications and sounds</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="icon icon_privacy"></div>
+                    <div class="profile_menu_item__text">Privacy and security</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="icon icon_account"></div>
+                    <div class="profile_menu_item__text">Account info</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item ">
+                <div>
+                    <div class="icon icon_support"></div>
+                    <div class="profile_menu_item__text">Support</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="icon icon_tell"></div>
+                    <div class="profile_menu_item__text">Tell a friend</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="icon icon_setting"></div>
+                    <div class="profile_menu_item__text">Settings</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+
+        </div>
+
+
+    </md-content>
+</md-sidenav>

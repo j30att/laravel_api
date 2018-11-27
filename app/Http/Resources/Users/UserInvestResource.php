@@ -17,7 +17,7 @@ class UserInvestResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'avatar' => $this->avatar
+            'avatar' => $this->avatar ? $this->avatar = $this->avatar : $this->avatar = '/images/avatar_placeholder.png'
         ];
         //return parent::toArray($request);
     }
