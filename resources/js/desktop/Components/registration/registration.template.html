@@ -14,7 +14,7 @@
             </div>
 
             <div class="registration_subtitle">
-                ADD PERSONAL INFROMATION
+                ADD PERSONAL INFORMATION
             </div>
 
             <div
@@ -76,8 +76,8 @@
                                class="login__input login__select md-no-underline"
                                placeholder="Select your location">
                         <option
-                            ng-value="item.id"
-                            ng-repeat="item in $ctrl.countries | orderBy:'name'">
+                            ng-repeat="item in $ctrl.countries | orderBy:'name'"
+                            ng-value="item.id">
                             {%item.name%}, {%item.code%}
                         </option>
                     </select>

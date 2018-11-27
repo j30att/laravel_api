@@ -11,6 +11,7 @@ import hack from './Hack';
 
 let ngRouter = require('angular-ui-router').default;
 let ngMaterial = require('angular-material');
+let ngMessages = require('angular-messages');
 let ngAria = require('angular-aria');
 let ngAnimate = require('angular-animate');
 let ngFileUpload = require('ng-file-upload');
@@ -18,6 +19,7 @@ let ngFileUpload = require('ng-file-upload');
 
 let app = angular.module('poker', [
     ngMaterial,
+    ngMessages,
     ngAria,
     ngAnimate,
     ngRouter,

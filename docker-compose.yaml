@@ -7,6 +7,7 @@ services:
         build: .
         volumes:
             - ./:/var/www/vhosts/site/
+        working_dir: /var/www/vhosts/site
         links:
             - mysql:mysql
         command: "/usr/sbin/php-fpm7.1 -F -O"

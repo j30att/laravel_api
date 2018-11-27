@@ -184,14 +184,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controller: 'LoginController',
             controllerAs: 'LgCtrl'
         })
-        .state('auth.registration', {
+        /*.state('auth.registration', {
             url: '/register',
             template: require('./views/auth/registration.template.html'),
             //ng-controller="RegisterController as RgCtrl"
             controller: 'RegisterController',
             controllerAs: 'RgCtrl'
-        })
-
+        })*/
         .state('dealer-events', {
             url: '/dealer/events',
             template: require('./views/dealer/events.template.html'),

@@ -5,7 +5,7 @@ class LoginController {
     constructor($window, $http){
         this.$window = $window;
         this.$http = $http;
-        this.firstName ='';
+        this.firstName = '';
         this.state = 'login';
 
 
@@ -26,6 +26,7 @@ class LoginController {
         })
 
     }
+
     forgotPassword(){
         this.state = 'forgot';
 
@@ -58,7 +59,7 @@ class LoginController {
         }
     }
 
-};
+}
 
 LoginController.$inject = ['$window', '$http'];
 

@@ -6,6 +6,7 @@ class MainMenuController {
         this.$state = $state;
         this.$mdDialog = $mdDialog;
         this.user = window.__user;
+        if (this.user.avatar == null) this.user.avatar = '/images/avatar_placeholder.png';
     }
 
 

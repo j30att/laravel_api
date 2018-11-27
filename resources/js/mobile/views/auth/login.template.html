@@ -9,33 +9,54 @@
         </div>
 
         <div class="col-md-12">
-            <form ng-submit="LgCtrl.sendAuthData($event)" style="width:100%">
-
-                    <md-input-container  class="md-block login_input">
-                        <label>Client Email</label>
-                        <input required type="email" name="clientEmail" ng-model="LgCtrl.userEmail"
-                               minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
-
-                        <div ng-messages="" role="alert">
-                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                                Your email must look like an e-mail address.
-                            </div>
+            <form name="loginForm"
+                  id="loginForm"
+                  ng-submit="LgCtrl.sendAuthData($event)"
+                  style="width:100%">
+                <md-input-container class="md-block login_input">
+                    <label for="userEmail">
+                        Client Email
+                    </label>
+                    <input
+                        type="email"
+                        name="userEmail"
+                        id="userEmail"
+                        ng-model="LgCtrl.userEmail"
+                        ng-change="LgCtrl.onChange()"
+                        minlength="5"
+                        maxlength="100"
+                        ng-pattern="/^.+@.+\..+$/"
+                        required/>
+                    <div ng-messages="loginForm.userEmail.$error">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Your email must look like an e-mail address.
                         </div>
-                    </md-input-container>
+                    </div>
+                </md-input-container>
 
-                    <md-input-container  class="md-block login_input" flex-gt-sm style="margin-bottom: 20px;">
-                        <label>Your password</label>
-                        <input type="password" ng-model="LgCtrl.userPassword" name="clientPassword" required>
-
-                        <div ng-messages="" role="alert">
-                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                                Password field cannot be empty.
-                            </div>
+                <md-input-container class="md-block login_input" flex-gt-sm style="margin-bottom: 20px;">
+                    <label for="userPassword">
+                        Your password
+                    </label>
+                    <input type="password"
+                           ng-model="LgCtrl.userPassword"
+                           name="userPassword"
+                           id="userPassword"
+                           ng-change="LgCtrl.onChange()"
+                           required>
+                    <div ng-messages="loginForm.userPassword.$error">
+                        <div ng-message-exp="['required']">
+                            Password field cannot be empty.
                         </div>
-                    </md-input-container>
+                    </div>
+                </md-input-container>
 
-                <button class="button button_login" type="submit" style=""
-                        ng-click="LgCtrl.sendAuthData($event)">Log in
+                <span class="login-form-error" ng-if="LgCtrl.error">{%LgCtrl.error%}</span>
+
+                <button class="button button_login"
+                        type="submit"
+                        form="loginForm">
+                    Log in
                 </button>
             </form>
             <div class="forgot_password" ng-click="LgCtrl.forgotPassword()">

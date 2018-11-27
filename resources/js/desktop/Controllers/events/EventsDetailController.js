@@ -1,7 +1,8 @@
 class EventsDetailController {
-    constructor($scope, $state, EventsResourceService) {
+    constructor($scope, $state, $window, EventsResourceService) {
         this.$scope = $scope;
         this.$state = $state;
+        this.$window = $window;
         this.EventsResourceService = EventsResourceService;
         this.event = {};
         this.sale = {};
@@ -53,8 +54,12 @@ class EventsDetailController {
         }
     }
 
+    goBack(){
+        this.$window.history.back()
+    }
+
 }
 
-EventsDetailController.$inject = ['$scope', '$state', 'EventsResourceService'];
+EventsDetailController.$inject = ['$scope', '$state', '$window', 'EventsResourceService'];
 
 export {EventsDetailController};
