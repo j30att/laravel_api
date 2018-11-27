@@ -17,10 +17,10 @@ class BidsController {
         this.BidsResourceService.getMyBids(this.user.id)
             .then(response =>{
                 this.bids = response.data.data;
-                if(    this.bids.canceled.length ==0
+                if(    this.bids.canceled.length == 0
                     && this.bids.matched.length == 0
-                    && this.bids.settled.length ==0
-                    && this.bids.unmatched.length){
+                    && this.bids.settled.length == 0
+                    && this.bids.unmatched.length == 0){
                     this.state = 'empty';
                 }
             });
