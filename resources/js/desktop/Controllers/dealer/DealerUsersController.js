@@ -10,6 +10,11 @@ class DealerUsersController{
         this.DealerResourceService.getUsers().then(response => {
             console.log(response);
             this.users = response.data.data;
+            // if(this.users.avatar == null){
+            //     this.users.avatar = '/images/avatar_placeholder.png';
+            //     return this.users.avatar;
+            // }
+
         });
     }
 

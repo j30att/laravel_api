@@ -23,7 +23,6 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::query()
-            ->where('status', Event::STATUS_ACTIVE)
             ->with('subEvents')
             ->with('image')
             ->get();

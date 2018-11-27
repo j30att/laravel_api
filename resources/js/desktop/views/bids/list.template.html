@@ -28,7 +28,7 @@
 
                 <tr ng-repeat="(index, bid) in BidsCtrl.bids">
                     <td class="t_from">
-                        <div class="t_from_img" style="background-image: url({%bid.investor.avatar%})">
+                        <div class="t_from_img" ng-style="{'background-image':bid.investor.avatar ? 'url('+bid.investor.avatar+')':'url(/images/avatar_placeholder.png)'}">
 
                         </div>
                         <span ng-bind="bid.investor.name"></span>

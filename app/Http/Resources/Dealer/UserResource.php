@@ -19,7 +19,7 @@ class UserResource extends JsonResource
         return [
             'id'   => $this->id,
             'name' => $this->name,
-            'avatar'=>$this->avatar,
+            'avatar' => $this->avatar ? $this->avatar = $this->avatar : $this->avatar = '/images/avatar_placeholder.png',
             'sales'=> $this->sales->count(),
             'bids' => $this->bids->count()
 

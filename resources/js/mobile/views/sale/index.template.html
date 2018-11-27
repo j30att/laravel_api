@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-md-12" ng-if="!SaleCtrl.showStub">
         <div class="header">
-            <a ui-sref="profile">
-                <div class="header_profile"></div>
-            </a>
+            <div class="header_profile"
+                 ng-click="MainCtrl.toggleMobileProfile()" >
+            </div>
             <div class="header_logo"></div>
             <div class="header_filter_empty" ></div>
         </div>
@@ -18,9 +18,9 @@
 
     <div class="col-md-12" ng-if="SaleCtrl.showStub">
         <div class="header">
-            <a ui-sref="profile">
-                <div class="header_profile"></div>
-            </a>
+            <div class="header_profile"
+                 ng-click="MainCtrl.toggleMobileProfile()" >
+            </div>
             <div class="header_logo"></div>
             <div class="header_filter_empty" ></div>
         </div>

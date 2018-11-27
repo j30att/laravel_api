@@ -97,8 +97,8 @@
         <div class="profile">
             <div class="profile_info">
                 <div class="profile_left-side" style="cursor: pointer" ng-click="$ctrl.toggleSidenavProfile()">
-                    <div class="profile_img"
-                         ng-style="{backgroundImage: 'url('+$ctrl.user.avatar+')'}"></div>
+                    <div class="profile_img" style="background-image: url({%$ctrl.user.avatar%})"></div>
+
                     <div class="profile_name" ng-bind="$ctrl.user.name"></div>
                 </div>
                 <a class="profile_logout"

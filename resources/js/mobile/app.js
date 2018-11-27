@@ -14,6 +14,8 @@ let ngMaterial = require('angular-material');
 let ngMessages = require('angular-messages');
 let ngAria = require('angular-aria');
 let ngAnimate = require('angular-animate');
+let ngFileUpload = require('ng-file-upload');
+
 
 let app = angular.module('poker', [
     ngMaterial,
@@ -26,7 +28,8 @@ let app = angular.module('poker', [
     Services,
     Filters,
     permission,
-    uiPermission
+    uiPermission,
+    ngFileUpload
 ]);
 
 angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {

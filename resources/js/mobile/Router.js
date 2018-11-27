@@ -77,12 +77,14 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('sale-all', {
             url: '/invest/sales',
             template: require('./views/sale/all.template.html'),
+            menu: 'invest',
             controller: 'SaleAllController',
             controllerAs: 'SaleAllCtrl'
         })
 
         .state('events', {
             url: '/events',
+            menu: 'invest',
             template: require('./views/events/index.template.html'),
             controller: 'EventsListController',
             controllerAs: 'EvntsLstCtrl'
@@ -90,12 +92,14 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
 
         .state('event', {
             url: '/event/{id}',
+            menu: 'invest',
             template: require('./views/events/detail.template.html'),
             controller: 'EventInfoController',
             controllerAs: 'EventInfoCtrl',
         })
         .state('event-info', {
             url: '/event/info/{id}',
+            menu: 'invest',
             template: require('./views/events/single.template.html'),
             controller: 'EventController',
             controllerAs: 'EventCtrl',
@@ -141,6 +145,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
 
         .state('bids-filter', {
             url: '/bids/{filter}',
+            menu: 'bids',
             template: require('./views/bids/filter.template.html'),
             controller: 'BidsFilterController',
             controllerAs: 'BidsCtrl',
@@ -211,6 +216,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/sale/filter.template.html'),
             controller: 'SaleFilterController',
             controllerAs: 'SaleCtrl',
+            menu: 'sales',
             data: {
                 permissions: {
                     except: 'Guest',
@@ -238,10 +244,10 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 }
             },
         })
-        .state('profile', {
+        /*.state('profile', {
             url: '/profile',
             template: require('./views/profile/index.template.html'),
-        })
+        })*/
 
 
     ;

@@ -18,6 +18,8 @@ import {InputMarkupComponent} from "../common/components/input/input-markup/inpu
 import {InputAmountComponent} from "../common/components/input/input-amount/input-amount.controller";
 import {InputShareComponent} from "../common/components/input/input-share/input-share.controller";
 
+import{ProfileComponent} from "./Components/profile/profile.controller";
+
 let module = angular.module('Components', []);
 module.component('bids', BidsComponent);
 module.component('bidsCarousel', BidsCarouselComponent);
@@ -36,6 +38,8 @@ module.component('saleCreate', SaleCreateComponent);
 module.component('inputMarkup', InputMarkupComponent);
 module.component('inputAmount', InputAmountComponent);
 module.component('inputShare', InputShareComponent);
+
+module.component('profileComponent', ProfileComponent);
 
 
 export default module.name;

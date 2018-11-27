@@ -2,13 +2,17 @@ import {SALE_LOWEST, SALE_CLOSING} from "../Constants"
 
 
 class SaleAllController {
-    constructor($window, $http){
+    constructor($window, $http, $state){
         this.$window = $window;
         this.$http = $http;
         this.events =[];
         this._opts = {dataLoad: false};
         this.filter = 'closing';
         this.setFilter(this.filter);
+        this.$state = $state;
+
+        console.log(this.$state.current, 'this.$state.current');
+        console.log(this.$state, 'this.$state')
 
     }
 
@@ -29,6 +33,6 @@ class SaleAllController {
 
 };
 
-SaleAllController.$inject = ['$window', '$http'];
+SaleAllController.$inject = ['$window', '$http', '$state'];
 
 export {SaleAllController};

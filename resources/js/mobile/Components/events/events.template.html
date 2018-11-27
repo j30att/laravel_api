@@ -11,23 +11,21 @@
                 </a>
                 <div class="event_card_attr">£{%item.fund%} GTD</div>
 
-                <div class="event_card_attr" ng-bind="item.date"></div>
+                <div class="event_card_attr" ng-bind="item.period"></div>
             </div>
 
 
 </div>
 
 
-<div class="event_card_list" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
 
-    <div class="event_card_list_img" style="background: url({%item.image%})">
-        <!--<img src="/images/select_event_bg.png" alt="">-->
-        <!--<div class="event_card_list_back"></div>-->
-        <!--<div class="event_card_list_open"></div>-->
-    </div>
+<div class="event_card_list" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
+<a ui-sref="event({id:item.id})">
+    <div class="event_card_list_img" style="background: url({%item.image%})"></div>
+
     <div class="event_card_list_info no-padding">
 
-        <div class="event_card_list_wr" ng-click="$ctrl.openDetail(item.id)">
+        <div class="event_card_list_wr">
 
 
             <div class="event_card_title" ng-bind="item.title"></div>
@@ -38,16 +36,7 @@
             <div class="event_card_date" ng-bind="item.date"></div>
             <div class="blocks_header_title_name event_card_subevent_list_title" ng-if="$ctrl.showDetail(item.id)">Event list</div>
         </div>
-
-        <div class="event_card_list_subevents" ng-if="$ctrl.showDetail(item.id)" ng-repeat="subevent in item.subevents">
-
-            <div class="event_card_title" ng-bind="subevent.title"></div>
-            <div class="event_card_fund">£ {%item.fund%} GTD • £ {%subevent.fund%} GTD</div>
-            <div class="event_card_date" ng-bind="item.date"></div>
-            <div class="event_card__see_more" ng-click="$ctrl.showSubEventInfo(item.id, subevent.id)"></div>
-
-        </div>
     </div>
 
-
+</a>
 </div>

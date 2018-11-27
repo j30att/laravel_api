@@ -147,3 +147,22 @@
     }
 }
 
+.t_from_img{
+    background-image: url("/images/avatar_placeholder.png");
+}
+.profile_img{
+    background-image: url("/images/avatar_placeholder.png");
+}
+.your_profile__pic{
+    background-image: url("/images/avatar_placeholder.png");
+}
+.bids_card__title_img{
+    background-image: url("/images/avatar_placeholder.png");
+}
+.dealer_user_avatar{
+    background-image: url("/images/avatar_placeholder.png");
+}
+
+
+//ng-style="{'background-image':sale.creator.avatar ? 'url('+sale.creator.avatar+')':'url(/images/avatar_placeholder.png)'}"
+//23
