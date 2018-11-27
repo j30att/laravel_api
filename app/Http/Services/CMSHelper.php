@@ -78,7 +78,7 @@ class CMSHelper
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
                 Log::info('[x] Unprocessable COUNTRY');
-                return false;
+
             }
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
@@ -92,7 +92,7 @@ class CMSHelper
                 $event->fund = (float)$eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogoBg;
-                $event->country_id = $country->id;
+                $event->country_id = $country ? $country->id : null;
                 $event->currency = $eventData->event->eventCurrency;
                 $event->venue_id = $eventData->event->eventVenueId;
                 $event->venue_name = $eventData->event->eventVenueName;
