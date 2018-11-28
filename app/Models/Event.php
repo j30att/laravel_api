@@ -131,10 +131,10 @@ class Event extends Model
         }
     }
 
+
     public function getMainImageAttribute(){
         return 'https://res.cloudinary.com/partypoker-live/image/upload/'.$this->logo;
     }
-
 
 
 }
