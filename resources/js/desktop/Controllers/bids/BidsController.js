@@ -8,6 +8,7 @@ class BidsController {
         this.filter = null;
         this.$state = $state;
         this.showStub = false;
+        this.ready = false;
         this.user = window.__user;
         this.BidsResourceService = BidsResourceService;
         this.bids = [];
@@ -15,56 +16,67 @@ class BidsController {
         this.bidsActive = this.$state.params.type;
     }
 
-    $onInit(){
+    $onInit() {
         this.getBids();
     }
 
-    togglePlaceBid(){
-        console.log('open place bid');
+    togglePlaceBid() {
+        //console.log('open place bid');
         this.$scope.$broadcast('sidenav-open', () => {
         });
     }
 
-    getBids(){
-        if (this.bidsActive == undefined){
-        this.BidsResourceService.getMyBids(this.user.id).then((response) => {
-           this.bids =  response.data.data;
+    getBids() {
+        switch (this.bidsActive) {
+            case ('matched'):
+                this.BidsResourceService.getMyBidsMatched(this.user.id)
+                    .then((response) => {
+                        this.bids = response.data.data;
+                        this.ready = true;
+                    });
+                break;
+            case ('unmatched'):
+                this.BidsResourceService.getMyBidsUnatched(this.user.id)
+                    .then((response) => {
+                        this.bids = response.data.data;
+                        this.ready = true;
+                    });
+                break;
+            case ('settled'):
+                this.BidsResourceService.getMyBidsSettled(this.user.id)
+                    .then((response) => {
+                        this.bids = response.data.data;
+                        this.ready = true;
+                    });
+                break;
+            case ('canceled'):
+                this.BidsResourceService.getMyBidsCanceled(this.user.id)
+                    .then((response) => {
+                        this.bids = response.data.data;
+                        this.ready = true;
+                    });
+                break;
+            default:
+                this.BidsResourceService.getMyBids(this.user.id)
+                    .then((response) => {
+                        this.bids = response.data.data;
 
-           if(this.bids.matched.length === 0
-               && this.bids.unmatched.length === 0
-               && this.bids.settled.length === 0
-               && this.bids.canceled.length === 0){
-               this.showStub = true;
-           }
+                        if (this.emptyBids(this.bids)) {
+                            this.showStub = true;
+                        }
 
-        });
-        }
-        if (this.bidsActive == 'matched'){
-            this.BidsResourceService.getMyBidsMatched(this.user.id).then((response) => {
-                this.bids = response.data.data;
-            });
-
-        }
-        if (this.bidsActive == 'unmatched'){
-            this.BidsResourceService.getMyBidsUnatched(this.user.id).then((response) => {
-                this.bids = response.data.data;
-            });
-        }
-        if (this.bidsActive == 'settled'){
-            this.BidsResourceService.getMyBidsSettled(this.user.id).then((response) => {
-                this.bids = response.data.data;
-            });
-        }
-        if (this.bidsActive == 'canceled'){
-            this.BidsResourceService.getMyBidsCanceled(this.user.id).then((response) => {
-                this.bids = response.data.data;
-            });
+                        this.ready = true;
+                    });
         }
     }
+
+    emptyBids(bids) {
+        return this.bids.matched.length === 0
+            && this.bids.unmatched.length === 0
+            && this.bids.settled.length === 0
+            && this.bids.canceled.length === 0
+    }
 }
-
-
-
 
 
 BidsController.$inject = ['$window', '$http', '$state', '$scope', 'BidsResourceService'];
