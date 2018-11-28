@@ -30,7 +30,6 @@ class CMSHelper
 
     public function execute($msg)
     {
-
         Log::info('[x] Message received', [$msg]);
         try {
 
@@ -54,7 +53,7 @@ class CMSHelper
 
             }
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error($msgDetails["entityName"] . ' ' . $e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
         }
     }

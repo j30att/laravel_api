@@ -28,7 +28,8 @@ class SaleCreate {
         };
         this._opts = {
             fixed: false,
-            showFlight: true
+            showFlight: true,
+            validFail: false,
         };
         this.isSidenavOpen =false;
     }
@@ -55,7 +56,6 @@ class SaleCreate {
     getEvents() {
         this.$http.post(EVENTS_CREATE_SALE)
             .then(response => {
-
                 this.events = response.data.data;
             });
     }
@@ -104,7 +104,7 @@ class SaleCreate {
             || this.sale.amount == null
             || this.sale.user_id == null
         ){
-            console.log('validate faild');
+            
             return false
         }
         return true;

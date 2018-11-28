@@ -87,8 +87,6 @@ class SaleCreate {
         if (this.flights){
         this.flights.forEach(function (value, key) {
            if (value.id == self.sale.flight_id){
-
-               console.log(value);
                self.sale.sub_event_id = value.subevent_id;
            }
         });
@@ -107,8 +105,8 @@ class SaleCreate {
 
     validate(){
         if(this.sale.event_id == null
-            || this.sale.sub_event_id == null
-            || this.sale.flight_id == null
+            /*|| this.sale.sub_event_id == null
+            || this.sale.flight_id == null*/
             || this.sale.share == null
             || this.sale.markup == null
             || this.sale.amount == null
