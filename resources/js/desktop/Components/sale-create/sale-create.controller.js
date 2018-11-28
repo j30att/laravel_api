@@ -60,7 +60,7 @@ class SaleCreate {
     }
 
     getEvents() {
-        this.$http.get(EVENTS_CREATE_SALE)
+        this.$http.post(EVENTS_CREATE_SALE)
             .then(response => {
                 this.events = response.data.data;
             });
