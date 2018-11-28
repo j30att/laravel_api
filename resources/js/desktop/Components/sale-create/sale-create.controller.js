@@ -24,7 +24,10 @@ class SaleCreate {
             markup: null,
             amount: null,
         };
-        this._opts = {fixed: false};
+        this._opts = {
+            fixed: false,
+            showFlight: true
+        };
         this.isSidenavOpen =false;
 
 
@@ -70,6 +73,9 @@ class SaleCreate {
         this.fillStatic();
         this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
             .then(response => {
+                if (!response.data.data.length > 0){
+                    this._opts.showFlight = !this._opts.showFlight;
+                }
                 this.flights = response.data.data;
             });
     }

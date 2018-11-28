@@ -19,8 +19,8 @@
                     </md-select>
                 </div>
 
-                <label class="modal_content__sale_title modal_content__sale_title_select">Flight</label>
-                <div class="modal_content__sale_select">
+                <label class="modal_content__sale_title modal_content__sale_title_select" ng-if="$ctrl._opts.showFlight">Flight</label>
+                <div class="modal_content__sale_select" ng-if="$ctrl._opts.showFlight">
                     <md-select class="md-no-underline form-Select-theme"
                                ng-model="$ctrl.sale.flight_id"
                                ng-change="$ctrl.fillStatic()"

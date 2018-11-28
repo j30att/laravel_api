@@ -55,6 +55,14 @@ input{
   overflow-y: scroll;
 }
 
+#select_value_label_0 span:first-child {
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+    color: black;
+}
+.md-text{
+    color: black !important;
+}
 
 .form_event{
     margin-bottom: 16px;

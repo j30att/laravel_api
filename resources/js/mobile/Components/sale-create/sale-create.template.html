@@ -23,8 +23,8 @@
                     </div>
 
 
-                    <label class="blocks_header_title_name">Flight</label>
-                    <div layout="row" layout-align="start_stretch">
+                    <label class="blocks_header_title_name" ng-if="$ctrl._opts.showFlight">Flight</label>
+                    <div layout="row" layout-align="start_stretch" ng-if="$ctrl._opts.showFlight">
                         <md-select class="md-no-underline form-Select-theme"
                                    ng-model="$ctrl.sale.flight_id"
                                    ng-change="$ctrl.fillStatic()"
