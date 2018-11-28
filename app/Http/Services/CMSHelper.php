@@ -207,7 +207,7 @@ class CMSHelper
     public function updateDay($dayId)
     {
         $apiHost = env('MPPL-CMS_HOST');
-        $dayUri = "https://${apiHost}/en/api/web/2.3/day/day/${$dayId}";
+        $dayUri = "https://${apiHost}/en/api/web/2.3/day/day/${dayId}";
 
         $apiResource = $this->guzzle->get($dayUri);
         $ppDay = json_decode($apiResource->getBody());

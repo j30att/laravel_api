@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('test-sess', function (\Illuminate\Http\Request $request){
-    dd($request->session()->all());
-});
+//Route::get('test-sess', function (\Illuminate\Http\Request $request){
+//    dd($request->session()->all());
+//});
 
 Route::group(['middleware' => 'guest'], function(){
 
