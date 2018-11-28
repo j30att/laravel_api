@@ -32,9 +32,10 @@ let app = angular.module('poker', [
     ngFileUpload
 ]);
 
-angular.module('poker').config(['$mdThemingProvider', function($mdThemingProvider) {
+angular.module('poker').config(['$mdThemingProvider','$mdGestureProvider', function($mdThemingProvider, $mdGestureProvider) {
     $mdThemingProvider.theme('formSelect');
     $mdThemingProvider.setDefaultTheme('formSelect');
+    $mdGestureProvider.skipClickHijack();
 }]);
 
 app.config(['$interpolateProvider', ($interpolateProvider) => {

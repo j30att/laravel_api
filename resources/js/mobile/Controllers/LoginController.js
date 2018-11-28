@@ -8,10 +8,10 @@ class LoginController {
         this.firstName = '';
         this.state = 'login';
 
-
+        console.log('ky');
     }
 
-    sendAuthData(e){
+    sendAuthData(e) {
         e.stopPropagation();
         e.preventDefault();
         let data = {
@@ -25,7 +25,7 @@ class LoginController {
             }
         })
 
-    }
+    };
 
     forgotPassword(){
         this.state = 'forgot';
