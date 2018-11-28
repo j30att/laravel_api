@@ -41,6 +41,18 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             template: require('./views/static/privacy.template.html')
         })
 
+        .state('restore', {
+            url: '/restore',
+            redirectTo: () => {
+                return {
+                    state: 'auth.login',
+                    params: {
+                        restore: 1
+                    }
+                }
+            }
+        })
+
         .state('auth', {
             template: require('./views/auth/base.template.html'),
             data: {
@@ -55,10 +67,13 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             }
         })
         .state('auth.login', {
-            url: '/login',
+            url: '/login?restore',
             template: require('./views/auth/login.template.html'),
             controller: 'LoginController',
-            controllerAs: 'LgCtrl'
+            controllerAs: 'LgCtrl',
+            params: {
+                restore: null
+            }
         })
         .state('auth.registration', {
             url: '/register',

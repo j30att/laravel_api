@@ -77,27 +77,26 @@
 
         <div class="page_title col-md-12">
             Reset password
-            <a class="goback" ng-click="LgCtrl.state = 'login'">
-
-        </a>
+            <a class="goback" ng-click="LgCtrl.state = 'login'"></a>
         </div>
 
         <div class="col-md-12">
-            <md-input-container  class="md-block login_input">
-                <label>Email</label>
-                <input required type="email" name="clientEmail" ng-model="LgCtrl.userEmailForgot"
-                       minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+            <form ng-submit="LgCtrl.resetMail($event)">
+                <md-input-container  class="md-block login_input">
+                    <label>Email</label>
+                    <input required type="email" name="clientEmail" ng-model="LgCtrl.userEmailForgot"
+                           minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
 
-                <div ng-messages="" role="alert">
-                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                        Your email must look like an e-mail address.
+                    <div ng-messages="" role="alert">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                            Your email must look like an e-mail address.
+                        </div>
                     </div>
-                </div>
-            </md-input-container>
-            <button class="button button_login" type="submit" ng-click="LgCtrl.resetMail()">
-                Reset
-            </button>
-
+                </md-input-container>
+                <button class="button button_login" type="submit">
+                    Reset
+                </button>
+            </form>
         </div>
     </div>
 </div>
@@ -118,7 +117,6 @@
             <div class="check__title">Check your inbox</div>
             <div class="check__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
 
-            <div class="check__back" role="button" tabindex="0" ng-click="LgCtrl.state = 'create_password'">Create new password</div>
         </div>
     </div>
 </div>
@@ -134,25 +132,26 @@
         </div>
 
         <div class="col-md-12">
-            <md-input-container  class="md-block login_input">
-                <label>Code of email</label>
-                <input required type="text" name="clientEmail" ng-model="LgCtrl.codeOfEmail"/>
-            </md-input-container>
+            <form ng-submit="LgCtrl.resetPassword($event)">
+                <md-input-container  class="md-block login_input">
+                    <label>Your email</label>
+                    <input required type="email" name="clientEmail" ng-model="LgCtrl.confirmEmail"/>
+                </md-input-container>
 
-            <md-input-container  class="md-block login_input">
-                <label>New password</label>
-                <input required type="password" name="clientEmail" ng-model="LgCtrl.createNewPassword"/>
-            </md-input-container>
+                <md-input-container  class="md-block login_input">
+                    <label>New password</label>
+                    <input required type="password" name="clientEmail" ng-model="LgCtrl.createNewPassword"/>
+                </md-input-container>
 
-            <md-input-container  class="md-block login_input">
-                <label>Confirm password</label>
-                <input required type="password" name="clientEmail" ng-model="LgCtrl.createNewPasswordConfirm"/>
-            </md-input-container>
+                <md-input-container  class="md-block login_input">
+                    <label>Confirm password</label>
+                    <input required type="password" name="clientEmail" ng-model="LgCtrl.createNewPasswordConfirm"/>
+                </md-input-container>
 
-            <button class="button button_login" type="submit" ng-click="LgCtrl.resetPassword()">
-                Reset
-            </button>
-
+                <button class="button button_login" type="submit">
+                    Reset
+                </button>
+            </form>
         </div>
 
 

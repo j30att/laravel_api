@@ -45,10 +45,10 @@ class ResetPasswordController extends Controller
     }
 
     public function showResetForm(Request $request){
-        if(!empty($request->get('token'))){
+       if(!empty($request->get('token'))){
             $request->session()->put('__restoreToken', $request->get('token'));
             return redirect('/restore');
-        }
+       }
     }
 
     public function reset(Request $request)

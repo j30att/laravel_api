@@ -118,7 +118,7 @@ class LoginController extends Controller
     {
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],
-        ])->status(429);;
+        ])->status(401);
     }
 
     public function resendConfirm(Request $request){

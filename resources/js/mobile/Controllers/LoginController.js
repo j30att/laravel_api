@@ -2,16 +2,22 @@ import {LOGIN_URL} from "../Constants";
 import {FORGOT_URL, RESET_URL} from "../../common/Constants";
 
 class LoginController {
-    constructor($window, $http){
+    constructor($window, $http, $stateParams){
         this.$window = $window;
         this.$http = $http;
         this.firstName = '';
         this.state = 'login';
-
+        this.$stateParams = $stateParams;
 
     }
 
-    sendAuthData(e){
+    $onInit(){
+        if(this.$stateParams.restore == 1){
+            this.state = 'create_password';
+        }
+    }
+
+    sendAuthData(e) {
         e.stopPropagation();
         e.preventDefault();
         let data = {
@@ -32,7 +38,9 @@ class LoginController {
 
     }
 
-    resetMail() {
+    resetMail(e) {
+        e.stopPropagation();
+        e.preventDefault();
         let email = this.userEmailForgot;
         this.$http.post(FORGOT_URL, {email:email}).then((response) => {
             if(response.data.status == 1){
@@ -41,14 +49,15 @@ class LoginController {
         });
     }
 
-    resetPassword(){
-        if (this.codeOfEmail.length > 10 && this.createNewPassword === this.createNewPasswordConfirm){
+    resetPassword(e){
+        e.stopPropagation();
+        e.preventDefault();
+        if (this.createNewPassword === this.createNewPasswordConfirm){
             let password =  this.createNewPassword;
-            let token    = this.codeOfEmail;
-            let email    = this.userEmailForgot;
+            let email    = this.confirmEmail;
             let password_confirmation = this.createNewPasswordConfirm;
 
-            this.$http.post(RESET_URL, {token:token, email:email, password:password, password_confirmation:password_confirmation}).then((response) =>{
+            this.$http.post(RESET_URL, {email:email, password:password, password_confirmation:password_confirmation}).then((response) =>{
                 if(response.data.status == 1){
                     this.state = 'ok_login';
                 }
@@ -61,6 +70,6 @@ class LoginController {
 
 }
 
-LoginController.$inject = ['$window', '$http'];
+LoginController.$inject = ['$window', '$http', '$stateParams'];
 
 export {LoginController};
