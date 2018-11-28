@@ -10,7 +10,7 @@ use Illuminate\Notifications\Notifiable;
 
 /**
  * Class User
- *
+ * @property int $id
  * @property PPUser ppUser
  *
  * @package App\Models

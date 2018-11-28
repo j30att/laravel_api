@@ -7,32 +7,29 @@ class InvestController {
         this.SalesResourceService = SalesResourceService;
         this.CountriesResourceService = CountriesResourceService;
 
-
         this.showFilter = false;
         this.events = [];
         this.sales = [];
-        this._opts = {
-            dataLoad: false
-        };
+        this._opts = {dataLoad: false};
         this.state = 'filters_close';
         this.selectedEvents = [];
         this.selectedCountries = [];
-        this.getCountries();
-        this.getSales();
         this.user = window.__user;
     }
 
     $onInit() {
+        this.getCountries();
+        this.getSales({limit: 10});
         this.getEventsList();
         this.setFilter(this.filter);
     }
 
     setFilter(param) {
-        let possibles = ['closing','markup'];
+        let possibles = ['closing', 'markup'];
 
-        if(possibles.includes(param)){
+        if (possibles.includes(param)) {
             this.filter = param;
-            this.getSales();
+            this.getSales({filter: 10});
         }
     }
 
@@ -52,8 +49,8 @@ class InvestController {
     //         });
     // }
 
-    getSales() {
-        this.SalesResourceService.getClosingSoonSales()
+    getSales(filter) {
+        this.SalesResourceService.getClosingSoonSales(filter)
             .then(response => {
                 this.sales = response.data.data;
                 this._opts.dataLoad = true;
@@ -69,30 +66,28 @@ class InvestController {
 
 
     selectedEvent(item, list) {
-        var idx = list.indexOf(item);
+        let idx = list.indexOf(item);
+
         if (idx > -1) {
             list.splice(idx, 1);
-        }
-        else {
+        } else {
             list.push(item);
         }
-
     };
 
     exists(item, list) {
         return list.indexOf(item) > -1;
-
     };
 
     selectedCountry(item, list) {
-        var idx = list.indexOf(item);
+        let idx = list.indexOf(item);
+
         if (idx > -1) {
             list.splice(idx, 1);
-        }
-        else {
+        } else {
             list.push(item);
         }
-        console.log(this.selectedCountries);
+        //console.log(this.selectedCountries);
 
     };
 
@@ -100,29 +95,29 @@ class InvestController {
         return list.indexOf(item) > -1;
 
     };
-    clearAllFilters(){
+
+    clearAllFilters() {
         this.selectedEvents = [];
         this.selectedCountries = [];
     }
 
-    saveFilters(){
+    saveFilters() {
         let filter = {
-            events      : this.selectedEvents,
-            countries   : this.selectedCountries
+            events: this.selectedEvents,
+            countries: this.selectedCountries
         };
         this.EventsResourceService.getFilteredEvents(filter)
-        .then(response => {
-            this.events = response.data.data;
-        });
+            .then(response => {
+                this.events = response.data.data;
+            });
         this.state = 'filters_close';
 
     }
 
 
-
 }
 
 InvestController.$inject = ['$window', '$http', 'EventsResourceService', 'SalesResourceService',
-'$scope', 'CountriesResourceService'];
+    '$scope', 'CountriesResourceService'];
 
 export {InvestController};

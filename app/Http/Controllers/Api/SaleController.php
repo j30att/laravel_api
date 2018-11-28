@@ -53,15 +53,20 @@ class SaleController extends Controller
 
     public function closingSoonSales()
     {
-        $sales = Sale::query()
+       /* $sales = Sale::query()
             ->where('status', SALE::SALE_ACTIVE)
             ->with('creator')
-            ->with('event')
+//            ->with('event')
+                ->with(['event' => function(){
+                    $start = Event::query()->where('date_start');
+                    $now = Carbon::now();
+                    dd($start);
+            }])
             ->with('bids_highest')
             ->get()
-            ->sortBy('event.date_start');
+            ->sortBy('event.date_start');*/
 
-        return SaleInvestResource::collection($sales);
+       // return SaleInvestResource::collection($sales);
     }
 
     /**
