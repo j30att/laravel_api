@@ -154,6 +154,7 @@ class Login {
                     if (response.data.status == 0){
                         this.notConfirmed.status = true;
                         this.notConfirmed.text = response.data.msg;
+                        this.state = 'no_confirm_email';
                     } else {
                         window.location.href= '/';
                     }

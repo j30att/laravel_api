@@ -72,10 +72,12 @@
                     </label>
 
                     <select ng-model="$ctrl.user.country_id"
+                            style="width: 100%"
                                ng-class="{'validate_error': $ctrl._opts.validateLocation}"
                                class="login__input login__select md-no-underline"
                                placeholder="Select your location">
                         <option
+                            style="font-size: 14px"
                             ng-repeat="item in $ctrl.countries | orderBy:'name'"
                             ng-value="item.id">
                             {%item.name%}, {%item.code%}
@@ -84,6 +86,7 @@
                 </div>
 
             </div>
+
 
         </div>
         <div class="accords_wrapper">

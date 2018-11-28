@@ -1,5 +1,5 @@
 import {LOGIN_URL} from "../Constants";
-import {FORGOT_URL, RESET_URL} from "../../common/Constants";
+import {FORGOT_URL, RESEND_CONFIRM_URL, RESET_URL} from "../../common/Constants";
 
 class LoginController {
     constructor($window, $http, $stateParams){
@@ -8,6 +8,7 @@ class LoginController {
         this.firstName = '';
         this.state = 'login';
         this.$stateParams = $stateParams;
+        this.notConfirmed = {status: false, text: ''};
 
     }
 
@@ -25,12 +26,25 @@ class LoginController {
             password : this.userPassword
         };
 
-        this.$http.post(LOGIN_URL, data).then(function (response) {
-            if (response.status === 200){
-                window.location.href = '/'
+        this.$http.post(LOGIN_URL, data).then(
+            (response) => {
+            if (response.data.status == 0){
+                this.notConfirmed.status = true;
+                this.notConfirmed.text = response.data.msg;
+                this.state = 'no_confirm_email';
+            } else{
+                //window.location.href = '/'
             }
         })
 
+    }
+    resendConfirm(){
+        let data = {
+            email: this.userEmail,
+        };
+        this.$http.post(RESEND_CONFIRM_URL, data).then((response)=>{
+            this.notConfirmed.text = response.data.msg;
+        })
     }
 
     forgotPassword(){

@@ -27,8 +27,9 @@ class SaleInvestResource extends JsonResource
             'amount'    => $this->amount,
             'event'     => new EventsInvestResource($this->event),
             'creator'   => new UserInvestResource($this->creator),
-            'bids'      => new BidsGroupResource($this)
+            'bids'      => new BidsGroupResource($this),
             //'time'      => $now->diff
+//            'date_start'=> new EventsInvestResource($this->event->date_start),
         ];
 
     }

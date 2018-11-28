@@ -44,10 +44,10 @@
                     Forget your password?
                 </div>
 
-                <div class="reset_password" style="margin-top: 20px" ng-if="$ctrl.notConfirmed.status">
-                    <span style="color: rgb(221,44,0)" ng-bind="$ctrl.notConfirmed.text"></span><br>
-                    <span ng-click="$ctrl.resendConfirm()">Resend confirmation email</span>
-                </div>
+                <!--<div class="reset_password" style="margin-top: 20px" ng-if="$ctrl.notConfirmed.status">-->
+                    <!--<span style="color: rgb(221,44,0)" ng-bind="$ctrl.notConfirmed.text"></span><br>-->
+                    <!--<span ng-click="$ctrl.resendConfirm()">Resend confirmation email</span>-->
+                <!--</div>-->
 
             </form>
 
@@ -186,6 +186,23 @@
         </div>
 
 
+    </md-content>
+
+    <md-content ng-if="$ctrl.state == 'no_confirm_email'">
+        <div class="modal_content">
+            <div class="your_profile__title">
+
+                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_login')"></div>
+            </div>
+        </div>
+
+        <div class="check__img"></div>
+        <div class="check__title">Check your inbox</div>
+        <div class="check__discription">
+            Check your inbox {%$ctrl.userEmail%} to confirm your email address. If you don’t see our email, please check your spam folder.
+        </div>
+
+        <div class="check__back" ng-click="$ctrl.resendConfirm()">Resend again</div>
     </md-content>
 </md-sidenav>
 

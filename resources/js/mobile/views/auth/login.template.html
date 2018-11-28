@@ -62,11 +62,11 @@
             <div class="forgot_password" ng-click="LgCtrl.forgotPassword()">
                 Forgot your Password?
             </div>
-            <div class="private_policy">
+            <!--<div class="private_policy">
                 By creating an account you agree to our<br>
                 <a ui-sref="terms-and-conditions">Terms & Conditions</a> and <a ui-sref="privacy-policy">Privacy
                 Policy</a>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
@@ -117,6 +117,28 @@
             <div class="check__title">Check your inbox</div>
             <div class="check__discription">An email has been sent. It contains a link you must click to reset your password. You can only request 1 new password within 2 hours</div>
 
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-if="LgCtrl.state == 'no_confirm_email'">
+    <div class="fullscreen">
+
+
+        <div class="header_modal col-md-12">
+            <div class="header_close" role="button" tabindex="0" ng-click="LgCtrl.state = 'login'"></div>
+            <div class="header_title"></div>
+            <div class="header_filter_empty"></div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div class="check__img"></div>
+            <div class="check__title">Check your inbox</div>
+            <div class="check__discription">
+                Check your inbox {%LgCtrl.userEmail%} to confirm your email address. If you don’t see our email, please check your spam folder.
+            </div>
+            <div class="check__back" ng-click="LgCtrl.resendConfirm()">Resend again</div>
         </div>
     </div>
 </div>

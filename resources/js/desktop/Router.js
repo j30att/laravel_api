@@ -51,6 +51,12 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 restore: null
             }
         })
+        .state('closing-soon-list', {
+            url: '/closing-soon-list',
+            template: require('./views/sale/closing.templare.html'),
+            controller: 'InvestController',
+            controllerAs: 'InvestCtrl',
+        })
         .state('invest-events', {
             url: '/invest/events?date&event&country&venue',
             template: require('./views/events/index.template.html'),

@@ -2,33 +2,8 @@
     <main-menu></main-menu>
     <div class="main_content"
          style="display: flex; flex-direction: column;">
-        <div class="event_content-wr">
-            <div class="event_content__title">
-                Events
-                <div class="event_content__see_more">
-                    <a ui-sref="invest-events">See all</a>
-                </div>
-            </div>
-            <div class="events_item-wr">
-                <a ng-repeat="event in InvestCtrl.events"
-                    ui-sref="invest-events-detail({id:event.id})" class="event_item">
-                    <div class="event_item__pic" style="background-image: url({%event.image%})">
-
-                    </div>
-                    <div class="event_info">
-                        <div class="event_info_name" ng-bind="event.title"></div>
-                        <div class="event_info_date-gtd">
-                            <div class="event_info_date" ng-bind="event.period"></div>
-                            <div class="event_info_gtd">{% event.fund | currency:'£':0%} GTD</div>
-                        </div>
-
-                    </div>
-
-                </a>
-            </div>
-        </div>
         <div ng-if="InvestCtrl.sales && InvestCtrl.sales.length > 0"
-            class="events_tabs-wr">
+             class="events_tabs-wr">
             <div class="events_tabs_nav">
                 <ul class="events_tabs_list">
                     <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
@@ -77,3 +52,4 @@
     </div>
 </div>
 <bid-place sale ="InvestCtrl.sale"></bid-place>
+
