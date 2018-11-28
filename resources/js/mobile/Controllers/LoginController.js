@@ -18,7 +18,7 @@ class LoginController {
         }
     }
 
-    sendAuthData(e){
+    sendAuthData(e) {
         e.stopPropagation();
         e.preventDefault();
         let data = {

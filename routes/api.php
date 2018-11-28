@@ -41,6 +41,10 @@ Route::group([/*'middleware' => 'auth'*/], function(){
 });
 
 Route::group(['middleware' => 'auth'], function (){
+
+    Route::post('/events/active/list', 'Api\EventController@eventsForCreateSale');
+
+
     Route::post('/sale/my/pay-remainig', 'Api\SaleController@payRemaining');
     Route::post('/sale/my/bid-apply', 'Api\SaleController@bidApplay');
 

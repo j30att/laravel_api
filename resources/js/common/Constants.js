@@ -31,6 +31,8 @@ export const BIDS_MY_CHANGE       = '/api/bids/my/change';
 export const EVENTS_API = '/api/events';
 export const SUB_EVENTS_API = '/api/subevents';
 
+export const EVENTS_CREATE_SALE = '/api/events/active/list';
+
 //**SALE**//
 
 export const SALE_API       = '/api/sales';

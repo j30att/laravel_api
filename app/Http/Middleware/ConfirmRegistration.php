@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\UserConfirmations;
 use Carbon\Carbon;
 use Closure;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 
 class ConfirmRegistration
@@ -30,6 +31,7 @@ class ConfirmRegistration
                 $user = User::query()->where('email', $confirmReg->email)->first();
                 $user->active = 1;
                 $user->save();
+                Auth::login($user, true);
             }
         }
 

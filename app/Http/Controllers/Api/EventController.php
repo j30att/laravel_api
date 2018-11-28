@@ -30,6 +30,13 @@ class EventController extends Controller
         return EventResource::collection($events);
     }
 
+    public function eventsForCreateSale(){
+        $events  = Event::query()
+            ->where('status',  Event::STATUS_ACTIVE)
+            ->get();
+        return EventResource::collection($events);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -95,7 +102,7 @@ class EventController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response-
      */
     public function destroy($id)
     {
@@ -109,10 +116,12 @@ class EventController extends Controller
     {
         //$events = Event::query()->take(6)->get();
         $events = Event::query()
+            ->where('status', Event::STATUS_ACTIVE)
             ->with('country')
             ->with('image')
             ->take(Event::LIMIT_EVENT_MAIN_PAGE)
             ->get();
+
         return EventsList::collection($events);
     }
 

@@ -1,4 +1,4 @@
-import {EVENTS_API, FLIGH_FILTER, SALE_ACTIVE, SUBEVENTS_INDEX} from "../../../common/Constants";
+import {EVENTS_API, EVENTS_CREATE_SALE, FLIGH_FILTER, SALE_ACTIVE} from "../../../common/Constants";
 
 
 class SaleCreate {
@@ -50,7 +50,7 @@ class SaleCreate {
     }
 
     getEvents() {
-        this.$http.get(EVENTS_API)
+        this.$http.get(EVENTS_CREATE_SALE)
             .then(response => {
                 this.events = response.data.data;
             });
