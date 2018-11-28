@@ -18,7 +18,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         .state('index', {
             url: '/',
             template: require('./views/main.template.html'),
-            redirectTo : ()=>{
+            redirectTo: () => {
                 return {
                     state: 'invest'
                 }
@@ -53,7 +53,7 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
         .state('closing-soon-list', {
             url: '/closing-soon-list',
-            template: require('./views/sale/closing.templare.html'),
+            template: require('./views/sale/closing.template.html'),
             controller: 'InvestController',
             controllerAs: 'InvestCtrl',
         })

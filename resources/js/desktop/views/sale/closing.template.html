@@ -1,14 +1,11 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content"
-         style="display: flex; flex-direction: column;">
-        <div ng-if="InvestCtrl.sales && InvestCtrl.sales.length > 0"
-             class="events_tabs-wr">
+    <div class="main_content" style="display: flex; flex-direction: column;">
+        <div ng-if="InvestCtrl.sales && InvestCtrl.sales.length > 0" class="events_tabs-wr">
             <div class="events_tabs_nav">
                 <ul class="events_tabs_list">
                     <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
                 </ul>
-                <a ui-sref="closing-soon-list" class="events_tabs_nav__link">See all</a>
             </div>
             <table class="table_events_list main_event_table" ng-if="InvestCtrl.sales.length > 0">
                 <thead class="table_events_head">
@@ -27,8 +24,9 @@
                     ng-click="InvestCtrl.toggleSidenav(index)">
                     <td class="t_from">
                         <div class="t_from_fix_height">
-                            <div class="t_from_img" style="background-image: url({%sale.creator.avatar%})"></div>
-
+                            <div class="t_from_img"
+                                 ng-style="{'background-image': 'url(' + sale.creator.avatar +')'}">
+                            </div>
                             <span ng-bind="sale.creator.name"></span>
                         </div>
                     </td>

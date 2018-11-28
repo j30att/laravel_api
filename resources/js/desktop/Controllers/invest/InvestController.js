@@ -1,8 +1,7 @@
-import {DialogController} from "../DialogController";
 import {SALE_CLOSED, SALE_INDEX, SALE_MARKUP} from "../../Constants"
 
 class InvestController {
-    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService, $scope, $stateParams) {
+    constructor($window, $http, $mdDialog, EventsResourceService, SalesResourceService, $scope, $stateParams, $state) {
         this.EventsResourceService = EventsResourceService;
         this.SalesResourceService = SalesResourceService;
         this.user = window.__user;
@@ -10,6 +9,7 @@ class InvestController {
         this.$window = $window;
         this.$scope = $scope;
         this.$http = $http;
+        this.$state = $state;
         this.$stateParams = $stateParams;
         this._opts = {dataLoad: false};
 
@@ -19,8 +19,12 @@ class InvestController {
     }
 
     $onInit() {
-        this.getEvents();
-        this.getSales({limit: 10});
+        if(this.$state.current.name === 'closing-soon-list'){
+            this.getSales();
+        } else {
+            this.getEvents();
+            this.getSales({limit: 10});
+        }
 
         if (this.$stateParams.restore == 1) {
             this.toggleSidenavLogin();
@@ -76,6 +80,6 @@ class InvestController {
 
 }
 
-InvestController.$inject = ['$window', '$http', '$mdDialog', 'EventsResourceService', 'SalesResourceService', '$scope', '$stateParams'];
+InvestController.$inject = ['$window', '$http', '$mdDialog', 'EventsResourceService', 'SalesResourceService', '$scope', '$stateParams', '$state'];
 
 export {InvestController};
