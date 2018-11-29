@@ -1,4 +1,4 @@
-import {EVENTS_API, SALE_ACTIVE, FLIGH_FILTER, EVENTS_CREATE_SALE} from "../../../common/Constants";
+import {EVENTS_API, SALE_ACTIVE, FLIGH_FILTER, EVENTS_CREATE_SALE, SUB_EVENT_FILTER} from "../../../common/Constants";
 
 
 class SaleCreate {
@@ -26,7 +26,7 @@ class SaleCreate {
         };
         this._opts = {
             fixed: false,
-            showFlight: true
+            showSub: true
         };
         this.isSidenavOpen =false;
 
@@ -35,7 +35,6 @@ class SaleCreate {
     }
     $onInit(){
         this.$scope.$on('sidenav-open-create_sale', (event, data) => {
-
             if (this.user == null){
                 return false
             }
@@ -43,6 +42,10 @@ class SaleCreate {
                 this.sale.event_id = data;
             }
 
+
+            this.sale.sub_event_id = null;
+            this.static.buy_in = '';
+            this.static.closing_time = '';
             this.buildToggler('right_create_sale');
         });
 
@@ -68,30 +71,25 @@ class SaleCreate {
                 this.events = response.data.data;
             });
     }
-
     getSubevents() {
         this.fillStatic();
-        this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
+        this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
-                if (!response.data.data.length > 0){
-                    this._opts.showFlight = !this._opts.showFlight;
+
+                console.log(response.data.data.length);
+                if (response.data.data.length > 0 ){
+                    this._opts.showSub = true;
+                }else {
+                    this._opts.showSub = false;
                 }
-                this.flights = response.data.data;
+                console.log(response.data.data);
+                this.subevents = response.data.data;
             });
     }
 
     fillStatic() {
-
         let self;
         self = this;
-        if (this.flights){
-        this.flights.forEach(function (value, key) {
-           if (value.id == self.sale.flight_id){
-               self.sale.sub_event_id = value.subevent_id;
-           }
-        });
-        }
-
         this.events.forEach(function (value, key) {
             if (value.id == self.sale.event_id) {
                 self.static.buy_in = value.buy_in;
@@ -102,25 +100,56 @@ class SaleCreate {
     calcAmount() {
         this.sale.amount = this.SalesService.calcAmount(this.sale.share, this.sale.markup, this.static.buy_in);
     }
+    showEmpty(){
+        if(this.sale.event_id.length === 0){
+            this.validateEvent = false;
+        }
+        if(this.sale.event_id.length != 0){
+            this.validateEvent = true;
+        }
 
+        if(this.sale.sub_event_id == null){
+            this.validateSubEvent = false;
+        }
+        if(this.sale.sub_event_id != null){
+            this.validateSubEvent = true;
+        }
+
+        if(this.sale.share == null){
+            this.validateShare = false;
+        }
+        if(this.sale.share != null){
+            this.validateShare = true;
+        }
+        if(this.sale.markup == null){
+            this.validateMarkup = false;
+        }
+        if(this.sale.markup != null){
+            this.validateMarkup = true;
+        }
+        if(this.sale.amount == null){
+            this.validateAmount = false;
+        }
+        if(this.sale.amount != null){
+            this.validateAmount = true;
+        }
+    }
     validate(){
+        this.showEmpty();
         if(this.sale.event_id == null
-            /*|| this.sale.sub_event_id == null
-            || this.sale.flight_id == null*/
+            || this.sale.sub_event_id == null
             || this.sale.share == null
             || this.sale.markup == null
             || this.sale.amount == null
             || this.sale.user_id == null
         ){
-            console.log(this.sale.event_id, this.sale.sub_event_id, this.sale.flight_id);
-            console.log('validate faild');
+
             return false
         }
         return true;
     }
 
     createSale(){
-
         if(!this.validate()) return false;
         this.SalesResourceService.createMySale(this.sale, this.type)
             .then(response => {

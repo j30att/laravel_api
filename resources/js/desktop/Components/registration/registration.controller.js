@@ -5,6 +5,7 @@ class Registration {
         this.$state = $state;
         this._opts = {fixed: false};
         this.isSidenavOpen = false;
+        this.linkUrl = window.__linkUrl;
 
         this.user = {
             firstName: null,

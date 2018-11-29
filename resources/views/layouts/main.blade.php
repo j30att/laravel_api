@@ -12,6 +12,7 @@
     <script>
       window.__user = {!! json_encode(\Illuminate\Support\Facades\Auth::user()) !!};
       window.__location = {!! $_location !!};
+      window.__linkUrl = '{!! $linkUrl !!}';
     </script>
 </head>
 <body ng-controller="MainController as MainCtrl"  ng-class="{'': MainCtrl.$state.modalOpened == true}">

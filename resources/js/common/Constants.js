@@ -57,6 +57,7 @@ export const RESULT    = '/api/dealer/result';
 //**SUBEVENTS**//
 export const SUBEVENTS_INDEX = '/api/subevents';
 export const FLIGH_FILTER = '/api/flights';
+export const SUB_EVENT_FILTER = '/api/subevent-filter';
 
 //**DEALER**//
 export const DEALER_EVENTS_URL = '/api/dealer/events';

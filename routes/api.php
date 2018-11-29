@@ -74,6 +74,8 @@ Route::group(['middleware' => 'auth'], function (){
 
     Route::post('/flights', 'Api\FlightController@filterFlight');
 
+    Route::post('/subevent-filter', 'Api\SubEventController@filterSubEvents');
+
 });
 
 

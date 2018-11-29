@@ -16,6 +16,7 @@
                     <label class="blocks_header_title_name">Event</label>
                     <div layout="row" layout-align="start_stretch">
                         <md-select class="md-no-underline form-Select-theme"
+                                   ng-style="{'border':($ctrl.validateEvent == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}"
                                    ng-change="$ctrl.getSubevents()"
                                    ng-model="$ctrl.sale.event_id" placeholder="Choose an event">
                             <md-option value="{%item.id%}" ng-repeat="item in $ctrl.events">{%item.title%}</md-option>
@@ -23,13 +24,14 @@
                     </div>
 
 
-                    <label class="blocks_header_title_name" ng-if="$ctrl._opts.showFlight">Flight</label>
+                    <label class="blocks_header_title_name" ng-if="$ctrl._opts.showFlight">Subevents</label>
                     <div layout="row" layout-align="start_stretch" ng-if="$ctrl._opts.showFlight">
                         <md-select class="md-no-underline form-Select-theme"
-                                   ng-model="$ctrl.sale.flight_id"
+                                   ng-style="{'border':($ctrl.validateSubEvent == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}"
+                                   ng-model="$ctrl.sale.sub_event_id"
                                    ng-change="$ctrl.fillStatic()"
                                    placeholder="Choose an subevent">
-                            <md-option value="{%item.id%}" ng-repeat="(key, item) in $ctrl.flights">{%item.title%}</md-option>
+                            <md-option value="{%item.id%}" ng-repeat="(key, item) in $ctrl.subevents">{%item.title%}</md-option>
                         </md-select>
                     </div>
                     <div class="card__attribute card__attribute_static">
@@ -48,17 +50,23 @@
                     <div class="card__attribute">
                         <div class="sale_card_list_atr_item">
                             <span>Share</span><br>
-                            <input ng-model="$ctrl.sale.share" type="number" placeholder="0" ng-change="$ctrl.calcAmount()">
+                            <input
+                                ng-style="{'border-bottom':($ctrl.validateShare == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}"
+                                ng-model="$ctrl.sale.share" type="number" placeholder="0" ng-change="$ctrl.calcAmount()">
 
                         </div>
                         <div class="sale_card_list_atr_item">
                             <span>Markup</span><br>
-                            <input ng-model="$ctrl.sale.markup" type="number" placeholder="1.0" ng-change="$ctrl.calcAmount()">
+                            <input
+                                ng-style="{'border-bottom':($ctrl.validateMarkup == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}"
+                                ng-model="$ctrl.sale.markup" type="number" placeholder="1.0" ng-change="$ctrl.calcAmount()">
 
                         </div>
                         <div class="sale_card_list_atr_item">
                             <span>Amount $</span><br>
-                            <input ng-model="$ctrl.sale.amount" type="number" placeholder="0">
+                            <input
+                                ng-style="{'border-bottom':($ctrl.validateAmount == false) ? '1px solid red':'1px solid rgba(0, 0, 0, 0.08);'}"
+                                ng-model="$ctrl.sale.amount" type="number" placeholder="0">
                         </div>
 
                     </div>

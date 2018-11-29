@@ -32,6 +32,7 @@ class ConfirmRegistration
                 $user->active = 1;
                 $user->save();
                 Auth::login($user, true);
+                redirect('/');
             }
         }
 

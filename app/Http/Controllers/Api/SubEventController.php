@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Resources\SaleResource;
+use App\Http\Resources\SubEventResource;
 use App\Models\SubEvent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,6 +21,12 @@ class SubEventController extends Controller
         $subevents = SubEvent::query()->where($filter)->get();
         return SaleResource::collection($subevents);
 
+    }
+
+    public function filterSubEvents(Request $request){
+        $filter = $request->get('event_id');
+        $subevents = SubEvent::query()->where('event_id', $filter)->get();
+        return SubEventResource::collection($subevents);
     }
 
     /**

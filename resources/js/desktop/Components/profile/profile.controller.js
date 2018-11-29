@@ -12,6 +12,7 @@ class Profile {
         this.isSidenavOpen = false;
         this.Upload = Upload;
         this._opts = {}
+        this.linkUrl = window.__linkUrl;
     }
 
     $onInit() {

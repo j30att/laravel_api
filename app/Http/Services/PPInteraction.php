@@ -377,31 +377,6 @@ class PPInteraction
         return false;
     }
 
-    public static function fxRates()
-    {
-
-        $uri = 'http://re-crm-api-container.ivycomptech.co.in/api/rest/staking/wallet/fxRates/';
-        $guzzleClient = new Client();
-
-        $header = [
-            'Content-Type' => 'application/json',
-            'auth-token' => 'staking:pg:Test:ReleaseB',
-            'partner-name' => 'stakingapp'
-        ];
-
-        try {
-            $response = $guzzleClient->request('POST', $uri, [
-                'headers' => $header,
-                'json' => ['date' => "01-11-2018"]
-            ]);
-
-            dd($response->getBody()->getContents());
-        } catch (\Exception $e) {
-            Log::error($e->getMessage());
-
-        }
-
-    }
 
     private static function createRequest(Sale $sale = null, Bid $bid = null, $body, $header, $remaining)
     {

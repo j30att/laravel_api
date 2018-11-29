@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\Users\UserInvestResource;
 use App\Models\Sale;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -29,7 +30,7 @@ class SaleResource extends JsonResource
             'bids_share'    => $this->share_sold,
             'amount_raised' => $this->amount_raised,
             'average_murkup' => $this->average_markup,
-            'creator'       => $this->creator,
+            'creator'       => new UserInvestResource($this->creator),
         ];
 
 

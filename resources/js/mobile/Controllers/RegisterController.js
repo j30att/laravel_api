@@ -4,6 +4,7 @@ class RegisterController {
         this.RegistrationService = RegistrationService;
         this.$location = $location;
         this.$timeout = $timeout;
+        this.linkUrl = window.__linkUrl;
 
         this.user = {
             firstName: null,
