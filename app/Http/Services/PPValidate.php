@@ -20,7 +20,7 @@ class PPValidate
     public static function authentication(User $user)
     {
         try {
-            Log::info('[*] start validate user_id: ' . $user->id . ' user_name: '. $user->name);
+            Log::info('[*] start validate user_id: '.$user->id.' user_name: '.$user->name);
             $response = PPValidate::getPPSession($user);
 
             PPValidate::savePPUser($user, $response);
@@ -30,18 +30,21 @@ class PPValidate
 
     }
 
-    public static function getPPSession(User $user):array {
-        $uri = config('api.pp_partner_host').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config('api.pp_accountId');
+    public static function getPPSession(User $user): array
+    {
+        $uri = config('api.pp_partner_host').'/api?partner='.config('api.pp_partner').'&partnerAccountId='.config(
+                'api.pp_accountId'
+            );
 
-        Log::info('[*] url to link pp'.  $uri);
+        Log::info('[*] url to link pp'.$uri);
 
         $header = [
             'Content-Type' => 'application/json',
         ];
 
         $body = [
-            'partnerToken'  => $user->pp_partner_token,
-            'accountId'     => $user->pp_account_id
+            'partnerToken' => $user->pp_partner_token,
+            'accountId' => $user->pp_account_id,
         ];
 
         $response = self::request($uri, $header, $body);
@@ -50,10 +53,12 @@ class PPValidate
 
         Log::info('[*] Response Result');
         Log::info($result);
+
         return $result;
     }
 
-    public static function savePPUser(User $user, $response){
+    public static function savePPUser(User $user, $response)
+    {
         $ppUser = $user->ppUser;
         Log::info('[*] PPUSER');
         Log::info($ppUser);
@@ -80,19 +85,15 @@ class PPValidate
     {
         $guzzleClient = new Client();
 
-        if (config('api.useProxy') && config('api.proxyIP')) {
-
-            return $guzzleClient->request('post', $uri, [
+        return $guzzleClient->request(
+            'post',
+            $uri,
+            [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => config('api.proxy')
-            ]);
-        }
-
-        return $guzzleClient->request('post', $uri, [
-            'headers' => $header,
-            'json' => $body
-        ]);
+                'proxy' => config('api.proxy'),
+            ]
+        );
     }
 
 }
