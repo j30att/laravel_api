@@ -20,6 +20,7 @@ class PPValidate
     public static function authentication(User $user)
     {
         try {
+            Log::info('[*] start validate user_id: ' . $user->id . ' user_name: '. $user->name);
             $response = PPValidate::getPPSession($user);
 
             PPValidate::savePPUser($user, $response);
@@ -47,33 +48,15 @@ class PPValidate
         $json = $response->getBody()->getContents();
         $result = json_decode($json, 1);
 
-
-
-
-
-
-
-        /*
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, "{\"partnerToken\": $user->pp_partner_token,\n    \"accountId\": \"$user->pp_account_id\"}");
-        curl_setopt($ch, CURLOPT_POST, 1);
-
-        $headers = array();
-        $headers[] = "Content-Type: application/json";
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-        $result = curl_exec($ch);
-        $result = json_decode($result, 1);*/
-
-
+        Log::info('[*] Response Result');
+        Log::info($result);
         return $result;
     }
 
     public static function savePPUser(User $user, $response){
         $ppUser = $user->ppUser;
+        Log::info('[*] PPUSER');
+        Log::info($ppUser);
         if ($response['result']) {
             if ($response['result'] == 'SUCCESS') {
                 if (is_null($ppUser)) {
@@ -90,6 +73,7 @@ class PPValidate
                 $ppUser->save();
             }
         }
+        Log::info('[*] ppUser created');
     }
 
     private static function request($uri, $header, $body)
