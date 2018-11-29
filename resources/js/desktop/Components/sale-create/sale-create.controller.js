@@ -101,8 +101,42 @@ class SaleCreate {
     calcAmount() {
         this.sale.amount = this.SalesService.calcAmount(this.sale.share, this.sale.markup, this.static.buy_in);
     }
+    showEmpty(){
+        if(this.sale.event_id.length === 0){
+            this.validateEvent = false;
+        }
+        if(this.sale.event_id.length != 0){
+            this.validateEvent = true;
+        }
 
+        if(this.sale.sub_event_id == null){
+            this.validateSubEvent = false;
+        }
+        if(this.sale.sub_event_id != null){
+            this.validateSubEvent = true;
+        }
+
+        if(this.sale.share == null){
+            this.validateShare = false;
+        }
+        if(this.sale.share != null){
+            this.validateShare = true;
+        }
+        if(this.sale.markup == null){
+            this.validateMarkup = false;
+        }
+        if(this.sale.markup != null){
+            this.validateMarkup = true;
+        }
+        if(this.sale.amount == null){
+            this.validateAmount = false;
+        }
+        if(this.sale.amount != null){
+            this.validateAmount = true;
+        }
+    }
     validate(){
+        this.showEmpty();
         if(this.sale.event_id == null
             /*|| this.sale.sub_event_id == null
             || this.sale.flight_id == null*/

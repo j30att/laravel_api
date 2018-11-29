@@ -13,7 +13,6 @@ class Profile {
         this.Upload = Upload;
         this._opts = {}
         this.linkUrl = window.__linkUrl;
-        console.log(this.linkUrl);
     }
 
     $onInit() {

@@ -104,14 +104,46 @@ class SaleCreate {
             || this.sale.amount == null
             || this.sale.user_id == null
         ){
-            
             return false
         }
         return true;
     }
+    showEmpty(){
+        if(this.sale.event_id == null){
+            this.validateEvent = false;
+        }
+        if(this.sale.event_id != null){
+            this.validateEvent = true;
+        }
 
+        if(this.sale.sub_event_id == null){
+            this.validateSubEvent = false;
+        }
+        if(this.sale.sub_event_id != null){
+            this.validateSubEvent = true;
+        }
+
+        if(this.sale.share == null){
+            this.validateShare = false;
+        }
+        if(this.sale.share != null){
+            this.validateShare = true;
+        }
+        if(this.sale.markup == null){
+            this.validateMarkup = false;
+        }
+        if(this.sale.markup != null){
+            this.validateMarkup = true;
+        }
+        if(this.sale.amount == null){
+            this.validateAmount = false;
+        }
+        if(this.sale.amount != null){
+            this.validateAmount = true;
+        }
+    }
     createSale(){
-
+        this.showEmpty();
         if(!this.validate()) return false;
         this.SalesResourceService.createMySale(this.sale, 'row').then(response => {
             if (response.data.status == 1){

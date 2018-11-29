@@ -9,7 +9,6 @@ class MainMenuController {
         if(this.user != null){
             if (this.user.avatar == null) this.user.avatar = '/images/avatar_placeholder.png';
         }
-        console.log(this.user)
     }
 
 
