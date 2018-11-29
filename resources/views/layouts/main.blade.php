@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <title>Poker</title>
     <script>
-      window.__user = {!! json_encode(\Illuminate\Support\Facades\Auth::user()) !!};
+      window.__user = {!! json_encode($user) !!};
       window.__location = {!! $_location !!};
       window.__linkUrl = '{!! $linkUrl !!}';
     </script>
