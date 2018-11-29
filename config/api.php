@@ -18,15 +18,10 @@ return [
 
     'linkLang' => env('LINK_PP_LANG', ''),
 
-    'linkRedirect'=> env('LINK_PP_REDIRECT_URI', ''),
+    'linkRedirect'=> env('APP_URL', ''),
 
+    'pp_partner' => env('LINK_PP_ACCOUNT_PARTNER', ''),
 
-
-
-    'pp_validate' => env('SEND_PP_ACCOUNT_HOST', ''),
-
-    'pp_partner' => env('SEND_PP_ACCOUNT_PARTNER', ''),
-
-    'pp_accountId' =>env('SEND_PP_ACCOUNT_ACCOUNT', ''),
+    'pp_accountId' =>env('LINK_PP_ACCOUNT_ACCOUNT', ''),
 
 ];
