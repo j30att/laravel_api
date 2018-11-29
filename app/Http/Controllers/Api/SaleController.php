@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use phpDocumentor\Reflection\Types\Null_;
 
 class SaleController extends Controller
 {
@@ -246,10 +247,12 @@ class SaleController extends Controller
         $data = $request->get('sale');
 
         $type = $request->get('type');
+        $data ['flight_id'] = null;
 
         if ($user->id != $data['user_id']) {
             return response(json_encode(['status' => 0, 'data' => 'unauthorized user']));
         }
+        
         $sale = Sale::create($data);
 
         if ($type == 'row') {

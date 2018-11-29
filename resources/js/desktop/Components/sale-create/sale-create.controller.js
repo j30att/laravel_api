@@ -26,7 +26,7 @@ class SaleCreate {
         };
         this._opts = {
             fixed: false,
-            showFlight: true
+            showSub: true
         };
         this.isSidenavOpen =false;
 
@@ -72,25 +72,21 @@ class SaleCreate {
         this.fillStatic();
         this.$http.post(SUB_EVENT_FILTER, {event_id: this.sale.event_id})
             .then(response => {
-                if (!response.data.data.length > 0){
-                    this._opts.showFlight = !this._opts.showFlight;
+
+                console.log(response.data.data.length);
+                if (response.data.data.length > 0 ){
+                    this._opts.showSub = true;
+                }else {
+                    this._opts.showSub = false;
                 }
+                console.log(response.data.data);
                 this.subevents = response.data.data;
             });
     }
 
     fillStatic() {
-
         let self;
         self = this;
-        if (this.flights){
-        this.flights.forEach(function (value, key) {
-           if (value.id == self.sale.flight_id){
-               self.sale.sub_event_id = value.subevent_id;
-           }
-        });
-        }
-
         this.events.forEach(function (value, key) {
             if (value.id == self.sale.event_id) {
                 self.static.buy_in = value.buy_in;
@@ -138,8 +134,7 @@ class SaleCreate {
     validate(){
         this.showEmpty();
         if(this.sale.event_id == null
-            /*|| this.sale.sub_event_id == null
-            || this.sale.flight_id == null*/
+            || this.sale.sub_event_id == null
             || this.sale.share == null
             || this.sale.markup == null
             || this.sale.amount == null
