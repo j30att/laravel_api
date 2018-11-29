@@ -22,9 +22,9 @@ class EventsController {
 
     setFilter(clear = false) {
         if (!clear) {
-            this.$state.go('invest-events', this.activeFilter)
+            this.$state.go('events', this.activeFilter)
         } else {
-            this.$state.go('invest-events', {
+            this.$state.go('events', {
                 date: null,
                 event: null,
                 country: null,

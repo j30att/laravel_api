@@ -1,7 +1,7 @@
 <div class="event_card__row" ng-if="$ctrl.state == 'row'" ng-repeat="item in $ctrl.events">
 
 
-        <a ui-sref="event({id:item.id})">
+        <a ui-sref="events-detail({id:item.id})">
             <div class="event_card__row_img" style="background: url({%item.image%})">
 
             </div>
@@ -20,7 +20,7 @@
 
 
 <div class="event_card_list" ng-if="$ctrl.state == 'list'" ng-repeat="item in $ctrl.events">
-<a ui-sref="event({id:item.id})">
+<a ui-sref="events-detail({id:item.id})">
     <div class="event_card_list_img" style="background: url({%item.image%})"></div>
 
     <div class="event_card_list_info no-padding">

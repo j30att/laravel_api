@@ -105,17 +105,17 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
             controllerAs: 'EvntsLstCtrl'
         })
 
-        .state('event', {
-            url: '/event/{id}',
+        .state('events-detail', {
+            url: '/events/{id}',
             menu: 'invest',
             template: require('./views/events/detail.template.html'),
             controller: 'EventInfoController',
             controllerAs: 'EventInfoCtrl',
         })
-        .state('event-info', {
-            url: '/event/info/{id}',
+        .state('events-info', {
+            url: '/events/{id}/info',
             menu: 'invest',
-            template: require('./views/events/single.template.html'),
+            template: require('./views/events/info.template.html'),
             controller: 'EventController',
             controllerAs: 'EventCtrl',
         })

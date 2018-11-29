@@ -1,17 +1,28 @@
 <div class="row">
     <div class="binds event-list-main-wr">
-
+        <div class="header">
+            <go-back></go-back>
+            <div class="header_logo"></div>
+            <div class="header_filter_empty"></div>
+        </div>
+        <div class="header_empty_height"></div>
         <div class="all_events-wr">
             <div class="event_card_list">
-                <div class="selected_event event_card_list_img" style="border-radius: 0px; background: url({%EventInfoCtrl.event.image%})">
-                    <a ui-sref="invest"><div class="event_card_list_back"></div></a>
+                <div class="selected_event event_card_list_img"
+                     ng-style="{
+                         'border-radius': '0px',
+                         'background': 'url(' + EventInfoCtrl.event.image + ')'
+                         }">
+                    <a ui-sref="invest">
+                        <span class="event_card_list_back"></span>
+                    </a>
                     <div class="event_card_list_open"></div>
                 </div>
                 <div class="event_card_list_info col-md-12">
                     <div class="event_card_list_wr">
                         <div class="event_card_title" ng-bind="EventInfoCtrl.event.title"></div>
                         <div class="blocks_header_link event_card_details_link">
-                            <a class="" ui-sref="event-info({id:EventInfoCtrl.event.id})">See info</a>
+                            <a class="" ui-sref="events-info({id:EventInfoCtrl.event.id})">See info</a>
                         </div>
                         <div class="event_card_attr">£{%EventInfoCtrl.event.fund%} GTD</div>
                         <div class="event_card_attr" ng-bind="EventInfoCtrl.event.date"></div>

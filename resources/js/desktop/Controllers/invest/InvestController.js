@@ -19,7 +19,7 @@ class InvestController {
     }
 
     $onInit() {
-        if(this.$state.current.name === 'closing-soon-list'){
+        if(this.$state.current.name === 'invest-sales'){
             this.getSales();
         } else {
             this.getEvents();

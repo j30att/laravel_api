@@ -6,12 +6,12 @@
             <div class="event_content__title">
                 Events
                 <div class="event_content__see_more">
-                    <a ui-sref="invest-events">See all</a>
+                    <a ui-sref="events">See all</a>
                 </div>
             </div>
             <div class="events_item-wr">
                 <a ng-repeat="event in InvestCtrl.events"
-                    ui-sref="invest-events-detail({id:event.id})" class="event_item">
+                    ui-sref="events-detail({id:event.id})" class="event_item">
                     <div class="event_item__pic" style="background-image: url({%event.image%})">
 
                     </div>
@@ -33,7 +33,7 @@
                 <ul class="events_tabs_list">
                     <li class="events_tabs_item events_tabs_item_active">Closing soon</li>
                 </ul>
-                <a ui-sref="closing-soon-list" class="events_tabs_nav__link">See all</a>
+                <a ui-sref="invest-sales" class="events_tabs_nav__link">See all</a>
             </div>
             <table class="table_events_list main_event_table" ng-if="InvestCtrl.sales.length > 0">
                 <thead class="table_events_head">

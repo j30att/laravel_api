@@ -53,29 +53,23 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
                 restore: null
             }
         })
-        .state('closing-soon-list', {
-            url: '/closing-soon-list',
+        .state('invest-sales', {
+            url: '/invest/sales',
             template: require('./views/sale/closing.template.html'),
             controller: 'InvestController',
             controllerAs: 'InvestCtrl',
         })
-        .state('invest-events', {
-            url: '/invest/events?date&event&country&venue',
+        .state('events', {
+            url: '/events?date&event&country&venue',
             template: require('./views/events/index.template.html'),
             controller: 'EventsController',
             controllerAs: 'EventsCtrl',
         })
-        .state('invest-events-detail', {
-            url: '/invest/events/{id}',
+        .state('events-detail', {
+            url: '/events/{id}',
             template: require('./views/events/detail.template.html'),
             controller: 'EventsDetailController',
             controllerAs: 'EventsDetailCtrl',
-        })
-        .state('invest-sales', {
-            url:'/invest/sales',
-            template: require('./views/sale/sales.template.html'),
-            controller: 'SaleInvestController',
-            controllerAs: 'SaleInvestCtrl'
         })
         .state('bids', {
             url: '/bids',

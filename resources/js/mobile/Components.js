@@ -17,8 +17,9 @@ import {SaleManageComponent} from "./Components/sale-manage/sale-manage.controll
 import {InputMarkupComponent} from "../common/components/input/input-markup/input-markup.controller";
 import {InputAmountComponent} from "../common/components/input/input-amount/input-amount.controller";
 import {InputShareComponent} from "../common/components/input/input-share/input-share.controller";
+import {GoBackComponent} from "./Components/go-back/go-back.controller";
 
-import{ProfileComponent} from "./Components/profile/profile.controller";
+import {ProfileComponent} from "./Components/profile/profile.controller";
 
 let module = angular.module('Components', []);
 module.component('bids', BidsComponent);
@@ -40,7 +41,7 @@ module.component('inputAmount', InputAmountComponent);
 module.component('inputShare', InputShareComponent);
 
 module.component('profileComponent', ProfileComponent);
-
+module.component('goBack', GoBackComponent);
 
 export default module.name;
 

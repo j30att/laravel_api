@@ -41,7 +41,7 @@ class Events {
     }
     showSubEventInfo(event_id, subevent_id){
         this.$state.subevent_id = subevent_id;
-        this.$state.go('event-info', {id:event_id});
+        this.$state.go('events-info', {id:event_id});
     }
 
 }
