@@ -24,7 +24,10 @@ class SaleCreate {
             markup: null,
             amount: null,
         };
-        this._opts = {fixed: false};
+        this._opts = {
+            fixed: false,
+            showFlight: true
+        };
         this.isSidenavOpen =false;
 
 
@@ -60,7 +63,7 @@ class SaleCreate {
     }
 
     getEvents() {
-        this.$http.get(EVENTS_CREATE_SALE)
+        this.$http.post(EVENTS_CREATE_SALE)
             .then(response => {
                 this.events = response.data.data;
             });
@@ -70,6 +73,9 @@ class SaleCreate {
         this.fillStatic();
         this.$http.post(FLIGH_FILTER, {event_id: this.sale.event_id})
             .then(response => {
+                if (!response.data.data.length > 0){
+                    this._opts.showFlight = !this._opts.showFlight;
+                }
                 this.flights = response.data.data;
             });
     }
@@ -81,8 +87,6 @@ class SaleCreate {
         if (this.flights){
         this.flights.forEach(function (value, key) {
            if (value.id == self.sale.flight_id){
-
-               console.log(value);
                self.sale.sub_event_id = value.subevent_id;
            }
         });
@@ -101,8 +105,8 @@ class SaleCreate {
 
     validate(){
         if(this.sale.event_id == null
-            || this.sale.sub_event_id == null
-            || this.sale.flight_id == null
+            /*|| this.sale.sub_event_id == null
+            || this.sale.flight_id == null*/
             || this.sale.share == null
             || this.sale.markup == null
             || this.sale.amount == null

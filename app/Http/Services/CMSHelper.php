@@ -17,14 +17,10 @@ use App\Models\Venue;
 use App\Models\ImageAttachment;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
-use http\Exception;
 use Illuminate\Support\Facades\Log;
 
 class CMSHelper
 {
-
-    //$dayUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/day/day/';
-
     protected $softDelete = '';
 
     public function __construct()
@@ -34,7 +30,6 @@ class CMSHelper
 
     public function execute($msg)
     {
-
         Log::info('[x] Message received', [$msg]);
         try {
 
@@ -53,31 +48,33 @@ class CMSHelper
                     break;
 
                 default:
-                    Log::info('[x] Unprocessable entity');
+                    Log::info('[x] Unprocessable entity. '.print_r($msgDetails, 1));
                     break;
 
             }
-        } catch (Exception $e) {
+
+        } catch (\Exception $e) {
             Log::error($msgDetails["entityName"] . ' ' . $e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
         }
     }
 
     public function updateEvent($eventId)
     {
-        $eventUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/events/event_only/' . $eventId;//.'?softdeleteable=0';
+        $apiHost = env('MPPL-CMS_HOST');
+        $eventUri = "https://${apiHost}/en/api/web/2.3/events/event_only/${eventId}";//.'?softdeleteable=0';
         $apiResource = $this->guzzle->get($eventUri);
 
         $now = Carbon::now();
 
-        Log::info($eventId . ' EVENT ID');
         if ('200' == $apiResource->getStatusCode()) {
             $event = Event::query()->find($eventId);
 
             $eventData = json_decode($apiResource->getBody());
-
             $country = Country::query()->where('code', $eventData->event->eventCountry)->first();
             if (!$country) {
-                Log::info('[x] Unprocessable COUNTRY');
+                Log::info(
+                    '[x] Unprocessable entity. EventId: '.$eventData->event->id.'. Not found country:'.$eventData->event->eventCountry
+                );
 
             }
             if (is_null($eventData->event->deletedAt)) {
@@ -87,9 +84,9 @@ class CMSHelper
                 }
                 $event->title = $eventData->event->eventName;
                 $event->description = $eventData->event->eventUpcomingAbout;
-                $event->buy_in = (float)$eventData->event->eventBuyIn;
+                $event->buy_in = str_replace(",", ".", $eventData->event->eventBuyIn);
                 $event->reg_free = $eventData->event->eventRegFee;
-                $event->fund = (float)$eventData->event->eventUpcomingPrizepool;
+                $event->fund = $eventData->event->eventUpcomingPrizepool;
                 $event->slug = $eventData->event->eventNameSlug;
                 $event->logo = $eventData->event->eventLogoBg;
                 $event->country_id = $country ? $country->id : null;
@@ -98,7 +95,9 @@ class CMSHelper
                 $event->venue_name = $eventData->event->eventVenueName;
                 $event->date_end = Carbon::parse($eventData->event->eventEndDate);
                 $event->date_start = Carbon::parse($eventData->event->eventStartDate);
-                $event->status = $now->gte(Carbon::parse($eventData->event->eventStartDate))? Event::STATUS_CLOSED : Event::STATUS_ACTIVE;
+                $event->status = $now->gte(
+                    Carbon::parse($eventData->event->eventStartDate)
+                ) ? Event::STATUS_CLOSED : Event::STATUS_ACTIVE;
 
                 Log::info($now->gte(Carbon::parse($eventData->event->eventStartDate)) . 'status event');
                 Log::info($now . 'NOW');
@@ -122,7 +121,8 @@ class CMSHelper
         }
     }
 
-    public function updateVenue($event){
+    public function updateVenue($event)
+    {
         $key = '@type'; // костыль для ключа @type
 
         $venue = Venue::query()->where('id', $event->eventVenueId)->first();
@@ -133,17 +133,17 @@ class CMSHelper
             $venue = new Venue();
             $venue->id = $event->eventVenueId;
         }
-        $venue->event_id            = $event->id;
-        $venue->country_id          = $country ? $country->id: null;
-        $venue->title               = $event->eventVenueName;
-        $venue->adress_type         = $event->eventVenueAddressArray->$key;
-        $venue->street              = $event->eventVenueAddressArray->streetAddress;
-        $venue->locality            = $event->eventVenueAddressArray->addressLocality;
-        $venue->postal_code         = $event->eventVenueAddressArray->postalCode;
-        $venue->address_region      = $event->eventVenueAddressArray->addressRegion;
-        $venue->venue_address       = $event->eventVenueAddressStr;
-        $venue->venue_longitude     = $event->eventVenueLongitude;
-        $venue->venue_latitude      = $event->eventVenueLatitude;
+        $venue->event_id = $event->id;
+        $venue->country_id = $country ? $country->id : null;
+        $venue->title = $event->eventVenueName;
+        $venue->adress_type = $event->eventVenueAddressArray->$key;
+        $venue->street = $event->eventVenueAddressArray->streetAddress;
+        $venue->locality = $event->eventVenueAddressArray->addressLocality;
+        $venue->postal_code = $event->eventVenueAddressArray->postalCode;
+        $venue->address_region = $event->eventVenueAddressArray->addressRegion;
+        $venue->venue_address = $event->eventVenueAddressStr;
+        $venue->venue_longitude = $event->eventVenueLongitude;
+        $venue->venue_latitude = $event->eventVenueLatitude;
 
         $venue->save();
     }
@@ -151,19 +151,22 @@ class CMSHelper
     public function updateSchedule($scheduleId)
     {
         Log::info("Update schedule ${scheduleId}");
-        $scheduleUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/schedule/schedule/' . $scheduleId;
+
+        $apiHost = env('MPPL-CMS_HOST');
+        $scheduleUri = "https://${apiHost}/en/api/web/2.3/schedule/schedule/${scheduleId}";
 
         $apiResource = $this->guzzle->get($scheduleUri);
         $ppSubEvent = json_decode($apiResource->getBody());
-
-
 
         $subEvent = SubEvent::query()->find($ppSubEvent->schedule->id);
 
         $event = Event::query()->find($ppSubEvent->schedule->event_id);
 
-        if (!$event){
-            Log::info('[x] Unprocessable entity not event');
+        if (!$event) {
+            Log::info(
+                '[x] Unprocessable entity. ScheduleId: '.$ppSubEvent->schedule->id.'. Do no found event: '.$ppSubEvent->schedule->event_id
+            );
+
             return false;
         }
 
@@ -175,23 +178,35 @@ class CMSHelper
 
         $subEvent->event_id = $ppSubEvent->schedule->event_id;
         $subEvent->title = $ppSubEvent->schedule->scheduleTitle;
-        $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool)? (float)$ppSubEvent->schedule->schedulePrizePool: null;
-        $subEvent->buy_in = (float)$ppSubEvent->schedule->scheduleBuyIn;
-        $subEvent->date_start = isset($ppSubEvent->schedule->firstDayDate)?$ppSubEvent->schedule->firstDayDate:null;
-        $subEvent->date_end = isset($ppSubEvent->schedule->lastDayDate)?$ppSubEvent->schedule->lastDayDate:null;
+        $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool) ? $ppSubEvent->schedule->schedulePrizePool : null;
+        $subEvent->buy_in = str_replace(",", ".", $ppSubEvent->schedule->scheduleBuyIn);
+        $subEvent->date_start = isset($ppSubEvent->schedule->firstDayDate) ? $ppSubEvent->schedule->firstDayDate : null;
+        $subEvent->date_end = isset($ppSubEvent->schedule->lastDayDate) ? $ppSubEvent->schedule->lastDayDate : null;
         $subEvent->save();
 
-        if (count($ppSubEvent->schedule->days)>0){
-            foreach ($ppSubEvent->schedule->days as $ppDay){
+        if (count($ppSubEvent->schedule->days) > 0) {
+            foreach ($ppSubEvent->schedule->days as $ppDay) {
 
                 $this->updateDay($ppDay->id);
-
+                /*$flight = Flight::query()->find($ppDay->day);
+                if (is_null($flight)) {
+                    $flight = new Flight();
+                    $flight->id = $ppDay->id;
+                }
+                $flight->title = $ppDay->day . $ppDay->flight;
+                $flight->type = $ppDay->type == 'live' ? Flight::TYPE_LIVE : Flight::TYPE_ONLINE;
+                $flight->date = Carbon::parse($ppDay->date);
+                $flight->flight = $ppDay->flight;
+                $flight->day = $ppDay->day;
+                $flight->save();*/
             }
         }
     }
 
-    public function updateDay($dayId){
-        $dayUri = 'https://dev.cms.mypartypokerlive.com/en/api/web/2.3/day/day/'.$dayId;
+    public function updateDay($dayId)
+    {
+        $apiHost = env('MPPL-CMS_HOST');
+        $dayUri = "https://${apiHost}/en/api/web/2.3/day/day/${dayId}";
 
         $apiResource = $this->guzzle->get($dayUri);
         $ppDay = json_decode($apiResource->getBody());
@@ -206,20 +221,23 @@ class CMSHelper
         $subEvent = SubEvent::query()->where('id', $ppDay->day->schedule_id)->with('event')->first();
         $event = Event::query()->where('id', $ppDay->day->event_id)->first();
 
-        if ($subEvent && $event){
-            Log::info('[x] Unprocessable entity. DayId: ' . $ppDay->day->schedule_id
-                . '. Do no found sub_event: ' . $subEvent->id
-                . '. Do no found event: ' . $ppDay->day->event_id);
+        if ($subEvent && $event) {
+            Log::info(
+                '[x] Unprocessable entity. DayId: '.$ppDay->day->schedule_id
+                .'. Do no found sub_event: '.$subEvent->id
+                .'. Do no found event: '.$ppDay->day->event_id
+            );
+
             return false;
         }
 
         $flight->sub_event_id = $ppDay->day->schedule_id;
-        $flight->title = $ppDay->day->day . $ppDay->day->flight;
+        $flight->title = $ppDay->day->day.$ppDay->day->flight;
         $flight->type = $ppDay->day->type == 'live' ? Flight::TYPE_LIVE : Flight::TYPE_ONLINE;
         $flight->date = Carbon::parse($ppDay->day->date);
         $flight->flight = $ppDay->day->flight;
         $flight->day = $ppDay->day->day;
-        $flight->event_id= $subEvent ? $subEvent->event->id : $ppDay->day->event_id;
+        $flight->event_id = $subEvent ? $subEvent->event->id : $ppDay->day->event_id;
         $flight->save();
 
     }
