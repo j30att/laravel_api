@@ -10,7 +10,7 @@ return [
 
     'useProxy' => env('PP_USE_PROXY', ''),
 
-    'proxyIP' => env('PP_PROXY_IP', ''),
+    'proxy' => env('PP_PROXY', ''),
 
 
 
