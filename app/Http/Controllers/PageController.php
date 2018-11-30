@@ -7,10 +7,12 @@ use App\Models\Bid;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PageController extends Controller
 {
     public function app(Request $request){
+        Log::info('test log');
         $linkUrl = config('api.linkHost').'/'.config('api.linkLang').'/VC/login-staking.html?redirect_URI='.config('api.linkRedirect');
         $user = Auth::user();
 
