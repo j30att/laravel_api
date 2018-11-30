@@ -95,7 +95,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -173,7 +174,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -244,7 +246,8 @@ class PPInteraction
                 return true;
             }
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
@@ -300,7 +303,8 @@ class PPInteraction
             }
 
         } catch (\Exception $e) {
-            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine());
+            Log::error($e->getMessage() . " ## " . $e->getFile() . ":" . $e->getLine() . "\n"
+                . $uri);
             Log::info(serialize($body));
         }
 
