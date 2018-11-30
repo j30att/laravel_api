@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
         Commands\GetPPData::class,
         Commands\GetCountry::class,
         Commands\Connect::class,
+        Commands\FakeSubEvents::class,
     ];
 
     /**
