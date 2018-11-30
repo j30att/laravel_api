@@ -1,11 +1,11 @@
 <md-sidenav class="md-sidenav-right full_height" style="min-width: 500px" md-is-open="isSidenavOpen" md-component-id="right">
     <md-content>
-        <div class="modal_content">
+        <div class="modal_content" style="display: flex; flex-direction: column; height: 100%">
             <div class="modal_content__title">
                 <div>Place a bid</div>
                 <div class="close" ng-click="$ctrl.close('right')"> </div>
             </div>
-            <div class="modal_content__bid">
+            <div class="modal_content__bid" style="height: 100%">
                 <div class="profile_status">
                     <div style="margin-bottom: 8px">
                         <div class="profile_status__photo"><img src="{%$ctrl.sale.creator.avatar%}" style="width: 32px; height: 32px; border-radius: 4px;" alt="photo"></div>
@@ -105,7 +105,7 @@
                 </div>
 
             </div>
-            <div class="modal_foter">
+            <div class="modal_foter" style="margin-top: 25px">
                 <div class="modal_foter__buttons">
                     <div class="button_text" role="button" tabindex="0" ng-click="$ctrl.close('right')">Cancel</div>
                     <div ng-hide="$ctrl.status == 2" class="button_blue" role="button" tabindex="0" ng-click="$ctrl.saveMyBid()" ng-if="$ctrl.user != null">Place a bid</div>

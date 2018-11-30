@@ -1216,3 +1216,21 @@ a {
 #testnoscroll::-webkit-scrollbar {
     display: none;
 }
+
+md-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal_foter{
+    width: 420px;
+    margin-left: 0 !important;
+    &__buttons{
+        margin-right: 0 !important;
+    }
+}
+.modal_content__big_wrapper{
+
+}

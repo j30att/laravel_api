@@ -13,6 +13,7 @@ class PageController extends Controller
     public function app(Request $request){
         $linkUrl = config('api.linkHost').'/'.config('api.linkLang').'/VC/login-staking.html?redirect_URI='.config('api.linkRedirect');
         $user = Auth::user();
+
         if($user) {
             $user = User::query()->where('id', $user->id)->with('ppUser')->first();
         }

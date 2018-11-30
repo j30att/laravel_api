@@ -45,7 +45,7 @@
             margin-bottom: 50px;
         }
         &__footer{
-            width: 620px;
+            width: 540px !important;
             display: flex;
             justify-content: space-between;
             .button{
@@ -58,6 +58,7 @@
                 font-weight: 600;
                 color: #000;
                 cursor: pointer;
+                margin-right: 5px;
             }
             .red{
                 background-color: #ff3700;
@@ -70,7 +71,7 @@
             .green{
                 background-color: #00c811;
                 color: #ffffff;
-                margin-right: 40px;
+                margin-right: 0;
             }
         }
     }
