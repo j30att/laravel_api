@@ -167,7 +167,7 @@ class ManageService
 
             $transaction->update([
                 'status' => Transaction::STATUS_SUCCESS,
-                'pp_bid_id' => $PPBid->id
+                'pp_bid_id' => $PPBid->pp_bid_id
             ]);
         } else {
             $transaction->update(['status' => Transaction::STATUS_FAILED]);
