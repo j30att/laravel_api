@@ -35,7 +35,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => env('APP_ENV') == 'local' ? ['single']:['errorlog'],
+            'channels' => env('APP_ENV') == 'local' ? ['single']:['single'],
         ],
 
         'single' => [
