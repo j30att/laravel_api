@@ -415,7 +415,7 @@ class PPInteraction
             return $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => config('api.proxy')
+                'proxy' => 'http://'.config('api.proxy')
             ]);
         }
 
