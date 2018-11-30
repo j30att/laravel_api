@@ -83,14 +83,14 @@ class PPValidate
 
     private static function request($uri, $header, $body)
     {
-        $guzzleClient = new Client();
+        $guzzleClient = new Client(['verify' => false ]);
 
         if (config('api.useProxy') && config('api.proxy')) {
 
             return $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => 'https://'.config('api.proxy')
+                'proxy' => config('api.proxy')
             ]);
         }
 
