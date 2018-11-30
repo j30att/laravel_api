@@ -85,15 +85,19 @@ class PPValidate
     {
         $guzzleClient = new Client();
 
-        return $guzzleClient->request(
-            'post',
-            $uri,
-            [
+        if (config('api.useProxy') && config('api.proxy')) {
+
+            return $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => config('api.proxy'),
-            ]
-        );
+                'proxy' => config('api.proxy')
+            ]);
+        }
+
+        return $guzzleClient->request('post', $uri, [
+            'headers' => $header,
+            'json' => $body
+        ]);
     }
 
 }

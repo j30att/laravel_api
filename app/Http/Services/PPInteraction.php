@@ -410,12 +410,12 @@ class PPInteraction
     {
         $guzzleClient = new Client();
 
-        if (config('api.useProxy') && config('api.proxyIP')) {
+        if (config('api.useProxy') && config('api.proxy')) {
 
             return $guzzleClient->request('post', $uri, [
                 'headers' => $header,
                 'json' => $body,
-                'proxy' => config('api.proxyIP')
+                'proxy' => config('api.proxy')
             ]);
         }
 
