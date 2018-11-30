@@ -1211,6 +1211,7 @@ a {
 .stub{
   width:100%;
   height: 100vh;
+    display: flex;
 }
 
 #testnoscroll::-webkit-scrollbar {
