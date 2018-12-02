@@ -4546,7 +4546,7 @@ a {
   display: none;
 }
 
-md-content {
+md-sidenav md-content {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

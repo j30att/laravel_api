@@ -11,6 +11,7 @@ class EventsDetailController {
         this.user = window.__user;
         this._opts = {dataLoad: false};
         this.sub_event_id = null;
+        console.log(this.user);
     }
 
     $onInit() {
