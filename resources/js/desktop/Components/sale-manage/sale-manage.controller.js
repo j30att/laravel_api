@@ -33,8 +33,25 @@ class SaleManage {
         this.$scope.$watch('isSidenavOpen', (fixed) => {
             this.$state.modalOpened = fixed
         });
+    }
+
+    enableEdti(e){
+        this.disabled = false;
+
+        this.$timeout().then(()=>{
+            setTimeout(100);
+            this.enableFocus();
+        });
+
 
     }
+
+    enableFocus(){
+        angular.element(document.querySelector('[id="focused"]')).focus();
+    }
+
+
+
 
     buildToggler(componentId) {
         this.$mdSidenav(componentId).toggle();
