@@ -24,22 +24,26 @@
                         <div class="profile_status__share"><span>Share sold</span><br>{%$ctrl.sale.bids_share + '%'%}</div>
                         <div class="profile_status__value"><span>Amount raised</span><br>{%'£' + $ctrl.sale.amount_raised%}</div>
                     </div>
-                    <div class="sale-manage__attributs">
+                    <div class="sale-manage__attributs" ng-keydown="$ctrl.acceptChangeSale($event, $ctrl.sale)">
                         <div class="sale-manage__attributes__markup">
                             <span class="sale-manage__attributes__title">Markup</span>
-                            <input class="sale-manage__attributes__value" ng-model="$ctrl.sale.markup"/>
+                            <input class="sale-manage__attributes__value" ng-disabled="$ctrl.disabled == true" autofocus ng-model="$ctrl.sale.markup"/>
                         </div>
                         <div class="sale-manage__attributes__share">
                             <span class="sale-manage__attributes__title">Share</span>
-                            <input class="sale-manage__attributes__value" ng-model="$ctrl.sale.share"/>
+                            <input class="sale-manage__attributes__value" ng-disabled="$ctrl.disabled == true" ng-model="$ctrl.sale.share"/>
                         </div>
                         <div class="sale-manage__attributes__amount">
                             <span class="sale-manage__attributes__title">Value</span>
-                            <input class="sale-manage__attributes__value" ng-model="$ctrl.sale.amount"/>
+                            <input class="sale-manage__attributes__value" ng-disabled="$ctrl.disabled == true" ng-model="$ctrl.sale.amount"/>
                         </div>
-                        <div class="sale-manage__attributes__edit">
+                        <!--<div class="sale-manage__attributes__edit">
                             <button ng-click="$ctrl.showSaleConfirm($ctrl.sale)"
                                 class="sale-manage__attributes__btn"></button>
+                        </div>-->
+                        <div class="sale-manage__attributes__edit">
+                            <button ng-click="$ctrl.disabled = false"
+                                    class="sale-manage__attributes__btn"></button>
                         </div>
                     </div>
                 </div>

@@ -25,12 +25,13 @@ Route::group([/*'middleware' => 'auth'*/], function(){
     Route::post('/sales/subevent', 'Api\SaleController@subeventSales');
     Route::post('/sales/closing-soon', 'Api\SaleController@closingSoonSales');
     Route::post('/sales/filtered', 'Api\SaleController@filteredSales');
-    Route::apiResource('/sale', 'Api\SaleController');
 
     Route::post('/events/filtered', 'Api\EventController@filteredEvents');
     Route::get('/events/get-filters', 'Api\EventController@getFilters');
     Route::get('/events/main', 'Api\EventController@mainEvents');
 //    Route::get('/events/all', 'Api\EventController@allEvents');
+
+    Route::apiResource('/sale', 'Api\SaleController');
     Route::apiResource('/events', 'Api\EventController');
     Route::apiResource('subevents', 'Api\SubEventController');
 
