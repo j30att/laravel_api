@@ -27,7 +27,7 @@
                     <div class="sale-manage__attributs" ng-keydown="$ctrl.acceptChangeSale($event, $ctrl.sale)">
                         <div class="sale-manage__attributes__markup">
                             <span class="sale-manage__attributes__title">Markup</span>
-                            <input class="sale-manage__attributes__value" ng-disabled="$ctrl.disabled == true" autofocus ng-model="$ctrl.sale.markup"/>
+                            <input class="sale-manage__attributes__value" id="focused" ng-disabled="$ctrl.disabled == true" ng-model="$ctrl.sale.markup"/>
                         </div>
                         <div class="sale-manage__attributes__share">
                             <span class="sale-manage__attributes__title">Share</span>
@@ -42,7 +42,7 @@
                                 class="sale-manage__attributes__btn"></button>
                         </div>-->
                         <div class="sale-manage__attributes__edit">
-                            <button ng-click="$ctrl.disabled = false"
+                            <button ng-click="$ctrl.enableEdti($event)"
                                     class="sale-manage__attributes__btn"></button>
                         </div>
                     </div>
