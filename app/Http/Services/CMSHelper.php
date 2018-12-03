@@ -33,7 +33,6 @@ class CMSHelper
 
         Log::info('[x] Message received', [$msg]);
         try {
-
             $msgDetails = unserialize($msg);
             switch ($msgDetails["entityName"]) {
                 case 'AppBundle\Entity\Event':
@@ -51,7 +50,6 @@ class CMSHelper
                 default:
                     Log::info('[x] Unprocessable entity. '.print_r($msgDetails, 1));
                     break;
-
             }
             return true;
         } catch (\Exception $e) {
