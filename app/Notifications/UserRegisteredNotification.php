@@ -40,7 +40,10 @@ class UserRegisteredNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->view('emails.emailConfirmation', ['url'=>$this->token->confirmation_url]);
+        return (new MailMessage)
+            ->view('emails.emailConfirmation', ['url'=>$this->token->confirmation_url])
+            ->from('PartyPokerStaking@staking.com')
+            ->subject( 'Confirm your email' );
     }
 
     /**
