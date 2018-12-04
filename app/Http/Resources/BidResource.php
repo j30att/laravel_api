@@ -23,9 +23,10 @@ class BidResource extends JsonResource
             'markup'=> $this->markup,
             'share'=> $this->share,
             'amount'=> $this->amount,
+            'creator'=> $this->sale->creator,
             //'subevent'=> new SubEventResource($this->sale->subevent)
 
         ];
-        return parent::toArray($request);
+        //return parent::toArray($request);
     }
 }

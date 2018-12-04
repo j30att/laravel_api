@@ -213,7 +213,7 @@
         </div>
     </md-content>
 
-    <md-content ng-if="$ctrl.state == 'confirm_email'">
+    <md-content ng-if="$ctrl.state == 'confirm_email'" style="display: block;">
         <div class="modal_content">
             <div class="your_profile__title">
 
@@ -230,7 +230,7 @@
         <div class="check__back" ng-click="$ctrl.changeState('link_pp_account')">Continue</div>
     </md-content>
 
-    <md-content ng-if="$ctrl.state == 'link_pp_account'">
+    <md-content ng-if="$ctrl.state == 'link_pp_account'" style="display: block;">
         <div class="your_profile__title">
             <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
         </div>
@@ -291,7 +291,7 @@
         <div class="modal_content">
             <div class="your_profile__title">
                 Privacy Policy
-                <div class="your_profile_close" ng-click="$ctrl.buildToggler('right_registration')"></div>
+                <div class="your_profile_close" ng-click="$ctrl.hideTerms()"></div>
             </div>
             <div class="data_privacy__discription">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.

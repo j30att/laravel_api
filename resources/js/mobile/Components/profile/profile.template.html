@@ -1,6 +1,6 @@
 <md-sidenav class="md-sidenav-right full_height full_height__sidnav" style="position: fixed !important;"
             md-is-open="isSidenavOpen" md-component-id="profile_mobile">
-    <md-content class="place_wrapper col-md-12">
+    <md-content class="place_wrapper col-md-12" ng-if="$ctrl.state == 'index'">
         <div class="header">
             <div class="header_close" ng-click="$ctrl.close('profile_mobile')"></div>
             <div class="header_title">Yor profile</div>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="profile_menu_item__more"></div>
             </div>
-            <div class="profile_menu_item">
+            <div class="profile_menu_item" ng-click="$ctrl.state = 'setting'">
                 <div>
                     <div class="icon icon_setting"></div>
                     <div class="profile_menu_item__text">Settings</div>
@@ -75,4 +75,143 @@
 
 
     </md-content>
+
+    <md-content class="col-md-12" ng-if="$ctrl.state == 'setting'">
+        <div class="header">
+            <div role="button" tabindex="0" ng-click="$ctrl.state = 'index'">
+                <div class="goback goback_unset"></div>
+            </div>
+            <div class="header_title">settings</div>
+            <div class="header_empty"></div>
+        </div>
+        <div class="header_empty_height"></div>
+
+        <div class="profile_block_title">Account</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item" ng-click="$ctrl.state = 'edit_profile'">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Edit profile</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Blocked users</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Change password</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+        </div>
+
+        <div class="profile_block_title">Support</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Help centre</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+        </div>
+
+        <div class="profile_block_title">about</div>
+        <div class="profile_menu">
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Privacy Policy</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+            <div class="profile_menu_item">
+                <div>
+                    <div class="profile_menu_item__text_no_margin">Rules</div>
+                </div>
+                <div class="profile_menu_item__more"></div>
+            </div>
+        </div>
+
+        <div class="profile_block_title" style="text-align: center">Log out</div>
+
+
+    </md-content>
+
+    <md-content class="col-md-12" ng-if="$ctrl.state == 'edit_profile'">
+        <div class="header">
+            <div role="button" tabindex="0" ng-click="$ctrl.state = 'setting'">
+                <div class="goback goback_unset"></div>
+            </div>
+            <div class="header_title">Edit profile</div>
+            <div class="header_empty" style="width: 35px; height: 44px; line-height: 44px; color: rgb(0,127, 237)" ng-click="$ctrl.saveNewUserData()">Save</div>
+        </div>
+        <div class="header_empty_height"></div>
+        <div class="profile_info" style="margin-top: 0">
+            <div class="profile_img">
+                <img src="{%$ctrl.user.avatar%}">
+            </div>
+            <div class="profile_hint"
+                 ngf-select
+                 ng-model="$ctrl.uploadedAvatar"
+                 ngf-change="$ctrl.uploadAvatar()"
+                 ngf-multiple="false"
+                 ngf-pattern="'image/*'"
+                 ngf-accept="'image/*'"
+                 ngf-keep="false"
+                 ngf-allow-dir="true"
+            >
+                Tap to update
+            </div>
+        </div>
+        <div class="edit_fields_wrapper">
+            <div class="edit_field">
+                <label for="edit_first_name">First name</label>
+                <input type="text" placeholder="{{$ctrl.userFistName}}" ng-model="$ctrl.editFistName" id="edit_first_name"/>
+            </div>
+
+            <div class="edit_field">
+                <label for="edit_last_name">Last name</label>
+                <input type="text" placeholder="{{$ctrl.userLastName}}" ng-model="$ctrl.editLastName" id="edit_last_name"/>
+            </div>
+
+            <div class="edit_field">
+                <label for="edit_birth">Date of Birth</label>
+                <input type="text" placeholder="July 21, 2015" ng-model="$ctrl.editBirth" id="edit_birth"/>
+            </div>
+
+            <div class="edit_field">
+                <label for="edit_location">Location</label>
+                <select id="edit_location"
+
+                        placeholder="{{$ctrl.userContry.name}}">
+                    <option value="{{$ctrl.userContry.id}}" selected>{{$ctrl.userContry.name}}</option>
+                    <option ng-repeat="country in $ctrl.countries | orderBy:'name'"
+                            ng-value="country.id"
+                            style="font-size: 11px">
+                            {%country.name%}, {%country.code%}
+                    </option>
+
+
+                </select>
+            </div>
+
+            <div class="edit_field">
+                <label for="edit_email">Email</label>
+                <input type="text" placeholder="{{$ctrl.user.email}}" id="edit_email"/>
+            </div>
+
+            <div class="edit_field">
+                <label>Username party poker</label>
+                <input type="text" placeholder="{{$ctrl.user.pp_user.screen_name ? $ctrl.user.pp_user.screen_name : 'Your party poker username'}}" id="edit_user_name"/>
+            </div>
+        </div>
+
+
+
+
+
+    </md-content>
+
 </md-sidenav>

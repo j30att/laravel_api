@@ -20,8 +20,10 @@ class BidsController {
         this.getBids();
     }
 
-    togglePlaceBid() {
-        //console.log('open place bid');
+    togglePlaceBid(bid) {
+        console.log(bid, 'bid');
+        this.sale = bid.sale;
+
         this.$scope.$broadcast('sidenav-open', () => {
         });
     }

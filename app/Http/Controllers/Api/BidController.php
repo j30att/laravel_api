@@ -30,7 +30,7 @@ class BidController extends Controller
 
         if ($request->get('user_id') != $user->id) App::abort(401);
 
-        $bidsMutched = Bid::query()->where(['status' => Bid::BIDS_MATCHED, 'user_id' => $user->id])->with('sale.subevent.event')->limit(3)->get();
+        $bidsMutched = Bid::query()->where(['status' => Bid::BIDS_MATCHED, 'user_id' => $user->id])->with('sale.subevent.event')->with([])->limit(3)->get();
         $bidsUnmutched = Bid::query()->where(['status' => Bid::BIDS_UNMATCHED, 'user_id' => $user->id])->with('sale.subevent.event')->limit(3)->get();
         $bidsSetted = Bid::query()->where(['status' => Bid::BIDS_SETTLED, 'user_id' => $user->id])->with('sale.subevent.event')->limit(3)->get();
         $bidsCanceled = Bid::query()->where(['status' => Bid::BIDS_CANCELED, 'user_id' => $user->id])->with('sale.subevent.event')->limit(3)->get();
@@ -39,7 +39,7 @@ class BidController extends Controller
             'matched' => BidResource::collection($bidsMutched),
             'unmatched' => BidResource::collection($bidsUnmutched),
             'settled' => BidResource::collection($bidsSetted),
-            'canceled' => BidResource::collection($bidsCanceled)]
+            'canceled' => BidResource::collection($bidsCanceled)],
         ]);
 
     }

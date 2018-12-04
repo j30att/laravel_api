@@ -5,7 +5,6 @@ class MainController {
     };
 
     toggleMobileProfile(){
-        console.log('click/work');
         this.$scope.$broadcast('sidenav-profile_mobile-open', () => {
         });
     }

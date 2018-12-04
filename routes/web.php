@@ -47,3 +47,5 @@ Route::get('{any}', 'PageController@app')->where(['any' => '.*'])->name('index')
 Route::get('desktop/all', 'PageController@desktop');
 
 
+
+

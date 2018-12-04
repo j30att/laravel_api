@@ -49,7 +49,7 @@
             </div>
             <div class="bids_row">
                 <div class="bids_card_wrapper" ng-repeat="bid in BidsCtrl.bids.unmatched">
-                    <div class="bids_card bids_card__red">
+                    <div class="bids_card bids_card__red" ng-click="BidsCtrl.togglePlaceBid(bid)">
                     <div class="bids_card__title">
                         <div class="bids_card__title_img"
                              ng-style="{'background-image': 'url('+ bid.investor.avatar +')'}">
@@ -174,3 +174,4 @@
         </div>
     </stub>
 </div>
+<bid-place sale="BidsCtrl.sale"></bid-place>
