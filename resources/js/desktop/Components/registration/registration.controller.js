@@ -31,6 +31,7 @@ class Registration {
         };
 
         this.getCountries();
+
     }
 
     $onInit() {

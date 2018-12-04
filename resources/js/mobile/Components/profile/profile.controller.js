@@ -1,16 +1,36 @@
 
 class Profile {
-    constructor($scope, $mdSidenav, $state, $http, Upload) {
+    constructor($scope, $mdSidenav, $state, $http, Upload, CountriesResourceService) {
         this.$mdSidenav = $mdSidenav;
+        this.CountriesResourceService = CountriesResourceService;
         this.$scope = $scope;
         this.$state = $state;
         this.user = window.__user;
         this.isSidenavOpen = false;
         this.Upload = Upload;
         this._opts = {};
-        this.state = 'index';
+        this.state = 'edit_profile';
 
+        this.splitUserName();
+        this.getCountries();
     }
+
+    splitUserName(){
+        let userNameString = this.user.name;
+        let nameArr = userNameString.split(' ', 2);
+
+        this.userFistName = nameArr[0];
+        this.userLastName = nameArr[1];
+    }
+
+    getCountries() {
+        this.CountriesResourceService.getCountries()
+            .then((response) => {
+                this.countries = response.data.data;
+                this.userContry = this.countries[(this.user.country_id - 1)];
+            });
+    }
+
 
     $onInit() {
         this.$scope.$on('sidenav-profile_mobile-open', (event, data) => {
@@ -72,11 +92,15 @@ class Profile {
             })
     }
 
+    saveNewUserData(){
+
+    }
+
 
 
 };
 
-Profile.$inject = ['$scope', '$mdSidenav', '$state', '$http', 'Upload'];
+Profile.$inject = ['$scope', '$mdSidenav', '$state', '$http', 'Upload', 'CountriesResourceService'];
 
 export const ProfileComponent = {
 
