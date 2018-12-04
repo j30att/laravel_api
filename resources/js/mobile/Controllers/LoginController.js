@@ -19,6 +19,7 @@ class LoginController {
     }
 
     sendAuthData(e) {
+        console.log(123);
         e.stopPropagation();
         e.preventDefault();
         let data = {
@@ -33,7 +34,7 @@ class LoginController {
                 this.notConfirmed.text = response.data.msg;
                 this.state = 'no_confirm_email';
             } else{
-                //window.location.href = '/'
+                window.location.href = '/invest'
             }
         })
 
