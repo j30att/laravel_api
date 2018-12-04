@@ -12472,6 +12472,18 @@ md-input-container input::placeholder {
   font-size: 16px;
 }
 
+.edit_fields_wrapper .edit_field input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.edit_fields_wrapper .edit_field input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.edit_fields_wrapper .edit_field input:focus::placeholder {
+  color: transparent;
+}
+
 /*edit profile end*/
 
 .main_content__empty {

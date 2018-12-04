@@ -325,6 +325,10 @@ md-input-container{
             color: #000;
             font-size: 16px;
         }
+        input:focus::placeholder{
+            color: transparent;
+        }
+
     }
 }
 /*edit profile end*/

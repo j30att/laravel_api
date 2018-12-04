@@ -178,28 +178,30 @@
 
             <div class="edit_field">
                 <label for="edit_birth">Date of Birth</label>
-                <input type="text" placeholder="July 21, 2015" ng-model="$ctrl.editBirth" id="edit_birth"/>
+                <input type="text"
+                       ng-click="$ctrl.changeType($event)"
+                       placeholder="{%$ctrl.pareseData%}" ng-model="$ctrl.editBirth" id="edit_birth"/>
             </div>
+
 
             <div class="edit_field">
                 <label for="edit_location">Location</label>
                 <select id="edit_location"
-
+                        ng-model="$ctrl.user.country_id"
                         placeholder="{{$ctrl.userContry.name}}">
-                    <option value="{{$ctrl.userContry.id}}" selected>{{$ctrl.userContry.name}}</option>
                     <option ng-repeat="country in $ctrl.countries | orderBy:'name'"
                             ng-value="country.id"
                             style="font-size: 11px">
                             {%country.name%}, {%country.code%}
                     </option>
-
-
                 </select>
             </div>
 
             <div class="edit_field">
                 <label for="edit_email">Email</label>
-                <input type="text" placeholder="{{$ctrl.user.email}}" id="edit_email"/>
+                <input type="email"
+                       ng-model="$ctrl.editEmail"
+                       placeholder="{{$ctrl.user.email}}" id="edit_email"/>
             </div>
 
             <div class="edit_field">
