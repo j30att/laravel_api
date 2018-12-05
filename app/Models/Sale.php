@@ -87,10 +87,14 @@ class Sale extends Model
                     ->orderBy('share', 'desc')->limit(3);
 
     }
-    public function subevent(){
+
+    public function subevent()
+    {
         return $this->belongsTo(SubEvent::class,'sub_event_id');
     }
-    public function event(){
+
+    public function event()
+    {
         return $this->belongsTo(Event::class,'event_id');
     }
 

@@ -55,13 +55,15 @@ class Update extends Command
         $channel = $connection->channel();
         $queueName = env('MPPL-CMS_AMQP_QUEUE');
 
-
         Log::info(' [*] Waiting for messages.');
         $callback = function ($msg) {
             $helper = new CMSHelper();
-            $helper->execute($msg->body);
+
+            if($helper->execute($msg->body)){
+                $msg->delivery_info['channel']->basic_ack($msg->delivery_info['delivery_tag']);
+            };
         };
-        $channel->basic_consume($queueName, '', false, true, false, false, $callback);
+        $channel->basic_consume($queueName, '', false, false, false, false, $callback);
         while (count($channel->callbacks)) {
             $channel->wait();
         }

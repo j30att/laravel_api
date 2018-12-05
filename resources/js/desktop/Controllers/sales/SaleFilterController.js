@@ -33,7 +33,7 @@ class SaleFilterController {
     }
 
     toggleSidenav() {
-        this.$scope.$broadcast('sidenav-open', () =>{
+        this.$scope.$broadcast('sidenav-open-create_sale', () =>{
             console.log('open sidenav')
         });
     }

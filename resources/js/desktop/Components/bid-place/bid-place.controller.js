@@ -38,15 +38,17 @@ class BidPlace {
     }
 
     validate() {
-        const {markup, share, amount} = this.bid;
+        if(this.bid) {
+            this.bid.errorMarkup = !this.bid.markup;
+            this.bid.errorShare = !this.bid.share;
+            this.bid.errorAmount = !this.bid.amount;
 
-        this.errors.markup = !markup;
-        this.errors.share = !share;
-        this.errors.amount = !amount;
+        return !this.bid.errorMarkup
+            && !this.bid.errorShare
+            && !this.bid.errorAmount
+        }
 
-        return !this.errors.markup
-            && !this.errors.share
-            && !this.errors.amount
+        return false;
     }
 
     saveMyBid() {

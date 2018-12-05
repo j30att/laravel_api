@@ -4,6 +4,7 @@ import {LoginController} from "./Controllers/LoginController";
 import {RegisterController} from "./Controllers/RegisterController";
 import {ProfileController} from "./Controllers/ProfileController";
 import {FilterBidsController} from "./Controllers/FilterBidsController";
+import {WalletController} from "./Controllers/wallet/WalletController";
 
 import {MainController} from "./Controllers/MainController";
 import {BidsController} from "./Controllers/bids/BidsController";
@@ -26,7 +27,6 @@ import {DealerEventDetailController} from "./Controllers/dealer/DealerEventDetai
 import {DealerUsersController} from "./Controllers/dealer/DealerUsersController";
 import {DealerWinController} from "./Controllers/dealer/DealerWinController";
 
-
 let module = angular.module('Controllers', []);
 
 module.controller('LoginController', LoginController);
@@ -41,7 +41,7 @@ module.controller('SaleFilterController', SaleFilterController);
 module.controller('InvestController', InvestController);
 module.controller('EventController', EventController);
 module.controller('DialogController', DialogController);
-
+module.controller('WalletController', WalletController);
 
 /////////////////////////////////////////////////////////////
 
@@ -54,7 +54,6 @@ module.controller('DealerEventsController', DealerEventsController);
 module.controller('DealerEventDetailController',DealerEventDetailController);
 module.controller('DealerUsersController', DealerUsersController);
 module.controller('DealerWinController', DealerWinController);
-
 
 export default module.name;
 

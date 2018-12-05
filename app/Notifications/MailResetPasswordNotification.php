@@ -39,7 +39,10 @@ class MailResetPasswordNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->view('emails.forgotPassword', ['token'=>$this->token]);
+        return (new MailMessage)
+            ->view('emails.forgotPassword', ['token'=>$this->token])
+            ->from('PartyPokerStaking@staking.com')
+            ->subject( 'Reset your password' );
     }
 
     /**

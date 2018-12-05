@@ -77,3 +77,6 @@ export const REGISTRATION_URL = '/register';
 export const CHECK_EMAIL_URL = '/check-email';
 
 export const RESEND_CONFIRM_URL = '/confirm-email';
+
+//**TRANSACTIONS**//
+export const TRANSACTION_LIST = '/api/transactions';

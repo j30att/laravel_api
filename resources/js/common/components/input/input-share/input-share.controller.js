@@ -11,13 +11,15 @@ class InputShareController {
 
             if (bid.markup) {
                 bid.amount = '$' + Math.round(((bid.share / 100) * bid.markup * buyIn) * 100) / 100;
+                bid.errorAmount = false;
             } else if (bid.amount) {
                 let amount = bid.amount.indexOf('$') > -1 ? bid.amount.replace('$', '') : bid.amount;
                 bid.markup = Math.round((((bid.share / 100) * buyIn) / amount) * 100) / 100;
+                bid.markupAmount = false;
             }
 
             bid.share += '%';
-            this.validate();
+            bid.errorShare = false;
         }
     }
 
@@ -50,8 +52,6 @@ class InputShareController {
 export const InputShareComponent = {
     bindings: {
         bid: '=',
-        error: '=',
-        validate: '&',
         buyIn: '<',
         type: '@',
         className: '@',

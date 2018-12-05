@@ -57,7 +57,8 @@
                     </div>
                 </div>
             </div>
-            <div class="event_right-side" style="height: 70vh; overflow-y: scroll;">
+
+            <div class="event_right-side" style="height: 70vh; overflow-y: scroll;" ng-if="DEventDetailCtrl.event.sales.length > 0">
                 <div class="event_right-side_in" style="margin-bottom: 50px;" ng-repeat="event in DEventDetailCtrl.fakeEvent.subevents">
                     <div class="event_right-side_header">
                         <div class="event_right-side_header_title"
@@ -84,7 +85,6 @@
                         <tbody>
 
                         <tr ng-repeat="sale in DEventDetailCtrl.event.sales | filter:{sub_event_id:event.id} | orderBy:'status'"
-
                             ng-click="DEventDetailCtrl.toggleSidenav(sale)">
                             <td>
                                 <div class="dealer_user_avatar"

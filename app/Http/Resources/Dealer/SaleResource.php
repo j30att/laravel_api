@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Dealer;
 
+use App\Http\Resources\Users\UserInvestResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class SaleResource extends JsonResource
@@ -23,7 +24,7 @@ class SaleResource extends JsonResource
             'bids'          => $this->bids,
             'sub_event_id'  => $this->sub_event_id,
             'status'        => $this->status,
-            'creator'       => $this->creator,
+            'creator'       => new UserInvestResource($this->creator),
             'subevent'      => $this->subevent,
             'buy_in'        => $this->buy_in,
             'fund'          => $this->fund,

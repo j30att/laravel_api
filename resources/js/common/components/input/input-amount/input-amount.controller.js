@@ -9,24 +9,25 @@ class InputAmountController {
             if (bid.share && !bid.markup) {
                 let share = parseFloat(bid.share);
                 bid.markup = Math.round((((share / 100) * buyIn) / bid.amount) * 100) / 100;
+                bid.errorMarkup = false;
             } else if (bid.markup) {
                 bid.share = (Math.round((bid.amount / buyIn * bid.markup * 100) * 100) / 100) + '%';
+                bid.errorShare = false;
             }
             bid.amount = '$' + bid.amount;
+            bid.errorAmount = false;
 
         } else if (bid.amount === '$') {
             bid.amount = '';
         }
 
-        this.validate();
+        //this.validate();
     }
 }
 
 export const InputAmountComponent = {
     bindings: {
         bid: '=',
-        error: '=',
-        validate: '&',
         buyIn: '<',
         type: '@',
         className: '@',

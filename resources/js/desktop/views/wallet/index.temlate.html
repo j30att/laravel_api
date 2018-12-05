@@ -10,8 +10,16 @@
                 <div class="wallet_navigation__title">Transactions</div>
                 <div class="wallet_navigation__tabs_wrapper">
                     <div class="wallet_navigation__tabs">
-                        <div class="wallet_navigation__tabs_item wallet_navigation__tabs_item_active">Last mont</div>
-                        <div class="wallet_navigation__tabs_item">Half year</div>
+                        <div class="wallet_navigation__tabs_item"
+                             ng-class="{'wallet_navigation__tabs_item_active': WalletCtrl.filter.date == 1}"
+                             ng-click="WalletCtrl.setFilter({date:1})">
+                            Last month
+                        </div>
+                        <div class="wallet_navigation__tabs_item"
+                             ng-class="{'wallet_navigation__tabs_item_active': WalletCtrl.filter.date == 2}"
+                             ng-click="WalletCtrl.setFilter({date:2})">
+                            Half year
+                        </div>
                         <div class="wallet_navigation__tabs_item">Choose dates</div>
                     </div>
                     <div class="wallet_navigation__search">Search by sender’s or reciver’s</div>
@@ -20,98 +28,49 @@
             <div class="wallet_table_wrapper">
                 <div class="wallet_table">
                     <div class="wallet_table__title">
-                        <div class="wallet_table__title_item cell_date">DATE</div>
-                        <div class="wallet_table__title_item cell_name">EVENT</div>
-                        <div class="wallet_table__title_item cell_event">EVENT</div>
+                        <div class="wallet_table__title_item cell_date">Date</div>
+                        <div class="wallet_table__title_item cell_name">Event</div>
+                        <div class="wallet_table__title_item cell_event">Subevent</div>
                         <div class="wallet_table__title_item cell_status">Status</div>
                         <div class="wallet_table__title_item cell_delta"></div>
-                        <div class="wallet_table__title_item cell_balance">BALANCE</div>
+                        <div class="wallet_table__title_item cell_balance">Balance</div>
                     </div>
-                    <div class="wallet_table__content">
-                        <div class="wallet_table__content_row">
-                            <div class="wallet_table__content_row_data cell_date">27 May</div>
-                                <div class="wallet_table__content_row_transactions">
-                                    <div class="wallet_table__content_row_transaction">
-                                        <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                            <div class="transaction_img"><img src="/images/desk/right_arrow_green.png" alt=""></div>
-                                        </div>
-                                        <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                        <div class="wallet_table__content_row_transaction__status cell_status status_color__yellow">Pending</div>
-                                        <div class="wallet_table__content_row_transaction__delta cell_delta">-495</div>
-                                        <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                </div>
-                                    <div class="wallet_table__content_row_transaction">
-                                        <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                            <div class="transaction_img"><img src="/images/desk/left_arrow_grey.png" alt=""></div>
-                                        </div>
-                                        <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                        <div class="wallet_table__content_row_transaction__status cell_status status_color__yellow">Pending</div>
-                                        <div class="wallet_table__content_row_transaction__delta cell_delta">-495</div>
-                                        <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class="wallet_table__content_row">
-                            <div class="wallet_table__content_row_data cell_date">27 May</div>
+                    <div class="wallet_table__content" ng-cloak>
+                        <div ng-repeat="date in WalletCtrl.dates"
+                             class="wallet_table__content_row">
+                            <div class="wallet_table__content_row_data cell_date" ng-bind="date"></div>
                             <div class="wallet_table__content_row_transactions">
-                                <div class="wallet_table__content_row_transaction">
-                                    <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                        <div class="transaction_img"><img src="/images/desk/right_arrow_green.png" alt=""></div>
+                                <div ng-repeat="transaction in WalletCtrl.transactions"
+                                     class="wallet_table__content_row_transaction">
+                                    <div class="wallet_table__content_row_transaction__name cell_name">
+                                        {% transaction.event %}
+                                        <div class="transaction_img">
+                                            <img ng-if="transaction.received"
+                                                 src="/images/desk/right_arrow_green.png"
+                                                 alt="{% transaction.event %}">
+                                            <img ng-if="!transaction.received"
+                                                 src="/images/desk/left_arrow_grey.png"
+                                                 alt="{% transaction.event %}">
+                                        </div>
                                     </div>
-                                    <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                    <div class="wallet_table__content_row_transaction__status cell_status status_color__yellow">Pending</div>
-                                    <div class="wallet_table__content_row_transaction__delta cell_delta">-495</div>
-                                    <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                </div>
-                                <div class="wallet_table__content_row_transaction">
-                                    <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                        <div class="transaction_img"><img src="/images/desk/right_arrow_green.png" alt=""></div>
+                                    <div class="wallet_table__content_row_transaction__event cell_event"
+                                         ng-bind="transaction.subevent">
                                     </div>
-                                    <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                    <div class="wallet_table__content_row_transaction__status cell_status status_color__yellow">Pending</div>
-                                    <div class="wallet_table__content_row_transaction__delta cell_delta">-495</div>
-                                    <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                </div>
-                                <div class="wallet_table__content_row_transaction">
-                                    <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                        <div class="transaction_img"><img src="/images/desk/right_arrow_green.png" alt=""></div>
+                                    <div class="wallet_table__content_row_transaction__status cell_status"
+                                         ng-class="{
+                                                'status_color__yellow': transaction.verbalStatus == 'Pending',
+                                                'status_color__red': transaction.verbalStatus == 'Error'
+                                            }"
+                                         ng-bind="transaction.verbalStatus">
                                     </div>
-                                    <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                    <div class="wallet_table__content_row_transaction__status cell_status status_color__yellow">Pending</div>
-                                    <div class="wallet_table__content_row_transaction__delta cell_delta">-495</div>
-                                    <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                </div>
-                                <div class="wallet_table__content_row_transaction">
-                                    <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                        <div class="transaction_img"><img src="/images/desk/right_arrow_green.png" alt=""></div>
+                                    <div class="wallet_table__content_row_transaction__delta cell_delta"
+                                         ng-class="{'status_color__green':transaction.received}"
+                                         ng-bind="transaction.amount">
                                     </div>
-                                    <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                    <div class="wallet_table__content_row_transaction__status cell_status status_color__yellow">Pending</div>
-                                    <div class="wallet_table__content_row_transaction__delta cell_delta">-495</div>
-                                    <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wallet_table__content_row">
-                            <div class="wallet_table__content_row_data cell_date">27 May</div>
-                            <div class="wallet_table__content_row_transactions">
-                                <div class="wallet_table__content_row_transaction">
-                                    <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                        <div class="transaction_img"><img src="/images/desk/left_arrow_grey.png" alt=""></div>
+                                    <div ng-if="transaction.balance"
+                                         class="wallet_table__content_row_transaction__balance cell_balance"
+                                         ng-bind="transaction.balance | currency:'$':2">
                                     </div>
-                                    <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                    <div class="wallet_table__content_row_transaction__status cell_status">Sent</div>
-                                    <div class="wallet_table__content_row_transaction__delta cell_delta status_color__green">+495</div>
-                                    <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
-                                </div>
-                                <div class="wallet_table__content_row_transaction">
-                                    <div class="wallet_table__content_row_transaction__name cell_name">North Andreane
-                                        <div class="transaction_img"><img src="/images/desk/left_arrow_grey.png" alt=""></div>
-                                    </div>
-                                    <div class="wallet_table__content_row_transaction__event cell_event">MILLIONS Russia, 1A</div>
-                                    <div class="wallet_table__content_row_transaction__status cell_status">Sent</div>
-                                    <div class="wallet_table__content_row_transaction__delta cell_delta status_color__green">+495</div>
-                                    <div class="wallet_table__content_row_transaction__balance cell_balance">20,240.00</div>
                                 </div>
                             </div>
                         </div>

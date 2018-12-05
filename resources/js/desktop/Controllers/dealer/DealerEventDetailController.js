@@ -18,13 +18,13 @@ class DealerEventDetailController {
             this.event = response.data.data;
             this.activeEvent = 'all';
             this.fakeEvent = angular.copy(this.event);
+
         })
     }
 
 
 
     toggleEvent(index){
-
         this.activeEvent = index;
         if (index == 'all'){
             this.fakeEvent.subevents = this.event.subevents;

@@ -148,6 +148,8 @@ export default function routes($locationProvider, $stateProvider, $urlRouterProv
         })
         .state ('wallet', {
             url: '/wallet',
+            controller: 'WalletController',
+            controllerAs: 'WalletCtrl',
             template: require('./views/wallet/index.temlate.html'),
             data: {
                 permissions: {

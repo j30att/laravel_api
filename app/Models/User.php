@@ -22,7 +22,6 @@ class User extends Authenticatable
     const ROLE_USER         = 1;
     const ROLE_ADMIN        = 2;
 
-
     /**
      * The attributes that are mass assignable.
      *
@@ -66,12 +65,17 @@ class User extends Authenticatable
         return $this->belongsTo(Country::class, 'country_id');
     }
 
-    public function  avatar(){
+    public function avatar(){
         return $this->belongsTo(ImageAttachment::class, 'image_id');
     }
 
     public function ppUser(){
         return $this->hasOne(PPUser::class, 'user_id');
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
     }
 
     public function sendPasswordResetNotification($token)

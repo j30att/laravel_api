@@ -30,9 +30,9 @@ class CMSHelper
 
     public function execute($msg)
     {
+
         Log::info('[x] Message received', [$msg]);
         try {
-
             $msgDetails = unserialize($msg);
             switch ($msgDetails["entityName"]) {
                 case 'AppBundle\Entity\Event':
@@ -50,11 +50,11 @@ class CMSHelper
                 default:
                     Log::info('[x] Unprocessable entity. '.print_r($msgDetails, 1));
                     break;
-
             }
-
+            return true;
         } catch (\Exception $e) {
             Log::error($msgDetails["entityName"] . ' ' . $e->getMessage() . ' ' . $e->getFile() . ' ' . $e->getLine());
+            return false;
         }
     }
 
@@ -77,6 +77,7 @@ class CMSHelper
                 );
 
             }
+
             if (is_null($eventData->event->deletedAt)) {
                 if (is_null($event)) {
                     $event = new Event();
@@ -107,8 +108,6 @@ class CMSHelper
 
                 $event->save();
 
-
-
                 $this->updateVenue($eventData->event);
 
                 if (count($eventData->event->schedules) > 0) {
@@ -116,9 +115,12 @@ class CMSHelper
                         $this->updateSchedule($schedule->id);
 
                     }
+                } else {
+                    $this->createMainEventSubevent($event);
                 }
             }
         }
+        return true;
     }
 
     public function updateVenue($event)
@@ -146,6 +148,7 @@ class CMSHelper
         $venue->venue_latitude = $event->eventVenueLatitude;
 
         $venue->save();
+
     }
 
     public function updateSchedule($scheduleId)
@@ -166,7 +169,6 @@ class CMSHelper
             Log::info(
                 '[x] Unprocessable entity. ScheduleId: '.$ppSubEvent->schedule->id.'. Do no found event: '.$ppSubEvent->schedule->event_id
             );
-
             return false;
         }
 
@@ -174,8 +176,6 @@ class CMSHelper
             $subEvent = new SubEvent();
             $subEvent->id = $ppSubEvent->schedule->id;
         }
-
-
         $subEvent->event_id = $ppSubEvent->schedule->event_id;
         $subEvent->title = $ppSubEvent->schedule->scheduleTitle;
         $subEvent->fund = isset($ppSubEvent->schedule->schedulePrizePool) ? $ppSubEvent->schedule->schedulePrizePool : null;
@@ -186,19 +186,7 @@ class CMSHelper
 
         if (count($ppSubEvent->schedule->days) > 0) {
             foreach ($ppSubEvent->schedule->days as $ppDay) {
-
                 $this->updateDay($ppDay->id);
-                /*$flight = Flight::query()->find($ppDay->day);
-                if (is_null($flight)) {
-                    $flight = new Flight();
-                    $flight->id = $ppDay->id;
-                }
-                $flight->title = $ppDay->day . $ppDay->flight;
-                $flight->type = $ppDay->type == 'live' ? Flight::TYPE_LIVE : Flight::TYPE_ONLINE;
-                $flight->date = Carbon::parse($ppDay->date);
-                $flight->flight = $ppDay->flight;
-                $flight->day = $ppDay->day;
-                $flight->save();*/
             }
         }
     }
@@ -227,7 +215,6 @@ class CMSHelper
                 .'. Do no found sub_event: '.$subEvent->id
                 .'. Do no found event: '.$ppDay->day->event_id
             );
-
             return false;
         }
 
@@ -240,6 +227,19 @@ class CMSHelper
         $flight->event_id = $subEvent ? $subEvent->event->id : $ppDay->day->event_id;
         $flight->save();
 
+    }
+
+    public function createMainEventSubevent($event){
+        $subevent = new SubEvent();
+
+        $subevent->id           = rand(10000000, 11000000);
+        $subevent->event_id     = $event->id;
+        $subevent->title        = $event->title;
+        $subevent->fund         = $event->fund;
+        $subevent->buy_in       = $event->buy_in;
+        $subevent->date_start   = $event->date_start;
+        $subevent->date_end     = $event->date_end;
+        $subevent->save();
     }
 
     /*public function updateImage(Event $event){

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\Users\UserInvestResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class BidResource extends JsonResource
@@ -17,7 +18,7 @@ class BidResource extends JsonResource
         return[
             'id' => $this->id,
             'status' => $this->status,
-            'investor' => $this->investor,
+            'investor' => new UserInvestResource($this->investor),
             'sale'=> $this->sale,
             'markup'=> $this->markup,
             'share'=> $this->share,
