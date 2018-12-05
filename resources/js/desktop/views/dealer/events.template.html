@@ -1,15 +1,16 @@
 <div class="deskwr">
     <main-menu></main-menu>
-        <div class="main_content">
+
+    <div class="main_content" ng-if="dEventsCtrl._opts.dataLoad">
         <div class="events_admin">
             <div class="events_admin__title">Events list</div>
             <table class="events_admin__table">
                 <thead class="events_admin__table_header">
-                    <tr>
-                        <th>Event</th>
-                        <th>Dates</th>
-                        <th>Payout</th>
-                    </tr>
+                <tr>
+                    <th>Event</th>
+                    <th>Dates</th>
+                    <th>Payout</th>
+                </tr>
                 </thead>
                 <tbody class="events_admin__table_body">
                 <tr ng-repeat="event in dEventsCtrl.events">
@@ -26,7 +27,7 @@
                 </tbody>
             </table>
         </div>
-
-
     </div>
+    <loader ng-if="dEventsCtrl._opts.dataLoad == false"></loader>
+
 </div>

@@ -1,6 +1,6 @@
 <div class="deskwr">
     <main-menu></main-menu>
-    <div class="main_content">
+    <div class="main_content" ng-if="dUsersCtrl._opts.dataLoad">
         <div class="user">
             <div class="user__title">Users <div class="user__title_button">Register new user</div></div>
 
@@ -34,6 +34,7 @@
             </div>
         </div>
     </div>
+    <loader ng-if="!dUsersCtrl._opts.dataLoad"></loader>
 </div>
 
 

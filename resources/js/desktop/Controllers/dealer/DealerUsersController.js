@@ -3,6 +3,9 @@ class DealerUsersController{
         this.DealerResourceService = DealerResourceService;
         this.getUsers();
         this.$scope = $scope;
+        this._opts = {
+            dataLoad:false
+        }
     }
 
 
@@ -10,11 +13,7 @@ class DealerUsersController{
         this.DealerResourceService.getUsers().then(response => {
             console.log(response);
             this.users = response.data.data;
-            // if(this.users.avatar == null){
-            //     this.users.avatar = '/images/avatar_placeholder.png';
-            //     return this.users.avatar;
-            // }
-
+            this._opts.dataLoad = true;
         });
     }
 
